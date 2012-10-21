@@ -1,0 +1,69 @@
+﻿template (adl_version=1.5)
+	openEHR-DEMOGRAPHIC-PERSON.t_patient_simple.v1
+
+specialise
+	openEHR-DEMOGRAPHIC-PERSON.person.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"12/05/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Simple patient definition template, based on ISO 22220 archetypes">
+			keywords = <"patient">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Authordraft">
+	other_contributors = <>
+
+definition
+	PERSON[at0000.1] matches {	-- Person
+		/details[at0001]/items matches {
+			use_archetype CLUSTER[at0010, openEHR-DEMOGRAPHIC-CLUSTER.t_person_race_data.v1] occurrences matches {0..1}
+			use_archetype CLUSTER[at0010, openEHR-DEMOGRAPHIC-CLUSTER.t_person_other_data.v1] occurrences matches {0..1}
+			use_archetype CLUSTER[at0010, openEHR-DEMOGRAPHIC-CLUSTER.t_birth_data.v1] occurrences matches {0..1}
+			allow_archetype CLUSTER[at0010.1] closed
+		}
+		/identities matches {
+			use_archetype PARTY_IDENTITY[at0002, openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_person_name_simple.v1]
+			allow_archetype PARTY_IDENTITY[at0002.1] closed
+		}
+		/contacts[at0003]/addresses matches {
+			use_archetype ADDRESS[at0030, openEHR-DEMOGRAPHIC-ADDRESS.t_address_simple.v1]
+			allow_archetype ADDRESS[at0030.1] closed
+		}
+		/relationships existence matches {0}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Patient demographic data">
+					description = <"Patient personal demographic data">
+				>
+				["at0010.1"] = <
+					text = <"Other details - closed slot">
+					description = <"Other details - closed slot">
+				>
+				["at0002.1"] = <
+					text = <"Party identity - closed slot">
+					description = <"Party identity - closed slot">
+				>
+				["at0030.1"] = <
+					text = <"Address - closed slot">
+					description = <"Address - closed slot">
+				>
+			>
+		>
+	>

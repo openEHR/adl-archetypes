@@ -1,0 +1,71 @@
+﻿template_overlay (adl_version=1.5)
+	openEHR-DEMOGRAPHIC-ADDRESS.t_address_simple.v1
+
+specialise
+	openEHR-DEMOGRAPHIC-ADDRESS.address.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Templated version of ADDRESS that removes most items">
+			copyright = <"(c) 2010 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+
+definition
+	ADDRESS[at0000.1] matches {
+		/details[at0001]/items matches {
+			CLUSTER[at0002.1] occurrences matches {1..3} matches { 
+				items matches {
+					ELEMENT[at0021] occurrences matches {0}
+					ELEMENT[at0022] occurrences matches {0}
+					ELEMENT[at0023] occurrences matches {0}
+					ELEMENT[at0024] occurrences matches {0}
+					ELEMENT[at0025] occurrences matches {0}
+					ELEMENT[at0026] occurrences matches {0}
+					ELEMENT[at0027] occurrences matches {0}
+					ELEMENT[at0028] occurrences matches {0}
+					ELEMENT[at0029] occurrences matches {0}
+					ELEMENT[at0030] occurrences matches {0}
+					allow_archetype CLUSTER[at0032.1] closed
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0} 
+			ELEMENT[at0006] occurrences matches {0} 
+			ELEMENT[at0008] occurrences matches {0}
+			ELEMENT[at0009] occurrences matches {0}
+			allow_archetype CLUSTER[at0010.1] closed
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Address">
+					description = <"Templated address based on ISO22220 standard.">
+				>
+				["at0002.1"] = <
+					text = <"Templated address lines">
+					description = <"Templated address lines">
+				>
+				["at0010.1"] = <
+					text = <"Slot closed">
+					description = <"Slot closed">
+				>
+				["at0032.1"] = <
+					text = <"Slot closed">
+					description = <"Slot closed">
+				>
+			>
+		>
+	>

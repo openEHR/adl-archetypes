@@ -1,0 +1,129 @@
+archetype (adl_version=1.5)
+	openEHR-EHR_EXTRACT-EXTRACT.discharge_summary.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["date"] = <"01/04/2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Basic acute care establishment discharge summary">
+			copyright = <"copyright (c) 2011 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Initial">
+
+definition
+	EXTRACT[at0000] matches {	-- Discharge summary
+		chapters matches {
+			EXTRACT_CHAPTER[at0002] matches {
+				items matches {
+					GENERIC_CONTENT_ITEM[at0003] occurrences matches {1} matches {
+						item matches {
+							allow_archetype PERSON[at0100] matches {
+								include
+									archetype_id/value matches {/openEHR-DEMOGRAPHIC-PERSON\..*/}
+								exclude
+									archetype_id/value matches {/.*/}
+							}
+						}
+						uid existence matches {1}
+					}
+					GENERIC_CONTENT_ITEM[at0004] occurrences matches {1} matches {
+						item matches {
+							allow_archetype ORGANISATION[at0101] matches {
+								include
+									archetype_id/value matches {/openEHR-DEMOGRAPHIC-ORGANISATION\..*/}
+								exclude
+									archetype_id/value matches {/.*/}
+							}
+						}
+						uid existence matches {1}
+					}
+					GENERIC_CONTENT_ITEM[at0005] occurrences matches {1..*} matches {
+						item matches {
+							allow_archetype PERSON[at0102] matches {
+								include
+									archetype_id/value matches {/openEHR-DEMOGRAPHIC-PERSON\..*/}
+								exclude
+									archetype_id/value matches {/.*/}
+							}
+						}
+						uid existence matches {1}
+					}
+				}
+			}
+			EXTRACT_CHAPTER[at0001] matches {
+				items matches {
+					GENERIC_CONTENT_ITEM[at0006] occurrences matches {1} matches {
+						item matches {
+							allow_archetype COMPOSITION[at0103] matches {
+								include
+									archetype_id/value matches {/openEHR-EHR-COMPOSITION\..*/}
+								exclude
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Simple discharge summary">
+					description = <"Discharge summary document for patient leaving a hospital">
+				>
+				["at0001"] = <
+					text = <"Subject">
+					description = <"Chapter containing subject discharge information">
+				>
+				["at0002"] = <
+					text = <"Participations">
+					description = <"Chapter containing participations information">
+				>
+				["at0003"] = <
+					text = <"Patient demographic content">
+					description = <"Patient demographic content">
+				>
+				["at0004"] = <
+					text = <"Healthcare establishment demographic content">
+					description = <"Healthcare establishment demographic content">
+				>
+				["at0005"] = <
+					text = <"Healthcare professional demographic content">
+					description = <"Healthcare professional demographic content">
+				>
+				["at0006"] = <
+					text = <"Clinical data">
+					description = <"Clinical discharge data for patient">
+				>
+				["at0100"] = <
+					text = <"Patient demographics slot">
+					description = <"Patient demographics slot">
+				>
+				["at0101"] = <
+					text = <"Healthcare establishment demographics slot">
+					description = <"Healthcare establishment demographics slot">
+				>
+				["at0102"] = <
+					text = <"Healthcare individual provider demographics slot">
+					description = <"Healthcare individual provider demographics slot">
+				>
+				["at0103"] = <
+					text = <"Patient discharge data slot">
+					description = <"Patient discharge data slot">
+				>
+			>
+		>
+	>

@@ -1,0 +1,31 @@
+﻿template_overlay (adl_version=1.5)
+	openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_person_name_ds.v1
+
+specialise
+	openEHR-DEMOGRAPHIC-PARTY_IDENTITY.person_name.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+definition
+	PARTY_IDENTITY[at0000.1] matches {	
+		/details[at0001]/items matches {
+			ELEMENT[at0005] occurrences matches {0}
+			ELEMENT[at0019] occurrences matches {0}
+			ELEMENT[at0020] occurrences matches {0}
+			ELEMENT[at0008] occurrences matches {0}
+			ELEMENT[at0009] occurrences matches {0}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Person name">
+					description = <"Person name for Simple discharge summary">
+				>
+			>
+		>
+	>

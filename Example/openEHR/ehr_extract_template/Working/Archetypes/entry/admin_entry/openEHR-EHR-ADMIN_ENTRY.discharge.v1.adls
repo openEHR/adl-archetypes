@@ -1,0 +1,173 @@
+archetype (adl_version=1.5)
+	openEHR-EHR-ADMIN_ENTRY.discharge.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["organisation"] = <"NHS CFH">
+		["name"] = <"D B Hutchinson">
+		["date"] = <"14/11/2007">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record general administrative information required to discharge a patient">
+			copyright = <"copyright (c) 2011 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Initial">
+
+definition
+	ADMIN_ENTRY[at0000] matches {	-- Discharge information
+		other_participations matches {
+			PARTICIPATION[at0084] occurrences matches {0..1} matches {	-- Discharging doctor
+				function matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0081]}		-- Principal doctor
+					}
+				}
+			}
+			PARTICIPATION[at0085] occurrences matches {0..1} matches {	-- Discharging organisation
+				function matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0083]}		-- Discharging organisation
+					}
+				}
+			}
+			PARTICIPATION[at0086] occurrences matches {0..1} matches {*}
+		}
+		data matches {
+			ITEM_TREE[at0003] matches {	-- Tree
+				items matches {
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Date of discharge
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0080] occurrences matches {0..*} matches {	-- Event Identifier
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0066] occurrences matches {0..1} matches {	-- Discharge location
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0060] occurrences matches {0..1} matches {	-- Discharge unit
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0030] occurrences matches {0..1} matches {	-- Discharge destination type
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0071] occurrences matches {0..1} matches {	-- Discharge description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0074] occurrences matches {0..*} matches {	-- Discharge details
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v1|openEHR-EHR-CLUSTER\.individual_professional\.v1|openEHR-EHR-CLUSTER\.address\.v1|openEHR-EHR-CLUSTER\.individual_personal\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0077] occurrences matches {0..1} matches {	-- Outcome
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0078] occurrences matches {0..1} matches {	-- Condition
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0079] occurrences matches {0..1} matches {	-- Discharge Type
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Discharge information - Simple discharge summary">
+					description = <"The administrative information required at the time of discharge of a patient from a period of care">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Date of discharge">
+					description = <"The date of discharge for this care episode">
+				>
+				["at0030"] = <
+					text = <"Discharge destination type">
+					description = <"The destination of a patient on completion of a hospital provder spell">
+				>
+				["at0060"] = <
+					text = <"Discharge unit">
+					description = <"The department or specialty with responsibility for the patient at the time of discharge">
+				>
+				["at0066"] = <
+					text = <"Discharge location">
+					description = <"The ward from which the patient was discharged">
+				>
+				["at0071"] = <
+					text = <"Discharge description">
+					description = <"Details about the Discharge destination">
+				>
+				["at0074"] = <
+					text = <"Discharge details">
+					description = <"*">
+				>
+				["at0077"] = <
+					text = <"Outcome">
+					description = <"*">
+				>
+				["at0078"] = <
+					text = <"Condition">
+					description = <"*">
+				>
+				["at0079"] = <
+					text = <"Discharge Type">
+					description = <"*">
+				>
+				["at0080"] = <
+					text = <"Event Identifier">
+					description = <"*">
+				>
+				["at0081"] = <
+					text = <"Principal doctor">
+					description = <"Doctor responsible for discharge">
+				>
+				["at0083"] = <
+					text = <"Discharging organisation">
+					description = <"Organisation from which the subject was discharged.">
+				>
+				["at0084"] = <
+					text = <"Discharging doctor">
+					description = <"Doctor responsible for discharge">
+				>
+				["at0085"] = <
+					text = <"Discharging organisation">
+					description = <"Organisation from which the subject was discharged.">
+				>
+				["at0086"] = <
+					text = <"Other care provider">
+					description = <"Any other care provider involved in the admission">
+				>
+			>
+		>
+	>

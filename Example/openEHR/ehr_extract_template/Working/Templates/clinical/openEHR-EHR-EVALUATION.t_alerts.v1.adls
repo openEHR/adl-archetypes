@@ -1,0 +1,30 @@
+﻿template_overlay (adl_version=1.5)
+	openEHR-EHR-EVALUATION.t_alerts_ds.v1
+
+specialise
+	openEHR-EHR-EVALUATION.alert.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+definition
+	EVALUATION[at0000.1] matches {	-- Alert
+		/data[at0001]/items matches {
+			ELEMENT[at0002] occurrences matches {0}
+			ELEMENT[at0005] occurrences matches {0} 
+			ELEMENT[at0009] occurrences matches {0}
+			ELEMENT[at0014] occurrences matches {0}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Alerts">
+					description = <"Alert details">
+				>
+			>
+		>
+	>

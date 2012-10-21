@@ -1,0 +1,34 @@
+﻿template_overlay (adl_version=1.5)
+	openEHR-DEMOGRAPHIC-CLUSTER.t_birth_data_ds.v1
+
+specialise
+	openEHR-DEMOGRAPHIC-CLUSTER.person_birth_data_iso.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+definition
+	CLUSTER[at0000.1] matches {	-- Dados do nascimento
+		items matches {
+			ELEMENT[at0002] occurrences matches {0}
+			ELEMENT[at0004] occurrences matches {0}
+			ELEMENT[at0005] occurrences matches {0}
+			allow_archetype CLUSTER[at0006.1] closed
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Birth data">
+					description = <"Singapore birth demographic data">
+				>
+				["at0006.1"] = <
+					text = <"Country specific data - closed slot">
+					description = <"Country specific data - closed slot">
+				>
+			>
+		>
+	>

@@ -1,0 +1,34 @@
+﻿template_overlay (adl_version=1.5)
+	openEHR-EHR-EVALUATION.t_allergy_adverse_ds.v1
+
+specialise
+	openEHR-EHR-EVALUATION.adverse.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+definition
+	EVALUATION[at0000.1] matches {
+		/data[at0002]/items matches {
+			ELEMENT[at0010] occurrences matches {0}
+		}
+		/data[at0002]/items[at0019]/items matches {	-- Exposure and reaction detail
+			ELEMENT[at0032] occurrences matches {0}
+			ELEMENT[at0015] occurrences matches {0}
+			ELEMENT[at0004] occurrences matches {0}
+			ELEMENT[at0020] occurrences matches {0}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Adverse reaction details for episode of care">
+					description = <"Adverse reaction details for episode of care">
+				>
+			>
+		>
+	>

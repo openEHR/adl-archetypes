@@ -1,0 +1,31 @@
+﻿template_overlay (adl_version=1.5)
+	openEHR-EHR-EVALUATION.t_investigations_summary_ds.v1
+
+specialise
+	openEHR-EHR-EVALUATION.clinical_synopsis.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+definition
+	EVALUATION[at0000.1] matches {
+		/data[at0001]/items matches {
+			ELEMENT[at0002.1]
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Investigations summary">
+					description = <"Summary of investigations undertaken during stay">
+				>
+				["at0002.1"] = <
+					text = <"Description">
+					description = <"Summary of investigations description">
+				>
+			>
+		>
+	>

@@ -1,0 +1,104 @@
+archetype (adl_version=1.5)
+  cimi-RM-ENTRY.GlasgowComaScale.v1
+
+language
+  original_language = <[ISO_639-1::en]>
+description
+  original_author = <
+    ["name"] = <"unknown">
+  >
+  lifecycle_state = <"Draft">
+
+definition
+  ENTRY[at0000] matches { -- GlasgowComaScale
+    data matches {
+        CLUSTER[at0001] matches { -- Items
+          items matches {
+            ELEMENT[at0002] matches { -- E=Eye opening
+              value matches {
+                ORDINAL matches {*}
+              }
+            }
+            ELEMENT[at0003] matches { -- M=Best motor response
+              value matches {
+                ORDINAL matches {*}
+              }
+            }
+            ELEMENT[at0004] matches { -- V=Verbal reaction
+              value matches {
+                ORDINAL matches {*}
+              }
+            }
+          }
+        }
+        ELEMENT[at0005] matches { -- TotalScore
+          value matches {
+            COUNT matches {*}
+          }
+        }
+    }
+  }
+
+ontology
+  term_definitions = <
+    ["en"] = <
+      items = <
+        ["at0000"] = <
+          text = <"GlasgowComaScale">
+          description = <"The Glasgow Coma Scale, also called the EMV score,  is an assessment scale for the assessment of the level of consciousness (NVICV, 2010).  
+
+
+De Glasgow Coma Scale, ook wel de EMV-score (best Eye, Motor and Verbal respons) genoemd, is een meetinstrument voor de beoordeling van het bewustzijnsniveau van een patient (NVICV, 2010).">
+        >
+        ["at0001"] = <
+          text = <"Items">
+        >
+        ["at0002"] = <
+          text = <"E=Eye opening">
+          description = <"Eye opening as a reaction of the patient.
+
+
+Openen van de ogen als reactie van de patient.">
+        >
+        ["at0003"] = <
+          text = <"M=Best motor response">
+          description = <"Points of interest:  
+Ø  Score only the reaction of the arms, the reactions of the legs can be a spinal reflex;  
+Ø  Test both arms and score the best reaction of both; 
+Ø  Don&rsquo;t give a painful stimuli to a affected or injured part of the body; 
+
+
+Aandachtspunten: 
+Ø  Scoor alleen de reactie van de armen, de reactie van de benen kan duiden op een spinale reflex. 
+Ø  Test beide armen en scoor de beste reactie van beide.
+Ø  Voer geen pijnprikkel uit op een aangedaan of gekwetst lichaamsdeel">
+        >
+        ["at0004"] = <
+          text = <"V=Verbal reaction">
+          description = <"Points of interest: 
+Ø  Ø Record the score the patient could have without an endo tracheal tube or trachecanule .
+
+
+Aandachtspunten: 
+Ø  Vermeld de score die de patiënt zou kunnen behalen zonder endotracheale tube of tracheacanule.">
+        >
+        ["at0005"] = <
+          text = <"TotalScore">
+          description = <"The total score on the Glasgow coma scale
+
+
+Het gaat hierbij om de totaal score van de Glasgow coma schaal.">
+        >
+      >
+    >
+  >
+  term_bindings = <
+    ["SCT"] = <
+      items = <
+        ["at0000"] = <[SCT::386554004]>
+        ["at0002"] = <[SCT::281395000]>
+        ["at0003"] = <[SCT::281396004]>
+        ["at0004"] = <[SCT::281397008]>
+      >
+    >
+  >

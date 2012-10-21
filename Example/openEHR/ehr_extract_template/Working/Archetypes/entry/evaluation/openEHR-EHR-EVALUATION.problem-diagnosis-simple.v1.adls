@@ -1,0 +1,72 @@
+archetype (adl_version=1.5)
+	openEHR-EHR-EVALUATION.problem-diagnosis-simple.v1
+specialize
+	openEHR-EHR-EVALUATION.problem-diagnosis.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"23/04/2006">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For recording medical diagnoses with optional diagnostic criteria and staging. Requires coded entry of diagnosis. ">
+			use = <"Used for recording any diagnosis, present or past - so is used for recording past history as well as current diagnoses. Used with changed 'Subject of care' for recording diagnoses in relatives and so for family history.">
+			keywords = <"past", "history", "family", "history", "condition">
+			misuse = <"">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+
+definition
+	EVALUATION[at0000.1.1] matches {	-- Diagnosis - Singapore
+		/data[at0001]/items matches {
+			before [at0.32]
+			ELEMENT[at0.0.55] occurrences matches {0..1} matches {	-- Diagnosis type
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0.0.56, 	-- Primary diagnosis
+							at0.0.57, 	-- Secondary diagnosis
+							at0.0.58]	-- Pre-existing condition
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0.0.55"] = <
+					text = <"Diagnosis type">
+					description = <"Type (reporting category) of diagnosis.">
+				>
+				["at0.0.56"] = <
+					text = <"Primary diagnosis">
+					description = <"*">
+				>
+				["at0.0.57"] = <
+					text = <"Secondary diagnosis">
+					description = <"*">
+				>
+				["at0.0.58"] = <
+					text = <"Pre-existing condition">
+					description = <"*">
+				>
+				["at0000.1.1"] = <
+					text = <"Diagnosis - Singapore">
+					description = <"A diagnosis defined by a clinician which is coded in an accepted terminology and may include the stage of the condition and the diagnostic criteria!">
+				>
+			>
+		>
+	>

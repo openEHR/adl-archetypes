@@ -1,0 +1,44 @@
+﻿template_overlay (adl_version=1.5)
+	openEHR-DEMOGRAPHIC-CLUSTER.t_person_race_data.v1
+
+specialise
+	openEHR-DEMOGRAPHIC-CLUSTER.person_additional_data_br.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Templated form of other ISO person data for use in simple situations. Based on Brazil specialised archetype because ISO22220 standard does not have 'race' concept">
+			copyright = <"Copyright (c) 2010 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Authordraft">
+
+definition
+	CLUSTER[at0000.1] matches {
+		/items matches {
+			ELEMENT[at0001] occurrences matches {0}
+			ELEMENT[at0002.1]
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Person additional demographic data">
+					description = <"Person additional demographic data">
+				>
+				["at0002.1"] = <
+					text = <"Race">
+					description = <"The person's race classifier">
+				>
+			>
+		>
+	>

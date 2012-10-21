@@ -1,0 +1,35 @@
+﻿template_overlay (adl_version=1.5)
+	openEHR-EHR-ITEM_TREE.t_procedure_ds.v1
+
+specialise
+	openEHR-EHR-ITEM_TREE.procedure.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+definition
+	ITEM_TREE[at0000.1] occurrences matches {0..*} matches {	-- Procedure
+		/items matches {
+			CLUSTER[at0027] occurrences matches {0}
+			ELEMENT[at0017] occurrences matches {0}
+			ELEMENT[at0013] occurrences matches {0}
+			CLUSTER[at0023] matches {	-- Timing
+				items matches {
+					ELEMENT[at0014] occurrences matches {0}
+					ELEMENT[at0024] occurrences matches {0}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Procedure in Simple discharge summary">
+					description = <"Procedure data for Simple Discharge Summary">
+				>
+			>
+		>
+	>

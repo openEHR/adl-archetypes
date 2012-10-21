@@ -1,0 +1,336 @@
+archetype (adl_version=1.5)
+  cimi-RM-ENTRY.OxygenSaturation.v1
+
+language
+  original_language = <[ISO_639-1::en]>
+description
+  original_author = <
+    ["name"] = <"unknown">
+  >
+  lifecycle_state = <"Draft">
+
+definition
+  ENTRY[at0000] matches { -- OxygenSaturation
+    data matches {
+        ELEMENT[at0001] matches { -- Method
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0002", -- Continues
+                "at0003", -- OneOff
+                "at0004" -- Overnight
+              }
+            }
+          }
+        }
+        ELEMENT[at0005] matches { -- PatientStatus
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0006", -- AtRest
+                "at0007", -- DuringExercise
+                "at0008", -- AfterExercise
+                "at0009" -- PatientIsRestless
+              }
+            }
+          }
+        }
+        ELEMENT[at0010] matches { -- MeasurementPlacement
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0011", -- Finger
+                "at0012", -- Earlobe
+                "at0013", -- Nostril
+                "at0014", -- Lip
+                "at0015" -- BigToe
+              }
+            }
+          }
+        }
+        ELEMENT[at0016] matches { -- Instrument
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0017", -- ClipPulseOximeter
+                "at0018" -- DisposibleAdhesiveOximete
+              }
+            }
+          }
+        }
+        ELEMENT[at0019] matches { -- InstrumentTemperature
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0020", -- Low
+                "at0021", -- RoomTemperature
+                "at0022" -- Hot
+              }
+            }
+          }
+        }
+        CLUSTER[at0023] matches { -- SupportWithOxygen
+          items matches {
+            ELEMENT[at0024] matches { -- PercentageO2
+              value matches {
+                QUANTITY matches {
+                  units matches {*}
+                }
+              }
+            }
+            ELEMENT[at0025] matches { -- OxygenFlowrate
+              value matches {
+                QUANTITY matches {
+                  units matches {*}
+                }
+              }
+            }
+            ELEMENT[at0026] matches { -- FiO2
+              value matches {
+                QUANTITY matches {
+                  units matches {*}
+                }
+              }
+            }
+          }
+        }
+        ELEMENT[at0027] matches { -- AmbientLight
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0028", -- Dark
+                "at0029", -- Daylight
+                "at0030", -- DimLight
+                "at0031" -- StrongLight
+              }
+            }
+          }
+        }
+        ELEMENT[at0032] matches { -- AmbientTempreture
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0033", -- Low
+                "at0034", -- RoomTemperature
+                "at0035" -- Hot
+              }
+            }
+          }
+        }
+        ELEMENT[at0036] matches { -- OxygenSaturation
+          value matches {
+            QUANTITY matches {
+              units matches {
+                CODED_TEXT matches {
+                  code_string matches {"%"}
+                }
+              }
+            }
+          }
+        }
+    }
+  }
+
+ontology
+  term_definitions = <
+    ["en"] = <
+      items = <
+        ["at0000"] = <
+          text = <"OxygenSaturation">
+        >
+        ["at0001"] = <
+          text = <"Method">
+          description = <"The way oxygen is measured.">
+        >
+        ["at0002"] = <
+          text = <"Continues">
+          description = <"The measurement of oxygen saturation takes place continuously.">
+        >
+        ["at0003"] = <
+          text = <"OneOff">
+          description = <"Oxygen saturation is determined once.">
+        >
+        ["at0004"] = <
+          text = <"Overnight">
+          description = <"Oxygen saturation is measured during the night.">
+        >
+        ["at0005"] = <
+          text = <"PatientStatus">
+          description = <"Oxygen saturation at rest may differ from the oxygen saturation during and after exercise. 
+If the patient moves, the oximeter may shift so that the measurement is less reliable.">
+        >
+        ["at0006"] = <
+          text = <"AtRest">
+          description = <"Patient lies quietly in bed or sleeping">
+        >
+        ["at0007"] = <
+          text = <"DuringExercise">
+          description = <"Oxygen saturation is measured during exercise of the patient .">
+        >
+        ["at0008"] = <
+          text = <"AfterExercise">
+          description = <"Oxygen saturation is measured after exercise of the patient.">
+        >
+        ["at0009"] = <
+          text = <"PatientIsRestless">
+          description = <"Patient is not consciously excercising, but is restless">
+        >
+        ["at0010"] = <
+          text = <"MeasurementPlacement">
+          description = <"The oximeter is usually placed on a fingertip. In the event of poor circulation or other injury, the meter can also be placed on the earlobe, nostril, lip or big toe. When placing on the finger or toe, any nail polish should any be removed.">
+        >
+        ["at0011"] = <
+          text = <"Finger">
+          description = <"The oximeter is placed on the finger of the patient">
+        >
+        ["at0012"] = <
+          text = <"Earlobe">
+          description = <"The oximeter is placed on an earlobe of the patient">
+        >
+        ["at0013"] = <
+          text = <"Nostril">
+          description = <"The oximeter is placed in a nostril of the patient">
+        >
+        ["at0014"] = <
+          text = <"Lip">
+          description = <"The oximeter is placed on the lip of the patient">
+        >
+        ["at0015"] = <
+          text = <"BigToe">
+          description = <"The oximeter is placed on a big toe of the patient">
+        >
+        ["at0016"] = <
+          text = <"Instrument">
+          description = <"The instrument by which the oxygen is measured.">
+        >
+        ["at0017"] = <
+          text = <"ClipPulseOximeter">
+          description = <"A clip oximeter is a clip in which a light source and a photosensor are placed and by means of oxygen saturation in the blood can be measured.">
+        >
+        ["at0018"] = <
+          text = <"DisposibleAdhesiveOximete">
+          description = <"An adhesive oximeter consists of a patch in which a light source and a photo sensor positioned. This sensor is used only once.">
+        >
+        ["at0019"] = <
+          text = <"InstrumentTemperature">
+          description = <"The temperature of the instrument can influence the measurement.">
+        >
+        ["at0020"] = <
+          text = <"Low">
+          description = <"Temperature of the instrument is lower than the room temperature">
+        >
+        ["at0021"] = <
+          text = <"RoomTemperature">
+          description = <"Temperature of the instrument as the room temperature">
+        >
+        ["at0022"] = <
+          text = <"Hot">
+          description = <"Temperature of the instrument is higher than room temperature">
+        >
+        ["at0023"] = <
+          text = <"SupportWithOxygen">
+        >
+        ["at0024"] = <
+          text = <"PercentageO2">
+          description = <"Percentage of inhaled oxygen">
+        >
+        ["at0025"] = <
+          text = <"OxygenFlowrate">
+          description = <"Flow rate of the inhaled oxygen">
+        >
+        ["at0026"] = <
+          text = <"FiO2">
+          description = <"Inspired oxygen fraction v / h total inhaled gas mixture">
+        >
+        ["at0027"] = <
+          text = <"AmbientLight">
+          description = <"The strength of the ambient light can influence the measurement.">
+        >
+        ["at0028"] = <
+          text = <"Dark">
+          description = <"During the night or in a dark dimmed room">
+        >
+        ["at0029"] = <
+          text = <"Daylight">
+          description = <"During the day, with no additional light">
+        >
+        ["at0030"] = <
+          text = <"DimLight">
+          description = <"The patient room is illuminated, but the light is dimmed">
+        >
+        ["at0031"] = <
+          text = <"StrongLight">
+          description = <"The room of the patient is strongly illuminated">
+        >
+        ["at0032"] = <
+          text = <"AmbientTempreture">
+          description = <"The temperature of the environment can influence the measurement.">
+        >
+        ["at0033"] = <
+          text = <"Low">
+          description = <"The ambient temperature is colder than usual">
+        >
+        ["at0034"] = <
+          text = <"RoomTemperature">
+          description = <"The ambient temperature is equal to the usual room temperature">
+        >
+        ["at0035"] = <
+          text = <"Hot">
+          description = <"The ambient temperature is warmer than usual">
+        >
+        ["at0036"] = <
+          text = <"OxygenSaturation">
+        >
+      >
+    >
+  >
+  term_bindings = <
+    ["SCT"] = <
+      items = <
+        ["at0000"] = <[SCT::103228002]>
+        ["at0002"] = <[SCT::427064004]>
+        ["at0004"] = <[SCT::252568001]>
+        ["at0011"] = <[SCT::7569003]>
+        ["at0012"] = <[SCT::48800003]>
+        ["at0013"] = <[SCT::1797002]>
+        ["at0014"] = <[SCT::181221003]>
+        ["at0015"] = <[SCT::78883009]>
+        ["at0016"] = <[SCT::59181002]>
+      >
+    >
+  >

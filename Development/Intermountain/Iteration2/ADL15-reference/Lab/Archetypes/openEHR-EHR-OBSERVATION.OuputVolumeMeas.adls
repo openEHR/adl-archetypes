@@ -1,0 +1,182 @@
+﻿archetype (adl_version=1.5)
+	openEHR-EHR-OBSERVATION.OutputVolumeMeas.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"07/09/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Manual rendering of OuputVolumeMeas CEM">
+			use = <"#include OuputVolumeMeas documentation here#">
+			keywords = <"lab", "etc">
+			copyright = <"© 2012 Intermountain Health">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Todd Stevenson", "Alan James", "Joey Coyle", "Tom Oniki", "Craig Parker", "Stan Huff">
+
+definition
+	OBSERVATION[at0000] matches {
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events matches {
+					EVENT[at0002] occurrences matches {0..*} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {	-- data
+										value matches {
+											DV_QUANTITY matches {
+												units matches {"ml"}
+											}
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {	-- SourceIdentifier
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {	-- BodyLocationPrecoord
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {[ac0002]}
+											}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {	-- EstimatedMeasuredStated
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {[ac0003]}
+											}
+										}
+									}
+									ELEMENT[at0057] occurrences matches {0..1} matches {	-- RelativeTemporalContext
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {[ac0004]}
+											}
+										}
+									}
+
+									use_archetype CLUSTER [openEHR-EHR-CLUSTER.Observed.v1]
+									use_archetype CLUSTER [openEHR-EHR-CLUSTER.ReportedReceived.v1]
+									use_archetype CLUSTER [openEHR-EHR-CLUSTER.Verified.v1]
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {	-- Tree
+				items matches {
+					ELEMENT[at0062] occurrences matches {0..1} matches {	-- MethodDevice
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[ac0001]}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"(MDL) Output Volume Measurement">
+				description = <"To record the result of a measurement of output volume from an orifice, tube or drain.">
+			>
+			["at0001"] = <
+				text = <"Event Series">
+				description = <"@ internal @">
+			>
+			["at0002"] = <
+				text = <"Any event">
+				description = <"Any event.">
+			>
+			["at0003"] = <
+				text = <"Tree">
+				description = <"@ internal @">
+			>
+			["at0004"] = <
+				text = <"Tree">
+				description = <"@ internal @">
+			>
+			["at0005"] = <
+				text = <"(D) data">
+				description = <"Measurement value">
+			>
+			["at0006"] = <
+				text = <"(Q) SourceIdentifier">
+				description = <"Identifier of the source, e.g. drain or tube number / tag">
+			>
+			["at0008"] = <
+				text = <"(Q) BodyLocationPrecoord">
+				description = <"???">
+			>
+			["at0009"] = <
+				text = <"(Q) EstimatedMeasuredStated">
+				description = <"Manner of obtaining value">
+			>
+			["at0057"] = <
+				text = <"(Q) RelativeTemporalContext">
+				description = <"???">
+			>
+			["at0062"] = <
+				text = <"(Q) MethodDevice">
+				description = <"Method and/or device used to perform measurement">
+			>
+		>
+	>
+
+	constraint_definitions = <
+		["en"] = <
+			["ac0001"] = <
+				text = <"(Q) MethodDevice value">
+				description = <"???">
+			>
+			["ac0002"] = <
+				text = <"(Q) BodyLocationPrecoord value">
+				description = <"???">
+			>
+			["ac0003"] = <
+				text = <"(Q) EstimatedMeasuredStated value">
+				description = <"???">
+			>
+			["ac0004"] = <
+				text = <"(Q) RelativeTemporalContext value">
+				description = <"???">
+			>
+		>
+	>
+
+	term_bindings = <
+		["IHC"] = <
+			["at0006"] = <[IHC::SourceIdentifier_KEY_ECID]>
+			["at0008"] = <[IHC::BodyLocationPrecoord_KEY_ECID]>
+			["at0009"] = <[IHC::EstimatedMeasuredStated_KEY_ECID]>
+			["at0057"] = <[IHC::RelativeTemporalContext_KEY_ECID]>
+			["at0062"] = <[IHC::MethodDevice_KEY_ECID]>
+		>
+	>
+
+	constraint_bindings = <
+		["IHC"] = <
+			["ac0001"] = <terminology:intermountain.org?valueset=IHC::MethodDevice_VALUESET_ECID>
+			["ac0002"] = <terminology:intermountain.org?valueset=IHC::BodyLocationPrecoord_VALUESET_ECID>
+			["ac0003"] = <terminology:intermountain.org?valueset=IHC::EstimatedMeasuredStated_VALUESET_ECID>
+			["ac0004"] = <terminology:intermountain.org?valueset=IHC::RelativeTemporalContext_VALUESET_ECID>
+		>
+	>

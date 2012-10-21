@@ -1,0 +1,155 @@
+﻿archetype (adl_version=1.5)
+	openEHR-EHR-COMPOSITION.StandardLabReport.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"07/09/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Constructed COMPOSITION-level structure representing an Intermountain Health style lab result. In this version,
+				the attributions are modelled as participations. Not all CEM attribution attributes are directly mappable. It is not clear
+				how many of them would ever be used in real data in any case.">
+			use = <"#transcribe from CEM#">
+			keywords = <"report", "lab">
+			copyright = <"(c) Intermountain Health">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Todd Stevenson", "Alan James", "Joey Coyle", "Tom Oniki", "Craig Parker", "Stan Huff">
+
+definition
+	COMPOSITION[at0000] matches {	-- Report
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {[openehr::433]}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {
+				participations matches {
+					PARTICIPATION[at0006] occurrences matches {0..1} matches {	-- Participant
+						function matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[local::
+									at0008,
+									at0009,
+									at0010,
+									at0011,
+									at0012]
+								}
+							}
+						}
+					}
+				}
+				other_context matches {
+					ITEM_TREE[at0001] matches {	-- Tree
+						items matches {
+							ELEMENT[at0002] occurrences matches {0..1} matches {	-- Report ID
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0005] occurrences matches {0..1} matches {	-- Status
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							allow_archetype CLUSTER[at0007] occurrences matches {0..*} matches {	-- Status detail
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"Report">
+				description = <"Document to communicate information to others, commonly in response to a request from another party.">
+			>
+			["at0001"] = <
+				text = <"Tree">
+				description = <"@ internal @">
+			>
+			["at0002"] = <
+				text = <"Report ID">
+				description = <"Identification information about the report.">
+			>
+			["at0005"] = <
+				text = <"Status">
+				description = <"The status of the entire report. Note: This is not the status of any of the report components.">
+			>
+			["at0006"] = <
+				text = <"Participant">
+				description = <"Participant">
+			>
+			["at0007"] = <
+				text = <"Status detail">
+				description = <"Status detail">
+			>
+			["at0008"] = <
+				text = <"SpecimenCollected">
+				description = <"SpecimenCollected">
+			>
+			["at0009"] = <
+				text = <"SpecimenReceivedByLab">
+				description = <"SpecimenReceivedByLab">
+			>
+			["at0010"] = <
+				text = <"Resulted">
+				description = <"Resulted">
+			>
+			["at0011"] = <
+				text = <"Verified">
+				description = <"Verified">
+			>
+			["at0012"] = <
+				text = <"Updated">
+				description = <"Updated">
+			>
+		>
+	>
+
+	term_bindings = <
+		["IHC"] = <
+			["at0008"] = <[IHC::SpecimenCollected_ECID]>
+			["at0009"] = <[IHC::SpecimenReceivedByLab_ECID]>
+			["at0010"] = <[IHC::Resulted_ECID]>
+			["at0011"] = <[IHC::Verified_ECID]>
+			["at0012"] = <[IHC::Updated_ECID]>
+		>
+	>
+
+annotations
+	items = <
+		["en"] = <
+			items = <
+				["/data[at0001]"] = <
+					items = <
+						["ui"] = <"passthrough">
+					>
+				>
+				["/data[at0001]/items[at0002]"] = <
+					items = <
+						["design note"] = <"this is a design note on Statement">
+						["requirements note"] = <"this is a requirements note on Statement">
+						["medline ref"] = <"this is a medline ref on Statement">
+					>
+				>
+			>
+		>
+	>
+

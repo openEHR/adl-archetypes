@@ -1,0 +1,130 @@
+archetype (adl_version=1.5)
+  cimi-RM-ENTRY.BradenScale.v1
+
+language
+  original_language = <[ISO_639-1::en]>
+description
+  original_author = <
+    ["name"] = <"unknown">
+  >
+  lifecycle_state = <"Draft">
+
+definition
+  ENTRY[at0000] matches { -- BradenScale
+    data matches {
+        ELEMENT[at0001] matches { -- TotalScore
+          value matches {
+            COUNT matches {*}
+          }
+        }
+        CLUSTER[at0002] matches { -- Items
+          items matches {
+            ELEMENT[at0003] matches { -- Activity
+              value matches {
+                ORDINAL matches {*}
+              }
+            }
+            ELEMENT[at0004] matches { -- Moisture
+              value matches {
+                ORDINAL matches {*}
+              }
+            }
+            ELEMENT[at0005] matches { -- FrictionAndSheer
+              value matches {
+                ORDINAL matches {*}
+              }
+            }
+            ELEMENT[at0006] matches { -- SensoryPerception
+              value matches {
+                ORDINAL matches {*}
+              }
+            }
+            ELEMENT[at0007] matches { -- Mobility
+              value matches {
+                ORDINAL matches {*}
+              }
+            }
+            ELEMENT[at0008] matches { -- Nutrition
+              value matches {
+                ORDINAL matches {*}
+              }
+            }
+          }
+        }
+    }
+  }
+
+ontology
+  term_definitions = <
+    ["en"] = <
+      items = <
+        ["at0000"] = <
+          text = <"BradenScale">
+        >
+        ["at0001"] = <
+          text = <"TotalScore">
+          description = <"The total of the scores on each of the variables.
+
+Het totaal van de scores op de afzonderlijke variabelen.">
+        >
+        ["at0002"] = <
+          text = <"Items">
+        >
+        ["at0003"] = <
+          text = <"Activity">
+          description = <"Scores of 1 to 4 are given to the condition of the patient. The total score determines the risk factor. 
+Activity: degree of physical activity.
+
+Score 1 t/m 4 worden toegekend aan de toestand van de patiënt. De totaal score bepaald de risicofactor.
+Mate van fysieke activiteit.">
+        >
+        ["at0004"] = <
+          text = <"Moisture">
+          description = <"Scores of 1 to 4 are given to the condition of the patient. The total score determines the risk factor. 
+Moisture: degree to which skin is exposed to moisture.
+
+Score 1 t/m 4 worden toegekend aan de toestand van de patiënt. De totaal score bepaald de risicofactor.
+De mate waarin de huid aan vocht wordt blootgesteld">
+        >
+        ["at0005"] = <
+          text = <"FrictionAndSheer">
+          description = <"Scores of 1 to 3 are given to the condition of the patient. The total score determines the risk factor.
+Friction and Shear.
+
+Score 1 t/m 3 worden toegekend aan de toestand van de patiënt. De totaal score bepaald de risicofactor.
+Mate waarin schuif- en wrijvingskrachten optreden bij het verplaatsen.">
+        >
+        ["at0006"] = <
+          text = <"SensoryPerception">
+          description = <"Scores of 1 to 4 are given to the condition of the patient. The total score determines the risk factor. 
+Sensory perception: ability to respond meaningfully to pressure-related discomfort.
+
+Score 1 t/m 4 worden toegekend aan de toestand van de patiënt. De totaal score bepaald de risicofactor.
+Zintuiglijke waarneming: Vermogen om adequaat te reageren op ongemak dat door druk wordt veroorzaakt">
+        >
+        ["at0007"] = <
+          text = <"Mobility">
+          description = <"Scores of 1 to 4 are given to the condition of the patient. The total score determines the risk factor. 
+Mobility: ability to change and control body position.
+
+Score 1 t/m 4 worden toegekend aan de toestand van de patiënt. De totaal score bepaald de risicofactor.
+Vermogen om de lichaamshouding te veranderen en beheersen.">
+        >
+        ["at0008"] = <
+          text = <"Nutrition">
+          description = <"Scores of 1 to 4 are given to the condition of the patient. The total score determines the risk factor. 
+Nutrition: usual food intake pattern.
+
+Score 1 t/m 4 worden toegekend aan de toestand van de patiënt. De totaal score bepaald de risicofactor.
+Normaal voedingspatroon">
+        >
+      >
+    >
+  >
+  term_bindings = <
+    ["SCT"] = <
+      items = <
+        ["at0000"] = <[SCT::413139004]>
+      >
+    >
+  >

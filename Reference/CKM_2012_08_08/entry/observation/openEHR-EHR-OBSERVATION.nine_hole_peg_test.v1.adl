@@ -1,0 +1,405 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.nine_hole_peg_test.v1
+
+concept
+	[at0000]	-- Nine Hole Peg Test
+language
+	original_language = <[ISO_639-1::de]>
+	translations = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+				["name"] = <"Michael Braun">
+				["organisation"] = <"University Medical Center Freiburg, Germany">
+				["email"] = <"braun@imbi.uni-freiburg.de">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Michael Braun">
+		["organisation"] = <"University Medical Center Freiburg, Germany">
+		["email"] = <"braun@imbi.uni-freiburg.de">
+		["date"] = <"2012-06-25">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Protokollierung der Durchführung eines Nine Hole Peg Test (NHPT), normalerweise des zweiten Teils des Multiple Sclerosis Functional Composite (MSFC), einer Testreihe zur Verlaufdokumentation von Multipler Sklerose.">
+			use = <"Der Nine Hole Peg Test wird normalerweise im Rahmen des MSFC eingesetzt, kann jedoch auch davon unabhängig durchgeführt werden. Er sollte nur von einer entsprechend geschulten Person durchgeführt werden. Der gesamte Test besteht aus zwei Teilen, einem für jede Hand des Probanden, beginnend mit der dominanten Hand und nach einem Probedurchlauf ohne Zeitmessung. Neun Stifte sollen einer nach dem anderen aus einem Behälter entnommen, in Löchern auf einem Steckbrett platziert und danach einzeln wieder in den Behälter zurückgelegt werden. Der Proband darf pro Teil nur eine Hand eingesetzen, darf das Lochbrett jedoch mit der freien Hand festhalten. Durchschnittswerte gesunder Personen liegen bei etwa 18 Sekunden für eine Hand. Nach 50 Sekunden kann die Messung gestoppt werden, wenn die Aufgabe noch nicht abgeschlossen wurde.
+
+Für präzise Handlungsanweisungen, einen detaillierten Versuchsaufbau und Vergleichswerte nach Alter, Geschlecht und Händigkeit siehe Mathiowetz et al. (1985). Dieser Archetyp deckt Varianten des Tests ab, es wird jedoch die standardisierte Durchführung nach Mathiowetz et al. oder dem MSFC-Handbuch empfohlen. Für eine umfassende Analyse der Fingerbeweglichkeit sollten weitere Tests hinzugezogen werden. Zu beachten ist ferner, dass nach dem Handbuch des MSFC jede Hand zwei mal getestet wird, dafür wird kein Probelauf durchgeführt.">
+			keywords = <"Nine Hole Peg Test", "NHPT", "9-Hole Peg Test", "9-HPT", "Multiple Sclerosis Functional Composite", "MSFC", "Multiple Sklerose", "MS">
+			misuse = <"Der Nine Hole Peg Test sollte nicht bei Probanden mit schwerwiegenden Beeinträchtigungen eingesetzt werden.">
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the administration of a Nine Hole Peg Test (NHPT), normally the second component of the Multiple Sclerosis Functional Composite (MSFC), a series of tests to document the course of Multiple Sclerosis.">
+			use = <"The Nine Hole Peg Test is normally performed as part of the MSFC but may be carried out independently. It should only be administered by a suitably trained person. The overall test involves two trials, one for each of the subject's hands, starting with the dominant hand and preceded by an untimed practice attempt. Nine pegs are picked one by one from a container, placed in the holes on a pegboard and then separately returned to the container. The subject may only use one hand at each trial, but may hold the pegboard with the free hand. Most healthy people complete the test in 18 seconds for one hand. The measurement can be stopped after 50 seconds if the trial remains incomplete.
+
+For precise instructions, a detailed experimental setup and reference values by age, sex, and handedness see Mathiowetz et al. (1985). This archetype covers variations of the test, but the standard procedure based on Mathiowetz et al. or the MSFC-manual is recommended. For a comprehensive analysis of finger dexterity further testing is advised. It should also be noted, that according to the MSFC Manual, each hand is tested twice, but no practice trial is performed.">
+			keywords = <"Nine Hole Peg Test", "NHPT", "9-Hole Peg Test", "9-HPT", "Multiple Sclerosis Functional Composite", "MSFC", "Multiple Sclerosis", "MS">
+			misuse = <"The Nine Hole Peg Test should not be used for subjects with serious impairments.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Martin Boeker, University Medical Center Freiburg, Germany", "Sebastian Mansow-Model, gfnmediber GmbH, Germany", "Sebastian Bischoff, gfnmediber GmbH, Germany", "Alexander Brandt, gfnmediber GmbH, Germany", "Heather Leslie, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, UK">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"84B7CF556B0ADFA604470F0AAB117109">
+		["references"] = <"Fischer JS, Jak AJ, Kniker JE, Rudick RA, Cutter G. Multiple Sclerosis Functional Composite (MSFC), Administration and Scoring Manual: National Multiple Sclerosis Society; 2001.
+Mathiowetz V, Weber K, Kashman N, Volland G. Adult Norms For The Nine Hole Peg Test Of Finger Dexterity. The Occupational Therapy Journal of Research 1985;(5):24–38.">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Nine Hole Peg Test
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0074] occurrences matches {0..1} matches {	-- Dominant Hand - Trial 1
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0035] occurrences matches {0..1} matches {	-- Interim Time
+										value matches {
+											DV_DURATION matches {
+												value matches {PTS/|PT0S..PT1000S|}
+											}
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {	-- Total Time
+										value matches {
+											DV_DURATION matches {
+												value matches {PTS/|PT0S..PT1000S|}
+											}
+										}
+									}
+									ELEMENT[at0050] occurrences matches {0..1} matches {	-- Number Of Pegs Placed
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..9|}
+											}
+										}
+									}
+									ELEMENT[at0051] occurrences matches {0..1} matches {	-- Number Of Pegs Returned
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..9|}
+											}
+										}
+									}
+									ELEMENT[at0080] occurrences matches {0..1} matches {	-- Trial Not Completed
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {True}
+											}
+										}
+									}
+									ELEMENT[at0081] occurrences matches {0..*} matches {	-- Reasons For Non-completion
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[at0004] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0064] occurrences matches {0..*} matches {	-- Confounding Factors
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+					POINT_EVENT[at0075] occurrences matches {0..1} matches {	-- Dominant Hand - Trial 2
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0074]/data[at0003]	-- /data[Event Series]/events[Dominant Hand - Trial 1]/data[Tree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0074]/state[at0004]	-- /data[Event Series]/events[Dominant Hand - Trial 1]/state[Tree]
+						}
+					}
+					POINT_EVENT[at0076] occurrences matches {0..1} matches {	-- Non-dominant Hand - Trial 1
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0074]/data[at0003]	-- /data[Event Series]/events[Dominant Hand - Trial 1]/data[Tree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0074]/state[at0004]	-- /data[Event Series]/events[Dominant Hand - Trial 1]/state[Tree]
+						}
+					}
+					POINT_EVENT[at0077] occurrences matches {0..1} matches {	-- Non-dominant Hand - Trial 2
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0074]/data[at0003]	-- /data[Event Series]/events[Dominant Hand - Trial 1]/data[Tree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0074]/state[at0004]	-- /data[Event Series]/events[Dominant Hand - Trial 1]/state[Tree]
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0008] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0083] occurrences matches {0..1} matches {	-- Dominant Handedness
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0085, 	-- Right hand dominant
+									at0086]	-- Left hand dominant
+								}
+							}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {	-- Practice Trial For Dominant Hand
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[at0082] occurrences matches {0..1} matches {	-- Practice Trial For Non-dominant Hand
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[at0087] occurrences matches {0..1} matches {	-- More Than Two Attempts?
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True}
+							}
+						}
+					}
+					ELEMENT[at0088] occurrences matches {0..*} matches {	-- Reasons For More Than Two Attempts
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0084] occurrences matches {0..1} matches {	-- Pegs Placed But Not Returned
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Nine Hole Peg Test">
+					description = <"Der Nine Hole Peg Test (NHTP, auch 9-Hole Peg Test, 9-HPT), eine quantitative Messung der Funktion der oberen Extremitäten, dient zur schnellen Beurteilung der Fingerfertigkeit eines Probanden.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Baum">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Baum">
+					description = <"@ internal @">
+				>
+				["at0008"] = <
+					text = <"Baum">
+					description = <"@ internal @">
+				>
+				["at0013"] = <
+					text = <"Probelauf dominante Hand">
+					description = <"Wurde mit der dominanten Hand ein Probelauf durchgeführt?">
+				>
+				["at0017"] = <
+					text = <"Gesamtzeit">
+					description = <"Benötigte Zeit für den gesamten Test einer Hand (nach 50 Sek. kann die Messung abgebrochen werden).">
+				>
+				["at0035"] = <
+					text = <"Zwischenzeit">
+					description = <"Gemessene Zwischenzeit nach der Platzierung des letzten Steckers auf dem Steckbrett.">
+				>
+				["at0050"] = <
+					text = <"Anzahl platzierter Stecker">
+					description = <"Die Anzahl der Stecker, die erfolgreich auf dem Steckbrett platziert werden konnten.">
+				>
+				["at0051"] = <
+					text = <"Anzahl zurückgelegter Stecker">
+					description = <"Die Anzahl der Stecker, die erfolgreich in den Behälter zurückgelegt werden konnten.">
+				>
+				["at0064"] = <
+					text = <"Begleitumstände">
+					description = <"Angabe jedweder Umstände, welche die Leistung des Patienten beeinflusst haben (wie Fallenlassen eines Steckers, Erkältung, Fehlen der Sehhilfe oder Sprechen während des Tests).">
+				>
+				["at0074"] = <
+					text = <"Dominante Hand - Test 1">
+					description = <"Erster Test der dominanten Hand.">
+				>
+				["at0075"] = <
+					text = <"Dominante Hand - Test 2">
+					description = <"Zweiter Test der dominanten Hand.">
+				>
+				["at0076"] = <
+					text = <"Nichtdominante Hand - Test 1">
+					description = <"Erster Test der nichtdominanten Hand.">
+				>
+				["at0077"] = <
+					text = <"Nichtdominante Hand - Test 2">
+					description = <"Zweiter Test der nichtdominanten Hand.">
+				>
+				["at0080"] = <
+					text = <"Test nicht beendet">
+					description = <"Konnte der Test nicht beendet werden?">
+				>
+				["at0081"] = <
+					text = <"Gründe für Nichtbeenden">
+					description = <"Wenn der Test vorzeitig beendet wurde, bitte Gründe angeben.">
+				>
+				["at0082"] = <
+					text = <"Probelauf nichtdominante Hand">
+					description = <"Wurde mit der nichtdominanten Hand ein Probelauf durchgeführt?">
+				>
+				["at0083"] = <
+					text = <"Händigkeit">
+					description = <"Angabe der dominanten Hand (bei beidhändigen Personen die Hand, die bevorzugt zum Schreiben verwendet wird).">
+				>
+				["at0084"] = <
+					text = <"Stecker platziert aber nicht zurückgelegt">
+					description = <"Wurde nur die Zeit für das Platzieren der Stecker auf dem Steckbrett gemessen, d.h. ohne Zurücklegen der Stecker in den Behälter?">
+				>
+				["at0085"] = <
+					text = <"Rechtshändigkeit">
+					description = <"Die rechte Hand des Probanden ist dominant.">
+				>
+				["at0086"] = <
+					text = <"Linkshändigkeit">
+					description = <"Die linke Hand des Probanden ist dominant.">
+				>
+				["at0087"] = <
+					text = <"Zusätzliche Anläufe">
+					description = <"Wurden mehrere Anläufe benötigt um die Tests erfolgreich abzuschließen? Falls ja, bitte Gründe gesondert angeben.">
+				>
+				["at0088"] = <
+					text = <"Gründe für zusätzliche Anläufe">
+					description = <"Falls mehrere Anläufe benötigt wurden, um die Tests erfolgreich abzuschließen, bitte Gründe angeben (bspw. Fallenlassen der gesamten Apparatur oder Fehler durch den Prüfer).">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Nine Hole Peg Test">
+					description = <"The Nine Hole Peg Test (NHTP, also 9-Hole Peg Test, 9-HPT), a quantitative measure of upper extremity function, is used for rapid assessment of the finger dexterity of a subject. ">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0008"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0013"] = <
+					text = <"Practice Trial For Dominant Hand">
+					description = <"Was a practice trial performed with the dominant hand?">
+					comment = <"Practice trial is mandatory in the original Multiple Sclerosis Functional Composite specification but not always applied in practice.">
+				>
+				["at0017"] = <
+					text = <"Total Time">
+					description = <"The time needed for the entire trial of one hand (the measurement can be stopped after 50 sec).">
+				>
+				["at0035"] = <
+					text = <"Interim Time">
+					description = <"Interim time measured after the placement of the last peg on the pegboard.">
+				>
+				["at0050"] = <
+					text = <"Number Of Pegs Placed">
+					description = <"The number of pegs successfully placed on the pegboard.">
+				>
+				["at0051"] = <
+					text = <"Number Of Pegs Returned">
+					description = <"The number of pegs successfully returned to the container.">
+				>
+				["at0064"] = <
+					text = <"Confounding Factors">
+					description = <"Record any circumstances that you believe may have affected the patient's perfomance.">
+					comment = <"Example confounding factors include (but are not limited to): \"The patient dropped a peg\", \"The patient has a cold\", \"The Patient forgot eyeglasses and had difficulties seeing pegs\", or \"The patient talked during the task\".">
+				>
+				["at0074"] = <
+					text = <"Dominant Hand - Trial 1">
+					description = <"First trial of the dominant hand.">
+				>
+				["at0075"] = <
+					text = <"Dominant Hand - Trial 2">
+					description = <"Second trial of the dominant hand.">
+				>
+				["at0076"] = <
+					text = <"Non-dominant Hand - Trial 1">
+					description = <"First trial of the non-dominant hand.">
+				>
+				["at0077"] = <
+					text = <"Non-dominant Hand - Trial 2">
+					description = <"Second trial of the non-dominant hand.">
+				>
+				["at0080"] = <
+					text = <"Trial Not Completed">
+					description = <"Was the trial not completed?">
+				>
+				["at0081"] = <
+					text = <"Reasons For Non-completion">
+					description = <"If the trial was terminated prematurely, please record any reasons.">
+				>
+				["at0082"] = <
+					text = <"Practice Trial For Non-dominant Hand">
+					description = <"Was a practice trial performed with the non-dominant hand?">
+					comment = <"Practice trial is mandatory in the original Multiple Sclerosis Functional Composite specification but not always applied in practice.">
+				>
+				["at0083"] = <
+					text = <"Dominant Handedness">
+					description = <"Indication of the dominant hand (if the subject uses both hands equally, the hand that is prefered for writing).">
+				>
+				["at0084"] = <
+					text = <"Pegs Placed But Not Returned">
+					description = <"Was just the time recorded for placing of the pegs on the board, e.g. without returning them to the container?">
+				>
+				["at0085"] = <
+					text = <"Right hand dominant">
+					description = <"The subject's right hand is dominant.">
+				>
+				["at0086"] = <
+					text = <"Left hand dominant">
+					description = <"The subject's left hand is dominant.">
+				>
+				["at0087"] = <
+					text = <"More Than Two Attempts?">
+					description = <"Did it take multiple attempts to get successful trials? If yes, please specify reasons separately.">
+				>
+				["at0088"] = <
+					text = <"Reasons For More Than Two Attempts">
+					description = <"If multiple attempts were needed to complete the trials, please specify reasons.">
+					comment = <"Example reasons for more than two attempts include (but are not limited to): \"The patient knocked entire apparatus on the floor\", \"The examiner forgot to start or stop stopwatch\", or \"The examiner forgot to reset stopwatch in between trials\").">
+				>
+			>
+		>
+	>

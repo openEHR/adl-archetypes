@@ -1,0 +1,421 @@
+archetype (adl_version=1.5; generated)
+	CEN-EN13606-ENTRY.heart_rate.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["organisation"] = <"Vienna University of Technology">
+		["name"] = <"Dana Prochazkova">
+		["date"] = <"01/09/2006">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the mechanical rate, rhythm and character of the pulse as evidence of 'out-put' heart rate.">
+			use = <"For recording mechanical rate of the heart as determined by palpation or suitable device.">
+			keywords = <"rate", "rhythm", "character", "pulse">
+			misuse = <"Not for recording peripheral pulses.">
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Aufzeichnung der mechanischen Herzfrequenz, des Rhythmus und des Pulscharakters.">
+			use = <"Zur Aufzeichnung der mechanischen Herzfrequenz, die durch Abtasten oder passendes MessgerÃ¤t bestimmt wird.">
+			keywords = <"Frequenz", "Rhythmus", "Charakter", "Puls">
+			misuse = <"Nicht zur Aufzeichnung von periphÃ¤ren Pulsen geeignet.">
+		>
+	>
+	lifecycle_state = <"Initial">
+	other_contributors = <"Georg Duftschmid, Medical University of Vienna, Austria", "Christoph Rinner, Medical University of Vienna, Austria">
+	other_details = <
+		["references"] = <"This CEN archetype is derived from the openEHR archetype openEHR-EHR-OBSERVATION.heart_rate.v1.adl, which was originally published on 26/03/2006 by Sam Heard, Ocean Informatics">
+	>
+
+definition
+	ENTRY[at0000] matches {	-- Heart rate
+		meaning matches {
+			CV matches {
+				codeValue matches {"OE-01"}
+			}
+		}
+		items matches {
+			CLUSTER[at0002] matches {
+				meaning matches {
+					CV matches {
+						codeValue matches {"OE-04"}
+					}
+				}
+				item_category matches {
+					CS matches {
+						codeValue matches {"IC02"}
+					}
+				}
+				structure_type matches {
+					CS matches {
+						codeValue matches {"STRC01"}
+					}
+				}
+				obs_time matches {*}
+				parts cardinality matches {1..*; unordered} matches {
+					CLUSTER[at0003] occurrences matches {0..*} matches {
+						item_category matches {
+							CS matches {
+								codeValue matches {"IC02"}
+							}
+						}
+						structure_type matches {
+							CS matches {
+								codeValue matches {"STRC01"}
+							}
+						}
+						obs_time matches {*}
+						parts matches {
+							CLUSTER[at0001] matches {
+								meaning matches {
+									CV matches {
+										codeValue matches {"OE-08"}
+									}
+								}
+								item_category matches {
+									CS matches {
+										codeValue matches {"IC02"}
+									}
+								}
+								structure_type matches {
+									CS matches {
+										codeValue matches {"STRC01"}
+									}
+								}
+								parts matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {
+										value matches {
+											PQ matches {
+												property matches {
+													CD matches {
+														codeValue matches {"382"}
+														codingSchemeName matches {"openehr"}
+														displayName matches {"Frequency"}
+													}
+												}
+												unit matches {
+													CS occurrences matches {0..1} matches {
+														codeValue matches {"/min"}
+														codingSchemeName matches {"UCUM"}
+													}
+												}
+												value matches {|>=0.0|}
+											}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {
+										value matches {
+											CODED_TEXT matches {
+												codedValue matches {
+													CD matches {
+														codeValue matches {"at0006", "at0007", "at0008"}
+														codingSchemeName matches {"local"}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {
+										value matches {
+											SIMPLE_TEXT matches {*}
+										}
+									}
+									ELEMENT[at1005] occurrences matches {0..1} matches {
+										value matches {
+											BL matches {
+												value matches {"True", "False"}
+											}
+										}
+									}
+									CLUSTER[at1007] occurrences matches {0..1} matches {
+										structure_type matches {
+											CS matches {
+												codeValue matches {"STRC01"}
+											}
+										}
+										parts matches {
+											ELEMENT[at1004] occurrences matches {0..1} matches {
+												value matches {
+													CODED_TEXT matches {
+														codedValue matches {
+															CD matches {
+																codeValue matches {"at1008", "at1009", "at1010"}
+																codingSchemeName matches {"local"}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							CLUSTER[at0012] matches {
+								meaning matches {
+									CV matches {
+										codeValue matches {"OE-09"}
+									}
+								}
+								item_category matches {
+									CS matches {
+										codeValue matches {"IC03"}
+									}
+								}
+								structure_type matches {
+									CS matches {
+										codeValue matches {"STRC01"}
+									}
+								}
+								parts matches {
+									ELEMENT[at0013] occurrences matches {0..1} matches {
+										value matches {
+											CODED_TEXT matches {
+												codedValue matches {
+													CD matches {
+														codeValue matches {"at1000", "at1001", "at1002", "at1003"}
+														codingSchemeName matches {"local"}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[at0010] matches {
+				meaning matches {
+					CV matches {
+						codeValue matches {"OE-02"}
+					}
+				}
+				item_category matches {
+					CS matches {
+						codeValue matches {"IC04"}
+					}
+				}
+				structure_type matches {
+					CS matches {
+						codeValue matches {"STRC01"}
+					}
+				}
+				parts matches {
+					ELEMENT[at0011] occurrences matches {0..1} matches {
+						value matches {
+							SIMPLE_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					description = <"The rate the heart is beating - either mechanically or electrically">
+					text = <"Heart rate">
+				>
+				["at0001"] = <
+					description = <"data">
+					text = <"data">
+				>
+				["at0002"] = <
+					description = <"history">
+					text = <"history">
+				>
+				["at0003"] = <
+					description = <"*">
+					text = <"Any event">
+				>
+				["at0004"] = <
+					description = <"The rate of the heart">
+					text = <"Rate">
+				>
+				["at0005"] = <
+					description = <"The rhythm of the heart beat">
+					text = <"Rhythm">
+				>
+				["at0006"] = <
+					description = <"Regular heart beat">
+					text = <"Regular">
+				>
+				["at0007"] = <
+					description = <"The heart is irregular">
+					text = <"Irregular">
+				>
+				["at0008"] = <
+					description = <"Irregular in a chaotic manner">
+					text = <"Irregularly irregular">
+				>
+				["at0009"] = <
+					description = <"The description of the rate and rythm">
+					text = <"Description">
+				>
+				["at0010"] = <
+					description = <"Protocol">
+					text = <"Protocol">
+				>
+				["at0011"] = <
+					description = <"Device by which the heart rate was measured">
+					text = <"Device">
+				>
+				["at0012"] = <
+					description = <"State">
+					text = <"State">
+				>
+				["at0013"] = <
+					description = <"The position of the patient when the heart rate was measured">
+					text = <"Position">
+				>
+				["at1000"] = <
+					description = <"Lying prone">
+					text = <"Lying">
+				>
+				["at1001"] = <
+					description = <"Sitting on bed or chair">
+					text = <"Sitting">
+				>
+				["at1002"] = <
+					description = <"Person reclining at 45 degrees with legs raised">
+					text = <"Reclining">
+				>
+				["at1003"] = <
+					description = <"Standing upright">
+					text = <"Standing">
+				>
+				["at1004"] = <
+					description = <"The heart rate is normal">
+					text = <"Normal statements ">
+				>
+				["at1005"] = <
+					description = <"The pulse rate is present (implied true if rate > 0)">
+					text = <"Present">
+				>
+				["at1007"] = <
+					description = <"Normal statements about the heart rate">
+					text = <"Normal statements">
+				>
+				["at1008"] = <
+					description = <"The heart is beating in a normal manner">
+					text = <"Normal sinus rhythm">
+				>
+				["at1009"] = <
+					description = <"The heart is beating normally">
+					text = <"Normal rate and rhythm">
+				>
+				["at1010"] = <
+					description = <"The heart rate is normal">
+					text = <"Normal">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					description = <"Frequenz, mit der das Herz schlaegt - entweder mechanisch oder elektrisch">
+					text = <"Herzfrequenz">
+				>
+				["at0001"] = <
+					description = <"Daten">
+					text = <"Daten">
+				>
+				["at0002"] = <
+					description = <"Historie">
+					text = <"Historie">
+				>
+				["at0003"] = <
+					description = <"*">
+					text = <"ein Ereignis">
+				>
+				["at0004"] = <
+					description = <"Herzfrequenz">
+					text = <"Frequenz">
+				>
+				["at0005"] = <
+					description = <"Rhythmus des Herzschlags">
+					text = <"Rhythmus">
+				>
+				["at0006"] = <
+					description = <"regelmaessiger Herzschlag">
+					text = <"regelmaessig">
+				>
+				["at0007"] = <
+					description = <"Herzschlag ist nicht regelmaessig">
+					text = <"unregelmaessig">
+				>
+				["at0008"] = <
+					description = <"chaotisch unregelmaessig  ">
+					text = <"nicht-regelmaessig unregelmaessig">
+				>
+				["at0009"] = <
+					description = <"Beschreibung des Herzschlags und des Rhythmuses">
+					text = <"Beschreibung">
+				>
+				["at0010"] = <
+					description = <"Protokoll">
+					text = <"Protokoll">
+				>
+				["at0011"] = <
+					description = <"Geraet, mit dem die Herzfrequenz gemessen wurde">
+					text = <"Messgeraet">
+				>
+				["at0012"] = <
+					description = <"Zustand">
+					text = <"Zustand">
+				>
+				["at0013"] = <
+					description = <"Position, in der sich der Patient bei der Messung befand">
+					text = <"Position">
+				>
+				["at1000"] = <
+					description = <"Liegen am Bauch ">
+					text = <"Ligen">
+				>
+				["at1001"] = <
+					description = <"Sitzen am Stuhl oder Bett">
+					text = <"Sitzen">
+				>
+				["at1002"] = <
+					description = <"Person lehnt sich unter dem Winkel von 45 Grad zurueck, wobei sie die Fuesse oben hat">
+					text = <"Zuruecklehnen">
+				>
+				["at1003"] = <
+					description = <"senkrechtes Stehen">
+					text = <"Stehen">
+				>
+				["at1004"] = <
+					description = <"Die Herzfrequenz ist normal">
+					text = <"Normalaussagen">
+				>
+				["at1005"] = <
+					description = <"Pulsfrequenz existiert (angenommen falls Frequenz > 0)">
+					text = <"Existiert">
+				>
+				["at1007"] = <
+					description = <"Normalaussagen ueber die Herzfrequenz">
+					text = <"Normalaussagen">
+				>
+				["at1008"] = <
+					description = <"Das Herz schlaegt auf normale Art und Weise">
+					text = <"Normaler Sinusrhythmus">
+				>
+				["at1009"] = <
+					description = <"Das Herz schlaegt normal">
+					text = <"Normale Frequenz und Rhythmus">
+				>
+				["at1010"] = <
+					description = <"Die Herzfrequenz ist normal">
+					text = <"Normal">
+				>
+			>
+		>
+	>

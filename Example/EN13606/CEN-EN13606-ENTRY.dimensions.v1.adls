@@ -1,0 +1,371 @@
+archetype (adl_version=1.5; generated)
+	CEN-EN13606-ENTRY.dimensions.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["organisation"] = <"Vienna University of Technology">
+		["name"] = <"Dana Prochazkova">
+		["date"] = <"01/09/2006">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For recording the measured dimensions of something (the object)">
+			use = <"">
+			keywords = <"length", "volume", "circumference", "area", "dimension">
+			misuse = <"Do not use for body height - use openEHR-EHR-OBSERVATION.height instead.">
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Aufzeichnung der gemessenen Dimensionen eines Objektes.">
+			use = <"">
+			keywords = <"Lae¤nge", "Volumen", "Umfang", "Flaeche", "Dimension">
+			misuse = <"Nicht fuer die Messung der Koerpergrsse zu verwenden - dafuer soll der Archetyp openEHR-EHR-OBSERVATION.height verwendet werden.">
+		>
+	>
+	lifecycle_state = <"Initial">
+	other_contributors = <"Georg Duftschmid, Medical University of Vienna, Austria", "Christoph Rinner, Medical University of Vienna, Austria">
+	other_details = <
+		["references"] = <"This CEN archetype is derived from the openEHR archetype openEHR-EHR-OBSERVATION.dimensions.v1.adl, which was originally published on 22/03/2006 by Sam Heard, Ocean Informatics">
+	>
+
+definition
+	ENTRY[at0000] matches {	-- Dimensions
+		meaning matches {
+			CV matches {
+				codeValue matches {"OE-01"}
+				codingScheme matches {
+					OID matches {
+						oid matches {"1.0.13606.3.2008"}
+					}
+				}
+				codingSchemeName matches {"CEN/TC251/EN13606-3:MEANING"}
+			}
+		}
+		items matches {
+			CLUSTER[at0001] matches {
+				meaning matches {
+					CV matches {
+						codeValue matches {"OE-04"}
+						codingScheme matches {
+							OID matches {
+								oid matches {"1.0.13606.3.2008"}
+							}
+						}
+						codingSchemeName matches {"CEN/TC251/EN13606-3:MEANING"}
+					}
+				}
+				item_category matches {
+					CS matches {
+						codeValue matches {"IC02"}
+					}
+				}
+				structure_type matches {
+					CS matches {
+						codeValue matches {"STRC01"}
+					}
+				}
+				obs_time matches {*}
+				parts cardinality matches {1..*; unordered} matches {
+					CLUSTER[at0002] occurrences matches {0..*} matches {
+						item_category matches {
+							CS matches {
+								codeValue matches {"IC02"}
+							}
+						}
+						structure_type matches {
+							CS matches {
+								codeValue matches {"STRC01"}
+							}
+						}
+						obs_time matches {*}
+						parts matches {
+							CLUSTER[at0003] matches {
+								meaning matches {
+									CV matches {
+										codeValue matches {"OE-08"}
+										codingScheme matches {
+											OID matches {
+												oid matches {"1.0.13606.3.2008"}
+											}
+										}
+										codingSchemeName matches {"CEN/TC251/EN13606-3:MEANING"}
+									}
+								}
+								item_category matches {
+									CS matches {
+										codeValue matches {"IC02"}
+									}
+								}
+								structure_type matches {
+									CS matches {
+										codeValue matches {"STRC01"}
+									}
+								}
+								parts cardinality matches {2..*; unordered} matches {
+									ELEMENT[at0013] matches {
+										value matches {
+											CODED_TEXT matches {
+												codedValue matches {*}
+											}
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {
+										value matches {
+											SIMPLE_TEXT matches {*}
+										}
+									}
+									CLUSTER[at0021] occurrences matches {0..1} matches {
+										item_category matches {
+											CS matches {
+												codeValue matches {"IC02"}
+											}
+										}
+										structure_type matches {
+											CS matches {
+												codeValue matches {"STRC01"}
+											}
+										}
+										parts matches {
+											ELEMENT[at1001] occurrences matches {0..1} matches {
+												value matches {
+													PQ matches {
+														property matches {
+															CD matches {
+																codeValue matches {"122"}
+																codingSchemeName matches {"openehr"}
+																displayName matches {"Length"}
+															}
+														}
+														unit matches {
+															CS occurrences matches {0..1} matches {
+																codeValue matches {"mm", "cm", "m"}
+																codingSchemeName matches {"UCUM"}
+															}
+														}
+													}
+												}
+											}
+											ELEMENT[at1002] occurrences matches {0..1} matches {
+												value matches {
+													PQ matches {
+														property matches {
+															CD matches {
+																codeValue matches {"122"}
+																codingSchemeName matches {"openehr"}
+																displayName matches {"Length"}
+															}
+														}
+														unit matches {
+															CS occurrences matches {0..1} matches {
+																codeValue matches {"mm", "cm", "m"}
+																codingSchemeName matches {"UCUM"}
+															}
+														}
+													}
+												}
+											}
+											ELEMENT[at1003] occurrences matches {0..1} matches {
+												value matches {
+													PQ matches {
+														property matches {
+															CD matches {
+																codeValue matches {"122"}
+																codingSchemeName matches {"openehr"}
+																displayName matches {"Length"}
+															}
+														}
+														unit matches {
+															CS occurrences matches {0..1} matches {
+																codeValue matches {"mm", "cm", "m"}
+																codingSchemeName matches {"UCUM"}
+															}
+														}
+													}
+												}
+											}
+											ELEMENT[at1004] occurrences matches {0..1} matches {
+												value matches {
+													PQ matches {
+														property matches {
+															CD matches {
+																codeValue matches {"122"}
+																codingSchemeName matches {"openehr"}
+																displayName matches {"Length"}
+															}
+														}
+														unit matches {
+															CS occurrences matches {0..1} matches {
+																codeValue matches {"mm", "cm", "m"}
+																codingSchemeName matches {"UCUM"}
+															}
+														}
+													}
+												}
+											}
+											ELEMENT[at1005] occurrences matches {0..1} matches {
+												value matches {
+													PQ matches {
+														property matches {
+															CD matches {
+																codeValue matches {"335"}
+																codingSchemeName matches {"openehr"}
+																displayName matches {"Area"}
+															}
+														}
+														unit matches {
+															CS occurrences matches {0..1} matches {
+																codeValue matches {"mm2", "cm2", "% body", "% head, neck", "% lower limb", "% trunk", "% upper limb"}
+																codingSchemeName matches {"UCUM"}
+															}
+														}
+													}
+												}
+											}
+											ELEMENT[at1006] occurrences matches {0..1} matches {
+												value matches {
+													PQ matches {
+														property matches {
+															CD matches {
+																codeValue matches {"129"}
+																codingSchemeName matches {"openehr"}
+																displayName matches {"Volume"}
+															}
+														}
+														unit matches {
+															CS occurrences matches {0..1} matches {
+																codeValue matches {"mm3", "ml"}
+																codingSchemeName matches {"UCUM"}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					description = <"Measurement of the length, circumference, diameter, height, depth or width of a part of the body or object">
+					text = <"Dimensions">
+				>
+				["at0001"] = <
+					description = <"history">
+					text = <"history">
+				>
+				["at0002"] = <
+					description = <"*">
+					text = <"Any event">
+				>
+				["at0003"] = <
+					description = <"data">
+					text = <"data">
+				>
+				["at0013"] = <
+					description = <"The object, axis or body part that is being measured">
+					text = <"Object">
+				>
+				["at0020"] = <
+					description = <"Information about the location of the measurement or other information regarding the location of the object measured">
+					text = <"Location/description of measurement">
+				>
+				["at0021"] = <
+					description = <"Dimensions CLUSTER">
+					text = <"Dimensions CLUSTER">
+				>
+				["at1001"] = <
+					description = <"The circumference of the part examined">
+					text = <"Circumference">
+				>
+				["at1002"] = <
+					description = <"The length of the part examined (longitudinal anatomical axis)">
+					text = <"Length">
+				>
+				["at1003"] = <
+					description = <"The width or breadth (transverse anatomical axis)">
+					text = <"Breadth">
+				>
+				["at1004"] = <
+					description = <"The depth of the part examined (dorso-ventral anatomical axis)">
+					text = <"Depth">
+				>
+				["at1005"] = <
+					description = <"The area of the part examined">
+					text = <"Area">
+				>
+				["at1006"] = <
+					description = <"The volume of the part examined">
+					text = <"Volume">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					description = <"Messung von Laenge, Umfang, Durchmesser, Hoehe, Tiefe oder Breite eines Koerperteils oder eines Objekts">
+					text = <"Koerperdimensionen">
+				>
+				["at0001"] = <
+					description = <"Historie">
+					text = <"Historie">
+				>
+				["at0002"] = <
+					description = <"*">
+					text = <"ein Ereignis">
+				>
+				["at0003"] = <
+					description = <"Daten">
+					text = <"Daten">
+				>
+				["at0013"] = <
+					description = <"Gegenstand der Messung (Objekt, Achse oder Koerperteil)">
+					text = <"Objekt">
+				>
+				["at0020"] = <
+					description = <"Informationen ueber dem Ort der Messung oder andere Informationen, die den Ort oder das gemessene Objekt betreffen">
+					text = <"Ort/Beschreibung der Messung">
+				>
+				["at0021"] = <
+					description = <"Dimensionen CLUSTER">
+					text = <"Dimensionen CLUSTER">
+				>
+				["at1001"] = <
+					description = <"Der Umfang des betrachteten Teils">
+					text = <"Umfang">
+				>
+				["at1002"] = <
+					description = <"Die Laenge des betrachteten Teils (longidudinale Koerperachse)">
+					text = <"Laenge">
+				>
+				["at1003"] = <
+					description = <"Die Breite oder Weite (transversale Koerperachse)">
+					text = <"Breite">
+				>
+				["at1004"] = <
+					description = <"Die Tiefe des betrachteten Teils (dorsal-ventrale Koerperachse)">
+					text = <"Tiefe">
+				>
+				["at1005"] = <
+					description = <"Die Flaeche des betrachteten Teils">
+					text = <"Flaeche">
+				>
+				["at1006"] = <
+					description = <"Das Volumen des betrachteten Teils">
+					text = <"Volumen">
+				>
+			>
+		>
+	>

@@ -1,0 +1,52 @@
+﻿template_overlay (adl_version=1.5)
+	openEHR-EHR-EVALUATION.t_diagnosis_ds.v1
+
+specialize
+	openEHR-EHR-EVALUATION.problem-diagnosis-simple.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+definition
+	EVALUATION[at0000.1.1.1] matches {	-- Simple Discharge Diagnosis
+		/data[at0001]/items matches {
+			ELEMENT[at0002.1.0.1] occurrences matches {1}
+			ELEMENT[at0.32] occurrences matches {0}
+			ELEMENT[at0003] occurrences matches {0}
+			ELEMENT[at0004] occurrences matches {0}
+			ELEMENT[at0005] occurrences matches {0}
+			ELEMENT[at0009.0.0.1]
+			ELEMENT[at0038] occurrences matches {0}
+			ELEMENT[at0010] occurrences matches {0}
+			ELEMENT[at0037] occurrences matches {0}
+			CLUSTER[at0011] occurrences matches {0}
+			ELEMENT[at0031] occurrences matches {0}
+			CLUSTER[at0.35] occurrences matches {0}
+			ELEMENT[at0.0.55.1] occurrences matches {1}
+		}
+		/protocol existence matches {0}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1.1.1"] = <
+					text = <"Simple problem / diagnosis summary">
+					description = <"Simple problem / diagnosis summary">
+				>
+				["at0002.1.0.1"] = <
+					text = <"Diagnosis">
+					description = <"Diagnosis">
+				>
+				["at0009.0.0.1"] = <
+					text = <"Additional remarks">
+					description = <"Diagnosis/problem additional remarks">
+				>
+				["at0.0.55.1"] = <
+					text = <"Diagnosis type">
+					description = <"Diagnosis type">
+				>
+			>
+		>
+	>

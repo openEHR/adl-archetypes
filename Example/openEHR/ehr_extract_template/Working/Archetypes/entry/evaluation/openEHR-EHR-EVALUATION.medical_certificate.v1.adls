@@ -1,0 +1,79 @@
+﻿archetype (adl_version=1.5)
+	openEHR-EHR-EVALUATION.medical_certificate.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For medical Certificate information">
+			use = <"Only for Discharge Summary">
+		>
+	>
+	lifecycle_state = <"0">
+
+definition
+	EVALUATION[at0000] matches {	-- Medical Certificate
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Status
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Start Date
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- End Date
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Medical Certificate">
+					description = <"Only used for Discharge Summary Document">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Status">
+					description = <"Status of fitness for duties e.g. unfit for duty, fit for light duty">
+				>
+				["at0003"] = <
+					text = <"Start Date">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"End Date">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Description">
+					description = <"Textual description of the medical certificate.">
+				>
+			>
+		>
+	>

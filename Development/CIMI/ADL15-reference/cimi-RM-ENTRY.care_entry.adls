@@ -1,0 +1,45 @@
+﻿archetype (adl_version=1.5)
+	cimi-RM-ENTRY.care_entry.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"10/04/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Pattern archetype for openEHR::CARE_ENTRY">
+			keywords = <"Entry", ...>
+			copyright = <"© 2012 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Draft">
+	other_details = <
+		["model_level"] = <"reference">
+	>
+
+definition
+	ENTRY[at0000] matches {	-- CARE_ENTRY
+		data matches {
+			ITEM[at0001] matches {*}	-- protocol
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"CARE_ENTRY">
+				description = <"CARE_ENTRY class from openEHR">
+			>
+			["at0001"] = <
+				text = <"protocol">
+				description = <"protocol property from CARE_ENTRY class from openEHR">
+			>
+		>
+	>

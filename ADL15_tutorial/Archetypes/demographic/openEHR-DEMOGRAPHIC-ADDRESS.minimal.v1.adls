@@ -1,0 +1,65 @@
+﻿archetype (adl_version=1.5)
+	openEHR-DEMOGRAPHIC-ADDRESS.minimal.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"openEHR Foundation">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"01/08/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Minimalist address archetype, illustrating archetype structure">
+			keywords = <"demographic", "address">
+			copyright = <"copyright (c) 2012 openEHR foundation">
+		>
+	>
+	lifecycle_state = <"Draft">
+
+definition
+	ADDRESS[at0000] matches { 
+		details matches {
+			ITEM_TREE[at0001] occurrences matches {0..1} matches { 
+				items matches {
+					CLUSTER[at0002] matches { 
+						items matches {
+							ELEMENT[at0003] matches { 
+								value matches {
+									DV_TEXT matches {*} 
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Address">
+					description = <"Address based on ISO22220 standard.">
+				>
+				["at0001"] = <
+					text = <"Items">
+					description = <"Address items.">
+				>
+				["at0002"] = <
+					text = <"Address lines group">
+					description = <"A composite of address components.">
+				>
+				["at0003"] = <
+					text = <"Address line">
+					description = <"Complete address line.">
+				>
+			>
+		>
+	>

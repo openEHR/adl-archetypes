@@ -1,0 +1,325 @@
+﻿archetype (adl_version=1.5)
+	openEHR-EHR-OBSERVATION.term_bindings_paths_use_refs.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"2004-05-18">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Test bindings to paths that traverse use_node references.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Draft">
+
+definition
+	OBSERVATION[at0000] matches {	-- Apgar score
+		data matches {
+			HISTORY[at0002] matches {	-- history
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0003] occurrences matches {0..1} matches {	-- 1 minute
+						offset matches {
+							DV_DURATION matches {
+								value matches {|PT1M|}
+							}
+						}
+						data matches {
+							ITEM_LIST[at0001] matches {	-- structure
+								items cardinality matches {1..6; ordered} matches {
+									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Respiratory effort
+										value matches {
+											0|[local::at0010], 	-- Absent
+											1|[local::at0011], 	-- Weak or irregular
+											2|[local::at0012]  	-- Normal
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Heart Rate
+										value matches {
+											0|[local::at0006], 	-- Absent
+											1|[local::at0007], 	-- <100 beats per minute
+											2|[local::at0008]  	-- ≥100 beats per minute
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {	-- Muscle tone
+										value matches {
+											0|[local::at0014], 	-- Limp or flaccid
+											1|[local::at0015], 	-- Reduced tone
+											2|[local::at0016]  	-- Normal tone
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {	-- Reflex irritability
+										value matches {
+											0|[local::at0018], 	-- No response
+											1|[local::at0019], 	-- Reduced response
+											2|[local::at0020]  	-- Normal response
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {	-- Skin colour
+										value matches {
+											0|[local::at0022], 	-- Completely blue
+											1|[local::at0023], 	-- Body pink; extremities blue
+											2|[local::at0024]  	-- Completely pink
+										}
+									}
+									ELEMENT[at0025] occurrences matches {0..1} matches {	-- Total
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..10|}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					POINT_EVENT[at0026] occurrences matches {0..1} matches {	-- 2 minute
+						offset matches {
+							DV_DURATION matches {
+								value matches {|PT2M|}
+							}
+						}
+						data matches {
+							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+						}
+					}
+					POINT_EVENT[at0027] occurrences matches {0..1} matches {	-- 3 minute
+						offset matches {
+							DV_DURATION matches {
+								value matches {|PT3M|}
+							}
+						}
+						data matches {
+							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+						}
+					}
+					POINT_EVENT[at0028] occurrences matches {0..1} matches {	-- 5 minute
+						offset matches {
+							DV_DURATION matches {
+								value matches {|PT5M|}
+							}
+						}
+						data matches {
+							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+						}
+					}
+					POINT_EVENT[at0031] occurrences matches {0..1} matches {	-- 10 minute
+						offset matches {
+							DV_DURATION matches {
+								value matches {|PT10M|}
+							}
+						}
+						data matches {
+							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+						}
+					}
+					EVENT[at0037] occurrences matches {0..*} matches {	-- Any event
+						data matches {
+							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_LIST[at0029] matches {	-- List
+				items matches {
+					ELEMENT[at0030] occurrences matches {0..1} matches {	-- Notes on measurement
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"Apgar score">
+				description = <"Clinical score derived from assessment of respiratory effort, heart rate, reflex irritability, muscle tone and skin colour.">
+			>
+			["at0001"] = <
+				text = <"structure">
+				description = <"@ internal @">
+			>
+			["at0002"] = <
+				text = <"history">
+				description = <"@ internal @">
+			>
+			["at0003"] = <
+				text = <"1 minute">
+				description = <"Apgar score 1 minute after birth.">
+			>
+			["at0005"] = <
+				text = <"Heart Rate">
+				description = <"Recording of the infant's heart rate.">
+			>
+			["at0006"] = <
+				text = <"Absent">
+				description = <"No heart beat is seen, felt or heard.">
+			>
+			["at0007"] = <
+				text = <"<100 beats per minute">
+				description = <"Heart rate less than 100 beats per minute.">
+			>
+			["at0008"] = <
+				text = <"≥100 beats per minute">
+				description = <"Heart rate greater than or equal to 100 beats per minute.">
+			>
+			["at0009"] = <
+				text = <"Respiratory effort">
+				description = <"Observation of the infant's respiratory effort.">
+			>
+			["at0010"] = <
+				text = <"Absent">
+				description = <"No effort to breath.">
+			>
+			["at0011"] = <
+				text = <"Weak or irregular">
+				description = <"Some effort to breath, moving chest.">
+			>
+			["at0012"] = <
+				text = <"Normal">
+				description = <"Breathing normally or crying.">
+			>
+			["at0013"] = <
+				text = <"Muscle tone">
+				description = <"Observation of the infant's muscle tone.">
+			>
+			["at0014"] = <
+				text = <"Limp or flaccid">
+				description = <"No spontaneous movement.">
+			>
+			["at0015"] = <
+				text = <"Reduced tone">
+				description = <"Some flexion of extremities.">
+			>
+			["at0016"] = <
+				text = <"Normal tone">
+				description = <"Normal, vigorous movements.">
+			>
+			["at0017"] = <
+				text = <"Reflex irritability">
+				description = <"Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter.">
+			>
+			["at0018"] = <
+				text = <"No response">
+				description = <"No response to stimulation.">
+			>
+			["at0019"] = <
+				text = <"Reduced response">
+				description = <"Grimace or feeble cry when stimulated.">
+			>
+			["at0020"] = <
+				text = <"Normal response">
+				description = <"Grimace, sneeze, cough or pulls away when stimulated.">
+			>
+			["at0021"] = <
+				text = <"Skin colour">
+				description = <"Observation of the skin colour of the infant.">
+			>
+			["at0022"] = <
+				text = <"Completely blue">
+				description = <"Body and extremities are blue.">
+			>
+			["at0023"] = <
+				text = <"Body pink; extremities blue">
+				description = <"Body is pink; extremities are blue.">
+			>
+			["at0024"] = <
+				text = <"Completely pink">
+				description = <"Body and extremities are pink; no cyanosis.">
+			>
+			["at0025"] = <
+				text = <"Total">
+				description = <"The sum of the 5 ordinal scores for each component parameter.">
+			>
+			["at0026"] = <
+				text = <"2 minute">
+				description = <"Apgar score 2 minutes after birth.">
+			>
+			["at0027"] = <
+				text = <"3 minute">
+				description = <"Apgar score 3 minutes after birth.">
+			>
+			["at0028"] = <
+				text = <"5 minute">
+				description = <"Apgar score 5 minutes after birth.">
+			>
+			["at0029"] = <
+				text = <"List">
+				description = <"@ internal @">
+			>
+			["at0030"] = <
+				text = <"Notes on measurement">
+				description = <"Notes on measurement of the Apgar score.">
+			>
+			["at0031"] = <
+				text = <"10 minute">
+				description = <"Apgar score 10 minutes after birth.">
+			>
+			["at0037"] = <
+				text = <"Any event">
+				description = <"Apgar score at any additional time, as required.">
+			>
+		>
+	>
+
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["/data[at0002]/events[at0003]/data[at0001]/items[at0025]"] = <[SNOMED-CT::169895004]>
+			["/data[at0002]/events[at0028]/data[at0001]/items[at0025]"] = <[SNOMED-CT::169909004]>
+			["/data[at0002]/events[at0031]/data[at0001]/items[at0025]"] = <[SNOMED-CT::169922007]>
+			["/data[at0002]/events[at0037]/data[at0001]/items[at0025]"] = <[SNOMED-CT::364592005]>
+			["at0025"] = <[SNOMED-CT::249228009]>
+		>
+		["LOINC"] = <
+			["/data[at0002]/events[at0003]"] = <[LOINC::48334-7]>
+			["/data[at0002]/events[at0003]/data[at0001]/items[at0005]"] = <[LOINC::32407-9]>
+			["/data[at0002]/events[at0003]/data[at0001]/items[at0009]"] = <[LOINC::32410-3]>
+			["/data[at0002]/events[at0003]/data[at0001]/items[at0013]"] = <[LOINC::32408-7]>
+			["/data[at0002]/events[at0003]/data[at0001]/items[at0017]"] = <[LOINC::32409-5]>
+			["/data[at0002]/events[at0003]/data[at0001]/items[at0021]"] = <[LOINC::32406-1]>
+			["/data[at0002]/events[at0003]/data[at0001]/items[at0025]"] = <[LOINC::9272-6]>
+			["/data[at0002]/events[at0026]/data[at0001]/items[at0025]"] = <[LOINC::9273-4]>
+			["/data[at0002]/events[at0028]"] = <[LOINC::48333-9]>
+			["/data[at0002]/events[at0028]/data[at0001]/items[at0005]"] = <[LOINC::32412-9]>
+			["/data[at0002]/events[at0028]/data[at0001]/items[at0009]"] = <[LOINC::32415-2]>
+			["/data[at0002]/events[at0028]/data[at0001]/items[at0013]"] = <[LOINC::32413-7]>
+			["/data[at0002]/events[at0028]/data[at0001]/items[at0017]"] = <[LOINC::32414-5]>
+			["/data[at0002]/events[at0028]/data[at0001]/items[at0021]"] = <[LOINC::32411-1]>
+			["/data[at0002]/events[at0028]/data[at0001]/items[at0025]"] = <[LOINC::9274-2]>
+			["/data[at0002]/events[at0031]"] = <[LOINC::48332-1]>
+			["/data[at0002]/events[at0031]/data[at0001]/items[at0005]"] = <[LOINC::32402-0]>
+			["/data[at0002]/events[at0031]/data[at0001]/items[at0009]"] = <[LOINC::32405-3]>
+			["/data[at0002]/events[at0031]/data[at0001]/items[at0013]"] = <[LOINC::32403-8]>
+			["/data[at0002]/events[at0031]/data[at0001]/items[at0017]"] = <[LOINC::32404-6]>
+			["/data[at0002]/events[at0031]/data[at0001]/items[at0021]"] = <[LOINC::32401-2]>
+			["/data[at0002]/events[at0031]/data[at0001]/items[at0025]"] = <[LOINC::9271-8]>
+			["at0006"] = <[LOINC::LA6716]>
+			["at0007"] = <[LOINC::LA6717]>
+			["at0008"] = <[LOINC::LA6718]>
+			["at0010"] = <[LOINC::LA6725]>
+			["at0011"] = <[LOINC::LA6726]>
+			["at0012"] = <[LOINC::LA6727]>
+			["at0014"] = <[LOINC::LA6713]>
+			["at0015"] = <[LOINC::LA6714]>
+			["at0016"] = <[LOINC::LA6715]>
+			["at0018"] = <[LOINC::LA6719]>
+			["at0019"] = <[LOINC::LA6720]>
+			["at0020"] = <[LOINC::LA6721]>
+			["at0022"] = <[LOINC::LA6722]>
+			["at0023"] = <[LOINC::LA6723]>
+			["at0024"] = <[LOINC::LA6724]>
+		>
+	>

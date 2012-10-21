@@ -1,0 +1,198 @@
+﻿archetype (adl_version=1.5)
+	openEHR-DEMOGRAPHIC-ADDRESS.basic.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sergio Miranda Freire & Rigoleta Dutra Mediano Dias">
+		["organisation"] = <"openEHR Foundation">
+		["email"] = <"sergio@lampada.uerj.br">
+		["date"] = <"01/08/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Address structure, based on ISO 22220">
+			use = <"Provide an illustrative model of person's address">
+			keywords = <"demographic", "address">
+			copyright = <"copyright (c) 2012 openEHR foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+
+definition
+    ADDRESS[at0000] matches { 
+        name matches {
+            DV_TEXT matches {*} 
+            DV_CODED_TEXT matches { 
+                defining_code matches {
+                    [local::
+                    at0461,
+                    at0462,
+                    at0463,
+                    at0464,
+                    at0465,
+                    at0466]
+                }
+            }
+        }
+        details matches {
+            ITEM_TREE[at0001] occurrences matches {0..1} matches { 
+                items matches {
+                    CLUSTER[at0002] occurrences matches {0..*} matches {  -- Address line
+                        items matches {
+                            ELEMENT[at0027] occurrences matches {0..1} matches {  -- Street type
+                                value matches {
+                                    DV_CODED_TEXT matches { 
+                                        defining_code matches {
+                                            [ac0001]
+                                        }
+                                    }
+                                }
+                            }
+                            ELEMENT[at0028] occurrences matches {0..1} matches {  -- Street name
+                                value matches {
+                                    DV_TEXT matches {*}   
+                                }
+                            }
+                            ELEMENT[at0029] occurrences matches {0..1} matches {  -- Number
+                                value matches {
+                                    DV_TEXT matches {*}  
+                                }
+                            }
+                            ELEMENT[at0031] occurrences matches {0..1} matches {  -- Address line
+                                value matches {
+                                    DV_TEXT matches {*} 
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[at0004] occurrences matches {0..1} matches {  -- Postal code
+                        value matches {
+                            DV_TEXT matches {*} 
+                        }
+                    }
+                    ELEMENT[at0005] occurrences matches {0..1} matches {  -- Suburb/town/locality
+                        value matches {
+                            DV_TEXT matches {*}   
+                        }
+                    }
+                    ELEMENT[at0006] occurrences matches {0..1} matches {  -- State/Province/Territory
+                        value matches {
+                            DV_CODED_TEXT matches { 
+                                defining_code matches {
+                                    [ac0003]
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[at0007] occurrences matches {0..1} matches {  -- Country
+                        value matches {
+                            DV_CODED_TEXT matches { 
+                                defining_code matches {
+                                    [ac0004]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Address">
+					description = <"Address based on ISO22220 standard.">
+				>
+				["at0001"] = <
+					text = <"Items">
+					description = <"Address items.">
+				>
+				["at0002"] = <
+					text = <"Address lines">
+					description = <"A composite of one or more standard address components that describe a low level of geographical/physical description of a location that, used in conjunction with the other high-level address components i.e. ‘suburb / town / locality name’, ‘postal code’, ‘state / territory / province’, and ‘country’, forms a complete geographical/physical address.">
+				>
+				["at0004"] = <
+					text = <"Postal code (ZIP code)">
+					description = <"The code for a postal delivery area, aligned with locality, suburb or place for the address, as defined by the postal service.">
+				>
+				["at0005"] = <
+					text = <"Suburb/town/locality">
+					description = <"The full name of the general locality containing the specific address.">
+				>
+				["at0006"] = <
+					text = <"State/territory/province identifier">
+					description = <"An identifier of the province, state or territory containing the address.">
+				>
+				["at0007"] = <
+					text = <"Country identifier">
+					description = <"A code representing the country component of an address.">
+				>
+				["at0027"] = <
+					text = <"Street type code">
+					description = <"A code that identifies the type of public thoroughfare.">
+				>
+				["at0028"] = <
+					text = <"Street name">
+					description = <"The name that identifies a public thoroughfare and differentiates it from others in the same suburb/town/locality.">
+				>
+				["at0029"] = <
+					text = <"Street number">
+					description = <"The numeric or string reference number of a house or property that is unique within a street name, suburb.">
+				>
+				["at0031"] = <
+					text = <"Address line">
+					description = <"Complete address line.">
+				>
+				["at0461"] = <
+					text = <"Business">
+					description = <"Used to indicate an address that is the physical location of a business or office at which an entity can be contacted.">
+				>
+				["at0462"] = <
+					text = <"Mailing or postal">
+					description = <"Used to indicate an address that is only for correspondence and/or billing purposes.">
+				>
+				["at0463"] = <
+					text = <"Temporary accomodation">
+					description = <"Temporary accomodation address (such as for a person who usually resides overseas or where the provider of the address is in temporary accomodation due to renovation or treatment).">
+				>
+				["at0464"] = <
+					text = <"Residential">
+					description = <"Used to indicate where a person is living. Note that this code is not valid for organisations.">
+				>
+				["at0465"] = <
+					text = <"No fixed address">
+					description = <"Used where a person has no fixed address.">
+				>
+				["at0466"] = <
+					text = <"Unknown/not stated/inadequately described">
+					description = <"Unknown/not stated/inadequately described may also be used where the person has no fixed address or does not wish to have their residential or correspondence address recorded.">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["en"] = <
+			items = <
+				["ac0001"] = <
+					text = <"Street type codes">
+					description = <"Valid codes for street types.">
+				>
+				["ac0003"] = <
+					text = <"State codes">
+					description = <"valid codes for state/territory/province.">
+				>
+				["ac0004"] = <
+					text = <"Country codes">
+					description = <"valid codes for countries.">
+				>
+			>
+		>
+	>

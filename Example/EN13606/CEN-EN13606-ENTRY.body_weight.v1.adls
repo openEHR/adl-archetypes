@@ -1,0 +1,314 @@
+archetype (adl_version=1.5)
+	CEN-EN13606-ENTRY.body_weight.v2
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Jasmin Buck">
+				["organisation"] = <"University of Heidelberg">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Christoph Rinner">
+		["date"] = <"09/07/2010">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Dokumentation des Gewichtes einer Person, eines Neugeborenen oder eines Fötus.">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the body weight of an individual - both actual and approximate.">
+		>
+	>
+
+definition
+	ENTRY [at0000] occurrences matches {1..1} matches {
+		meaning matches {
+			CV matches {
+				codeValue matches {"OE-01"}
+				codingScheme matches { 
+					OID matches { 
+						oid matches {"1.0.13606.3.2009"}
+					}
+				}						
+			}
+		}
+		items matches {
+			CLUSTER [at0002] occurrences matches {1..1} matches {	-- History
+				meaning matches {
+					CV matches {
+						codeValue matches {"OE-04"}
+						codingScheme matches { 
+							OID matches { 
+								oid matches {"1.0.13606.3.2009"}
+							}
+						}		
+					}
+
+				}
+				item_category matches {
+					CS matches {
+						codeValue matches {"IC02"}
+						codingScheme matches { 
+							OID matches { 
+								oid matches {"1.0.13606.3.2009"}
+							}
+						}		
+					}
+				}
+				structure_type matches {
+					CS matches {
+						codeValue matches {"STRC01"}
+						codingScheme matches { 
+							OID matches { 
+								oid matches {"1.0.13606.3.2009"}
+							}
+						}		
+					}
+				}
+				parts  matches {
+					CLUSTER [at0003] matches {	-- Any event
+						meaning matches {
+							CV matches {
+								codeValue matches {"OE-07"}
+								codingScheme matches { 
+									OID matches { 
+										oid matches {"1.0.13606.3.2009"}
+									}
+								}		
+							}
+						}
+						item_category matches {
+							CS matches {
+								codeValue matches {"IC02"}
+								codingScheme matches { 
+									OID matches { 
+										oid matches {"1.0.13606.3.2009"}
+									}
+								}		
+							}
+						}
+						structure_type matches {
+							CS matches {
+								codeValue matches {"STRC01"}
+								codingScheme matches { 
+									OID matches { 
+										oid matches {"1.0.13606.3.2009"}
+									}
+								}		
+							}
+						}
+						obs_time matches {*}
+						parts matches {
+							ELEMENT[at0000] matches {*}
+
+							CLUSTER [at0001] occurrences matches {1..1} matches {	-- Item tree
+								meaning matches {
+									CV matches {
+										codeValue matches {"OE-08"}
+										codingScheme matches { 
+											OID matches { 
+												oid matches {"1.0.13606.3.2009"}
+											}
+										}		
+									}
+								}
+								item_category matches {
+									CS matches {
+										codeValue matches {"IC02"}
+										codingScheme matches { 
+											OID matches { 
+												oid matches {"1.0.13606.3.2009"}
+											}
+										}		
+									}
+								}
+								structure_type matches {
+									CS matches {
+										codeValue matches {"STRC01"}
+										codingScheme matches { 
+											OID matches { 
+												oid matches {"1.0.13606.3.2009"}
+											}
+										}		
+									}
+								}
+								obs_time  matches {*}
+								
+								parts  matches {
+									ELEMENT [at0004] occurrences matches {1..1} matches {
+										value matches {
+											PQ  matches {
+												unit matches {
+													CS  matches {
+														codeValue matches {"kg"}
+														codingScheme matches { 
+															OID matches { 
+																oid matches {"2.16.840.1.113883.6.8"}
+															}
+														}		
+													}
+												}
+												value matches {|0.0..1000.0|}
+											}
+											
+										}
+									}
+									ELEMENT [at0024] occurrences matches {0..1} matches {
+										value matches {
+											SIMPLE_TEXT occurrences matches {1..1} matches {*}
+										}
+									}
+								}
+							}
+							CLUSTER [at0008] occurrences matches {0..1} matches {	-- State
+								meaning matches {
+									CV matches {
+										codeValue matches {"OE-14"}
+										codingScheme matches { 
+											OID matches { 
+												oid matches {"1.0.13606.3.2009"}
+											}
+										}		
+									}
+								}
+								item_category matches {
+									CS matches {
+										codeValue matches {"IC03"}
+										codingScheme matches { 
+											OID matches { 
+												oid matches {"1.0.13606.3.2009"}
+											}
+										}		
+									}
+								}
+								structure_type matches {
+									CS matches {
+										codeValue matches {"STRC01"}
+										codingScheme matches { 
+											OID matches { 
+												oid matches {"1.0.13606.3.2009"}
+											}
+										}							
+									}
+								}
+								parts  matches {
+									ELEMENT [at0009] occurrences matches {0..1} matches {
+										value matches {
+											CODED_TEXT occurrences matches {1..1} matches {
+												codedValue matches {
+													CD matches {
+														codeValue matches {
+															"12"	-- assumed value
+														}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT [at0025] occurrences matches {0..1} matches {
+										value matches {
+											SIMPLE_TEXT occurrences matches {1..1} matches {
+												*
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Body weight(en)">
+					description = <"*Measurement of the body weight of an individual.(en)">
+				>
+				["at0001"] = <
+					text = <"Simple">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"*Any event(en)">
+					description = <"*Any event(en)">
+				>
+				["at0004"] = <
+					text = <"*Weight(en)">
+					description = <"*The weight of the individual.(en)">
+				>
+				["at0008"] = <
+					text = <"State structure">
+					description = <"@ internal @">
+				>
+				["at0009"] = <
+					text = <"*State of Dress(en)">
+					description = <"*Description of the state of dress of the person at the time of weighing.(en)">
+				>
+				["at0024"] = <
+					text = <"*Comment(en)">
+					description = <"*Comment about the measurement of weight.(en)">
+				>
+				["at0025"] = <
+					text = <"*Confounding Factors(en)">
+					description = <"*Record any issues or factors that may impact on the measurement of body weight eg timing in menstrual cycle, timing of recent bowel motion or noting of amputation.(en)">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Body_weight">
+					description = <"Measurement of the body weight of an individual.">
+				>
+				["at0001"] = <
+					text = <"Simple">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"history">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Any event">
+					description = <"Any event">
+				>
+				["at0004"] = <
+					text = <"Weight">
+					description = <"The weight of the individual.">
+				>
+				["at0008"] = <
+					text = <"state structure">
+					description = <"@ internal @">
+				>
+				["at0009"] = <
+					text = <"State of Dress">
+					description = <"Description of the state of dress of the person at the time of weighing.">
+				>
+				["at0024"] = <
+					text = <"Comment">
+					description = <"Comment about the measurement of weight.">
+				>
+				["at0025"] = <
+					text = <"Confounding Factors">
+					description = <"Record any issues or factors that may impact on the measurement of body weight eg timing in menstrual cycle, timing of recent bowel motion or noting of amputation.">
+				>
+			>
+		>
+	>

@@ -1,0 +1,79 @@
+archetype (adl_version=1.5)
+	openEHR-EHR-LINK.indication.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"20/10/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Represent possible LINKs to do with 'indication' concept">
+			copyright = <"copyright (c) 2010 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+
+definition
+	LINK [at0000] matches {
+		meaning matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[local::at0001,
+					at0002]
+				}
+			}
+		}
+		type matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[local::at0010,
+					at0011,
+					at0012]
+				}
+			}
+		}
+		target matches {
+			DV_EHR_URI matches {
+				target_type matches {"OBSERVATION"}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Link">
+					description = <"Link">
+				>
+				["at0001"] = <
+					text = <"in response to">
+					description = <"Indicates that source Entry is a response to the target Entry">
+				>
+				["at0002"] = <
+					text = <"indication">
+					description = <"Indicates that target Entry is the indication (in the medical sense) for the source Entry">
+				>
+				["at0010"] = <
+					text = <"Problem">
+					description = <"Link is used for problem chaining">
+				>
+				["at0011"] = <
+					text = <"Workflow">
+					description = <"Workflow tracking link">
+				>
+				["at0012"] = <
+					text = <"Issue">
+					description = <"Issue tracking link">
+				>
+			>
+		>
+	>

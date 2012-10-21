@@ -1,0 +1,40 @@
+template_overlay (adl_version=1.5)
+	openEHR-EHR-ADMIN_ENTRY.t_event_start_info_ds.v1
+
+specialise
+	openEHR-EHR-ADMIN_ENTRY.admission_short.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+definition
+	ADMIN_ENTRY[at0000.1] matches {
+		/other_participations existence matches {0}
+		/data[at0003]/items matches {
+			ELEMENT[at0004.1] occurrences matches {1}
+			ELEMENT[at0011] occurrences matches {0}
+			ELEMENT[at0005] occurrences matches {0}
+			ELEMENT[at0057.1] occurrences matches {1..*}
+			ELEMENT[at0058] occurrences matches {0}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Admission event start information">
+					description = <"Administrative information for the start of episode in hospital">
+				>
+				["at0004.1"] = <
+					text = <"Event start date/time">
+					description = <"*">
+				>
+				["at0057.1"] = <
+					text = <"Event identifier - mandatory">
+					description = <"Event identifier - mandatory">
+				>
+			>
+		>
+	>

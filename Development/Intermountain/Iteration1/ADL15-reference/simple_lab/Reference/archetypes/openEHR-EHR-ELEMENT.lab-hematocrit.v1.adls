@@ -1,0 +1,73 @@
+archetype (adl_version=1.5)
+	openEHR-EHR-ELEMENT.lab-hematocrit.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"22/03/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Test simple re-use of atomic archetypes by 'panel' grouping archetype 
+					based on Intermountain Health Clinical Element Models. This archetype 
+					defines a panel node for hematocrit (blood) that can be re-used in other 
+					lab archetypes.">
+			keywords = <"test", "reuse">
+		>
+	>
+	other_details = <
+		["regression"] = <"PASS">
+	>
+
+definition
+	ELEMENT[at0000] matches {
+		name matches {
+			DV_TEXT matches {
+				value matches {/.{1,7}/}
+			}
+		}
+		value matches {
+			DV_PROPORTION[at0001] matches {
+				numerator matches {|0.0..100.0|}
+				type matches {2} -- %
+			}
+			DV_PROPORTION [at0002]matches {
+				numerator matches {|0.0..1.0|}
+				type matches {1} -- SI proportion
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Hematocrit, blood">
+					description = <"Hematocrit, blood measured value">
+				>
+				["at0001"] = <
+					text = <"%">
+					description = <"% measurement">
+				>
+				["at0002"] = <
+					text = <"SI proportion">
+					description = <"SI unit-based proportion measurement">
+				>
+			>
+		>
+	>
+	term_bindings = <
+		["LOINC"] = <
+			items = <
+				["at0001"] = <[LNC205::1-2-3-4-5-6]>
+				["at0002"] = <[LNC205::2-2-3-4-5-6]>
+			>
+		>
+	>

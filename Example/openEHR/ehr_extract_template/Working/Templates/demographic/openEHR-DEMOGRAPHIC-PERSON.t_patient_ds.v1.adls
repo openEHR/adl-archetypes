@@ -1,0 +1,67 @@
+﻿template (adl_version=1.5)
+	openEHR-DEMOGRAPHIC-PERSON.t_patient_ds.v1
+
+specialise
+	openEHR-DEMOGRAPHIC-PERSON.person.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"01/04/2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Templated PERSON object to describe patient in Simple discharge summary">
+			copyright = <"copyright (c) 2011 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Authordraft">
+
+definition
+	PERSON[at0000.1] matches {	-- Person
+		/details[at0001]/items matches {
+			use_archetype CLUSTER[at0010, openEHR-DEMOGRAPHIC-CLUSTER.t_person_race_data_ds.v1] occurrences matches {0..1}
+			use_archetype CLUSTER[at0010, openEHR-DEMOGRAPHIC-CLUSTER.t_person_other_data_iso_ds.v1] occurrences matches {0..1}
+			use_archetype CLUSTER[at0010, openEHR-DEMOGRAPHIC-CLUSTER.t_birth_data_ds.v1] occurrences matches {0..1}
+			allow_archetype CLUSTER[at0010.1] closed
+		}
+		/identities matches {
+			use_archetype PARTY_IDENTITY[at0002, openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_person_name_ds.v1]
+			allow_archetype PARTY_IDENTITY[at0002.1] closed
+		}
+		/contacts[at0003]/addresses matches {
+			use_archetype ADDRESS[at0030, openEHR-DEMOGRAPHIC-ADDRESS.t_address_ds.v1]
+			allow_archetype ADDRESS[at0030.1] closed
+		}
+		/relationships existence matches {0}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Patient demographic data">
+					description = <"Simple patient personal demographic data">
+				>
+				["at0010.1"] = <
+					text = <"Other details - closed slot">
+					description = <"Other details - closed slot">
+				>
+				["at0002.1"] = <
+					text = <"Party identity - closed slot">
+					description = <"Party identity - closed slot">
+				>
+				["at0030.1"] = <
+					text = <"Address - closed slot">
+					description = <"Address - closed slot">
+				>
+			>
+		>
+	>

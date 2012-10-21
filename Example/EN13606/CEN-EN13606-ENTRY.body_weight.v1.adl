@@ -1,0 +1,457 @@
+archetype (adl_version=1.4)
+	CEN-EHR_EXTRACT-ENTRY.body_weight.v1
+
+concept
+	[at0000]	-- Body weight
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Dana Prochazkova">
+		["organisation"] = <"Vienna University of Technology">
+		["date"] = <"01/09/2006">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Aufzeichnung des Geiwichts einer Person, eines neugebohrenen Kindes oder eines Foetus.">
+			use = <"Zur Aufzeichnung des gesamten Koerpergewichtes eines Menschen.">
+			misuse = <"Soll nicht bei der Gewichtaufzeichnung einer anderen Entit�t oder eines Koerperteils angewendet werden. Siehe Messung-Gewicht.">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Recording the weight of a person, neonate or fetus.">
+			use = <"For recording the whole body weight of a human">
+			keywords = <"weight", "loss", "gain">
+			misuse = <"Do not use to record the weight of any other entity or part of the body. See measurement-weight.">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Georg Duftschmid, Medical University of Vienna, Austria", "Christoph Rinner, Medical University of Vienna, Austria">
+	other_details = <
+		["references"] = <"This CEN archetype is derived from the openEHR archetype openEHR-EHR-OBSERVATION.body_weight.v1.adl, which was originally published on 09/03/2006 by Sam Heard, Ocean Informatics">
+	>
+
+definition
+	ENTRY[at0000] matches {	-- Body weight
+		meaning matches {
+			CD matches {
+				code matches {"OE-01"}
+			}
+		}
+		items matches {
+			CLUSTER[at0002] matches {	-- history
+				meaning matches {
+					CD matches {
+						code matches {"OE-04"}
+					}
+				}
+				item_category matches {
+					CS matches {
+						code matches {"IC02"}
+					}
+				}
+				structure_type matches {
+					CS matches {
+						code matches {"STRC01"}
+					}
+				}
+				obs_time matches {*}
+				parts cardinality matches {1..*; unordered} matches {
+					CLUSTER[at0003] occurrences matches {0..*} matches {	-- Any event
+						item_category matches {
+							CS matches {
+								code matches {"IC02"}
+							}
+						}
+						structure_type matches {
+							CS matches {
+								code matches {"STRC01"}
+							}
+						}
+						obs_time matches {*}
+						parts cardinality matches {1..*; unordered} matches {
+							CLUSTER[at0001] matches {	-- data
+								meaning matches {
+									CD matches {
+										code matches {"OE-08"}
+									}
+								}
+								item_category matches {
+									CS matches {
+										code matches {"IC02"}
+									}
+								}
+								structure_type matches {
+									CS matches {
+										code matches {"STRC01"}
+									}
+								}
+								parts cardinality matches {1; ordered} matches {
+									ELEMENT[at0004] matches {	-- Weight
+										value matches {
+											PQ matches {
+												unit matches {
+													CD occurrences matches {0..1} matches {  -- datavalue
+															  code existence matches {0..1} matches {"kg"}
+															  codeSystemName existence matches {0..1} matches {"UCUM"}
+													}
+												}
+												value matches {|0.0..1000.0|}
+											}
+										}
+									}
+								}
+							}
+							CLUSTER[at0008] matches {	-- state
+								meaning matches {
+									CD matches {
+										code matches {"OE-09"}
+									}
+								}
+								item_category matches {
+									CS matches {
+										code matches {"IC03"}
+									}
+								}
+								structure_type matches {
+									CS matches {
+										code matches {"STRC01"}
+									}
+								}
+								parts cardinality matches {0..*; ordered} matches {
+									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Clothing
+										value matches {
+											CD matches {
+												displayName matches {"Length"}
+												code matches {":at0011", "at0013", "at0010", "at0017", "at0011"}
+												codeSystemName matches {"openehr"}
+													-- Lightly clothed/underwear ,
+													-- Naked
+													-- Fully dressed
+													-- Nappy
+													-- assumed value
+												--codeSystemName matches {"local"}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					CLUSTER[at0005] occurrences matches {0..*} matches {	-- Weight loss
+						meaning matches {
+							CD matches {	-- Coded Simple value
+								code matches {"OE-10"}	-- Interval_event
+							}
+						}
+						item_category matches {
+							CS matches {	-- Coded Simple value
+								code matches {"IC02"}	-- complementary details about the value
+							}
+						}
+						structure_type matches {
+							CS matches {  -- Coded Simple value
+								code matches {"STRC01"}  -- List
+							}
+						}
+						obs_time matches {*}
+						parts matches {
+							ELEMENT[at0102] matches { -- width of interval-event
+								meaning matches {
+									CD matches {	-- Coded Simple value
+										code matches {"OE-11"}	-- Width
+									}
+								}
+								item_category matches {
+									CS matches {	-- Coded Simple value
+										code matches {"IC02"}	-- complementary details about the value
+									}
+								}
+								value matches {
+									IVL<TS> matches {*}
+								}
+							}		
+							ELEMENT[at0100] matches { -- decrease
+								meaning matches {
+									CD matches {	-- Coded Simple value
+										code matches {"OE-13"}	-- Math_function
+									}
+								}
+								item_category matches {
+									CS matches {	-- Coded Simple value
+										code matches {"IC02"}	-- complementary details about the value
+									}
+								}
+								value matches {
+									CD matches {
+										code matches {"521"}	-- decrease
+										codeSystemName matches {"openehr"}
+										displayName matches {"decrease"}
+									}
+								}
+							}		
+							use_node CLUSTER /items[at0002]/parts[at0003]/parts[at0001]
+							use_node CLUSTER /items[at0002]/parts[at0003]/parts[at0008]
+						}
+					}
+					CLUSTER[at0007] occurrences matches {0..*} matches {	-- Weight gain
+						meaning matches {
+							CD matches {	-- Coded Simple value
+								code matches {"OE-10"}	-- Interval_event
+							}
+						}
+						item_category matches {
+							CS matches {	-- Coded Simple value
+								code matches {"IC02"}	-- complementary details about the value
+							}
+						}
+						structure_type matches {
+							CS matches {  -- Coded Simple value
+								code matches {"STRC01"}  -- List
+							}
+						}
+						obs_time matches {*}
+						parts matches {
+							ELEMENT[at0103] matches { -- width of interval-event
+								meaning matches {
+									CD matches {	-- Coded Simple value
+										code matches {"OE-11"}	-- Width
+									}
+								}
+								item_category matches {
+									CS matches {	-- Coded Simple value
+										code matches {"IC02"}	-- complementary details about the value
+									}
+								}
+								value matches {
+									IVL<TS> matches {*}
+								}
+							}
+							ELEMENT[at0101] matches { -- increase
+
+
+								meaning matches {
+									CD matches {	-- Coded Simple value
+										code matches {"OE-13"}	-- Math_function
+									}
+								}
+								item_category matches {
+									CS matches {	-- Coded Simple value
+										code matches {"IC02"}	-- complementary details about the value
+									}
+								}
+								value matches {
+									CD matches {
+										code matches {"522"}	-- increase
+										codeSystemName matches {"openehr"}
+										displayName matches {"increase"}
+									}
+								}
+
+							}		
+							use_node CLUSTER /items[at0002]/parts[at0003]/parts[at0001]
+							use_node CLUSTER /items[at0002]/parts[at0003]/parts[at0008]
+						}
+					}
+
+				}
+			}
+			CLUSTER[at0015] matches {	-- protocol
+				meaning matches {
+					CD matches {
+						code matches {"OE-02"}
+					}
+				}
+				item_category matches {
+					CS matches {
+						code matches {"IC04"}
+					}
+				}
+				structure_type matches {
+					CS matches {
+						code matches {"STRC01"}
+					}
+				}
+				parts cardinality matches {0..*; ordered} matches {
+					ELEMENT[at0016] occurrences matches {0..1} matches {	-- Device
+						value matches {
+							CD matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					description = <"Total body weight - a surrogate for naked body weight">
+					text = <"Body weight">
+				>
+				["at0001"] = <
+					description = <"data">
+					text = <"data">
+				>
+				["at0002"] = <
+					description = <"history">
+					text = <"history">
+				>
+				["at0003"] = <
+					description = <"Any event - based on offset from the baseline">
+					text = <"Any event">
+				>
+				["at0004"] = <
+					description = <"The weight of the whole body">
+					text = <"Weight">
+				>
+				["at0005"] = <
+					description = <"Amount of weight lost over the period">
+					text = <"Weight loss">
+				>
+				["at0007"] = <
+					description = <"Amount of weight gained over the period">
+					text = <"Weight gain">
+				>
+				["at0008"] = <
+					description = <"state">
+					text = <"state">
+				>
+				["at0009"] = <
+					description = <"The amount of clothes worn at the time of weighing">
+					text = <"Clothing">
+				>
+				["at0010"] = <
+					description = <"Clothing which may add significantly to weight - such as shoes and normal clothing">
+					text = <"Fully dressed">
+				>
+				["at0011"] = <
+					description = <"Clothing which will not add to weight significantly">
+					text = <"Lightly clothed/underwear">
+				>
+				["at0013"] = <
+					description = <"Without clothes">
+					text = <"Naked">
+				>
+				["at0015"] = <
+					description = <"protocol">
+					text = <"protocol">
+				>
+				["at0016"] = <
+					description = <"The name of the weighing device">
+					text = <"Device">
+				>
+				["at0017"] = <
+					description = <"A baby with nappy on - adds significant weight">
+					text = <"Nappy">
+				>
+				["at0018"] = <
+					description = <"Comment">
+					text = <"Comment">
+				>
+				["at0100"] = <
+					description = <"Decrease">
+					text = <"Decrease">
+				>
+				["at0101"] = <
+					description = <"Increase">
+					text = <"Increase">
+				>
+				["at0102"] = <
+					description = <"Widht of Interval-Event">
+					text = <"Widht of Interval-Event">
+				>
+				["at0103"] = <
+					description = <"Widht of Interval-Event">
+					text = <"Widht of Interval-Event">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					description = <"gesamtes KÃ¶rpergewicht - ein Synonym fÃ¼r KÃ¶rpergewicht, wenn bei der Messung die Person nackt ist">
+					text = <"KÃ¶rpergewicht">
+				>
+				["at0001"] = <
+					description = <"Daten">
+					text = <"Daten">
+				>
+				["at0002"] = <
+					description = <"Historie">
+					text = <"Historie">
+				>
+				["at0003"] = <
+					description = <"beliebieger Ereignis - im Bezug zum Basisereignis">
+					text = <"ein Ereignis">
+				>
+				["at0004"] = <
+					description = <"Gewicht des gesamten KÃ¶rpers">
+					text = <"Gewicht">
+				>
+				["at0005"] = <
+					description = <"Gewichtsverlust innerhalb eines Zeitabschnitts">
+					text = <"Gewichtsverlust">
+				>
+				["at0007"] = <
+					description = <"Gewichtsgewinn innerhalb eines Zeitabschnitts">
+					text = <"Gewichtsgewinn">
+				>
+				["at0008"] = <
+					description = <"Zustand">
+					text = <"Zustand">
+				>
+				["at0009"] = <
+					description = <"Menge der Kleidung, die die Person bei der Messung an hat">
+					text = <"Gewand">
+				>
+				["at0010"] = <
+					description = <"Kleidung, die das Gewicht signifikant erhÃ¶hen kann - wie Schuhe und Ã¼bliche Kleidung">
+					text = <"vollkommen gekleidet">
+				>
+				["at0011"] = <
+					description = <"Kleidung, die das Gewicht nicht signifikant erhÃ¶ht">
+					text = <"leicht gekleidet/UnterwÃ¤sche">
+				>
+				["at0013"] = <
+					description = <"ganz ohne Kleidung">
+					text = <"nackt">
+				>
+				["at0015"] = <
+					description = <"Protokoll">
+					text = <"Protokoll">
+				>
+				["at0016"] = <
+					description = <"Name des GewichtsmessgerÃ¤tes">
+					text = <"MessgerÃ¤t">
+				>
+				["at0017"] = <
+					description = <"Baby, das eine Windel trÃ¤gt - gewicht wird significant erhÃ¶ht">
+					text = <"Windel">
+				>
+				["at0018"] = <
+					description = <"Kommentar zur Gewichtsmessung">
+					text = <"Kommentar">
+				>
+				["at0100"] = <
+					description = <"Abnahme">
+					text = <"Abnahme">
+				>
+				["at0101"] = <
+					description = <"Zunahme">
+					text = <"Zunahme">
+				>
+				["at0102"] = <
+					description = <"Dauer des Intervall-Events">
+					text = <"Dauer des Intervall-Events">
+				>
+				["at0103"] = <
+					description = <"Dauer des Intervall-Events">
+					text = <"Dauer des Intervall-Events">
+				>
+			>
+		>
+	>

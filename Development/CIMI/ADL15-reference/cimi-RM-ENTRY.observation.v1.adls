@@ -1,0 +1,123 @@
+﻿archetype (adl_version=1.5)
+	cimi-RM-ENTRY.observation.v1
+
+specialize
+	cimi-RM-ENTRY.care_entry.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"10/04/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"OBSERVATION class pattern from openEHR">
+			keywords = <"observations", ...>
+			copyright = <"© 2012 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Draft">
+	other_details = <
+		["model_level"] = <"reference">
+	>
+
+definition
+	ENTRY[at0000.1] matches {	-- OBSERVATION
+		/data matches {
+			CLUSTER[at0.2] matches {	-- data
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0.3] occurrences matches {1} matches {	-- origin
+						value matches {
+							DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0.4] occurrences matches {1} matches {	-- period
+						value matches {
+							DURATION matches {*}
+						}
+					}
+					ELEMENT[at0.5] occurrences matches {0..1} matches {	-- duration
+						value matches {
+							DURATION matches {*}
+						}
+					}
+					ITEM[at0.6] occurrences matches {0..*} 	-- summary
+					CLUSTER[at0.7] occurrences matches {0..*} matches {	-- events
+						items matches {
+							CLUSTER[at0.8] occurrences matches {0..*} matches {	-- EVENT
+								items matches {
+									ELEMENT[at0.9] matches {	-- time
+										value matches {
+											DATE_TIME matches {*}
+										}
+									}
+									ITEM[at0.10] 	-- data
+									ITEM[at0.11] 	-- state
+								}
+							}
+						}
+					}
+				}
+			}
+			use_node CLUSTER[at0.12] /data[at0.2]	-- /data[data]
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1"] = <
+				text = <"OBSERVATION">
+				description = <"OBSERVATION class from openEHR">
+			>
+			["at0.2"] = <
+				text = <"HISTORY">
+				description = <"HISTORY from openEHR">
+			>
+			["at0.3"] = <
+				text = <"origin">
+				description = <"HISTORY.origin from openEHR">
+			>
+			["at0.4"] = <
+				text = <"period">
+				description = <"HISTORY.period from openEHR">
+			>
+			["at0.5"] = <
+				text = <"duration">
+				description = <"HISTORY.duration from openEHR">
+			>
+			["at0.6"] = <
+				text = <"summary">
+				description = <"HISTORY.summary from openEHR">
+			>
+			["at0.7"] = <
+				text = <"events">
+				description = <"HISTORY.events from openEHR">
+			>
+			["at0.8"] = <
+				text = <"EVENT">
+				description = <"EVENT from openEHR">
+			>
+			["at0.9"] = <
+				text = <"time">
+				description = <"EVENT.time from openEHR">
+			>
+			["at0.10"] = <
+				text = <"data">
+				description = <"EVENT.data from openEHR">
+			>
+			["at0.11"] = <
+				text = <"state">
+				description = <"EVENT.state from openEHR">
+			>
+			["at0.12"] = <
+				text = <"state">
+				description = <"OBSERVATION.state from openEHR">
+			>
+		>
+	>

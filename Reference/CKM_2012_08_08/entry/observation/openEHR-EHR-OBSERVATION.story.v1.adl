@@ -1,0 +1,142 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.story.v1
+
+concept
+	[at0000]	-- Story or history
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"unknown">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record information provided by the person or information provider in relation to the symptoms and difficulties they are presenting to the clinician.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل المعلومات التي يتم تزويدها بواسطة الشخص أو مصدر المعلومات فيما يتعلق بالأعراض أو الصعوبات التي يقومون بتقديمها للطبيب السريري">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Sam Heard, Ocean Informatics">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"BEB5C7B42F1D14F37A39890420C56891">
+		["references"] = <"">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Story or history
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Story
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									CLUSTER[at0005] occurrences matches {0..1} matches {	-- Details
+										items cardinality matches {1..*; unordered} matches {
+											allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {	-- Cluster: Details
+												include
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.health_event\.v1|openEHR-EHR-CLUSTER\.symptom\.v1|openEHR-EHR-CLUSTER\.symptom-pain\.v1|openEHR-EHR-CLUSTER\.issue\.v1/}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Story or history">
+					description = <"A structure to collect information provided by the person or information provider in relation to the symptoms and difficulties they are presenting to the clinician">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"Base for recording the dates or intervals which apply">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Story">
+					description = <"Information provided about the person">
+				>
+				["at0005"] = <
+					text = <"Details">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Cluster: Details">
+					description = <"*">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"قصة المرض أو التاريخ - سوابق المرض">
+					description = <"تركيب لتجميع المعلومات التي يتم تزويدها بواسطة الشخص نفسه أو مصدر للمعلومات فيما يتعلق بالأعراض أو الصعوبات التي يقومون بعرضها على الطبيب السريري
+">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"إحدى الوقائع">
+					description = <"الأساس (القاعدة) لتسجيل التواريخ أو الفواصل الزمنية التي تنطبق">
+				>
+				["at0003"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"قصة المريض">
+					description = <"المعلومات التي يتم تزويدها عن طريق الشخص">
+				>
+				["at0005"] = <
+					text = <"التفاصيل">
+					description = <"**(en)">
+				>
+				["at0006"] = <
+					text = <"عنقود: التفاصيل">
+					description = <"*">
+				>
+			>
+		>
+	>

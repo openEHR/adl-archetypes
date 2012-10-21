@@ -1,0 +1,32 @@
+﻿template_overlay (adl_version=1.5)
+	openEHR-EHR-ACTION.t_procedure_detail_ds.v1
+
+specialise
+	openEHR-EHR-ACTION.procedure.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+definition
+	ACTION[at0000.1] matches {	-- Procedure undertaken
+		/description matches {
+			use_archetype ITEM_TREE [at0001, openEHR-EHR-ITEM_TREE.t_procedure_ds.v1]
+			allow_archetype ITEM_TREE[at0001.1] closed
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Procedure undertaken - Simple discharge summary">
+					description = <"The description of a procedure that has been performed, as required for Simple discharge summary">
+				>
+				["at0001.1"] = <
+					text = <"Procedure details - close slot">
+					description = <"Procedure details - close slot">
+				>
+			>
+		>
+	>

@@ -1,0 +1,105 @@
+﻿template_overlay (adl_version=1.5)
+	openEHR-EHR-EVALUATION.t_clinical_synopsis_ds.v1
+
+specialise
+	openEHR-EHR-EVALUATION.clinical_synopsis.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+definition
+	EVALUATION[at0000.1] matches {
+		/data[at0001]/items matches {
+			ELEMENT[at0002.1] occurrences matches {1} matches {
+				name matches {
+					DV_TEXT matches {*}
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0.1,
+							at0.2,
+							at0.3,
+							at0.4,
+							at0.5,
+							at0.6,
+							at0.7,
+							at0.8,
+							at0.9,
+							at0.10,
+							at0.11,
+							at0.12,
+							at0.13]
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Clinical synopsis">
+					description = <"Clinical synopsis">
+				>
+				["at0002.1"] = <
+					text = <"Description">
+					description = <"Clinical synopsis description">
+				>
+				["at0.1"] = <
+					text = <"Admission">
+					description = <"Admission">
+				>
+				["at0.2"] = <
+					text = <"Clinical note">
+					description = <"Clinical note">
+				>
+				["at0.3"] = <
+					text = <"Post discharge care">
+					description = <"Post discharge care">
+				>
+				["at0.4"] = <
+					text = <"Inpatient episode">
+					description = <"Inpatient episode">
+				>
+				["at0.5"] = <
+					text = <"Main complaints">
+					description = <"Main complaints">
+				>
+				["at0.6"] = <
+					text = <"Past medical summary">
+					description = <"Past medical summary">
+				>
+				["at0.7"] = <
+					text = <"Clinical progress">
+					description = <"Clinical progress">
+				>
+				["at0.8"] = <
+					text = <"Suggested treatments">
+					description = <"Suggested treatments">
+				>
+				["at0.9"] = <
+					text = <"Social history">
+					description = <"Social history">
+				>
+				["at0.10"] = <
+					text = <"Past medical history">
+					description = <"Past medical history">
+				>
+				["at0.11"] = <
+					text = <"Presenting complaints/physical findings">
+					description = <"Presenting complaints/physical findings">
+				>
+				["at0.12"] = <
+					text = <"Progress summary">
+					description = <"Progress summary">
+				>
+				["at0.13"] = <
+					text = <"Significant physical findings">
+					description = <"Significant physical findings">
+				>
+			>
+		>
+	>

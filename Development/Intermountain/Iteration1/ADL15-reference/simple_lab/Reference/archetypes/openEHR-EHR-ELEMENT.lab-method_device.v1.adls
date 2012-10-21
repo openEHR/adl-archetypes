@@ -1,0 +1,89 @@
+archetype (adl_version=1.5)
+	openEHR-EHR-ELEMENT.lab-method_device.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"22/03/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Test simple re-use of atomic archetypes by 'panel' grouping archetype 
+					based on Intermountain Health Clinical Element Models. This archetype 
+					defines a methods and devices node that can be re-used in other lab archetypes.">
+			keywords = <"test", "reuse">
+		>
+	>
+	other_details = <
+		["regression"] = <"PASS">
+	>
+
+definition
+	ELEMENT[at0000] matches {
+		value matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[local::
+					at0001,
+					at0002,
+					at0003,
+					at0004,
+					at0005,
+					at0006]
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Lab methods and devices">
+					description = <"Lab methods and devices">
+				>
+				["at0001"] = <
+					text = <"Device type A">
+					description = <"Device type A">
+				>
+				["at0002"] = <
+					text = <"Device type B">
+					description = <"Device type B">
+				>
+				["at0003"] = <
+					text = <"Device type C">
+					description = <"Device type C">
+				>
+				["at0004"] = <
+					text = <"Method A">
+					description = <"Method A">
+				>
+				["at0005"] = <
+					text = <"Method B">
+					description = <"Method B">
+				>
+				["at0006"] = <
+					text = <"Method C">
+					description = <"Method C">
+				>
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMEDCT"] = <
+				["at0000"] = <[SNOMEDCT::1111111]>
+				["at0001"] = <[SNOMEDCT::2222222]>
+				["at0002"] = <[SNOMEDCT::3333333]>
+				["at0003"] = <[SNOMEDCT::4444444]>
+				["at0004"] = <[SNOMEDCT::5555555]>
+				["at0005"] = <[SNOMEDCT::6666666]>
+				["at0006"] = <[SNOMEDCT::7777777]>
+		>
+	>

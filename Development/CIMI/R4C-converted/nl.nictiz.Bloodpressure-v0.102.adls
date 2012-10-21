@@ -1,0 +1,363 @@
+archetype (adl_version=1.5)
+  cimi-RM-ENTRY.Bloodpressure.v1
+
+language
+  original_language = <[ISO_639-1::en]>
+description
+  original_author = <
+    ["name"] = <"unknown">
+  >
+  lifecycle_state = <"Draft">
+
+definition
+  ENTRY[at0000] matches { -- Bloodpressure
+    data matches {
+        ELEMENT[at0001] occurrences matches {0..1} matches { -- Manchet
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0002", -- Standaard
+                "at0003", -- Groot
+                "at0004", -- Klein
+                "at0005", -- VoorDijbeen
+                "at0006", -- VoorKinderen
+                "at0007", -- VoorJongKind
+                "at0008" -- Neonataal
+              }
+            }
+          }
+        }
+        ELEMENT[at0009] occurrences matches {1} matches { -- Bovendruk
+          value matches {
+            QUANTITY matches {
+              units matches {*}
+            }
+          }
+        }
+        ELEMENT[at0010] occurrences matches {0..1} matches { -- GemiddeldeArterieleDruk
+          value matches {
+            QUANTITY matches {
+              units matches {*}
+            }
+          }
+        }
+        ELEMENT[at0011] occurrences matches {0..1} matches { -- Meetmethode
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0012", -- Niet-invasief
+                "at0013" -- Invasief
+              }
+            }
+          }
+        }
+        ELEMENT[at0014] occurrences matches {0..1} matches { -- Meetlocatie
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0015", -- Rechterbovenarm
+                "at0016", -- Linkerbovenarm
+                "at0017", -- Rechterdij
+                "at0018", -- Linkerdij
+                "at0019", -- Rechterpols
+                "at0020", -- Linkerpols
+                "at0021", -- Vinger
+                "at0022", -- Rechterenkel
+                "at0023" -- Linkerenkel
+              }
+            }
+          }
+        }
+        ELEMENT[at0024] occurrences matches {0..1} matches { -- Polsdruk
+          value matches {
+            QUANTITY matches {
+              units matches {*}
+            }
+          }
+        }
+        ELEMENT[at0025] occurrences matches {0..1} matches { -- Meetapparaat
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0026", -- Kwik
+                "at0027", -- Aneroide
+                "at0028", -- Hybride
+                "at0029" -- Anders
+              }
+            }
+          }
+        }
+        ELEMENT[at0030] occurrences matches {0..1} matches { -- Body Position
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0031", -- Staand
+                "at0032", -- Liggend
+                "at0033", -- Zittend
+                "at0034", -- Achteroverleunend
+                "at0035", -- LateraalLiggend
+                "at0036" -- Trendelenburg
+              }
+            }
+          }
+        }
+        ELEMENT[at0037] occurrences matches {0..1} matches { -- Origins
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0038", -- human origin
+                "at0039" -- ...
+              }
+            }
+          }
+        }
+        ELEMENT[at0040] occurrences matches {1} matches { -- Onderdruk
+          value matches {
+            QUANTITY matches {
+              units matches {*}
+            }
+          }
+        }
+        ELEMENT[at0041] occurrences matches {0..1} matches { -- KorotkovGeluid
+          value matches {
+            CODED_TEXT matches {
+              terminology_id matches {
+                TERMINOLOGY_ID matches {
+                  value matches {"local"}
+                }
+              }
+              code_string matches {
+                "at0042", -- FaseIV
+                "at0043" -- FaseV
+              }
+            }
+          }
+        }
+    }
+  }
+
+ontology
+  term_definitions = <
+    ["en"] = <
+      items = <
+        ["at0000"] = <
+          text = <"Bloodpressure">
+          description = <"De meting van de bloeddruk. Dit is de handeling, niet te verwarren met de bloeddruk zelf, die een resultaat is van de handeling.">
+        >
+        ["at0001"] = <
+          text = <"Manchet">
+          description = <"De grootte van de manchet die is gebruikt voor het meten van de bloeddruk.">
+        >
+        ["at0002"] = <
+          text = <"Standaard">
+          description = <"Standaard manchet voor een volwassene (manchet 16x30 cm)">
+        >
+        ["at0003"] = <
+          text = <"Groot">
+          description = <"Een manchet voor een volwassene met een armomtrek van 35 tot 44 cm (manchet 16x36 cm)">
+        >
+        ["at0004"] = <
+          text = <"Klein">
+          description = <"Een manchet voor een volwassene met een armomtrek van 22 tot 26 cm (manchet 12x22 cm)">
+        >
+        ["at0005"] = <
+          text = <"VoorDijbeen">
+          description = <"Een manchet voor het dijbeen, wanneer de armomtrek 45 tot 52 cm is (manchet 16x42 cm)">
+        >
+        ["at0006"] = <
+          text = <"VoorKinderen">
+          description = <"Een manchet voor kinderen of voor volwassenen met een dunne arm (manchet ca. 8x21 cm)">
+        >
+        ["at0007"] = <
+          text = <"VoorJongKind">
+          description = <"Een manchet voor jonge kinderen (manchet ca. 5x15 cm)">
+        >
+        ["at0008"] = <
+          text = <"Neonataal">
+          description = <"Een manchet voor neonaten (manchet ca. 3x6 cm)">
+        >
+        ["at0009"] = <
+          text = <"Bovendruk">
+          description = <"De maximale druk die wordt opgebouwd in de aorta bij het samentrekken van de linker hartkamer">
+        >
+        ["at0010"] = <
+          text = <"GemiddeldeArterieleDruk">
+          description = <"De gemiddelde arteriele bloeddruk tijdens  een enkele cyclus van  het hart. De schatting van de waarde in mmHg wordt berekend met de volgende formule: diastolische druk + 1/3 polsdruk.">
+        >
+        ["at0011"] = <
+          text = <"Meetmethode">
+          description = <"De methode, die gebruikt is voor het meten van de bloeddruk">
+        >
+        ["at0012"] = <
+          text = <"Niet-invasief">
+          description = <"Methode waarop de bloeddruk wordt gemeten, extern zonder penetratie van de huid">
+        >
+        ["at0013"] = <
+          text = <"Invasief">
+          description = <"Methode waarop de bloeddruk wordt gemeten, inwendig door penetratie van de huid en het meten in de bloedvaten">
+        >
+        ["at0014"] = <
+          text = <"Meetlocatie">
+          description = <"De plaats waar bloeddruk wordt gemeten">
+        >
+        ["at0015"] = <
+          text = <"Rechterbovenarm">
+        >
+        ["at0016"] = <
+          text = <"Linkerbovenarm">
+        >
+        ["at0017"] = <
+          text = <"Rechterdij">
+        >
+        ["at0018"] = <
+          text = <"Linkerdij">
+        >
+        ["at0019"] = <
+          text = <"Rechterpols">
+        >
+        ["at0020"] = <
+          text = <"Linkerpols">
+        >
+        ["at0021"] = <
+          text = <"Vinger">
+        >
+        ["at0022"] = <
+          text = <"Rechterenkel">
+        >
+        ["at0023"] = <
+          text = <"Linkerenkel">
+        >
+        ["at0024"] = <
+          text = <"Polsdruk">
+          description = <"Het verschil  tussen systolische en diastolische bloeddruk gedurende 1 cyclus van de hartcontractie. De polsdruk geeft een indicatie voor het risico op hart-vaatziekten (Bolk, z.d.).">
+        >
+        ["at0025"] = <
+          text = <"Meetapparaat">
+          description = <"Het apparaat, dat gebruikt wordt voor het meten van de bloeddruk">
+        >
+        ["at0026"] = <
+          text = <"Kwik">
+        >
+        ["at0027"] = <
+          text = <"Aneroide">
+        >
+        ["at0028"] = <
+          text = <"Hybride">
+        >
+        ["at0029"] = <
+          text = <"Anders">
+        >
+        ["at0030"] = <
+          text = <"Body Position">
+          description = <"Een subset van het totale scala aan lichaamsposities, van toepassing op de bloeddrukmeting">
+        >
+        ["at0031"] = <
+          text = <"Staand">
+        >
+        ["at0032"] = <
+          text = <"Liggend">
+        >
+        ["at0033"] = <
+          text = <"Zittend">
+        >
+        ["at0034"] = <
+          text = <"Achteroverleunend">
+        >
+        ["at0035"] = <
+          text = <"LateraalLiggend">
+        >
+        ["at0036"] = <
+          text = <"Trendelenburg">
+        >
+        ["at0037"] = <
+          text = <"Origins">
+        >
+        ["at0038"] = <
+          text = <"human origin">
+        >
+        ["at0039"] = <
+          text = <"...">
+        >
+        ["at0040"] = <
+          text = <"Onderdruk">
+          description = <"Het minimum van de druk die optreedt tussen twee samentrekkingen van het hart in, als het hart zich weer met bloed vult.">
+        >
+        ["at0041"] = <
+          text = <"KorotkovGeluid">
+          description = <"Het Korotkov-geluid, gebruikt om de bloeddruk te bepalen bij de auscultatieve meetmethode">
+        >
+        ["at0042"] = <
+          text = <"FaseIV">
+        >
+        ["at0043"] = <
+          text = <"FaseV">
+        >
+      >
+    >
+  >
+  term_bindings = <
+    ["SCT"] = <
+      items = <
+        ["at0000"] = <[SCT::75367002]>
+        ["at0001"] = <[SCT::70665002]>
+        ["at0009"] = <[SCT::271649006]>
+        ["at0010"] = <[SCT::251074006]>
+        ["at0011"] = <[SCT::84203001]>
+        ["at0012"] = <[SCT::7146006]>
+        ["at0013"] = <[SCT::77938009]>
+        ["at0014"] = <[SCT::397987002]>
+        ["at0015"] = <[SCT::368209003]>
+        ["at0016"] = <[SCT::368208006]>
+        ["at0017"] = <[SCT::11207009]>
+        ["at0018"] = <[SCT::209672000]>
+        ["at0019"] = <[SCT::9736006]>
+        ["at0020"] = <[SCT::368236001]>
+        ["at0021"] = <[SCT::7569003]>
+        ["at0022"] = <[SCT::241699003]>
+        ["at0023"] = <[SCT::241784008]>
+        ["at0024"] = <[SCT::87179004]>
+        ["at0025"] = <[SCT::363699004]>
+        ["at0026"] = <[SCT::309642005]>
+        ["at0027"] = <[SCT::309641003]>
+        ["at0030"] = <[SCT::397155001]>
+        ["at0031"] = <[SCT::10904000]>
+        ["at0032"] = <[SCT::102538003]>
+        ["at0033"] = <[SCT::33586001]>
+        ["at0034"] = <[SCT::272587006]>
+        ["at0035"] = <[SCT::1227919013]>
+        ["at0036"] = <[SCT::34106002]>
+        ["at0040"] = <[SCT::271650006]>
+        ["at0041"] = <[SCT::85549003]>
+      >
+    >
+  >
