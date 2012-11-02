@@ -1,8 +1,8 @@
 ﻿archetype (adl_version=1.5)
-	cimi-RM-ENTRY.action.v1
+	cimi-RM-ENTRY.openehr_action.v1
 
 specialize
-	cimi-COMPOSITION-ENTRY.care_entry.v1
+	cimi-COMPOSITION-ENTRY.openehr_care_entry.v1
 
 language
 	original_language = <[ISO_639-1::en]>

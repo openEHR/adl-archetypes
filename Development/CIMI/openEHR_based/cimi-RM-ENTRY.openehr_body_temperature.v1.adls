@@ -1,8 +1,8 @@
 ﻿archetype (adl_version=1.5)
-	cimi-RM-ENTRY.body_temperature.v1
+	cimi-RM-ENTRY.openehr_body_temperature.v1
 
 specialize
-	cimi-RM-ENTRY.observation.v1
+	cimi-RM-ENTRY.openehr_observation.v1
 
 language
 	original_language = <[ISO_639-1::en]>

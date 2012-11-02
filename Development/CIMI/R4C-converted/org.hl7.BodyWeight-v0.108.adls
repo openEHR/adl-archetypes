@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-  cimi-RM-ENTRY.BodyWeight.v1
+  cimi-RM-ENTRY.R4C_BodyWeight.v1
 
 language
   original_language = <[ISO_639-1::en]>

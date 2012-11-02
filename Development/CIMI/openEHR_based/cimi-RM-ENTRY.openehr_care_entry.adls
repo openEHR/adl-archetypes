@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.5)
-	cimi-RM-ENTRY.admin_entry.v1
+	cimi-RM-ENTRY.openehr_care_entry.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -13,8 +13,8 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"EVALUATION class pattern from openEHR">
-			keywords = <"observations", ...>
+			purpose = <"Pattern archetype for openEHR::CARE_ENTRY">
+			keywords = <"Entry", ...>
 			copyright = <"© 2012 openEHR Foundation">
 		>
 	>
@@ -23,11 +23,10 @@ description
 		["model_level"] = <"reference">
 	>
 
-
 definition
-	ENTRY[at0000] matches {	-- ADMIN_ENTRY
+	ENTRY[at0000] matches {	-- CARE_ENTRY
 		data matches {
-			ITEM[at0002] matches {*}	-- data
+			ITEM[at0001] matches {*}	-- protocol
 		}
 	}
 
@@ -35,12 +34,12 @@ ontology
 	term_definitions = <
 		["en"] = <
 			["at0000"] = <
-				text = <"ADMIN_ENTRY">
-				description = <"ADMIN_ENTRY class from openEHR">
+				text = <"CARE_ENTRY">
+				description = <"CARE_ENTRY class from openEHR">
 			>
-			["at0002"] = <
-				text = <"data">
-				description = <"ADMIN_ENTRY.data class from openEHR">
+			["at0001"] = <
+				text = <"protocol">
+				description = <"protocol property from CARE_ENTRY class from openEHR">
 			>
 		>
 	>
