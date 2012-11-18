@@ -59,23 +59,7 @@ definition
 						data matches {
 							ITEM_TREE[at0001] matches {	-- Simple
 								items matches {
-									ELEMENT[at0004.1] matches {	-- Adjusted Weight
-										value matches {
-											(C_DV_QUANTITY) <
-												property = <[openehr::124]>
-												list = <
-													["1"] = <
-														units = <"kg">
-														magnitude = <|0.0..1000.0|>
-													>
-													["2"] = <
-														units = <"lb">
-														magnitude = <|0.0..2000.0|>
-													>
-												>
-											>
-										}
-									}
+									ELEMENT[at0004.1] matches {*}	-- Adjusted Weight
 									ELEMENT[at0024] occurrences matches {0..1} matches {	-- Comment
 										value matches {
 											DV_TEXT matches {*}

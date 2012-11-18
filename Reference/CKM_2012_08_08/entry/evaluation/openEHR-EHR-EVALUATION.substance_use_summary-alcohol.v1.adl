@@ -36,8 +36,8 @@ definition
 	EVALUATION[at0000.1] matches {	-- Alcohol Use Summary
 		data matches {
 			ITEM_TREE[at0001] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Substance
+				items matches {
+					ELEMENT[at0005] matches {	-- Substance
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {[local::at0.17]}		-- Alcohol
@@ -57,9 +57,9 @@ definition
 							}
 						}
 					}
-					CLUSTER[at0007] occurrences matches {0..*} matches {	-- Consumption Summary
-						items cardinality matches {0..*; unordered} matches {
-							ELEMENT[at0008] occurrences matches {0..1} matches {	-- Form
+					CLUSTER[at0007] matches {	-- Consumption Summary
+						items matches {
+							ELEMENT[at0008] matches {	-- Form
 								value matches {
 									DV_CODED_TEXT matches {
 										defining_code matches {
@@ -109,7 +109,7 @@ definition
 							}
 						}
 					}
-					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {	-- Cessation attempts
+					allow_archetype CLUSTER[at0014] matches {	-- Cessation attempts
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.cessation_attempts\.v1/}
 					}

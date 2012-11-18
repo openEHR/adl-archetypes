@@ -100,20 +100,20 @@ definition
 	OBSERVATION[at0000.1] matches {	-- Pulse
 		data matches {
 			HISTORY[at0002] matches {	-- history
-				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0003] occurrences matches {0..*} matches {	-- Any event
+				events matches {
+					EVENT[at0003] matches {	-- Any event
 						data matches {
 							ITEM_TREE[at0001] matches {	-- structure
-								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at1005.1] occurrences matches {0..1} matches {	-- Pulse Present?
+								items matches {
+									ELEMENT[at1005.1] matches {	-- Pulse Present?
 										value matches {
 											DV_BOOLEAN matches {
 												value matches {True, False}
 											}
 										}
 									}
-									ELEMENT[at0004.1] occurrences matches {0..1} matches {*}	-- Pulse Rate
-									ELEMENT[at0005.1] occurrences matches {0..1} matches {	-- Regularity
+									ELEMENT[at0004.1] matches {*}	-- Pulse Rate
+									ELEMENT[at0005.1] matches {	-- Regularity
 										value matches {
 											DV_CODED_TEXT matches {
 												defining_code matches {
@@ -135,12 +135,12 @@ definition
 											DV_TEXT matches {*}
 										}
 									}
-									ELEMENT[at1022.1] occurrences matches {0..1} matches {	-- Clinical Description
+									ELEMENT[at1022.1] matches {	-- Clinical Description
 										value matches {
 											DV_TEXT matches {*}
 										}
 									}
-									ELEMENT[at1023.1] occurrences matches {0..*} matches {	-- Clinical Interpretation
+									ELEMENT[at1023.1] matches {	-- Clinical Interpretation
 										value matches {
 											DV_TEXT matches {*}
 										}
@@ -155,7 +155,7 @@ definition
 						}
 						state matches {
 							ITEM_TREE[at0012] matches {	-- List
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									ELEMENT[at0013.1] occurrences matches {0..1} matches {	-- Position
 										value matches {
 											DV_CODED_TEXT matches {
@@ -175,7 +175,7 @@ definition
 											DV_TEXT matches {*}
 										}
 									}
-									allow_archetype CLUSTER[at1017.1] occurrences matches {0..*} matches {	-- Exertion
+									allow_archetype CLUSTER[at1017.1] matches {	-- Exertion
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-[a-zA-Z0-9_]+)*\.v1/}
 									}
@@ -188,7 +188,7 @@ definition
 		}
 		protocol matches {
 			ITEM_TREE[at0010] matches {	-- List
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at1019.1] occurrences matches {0..1} matches {	-- Method
 						value matches {
 							DV_TEXT matches {*}

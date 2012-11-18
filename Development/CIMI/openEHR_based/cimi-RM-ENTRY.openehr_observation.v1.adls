@@ -30,7 +30,7 @@ definition
 	ENTRY[at0000.1] matches {	-- OBSERVATION
 		/data matches {
 			CLUSTER[at0.2] matches {	-- data
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0.3] occurrences matches {1} matches {	-- origin
 						value matches {
 							DATE_TIME matches {*}

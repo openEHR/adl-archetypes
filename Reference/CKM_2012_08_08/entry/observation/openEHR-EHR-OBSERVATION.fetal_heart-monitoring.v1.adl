@@ -82,7 +82,7 @@ definition
 													>
 												>
 											>
-											(DV_INTERVAL<DV_QUANTITY>) matches {
+											DV_INTERVAL<DV_QUANTITY> matches {
 												upper matches {
 													(C_DV_QUANTITY) <
 														property = <[openehr::382]>

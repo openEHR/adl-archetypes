@@ -71,7 +71,7 @@ definition
 	EVALUATION[at0000.1] matches {	-- Diagnóstico
 		data matches {
 			ITEM_TREE[at0001] matches {	-- structure
-				items cardinality matches {1..*; ordered} matches {
+				items matches {
 					ELEMENT[at0002.1] matches {	-- Diagnóstico
 						value matches {
 							DV_CODED_TEXT matches {
@@ -143,7 +143,7 @@ definition
 						}
 					}
 					CLUSTER[at0014] occurrences matches {0..1} matches {	-- Etiologia
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0015] occurrences matches {0..*} matches {	-- Agente
 								value matches {
 									DV_TEXT matches {*}
@@ -163,7 +163,7 @@ definition
 						}
 					}
 					CLUSTER[at0018] occurrences matches {0..1} matches {	-- Ocorrências ou exacerbações
-						items cardinality matches {1..*; ordered} matches {
+						items matches {
 							ELEMENT[at0019] occurrences matches {0..1} matches {	-- Frequência da ocorrência
 								value matches {
 									C_DV_QUANTITY <
@@ -194,7 +194,7 @@ definition
 								}
 							}
 							CLUSTER[at0021] occurrences matches {0..*} matches {	-- Ocorrências/exacerbações
-								items cardinality matches {1..*; unordered} matches {
+								items matches {
 									ELEMENT[at0022] occurrences matches {0..1} matches {	-- Descrição Clínica
 										value matches {
 											DV_TEXT matches {*}
@@ -227,9 +227,9 @@ definition
 						}
 					}
 					CLUSTER[at0026] occurrences matches {0..1} matches {	-- Problemas relacionados
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							CLUSTER[at0027] occurrences matches {0..*} matches {	-- Grupo de relacionados
-								items cardinality matches {1..*; unordered} matches {
+								items matches {
 									ELEMENT[at0028] occurrences matches {0..1} matches {	-- Problema relacionado
 										value matches {
 											DV_TEXT matches {*}
@@ -258,7 +258,7 @@ definition
 						}
 					}
 					CLUSTER[at0.35] occurrences matches {0..1} matches {	-- Critério diagnóstico
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.36] occurrences matches {0..*} matches {	-- Critério
 								value matches {
 									DV_TEXT matches {*}
@@ -271,9 +271,9 @@ definition
 		}
 		protocol matches {
 			ITEM_TREE[at0032] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					CLUSTER[at0033] occurrences matches {0..1} matches {	-- Referencias
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0034] occurrences matches {0..*} matches {	-- Referencia
 								value matches {
 									DV_TEXT matches {*}

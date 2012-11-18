@@ -33,12 +33,12 @@ description
 
 definition
 	INSTRUCTION[at0000.1] matches {	-- Procedure request
-		activities cardinality matches {0..*; unordered} matches {
-			ACTIVITY[at0001] occurrences matches {1..*} matches {	-- Request
+		activities matches {
+			ACTIVITY[at0001] matches {	-- Request
 				action_archetype_id matches {/openEHR-EHR-ACTION\.procedure\.v1/}
 				description matches {
 					ITEM_TREE[at0009] matches {	-- Tree
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0121] matches {	-- Procedure requested
 								value matches {
 									DV_TEXT matches {*}

@@ -36,13 +36,13 @@ definition
 	EVALUATION[at0000.1] matches {	-- Exclusion statement - Medications
 		data matches {
 			ITEM_TREE[at0001] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {0..*} matches {	-- General Statement
+				items matches {
+					ELEMENT[at0002] matches {	-- General Statement
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0002.1] occurrences matches {0..*} matches {	-- Global Statements
+					ELEMENT[at0002.1] matches {	-- Global Statements
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {

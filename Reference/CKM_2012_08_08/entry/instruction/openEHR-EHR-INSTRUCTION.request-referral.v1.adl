@@ -33,8 +33,8 @@ description
 
 definition
 	INSTRUCTION[at0000.1] matches {	-- Referral request
-		activities cardinality matches {0..*; unordered} matches {
-			ACTIVITY[at0001] occurrences matches {1..*} matches {	-- Request
+		activities matches {
+			ACTIVITY[at0001] matches {	-- Request
 				description matches {
 					ITEM_TREE[at0009] matches {	-- Tree
 						items cardinality matches {1..*; unordered} matches {
@@ -112,7 +112,7 @@ definition
 		}
 		protocol matches {
 			ITEM_TREE[at0008] matches {	-- Tree
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Requestor Identifier
 						value matches {
 							DV_TEXT matches {*}
@@ -145,7 +145,7 @@ definition
 							archetype_id/value matches {/.*/}
 					}
 					CLUSTER[at0.2] occurrences matches {0..1} matches {	-- Duration
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.3] occurrences matches {0..1} matches {	-- Duration
 								value matches {
 									DV_DURATION matches {*}

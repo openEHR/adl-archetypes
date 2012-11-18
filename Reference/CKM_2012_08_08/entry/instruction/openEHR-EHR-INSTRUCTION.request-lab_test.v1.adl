@@ -34,11 +34,11 @@ If there are more specific details about the test and/or specimen include this i
 
 definition
 	INSTRUCTION[at0000.1] matches {	-- Laboratory Test request
-		activities cardinality matches {0..*; unordered} matches {
-			ACTIVITY[at0001] occurrences matches {1..*} matches {	-- Request
+		activities matches {
+			ACTIVITY[at0001] matches {	-- Request
 				description matches {
 					ITEM_TREE[at0009] matches {	-- Tree
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0121] matches {	-- Test requested
 								value matches {
 									DV_TEXT matches {*}
@@ -84,12 +84,12 @@ definition
 									}
 								}
 							}
-							ELEMENT[at0040.1] occurrences matches {0..1} matches {	-- DateTime test preferred
+							ELEMENT[at0040.1] matches {	-- DateTime test preferred
 								value matches {
 									DV_DATE_TIME matches {*}
 								}
 							}
-							ELEMENT[at0144.1] occurrences matches {0..1} matches {	-- Latest DateTime test required
+							ELEMENT[at0144.1] matches {	-- Latest DateTime test required
 								value matches {
 									DV_DATE_TIME matches {*}
 								}
@@ -123,7 +123,7 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					allow_archetype CLUSTER[at0141] occurrences matches {0..*} matches {	-- Requestor 
+					allow_archetype CLUSTER[at0141] matches {	-- Requestor 
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -132,7 +132,7 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					allow_archetype CLUSTER[at0142] occurrences matches {0..*} matches {	-- Receiver 
+					allow_archetype CLUSTER[at0142] matches {	-- Receiver 
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -141,11 +141,11 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					allow_archetype CLUSTER[at0128] occurrences matches {0..*} matches {	-- Distribution list for response 
+					allow_archetype CLUSTER[at0128] matches {	-- Distribution list for response 
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.distribution\.v1/}
 					}
-					allow_archetype CLUSTER[at0112] occurrences matches {0..*} matches {	-- Localisation
+					allow_archetype CLUSTER[at0112] matches {	-- Localisation
 						include
 							archetype_id/value matches {/.*/}
 					}

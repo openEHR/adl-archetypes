@@ -30,44 +30,50 @@ definition
 			ELEMENT [at0.6] matches {
 				value matches {
 					CODED_TEXT matches {
-						value matches {[local::at0.0.2]}
+						terminology_id matches {
+							TERMINOLOGY_ID matches {
+								value matches {"local"}
+							}
+						}
+						term_id matches {"at0.0.2"}
 					}
 				}
 			}
 			ELEMENT [at0.8.1] matches {
 				value matches {
 					CODED_TEXT matches {
-						value matches {[local::at0.0.4]}
+						terminology_id matches {
+							TERMINOLOGY_ID matches {
+								value matches {"local"}
+							}
+						}
+						term_id matches {"at0.0.4"}
 					}
 				}
 			}
 			ELEMENT [at0.8.2] occurrences matches {0..1} matches {
 				value matches {
 					CODED_TEXT matches {
-						value matches {
-							[local::
-							at0.0.6,
-							at0.0.7,
-							at0.0.8,
-							at0.0.9,
-							at0.0.10,
-							at0.0.11,
-							at0.0.12]
+						terminology_id matches {
+							TERMINOLOGY_ID matches {
+								value matches {"local"}
+							}
 						}
+						term_id matches {"at0.0.6", "at0.0.7", "at0.0.8", "at0.0.9", "at0.0.10", "at0.0.11", "at0.0.12"}
 					}
 				}
 			}
 			ELEMENT [at0.8.3] matches {
 				value matches {
 					CODED_TEXT matches {
-						value matches {[ac0.0.1]}
+						term_id matches {[ac0.0.1]}
 					}
 				}
 			}
 			ELEMENT [at0.8.4] occurrences matches {0..1} matches {
 				value matches {
 					CODED_TEXT matches {
-						value matches {[ac0.0.2]}
+						term_id matches {[ac0.0.2]}
 					}
 				}
 			}
@@ -76,37 +82,36 @@ definition
 					ELEMENT [at0.0.13] occurrences matches {0..1} matches { -- body site
 						value matches {
 							CODED_TEXT matches {
-								value matches {
-									[local::
-									at0.0.14,
-									at0.0.15,
-									at0.0.16,
-									at0.0.17]
+								terminology_id matches {
+									TERMINOLOGY_ID matches {
+										value matches {"local"}
+									}
 								}
+								term_id matches {"at0.0.14", "at0.0.15", "at0.0.16", "at0.0.17"}
 							}
 						}
 					}
 					ELEMENT [at0.0.18] occurrences matches {0..1} matches { -- body side
 						value matches {
 							CODED_TEXT matches {
-								value matches {
-									[local::
-									at0.0.19,
-									at0.0.20,
-									at0.0.21]
+								terminology_id matches {
+									TERMINOLOGY_ID matches {
+										value matches {"local"}
+									}
 								}
+								term_id matches {"at0.0.19", "at0.0.20", "at0.0.21"}
 							}
 						}
 					}
 					ELEMENT [at0.0.22] occurrences matches {0..1} matches { -- body site descriptor
 						value matches {
 							CODED_TEXT matches {
-								value matches {
-									[local::
-									at0.0.23,
-									at0.0.24,
-									at0.0.25]
+								terminology_id matches {
+									TERMINOLOGY_ID matches {
+										value matches {"local"}
+									}
 								}
+								term_id matches {"at0.0.23", "at0.0.24", "at0.0.25"}
 							}
 						}
 					}
@@ -115,28 +120,28 @@ definition
 			ELEMENT [at0.8.6] matches { -- method
 				value matches {
 					CODED_TEXT matches {
-						value matches {[ac0.0.3]}
+						term_id matches {[ac0.0.3]}
 					}
 				}
 			}
 			ELEMENT [at0.8.7] matches { -- device
 				value matches {
 					CODED_TEXT matches {
-						value matches {[ac0.0.4]}
+						term_id matches {[ac0.0.4]}
 					}
 				}
 			}
 			ELEMENT [at0.8.8] matches { -- time of day
 				value matches {
 					CODED_TEXT matches {
-						value matches {[ac0.0.5]}
+						term_id matches {[ac0.0.5]}
 					}
 				}
 			}
 			ELEMENT [at0.8.9] matches { -- aggregate function
 				value matches {
 					CODED_TEXT matches {
-						value matches {[ac0.0.6]}
+						term_id matches {[ac0.0.6]}
 					}
 				}
 			}
@@ -145,7 +150,16 @@ definition
 			ELEMENT [at0.16.1] occurrences matches {0..1} matches {
 				value matches {
 					QUANTITY matches {
-						units matches {[local::at0.0.26]}
+						units matches {
+							CODED_TEXT matches {
+								terminology_id matches {
+									TERMINOLOGY_ID matches {
+										value matches {"local"}
+									}
+								}
+								term_id matches {"at0.0.26"}
+							}
+						}
 					}
 				}
 			}
