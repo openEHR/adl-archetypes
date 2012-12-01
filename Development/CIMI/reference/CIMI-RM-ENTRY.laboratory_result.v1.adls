@@ -1,0 +1,178 @@
+archetype (adl_version=1.5)
+	CIMI-RM-ENTRY.laboratory_result.v1
+
+specialise
+	CIMI-RM-ENTRY.observation.v1
+
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"10/04/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Archetype for herat rate">
+			keywords = <"Entry", "cardiology", "heart">
+			copyright = <"© 2012 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Draft">
+	
+definition
+	ENTRY[at0000.1.1] matches {	-- Laboratory Test Result
+		/participation matches {
+			PARTICIPATION [at0.2.1] matches {*}
+			
+		}
+		/data matches {
+			CLUSTER [at0.5.1] matches {
+				items matches {
+					ELEMENT [at0.6.1] matches {
+						value matches {
+							TEXT matches {*}
+						}
+					}
+					ELEMENT[at0.0.4] occurrences matches {0..1} matches {	-- Diagnostic type
+						value matches {
+							TEXT matches {*}
+						}
+					}
+				    allow_archetype CLUSTER[at0.0.5] matches { -- Specimen
+						include
+							archetype_id/value matches {/.*/}
+					}
+
+					ELEMENT[at0.0.6] occurrences matches {0..1} matches {	-- Priority
+						value matches {
+							TEXT matches {*}
+						}
+					}
+					ELEMENT[at0.0.7] occurrences matches {0..1} matches {	-- POCT Indicator
+						value matches {
+							CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0.0.8] occurrences matches {0..1} matches {	-- Clinical informsation provided
+						value matches {
+							TEXT matches {*}
+						}
+					}
+					ELEMENT[at0.0.9] occurrences matches {0..1} matches {	-- Test method
+						value matches {
+							TEXT matches {*}
+						}
+					}
+				}
+			}
+			use_archetype CLUSTER[cimi-RM-CLUSTER.laboratory_result_item.v1] -- Result item
+		}	
+	}	
+	
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1.1"] = <
+				text = <"Laboratory Test Result">
+				description = <" Record the findings and interpretation of a group of laboratory tests.">
+			>
+			["at0.2.1"] = <
+				text = <"Performing clinician">
+				description = <"The clinician who performed the observation">
+			>
+			["at0.5.1"] = <
+				text = <"Test performed">
+				description = <"Details of the test performed. A test result may be for a single analyte, or a group of items, including panel tests.">
+			>
+			["at0.6.1"] = <
+				text = <"Test performed name">
+				description = <"The name of the test performed, sometimes including specimen type. A test result may be for a single analyte, or a group of items, including panel tests.">
+			>
+			["at0.0.10"] = <
+				text = <"Result group identifier">
+				description = <"The unique identifier of this result set within this report.">
+			>
+			["at0.15.1"] = <
+				text = <"Test results">
+				description = <"*">
+			>
+			["at0.0.11"] = <
+				text = <"Result group name">
+				description = <"The name of the group of test results.">
+			>
+			["at0.0.12"] = <
+				text = <"Result item">
+				description = <"An individual laboratory result item.">
+			>
+			["at0.0.13"] = <
+				text = <"Result subgroup">
+				description = <"A subgroup of laboratory result items">
+			>
+			["at0.0.14"] = <
+				text = <"Specimen">
+				description = <"Details about the individual specimen(s) to which this ‘Result group’ refer.">
+			>
+			["at0.0.15"] = <
+				text = <"Sequence">
+				description = <"The sequence in which this lab test group appears in the report.">
+			>
+			["at0.0.16"] = <
+				text = <"Diagnosis">
+				description = <"Single word, phrase or brief description representing the 'Conclusion'.">
+			>
+			["at0.0.17"] = <
+				text = <"Conclusion">
+				description = <"Concise and clinically contextualised narrative interpretation of the pathology test results.">
+			>
+			["at0.0.18"] = <
+				text = <"Comment">
+				description = <"Additional narrative about the test not captured in the other fields.">
+			>
+			["at0.0.1"] = <
+				text = <"Responsible clinician">
+				description = <"">
+			>
+			["at0.0.2"] = <
+				text = <"Reference laboratory">
+				description = <"">
+			>
+			["at0.0.3"] = <
+				text = <"Responsible laboratory">
+				description = <"">
+			>
+			["at0.0.4"] = <
+				text = <"Diagnostic type">
+				description = <"The diagnostic service that performs the examination e.g. biochemistry, haematology.">
+			>
+			["at0.0.5"] = <
+				text = <"Specimen">
+				description = <"Details about the specimen used in the associated laboratory tests.">
+			>
+			["at0.0.6"] = <
+				text = <"Priority">
+				description = <"The priority given to the test performed.">
+			>
+			["at0.0.7"] = <
+				text = <"POCT Indicator">
+				description = <"Indicates whether or not the test is performed at the point of care.">
+			>
+			["at0.0.8"] = <
+				text = <"Clinical informsation provided">
+				description = <"*">
+			>
+			["at0.0.9"] = <
+				text = <"Test method">
+				description = <"The testing method used. Theslot may be used to contain more detailed informsation about mthe methodology">
+			>
+
+		>
+	>
+	constraint_definitions = <>
+	>

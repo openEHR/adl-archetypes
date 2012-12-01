@@ -1,8 +1,8 @@
 ﻿archetype (adl_version=1.5)
-	cimi-RM-ENTRY.heartrate_code_phrase.v1
+	CIMI-RM-ENTRY.heartrate_code_phrase.v1
 
 specialise
-	cimi-RM-ENTRY.observation.v1
+	CIMI-RM-ENTRY.observation.v1
 
 language
 	original_language = <[ISO_639-1::en]>

@@ -1,0 +1,91 @@
+archetype (adl_version=1.5)
+	CIMI-RM-CLUSTER.lab_timing.v1
+specialise
+	CIMI-RM-CLUSTER.observation_timing.v1
+
+concept
+	[at0000.1]	-- Lab timing
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+	>
+
+definition
+	CLUSTER[at0000.1] matches {	-- Lab timing
+		items matches {
+			ELEMENT[at0001.1] occurrences matches {0..1} matches {	-- Performed datetime
+				value matches {
+					DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0002.1] occurrences matches {0..1} matches {	-- Performed datetime range
+				value matches {
+					DV_INTERVAL<DATE_TIME> matches {*}
+				}
+			}
+			ELEMENT[at0.3] occurrences matches {0..1} matches {	-- Reported datetime
+				value matches {
+					DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0.4] occurrences matches {0..1} matches {	-- Approved datetime
+				value matches {
+					DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0.5] occurrences matches {0..1} matches {	-- Cancelled datetime
+				value matches {
+					DATE_TIME matches {*}
+				}
+			
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Lab timing">
+					description = <"unknown">
+				>
+				["at0001.1"] = <
+					text = <"Performed datetime">
+					description = <"The date and/or time that the laboratory tests were performed.">
+				>
+				["at0002.1"] = <
+					text = <"Performed datetime range">
+					description = <"The date range and/or time range that the laboratory tests were performed.">
+				>
+				["at0.3"] = <
+					text = <"Reported datetime">
+					description = <"The date and/or time that the laboratory results were reported.">
+				>
+				["at0.4"] = <
+					text = <"Approved datetime">
+					description = <"The date and/or time that the laboratory results were approved.">
+				>
+				["at0.5"] = <
+					text = <"Cancelled datetime">
+					description = <"The date and/or time that the laboratory tests were cancelled.">
+				>
+				
+			>
+		>
+	>

@@ -1,8 +1,8 @@
 ﻿archetype (adl_version=1.5)
-	cimi-RM-ENTRY.heartrate.v1
+	CIMI-RM-ENTRY.heartrate.v1
 
 specialise
-	cimi-RM-ENTRY.observation.v1
+	CIMI-RM-ENTRY.observation.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -39,7 +39,7 @@ definition
 					}
 				}
 			}
-			ELEMENT [at0.8.1] matches {
+			ELEMENT [at0.0.27] matches {
 				value matches {
 					CODED_TEXT matches {
 						terminology_id matches {
@@ -51,7 +51,7 @@ definition
 					}
 				}
 			}
-			ELEMENT [at0.8.2] occurrences matches {0..1} matches {
+			ELEMENT [at0.0.32] occurrences matches {0..1} matches {
 				value matches {
 					CODED_TEXT matches {
 						terminology_id matches {
@@ -63,21 +63,21 @@ definition
 					}
 				}
 			}
-			ELEMENT [at0.8.3] matches {
+			ELEMENT [at0.0.33] matches {
 				value matches {
 					CODED_TEXT matches {
 						term_id matches {[ac0.0.1]}
 					}
 				}
 			}
-			ELEMENT [at0.8.4] occurrences matches {0..1} matches {
+			ELEMENT [at0.0.34] occurrences matches {0..1} matches {
 				value matches {
 					CODED_TEXT matches {
 						term_id matches {[ac0.0.2]}
 					}
 				}
 			}
-			CLUSTER [at0.8.5] occurrences matches {1} matches {
+			CLUSTER [at0.0.35] occurrences matches {1} matches {
 				items matches {
 					ELEMENT [at0.0.13] occurrences matches {0..1} matches { -- body site
 						value matches {
@@ -117,28 +117,28 @@ definition
 					}
 				}
 			}
-			ELEMENT [at0.8.6] matches { -- method
+			ELEMENT [at0.0.36] matches { -- method
 				value matches {
 					CODED_TEXT matches {
 						term_id matches {[ac0.0.3]}
 					}
 				}
 			}
-			ELEMENT [at0.8.7] matches { -- device
+			ELEMENT [at0.0.37] matches { -- device
 				value matches {
 					CODED_TEXT matches {
 						term_id matches {[ac0.0.4]}
 					}
 				}
 			}
-			ELEMENT [at0.8.8] matches { -- time of day
+			ELEMENT [at0.0.38] matches { -- time of day
 				value matches {
 					CODED_TEXT matches {
 						term_id matches {[ac0.0.5]}
 					}
 				}
 			}
-			ELEMENT [at0.8.9] matches { -- aggregate function
+			ELEMENT [at0.0.39] matches { -- aggregate function
 				value matches {
 					CODED_TEXT matches {
 						term_id matches {[ac0.0.6]}
@@ -168,7 +168,7 @@ definition
 					YESNO matches {*}
 				}
 			}
-			ELEMENT [at0.17.1] occurrences matches {0..1} matches {
+			ELEMENT [at0.0.30] occurrences matches {0..1} matches {
 				value matches {
 					PLAIN_TEXT matches {*}
 				}
@@ -183,39 +183,39 @@ ontology
 				text = <"Heart rate">
 				description = <"Observation of heart rate">
 			>
-			["at0.8.1"] = <
+			["at0.0.27"] = <
 				text = <"reason">
 				description = <"reason">
 			>
-			["at0.8.2"] = <
+			["at0.0.32"] = <
 				text = <"body position">
 				description = <"body position">
 			>
-			["at0.8.3"] = <
+			["at0.0.33"] = <
 				text = <"confounding factors">
 				description = <"confounding factors">
 			>
-			["at0.8.4"] = <
+			["at0.0.34"] = <
 				text = <"exertion">
 				description = <"exertion">
 			>
-			["at0.8.5"] = <
+			["at0.0.35"] = <
 				text = <"body location">
 				description = <"body location">
 			>
-			["at0.8.6"] = <
+			["at0.0.36"] = <
 				text = <"method">
 				description = <"method">
 			>
-			["at0.8.7"] = <
+			["at0.0.37"] = <
 				text = <"device">
 				description = <"device">
 			>
-			["at0.8.8"] = <
+			["at0.0.38"] = <
 				text = <"time of day">
 				description = <"time of day">
 			>
-			["at0.8.9"] = <
+			["at0.0.39"] = <
 				text = <"aggregate function">
 				description = <"aggregate function">
 			>
@@ -319,7 +319,7 @@ ontology
 				text = <"heart rate present">
 				description = <"heart rate present">
 			>
-			["at0.17.1"] = <
+			["at0.0.30"] = <
 				text = <"clinical notes">
 				description = <"clinical notes">
 			>
@@ -358,7 +358,7 @@ ontology
 	term_bindings = <
 		["SNOMEDCT"] = <
 			items = <
-				["at0.8.1"] = <[SNOMED-CT::416083004]>
+				["at0.0.27"] = <[SNOMED-CT::416083004]>
 				["at0.0.4"] = <[SNOMED-CT::404684003]>
 			>
 		>

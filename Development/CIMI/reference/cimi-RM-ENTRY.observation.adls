@@ -1,8 +1,8 @@
 ﻿archetype (adl_version=1.5)
-	cimi-RM-ENTRY.observation.v1
+	CIMI-RM-ENTRY.observation.v1
 
 specialise
-	cimi-RM-ENTRY.clinical_entry.v1
+	CIMI-RM-ENTRY.clinical_entry.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -47,7 +47,6 @@ definition
 							TEXT matches {*}
 						}
 					}
-					ITEM [at0.8] occurrences matches {*} matches {*}
 				}
 			}
 			CLUSTER [at0.9] occurrences matches {1} matches {
@@ -82,7 +81,6 @@ definition
 			CLUSTER [at0.15] occurrences matches {1} matches {
 				items matches {
 					ITEM [at0.16] occurrences matches {*} matches {*}
-					ITEM [at0.17] occurrences matches {*} matches {*}
 					ITEM [at0.18] occurrences matches {*} matches {*}
 					ITEM [at0.19] occurrences matches {0..1} matches {*}
 				}
@@ -156,10 +154,6 @@ ontology
 			["at0.16"] = <
 				text = <"value">
 				description = <"value of result">
-			>
-			["at0.17"] = <
-				text = <"detailed">
-				description = <"details of result">
 			>
 			["at0.18"] = <
 				text = <"interpretation">

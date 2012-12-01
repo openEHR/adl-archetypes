@@ -1,0 +1,300 @@
+archetype (adl_version=1.5)
+	CIMI-RM-CLUSTER.specimen.v1
+
+concept
+	[at0000]	-- Specimen
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Specimen
+		items matches {
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Specimen identifier
+				value matches {
+					IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Container identifier
+				value matches {
+					IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Source specimen identifier
+				value matches {
+					IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Specimen type
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Specimen description
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {	-- Specimen volume
+				value matches {
+					QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..*} matches {	-- Specimen dimension
+				value matches {
+					QUANTITY matches {*}
+				}		
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {	-- Specimen size description
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {	-- Specimen weight
+				value matches {
+					QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Specimen dry weight
+				value matches {
+					QUANTITY matches {*}
+				}	
+			}
+			ELEMENT[at0012] occurrences matches {0..1} matches {	-- Sequence number
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {	-- Collection priority
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0013] occurrences matches {0..1} matches {	-- Specimen additive
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0014] occurrences matches {0..1} matches {	-- Specimen margins tumour involvement
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0015] occurrences matches {0..1} matches {	-- Collection method
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0016] occurrences matches {0..1} matches {	-- Collection description
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {	-- Collection body site
+				include
+					archetype_id/value matches {/.*/}
+			}
+			ELEMENT[at0018] occurrences matches {0..1} matches {	-- Preservative
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0019] occurrences matches {0..1} matches {	-- Specimen handling risk
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {	-- Biopsy core needle gauge
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0021] occurrences matches {0..1} matches {	-- Biopsy needle entry point
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0022] occurrences matches {0..1} matches {	-- Collector
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0023] occurrences matches {0..1} matches {	-- PARTICIPATION:Specimen Collection Participant
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0024] occurrences matches {0..1} matches {	-- PARTICIPATION:Specimen Receiving Participant
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0025] occurrences matches {0..1} matches {	-- Collection datetime
+				value matches {
+					DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0026] occurrences matches {0..1} matches {	-- Collection datetime range
+				value matches {
+					DV_INTERVAL<DATE_TIME> matches {
+						upper matches {
+							DATE_TIME matches {*}
+						}
+						lower matches {
+							DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+			ELEMENT[at0027] occurrences matches {0..1} matches {	-- Collection duration
+				value matches {
+					DURATION matches {*}
+				}
+			}
+			ELEMENT[at0028] occurrences matches {0..1} matches {	-- Received datetime
+				value matches {
+					DATE_TIME matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Specimen">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Specimen dry weight">
+					description = <"The weight of the specimen when it is free of water.">
+				>
+				["at0002"] = <
+					text = <"Specimen identifier">
+					description = <"The identifier of the specimen.">
+				>
+				["at0003"] = <
+					text = <"Container identifier">
+					description = <"The identifier of the container that contains the specimen.">
+				>
+				["at0004"] = <
+					text = <"Source specimen identifier">
+					description = <"The identifier of the source specimen or group of specimens from which this specimen is to be or was extracted.">
+				>
+				["at0005"] = <
+					text = <"Specimen type">
+					description = <"The type of the specimen">
+				>
+				["at0006"] = <
+					text = <"Specimen description">
+					description = <"A description of the specimen">
+				>
+				["at0007"] = <
+					text = <"Specimen volume">
+					description = <"The volume of the specimen.">
+				>
+				["at0008"] = <
+					text = <"Specimen dimension">
+					description = <"The dimensions of the specimen.">
+				>
+				["at0009"] = <
+					text = <"Specimen size description">
+					description = <"A general description of the volume or dimensions of the specimen.">
+				>
+				["at0010"] = <
+					text = <"Specimen weight">
+					description = <"The weight of the specimen.">
+				>
+				["at0011"] = <
+					text = <"Collection priority">
+					description = <"The priority given to the collection of this specimen.">
+				>
+				["at0012"] = <
+					text = <"Sequence number">
+					description = <"Where this specimen occurs in the sequence of specimens.">
+				>
+				["at0013"] = <
+					text = <"Specimen additive">
+					description = <"IMH ??">
+				>
+				["at0014"] = <
+					text = <"Specimen margins tumour involvement">
+					description = <"IMH ??">
+				>
+				["at0015"] = <
+					text = <"Collection method">
+					description = <"The name of the method for collecting the specimen.">
+				>
+				["at0016"] = <
+					text = <"Collection description">
+					description = <"Narrative description of the collection method.">
+				>
+				["at0017"] = <
+					text = <"Collection body site">
+					description = <"The specific site on the patient from which the specimen was collected.">
+				>
+				["at0018"] = <
+					text = <"Preservative">
+					description = <"The kind of preservative used for the specimen.">
+				>
+				["at0019"] = <
+					text = <"Specimen handling risk">
+					description = <"Details of any special risks associated with handling the specimen (i.e .patient has communicable disease).">
+				>
+				["at0020"] = <
+					text = <"Biopsy core needle gauge">
+					description = <"The diameter of the core obtained via needle biopsy expressed using the needle gauge used to take the specimen.">
+				>
+				["at0021"] = <
+					text = <"Biopsy needle entry point">
+					description = <"The entry point for the biopsy needle.">
+				>
+				["at0022"] = <
+					text = <"Collector">
+					description = <"A description of who collects or is requested to collect the specimen.">
+				>
+				["at0023"] = <
+					text = <"PARTICIPATION:Specimen Collection Participant">
+					description = <" A party that participates in the specimen collection process.">
+				>
+				["at0024"] = <
+					text = <"PARTICIPATION:Specimen Receiving Participant">
+					description = <"A party that participates in the specimen receiving process.">
+				>
+				["at0025"] = <
+					text = <"Collection datetime">
+					description = <"The date and time at which the specimen was collected.">
+				>
+				["at0026"] = <
+					text = <"Collection datetime range">
+					description = <"The start and/or end datetime at which the specimen was collected.">
+				>
+				["at0027"] = <
+					text = <"Collection duration">
+					description = <"The length of time over which the collection occurred.">
+				>
+				["at0028"] = <
+					text = <"Received datetime">
+					description = <"The date and time at which the specimen was received by the laboratory performing the investigation.">
+				>
+			>
+		>
+	>

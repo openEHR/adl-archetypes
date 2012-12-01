@@ -1,0 +1,83 @@
+archetype (adl_version=1.5)
+	CIMI-RM-CLUSTER.reference_range.v1
+
+concept
+	[at0000]	-- Reference range
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"Ocean Informatics UK">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"20/11/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"23DCDA98FAD4C6E5EF38BB76ABE302CF">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Reference range
+		items matches {
+			ELEMENT[at0005] occurrences matches {0..*} matches {	-- Reference criteria
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Reference result
+				value matches {
+					DV_INTERVAL<QUANTITY> matches {*}
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Reference interpretation
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Reference range narrative
+				value matches {
+					TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Reference range">
+					description = <" A guide for the interpretation of results.">
+				>
+				["at0001"] = <
+					text = <"Reference interpretation">
+					description = <"The interpretation of the given reference result, under the given set of reference criteria.">
+				>
+				["at0003"] = <
+					text = <"Reference result">
+					description = <"The reference result value or range.">
+				>
+				["at0004"] = <
+					text = <"Reference range narrative">
+					description = <"A textual summary of the reference range information.">
+				>
+				["at0005"] = <
+					text = <"Reference criteria">
+					description = <"The criteria under which this reference result is applicable.">
+				>
+			>
+		>
+	>

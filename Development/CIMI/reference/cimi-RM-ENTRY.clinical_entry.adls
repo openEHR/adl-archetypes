@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.5)
-	cimi-RM-ENTRY.clinical_entry.v1
+	CIMI-RM-ENTRY.clinical_entry.v1
 
 language
 	original_language = <[ISO_639-1::en]>
