@@ -1,0 +1,34 @@
+archetype (adl_version=1.5; uid=A22E8ED5-81B9-46CC-AFF1-612F428F5447)
+	openehr-TEST_PKG-WHOLE.child_with_uid.v1
+
+specialise
+	openehr-TEST_PKG-WHOLE.parent_with_uid.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"thomas.beale@oceaninformatics.com">
+	>
+	other_details = <
+		["regression"] = <"PASS">
+	>
+	lifecycle_state = <"Initial">
+
+definition
+	WHOLE[at0000.1] matches {
+		string_attr1 matches {"test"}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					description = <"Uid child">
+					text = <"Child archetype with Uid">
+				>
+			>
+		>
+	>
