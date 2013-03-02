@@ -25,7 +25,7 @@ description
 
 definition
 	OBSERVATION[at0000.1] matches {
-		/protocol existence matches {0..1}
+		/protocol existence matches {0}
 	}
 
 ontology

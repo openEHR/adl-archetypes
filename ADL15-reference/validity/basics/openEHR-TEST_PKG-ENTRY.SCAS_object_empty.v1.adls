@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-	openEHR-TEST_PKG-ENTRY.SCAS_object_empty.v1
+	openEHR-TEST_PKG-ENTRY.SCOAT_object_empty.v1
 
 concept
 	[at0000]
@@ -12,12 +12,12 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test SCAS syntax validity check, triggered by object constraint that is empty (should be either '*' or something specific)">
+			purpose = <"Test SCOAT syntax validity check, triggered by object constraint that is empty (should be either '*' or something specific)">
 			copyright = <"copyright (c) 2008 The openEHR Foundation">
 		>
 	>
 	other_details = <
-		["regression"] = <"SCAS">
+		["regression"] = <"SCOAT">
 	>
 	lifecycle_state = <"draft">
 

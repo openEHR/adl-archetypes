@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-	openEHR-EHR-OBSERVATION.VSCNR_illegal_redef_of_ac_code_node.v1
+	openEHR-EHR-OBSERVATION.VCORMT_illegal_redef_of_ac_code_node.v1
 specialise
 	openEHR-EHR-OBSERVATION.spec_test_obs2.v1
 
@@ -14,11 +14,11 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VSCNR validity check, triggered by illegal redefinition of ac-code">
+			purpose = <"Test VCORMT validity check, triggered by illegal redefinition of ac-code">
 		>
 	>
 	other_details = <
-		["regression"] = <"VSCNR">
+		["regression"] = <"VCORMT">
 	>
 	lifecycle_state = <"AuthorDraft">
 

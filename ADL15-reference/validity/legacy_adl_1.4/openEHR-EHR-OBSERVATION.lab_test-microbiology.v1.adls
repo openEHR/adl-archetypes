@@ -29,7 +29,7 @@ definition
 		/data[at0001]/events[at0002]/data[at0003]/items matches {
 			after [at0005]
 			CLUSTER[at0.34] occurrences matches {0..1} matches {	-- Bodily fluid findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0.36] occurrences matches {0..1} matches {	-- Red cell count
 						value matches {
 							DV_QUANTITY matches {*}

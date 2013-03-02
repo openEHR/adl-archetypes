@@ -26,7 +26,7 @@ definition
 	OBSERVATION[at0000] matches {	-- top-level archetype
 		data matches {
 			HISTORY matches {
-				events cardinality matches {1..*; unordered} matches {
+				events cardinality matches {2..*; unordered} matches {
 					EVENT[at0002] matches {	-- any event
 						data matches {
 							ITEM_TREE matches {

@@ -1,0 +1,56 @@
+﻿archetype (adl_version=1.5)
+	openEHR-EHR-EVALUATION.code_list_constrained.v1
+
+specialize
+	openEHR-EHR-EVALUATION.code_list_parent.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["date"] = <"20/02/2013">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Legal constraining of codes list from parent">
+			copyright = <"copyright (c) 2013 openEHR Foundation">
+		>
+	>
+	other_details = <
+		["regression"] = <"PASS">
+	>
+
+definition
+	EVALUATION[at0000.1] matches {	-- Exclusion statement - Adverse Reaction
+		/data[at0001]/items matches {
+			ELEMENT[at0002] matches {
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0005, 	-- No significant family history
+							at0006, 	-- No known adverse reactions
+							at0009, 	-- No relevant past history
+							at0012] 	-- No relevant family history
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Adverse reaction exclusions">
+					description = <"A category of conditions or states which have been excluded as cause of adverse reaction">
+				>
+			>
+		>
+	>
+
