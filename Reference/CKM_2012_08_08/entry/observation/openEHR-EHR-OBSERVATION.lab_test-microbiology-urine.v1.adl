@@ -40,7 +40,7 @@ definition
 					EVENT[at0002] occurrences matches {0..*} matches {	-- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Test name
 										value matches {
 											DV_TEXT matches {*}
@@ -71,7 +71,7 @@ definition
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 									CLUSTER[at0.25] occurrences matches {0..*} matches {	-- Macroscopic findings
-										items cardinality matches {1..*; unordered} matches {
+										items matches {
 											ELEMENT[at0.14] occurrences matches {0..1} matches {	-- Colony count
 												value matches {
 													DV_COUNT matches {
@@ -92,7 +92,7 @@ definition
 										}
 									}
 									CLUSTER[at0.26] occurrences matches {0..*} matches {	-- Microscopic findings
-										items cardinality matches {1..*; unordered} matches {
+										items matches {
 											ELEMENT[at0.18] occurrences matches {0..1} matches {	-- Field count
 												value matches {
 													DV_COUNT matches {
@@ -118,7 +118,7 @@ definition
 										}
 									}
 									CLUSTER[at0.34] occurrences matches {0..1} matches {	-- Bodily fluid findings
-										items cardinality matches {1..*; unordered} matches {
+										items matches {
 											allow_archetype CLUSTER[at0.35] occurrences matches {0..1} matches {	-- Fluid details
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-[a-zA-Z0-9_]+)*\.v1/}
@@ -162,7 +162,7 @@ definition
 										}
 									}
 									CLUSTER[at0.27] occurrences matches {0..*} matches {	-- Culture findings
-										items cardinality matches {1..*; unordered} matches {
+										items matches {
 											ELEMENT[at0.24] occurrences matches {0..*} matches {	-- Culture method
 												value matches {
 													DV_TEXT matches {*}
@@ -189,7 +189,7 @@ definition
 												}
 											}
 											CLUSTER[at0.20] occurrences matches {0..*} matches {	-- Microbial findings
-												items cardinality matches {1..*; unordered} matches {
+												items matches {
 													ELEMENT[at0078.1] occurrences matches {0..1} matches {	-- Organism
 														value matches {
 															DV_TEXT matches {*}
@@ -207,7 +207,7 @@ definition
 														}
 													}
 													CLUSTER[at0.7] occurrences matches {0..*} matches {	-- Therapeutic sensitivities
-														items cardinality matches {1..*; unordered} matches {
+														items matches {
 															ELEMENT[at0.30] occurrences matches {0..1} matches {	-- Agent
 																value matches {
 																	DV_TEXT matches {*}
@@ -278,7 +278,7 @@ definition
 		}
 		protocol matches {
 			ITEM_TREE[at0004] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0062] occurrences matches {0..1} matches {	-- Requestor order identifier
 						value matches {
 							DV_TEXT matches {*}

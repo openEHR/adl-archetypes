@@ -50,7 +50,7 @@ definition
 			}
 			after [at0031]
 			CLUSTER[at0.35] occurrences matches {0..1} matches {	-- Diagnostic criteria
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0.36] occurrences matches {0..*} matches {	-- Criterion
 						value matches {
 							DV_TEXT matches {*}

@@ -47,11 +47,11 @@ definition
 	OBSERVATION[at0000.1] matches {	-- Urine protein
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[at0002.1] occurrences matches {0..1} matches {	-- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Test name
 										value matches {
 											DV_TEXT matches {*}
@@ -140,9 +140,9 @@ definition
 		}
 		protocol matches {
 			ITEM_TREE[at0004] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					CLUSTER[at0013] occurrences matches {0..1} matches {	-- Test identification
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0062] occurrences matches {0..1} matches {	-- Placer order identifier
 								value matches {
 									DV_TEXT matches {*}
