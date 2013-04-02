@@ -26,7 +26,7 @@ description
 
 definition
 	ENTRY[at0000.1.1] matches {
-		/data[at0.5]/items matches {
+		/data[at0.5]/item matches {
 			ELEMENT [at0.6] matches {
 				value matches {
 					CODED_TEXT matches {
@@ -78,7 +78,7 @@ definition
 				}
 			}
 			CLUSTER [at0.0.35] occurrences matches {1} matches {
-				items matches {
+				item matches {
 					ELEMENT [at0.0.13] occurrences matches {0..1} matches { -- body site
 						value matches {
 							CODED_TEXT matches {
@@ -146,7 +146,7 @@ definition
 				}
 			}
 		}
-		/data[at0.15]/items matches {
+		/data[at0.15]/item matches {
 			ELEMENT [at0.16.1] occurrences matches {0..1} matches {
 				value matches {
 					QUANTITY matches {

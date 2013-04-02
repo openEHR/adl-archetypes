@@ -25,7 +25,7 @@ description
 
 definition
 	CLUSTER[at0000] matches {	-- Specimen
-		items matches {
+		item matches {
 			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Specimen identifier
 				value matches {
 					IDENTIFIER matches {*}
@@ -152,7 +152,7 @@ definition
 			}
 			ELEMENT[at0026] occurrences matches {0..1} matches {	-- Collection datetime range
 				value matches {
-					DV_INTERVAL<DATE_TIME> matches {
+					INTERVAL_VALUE<DATE_TIME> matches {
 						upper matches {
 							DATE_TIME matches {*}
 						}

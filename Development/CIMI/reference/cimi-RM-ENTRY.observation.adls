@@ -36,7 +36,7 @@ definition
 		}
 		data matches {
 			CLUSTER [at0.5] occurrences matches {1} matches {
-				items matches {
+				item matches {
 					ELEMENT [at0.6] occurrences matches {1} matches {
 						value matches {
 							TEXT matches {*}
@@ -47,10 +47,11 @@ definition
 							TEXT matches {*}
 						}
 					}
+					ITEM [at0.8] matches {*}
 				}
 			}
 			CLUSTER [at0.9] occurrences matches {1} matches {
-				items matches {
+				item matches {
 					ELEMENT [at0.10] occurrences matches {0..1} matches {
 						value matches {
 							DATE_TIME matches {*}
@@ -58,7 +59,7 @@ definition
 					}
 					ELEMENT [at0.11] occurrences matches {0..1} matches {
 						value matches {
-							DV_INTERVAL<DATE_TIME> matches {*}
+							INTERVAL_VALUE<DATE_TIME> matches {*}
 						}
 					}
 					ELEMENT [at0.12] occurrences matches {0..1} matches {
@@ -79,8 +80,9 @@ definition
 				}
 			}
 			CLUSTER [at0.15] occurrences matches {1} matches {
-				items matches {
+				item matches {
 					ITEM [at0.16] occurrences matches {*} matches {*}
+					ITEM [at0.17] occurrences matches {*} matches {*}
 					ITEM [at0.18] occurrences matches {*} matches {*}
 					ITEM [at0.19] occurrences matches {0..1} matches {*}
 				}
@@ -154,6 +156,10 @@ ontology
 			["at0.16"] = <
 				text = <"value">
 				description = <"value of result">
+			>
+			["at0.17"] = <
+				text = <"notes">
+				description = <"notes">
 			>
 			["at0.18"] = <
 				text = <"interpretation">

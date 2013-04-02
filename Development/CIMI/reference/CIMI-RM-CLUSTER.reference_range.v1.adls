@@ -29,7 +29,7 @@ description
 
 definition
 	CLUSTER[at0000] matches {	-- Reference range
-		items matches {
+		item matches {
 			ELEMENT[at0005] occurrences matches {0..*} matches {	-- Reference criteria
 				value matches {
 					TEXT matches {*}
@@ -37,7 +37,7 @@ definition
 			}
 			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Reference result
 				value matches {
-					DV_INTERVAL<QUANTITY> matches {*}
+					INTERVAL_VALUE<QUANTITY> matches {*}
 					TEXT matches {*}
 				}
 			}

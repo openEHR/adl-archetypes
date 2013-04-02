@@ -27,7 +27,7 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Lab timing
-		items matches {
+		item matches {
 			ELEMENT[at0001.1] occurrences matches {0..1} matches {	-- Performed datetime
 				value matches {
 					DATE_TIME matches {*}
@@ -35,7 +35,7 @@ definition
 			}
 			ELEMENT[at0002.1] occurrences matches {0..1} matches {	-- Performed datetime range
 				value matches {
-					DV_INTERVAL<DATE_TIME> matches {*}
+					INTERVAL_VALUE<DATE_TIME> matches {*}
 				}
 			}
 			ELEMENT[at0.3] occurrences matches {0..1} matches {	-- Reported datetime

@@ -1,0 +1,48 @@
+﻿archetype (adl_version=1.5)
+	CIMI-RM-ENTRY.heartrate_code_phrase2.v1
+
+specialise
+	CIMI-RM-ENTRY.observation.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"10/04/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Archetype for herat rate">
+			keywords = <"Entry", "cardiology", "heart">
+			copyright = <"© 2012 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Draft">
+
+definition
+	ENTRY[at0000.1.1] matches {
+		/data[at0.5]/item matches {
+			ELEMENT [at0.6] matches {
+				value matches {[local::at0.0.2]}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1.1"] = <
+				text = <"Heart rate">
+				description = <"Observation of heart rate">
+			>
+			["at0.0.2"] = <
+				text = <"heart rate">
+				description = <"heart rate">
+			>
+		>
+	>

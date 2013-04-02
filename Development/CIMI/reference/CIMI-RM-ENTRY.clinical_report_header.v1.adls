@@ -82,7 +82,7 @@ definition
 				}
 			}
 			CLUSTER[at0.18] occurrences matches {0..1} matches {	-- Report timing
-				items matches {*}
+				item matches {*}
 			}
 			ITEM[at0.21] occurrences matches {0..*} matches {*}
 		}

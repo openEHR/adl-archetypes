@@ -23,7 +23,7 @@ description
 	
 definition
 	CLUSTER [at0000] matches {
-		items matches {
+		item matches {
 			ELEMENT[at0001] matches {	-- Result group identifier
 				value matches {
 					IDENTIFIER matches {*}

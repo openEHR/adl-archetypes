@@ -25,7 +25,7 @@ description
 
 definition
 	CLUSTER[at0000] matches {	-- Anatomical location
-		items matches {
+		item matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Body site name
 				value matches {
 					TEXT matches {*}
@@ -52,7 +52,7 @@ definition
 				}
 			}
 			CLUSTER[at0006] occurrences matches {0..*} matches {	-- Relative location
-				items matches {
+				item matches {
 					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Identified landmark
 						value matches {
 							TEXT matches {*}

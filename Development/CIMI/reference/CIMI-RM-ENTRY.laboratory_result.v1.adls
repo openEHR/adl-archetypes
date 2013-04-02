@@ -33,7 +33,7 @@ definition
 		}
 		/data matches {
 			CLUSTER [at0.5.1] matches {
-				items matches {
+				item matches {
 					ELEMENT [at0.6.1] matches {
 						value matches {
 							TEXT matches {*}
