@@ -24,7 +24,7 @@ definition
 	SOME_TYPE[at0000] matches {	-- root item
 		clinical_quantity_attr_1 matches {
 			(C_DV_QUANTITY) <
-				property = <[openehr::temperature]>
+				property = <[openehr::127]>
 				list = <
 					["1"] = <
 						units = <"C">
