@@ -63,7 +63,7 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Poisoning or overdose
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			ELEMENT[at0001] matches {	-- Event
 				value matches {
 					DV_TEXT matches {*}
@@ -75,7 +75,7 @@ definition
 				}
 			}
 			CLUSTER[at0.21] occurrences matches {0..1} matches {	-- Details
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0.15] occurrences matches {0..1} matches {	-- Substance
 						value matches {
 							DV_TEXT matches {*}
@@ -116,7 +116,7 @@ definition
 				}
 			}
 			CLUSTER[at0010] occurrences matches {0..1} matches {	-- Occurrence
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0011] occurrences matches {0..1} matches {	-- How long ago
 						value matches {
 							DV_DURATION matches {*}
@@ -125,7 +125,7 @@ definition
 				}
 			}
 			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Other parties
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Witness
 						value matches {
 							DV_TEXT matches {*}
@@ -144,7 +144,7 @@ definition
 				}
 			}
 			CLUSTER[at0008] occurrences matches {0..1} matches {	-- Preceding symptoms and events
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					allow_archetype CLUSTER[at0016] occurrences matches {0..*} matches {	-- Cluster: Preceding symptoms and events
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom\.v1|openEHR-EHR-CLUSTER\.health_event\.v1/}
@@ -152,7 +152,7 @@ definition
 				}
 			}
 			CLUSTER[at0012] occurrences matches {0..1} matches {	-- Associated symptoms and events
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {	-- Cluster: Preceding and associated symptoms and events
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.health_event\.v1|openEHR-EHR-CLUSTER\.symptom-pain\.v1|openEHR-EHR-CLUSTER\.symptom\.v1/}
@@ -160,7 +160,7 @@ definition
 				}
 			}
 			CLUSTER[at0013] occurrences matches {0..1} matches {	-- Contributing factors
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0014] occurrences matches {0..*} matches {	-- Contributing factor
 						value matches {
 							DV_TEXT matches {*}

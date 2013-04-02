@@ -33,9 +33,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Examination of thyroid
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_TEXT matches {*}
@@ -49,7 +49,7 @@ definition
 				}
 			}
 			CLUSTER[at0008.1] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0.10] occurrences matches {0..1} matches {	-- Visible abnormality
 						value matches {
 							DV_BOOLEAN matches {
@@ -63,7 +63,7 @@ definition
 						}
 					}
 					CLUSTER[at0.13] occurrences matches {0..1} matches {	-- Left lateral lobe
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.20] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
@@ -76,7 +76,7 @@ definition
 						}
 					}
 					CLUSTER[at0.14] occurrences matches {0..1} matches {	-- Right lateral lobe
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							use_node ELEMENT occurrences matches {0..1} /items[at0008.1]/items[at0.13]/items[at0.20]	-- /items[Findings]/items[Left lateral lobe]/items[Description]
 							allow_archetype CLUSTER[at0.18] occurrences matches {0..1} matches {	-- Right lateral lobe
 								include
@@ -85,7 +85,7 @@ definition
 						}
 					}
 					CLUSTER[at0.15] occurrences matches {0..1} matches {	-- Isthmus
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							use_node ELEMENT occurrences matches {0..1} /items[at0008.1]/items[at0.13]/items[at0.20]	-- /items[Findings]/items[Left lateral lobe]/items[Description]
 							allow_archetype CLUSTER[at0.15] occurrences matches {0..1} matches {	-- Isthmus
 								include

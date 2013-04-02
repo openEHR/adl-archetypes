@@ -49,9 +49,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Palpation of joint
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			CLUSTER[at0059] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0012] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_CODED_TEXT matches {
@@ -77,9 +77,9 @@ definition
 				}
 			}
 			CLUSTER[at0080] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					CLUSTER[at0019] occurrences matches {0..*} matches {	-- Tenderness
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0002] occurrences matches {0..1} matches {	-- Depth of palpation
 								value matches {
 									DV_CODED_TEXT matches {
@@ -137,7 +137,7 @@ definition
 						}
 					}
 					CLUSTER[at0070] occurrences matches {0..1} matches {	-- Guarding
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0071] occurrences matches {0..1} matches {	-- Degree
 								value matches {
 									DV_CODED_TEXT matches {
@@ -166,7 +166,7 @@ definition
 						}
 					}
 					CLUSTER[at0010] occurrences matches {0..*} matches {	-- Localised palpation
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0011] matches {	-- Body site
 								value matches {
 									DV_TEXT matches {*}
@@ -204,7 +204,7 @@ definition
 								}
 							}
 						}
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0067] occurrences matches {0..1} matches {	-- Site description
 								value matches {
 									DV_TEXT matches {*}
@@ -254,7 +254,7 @@ definition
 						}
 					}
 					CLUSTER[at0.85] occurrences matches {0..1} matches {	-- Effusion
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.86] occurrences matches {0..1} matches {	-- Present
 								value matches {
 									DV_BOOLEAN matches {
@@ -286,7 +286,7 @@ definition
 						}
 					}
 					CLUSTER[at0.95] occurrences matches {0..*} matches {	-- Specific Test
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.96] occurrences matches {0..1} matches {	-- Name of test
 								value matches {
 									DV_CODED_TEXT matches {
@@ -311,7 +311,7 @@ definition
 						}
 					}
 					CLUSTER[at0047] occurrences matches {0..1} matches {	-- Detail
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0084] occurrences matches {0..1} matches {	-- Cluster: Exam details
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam\.v1|openEHR-EHR-CLUSTER\.exam-mass\.v1/}

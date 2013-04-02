@@ -33,9 +33,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Examination of the uterus
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items  matches {
 					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_TEXT matches {*}
@@ -49,7 +49,7 @@ definition
 				}
 			}
 			CLUSTER[at0008.1] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {	-- Detail
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1/}
@@ -66,7 +66,7 @@ definition
 						}
 					}
 					CLUSTER[at0.1] occurrences matches {0..1} matches {	-- Size
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.2] occurrences matches {0..1} matches {	-- Fundal height
 								value matches {
 									C_DV_QUANTITY <
@@ -125,7 +125,7 @@ definition
 						}
 					}
 					CLUSTER[at0.18] occurrences matches {0..1} matches {	-- Fetus
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0.30] occurrences matches {0..*} matches {	-- Fetal detail
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-fetus\.v1/}

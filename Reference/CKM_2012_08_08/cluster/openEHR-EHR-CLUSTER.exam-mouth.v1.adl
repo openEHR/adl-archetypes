@@ -33,9 +33,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Examination of mouth
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_TEXT matches {*}
@@ -49,9 +49,9 @@ definition
 				}
 			}
 			CLUSTER[at0008.1] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					CLUSTER[at0.9] occurrences matches {0..1} matches {	-- Lips
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.10] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
@@ -64,7 +64,7 @@ definition
 						}
 					}
 					CLUSTER[at0.11] occurrences matches {0..1} matches {	-- Angle of mouth
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							use_node ELEMENT /items[at0008.1]/items[at0.9]/items[at0.10]	-- /items[Findings]/items[Lips]/items[Description]
 							allow_archetype CLUSTER[at0.41] occurrences matches {0..1} matches {	-- Angle of mouth detail
 								include
@@ -73,12 +73,12 @@ definition
 						}
 					}
 					CLUSTER[at0.17] occurrences matches {0..1} matches {	-- Hard palate
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							use_node ELEMENT /items[at0008.1]/items[at0.9]/items[at0.10]	-- /items[Findings]/items[Lips]/items[Description]
 						}
 					}
 					CLUSTER[at0.18] occurrences matches {0..1} matches {	-- Soft palate
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.26] occurrences matches {0..1} matches {	-- Flexible and mobile
 								value matches {
 									DV_BOOLEAN matches {
@@ -104,7 +104,7 @@ definition
 						}
 					}
 					CLUSTER[at0.21] occurrences matches {0..1} matches {	-- Uvula
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.22] occurrences matches {0..1} matches {	-- Deviation
 								value matches {
 									DV_CODED_TEXT matches {
@@ -121,7 +121,7 @@ definition
 						}
 					}
 					CLUSTER[at0.19] occurrences matches {0..1} matches {	-- Tonsillar fossa
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.27] occurrences matches {0..1} matches {	-- Tonsils Present
 								value matches {
 									DV_BOOLEAN matches {
@@ -142,12 +142,12 @@ definition
 						}
 					}
 					CLUSTER[at0.20] occurrences matches {0..1} matches {	-- Pharynx
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							use_node ELEMENT /items[at0008.1]/items[at0.9]/items[at0.10]	-- /items[Findings]/items[Lips]/items[Description]
 						}
 					}
 					CLUSTER[at0.14] occurrences matches {0..1} matches {	-- Tongue
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0.42] occurrences matches {0..1} matches {	-- Tongue detail
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.cranial_nerves\.v1|openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1/}

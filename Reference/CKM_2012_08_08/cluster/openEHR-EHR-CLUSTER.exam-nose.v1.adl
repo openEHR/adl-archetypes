@@ -33,9 +33,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Examination of nose
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0005.1] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_CODED_TEXT matches {
@@ -51,9 +51,9 @@ definition
 				}
 			}
 			CLUSTER[at0008.1] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					CLUSTER[at0.11] occurrences matches {0..1} matches {	-- External
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.10] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_CODED_TEXT matches {
@@ -66,7 +66,7 @@ definition
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-bone(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection-trauma(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 							CLUSTER[at0.34] occurrences matches {0..1} matches {	-- Nares
-								items cardinality matches {1..*; unordered} matches {
+								items matches {
 									ELEMENT[at0.35] occurrences matches {0..1} matches {	-- Nares patent?
 										value matches {
 											DV_BOOLEAN matches {
@@ -87,10 +87,10 @@ definition
 						}
 					}
 					CLUSTER[at0.12] occurrences matches {0..1} matches {	-- Internal
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							use_node ELEMENT occurrences matches {0..1} /items[at0008.1]/items[at0.11]/items[at0.10]	-- /items[Findings]/items[External]/items[Description]
 							CLUSTER[at0.14] occurrences matches {0..1} matches {	-- Nasal septum
-								items cardinality matches {1..*; unordered} matches {
+								items matches {
 									use_node ELEMENT occurrences matches {0..1} /items[at0008.1]/items[at0.11]/items[at0.10]	-- /items[Findings]/items[External]/items[Description]
 									ELEMENT[at0.16] occurrences matches {0..1} matches {	-- Septal haematoma
 										value matches {
@@ -106,7 +106,7 @@ definition
 								}
 							}
 							CLUSTER[at0.18] occurrences matches {0..1} matches {	-- Nasal mucosa
-								items cardinality matches {1..*; unordered} matches {
+								items matches {
 									use_node ELEMENT occurrences matches {0..1} /items[at0008.1]/items[at0.11]/items[at0.10]	-- /items[Findings]/items[External]/items[Description]
 									allow_archetype CLUSTER[at0.41] occurrences matches {0..1} matches {	-- Mucosal detail
 										include
@@ -115,7 +115,7 @@ definition
 								}
 							}
 							CLUSTER[at0.24] occurrences matches {0..1} matches {	-- Turbinates
-								items cardinality matches {1..*; unordered} matches {
+								items matches {
 									use_node ELEMENT occurrences matches {0..1} /items[at0008.1]/items[at0.11]/items[at0.10]	-- /items[Findings]/items[External]/items[Description]
 									allow_archetype CLUSTER[at0.42] occurrences matches {0..1} matches {	-- Turbinate detail
 										include
@@ -124,7 +124,7 @@ definition
 								}
 							}
 							CLUSTER[at0.27] occurrences matches {0..1} matches {	-- Discharge
-								items cardinality matches {1..*; unordered} matches {
+								items matches {
 									use_node ELEMENT occurrences matches {0..1} /items[at0008.1]/items[at0.11]/items[at0.10]	-- /items[Findings]/items[External]/items[Description]
 									allow_archetype CLUSTER[at0.43] occurrences matches {0..1} matches {	-- Discharge detail
 										include

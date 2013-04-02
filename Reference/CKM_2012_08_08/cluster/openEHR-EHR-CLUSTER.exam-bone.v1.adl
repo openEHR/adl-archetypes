@@ -33,7 +33,7 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Examination of bone
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			ELEMENT[at0.9] occurrences matches {0..1} matches {	-- Name of bone
 				value matches {
 					DV_CODED_TEXT matches {
@@ -42,7 +42,7 @@ definition
 				}
 			}
 			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_TEXT matches {*}
@@ -56,9 +56,9 @@ definition
 				}
 			}
 			CLUSTER[at0008] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					CLUSTER[at0.12] occurrences matches {0..*} matches {	-- Abnormal findings
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.14] occurrences matches {0..1} matches {	-- Location
 								value matches {
 									DV_TEXT matches {*}

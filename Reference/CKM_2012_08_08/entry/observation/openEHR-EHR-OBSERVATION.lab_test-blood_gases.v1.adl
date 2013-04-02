@@ -58,7 +58,7 @@ definition
 	OBSERVATION[at0000.1] matches {	-- Blood gas assessment
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[at0002] occurrences matches {0..*} matches {	-- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
@@ -258,7 +258,7 @@ definition
 						}
 						state matches {
 							ITEM_TREE[at0.91] matches {	-- Tree
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									allow_archetype CLUSTER[at0.92] occurrences matches {0..1} matches {	-- Ambient oxygen
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.ambient_oxygen(-[a-zA-Z0-9_]+)*\.v1/}
@@ -277,7 +277,7 @@ definition
 		}
 		protocol matches {
 			ITEM_TREE[at0004] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0062] occurrences matches {0..1} matches {	-- Requestor order identifier
 						value matches {
 							DV_TEXT matches {*}

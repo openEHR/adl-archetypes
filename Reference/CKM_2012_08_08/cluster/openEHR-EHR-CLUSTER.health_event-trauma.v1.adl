@@ -29,21 +29,21 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Trauma event
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			ELEMENT[at0001] matches {	-- Trauma
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
 			CLUSTER[at0015] occurrences matches {0..1} matches {	-- Trauma details
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Clinical description
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
 					CLUSTER[at0010] occurrences matches {0..1} matches {	-- Occurrence
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0011] occurrences matches {0..1} matches {	-- How long ago
 								value matches {
 									DV_DURATION matches {*}
@@ -57,7 +57,7 @@ definition
 						}
 					}
 					CLUSTER[at0004] occurrences matches {0..1} matches {	-- Other parties
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0002] occurrences matches {0..1} matches {	-- Witness
 								value matches {
 									DV_TEXT matches {*}
@@ -76,7 +76,7 @@ definition
 						}
 					}
 					CLUSTER[at0.20] occurrences matches {0..1} matches {	-- Location of trauma
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							allow_archetype ELEMENT[at0.21] occurrences matches {0..*} matches {	-- Element: Location of trauma
 								include
 									archetype_id/value matches {/openEHR-EHR-ELEMENT\.body_location(-[a-zA-Z0-9_]+)*\.v1/}
@@ -84,7 +84,7 @@ definition
 						}
 					}
 					CLUSTER[at0.17] occurrences matches {0..1} matches {	-- Mechanism of trauma
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.18] occurrences matches {0..1} matches {	-- Mechanism details
 								value matches {
 									DV_TEXT matches {*}
@@ -100,7 +100,7 @@ definition
 						}
 					}
 					CLUSTER[at0008] occurrences matches {0..1} matches {	-- Preceding symptoms and events
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0016] occurrences matches {0..*} matches {	-- Cluster: Preceding symptoms and events
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom\.v1|openEHR-EHR-CLUSTER\.health_event\.v1/}
@@ -108,7 +108,7 @@ definition
 						}
 					}
 					CLUSTER[at0012] occurrences matches {0..1} matches {	-- Associated symptoms and events
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {	-- Cluster: Preceding and associated symptoms and events
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.health_event\.v1|openEHR-EHR-CLUSTER\.symptom-pain\.v1|openEHR-EHR-CLUSTER\.symptom\.v1/}
@@ -116,7 +116,7 @@ definition
 						}
 					}
 					CLUSTER[at0013] occurrences matches {0..1} matches {	-- Contributing factors
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0014] occurrences matches {0..*} matches {	-- Contributing factor
 								value matches {
 									DV_TEXT matches {*}

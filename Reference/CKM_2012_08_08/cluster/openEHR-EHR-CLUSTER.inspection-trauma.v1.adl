@@ -32,9 +32,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Inspection of blunt traumatic injury
-		items cardinality matches {0..*; unordered} matches {
+		items matches {
 			CLUSTER[at0001] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0002] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_TEXT matches {*}
@@ -47,10 +47,10 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			CLUSTER[at0006] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {0..*; unordered} matches {
+			CLUSTER[at0006.1] occurrences matches {0..1} matches {	-- Findings
+				items matches {
 					CLUSTER[at0005] occurrences matches {0..1} matches {	-- Location
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0022] occurrences matches {0..*} matches {	-- Description
 								value matches {
 									DV_CODED_TEXT matches {
@@ -78,7 +78,7 @@ definition
 						}
 					}
 					CLUSTER[at0018] occurrences matches {0..1} matches {	-- Shape or distribution
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0019] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
@@ -109,7 +109,7 @@ definition
 						}
 					}
 					CLUSTER[at0028] occurrences matches {0..1} matches {	-- Edge
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0033] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
@@ -137,7 +137,7 @@ definition
 						}
 					}
 					CLUSTER[at0049] occurrences matches {0..1} matches {	-- Detail
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0052] occurrences matches {0..1} matches {
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam\.v1/}
@@ -209,7 +209,7 @@ ontology
 					text = <"Location">
 					description = <"The location of any findings">
 				>
-				["at0006"] = <
+				["at0006.1"] = <
 					text = <"Findings">
 					description = <"Specific findings on inspection">
 				>

@@ -33,14 +33,14 @@ description
 
 definition
 	CLUSTER[at0000.1.1] matches {	-- Examination of lymph nodes
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			ELEMENT[at0.9.1] matches {	-- Lymph node group
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
 			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_TEXT matches {*}
@@ -54,16 +54,16 @@ definition
 				}
 			}
 			CLUSTER[at0008.0.1] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0.0.15] occurrences matches {0..1} matches {	-- Description
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
 					CLUSTER[at0.0.14] occurrences matches {0..1} matches {	-- Individual nodes
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							CLUSTER[at0.0.12] occurrences matches {0..1} matches {	-- Node
-								items cardinality matches {1..*; unordered} matches {
+								items matches {
 									ELEMENT[at0.0.11] occurrences matches {0..1} matches {	-- Node name
 										value matches {
 											DV_TEXT matches {*}

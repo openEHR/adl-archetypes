@@ -32,9 +32,9 @@ description
 
 definition
 	CLUSTER[at0000.1.1] matches {	-- Inspection of open wound
-		items cardinality matches {0..*; unordered} matches {
+		items matches {
 			CLUSTER[at0001] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0002] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_TEXT matches {*}
@@ -48,7 +48,7 @@ definition
 				}
 			}
 			CLUSTER[at0006] occurrences matches {0..*} matches {	-- Findings
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0.0.70] occurrences matches {0..1} matches {	-- Type
 						value matches {
 							DV_CODED_TEXT matches {
@@ -65,7 +65,7 @@ definition
 						}
 					}
 					CLUSTER[at0005] occurrences matches {0..1} matches {	-- Location
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0022] occurrences matches {0..*} matches {	-- Description
 								value matches {
 									DV_CODED_TEXT matches {
@@ -76,7 +76,7 @@ definition
 						}
 					}
 					CLUSTER[at0.0.79] occurrences matches {0..1} matches {	-- Extent
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.0.80] occurrences matches {0..1} matches {	-- Starting point
 								value matches {
 									DV_TEXT matches {*}
@@ -100,14 +100,14 @@ definition
 						}
 					}
 					CLUSTER[at0.0.83] occurrences matches {0..1} matches {	-- Depth
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.0.84] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
 								}
 							}
 							CLUSTER[at0.0.85] occurrences matches {0..1} matches {	-- Tissue involvement
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									ELEMENT[at0.0.86] occurrences matches {0..1} matches {	-- Ligament
 										value matches {
 											DV_BOOLEAN matches {
@@ -155,7 +155,7 @@ definition
 						}
 					}
 					CLUSTER[at0018] occurrences matches {0..1} matches {	-- Shape or distribution
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0019] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
@@ -182,7 +182,7 @@ definition
 						}
 					}
 					CLUSTER[at0.0.65] occurrences matches {0..1} matches {	-- Signs of infection
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0.0.130] occurrences matches {0..1} matches {
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.signs_of_infection\.v1/}
@@ -192,7 +192,7 @@ definition
 						}
 					}
 					CLUSTER[at0.0.61] occurrences matches {0..1} matches {	-- Size
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0.0.131] occurrences matches {0..1} matches {
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.size\.v1|openEHR-EHR-CLUSTER\.dimensions\.v1|openEHR-EHR-CLUSTER\.dimensions-circumference\.v1/}
@@ -205,7 +205,7 @@ definition
 						}
 					}
 					CLUSTER[at0.0.92] occurrences matches {0..1} matches {	-- Wound bed
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0027] occurrences matches {0..1} matches {	-- Surface
 								value matches {
 									DV_TEXT matches {*}
@@ -270,7 +270,7 @@ definition
 						}
 					}
 					CLUSTER[at0.0.107] occurrences matches {0..1} matches {	-- Surrounds
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.0.108] occurrences matches {0..1} matches {	-- Normal/Healthy
 								value matches {
 									DV_BOOLEAN matches {
@@ -284,7 +284,7 @@ definition
 								}
 							}
 							CLUSTER[at0.0.109] occurrences matches {0..1} matches {	-- Induration
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									ELEMENT[at0.0.110] occurrences matches {0..1} matches {	-- Present
 										value matches {
 											DV_BOOLEAN matches {
@@ -323,7 +323,7 @@ definition
 								}
 							}
 							CLUSTER[at0.0.115] occurrences matches {0..1} matches {	-- Blisters
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									use_node ELEMENT /items[at0006]/items[at0.0.107]/items[at0.0.109]/items[at0.0.110]	-- /items[Findings]/items[Surrounds]/items[Induration]/items[Present]
 									use_node ELEMENT /items[at0006]/items[at0.0.107]/items[at0.0.109]/items[at0.0.111]	-- /items[Findings]/items[Surrounds]/items[Induration]/items[Description]
 								}
@@ -396,7 +396,7 @@ definition
 						}
 					}
 					CLUSTER[at0.0.66] occurrences matches {0..1} matches {	-- Foreign body
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.0.67] occurrences matches {0..1} matches {	-- Present
 								value matches {
 									DV_BOOLEAN matches {
@@ -412,7 +412,7 @@ definition
 						}
 					}
 					CLUSTER[at0.0.125] occurrences matches {0..1} matches {	-- Discharge
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0.0.132] occurrences matches {0..1} matches {
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid\.v1/}
@@ -422,7 +422,7 @@ definition
 						}
 					}
 					CLUSTER[at0028] occurrences matches {0..1} matches {	-- Edge
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0033] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
@@ -462,7 +462,7 @@ definition
 						}
 					}
 					CLUSTER[at0049] occurrences matches {0..1} matches {	-- Detail
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0052] occurrences matches {0..1} matches {
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam\.v1/}

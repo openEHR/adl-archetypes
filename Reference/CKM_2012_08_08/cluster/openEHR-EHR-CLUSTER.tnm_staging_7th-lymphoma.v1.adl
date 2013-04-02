@@ -33,7 +33,7 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Tumour - TNM staging Lymphoma  7th Edition
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Primary tumour (T)
 				value matches {
 					DV_TEXT matches {*}
@@ -74,7 +74,7 @@ definition
 				}
 			}
 			CLUSTER[at0052] occurrences matches {0..1} matches {	-- Descriptors
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0053] occurrences matches {0..*} matches {	-- Descriptor
 						value matches {
 							DV_TEXT matches {*}

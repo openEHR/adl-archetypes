@@ -30,9 +30,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Examination of the ears
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			CLUSTER[at0004] matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0005.1] occurrences matches {0..1} matches {	-- Normal statement
 						value matches {
 							DV_CODED_TEXT matches {
@@ -53,7 +53,7 @@ definition
 				}
 			}
 			CLUSTER[at0.66] occurrences matches {0..2} matches {	-- Lateral Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0.16] occurrences matches {0..1} matches {	-- Side
 						value matches {
 							DV_CODED_TEXT matches {
@@ -66,7 +66,7 @@ definition
 						}
 					}
 					CLUSTER[at0.57] occurrences matches {0..1} matches {	-- Physical
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0.76] occurrences matches {0..1} matches {	-- External ear detail
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation-external_ear(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection-external_ear(-[a-zA-Z0-9_]+)*\.v1/}
@@ -82,7 +82,7 @@ definition
 						}
 					}
 					CLUSTER[at0.56] occurrences matches {0..1} matches {	-- Functional
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.24] occurrences matches {0..1} matches {	-- Whisper test
 								value matches {
 									DV_TEXT matches {*}
@@ -116,9 +116,9 @@ definition
 				}
 			}
 			CLUSTER[at0008.1] occurrences matches {0..1} matches {	-- Central findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					CLUSTER[at0.67] occurrences matches {0..1} matches {	-- Functional
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.71] occurrences matches {0..1} matches {	-- Weber Test
 								value matches {
 									0|[local::at0.72], 	-- Normal

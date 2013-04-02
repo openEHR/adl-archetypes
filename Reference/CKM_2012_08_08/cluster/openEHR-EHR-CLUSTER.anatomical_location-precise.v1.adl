@@ -34,9 +34,9 @@ DICOM Standards Committee, Working Groups 26, Pathology.">
 
 definition
 	CLUSTER[at0000.1] matches {	-- Precise anatomical location of an object
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			CLUSTER[at0005] occurrences matches {0..1} matches {	-- Specific location
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0001] occurrences matches {0..1} matches {	-- Name of location
 						value matches {
 							DV_TEXT matches {*}
@@ -97,7 +97,7 @@ definition
 				}
 			}
 			CLUSTER[at0020] occurrences matches {0..*} matches {	-- Relative location
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0021] occurrences matches {0..1} matches {	-- Identified landmark
 						value matches {
 							DV_TEXT matches {*}
@@ -148,7 +148,7 @@ definition
 				}
 			}
 			CLUSTER[at0.51] occurrences matches {0..1} matches {	-- Coordinates
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0.52] occurrences matches {0..1} matches {	-- Position frame of reference
 						value matches {
 							DV_TEXT matches {*}

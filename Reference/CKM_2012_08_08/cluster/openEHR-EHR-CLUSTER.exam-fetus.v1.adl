@@ -33,9 +33,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Examination of the fetus
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_TEXT matches {*}
@@ -49,7 +49,7 @@ definition
 				}
 			}
 			CLUSTER[at0008.1] occurrences matches {0..1} matches {	-- Abdominal Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0.4] occurrences matches {0..1} matches {	-- Lie of the fetus
 						value matches {
 							DV_CODED_TEXT matches {
@@ -125,7 +125,7 @@ definition
 						}
 					}
 					CLUSTER[at0.74] occurrences matches {0..1} matches {	-- Engagement
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.22] occurrences matches {0..1} matches {	-- Fifths
 								value matches {
 									DV_CODED_TEXT matches {
@@ -212,7 +212,7 @@ definition
 				}
 			}
 			CLUSTER[at0.80] occurrences matches {0..1} matches {	-- Vaginal findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0.84] occurrences matches {0..1} matches {	-- Flexion
 						value matches {
 							DV_CODED_TEXT matches {

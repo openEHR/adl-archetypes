@@ -30,9 +30,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Movement of a joint
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			CLUSTER[at0001] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0002] occurrences matches {1..*} matches {	-- Normal statement
 						value matches {
 							DV_TEXT matches {*}
@@ -46,16 +46,16 @@ definition
 				}
 			}
 			CLUSTER[at0036] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					CLUSTER[at0037] occurrences matches {0..1} matches {	-- General movement
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							use_node ELEMENT /items[at0036]/items[at0004]/items[at0007]	-- /items[Findings]/items[Specific movement]/items[Description]
 							use_node ELEMENT /items[at0036]/items[at0004]/items[at0006]	-- /items[Findings]/items[Specific movement]/items[Relative range of movement]
 							use_node ELEMENT /items[at0036]/items[at0004]/items[at0019]	-- /items[Findings]/items[Specific movement]/items[Associated pain]
 						}
 					}
 					CLUSTER[at0004] occurrences matches {0..*} matches {	-- Specific movement
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0011] occurrences matches {0..1} matches {	-- Type of movement
 								value matches {
 									DV_CODED_TEXT matches {
@@ -131,9 +131,9 @@ definition
 						}
 					}
 					CLUSTER[at0.14] occurrences matches {0..1} matches {	-- Abnormal movement
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							CLUSTER[at0.16] occurrences matches {0..*} matches {	-- Ligament testing
-								items cardinality matches {1..*; unordered} matches {
+								items matches {
 									ELEMENT[at0.15] occurrences matches {0..1} matches {	-- Name
 										value matches {
 											DV_TEXT matches {*}

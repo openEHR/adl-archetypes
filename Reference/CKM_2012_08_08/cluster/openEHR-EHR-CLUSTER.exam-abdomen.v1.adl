@@ -33,9 +33,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Examination of the abdomen
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_TEXT matches {*}
@@ -49,9 +49,9 @@ definition
 				}
 			}
 			CLUSTER[at0008] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					CLUSTER[at0.2] occurrences matches {0..1} matches {	-- Abdominal wall
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.3] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
@@ -64,7 +64,7 @@ definition
 						}
 					}
 					CLUSTER[at0.9] occurrences matches {0..1} matches {	-- Abdominal region
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.10] occurrences matches {0..1} matches {	-- Region
 								value matches {
 									DV_CODED_TEXT matches {
@@ -90,12 +90,12 @@ definition
 						}
 					}
 					CLUSTER[at0.5] occurrences matches {0..1} matches {	-- Abdominal contents
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							use_node ELEMENT occurrences matches {0..1} /items[at0008]/items[at0.2]/items[at0.3]	-- /items[Findings]/items[Abdominal wall]/items[Description]
 							CLUSTER[at0.13] occurrences matches {0..1} matches {	-- Organs
-								items cardinality matches {1..*; unordered} matches {
+								items matches {
 									CLUSTER[at0.14] occurrences matches {0..1} matches {	-- Liver
-										items cardinality matches {1..*; unordered} matches {
+										items matches {
 											use_node ELEMENT /items[at0008]/items[at0.2]/items[at0.3]	-- /items[Findings]/items[Abdominal wall]/items[Description]
 											allow_archetype CLUSTER[at0.27] occurrences matches {0..1} matches {	-- Liver detail
 												include
@@ -104,7 +104,7 @@ definition
 										}
 									}
 									CLUSTER[at0.7] occurrences matches {0..1} matches {	-- Spleen
-										items cardinality matches {1..*; unordered} matches {
+										items matches {
 											use_node ELEMENT /items[at0008]/items[at0.2]/items[at0.3]	-- /items[Findings]/items[Abdominal wall]/items[Description]
 											allow_archetype CLUSTER[at0.28] occurrences matches {0..1} matches {	-- Spleen detail
 												include
@@ -113,7 +113,7 @@ definition
 										}
 									}
 									CLUSTER[at0.8] occurrences matches {0..1} matches {	-- Kidney
-										items cardinality matches {1..*; unordered} matches {
+										items matches {
 											use_node ELEMENT /items[at0008]/items[at0.2]/items[at0.3]	-- /items[Findings]/items[Abdominal wall]/items[Description]
 											allow_archetype CLUSTER[at0.29] occurrences matches {0..1} matches {	-- Kidney detail
 												include
@@ -122,7 +122,7 @@ definition
 										}
 									}
 									CLUSTER[at0.15] occurrences matches {0..1} matches {	-- Bowel
-										items cardinality matches {1..*; unordered} matches {
+										items matches {
 											use_node ELEMENT /items[at0008]/items[at0.2]/items[at0.3]	-- /items[Findings]/items[Abdominal wall]/items[Description]
 											allow_archetype CLUSTER[at0.30] occurrences matches {0..1} matches {	-- Bowel detail
 												include

@@ -49,9 +49,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Examination of the cervix
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_TEXT matches {*}
@@ -65,7 +65,7 @@ definition
 				}
 			}
 			CLUSTER[at0008.1] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0.8] occurrences matches {0..1} matches {	-- Position
 						value matches {
 							DV_CODED_TEXT matches {
@@ -100,7 +100,7 @@ definition
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					CLUSTER[at0.48] occurrences matches {0..1} matches {	-- Labour-specific findings
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.14] occurrences matches {0..1} matches {	-- Effacement
 								value matches {
 									0|[local::at0.15], 	-- Uneffaced
@@ -142,7 +142,7 @@ definition
 								}
 							}
 							CLUSTER[at0.27] occurrences matches {0..2} matches {	-- Cervical os
-								items cardinality matches {1..*; unordered} matches {
+								items matches {
 									ELEMENT[at0.32] occurrences matches {0..1} matches {	-- Site
 										value matches {
 											DV_CODED_TEXT matches {
@@ -155,7 +155,7 @@ definition
 										}
 									}
 									CLUSTER[at0.31] occurrences matches {0..1} matches {	-- Dilation
-										items cardinality matches {1..*; unordered} matches {
+										items matches {
 											ELEMENT[at0.28] occurrences matches {0..1} matches {	-- Estimate
 												value matches {
 													C_DV_QUANTITY <

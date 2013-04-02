@@ -33,9 +33,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Examination of the chest
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_TEXT matches {*}
@@ -49,7 +49,7 @@ definition
 				}
 			}
 			CLUSTER[at0008] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0.4] occurrences matches {0..1} matches {	-- Trachea
 						value matches {
 							DV_CODED_TEXT matches {
@@ -63,7 +63,7 @@ definition
 						}
 					}
 					CLUSTER[at0.35] occurrences matches {0..1} matches {	-- Apex beat
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.31] occurrences matches {0..1} matches {	-- Visible
 								value matches {
 									DV_BOOLEAN matches {
@@ -72,7 +72,7 @@ definition
 								}
 							}
 							CLUSTER[at0.32] occurrences matches {0..1} matches {	-- Palpation
-								items cardinality matches {1..*; unordered} matches {
+								items matches {
 									ELEMENT[at0.33] occurrences matches {0..1} matches {	-- Palpable
 										value matches {
 											DV_BOOLEAN matches {
@@ -90,7 +90,7 @@ definition
 						}
 					}
 					CLUSTER[at0.8] occurrences matches {0..1} matches {	-- Breathing
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.19] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
@@ -116,7 +116,7 @@ definition
 								}
 							}
 							CLUSTER[at0.17] occurrences matches {0..1} matches {	-- Signs of increased effort
-								items cardinality matches {1..*; unordered} matches {
+								items matches {
 									ELEMENT[at0.18] occurrences matches {0..*} matches {	-- Sign
 										value matches {
 											DV_CODED_TEXT matches {
@@ -144,7 +144,7 @@ definition
 						}
 					}
 					CLUSTER[at0.1] occurrences matches {0..1} matches {	-- Chest wall
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.2] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
@@ -162,7 +162,7 @@ definition
 						}
 					}
 					CLUSTER[at0.27] occurrences matches {0..1} matches {	-- Lymph nodes
-						items cardinality matches {1..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0.38] occurrences matches {0..*} matches {	-- Lymph node detail
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic-lymphnode(-[a-zA-Z0-9_]+)*\.v1/}

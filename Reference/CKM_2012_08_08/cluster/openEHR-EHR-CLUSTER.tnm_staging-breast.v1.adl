@@ -39,9 +39,9 @@ Greene FL, Page DL, Fleming ID. et al, eds, for the American Joint Committee on 
 
 definition
 	CLUSTER[at0000.1] matches {	-- TNM staging - Breast (Sixth edition)
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			CLUSTER[at0002] occurrences matches {0..1} matches {	-- Clinical (cTNM)
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Primary tumour (T)
 						value matches {
 							DV_CODED_TEXT matches {
@@ -145,7 +145,7 @@ definition
 				}
 			}
 			CLUSTER[at0006] occurrences matches {0..1} matches {	-- Pathological (pTNM)
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Primary tumour (pT)
 						value matches {
 							DV_CODED_TEXT matches {

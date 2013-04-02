@@ -33,14 +33,14 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Examination of a named body part
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			ELEMENT[at0.9] matches {	-- Name of object
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
 			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_TEXT matches {*}
@@ -54,7 +54,7 @@ definition
 				}
 			}
 			CLUSTER[at0008] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {1..*; unordered} matches {
+				items matches {
 					allow_archetype CLUSTER[at0.11] occurrences matches {0..1} matches {	-- Size
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
