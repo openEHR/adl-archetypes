@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-  cimi-RM-ENTRY.R4C_OxygenSaturation.v1
+  cimi-RM-ENTRY.OxygenSaturation.v1
 
 language
   original_language = <[ISO_639-1::en]>
@@ -12,105 +12,65 @@ description
 definition
   ENTRY[at0000] matches { -- OxygenSaturation
     data matches {
-        ELEMENT[at0001] matches { -- Method
+        ELEMENT[at0001] occurrences matches {1..1} matches { -- Method
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0002", -- Continues
-                "at0003", -- OneOff
-                "at0004" -- Overnight
-              }
-            }
+            [local::
+            at0002, -- Continues
+            at0003, -- OneOff
+            at0004] -- Overnight
           }
         }
-        ELEMENT[at0005] matches { -- PatientStatus
+        ELEMENT[at0005] occurrences matches {1..1} matches { -- PatientStatus
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0006", -- AtRest
-                "at0007", -- DuringExercise
-                "at0008", -- AfterExercise
-                "at0009" -- PatientIsRestless
-              }
-            }
+            [local::
+            at0006, -- AtRest
+            at0007, -- DuringExercise
+            at0008, -- AfterExercise
+            at0009] -- PatientIsRestless
           }
         }
-        ELEMENT[at0010] matches { -- MeasurementPlacement
+        ELEMENT[at0010] occurrences matches {1..1} matches { -- MeasurementPlacement
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0011", -- Finger
-                "at0012", -- Earlobe
-                "at0013", -- Nostril
-                "at0014", -- Lip
-                "at0015" -- BigToe
-              }
-            }
+            [local::
+            at0011, -- Finger
+            at0012, -- Earlobe
+            at0013, -- Nostril
+            at0014, -- Lip
+            at0015] -- BigToe
           }
         }
-        ELEMENT[at0016] matches { -- Instrument
+        ELEMENT[at0016] occurrences matches {1..1} matches { -- Instrument
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0017", -- ClipPulseOximeter
-                "at0018" -- DisposibleAdhesiveOximete
-              }
-            }
+            [local::
+            at0017, -- ClipPulseOximeter
+            at0018] -- DisposibleAdhesiveOximete
           }
         }
-        ELEMENT[at0019] matches { -- InstrumentTemperature
+        ELEMENT[at0019] occurrences matches {1..1} matches { -- InstrumentTemperature
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0020", -- Low
-                "at0021", -- RoomTemperature
-                "at0022" -- Hot
-              }
-            }
+            [local::
+            at0020, -- Low
+            at0021, -- RoomTemperature
+            at0022] -- Hot
           }
         }
         CLUSTER[at0023] matches { -- SupportWithOxygen
-          items matches {
-            ELEMENT[at0024] matches { -- PercentageO2
+          item matches {
+            ELEMENT[at0024] occurrences matches {1..1} matches { -- PercentageO2
               value matches {
                 QUANTITY matches {
                   units matches {*}
                 }
               }
             }
-            ELEMENT[at0025] matches { -- OxygenFlowrate
+            ELEMENT[at0025] occurrences matches {1..1} matches { -- OxygenFlowrate
               value matches {
                 QUANTITY matches {
                   units matches {*}
                 }
               }
             }
-            ELEMENT[at0026] matches { -- FiO2
+            ELEMENT[at0026] occurrences matches {1..1} matches { -- FiO2
               value matches {
                 QUANTITY matches {
                   units matches {*}
@@ -119,45 +79,29 @@ definition
             }
           }
         }
-        ELEMENT[at0027] matches { -- AmbientLight
+        ELEMENT[at0027] occurrences matches {1..1} matches { -- AmbientLight
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0028", -- Dark
-                "at0029", -- Daylight
-                "at0030", -- DimLight
-                "at0031" -- StrongLight
-              }
-            }
+            [local::
+            at0028, -- Dark
+            at0029, -- Daylight
+            at0030, -- DimLight
+            at0031] -- StrongLight
           }
         }
-        ELEMENT[at0032] matches { -- AmbientTempreture
+        ELEMENT[at0032] occurrences matches {1..1} matches { -- AmbientTempreture
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0033", -- Low
-                "at0034", -- RoomTemperature
-                "at0035" -- Hot
-              }
-            }
+            [local::
+            at0033, -- Low
+            at0034, -- RoomTemperature
+            at0035] -- Hot
           }
         }
-        ELEMENT[at0036] matches { -- OxygenSaturation
+        ELEMENT[at0036] occurrences matches {1..1} matches { -- OxygenSaturation
           value matches {
             QUANTITY matches {
               units matches {
                 CODED_TEXT matches {
-                  code_string matches {"%"}
+                  code matches {"%"}
                 }
               }
             }

@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-  cimi-RM-ENTRY.R4C_Bloodpressure.v1
+  cimi-RM-ENTRY.Bloodpressure.v1
 
 language
   original_language = <[ISO_639-1::en]>
@@ -14,22 +14,14 @@ definition
     data matches {
         ELEMENT[at0001] occurrences matches {0..1} matches { -- Manchet
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0002", -- Standaard
-                "at0003", -- Groot
-                "at0004", -- Klein
-                "at0005", -- VoorDijbeen
-                "at0006", -- VoorKinderen
-                "at0007", -- VoorJongKind
-                "at0008" -- Neonataal
-              }
-            }
+            [local::
+            at0002, -- Standaard
+            at0003, -- Groot
+            at0004, -- Klein
+            at0005, -- VoorDijbeen
+            at0006, -- VoorKinderen
+            at0007, -- VoorJongKind
+            at0008] -- Neonataal
           }
         }
         ELEMENT[at0009] occurrences matches {1} matches { -- Bovendruk
@@ -48,39 +40,23 @@ definition
         }
         ELEMENT[at0011] occurrences matches {0..1} matches { -- Meetmethode
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0012", -- Niet-invasief
-                "at0013" -- Invasief
-              }
-            }
+            [local::
+            at0012, -- Niet-invasief
+            at0013] -- Invasief
           }
         }
         ELEMENT[at0014] occurrences matches {0..1} matches { -- Meetlocatie
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0015", -- Rechterbovenarm
-                "at0016", -- Linkerbovenarm
-                "at0017", -- Rechterdij
-                "at0018", -- Linkerdij
-                "at0019", -- Rechterpols
-                "at0020", -- Linkerpols
-                "at0021", -- Vinger
-                "at0022", -- Rechterenkel
-                "at0023" -- Linkerenkel
-              }
-            }
+            [local::
+            at0015, -- Rechterbovenarm
+            at0016, -- Linkerbovenarm
+            at0017, -- Rechterdij
+            at0018, -- Linkerdij
+            at0019, -- Rechterpols
+            at0020, -- Linkerpols
+            at0021, -- Vinger
+            at0022, -- Rechterenkel
+            at0023] -- Linkerenkel
           }
         }
         ELEMENT[at0024] occurrences matches {0..1} matches { -- Polsdruk
@@ -92,53 +68,29 @@ definition
         }
         ELEMENT[at0025] occurrences matches {0..1} matches { -- Meetapparaat
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0026", -- Kwik
-                "at0027", -- Aneroide
-                "at0028", -- Hybride
-                "at0029" -- Anders
-              }
-            }
+            [local::
+            at0026, -- Kwik
+            at0027, -- Aneroide
+            at0028, -- Hybride
+            at0029] -- Anders
           }
         }
         ELEMENT[at0030] occurrences matches {0..1} matches { -- Body Position
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0031", -- Staand
-                "at0032", -- Liggend
-                "at0033", -- Zittend
-                "at0034", -- Achteroverleunend
-                "at0035", -- LateraalLiggend
-                "at0036" -- Trendelenburg
-              }
-            }
+            [local::
+            at0031, -- Staand
+            at0032, -- Liggend
+            at0033, -- Zittend
+            at0034, -- Achteroverleunend
+            at0035, -- LateraalLiggend
+            at0036] -- Trendelenburg
           }
         }
         ELEMENT[at0037] occurrences matches {0..1} matches { -- Origins
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0038", -- human origin
-                "at0039" -- ...
-              }
-            }
+            [local::
+            at0038, -- human origin
+            at0039] -- ...
           }
         }
         ELEMENT[at0040] occurrences matches {1} matches { -- Onderdruk
@@ -150,17 +102,9 @@ definition
         }
         ELEMENT[at0041] occurrences matches {0..1} matches { -- KorotkovGeluid
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0042", -- FaseIV
-                "at0043" -- FaseV
-              }
-            }
+            [local::
+            at0042, -- FaseIV
+            at0043] -- FaseV
           }
         }
     }

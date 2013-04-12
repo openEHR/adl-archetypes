@@ -21,50 +21,26 @@ definition
         }
         ELEMENT[at0002] occurrences matches {0..1} matches { -- BodyHeightValueOrigin
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0003", -- Estimated
-                "at0004", -- Measured
-                "at0005" -- Stated
-              }
-            }
+            [local::
+            at0003, -- Estimated
+            at0004, -- Measured
+            at0005] -- Stated
           }
         }
         ELEMENT[at0006] occurrences matches {0..1} matches { -- MeasuringDevice
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0007", -- Other
-                "at0008", -- Ruler
-                "at0009", -- Stadiometer
-                "at0010" -- TapeMeasurer
-              }
-            }
+            [local::
+            at0007, -- Other
+            at0008, -- Ruler
+            at0009, -- Stadiometer
+            at0010] -- TapeMeasurer
           }
         }
         ELEMENT[at0011] occurrences matches {0..1} matches { -- BodyPosition
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0012", -- Suspine
-                "at0013" -- Standing
-              }
-            }
+            [local::
+            at0012, -- Suspine
+            at0013] -- Standing
           }
         }
         ELEMENT[at0014] occurrences matches {0..*} matches { -- Confounding
@@ -84,6 +60,9 @@ ontology
           description = <"The length (or height) of the patien'ts body as measured from the soles of the feet to the top of the head, measured the patient is standing if possible.
 In general, length measurements are recommended for children under 2 years of age and individuals who cannot stand.
 Is also used to determine BMI. The BMI itself is not included, every system can make its own calculations based on body height and body weight. Lenght will often be expressed as a percentile. That is also not included in this DCM. 
+
+<font color=\"#408080\"><i>
+</i></font>--DCM::Language=nl
 
 De lichaamslengte wordt gemeten van hoofdkruin tot voetzool en is gebaseerd op de lengte staand of liggend gemeten. In het algemeen wordt de lengte staand gemeten. De lengte wordt liggend gemeten bij kinderen onder de 2 jaar of bij personen die niet kunnen staan. 
 

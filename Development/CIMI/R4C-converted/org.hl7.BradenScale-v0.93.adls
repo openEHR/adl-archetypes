@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-  cimi-RM-ENTRY.R4C_BradenScale.v1
+  cimi-RM-ENTRY.BradenScale.v1
 
 language
   original_language = <[ISO_639-1::en]>
@@ -12,41 +12,58 @@ description
 definition
   ENTRY[at0000] matches { -- BradenScale
     data matches {
-        ELEMENT[at0001] matches { -- TotalScore
+        ELEMENT[at0001] occurrences matches {1..1} matches { -- TotalScore
           value matches {
             COUNT matches {*}
           }
         }
         CLUSTER[at0002] matches { -- Items
-          items matches {
-            ELEMENT[at0003] matches { -- Activity
+          item matches {
+            ELEMENT[at0003] occurrences matches {1..1} matches { -- Activity
               value matches {
-                ORDINAL matches {*}
+                1|[local::at0004], -- Bedfast
+                2|[local::at0005], -- Chairfast
+                3|[local::at0006], -- Walks occasionally
+                4|[local::at0007] -- Walks frequently
               }
             }
-            ELEMENT[at0004] matches { -- Moisture
+            ELEMENT[at0008] occurrences matches {1..1} matches { -- Moisture
               value matches {
-                ORDINAL matches {*}
+                1|[local::at0009], -- Constantly moist
+                2|[local::at0010], -- Very moist
+                3|[local::at0011], -- Occasionally moist
+                4|[local::at0012] -- Rarely moist
               }
             }
-            ELEMENT[at0005] matches { -- FrictionAndSheer
+            ELEMENT[at0013] occurrences matches {1..1} matches { -- FrictionAndSheer
               value matches {
-                ORDINAL matches {*}
+                1|[local::at0014], -- Problem
+                2|[local::at0015], -- Potential problem
+                3|[local::at0016] -- No apparent problem
               }
             }
-            ELEMENT[at0006] matches { -- SensoryPerception
+            ELEMENT[at0017] occurrences matches {1..1} matches { -- SensoryPerception
               value matches {
-                ORDINAL matches {*}
+                1|[local::at0018], -- Completely limited
+                2|[local::at0019], -- Very limited
+                3|[local::at0020], -- Slightly limited
+                4|[local::at0021] -- No impairment
               }
             }
-            ELEMENT[at0007] matches { -- Mobility
+            ELEMENT[at0022] occurrences matches {1..1} matches { -- Mobility
               value matches {
-                ORDINAL matches {*}
+                1|[local::at0023], -- Completely immobile
+                2|[local::at0024], -- Very limited
+                3|[local::at0025], -- Slightly limited
+                4|[local::at0026] -- No limitation
               }
             }
-            ELEMENT[at0008] matches { -- Nutrition
+            ELEMENT[at0027] occurrences matches {1..1} matches { -- Nutrition
               value matches {
-                ORDINAL matches {*}
+                1|[local::at0028], -- Very poor
+                2|[local::at0029], -- Probably inadequate
+                3|[local::at0030], -- Adequate
+                4|[local::at0031] -- Excellent
               }
             }
           }
@@ -79,6 +96,30 @@ Score 1 t/m 4 worden toegekend aan de toestand van de patiënt. De totaal score 
 Mate van fysieke activiteit.">
         >
         ["at0004"] = <
+          text = <"Bedfast">
+          description = <"Confined to bed.
+
+Aan het bed gebonden.">
+        >
+        ["at0005"] = <
+          text = <"Chairfast">
+          description = <"Ability to walk severely limited or non-existent. Cannot bear own weight and/or must be assisted into chair or wheelchair.
+
+Kan niet of nauwelijks lopen. Kan eigen gewicht niet dragen en/of moet in de stoel of rolstoel geholpen worden.">
+        >
+        ["at0006"] = <
+          text = <"Walks occasionally">
+          description = <"Walks occasionally during day, but for very short distances, with or without assistance. Spends majority of each shift in bed or chair.
+
+Loopt af en toe gedurende de dag erg kleine afstanden, met of zonder hulp. Brengt het grootse deel van elk dagdeel in bed of stoel door.">
+        >
+        ["at0007"] = <
+          text = <"Walks frequently">
+          description = <"Walks outside room at least twice a day and inside room at least once every two hours during waking hours.
+
+Loopt tenminste tweemaal per dag buiten de kamer en in de kamer tenminste eenmaal per 2 uur overdag, of heeft geen enkele beperking.">
+        >
+        ["at0008"] = <
           text = <"Moisture">
           description = <"Scores of 1 to 4 are given to the condition of the patient. The total score determines the risk factor. 
 Moisture: degree to which skin is exposed to moisture.
@@ -86,7 +127,31 @@ Moisture: degree to which skin is exposed to moisture.
 Score 1 t/m 4 worden toegekend aan de toestand van de patiënt. De totaal score bepaald de risicofactor.
 De mate waarin de huid aan vocht wordt blootgesteld">
         >
-        ["at0005"] = <
+        ["at0009"] = <
+          text = <"Constantly moist">
+          description = <"Skin is kept moist almost constantly by perspiration, urine, etc. Dampness is detected every time patient is moved or turned.
+
+De huid wordt bijna constant vochtig gehouden door transpiratie, urine etc. Vochtigheid wordt gesignaleerd bij elke verplaatsing of draaiing  van de patiënt.">
+        >
+        ["at0010"] = <
+          text = <"Very moist">
+          description = <"Skin is often, but not always moist. Linen must be changed at least once a shift.
+
+De huid is vaak, maar niet altijd vochtig. De lakens moeten tenminste één keer per dienst verwisseld worden.">
+        >
+        ["at0011"] = <
+          text = <"Occasionally moist">
+          description = <"Skin is occasionally moist, requiring an extra linen change approximately once a day.
+
+De huid is af en toe vochtig, waardoor het extra verwisselen van de lakens ongeveer eenmaal per dag nodig is.">
+        >
+        ["at0012"] = <
+          text = <"Rarely moist">
+          description = <"Skin is usually dry, linen only requires changing at routine intervals.
+
+De huid is doorgaans droog: de lakens hoeven alleen op de normale tijden verwisseld te worden.">
+        >
+        ["at0013"] = <
           text = <"FrictionAndSheer">
           description = <"Scores of 1 to 3 are given to the condition of the patient. The total score determines the risk factor.
 Friction and Shear.
@@ -94,7 +159,25 @@ Friction and Shear.
 Score 1 t/m 3 worden toegekend aan de toestand van de patiënt. De totaal score bepaald de risicofactor.
 Mate waarin schuif- en wrijvingskrachten optreden bij het verplaatsen.">
         >
-        ["at0006"] = <
+        ["at0014"] = <
+          text = <"Problem">
+          description = <"Requires moderate to maximum assistance in moving. Complete lifting without sliding against sheets is impossible. Frequently slides down in bed or chair, requiring frequent repositioning with maximum assistance. Spasticity, contractures or agitation leads to almost constant friction.
+
+Heeft (redelijk) veel hulp nodig bij beweging. Volledig overeind komen zonder langs de lakens te schuiven is onmogelijk. Glijdt regelmatig onderuit in bed of stoel, waardoor positie-veranderingen met volledige hulp nodig zijn. Spasticiteit, samentrekkingen of onrust leiden tot bijna constante wrijving.">
+        >
+        ["at0015"] = <
+          text = <"Potential problem">
+          description = <"Moves feebly or requires minimum assistance. During a move skin probably slides to some extent against sheets, chair, restraints or other devices. Maintains relatively good position in chair  or bed most of the time but occasionally slides down.
+
+Beweegt zich zonder veel kracht of heeft minimale hulp nodig. Tijdens het verplaatsen schuurt de huid waarschijnlijk langs lakens, stoel of andere materialen. Behoudt meestal een goede positie in bed of stoel, maar glijdt af en toe naar beneden.">
+        >
+        ["at0016"] = <
+          text = <"No apparent problem">
+          description = <"Moves in bed and in chair independently and has sufficient muscle strength to lift up completely during move. Maintains good position in bed or chair.
+
+Beweegt zich onafhankelijk in bed of stoel en heeft voldoende kracht om zich tijdens een beweging volledig op te heffen. Schuurt zelden of nooit langs de lakens. Behoudt altijd een goede positie in bed of stoel en glijdt niet onderuit.">
+        >
+        ["at0017"] = <
           text = <"SensoryPerception">
           description = <"Scores of 1 to 4 are given to the condition of the patient. The total score determines the risk factor. 
 Sensory perception: ability to respond meaningfully to pressure-related discomfort.
@@ -102,7 +185,44 @@ Sensory perception: ability to respond meaningfully to pressure-related discomfo
 Score 1 t/m 4 worden toegekend aan de toestand van de patiënt. De totaal score bepaald de risicofactor.
 Zintuiglijke waarneming: Vermogen om adequaat te reageren op ongemak dat door druk wordt veroorzaakt">
         >
-        ["at0007"] = <
+        ["at0018"] = <
+          text = <"Completely limited">
+          description = <"Completely limited: 
+Unresponsive (does not moan, flinch, or grasp) to painful stimuli, due to diminished level of con-sciousness or sedation
+OR
+limited ability to feel pain over most of body
+
+Reageert niet op pijnprikkels (kreunt niet, beweegt niet en grijpt niet) t.g.v. verminderd bewustzijn of sederende medicatie
+OF
+heeft een beperkt vermogen om pijn te voelen over het grootste deel van het lichaamsoppervlak.">
+        >
+        ["at0019"] = <
+          text = <"Very limited">
+          description = <"Responds only to painful stimuli. Cannot communicate discomfort except by moaning or restlessness
+OR
+has a sensory impairment which limits the ability to feel pain or discomfort over 1/2 of body
+
+Reageert alleen op pijnprikkels. Kan ongemak alleen uiten door kreunen of rusteloosheid
+OF
+heeft een beschadiging van de zintuiglijke functies die het vermogen beperkt om pijn of ongemak te voelen over het 1/2 lichaam.">
+        >
+        ["at0020"] = <
+          text = <"Slightly limited">
+          description = <"Responds to verbal commands, but cannot always communicate discomfortor the need to be turned.
+OR
+has some sensory impairment which limits ability to feel pain or discomfort in 1 or 2 extremities.
+
+Reageert op opdrachten, maar kan niet altijd ongemak of de behoefte te worden gedraaid uiten
+OF
+heeft een beschadiging van de zintuiglijke functies die het vermogen beperkt pijn of ongemak te voelen in 1 of 2 extremiteiten.">
+        >
+        ["at0021"] = <
+          text = <"No impairment">
+          description = <"No Impairment: Responds to verbal commands. Has no sensory limitations that limit the ability to sense or express pain or discomfort.
+
+Reageert op opdrachten. Heeft geen zintuiglijke beperking waardoor het vermogen pijn of ongemak te voelen of te uiten wordt beperkt.">
+        >
+        ["at0022"] = <
           text = <"Mobility">
           description = <"Scores of 1 to 4 are given to the condition of the patient. The total score determines the risk factor. 
 Mobility: ability to change and control body position.
@@ -110,13 +230,74 @@ Mobility: ability to change and control body position.
 Score 1 t/m 4 worden toegekend aan de toestand van de patiënt. De totaal score bepaald de risicofactor.
 Vermogen om de lichaamshouding te veranderen en beheersen.">
         >
-        ["at0008"] = <
+        ["at0023"] = <
+          text = <"Completely immobile">
+          description = <"Scores of 1 to 4 are given to the condition of the patient. The total score determines the risk factor. Mobility: ability to change and control body position.
+
+Brengt zonder hulp zelfs geen kleine veranderingen in de positie van lichaam en ledematen tot stand.">
+        >
+        ["at0024"] = <
+          text = <"Very limited">
+          description = <"Makes occasional slight changes in body or extremity position but unable to make frequent or significant changes independently.
+
+Brengt af en toe kleine veranderingen in de positie van lichaam en ledematen aan, maar kan niet zelf frequente of grote veranderingen aanbrengen.">
+        >
+        ["at0025"] = <
+          text = <"Slightly limited">
+          description = <"Makes frequent though slight changes in body or extremity position independently.
+
+Brengt frequent, maar kleine veranderingen in de positie van lichaam of ledematen aan.">
+        >
+        ["at0026"] = <
+          text = <"No limitation">
+          description = <"Makes major and frequent changes in position without assistance.
+
+Brengt frequent en zonder hulp veranderingen in zijn houding aan.">
+        >
+        ["at0027"] = <
           text = <"Nutrition">
           description = <"Scores of 1 to 4 are given to the condition of the patient. The total score determines the risk factor. 
 Nutrition: usual food intake pattern.
 
 Score 1 t/m 4 worden toegekend aan de toestand van de patiënt. De totaal score bepaald de risicofactor.
 Normaal voedingspatroon">
+        >
+        ["at0028"] = <
+          text = <"Very poor">
+          description = <"Never eats a complete meal. Rarely eats more than a of any food offered. Eats 2 servings or less of protein (meat or dairy products) per day. Takes fluids poorly. Does not take a liquid dietary supplement
+OR
+is NPO and/or maintained on clear liquids or IV's for more than 5 days.
+
+Eet nooit een volledige maaltijd. Eet zelden meer dan 1/3 van het aangeboden voedsel. Eet 2 of minder eiwithoudende producten (vlees of zuivelproducten) per dag. Drinkt weinig. Neemt geen vloeibare bijvoeding.
+OF
+krijgt niets per os, heeft een dieet van heldere dranken of krijgt vocht toegediend per infuus gedurende 5 dagen of langer.">
+        >
+        ["at0029"] = <
+          text = <"Probably inadequate">
+          description = <"Rarely eats a complete meal and generally eats only about 2 of any food offered. Protein intake includes only 3 servings of meat or dairy products per day. Occasionally will take a dietary supplement.
+OR
+receives less than optimum amount of liquid diet or tube feeding.
+
+Eet zelden een volledige maaltijd en eet ongeveer 1/2 van het aangeboden voedsel. Eiwitinname is beperkt tot 3 porties vlees of zuivelproducten per dag. Neemt af en toe voedingssupplement.
+OF
+heeft meer dan drie opeenvolgende maaltijden gemist, of krijgt minder dan de optimale hoeveelheid vloeibare of sondevoeding.">
+        >
+        ["at0030"] = <
+          text = <"Adequate">
+          description = <"Eats over half of most meals. Eats a total of 4 servings of protein (meat, dairy products) per day. Occasionally will refuse a meal, but will usually take a supplement when offered
+OR
+is on a tube feeding or TPN regimen which probably meets most of nutritional needs.
+
+Eet meer dan 1/2 van de maaltijden. Eet elke dag vier porties eiwithoudende producten (vlees en zuivel). Weigert af en toe een maaltijd, maar neemt meestal een aanvulling wanneer dit wordt aangeboden.
+OF
+heeft 1 tot 3 opeenvolgende maaltijden gemist, of krijgt sonde-voeding of totale parenterale voeding die toereikend is voor de voedingsbehoeften.">
+        >
+        ["at0031"] = <
+          text = <"Excellent">
+          description = <"Eats most of every meal. Never refuses a meal. Usually eats a total of 4 or more servings of meat and dairy products.
+Occasionally eats between meals. Does not require supplementation.
+
+Eet het grootste gedeelte van elke maaltijd. Weigert nooit een maaltijd. Eet gewoonlijk vier of meer porties vlees- of zuivelproducten. Eet af en toe tussen de maaltijden. Heeft geen bijvoeding nodig.">
         >
       >
     >

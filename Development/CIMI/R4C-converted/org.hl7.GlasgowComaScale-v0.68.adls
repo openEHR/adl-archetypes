@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-  cimi-RM-ENTRY.R4C_GlasgowComaScale.v1
+  cimi-RM-ENTRY.GlasgowComaScale.v1
 
 language
   original_language = <[ISO_639-1::en]>
@@ -13,25 +13,40 @@ definition
   ENTRY[at0000] matches { -- GlasgowComaScale
     data matches {
         CLUSTER[at0001] matches { -- Items
-          items matches {
-            ELEMENT[at0002] matches { -- E=Eye opening
+          item matches {
+            ELEMENT[at0002] occurrences matches {1..1} matches { -- E=Eye opening
               value matches {
-                ORDINAL matches {*}
+                4|[local::at0003], -- Spontaneous
+                3|[local::at0004], -- To speech
+                2|[local::at0005], -- To pain
+                1|[local::at0006], -- No response
+                0|[local::at0007] -- Not possible to determine (C)
               }
             }
-            ELEMENT[at0003] matches { -- M=Best motor response
+            ELEMENT[at0008] occurrences matches {1..1} matches { -- M=Best motor response
               value matches {
-                ORDINAL matches {*}
+                6|[local::at0009], -- To verbal command: obeys
+                5|[local::at0010], -- To painful stimulus: localizes pain
+                4|[local::at0011], -- Flexion-withdrawal
+                3|[local::at0012], -- Flexion-abnormal
+                2|[local::at0013], -- Extension
+                1|[local::at0014], -- No response
+                0|[local::at0015] -- Paralysis (P)
               }
             }
-            ELEMENT[at0004] matches { -- V=Verbal reaction
+            ELEMENT[at0016] occurrences matches {1..1} matches { -- V=Verbal reaction
               value matches {
-                ORDINAL matches {*}
+                5|[local::at0017], -- Oriented and converses
+                4|[local::at0018], -- Disoriented and converses
+                3|[local::at0019], -- Inappropriate words
+                2|[local::at0020], -- Incomprehensible sounds
+                1|[local::at0021], -- No response
+                0|[local::at0022] -- Tube /Tracheotomy (T)
               }
             }
           }
         }
-        ELEMENT[at0005] matches { -- TotalScore
+        ELEMENT[at0023] occurrences matches {1..1} matches { -- TotalScore
           value matches {
             COUNT matches {*}
           }
@@ -61,6 +76,40 @@ De Glasgow Coma Scale, ook wel de EMV-score (best Eye, Motor and Verbal respons)
 Openen van de ogen als reactie van de patient.">
         >
         ["at0003"] = <
+          text = <"Spontaneous">
+          description = <"Opens the eyes spontaneously.
+
+Opent de ogen spontaan">
+        >
+        ["at0004"] = <
+          text = <"To speech">
+          description = <"Opens the eyes after a verbal stimuli, this can be normal, repeated or even  loud.
+
+
+Opent de ogen na een verbale prikkel, dit kan normaal, herhaald of zelfs luid zijn.">
+        >
+        ["at0005"] = <
+          text = <"To pain">
+          description = <"Opens the eyes after not before a stimulus, opens the eyes after a central painful stimuli (suborbital) or a peripheral painful stimuli (nail bed).
+
+
+Opent de ogen niet na eerdere prikkels, opent de ogen na een centrale pijprikkel (suborbitaal) of perifere pijnprikkel (nagelbed)">
+        >
+        ["at0006"] = <
+          text = <"No response">
+          description = <"Doesn&rsquo;t open the eyes not even after a stimulus.
+
+
+Opent na geen enkele prikkel de ogen.">
+        >
+        ["at0007"] = <
+          text = <"Not possible to determine (C)">
+          description = <"Not possible to determine
+
+
+Niet vast te stellen.">
+        >
+        ["at0008"] = <
           text = <"M=Best motor response">
           description = <"Points of interest:  
 Ø  Score only the reaction of the arms, the reactions of the legs can be a spinal reflex;  
@@ -73,7 +122,55 @@ Aandachtspunten:
 Ø  Test beide armen en scoor de beste reactie van beide.
 Ø  Voer geen pijnprikkel uit op een aangedaan of gekwetst lichaamsdeel">
         >
-        ["at0004"] = <
+        ["at0009"] = <
+          text = <"To verbal command: obeys">
+          description = <"Obeys to verbal verbal commands: does carry out commands even in a weak state.
+
+
+Gehoorzaamt aan verbale opdrachten: voert, zelfs in zwakke conditie, opdrachten uit.">
+        >
+        ["at0010"] = <
+          text = <"To painful stimulus: localizes pain">
+          description = <"Localizes pain: tries to localize painful stimuli or tries to withdraw from the pain.
+
+
+Lokaliseert pijn: probeert pijnprikkels te lokaliseren of zich ervan te ontdoen.">
+        >
+        ["at0011"] = <
+          text = <"Flexion-withdrawal">
+          description = <"Withdrawal to painful stimuli: avoid pain or stretched out the arm towards painful stimuli but cannot localize the source of the pain or withdraws from it.
+
+
+Trekt terug op pijnprikkels: ontwijkt pijn of strekt de arm in de richting van de pijn maar is niet in staat de bron van de pijn te lokaliseren of zich ervan te ontdoen.">
+        >
+        ["at0012"] = <
+          text = <"Flexion-abnormal">
+          description = <"Abnormal flexion: of the arms, this goes with extension of the legs and the flexion backwards of the feet.
+
+
+Abnormaal buigen: van de armen, dit gaat gepaard met extensie van de benen en het naar achteren buigen van de voeten.">
+        >
+        ["at0013"] = <
+          text = <"Extension">
+          description = <"Extension, adductive and internal rotation: of the upper and lower extremities.
+
+
+Strekken extensie, adductie en inwendige rotatie: van de bovenste en onderste extremiteiten.">
+        >
+        ["at0014"] = <
+          text = <"No response">
+          description = <"No response: not even on painful stimuli.
+
+Geen reactie: zelfs niet op pijnprikkels.">
+        >
+        ["at0015"] = <
+          text = <"Paralysis (P)">
+          description = <"Person is paralysed and because of that he has no motor response. 
+
+
+Persoon is verlamd en heeft daarom geen motorische reacties.">
+        >
+        ["at0016"] = <
           text = <"V=Verbal reaction">
           description = <"Points of interest: 
 Ø  Ø Record the score the patient could have without an endo tracheal tube or trachecanule .
@@ -82,7 +179,48 @@ Aandachtspunten:
 Aandachtspunten: 
 Ø  Vermeld de score die de patiënt zou kunnen behalen zonder endotracheale tube of tracheacanule.">
         >
-        ["at0005"] = <
+        ["at0017"] = <
+          text = <"Oriented and converses">
+          description = <"Oriented: in time, place and person.
+
+
+Georiënteerd: in tijd, plaats en persoon.">
+        >
+        ["at0018"] = <
+          text = <"Disoriented and converses">
+          description = <"Confused, disoriented: confused to one or more of the following: time, place or person, the ability to perform a conversation. Use inappropriate words in response to questions.
+
+
+Gedesoriënteerd: verward ten aanzien van een of meer van het volgende: tijd, plaats of persoon, het vermogen een gesprek te voeren. Is niet adequaat in het beantwoorden van vragen.">
+        >
+        ["at0019"] = <
+          text = <"Inappropriate words">
+          description = <"Uses inappropriate words or sentences that have no or limited coherence, words are used ad random, yelling or cursing.
+
+
+Inadequaat: gebruikt woorden of zinnen die weinig of geen samenhang hebben, woorden kunnen willekeurig worden gebruikt, schreeuwen of vloeken.">
+        >
+        ["at0020"] = <
+          text = <"Incomprehensible sounds">
+          description = <"Unintelligible: only incomprehensible  (growling /groaning).
+
+
+Onverstaanbaar: alleen klanken. (gegrom/gekreun)">
+        >
+        ["at0021"] = <
+          text = <"No response">
+          description = <"Doesn&rsquo;t make any sound, doesn&rsquo;t speak.
+
+
+Geen reactie: maakt geen geluid, spreekt niet.">
+        >
+        ["at0022"] = <
+          text = <"Tube /Tracheotomy (T)">
+          description = <"Tube /Tracheotomy present.
+
+Door de aanwezigheid van een tracheale tube kan persoon niet verbaal reageren.">
+        >
+        ["at0023"] = <
           text = <"TotalScore">
           description = <"The total score on the Glasgow coma scale
 
@@ -97,8 +235,8 @@ Het gaat hierbij om de totaal score van de Glasgow coma schaal.">
       items = <
         ["at0000"] = <[SCT::386554004]>
         ["at0002"] = <[SCT::281395000]>
-        ["at0003"] = <[SCT::281396004]>
-        ["at0004"] = <[SCT::281397008]>
+        ["at0008"] = <[SCT::281396004]>
+        ["at0016"] = <[SCT::281397008]>
       >
     >
   >

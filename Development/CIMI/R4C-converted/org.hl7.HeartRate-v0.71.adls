@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-  cimi-RM-ENTRY.R4C_HeartRate.v1
+  cimi-RM-ENTRY.HeartRate.v1
 
 language
   original_language = <[ISO_639-1::en]>
@@ -12,189 +12,109 @@ description
 definition
   ENTRY[at0000] matches { -- HeartRate
     data matches {
-        ELEMENT[at0001] matches { -- Frequency
+        ELEMENT[at0001] occurrences matches {1..1} matches { -- Frequency
           value matches {
             QUANTITY matches {
               units matches {*}
             }
           }
         }
-        ELEMENT[at0002] matches { -- Rhythm
+        ELEMENT[at0002] occurrences matches {1..1} matches { -- Rhythm
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0003", -- Bigeminal pulse
-                "at0004", -- Bisferiens
-                "at0005", -- Extra-systole
-                "at0006", -- Irregulair
-                "at0007", -- Palpitation
-                "at0008", -- Pulsus alternans
-                "at0009", -- Pulsus irregularis perpetuus
-                "at0010", -- Regular
-                "at0011" -- Trigeminal pulse
-              }
-            }
+            [local::
+            at0003, -- Bigeminal pulse
+            at0004, -- Bisferiens
+            at0005, -- Extra-systole
+            at0006, -- Irregulair
+            at0007, -- Palpitation
+            at0008, -- Pulsus alternans
+            at0009, -- Pulsus irregularis perpetuus
+            at0010, -- Regular
+            at0011] -- Trigeminal pulse
           }
         }
-        ELEMENT[at0012] matches { -- Strength
+        ELEMENT[at0012] occurrences matches {1..1} matches { -- Strength
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0013", -- Normal
-                "at0014", -- Strong
-                "at0015" -- Weak
-              }
-            }
+            [local::
+            at0013, -- Normal
+            at0014, -- Strong
+            at0015] -- Weak
           }
         }
-        ELEMENT[at0016] matches { -- Location
+        ELEMENT[at0016] occurrences matches {1..1} matches { -- Location
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0017", -- Arteria brachialis
-                "at0018", -- Arteria carotis
-                "at0019", -- Arteria carotis externa
-                "at0020", -- Arteria dorsalis pedis
-                "at0021", -- Arteria femoralis
-                "at0022", -- Arteria poplitea
-                "at0023", -- Arteria radialis
-                "at0024", -- Arteria subclavia
-                "at0025", -- Arteria temporalis
-                "at0026", -- Arteria tibialis
-                "at0027", -- Arteria tibialis posterior
-                "at0028" -- Fontanel (baby)
-              }
-            }
+            [local::
+            at0017, -- Arteria brachialis
+            at0018, -- Arteria carotis
+            at0019, -- Arteria carotis externa
+            at0020, -- Arteria dorsalis pedis
+            at0021, -- Arteria femoralis
+            at0022, -- Arteria poplitea
+            at0023, -- Arteria radialis
+            at0024, -- Arteria subclavia
+            at0025, -- Arteria temporalis
+            at0026, -- Arteria tibialis
+            at0027, -- Arteria tibialis posterior
+            at0028] -- Fontanel (baby)
           }
         }
-        ELEMENT[at0029] matches { -- Volume
+        ELEMENT[at0029] occurrences matches {1..1} matches { -- Volume
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0030", -- Large
-                "at0031", -- Normal
-                "at0032" -- Weak
-              }
-            }
+            [local::
+            at0030, -- Large
+            at0031, -- Normal
+            at0032] -- Weak
           }
         }
         ELEMENT[at0033] occurrences matches {0..1} matches { -- PointInTime
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0034", -- 1H min
-                "at0035", -- 1H max
-                "at0036" -- 1H mean
-              }
-            }
+            [local::
+            at0034, -- 1H min
+            at0035, -- 1H max
+            at0036] -- 1H mean
           }
         }
-        ELEMENT[at0037] matches { -- FrequencyQualification
+        ELEMENT[at0037] occurrences matches {1..1} matches { -- FrequencyQualification
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0038", -- Alternating bradycardia and tachycardia
-                "at0039", -- Bradycardia
-                "at0040", -- Normal
-                "at0041" -- Tachycardia
-              }
-            }
+            [local::
+            at0038, -- Alternating bradycardia and tachycardia
+            at0039, -- Bradycardia
+            at0040, -- Normal
+            at0041] -- Tachycardia
           }
         }
-        ELEMENT[at0042] matches { -- Regularity
+        ELEMENT[at0042] occurrences matches {1..1} matches { -- Regularity
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0043", -- Irregular
-                "at0044" -- Regular
-              }
-            }
+            [local::
+            at0043, -- Irregular
+            at0044] -- Regular
           }
         }
-        ELEMENT[at0045] matches { -- BodyPosition
+        ELEMENT[at0045] occurrences matches {1..1} matches { -- BodyPosition
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0046", -- Lying
-                "at0047", -- Sitting
-                "at0048", -- Standing
-                "at0049" -- Reclining
-              }
-            }
+            [local::
+            at0046, -- Lying
+            at0047, -- Sitting
+            at0048, -- Standing
+            at0049] -- Reclining
           }
         }
-        ELEMENT[at0050] matches { -- Exertion
+        ELEMENT[at0050] occurrences matches {1..1} matches { -- Exertion
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0051", -- In rest
-                "at0052", -- Post exercise
-                "at0053" -- During exercise
-              }
-            }
+            [local::
+            at0051, -- In rest
+            at0052, -- Post exercise
+            at0053] -- During exercise
           }
         }
-        ELEMENT[at0054] matches { -- Method
+        ELEMENT[at0054] occurrences matches {1..1} matches { -- Method
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0055", -- Auscultation
-                "at0056", -- BedsideMonitor
-                "at0057", -- ECG
-                "at0058", -- Palpation/ manual
-                "at0059" -- Ultrasound
-              }
-            }
+            [local::
+            at0055, -- Auscultation
+            at0056, -- BedsideMonitor
+            at0057, -- ECG
+            at0058, -- Palpation/ manual
+            at0059] -- Ultrasound
           }
         }
     }

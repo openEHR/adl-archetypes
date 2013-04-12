@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-  cimi-RM-ENTRY.R4C_ApgarScore.v1
+  cimi-RM-ENTRY.ApgarScore.v1
 
 language
   original_language = <[ISO_639-1::en]>
@@ -12,54 +12,56 @@ description
 definition
   ENTRY[at0000] matches { -- ApgarScore
     data matches {
-        ELEMENT[at0001] matches { -- PostBirthMoment
+        ELEMENT[at0001] occurrences matches {1..1} matches { -- PostBirthMoment
           value matches {
-            CODED_TEXT matches {
-              terminology_id matches {
-                TERMINOLOGY_ID matches {
-                  value matches {"local"}
-                }
-              }
-              code_string matches {
-                "at0002", -- After1Minute
-                "at0003", -- After2Minutes
-                "at0004", -- After5Minutes
-                "at0005", -- After10Minutes
-                "at0006" -- After20Minutes
-              }
-            }
+            [local::
+            at0002, -- After1Minute
+            at0003, -- After2Minutes
+            at0004, -- After5Minutes
+            at0005, -- After10Minutes
+            at0006] -- After20Minutes
           }
         }
         CLUSTER[at0007] matches { -- ListingOfIndividualScores
-          items matches {
-            ELEMENT[at0008] matches { -- MuscleTone
+          item matches {
+            ELEMENT[at0008] occurrences matches {1..1} matches { -- MuscleTone
               value matches {
-                ORDINAL matches {*}
+                2|[local::at0009], -- ActiveMotionOfArmsLegs
+                1|[local::at0010], -- SomeFlexingOfArmsLegs
+                0|[local::at0011] -- Limp
               }
             }
-            ELEMENT[at0009] matches { -- SkinColor
+            ELEMENT[at0012] occurrences matches {1..1} matches { -- SkinColor
               value matches {
-                ORDINAL matches {*}
+                2|[local::at0013], -- CompletelyPinkOrGoodColour
+                1|[local::at0014], -- NormalBodyColourHandsFeetAreBlue
+                0|[local::at0015] -- WholeBodyIsBlueOrPale
               }
             }
-            ELEMENT[at0010] matches { -- Pulse
+            ELEMENT[at0016] occurrences matches {1..1} matches { -- Pulse
               value matches {
-                ORDINAL matches {*}
+                2|[local::at0017], -- GreaterThan100BeatsPerMinute
+                1|[local::at0018], -- LessThan100BeatsPerMinute
+                0|[local::at0019] -- NoHeartBeat
               }
             }
-            ELEMENT[at0011] matches { -- GrimaceReflexes
+            ELEMENT[at0020] occurrences matches {1..1} matches { -- GrimaceReflexes
               value matches {
-                ORDINAL matches {*}
+                2|[local::at0021], -- GrimaceSneezeCoughPullingBackDuringSuction
+                1|[local::at0022], -- GrimaceDuringSuction
+                0|[local::at0023] -- NoResponseToSuctionOfAirways
               }
             }
-            ELEMENT[at0012] matches { -- Respiration
+            ELEMENT[at0024] occurrences matches {1..1} matches { -- Respiration
               value matches {
-                ORDINAL matches {*}
+                2|[local::at0025], -- GoodCrying
+                1|[local::at0026], -- Irregular
+                0|[local::at0027] -- None
               }
             }
           }
         }
-        ELEMENT[at0013] matches { -- TotalScore
+        ELEMENT[at0028] occurrences matches {1..1} matches { -- TotalScore
           value matches {
             COUNT matches {*}
           }
@@ -108,30 +110,75 @@ Moment, post birth, on which the 5 observation have been evaluated.">
 Activity evaluated by the degree of flexion and resistance given by the newborn when the nurse attempts to stretch the extremities after birth.">
         >
         ["at0009"] = <
+          text = <"ActiveMotionOfArmsLegs">
+        >
+        ["at0010"] = <
+          text = <"SomeFlexingOfArmsLegs">
+        >
+        ["at0011"] = <
+          text = <"Limp">
+        >
+        ["at0012"] = <
           text = <"SkinColor">
           description = <"De kleur van de huid van het lichaam, handen en voeten 
 
 The colour of the skin on the body, hands and feet">
         >
-        ["at0010"] = <
+        ["at0013"] = <
+          text = <"CompletelyPinkOrGoodColour">
+        >
+        ["at0014"] = <
+          text = <"NormalBodyColourHandsFeetAreBlue">
+        >
+        ["at0015"] = <
+          text = <"WholeBodyIsBlueOrPale">
+        >
+        ["at0016"] = <
           text = <"Pulse">
           description = <"Evaluatie van de hartfunctie van de pasgeborene.
 
 Assessment of heart function in the new born.">
         >
-        ["at0011"] = <
+        ["at0017"] = <
+          text = <"GreaterThan100BeatsPerMinute">
+        >
+        ["at0018"] = <
+          text = <"LessThan100BeatsPerMinute">
+        >
+        ["at0019"] = <
+          text = <"NoHeartBeat">
+        >
+        ["at0020"] = <
           text = <"GrimaceReflexes">
           description = <"Reflexen geëvalueerd door de reactie op het uitzuigen van de luchtwegen .
 
 Reflexes evaluated by the reaction on airways suction.">
         >
-        ["at0012"] = <
+        ["at0021"] = <
+          text = <"GrimaceSneezeCoughPullingBackDuringSuction">
+        >
+        ["at0022"] = <
+          text = <"GrimaceDuringSuction">
+        >
+        ["at0023"] = <
+          text = <"NoResponseToSuctionOfAirways">
+        >
+        ["at0024"] = <
           text = <"Respiration">
           description = <"Ademhaling geëvalueerd door de pogingen van de pasgeborene om adem te halen.
 
 Respiration avaluated by the newborns breathing effort">
         >
-        ["at0013"] = <
+        ["at0025"] = <
+          text = <"GoodCrying">
+        >
+        ["at0026"] = <
+          text = <"Irregular">
+        >
+        ["at0027"] = <
+          text = <"None">
+        >
+        ["at0028"] = <
           text = <"TotalScore">
           description = <"De totaal score op de 5 data elementen (VoorkomenHuidskleur, PolsHartslag, GrimasReflexen, ActiviteitSpiertonus, Ademhaling) van de Apgar score.
 
@@ -148,11 +195,11 @@ Clinical score derived from assessment of breathing, colour, muscle tone, heart 
         ["at0005"] = <[SCT::169922007]>
         ["at0006"] = <[SCT::443849008]>
         ["at0008"] = <[SCT::249225007]>
-        ["at0009"] = <[SCT::249227004]>
-        ["at0010"] = <[SCT::249223000]>
-        ["at0011"] = <[SCT::249226008]>
-        ["at0012"] = <[SCT::249224006]>
-        ["at0013"] = <[SCT::249228009]>
+        ["at0012"] = <[SCT::249227004]>
+        ["at0016"] = <[SCT::249223000]>
+        ["at0020"] = <[SCT::249226008]>
+        ["at0024"] = <[SCT::249224006]>
+        ["at0028"] = <[SCT::249228009]>
       >
     >
   >
