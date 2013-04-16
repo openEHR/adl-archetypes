@@ -110,10 +110,7 @@ definition
 					CLUSTER[at0018] occurrences matches {0..1} matches {	-- Occurrences or exacerbations
 						items matches {
 							ELEMENT[at0019] occurrences matches {0..1} matches {	-- Frequency of reccurrence
-								value matches {
-									(C_DV_QUANTITY) <
-									>
-								}
+								value matches {*}
 							}
 							ELEMENT[at0020] occurrences matches {0..1} matches {	-- Date of last occurrence
 								value matches {
