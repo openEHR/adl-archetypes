@@ -1,0 +1,54 @@
+﻿archetype (adl_version=1.5)
+	CIMI-Core-ENTRY.OBSERVATION.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"10/07/2013">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Simplified 'EVALUATION' archetype based on CIMI RM, for AML tool testing purposes.">
+			use = <"AML tool testing only.">
+			keywords = <"evaluation", "assessment">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Initial">
+
+definition
+	ENTRY[at0000] matches {
+		data matches {
+			CLUSTER[at0001] matches {*} -- data
+			CLUSTER[at0002] matches {*}	-- state
+			CLUSTER[at0003] matches {*}	-- protocol
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"Observation reference archetype">
+				description = <"Observation reference archetype">
+			>
+			["at0001"] = <
+				text = <"data">
+				description = <"data property - what is measured">
+			>
+			["at0002"] = <
+				text = <"state">
+				description = <"patient state">
+			>
+			["at0003"] = <
+				text = <"protocol">
+				description = <"details of measurement apparatus, method, instrument etc">
+			>
+		>
+	>

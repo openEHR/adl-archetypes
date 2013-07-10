@@ -1,0 +1,166 @@
+﻿archetype (adl_version=1.5)
+	CIMI-Core-ENTRY.aml_diagnosis.v1
+
+specialize
+	CIMI-Core-ENTRY.aml_problem.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"23/04/2006">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For recording medical diagnoses with optional diagnostic criteria and staging. Requires coded entry of diagnosis. ">
+			use = <"Used for recording any diagnosis, present or past - so is used for recording past history as well as current diagnoses. Used with changed 'Subject of care' for recording diagnoses in relatives and so for family history.">
+			keywords = <"past", "history", "family", "history", "condition">
+			misuse = <"Use 'openEHR-EHR-EVALUATION.problem-diagnosis-histological' for histological diagnoses.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"Initial">
+
+definition
+	ENTRY[at0000.1] matches {	-- Diagnosis
+		/data[at0001]/item[at0002.1]/value matches {[ac0.1]}		-- Any term that 'is_a' diagnosis
+		/data[at0001]/item matches {
+			before [at0003]
+			ELEMENT[at0.32] occurrences matches {0..1} matches {	-- Status
+				value matches {
+					[local::
+					at0.33, 	-- provisional
+					at0.34]	-- working
+				}
+			}
+			after [at0031]
+			CLUSTER[at0.35] occurrences matches {0..1} matches {	-- Diagnostic criteria
+				item matches {
+					ELEMENT[at0.36] occurrences matches {0..*} matches {	-- Criterion
+						value matches {
+							TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0.32"] = <
+				text = <"Status">
+				description = <"The status of the diagnosis">
+			>
+			["at0.33"] = <
+				text = <"provisional">
+				description = <"provisional diagnosis considered likely and a basis for proceeding with management">
+			>
+			["at0.34"] = <
+				text = <"working">
+				description = <"working diagnosis considered very likely but not yet confirmed">
+			>
+			["at0.35"] = <
+				text = <"Diagnostic criteria">
+				description = <"The criteria on which the diagnosis is based">
+			>
+			["at0.36"] = <
+				text = <"Criterion">
+				description = <"A basis for the diagnosis">
+			>
+			["at0.37"] = <
+				text = <"Clinical staging">
+				description = <"The stage of the disease by clinical assessment">
+			>
+			["at0.38"] = <
+				text = <"Stage">
+				description = <"The stage of the disease (not TNM staging)">
+			>
+			["at0.39"] = <
+				text = <"Tumour">
+				description = <"The extent of invasion of local tissue">
+			>
+			["at0.40"] = <
+				text = <"Tx - primary tumour not assessed">
+				description = <"No clinical assessment of the primary tumour made">
+			>
+			["at0.41"] = <
+				text = <"T0 - no primary tumour">
+				description = <"No primary tumour is evident clinically">
+			>
+			["at0.42"] = <
+				text = <"Tis - Carcinoma insitu">
+				description = <"The malignant cells are confined to their usual cellular region">
+			>
+			["at0.43"] = <
+				text = <"T1 - Micorinvasion (0.5cm)">
+				description = <"Microscopic invasion of 5mm">
+			>
+			["at0.44"] = <
+				text = <"T2 - Tumour invading 1 cm">
+				description = <"Tumour invading 1cm">
+			>
+			["at0.45"] = <
+				text = <"T3 - Full thickness of structure">
+				description = <"Tumour invading to full thickness (or border) of structure">
+			>
+			["at0.46"] = <
+				text = <"T5 - Invading adjacent structure">
+				description = <"Tumour has spread outside the structure in which it arose">
+			>
+			["at0.47"] = <
+				text = <"Nodes">
+				description = <"Extent of involvement of regional nodes">
+			>
+			["at0.48"] = <
+				text = <"Nx - regional nodes not assessed">
+				description = <"No clinical assessment of regional nodes made">
+			>
+			["at0.49"] = <
+				text = <"N0 - no regional nodes involved">
+				description = <"No clinical evidence of regional node involvement">
+			>
+			["at0.50"] = <
+				text = <"N1 - Regional nodes involved">
+				description = <"Clinical assessment indicates that regional nodes are involved">
+			>
+			["at0.51"] = <
+				text = <"Metastases">
+				description = <"Extent of metastases">
+			>
+			["at0.52"] = <
+				text = <"Mx - metastases not assessed">
+				description = <"No clinical assessment of metastases">
+			>
+			["at0.53"] = <
+				text = <"M0 - No distant metastases">
+				description = <"No clinical evidence of distanct metastases">
+			>
+			["at0.54"] = <
+				text = <"M1 - Distant metastases">
+				description = <"Clinical evidence of distant metastases">
+			>
+			["at0000.1"] = <
+				text = <"Diagnosis">
+				description = <"A diagnosis defined by a clinician which is coded in an accepted terminology and may include the stage of the condition and the diagnostic criteria">
+			>
+			["at0002.1"] = <
+				text = <"Diagnosis">
+				description = <"The index diagnosis">
+			>
+		>
+	>
+	constraint_definitions = <
+		["en"] = <
+			["ac0.1"] = <
+				text = <"Any term that 'is_a' diagnosis">
+				description = <"Any term that is a diagnosis in an accepted terminology">
+			>
+		>
+	>
