@@ -27,17 +27,17 @@ description
 	other_contributors = <"Todd Stevenson", "Alan James", "Joey Coyle", "Tom Oniki", "Craig Parker", "Stan Huff">
 
 definition
-	ENTRY[at0000.1] matches {	-- Laboratory test
+	ENTRY[at0000.1.1] matches {	-- Laboratory test
 		/data[at0020]/item[at0010]/item matches {
-			use_archetype CLUSTER[at0011, CIMI-Core-CLUSTER.SodiumSCncPtUrineQnLabObs.v1] occurrences matches {1}
-			use_archetype CLUSTER[at0011, CIMI-Core-CLUSTER.PotassiumSCncPtUrineQnLabObs.v1] occurrences matches {1}
+			use_archetype CLUSTER[at0011.1, CIMI-Core-CLUSTER.SodiumSCncPtUrineQnLabObs.v1] occurrences matches {1}
+			use_archetype CLUSTER[at0011.1, CIMI-Core-CLUSTER.PotassiumSCncPtUrineQnLabObs.v1] occurrences matches {1}
 		}
 	}
 
 ontology
 	term_definitions = <
 		["en"] = <
-			["at0000.1"] = <
+			["at0000.1.1"] = <
 				text = <"Full urinalysis panel">
 				description = <"xxx">
 			>
