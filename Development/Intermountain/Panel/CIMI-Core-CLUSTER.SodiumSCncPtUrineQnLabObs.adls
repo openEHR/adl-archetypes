@@ -1,0 +1,53 @@
+﻿archetype (adl_version=1.5)
+	CIMI-Core-CLUSTER.SodiumSCncPtUrineQnLabObs.v1
+
+specialise
+	CIMI-Core-CLUSTER.StandardLabObsQuantitative.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"07/09/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Manual rendering of SodiumSCncPtUrineQnLabObs CEM">
+			use = <"#include SodiumSCncPtUrineQnLabObs documentation here#">
+			keywords = <"lab", "etc">
+			copyright = <"© Intermountain Health">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Todd Stevenson", "Alan James", "Joey Coyle", "Tom Oniki", "Craig Parker", "Stan Huff">
+
+definition
+	CLUSTER[at0000.1.1] matches {
+		/item[at0001.1]/value matches {
+			QUANTITY matches {
+				units matches {[UCUM::mmol-l]}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1.1"] = <
+				text = <"(MDL) SodiumSCncPtUrineQnLabObs">
+				description = <"???">
+			>
+		>
+	>
+
+	term_bindings = <
+		["IHC"] = <
+			["at0000.1.1"] = <[IHC::SodiumSCncPtUrineQnLabObs_KEY_ECID]>
+		>
+	>
+

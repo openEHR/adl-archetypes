@@ -1,0 +1,46 @@
+﻿template (adl_version=1.5)
+	CIMI-Core-ENTRY.T_Urinalysis_full_panel.v1
+
+specialize
+	CIMI-Core-ENTRY.Urinalysis.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"07/09/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Manual rendering of StandardLabObs CEM">
+			use = <"#include StandardLabObs documentation here#">
+			keywords = <"lab", "etc">
+			copyright = <"© Intermountain Health">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Todd Stevenson", "Alan James", "Joey Coyle", "Tom Oniki", "Craig Parker", "Stan Huff">
+
+definition
+	ENTRY[at0000.1] matches {	-- Laboratory test
+		/data[at0020]/item[at0010]/item matches {
+			use_archetype CLUSTER[at0011, CIMI-Core-CLUSTER.SodiumSCncPtUrineQnLabObs.v1] occurrences matches {1}
+			use_archetype CLUSTER[at0011, CIMI-Core-CLUSTER.PotassiumSCncPtUrineQnLabObs.v1] occurrences matches {1}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1"] = <
+				text = <"Full urinalysis panel">
+				description = <"xxx">
+			>
+		>
+	>
+

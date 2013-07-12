@@ -1,0 +1,67 @@
+﻿archetype (adl_version=1.5)
+	CIMI-Core-CLUSTER.ReportedReceived.v1
+
+specialise
+	CIMI-Core-CLUSTER.Attribution.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"07/09/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Manual rendering of ReportedReceived Attribution CEM">
+			use = <"#include ReportedReceived documentation here#">
+			keywords = <"lab", "etc">
+			copyright = <"© 2012 Intermountain Health">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Todd Stevenson", "Alan James", "Joey Coyle", "Tom Oniki", "Craig Parker", "Stan Huff">
+
+definition
+	CLUSTER[at0000.1] matches {
+		/item matches {
+			ELEMENT[at0001] matches {
+				value matches {[ac0001.1]}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1"] = <
+				text = <"ReportedReceived">
+				description = <"????">
+			>
+		>
+	>
+
+	constraint_definitions = <
+		["en"] = <
+			["ac0001.1"] = <
+				text = <"ReportedReceived">
+				description = <"???">
+			>
+		>
+	>
+
+	term_bindings = <
+		["IHC"] = <
+			["at0000.1"] = <[IHC::ReportedReceived_KEY_ECID]>
+		>
+	>
+
+	constraint_bindings = <
+		["IHC"] = <
+			["ac0001.1"] = <terminology:intermountain.org?valueset=IHC::ReportedReceived_VALUESET_ECID>
+		>
+	>

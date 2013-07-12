@@ -1,0 +1,45 @@
+﻿archetype (adl_version=1.5)
+	CIMI-Core-CLUSTER.StandardLabObs.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"07/09/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Manual rendering of StandardLabObs CEM">
+			use = <"#include StandardLabObs documentation here#">
+			keywords = <"lab", "etc">
+			copyright = <"© Intermountain Health">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Todd Stevenson", "Alan James", "Joey Coyle", "Tom Oniki", "Craig Parker", "Stan Huff">
+
+definition
+	CLUSTER[at0000] matches {	-- Laboratory test analyte
+		item matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {*}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"(MDL) Lab test panel item">
+				description = <"ccc">
+			>
+			["at0001"] = <
+				text = <"Panel item value">
+				description = <"@ internal @">
+			>
+		>
+	>

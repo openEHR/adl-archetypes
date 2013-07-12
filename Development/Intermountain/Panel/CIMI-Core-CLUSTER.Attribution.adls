@@ -1,0 +1,152 @@
+﻿archetype (adl_version=1.5)
+	CIMI-Core-CLUSTER.Attribution.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"07/09/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Manual rendering of Attribution CEM">
+			use = <"#include StandardLabObs documentation here#">
+			keywords = <"lab", "etc">
+			copyright = <"© Intermountain Health">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Todd Stevenson", "Alan James", "Joey Coyle", "Tom Oniki", "Craig Parker", "Stan Huff">
+
+definition
+	CLUSTER[at0000] matches {
+		item matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {
+				value matches {[ac0001]}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {
+				value matches {
+					DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {
+				value matches {
+					DATE_TIME matches {*}
+				}
+			}
+			CLUSTER[at0004] occurrences matches {0..1} matches {
+				item matches {
+					ELEMENT[at0020] occurrences matches {0..1} matches {
+						value matches {
+							CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {
+				value matches {
+					TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"Attribution">
+				description = <"????">
+			>
+			["at0001"] = <
+				text = <"Data">
+				description = <"???">
+			>
+			["at0002"] = <
+				text = <"StartTime">
+				description = <"???">
+			>
+			["at0003"] = <
+				text = <"EndTime">
+				description = <"???">
+			>
+			["at0004"] = <
+				text = <"Participant">
+				description = <"???">
+			>
+			["at0005"] = <
+				text = <"PatientLocation">
+				description = <"???">
+			>
+			["at0006"] = <
+				text = <"ProviderLocation">
+				description = <"???">
+			>
+			["at0007"] = <
+				text = <"Reason">
+				description = <"???">
+			>
+			["at0008"] = <
+				text = <"ActionMethod">
+				description = <"???">
+			>
+			["at0020"] = <
+				text = <"Role">
+				description = <"???">
+			>
+		>
+	>
+
+	constraint_definitions = <
+		["en"] = <
+			["ac0001"] = <
+				text = <"Attribution value">
+				description = <"???">
+			>
+			["ac0002"] = <
+				text = <"Reason value">
+				description = <"???">
+			>
+			["ac0003"] = <
+				text = <"ActionMethod value">
+				description = <"???">
+			>
+		>
+	>
+
+	term_bindings = <
+		["IHC"] = <
+			["at0000"] = <[IHC::Attribution_KEY_ECID]>
+			["at0001"] = <[IHC::Action_KEY_ECID]>
+			["at0002"] = <[IHC::StartTime_KEY_ECID]>
+			["at0003"] = <[IHC::EndTime_KEY_ECID]>
+			["at0004"] = <[IHC::Participant_KEY_ECID]>
+			["at0005"] = <[IHC::PatientLocation_KEY_ECID]>
+			["at0006"] = <[IHC::ProviderLocation_KEY_ECID]>
+			["at0007"] = <[IHC::Reason_KEY_ECID]>
+			["at0008"] = <[IHC::ActionMethod_KEY_ECID]>
+		>
+	>
+
+	constraint_bindings = <
+		["IHC"] = <
+			["ac0001"] = <terminology:intermountain.org?valueset=IHCIHC::Attribution_VALUESET_ECID>
+			["ac0002"] = <terminology:intermountain.org?valueset=IHCIHC::Reason_VALUESET_ECID>
+			["ac0003"] = <terminology:intermountain.org?valueset=IHCIHC::ActionMethod_VALUESET_ECID>
+		>
+	>
