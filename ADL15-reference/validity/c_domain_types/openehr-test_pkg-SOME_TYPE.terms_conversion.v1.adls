@@ -10,13 +10,13 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test terms expressed as inline C_CODED_TEXT dADL sections. This archetype will not pass the diff test, since the save form will revert to the C_CODED_TEXT special syntax, not inline dADL (although this could be changed easily)">
+			purpose = <"Test terms expressed as inline C_CODED_TEXT ODIN sections. This archetype will not pass the diff test, since the save form will revert to the C_CODED_TEXT special syntax, not inline ODIN (although this could be changed easily)">
 			keywords = <"ADL", "test">
 			copyright = <"copyright (c) 2004 The openEHR Foundation">
 		>
 	>
 	other_details = <
-		["regression"] = <"PASS">
+		["regression"] = <"SDINV">
 	>
 	lifecycle_state = <"draft">
 
