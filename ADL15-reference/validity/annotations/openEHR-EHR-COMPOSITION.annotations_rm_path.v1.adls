@@ -126,6 +126,7 @@ annotations
 				["/context/start_time"] = <
 					items = <
 						["test"] = <"XXXX">
+						["local_name"] = <"consultation start time">
 					>
 				>
 				["/context/location"] = <
