@@ -54,63 +54,61 @@ definition
 ontology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"General statement of exclusions or states">
-					description = <"A category of conditions or states which have been excluded">
-				>
-				["at0001"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"Statement">
-					description = <"The statement about what is excluded">
-				>
-				["at0003"] = <
-					text = <"No significant illness">
-					description = <"The person has no significant medical condition">
-				>
-				["at0004"] = <
-					text = <"No significant past history">
-					description = <"The person has no significant past medical history">
-				>
-				["at0005"] = <
-					text = <"No significant family history">
-					description = <"The person has no relatives with significant health problems">
-				>
-				["at0006"] = <
-					text = <"No known adverse reactions">
-					description = <"The person has had no adverse reactions, including intolerances, sensitivities or allergies, to medications, food, animals or chemicals">
-				>
-				["at0007"] = <
-					text = <"No known sensitivities">
-					description = <"No sensitivity to any medications, foods or substances">
-				>
-				["at0008"] = <
-					text = <"No known intolerances">
-					description = <"No known or recorded intolerances to medications, foods or other substances">
-				>
-				["at0009"] = <
-					text = <"No relevant past history">
-					description = <"No past problems or procedures relevant to the current situation">
-				>
-				["at0010"] = <
-					text = <"No hospitalisations">
-					description = <"No admissions to hospital">
-				>
-				["at0011"] = <
-					text = <"No major surgery">
-					description = <"No major operations or procedures">
-				>
-				["at0012"] = <
-					text = <"No relevant family history">
-					description = <"No family history relevant to the current situation">
-				>
-				["at0013"] = <
-					text = <"No known allergies">
-					description = <"No allergies known to any medications, foods or substances">
-				>
+			["at0000"] = <
+				text = <"General statement of exclusions or states">
+				description = <"A category of conditions or states which have been excluded">
+			>
+			["at0001"] = <
+				text = <"Tree">
+				description = <"@ internal @">
+			>
+			["at0002"] = <
+				text = <"Statement">
+				description = <"The statement about what is excluded">
+			>
+			["at0003"] = <
+				text = <"No significant illness">
+				description = <"The person has no significant medical condition">
+			>
+			["at0004"] = <
+				text = <"No significant past history">
+				description = <"The person has no significant past medical history">
+			>
+			["at0005"] = <
+				text = <"No significant family history">
+				description = <"The person has no relatives with significant health problems">
+			>
+			["at0006"] = <
+				text = <"No known adverse reactions">
+				description = <"The person has had no adverse reactions, including intolerances, sensitivities or allergies, to medications, food, animals or chemicals">
+			>
+			["at0007"] = <
+				text = <"No known sensitivities">
+				description = <"No sensitivity to any medications, foods or substances">
+			>
+			["at0008"] = <
+				text = <"No known intolerances">
+				description = <"No known or recorded intolerances to medications, foods or other substances">
+			>
+			["at0009"] = <
+				text = <"No relevant past history">
+				description = <"No past problems or procedures relevant to the current situation">
+			>
+			["at0010"] = <
+				text = <"No hospitalisations">
+				description = <"No admissions to hospital">
+			>
+			["at0011"] = <
+				text = <"No major surgery">
+				description = <"No major operations or procedures">
+			>
+			["at0012"] = <
+				text = <"No relevant family history">
+				description = <"No family history relevant to the current situation">
+			>
+			["at0013"] = <
+				text = <"No known allergies">
+				description = <"No allergies known to any medications, foods or substances">
 			>
 		>
 	>
