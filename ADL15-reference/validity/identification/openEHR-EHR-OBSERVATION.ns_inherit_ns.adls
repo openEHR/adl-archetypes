@@ -1,0 +1,46 @@
+archetype (adl_version=1.5)
+	org.openehr::openEHR-EHR-OBSERVATION.ns_inherit_ns.v1.3.15+47
+
+specialise
+	org.openehr::openEHR-EHR-OBSERVATION.full_id_1.v1.0.4
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["organisation"] = <"Ocean Informatics">
+		["name"] = <"Thomas Beale">
+		["date"] = <"11/8/2008">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Test full namespaced & versioned id">
+		>
+	>
+	other_details = <
+		["regression"] = <"PASS">
+	>
+	lifecycle_state = <"initial">
+
+definition
+	OBSERVATION[at0000.1] matches {
+		data matches {
+			HISTORY matches
+				{*}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"specialised archetype">
+					description = <"specialised child archetype">
+				>
+			>
+		>
+	>
