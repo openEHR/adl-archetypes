@@ -41,7 +41,6 @@ description
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
-	other_contributors = <>
 	other_details = <
 		["references"] = <"ISO/TS 22220:2008(E) - Identification of Subject of Care - Technical Specification- International Organization for Standardization">
 	>
@@ -52,24 +51,25 @@ definition
 			ELEMENT[at0001] occurrences matches {1} matches { -- Type of biometric identifier
 				value matches { 
 					DV_CODED_TEXT matches {
-						defining_code matches {[local::
-                                       			                at0020,     -- 01 - Finger print—rolled
-                                       			                at0021,     -- 02 - Finger print—flat
-                                       			                at0022,     -- 03 - Facial features
-                                      			                at0023,     -- 04 - Voice
-                                       			                at0024,     -- 05 - Iris
-                                       			                at0025,     -- 06 - Retina
-                                      			                at0026,     -- 07 - Hand geometry
-                                       			                at0027,     -- 08 - Signature dynamics
-                                       			                at0028,     -- 09 - Keystroke dynamics
-                                      			                at0029,     -- 10 - Lip movement
-                                       			                at0030,     -- 11 - Thermal face image
-                                       			                at0031,     -- 12 - Thermal hand image
-                                      			                at0032,     -- 13 - Gait
-                                       			                at0033,     -- 14 - Blood type (including rh factor)
-                                       			                at0034,     -- 15 - DNA
-							                at0035]	    -- 99 - Unknown
-								        }
+						defining_code matches {
+							[local::
+							at0020,     -- 01 - Finger print—rolled
+							at0021,     -- 02 - Finger print—flat
+							at0022,     -- 03 - Facial features
+							at0023,     -- 04 - Voice
+							at0024,     -- 05 - Iris
+							at0025,     -- 06 - Retina
+							at0026,     -- 07 - Hand geometry
+							at0027,     -- 08 - Signature dynamics
+							at0028,     -- 09 - Keystroke dynamics
+							at0029,     -- 10 - Lip movement
+							at0030,     -- 11 - Thermal face image
+							at0031,     -- 12 - Thermal hand image
+							at0032,     -- 13 - Gait
+							at0033,     -- 14 - Blood type (including rh factor)
+							at0034,     -- 15 - DNA
+							at0035]	    -- 99 - Unknown
+						}
 					}
 				}
 			}

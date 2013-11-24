@@ -114,9 +114,9 @@ definition
 						}
 						state matches {
 							ITEM_TREE[at0.89] matches {	-- Tree
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									CLUSTER[at0.90] occurrences matches {0..1} matches {	-- Diet
-										items cardinality matches {0..*; unordered} matches {
+										items matches {
 											ELEMENT[at0.91] occurrences matches {0..1} matches {	-- Intake
 												value matches {
 													DV_CODED_TEXT matches {
@@ -146,7 +146,7 @@ definition
 										}
 									}
 									CLUSTER[at0.98] occurrences matches {0..1} matches {	-- Glucose challenge
-										items cardinality matches {0..*; unordered} matches {
+										items matches {
 											ELEMENT[at0.100] occurrences matches {0..1} matches {	-- Dose
 												value matches {
 													C_DV_QUANTITY <
@@ -188,7 +188,7 @@ definition
 										}
 									}
 									CLUSTER[at0.107] occurrences matches {0..1} matches {	-- Insulin challenge
-										items cardinality matches {0..*; unordered} matches {
+										items matches {
 											ELEMENT[at0.110] occurrences matches {0..1} matches {	-- Dose
 												value matches {
 													C_DV_QUANTITY <
@@ -219,7 +219,7 @@ definition
 										}
 									}
 									CLUSTER[at0.108] occurrences matches {0..1} matches {	-- Event
-										items cardinality matches {0..*; unordered} matches {
+										items matches {
 											ELEMENT[at0.109] occurrences matches {0..1} matches {	-- Event name
 												value matches {
 													DV_TEXT matches {*}
@@ -238,9 +238,9 @@ definition
 		}
 		protocol matches {
 			ITEM_TREE[at0004] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					CLUSTER[at0013] occurrences matches {0..1} matches {	-- Test identification
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0062] occurrences matches {0..1} matches {	-- Placer order identifier
 								value matches {
 									DV_TEXT matches {*}

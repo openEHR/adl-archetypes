@@ -92,7 +92,7 @@ definition
 												value matches {
 													DV_MULTIMEDIA matches {
 														media_type matches {
-															[openEHR::
+															[openehr::
 															425, 
 															426, 
 															427, 

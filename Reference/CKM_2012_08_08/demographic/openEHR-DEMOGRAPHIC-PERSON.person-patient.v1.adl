@@ -51,21 +51,21 @@ description
 definition
     PERSON[at0000.1] matches {  -- patient demographic data
         details matches {
-            allow_archetype ITEM_TREE[at0001] occurrences matches {1..1} matches {
+            allow_archetype ITEM_TREE[at0001] occurrences matches {1} matches {
                 include
                    archetype_id/value matches {/(person_details)[a-zA-Z0-9_-]*\.v1/}
             }
         }
         identities matches {
-            allow_archetype PARTY_IDENTITY[at0002.1] occurrences matches {1..1} matches {
+            allow_archetype PARTY_IDENTITY[at0002.1] occurrences matches {1} matches {
                 include
                     archetype_id/value matches {/(person_name)[a-zA-Z0-9_-]*\.v1/}
             }
         }
         contacts matches {
-            CONTACT[at0003.1] occurrences matches {1..1} matches {  -- Contacts
+            CONTACT[at0003.1] occurrences matches {1} matches {  -- Contacts
                 addresses matches {
-                    allow_archetype ADDRESS[at0030] occurrences matches {1..1} matches {
+                    allow_archetype ADDRESS[at0030] occurrences matches {1} matches {
                         include
                             archetype_id/value matches {/(address)([a-zA-Z0-9_]+)*\.v1/}
                             archetype_id/value matches {/(electronic_communication)[a-zA-Z0-9_-]*\.v1/}

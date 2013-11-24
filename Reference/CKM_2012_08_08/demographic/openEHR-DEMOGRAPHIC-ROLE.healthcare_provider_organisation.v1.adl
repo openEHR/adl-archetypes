@@ -15,6 +15,7 @@ language
 			>
 		>
 	>
+
 description
 	original_author = <
 		["name"] = <"Sergio Miranda Freire & Rigoleta Dutra Mediano Dias">
@@ -41,10 +42,9 @@ description
 		>
 	>
 	lifecycle_state = <"Authordraft">
-	other_contributors = <>
 
 definition
-    ROLE[at0000] matches {   
+	ROLE[at0000] matches {   
         details matches {
             ITEM_TREE[at0001] occurrences matches {0..1} matches {  -- Identifiers
                 items existence matches {0..1} cardinality matches {1..*; unordered; unique} matches {
@@ -76,8 +76,6 @@ definition
             }
         }
     }
-
-
 
 ontology
 	term_definitions = <

@@ -64,7 +64,7 @@ definition
 						}	
 
 					}
-        	    		}
+				}
 		   	}
 
 			PARTY_RELATIONSHIP[at0003] matches {	-- patient - a relationship between a healthcare consumer and a healthcare provider organisation/individual provider
@@ -77,12 +77,10 @@ definition
 							}
 						}	
 					}
-        	  		}
-		    	}
+				}
+			}
 		}
 	}
-		
-
 
 ontology
 	term_definitions = <

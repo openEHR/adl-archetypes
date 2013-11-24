@@ -50,20 +50,20 @@ description
 
 definition
 	ADDRESS[at0000.1] matches {	-- Healthcare Provider Address
-	        name matches {
-        	    DV_TEXT matches {*} 
-        	    DV_CODED_TEXT matches { 
-        	        defining_code matches {
-        	            [local::
-        	            at0461,
-        	            at0462,
-        	            at0463,
-        	            at0464,
-        	            at0465,
-        	            at0466]
-        	        }
-        	    }
-        	}
+		name matches {
+			DV_TEXT matches {*} 
+			DV_CODED_TEXT matches { 
+				defining_code matches {
+					[local::
+					at0461,
+					at0462,
+					at0463,
+					at0464,
+					at0465,
+					at0466]
+				}
+			}
+		}
 		details matches {
 			ITEM_TREE[at0001]  occurrences matches {0..1}  matches {	-- Items
 				items matches {

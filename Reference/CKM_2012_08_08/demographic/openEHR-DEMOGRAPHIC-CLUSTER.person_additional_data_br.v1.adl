@@ -41,29 +41,26 @@ description
 		>
 	>
 	lifecycle_state = <"Authordraft">
-	other_contributors = <>
 
 definition
-      CLUSTER[at0000] occurrences matches {0..1} matches {  -- Additional person demographic data 
-           items matches {
-                  ELEMENT[at0001] occurrences matches {0..*} matches {  -- Marital Status
-                        value matches {
-                            DV_CODED_TEXT matches { 
-                                defining_code matches {[ac0001]}
-                            }
-                        }
-                  }
-                  ELEMENT[at0002] occurrences matches {0..*} matches {  -- Ethnic group
-                        value matches {
-                            DV_CODED_TEXT matches { 
-                                defining_code matches {[ac0002]}
-                            }
-                        }
-                  }
-            }
-     }
-
-
+	CLUSTER[at0000] occurrences matches {0..1} matches {  -- Additional person demographic data 
+		items matches {
+			ELEMENT[at0001] occurrences matches {0..*} matches {  -- Marital Status
+				value matches {
+					DV_CODED_TEXT matches { 
+						defining_code matches {[ac0001]}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..*} matches {  -- Ethnic group
+				value matches {
+					DV_CODED_TEXT matches { 
+						defining_code matches {[ac0002]}
+					}
+				}
+			}
+		}
+	}
 
 ontology
 	term_definitions = <
