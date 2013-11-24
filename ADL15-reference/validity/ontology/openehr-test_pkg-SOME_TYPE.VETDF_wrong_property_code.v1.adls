@@ -24,19 +24,13 @@ description
 definition
 	SOME_TYPE[at0000] matches {	-- root item
 		clinical_quantity_attr_1 matches {
-			(C_DV_QUANTITY) <
-				property = <[openehr::temperature]>
-				list = <
-					["1"] = <
-						units = <"C">
-						magnitude = <|>=37.0|>
-					>
-					["2"] = <
-						units = <"F">
-						magnitude = <|>=96.0|>
-					>
-				>
-			>
+			DV_QUANTITY  matches {
+				property matches {[openehr::temperature]}
+				[units, magnitude] matches {
+					[{"C"}, {|>=37.0|}],
+					[{"F"}, {|>=96.0|}]
+				}
+			}
 		}
 	}
 

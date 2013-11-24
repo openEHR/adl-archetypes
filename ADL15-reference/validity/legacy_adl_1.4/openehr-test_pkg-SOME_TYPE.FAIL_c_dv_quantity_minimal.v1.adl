@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openehr-TEST_PKG-SOME_TYPE.c_dv_quantity_minimal.v1
+archetype (adl_version=1.4)
+	openehr-TEST_PKG-SOME_TYPE.FAIL_c_dv_quantity_minimal.v1
 
 language
 	original_language = <[ISO_639-1::en]>

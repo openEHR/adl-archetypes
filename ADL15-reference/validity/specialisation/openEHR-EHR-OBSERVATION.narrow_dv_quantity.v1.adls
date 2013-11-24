@@ -16,7 +16,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Specialised archetype illustrating constraint narrowing of a C_DV_QUANTITY">
+			purpose = <"Specialised archetype illustrating constraint narrowing of a DV_QUANTITY">
 			use = <"Test">
 			keywords = <"test", "constraint narrowing">
 			copyright = <"© openEHR Foundation">
@@ -30,15 +30,12 @@ description
 definition
 	OBSERVATION[at0000.1] matches { 	-- Body temperature new GP
 		/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value matches {
-			C_DV_QUANTITY <
-				property = <[openehr::127]>
-				list = <
-					["1"] = <
-						units = <"°C">
-						precision = <|1|>
-					>
-				>
-			>
+			DV_QUANTITY matches {
+				property matches {[openehr::127]}
+				[units, precision] matches {
+					[{"°C"}, {1}]
+				}
+			}
 		}
 	}
 

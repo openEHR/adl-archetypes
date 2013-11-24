@@ -1,10 +1,12 @@
 archetype (adl_version=1.5)
-	openEHR-EHR-OBSERVATION.VSONCT_redefine_rm_type.v1
+	openEHR-EHR-OBSERVATION.VCORMT_redefine_rm_type.v1
+
 specialise
 	openEHR-EHR-OBSERVATION.spec_test_obs.v1
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["organisation"] = <"Ocean Informatics">
@@ -14,11 +16,11 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VSONCT validity check, triggered by illegal refinement of RM type">
+			purpose = <"Test VCORMT validity check, triggered by illegal refinement of RM type">
 		>
 	>
 	other_details = <
-		["regression"] = <"VSONCT">
+		["regression"] = <"VCORMT">
 	>
 	lifecycle_state = <"draft">
 

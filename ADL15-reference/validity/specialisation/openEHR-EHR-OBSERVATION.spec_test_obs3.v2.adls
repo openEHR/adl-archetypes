@@ -37,15 +37,11 @@ definition
 										items cardinality matches {1..8; ordered} matches {
 											ELEMENT[at0004] occurrences matches {0..1} matches {	
 												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::125]>
-														list = <
-															["1"] = <
-																units = <"kPa">
-																magnitude = <|>=0.0|>
-															>
-														>
-													>
+													DV_QUANTITY matches {
+														property matches {[openehr::125]}
+														units matches {"kPa"}
+														magnitude matches {|>=0.0|}
+													}
 												}
 											}
 										}

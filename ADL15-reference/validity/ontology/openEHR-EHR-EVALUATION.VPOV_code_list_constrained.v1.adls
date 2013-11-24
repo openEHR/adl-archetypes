@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.5)
-	openEHR-EHR-EVALUATION.VSDTV_code_list_constrained.v1
+	openEHR-EHR-EVALUATION.VPOV_code_list_constrained.v1
 
 specialize
 	openEHR-EHR-EVALUATION.code_list_parent.v1
@@ -15,12 +15,12 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To verify VSDTV; test constraining of list of codes; it is done illegally here, because the codes should be from the parent">
+			purpose = <"To verify VPOV; test constraining of list of codes; it is done illegally here, because the codes should be from the parent">
 			copyright = <"copyright (c) 2013 openEHR Foundation">
 		>
 	>
 	other_details = <
-		["regression"] = <"VSDTV">
+		["regression"] = <"VPOV">
 	>
 
 definition

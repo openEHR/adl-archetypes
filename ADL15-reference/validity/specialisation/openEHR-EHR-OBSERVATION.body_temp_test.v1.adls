@@ -36,19 +36,13 @@ definition
 								items cardinality matches {1; unordered} matches {
 									ELEMENT[at0004] matches {	-- Temperature
 										value matches {
-											(C_DV_QUANTITY) <
-												property = <[openehr::127]>
-												list = <
-													["1"] = <
-														units = <"°C">
-														precision = <|1|>
-													>
-													["2"] = <
-														units = <"°F">
-														precision = <|1|>
-													>
-												>
-											>
+											DV_QUANTITY matches {
+												property matches {[openehr::127]}
+												[units, precision] matches {
+													[{"°C"}, {1}],
+													[{"°F"}, {1}]
+												}
+											}
 										}
 									}
 								}

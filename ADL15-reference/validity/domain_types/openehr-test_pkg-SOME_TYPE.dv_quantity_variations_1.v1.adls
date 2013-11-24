@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-	openehr-TEST_PKG-SOME_TYPE.property_code_phrase.v1
+	openehr-TEST_PKG-SOME_TYPE.dv_quantity_variations_1.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -10,9 +10,9 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Illustrates the use C_DV_QUANTITY with property of type CODE_PHRASE rather than STRING">
+			purpose = <"Illustrates variationns on DV_QUANTITY constraints">
 			keywords = <"ADL", "test">
-			copyright = <"copyright (c) 2006 The openEHR Foundation">
+			copyright = <"copyright (c) 2004 The openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -23,47 +23,30 @@ description
 definition
 	SOME_TYPE[at0000] matches {	-- root item
 		standard_quantity_attr matches {
-			DV_QUANTITY[at0001] matches {
+			DV_QUANTITY [at0001] matches {
 				units matches {"C"}
 				magnitude matches {|>=4.0|}
 			}
-			DV_QUANTITY[at0002] matches {
+			DV_QUANTITY [at0002] matches {
 				units matches {"F"}
 				magnitude matches {|>=40.0|}
 			}
 		}
 		clinical_quantity_attr_1 matches {
-			C_DV_QUANTITY <
-				assumed_value = <
-					units = <"C">
-					precision = <0>
-					magnitude = <8.0>
-				>
-				property = <[openehr::127]>
-				list = <
-					["1"] = <
-						units = <"C">
-						magnitude = <|>=4.0|>
-					>
-					["2"] = <
-						units = <"F">
-						magnitude = <|>=40.0|>
-					>
-				>
+			DV_QUANTITY matches {
+				property matches {[openehr::127]}
+				[units, magnitude] matches {
+					[{"C"}, {|>=4.0|}],
+					[{"F"}, {|>=40.0|}];
+					[{"C"}, {8.0}]
+				}
 			>
 		}
 		clinical_quantity_attr_2 matches {
-			C_DV_QUANTITY <
-				property = <[openehr::127]>
-				list = <
-					["1"] = <
-						units = <"C">
-					>
-					["2"] = <
-						units = <"F">
-					>
-				>
-			>
+			DV_QUANTITY matches {
+				property matches {[openehr::127]}
+				units matches {"C", "F"}
+			}
 		}
 		clinical_quantity_attr_4 matches {
 			DV_COUNT matches {
@@ -74,6 +57,12 @@ definition
 			DV_COUNT matches {
 				magnitude matches {|>=0|}
 			}
+		}
+		clinical_quantity_attr_6 matches {
+			DV_QUANTITY matches {
+				property matches {[openehr::127]}
+				precision matches {2}
+			>
 		}
 	}
 
@@ -86,12 +75,12 @@ ontology
 					text = <"root item">
 				>
 				["at0001"] = <
-					description = <"quantity in celcius">
-					text = <"quantity in celcius">
+					description = <"Centigrade temperature">
+					text = <"Centigrade temperature">
 				>
 				["at0002"] = <
-					description = <"quantity in fahrenheit">
-					text = <"quantity in fahrenheit">
+					description = <"Fahrenheit temperature">
+					text = <"Fahrenheit temperature">
 				>
 			>
 		>

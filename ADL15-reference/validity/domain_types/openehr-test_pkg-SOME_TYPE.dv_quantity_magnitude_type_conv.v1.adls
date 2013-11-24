@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-	openehr-TEST_PKG-SOME_TYPE.c_dv_quantity_magnitude_type_conv.v1
+	openehr-TEST_PKG-SOME_TYPE.dv_quantity_magnitude_type_conv.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -10,7 +10,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Illustrates behaviour of workbench when C_DV_QUANTITY field of wrong type - magnitudes are wrongly integers not reals - these are silently converted">
+			purpose = <"Illustrates behaviour of workbench when DV_QUANTITY field of wrong type - magnitudes are wrongly integers not reals - these are silently converted">
 			keywords = <"ADL", "test">
 			copyright = <"copyright (c) 2005 The openEHR Foundation">
 		>
@@ -23,19 +23,13 @@ description
 definition
 	SOME_TYPE[at0000] matches {	-- root item
 		clinical_quantity_attr_1 matches {
-			(C_DV_QUANTITY) <
-				property = <[openehr::127]>
-				list = <
-					["1"] = <
-						units = <"C">
-						magnitude = <|>=0|>
-					>
-					["2"] = <
-						units = <"F">
-						magnitude = <|>=0|>
-					>
-				>
-			>
+			DV_QUANTITY matches {
+				property matches {[openehr::127]}
+				[units, magnitude] matches {
+					[{"C"}, {|>=0|}],
+					[{"F"}, {|>=0|}]
+				}
+			}
 		}
 	}
 

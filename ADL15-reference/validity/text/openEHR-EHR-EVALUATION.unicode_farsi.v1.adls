@@ -76,27 +76,15 @@ definition
 									}
 									ELEMENT[at0104] occurrences matches {0..1} matches {	-- Age at onset
 										value matches {
-											C_DV_QUANTITY <
-												property = <[openehr::128]>
-												list = <
-													["1"] = <
-														units = <"yr">
-														magnitude = <|0.0..200.0|>
-													>
-													["2"] = <
-														units = <"mth">
-														magnitude = <|0.0..36.0|>
-													>
-													["3"] = <
-														units = <"wk">
-														magnitude = <|0.0..52.0|>
-													>
-													["4"] = <
-														units = <"day">
-														magnitude = <|0.0..56.0|>
-													>
-												>
-											>
+											DV_QUANTITY matches {
+												property matches {[openehr::128]}
+												[units, magnitude] matches {
+													[{"yr"}, {|0.0..200.0|}],
+													[{"mth"}, {|0.0..36.0|}],
+													[{"wk"}, {|0.0..52.0|}],
+													[{"day"}, {|0.0..56.0|}]
+												}
+											}
 										}
 									}
 									ELEMENT[at0127] occurrences matches {0..1} matches {	-- Date of onset
@@ -109,15 +97,11 @@ definition
 
 									ELEMENT[at0105] occurrences matches {0..1} matches {	-- Age at death
 										value matches {
-											C_DV_QUANTITY <
-												property = <[openehr::128]>
-												list = <
-													["1"] = <
-														units = <"yr">
-														magnitude = <|0.0..200.0|>
-													>
-												>
-											>
+											DV_QUANTITY matches {
+												property matches {[openehr::128]}
+												units matches {"yr"}
+												magnitude matches {|0.0..200.0|}
+											}
 										}
 									}
 									ELEMENT[at0106] occurrences matches {0..1} matches {	-- Date of death
@@ -136,9 +120,13 @@ definition
 									}
 									ELEMENT[at0108] occurrences matches {0..1} matches {	-- Severity
 										value matches {
-											1|[local::at0109], 	-- Mild
-											4|[local::at0110], 	-- Moderate
-											7|[local::at0111]  	-- Severe
+											DV_ORDINAL matches {
+												[value, symbol] matches {
+													[{1}, {[local::at0109]}], 	-- Mild
+													[{4}, {[local::at0110]}], 	-- Moderate
+													[{7}, {[local::at0111]}]  	-- Severe
+												}
+											}
 										}
 									}
 									ELEMENT[at0128] occurrences matches {0..1} matches {	-- More specific condition

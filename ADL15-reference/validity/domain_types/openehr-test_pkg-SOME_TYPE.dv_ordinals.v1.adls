@@ -1,8 +1,9 @@
 archetype (adl_version=1.5)
-	openehr-TEST_PKG-SOME_TYPE.ordinals.v1
+	openehr-TEST_PKG-SOME_TYPE.dv_ordinals.v1
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
@@ -49,10 +50,13 @@ definition
 			}
 		}
 		clinical_ordinal_attr_1 matches {
-			0|[local::at0001], 	-- +
-			1|[local::at0002], 	-- ++
-			2|[local::at0003]; 	-- +++
-			0  	-- assumed value
+			DV_ORDINAL matches {
+				[value, symbol] matches {
+					[{0}, {[local::at0001]}], 	-- +
+					[{1}, {[local::at0002]}], 	-- ++
+					[{2}, {[local::at0003]}] 	-- +++
+				}
+			}
 		}
 	}
 
