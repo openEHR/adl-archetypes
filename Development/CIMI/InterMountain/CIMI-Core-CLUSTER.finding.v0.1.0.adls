@@ -1,0 +1,148 @@
+archetype (adl_version=1.5)
+  CIMI-Core-CLUSTER.Finding.v0.1.0
+
+language
+  original_language = <[ISO_639-1::en]>
+
+description
+  original_author = <
+    ["name"] = <"">
+    ["date"] = <"05/04/2013">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"">
+      use = <"">
+      misuse = <"">
+      copyright = <"">
+    >
+  >
+  lifecycle_state = <"initial">
+
+
+definition
+  CLUSTER[at0000] matches { -- Finding
+    item matches {
+      ELEMENT[at0001] occurrences matches {0..*} matches { -- Identifier
+        value matches {
+          IDENTIFIER matches {*}
+        }
+      }
+      ELEMENT[at0002] occurrences matches {0..1} matches { -- Name
+        value matches {
+          TEXT matches {*}
+        }
+      }
+      ELEMENT[at0003] occurrences matches {0..1} matches { -- Status
+        value matches {
+          CODED_TEXT matches {*}
+        }
+      }
+      ELEMENT[at0004] occurrences matches {0..1} matches { -- Interpretation category
+        value matches {
+          CODED_TEXT matches {*}
+        }
+      }
+      ELEMENT[at0005] occurrences matches {0..1} matches { -- Sequence
+        value matches {
+          COUNT matches {*}
+        }
+      }
+      ELEMENT[at0006] occurrences matches {0..*} matches { -- Comment
+        value matches {
+          TEXT matches {*}
+        }
+      }
+      ITEM[at0007] occurrences matches {0..*} -- Finding
+      ITEM[at0008] occurrences matches {0..*} -- Details
+      use_archetype CLUSTER[CIMI-RM-CLUSTER.cancel_action.v0]
+      use_archetype CLUSTER[CIMI-RM-CLUSTER.report_action.v0]
+      use_archetype CLUSTER[CIMI-RM-CLUSTER.approve_action.v0]
+      use_archetype CLUSTER[CIMI-RM-CLUSTER.interpret_action.v0]
+      use_archetype CLUSTER[CIMI-RM-CLUSTER.observe_action.v0]
+    }
+  }
+
+
+
+ontology
+
+  term_definitions = <
+    ["en"] = <
+      ["at0000"] = <
+        text = <"Cancel action">
+        description = <"Cancel action">
+      >
+      ["at0001"] = <
+        text = <"Report action">
+        description = <"Report action">
+      >
+      ["at0002"] = <
+        text = <"Approve action">
+        description = <"Approve action">
+      >
+      ["at0003"] = <
+        text = <"Interpret action">
+        description = <"Interpret action">
+      >
+      ["at0004"] = <
+        text = <"Observe action">
+        description = <"Observe action">
+      >
+      ["at0005"] = <
+        text = <"Identifier">
+        description = <"Identifier">
+      >
+      ["at0006"] = <
+        text = <"Name">
+        description = <"Name">
+      >
+      ["at0007"] = <
+        text = <"Finding">
+        description = <"Finding">
+      >
+      ["at0008"] = <
+        text = <"Status">
+        description = <"Status">
+      >
+      ["at0009"] = <
+        text = <"Interpretation category">
+        description = <"Interpretation category">
+      >
+      ["at0010"] = <
+        text = <"Sequence">
+        description = <"Sequence">
+      >
+      ["at0011"] = <
+        text = <"Comment">
+        description = <"Comment">
+      >
+      ["at0012"] = <
+        text = <"Details">
+        description = <"Details">
+      >
+    >
+  >
+
+
+  term_bindings = <
+    ["SNOMED-CT"] = <
+      items = <
+        ["at0000"] = <[SNOMED-CT::]>
+        ["at0001"] = <[SNOMED-CT::308561006]>
+        ["at0002"] = <[SNOMED-CT::]>
+        ["at0003"] = <[SNOMED-CT::]>
+        ["at0004"] = <[SNOMED-CT::]>
+        ["at0005"] = <[SNOMED-CT::423901009]>
+        ["at0006"] = <[SNOMED-CT::363787002]>
+        ["at0007"] = <[SNOMED-CT::404684003]>
+        ["at0008"] = <[SNOMED-CT::138875005]>
+        ["at0009"] = <[SNOMED-CT::442499005]>
+        ["at0010"] = <[SNOMED-CT::138875005]>
+        ["at0011"] = <[SNOMED-CT::138875005]>
+        ["at0012"] = <[SNOMED-CT::138875005]>
+      >
+    >
+  >
+

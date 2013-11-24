@@ -1,0 +1,110 @@
+archetype (adl_version=1.5)
+  CIMI-Core-ENTRY.Laboratory Test Observation.v0.2.0
+
+language
+  original_language = <[ISO_639-1::en]>
+
+
+description
+  original_author = <
+    ["name"] = <"">
+    ["date"] = <"05/04/2013">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"">
+      use = <"">
+      misuse = <"">
+      copyright = <"">
+    >
+  >
+  lifecycle_state = <"initial">
+
+
+definition
+  ENTRY - OBSERVATION[at0000] matches { -- Laboratory Test Observation
+    item matches {
+      ITEM[at0001] occurrences matches {0..*} -- Details
+      use_archetype CLUSTER[REF<CIMI-CLUSTER.interpret_action>]
+      use_archetype CLUSTER[REF<CIMI-CLUSTER.approve_action>]
+      use_archetype CLUSTER[REF<CIMI-CLUSTER.report_action>]
+      use_archetype CLUSTER[REF<CIMI-CLUSTER.cancel_action>]
+      use_archetype CLUSTER[REF<CIMI-CLUSTER.action>]
+    }
+    data matches {
+      use_archetype CLUSTER[REF<CIMI-CLUSTER.interpret_action>]
+      use_archetype CLUSTER[REF<CIMI-CLUSTER.approve_action>]
+      use_archetype CLUSTER[REF<CIMI-CLUSTER.report_action>]
+      use_archetype CLUSTER[REF<CIMI-CLUSTER.cancel_action>]
+      use_archetype CLUSTER[REF<CIMI-CLUSTER.action>]
+    }
+  }
+
+
+
+ontology
+
+  term_definitions = <
+    ["en"] = <
+      ["at0000"] = <
+        text = <"Test observable">
+        description = <"Test observable">
+      >
+      ["at0001"] = <
+        text = <"Test results">
+        description = <"Test results">
+      >
+      ["at0002"] = <
+        text = <"Details">
+        description = <"Details">
+      >
+      ["at0003"] = <
+        text = <"Observe action">
+        description = <"Observe action">
+      >
+      ["at0004"] = <
+        text = <"Interpret action">
+        description = <"Interpret action">
+      >
+      ["at0005"] = <
+        text = <"Approve action">
+        description = <"Approve action">
+      >
+      ["at0006"] = <
+        text = <"Report action">
+        description = <"Report action">
+      >
+      ["at0007"] = <
+        text = <"Cancel action">
+        description = <"Cancel action">
+      >
+      ["at0008"] = <
+        text = <"Update action">
+        description = <"Update action">
+      >
+      ["at0009"] = <
+        text = <"Action">
+        description = <"Action">
+      >
+    >
+  >
+
+
+  term_bindings = <
+    ["SNOMED-CT"] = <
+      items = <
+        ["at0000"] = <[SNOMED-CT::364712009]>
+        ["at0001"] = <[SNOMED-CT::441742003]>
+        ["at0002"] = <[SNOMED-CT::138875005]>
+        ["at0003"] = <[SNOMED-CT::]>
+        ["at0004"] = <[SNOMED-CT::]>
+        ["at0005"] = <[SNOMED-CT::]>
+        ["at0006"] = <[SNOMED-CT::308561006]>
+        ["at0007"] = <[SNOMED-CT::]>
+        ["at0008"] = <[SNOMED-CT::]>
+        ["at0009"] = <[SNOMED-CT::71388002]>
+      >
+    >
+  >
+

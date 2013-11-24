@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-  cimi-RM-ENTRY.HeartRate.v1
+  CIMI-Core-ENTRY.HeartRate.v0.7.1
 
 language
   original_language = <[ISO_639-1::en]>

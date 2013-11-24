@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-  cimi-RM-ENTRY.BradenScale.v1
+  CIMI-Core-ENTRY.BradenScale.v1.0.93
 
 language
   original_language = <[ISO_639-1::en]>

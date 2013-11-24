@@ -1,0 +1,215 @@
+archetype (adl_version=1.5)
+  CIMI-Core-CLUSTER.Laboratory_Test_Result_Item.v0.1.0
+
+language
+  original_language = <[ISO_639-1::en]>
+
+
+description
+  original_author = <
+    ["name"] = <"">
+    ["date"] = <"05/04/2013">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"">
+      use = <"">
+      misuse = <"">
+      copyright = <"">
+    >
+  >
+  lifecycle_state = <"initial">
+
+
+definition
+  CLUSTER[at0000] matches { -- Laboratory Test Result Item
+    item matches {
+      ELEMENT[at0001] occurrences matches {0..*} matches { -- Identifier
+        value matches {
+          IDENTIFIER matches {*}
+        }
+      }
+      ELEMENT[at0002] occurrences matches {1} matches { -- Name
+        value matches {
+          TEXT matches {*}
+        }
+      }
+      ELEMENT[at0003] occurrences matches {0..1} matches { -- Status
+        value matches {
+          CODED_TEXT matches {*}
+        }
+      }
+      ELEMENT[at0004] occurrences matches {0..1} matches { -- Interpretation category
+        value matches {
+          CODED_TEXT matches {*}
+        }
+      }
+      ELEMENT[at0005] occurrences matches {0..1} matches { -- Sequence
+        value matches {
+          COUNT matches {*}
+        }
+      }
+      ELEMENT[at0006] occurrences matches {0..*} matches { -- Comment
+        value matches {
+          TEXT matches {*}
+        }
+      }
+      ELEMENT[at0007] occurrences matches {0..1} matches { -- Normal range
+        value matches {
+          INTERVAL<AMOUNT> matches {*}
+        }
+      }
+      ELEMENT[at0008] occurrences matches {0..1} matches { -- Delta flag
+        value matches {
+          CODED_TEXT matches {*}
+        }
+      }
+      ELEMENT[at0009] occurrences matches {0..1} matches { -- Signal flag
+        value matches {
+          CODED_TEXT matches {*}
+        }
+      }
+      ELEMENT[at0010] occurrences matches {0..1} matches { -- Confidence
+        value matches {
+          TEXT matches {*}
+        }
+      }
+      ELEMENT[at0011] occurrences matches {0..*} matches { -- Method
+        value matches {
+          TEXT matches {*}
+        }
+      }
+      use_archetype CLUSTER[CIMI-RM-CLUSTER.reference_range.v1]
+      use_archetype CLUSTER[CIMI-RM-CLUSTER.observe_action.v1]
+      use_archetype CLUSTER[CIMI-RM-CLUSTER.interpret_action.v1]
+      use_archetype CLUSTER[CIMI-RM-CLUSTER.approve_action.v1]
+      use_archetype CLUSTER[CIMI-RM-CLUSTER.report_action.v1]
+      use_archetype CLUSTER[CIMI-RM-CLUSTER.cancel_action.v1]
+      use_archetype CLUSTER[CIMI-RM-CLUSTER.action.v1]
+    }
+    link matches {
+      LINK[at0012] occurrences matches {0..*} -- Link
+    }
+    participation matches {
+      PARTICIPATION[at0013] occurrences matches {0..*} -- Participation
+    }
+  }
+
+
+
+ontology
+
+  term_definitions = <
+    ["en"] = <
+      ["at0000"] = <
+        text = <"Identifier">
+        description = <"Identifier">
+      >
+      ["at0001"] = <
+        text = <"Name">
+        description = <"Name">
+      >
+      ["at0002"] = <
+        text = <"Status">
+        description = <"Status">
+      >
+      ["at0003"] = <
+        text = <"Interpretation category">
+        description = <"Interpretation category">
+      >
+      ["at0004"] = <
+        text = <"Sequence">
+        description = <"Sequence">
+      >
+      ["at0005"] = <
+        text = <"Comment">
+        description = <"Comment">
+      >
+      ["at0006"] = <
+        text = <"Normal range">
+        description = <"Normal range">
+      >
+      ["at0007"] = <
+        text = <"Reference range">
+        description = <"Reference range">
+      >
+      ["at0008"] = <
+        text = <"Delta flag">
+        description = <"Delta flag">
+      >
+      ["at0009"] = <
+        text = <"Signal flag">
+        description = <"Signal flag">
+      >
+      ["at0010"] = <
+        text = <"Confidence">
+        description = <"Confidence">
+      >
+      ["at0011"] = <
+        text = <"Method">
+        description = <"Method">
+      >
+      ["at0012"] = <
+        text = <"Details">
+        description = <"Details">
+      >
+      ["at0013"] = <
+        text = <"Observe action">
+        description = <"Observe action">
+      >
+      ["at0014"] = <
+        text = <"Interpret action">
+        description = <"Interpret action">
+      >
+      ["at0015"] = <
+        text = <"Approve action">
+        description = <"Approve action">
+      >
+      ["at0016"] = <
+        text = <"Report action">
+        description = <"Report action">
+      >
+      ["at0017"] = <
+        text = <"Cancel action">
+        description = <"Cancel action">
+      >
+      ["at0018"] = <
+        text = <"Action">
+        description = <"Action">
+      >
+      ["at0019"] = <
+        text = <"Participation">
+        description = <"Participation">
+      >
+      ["at0020"] = <
+        text = <"Link">
+        description = <"Link">
+      >
+    >
+  >
+
+
+  term_bindings = <
+    ["SNOMED-CT"] = <
+      items = <
+        ["at0000"] = <[SNOMED-CT::423901009]>
+        ["at0001"] = <[SNOMED-CT::138875005]>
+        ["at0002"] = <[SNOMED-CT::138875005]>
+        ["at0003"] = <[SNOMED-CT::138875005]>
+        ["at0005"] = <[SNOMED-CT::138875005]>
+        ["at0006"] = <[SNOMED-CT::138875005]>
+        ["at0007"] = <[SNOMED-CT::138875005]>
+        ["at0008"] = <[SNOMED-CT::288533004]>
+        ["at0009"] = <[SNOMED-CT::288533004]>
+        ["at0010"] = <[SNOMED-CT::138875005]>
+        ["at0011"] = <[SNOMED-CT::138875005]>
+        ["at0012"] = <[SNOMED-CT::138875005]>
+        ["at0016"] = <[SNOMED-CT::308561006]>
+        ["at0018"] = <[SNOMED-CT::71388002]>
+        ["at0019"] = <[SNOMED-CT::48176007]>
+        ["at0020"] = <[SNOMED-CT::138875005]>
+      >
+    >
+  >
+

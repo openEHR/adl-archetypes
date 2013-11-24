@@ -1,0 +1,64 @@
+archetype (adl_version=1.5)
+  CIMI-Core-CLUSTER.findinggroup.v1
+
+language
+  original_language = <[ISO_639-1::en]>
+
+
+description
+  original_author = <
+    ["name"] = <"">
+    ["date"] = <"05/16/2013">
+  >
+  details = <
+    ["en"] = <
+      language = <[ISO_639-1::en]>
+      purpose = <"">
+      use = <"">
+      misuse = <"">
+      copyright = <"">
+    >
+  >
+  lifecycle_state = <"initial">
+
+
+definition
+  CLUSTER[at0000] matches { -- findinggroup
+    item matches {
+      use_archetype CLUSTER[at0001, CIMI-Core-CLUSTER.finding_item.v1] occurrences matches {0..*}
+      use_archetype CLUSTER[at0002, CIMI-Core-CLUSTER.finding_group.v1] occurrences matches {0..*}
+    }
+  }
+
+
+
+ontology
+
+  term_definitions = <
+    ["en"] = <
+      ["at0000"] = <
+        text = <"FindingGroup">
+        description = <"FindingGroup">
+      >
+      ["at0001"] = <
+        text = <"Finding item">
+        description = <"Finding item">
+      >
+      ["at0002"] = <
+        text = <"Finding subgroup">
+        description = <"Finding subgroup">
+      >
+    >
+  >
+
+
+  term_bindings = <
+    ["SNOMED-CT"] = <
+      items = <
+        ["at0000"] = <[SNOMED-CT::404684003]>
+        ["at0001"] = <[SNOMED-CT::404684003]>
+        ["at0002"] = <[SNOMED-CT::404684003]>
+      >
+    >
+  >
+
