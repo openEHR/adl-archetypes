@@ -31,7 +31,7 @@ description
 
 definition
 	CLUSTER[at0000] matches {	-- Tumour - Surgical resection margins
-		items cardinality matches {0..*; unordered} matches {
+		items matches {
 			ELEMENT[at0018] occurrences matches {0..1} matches {	-- Margin name
 				value matches {
 					DV_TEXT matches {*}
@@ -57,7 +57,7 @@ definition
 				}
 			}
 			CLUSTER[at0006] occurrences matches {0..1} matches {	-- Tumour present
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Maximum linear involvement
 						value matches {
 							C_DV_QUANTITY <
@@ -79,7 +79,7 @@ definition
 				}
 			}
 			CLUSTER[at0008] occurrences matches {0..1} matches {	-- Tumour absent
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Distance from closest resection margin
 						value matches {
 							C_DV_QUANTITY <

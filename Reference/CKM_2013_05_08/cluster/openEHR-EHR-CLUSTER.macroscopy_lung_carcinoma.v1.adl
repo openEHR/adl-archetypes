@@ -36,7 +36,7 @@ Available from: http://www.cap.org/apps/docs/committees/cancer/cancer_protocols/
 
 definition
 	CLUSTER[at0000] matches {	-- Macroscopic findings - Lung cancer
-		items cardinality matches {0..*; unordered} matches {
+		items matches {
 			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Number of tumours
 				value matches {
 					DV_COUNT matches {

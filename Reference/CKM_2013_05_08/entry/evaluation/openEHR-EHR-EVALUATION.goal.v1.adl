@@ -104,8 +104,7 @@ definition
 										}
 									}
 									DV_DURATION matches {*}
-									C_DV_QUANTITY <
-									>
+									DV_QUANTITY matches {*}
 									DV_COUNT matches {*}
 									DV_PROPORTION matches {*}
 									DV_TEXT matches {*}

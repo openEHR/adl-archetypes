@@ -38,7 +38,7 @@ Available from: http://www.rcpath.org/index.asp?PageID=1153
 
 definition
 	CLUSTER[at0000] matches {	-- Tumour - Colorectal staging (non-TNM)
-		items cardinality matches {0..*; unordered} matches {
+		items matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Dukes Score
 				value matches {
 					DV_CODED_TEXT matches {

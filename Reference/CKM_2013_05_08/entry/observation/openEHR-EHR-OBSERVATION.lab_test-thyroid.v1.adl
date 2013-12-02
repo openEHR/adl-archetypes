@@ -145,8 +145,7 @@ definition
 									}
 									ELEMENT[at0078.5] occurrences matches {0..1} matches {	-- T4 loaded uptake
 										value matches {
-											C_DV_QUANTITY <
-											>
+											DV_QUANTITY matches {*}
 										}
 									}
 									ELEMENT[at0078.9] occurrences matches {0..1} matches {	-- Free Triiodothyronine index (Free T3 index)

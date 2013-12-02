@@ -28,11 +28,11 @@ definition
 	OBSERVATION[at0000] matches {	-- Distraction Hearing Test
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Side
 										value matches {
 											DV_CODED_TEXT matches {
@@ -45,7 +45,7 @@ definition
 										}
 									}
 									CLUSTER[at0018] occurrences matches {0..1} matches {	-- Details
-										items cardinality matches {0..*; unordered} matches {
+										items matches {
 											ELEMENT[at0007] occurrences matches {0..1} matches {	-- Stimulus
 												value matches {
 													DV_CODED_TEXT matches {

@@ -44,19 +44,19 @@ description
 
 definition
 	INSTRUCTION[at0000] matches {	-- Instructions for transfusion
-		activities cardinality matches {0..*; unordered} matches {
+		activities matches {
 			ACTIVITY[at0001] occurrences matches {0..1} matches {	-- new activity
 				action_archetype_id matches {/transfusion\.v1draft/}
 				description matches {
 					ITEM_TREE[at0002] matches {	-- Tree
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0003] matches {	-- Type of Blood unit
 								value matches {
 									DV_TEXT matches {*}
 								}
 							}
 							CLUSTER[at0010] matches {	-- Amount
-								items cardinality matches {1; unordered} matches {
+								items matches {
 									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Number of units
 										value matches {
 											DV_COUNT matches {
@@ -88,7 +88,7 @@ definition
 								}
 							}
 							CLUSTER[at0007] occurrences matches {0..1} matches {	-- Special requirements
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									ELEMENT[at0005] occurrences matches {0..*} matches {	-- Special requirement
 										value matches {
 											DV_TEXT matches {*}
@@ -97,7 +97,7 @@ definition
 								}
 							}
 							CLUSTER[at0008] occurrences matches {0..1} matches {	-- Rate of transfusion
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									ELEMENT[at0006] occurrences matches {0..*} matches {	-- Transfusion duration per unit
 										value matches {
 											DV_DURATION matches {

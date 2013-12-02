@@ -11,7 +11,7 @@ description
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
-		["email"] = <"sam.heard@oceaninformatics.biz">
+		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"12/03/2006">
 	>
 	details = <
@@ -28,8 +28,8 @@ description
 	other_contributors = <>
 
 definition
-	ITEM_TREE[at0000.1] occurrences matches {0..*} matches {	-- Medication description involving a formulation
-		items cardinality matches {0..*; ordered} matches {
+	ITEM_TREE[at0000.1] matches {	-- Medication description involving a formulation
+		items matches {
 			ELEMENT[at0001.1] matches {	-- Name of formulation
 				value matches {
 					DV_TEXT matches {*}
@@ -116,7 +116,7 @@ definition
 				}
 			}
 			CLUSTER[at0010] occurrences matches {0..1} matches {	-- Indications
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0011] occurrences matches {0..*} matches {	-- Indication
 						value matches {
 							DV_TEXT matches {*}
@@ -171,7 +171,7 @@ definition
 				}
 			}
 			CLUSTER[at0018] occurrences matches {0..1} matches {	-- Administration information
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0019] occurrences matches {0..1} matches {	-- Date (time) of first administration
 						value matches {
 							DV_DATE_TIME matches {
@@ -206,7 +206,7 @@ definition
 				}
 			}
 			CLUSTER[at0023] occurrences matches {0..1} matches {	-- Dispensing information
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0024] occurrences matches {0..1} matches {	-- Quantity to be dispensed
 						value matches {
 							DV_QUANTITY matches {*}

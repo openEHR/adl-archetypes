@@ -31,9 +31,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Inspection of External ear
-		items cardinality matches {0..*; unordered} matches {
+		items matches {
 			CLUSTER[at0001] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Normal statement
 						value matches {
 							DV_CODED_TEXT matches {
@@ -54,14 +54,14 @@ definition
 				}
 			}
 			CLUSTER[at0006] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0036] occurrences matches {0..1} matches {	-- Colour description
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
 					CLUSTER[at0005] occurrences matches {0..1} matches {	-- Location
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.61] occurrences matches {0..1} matches {	-- Anatomical area
 								value matches {
 									DV_CODED_TEXT matches {
@@ -81,7 +81,7 @@ definition
 						}
 					}
 					CLUSTER[at0018] occurrences matches {0..1} matches {	-- Shape or distribution
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0019] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_CODED_TEXT matches {
@@ -119,7 +119,7 @@ definition
 						}
 					}
 					CLUSTER[at0028] occurrences matches {0..1} matches {	-- Edge
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0033] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
@@ -152,7 +152,7 @@ definition
 						}
 					}
 					CLUSTER[at0049] occurrences matches {0..1} matches {	-- Detail
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0052] occurrences matches {0..1} matches {
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam\.v1/}

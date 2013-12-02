@@ -32,9 +32,9 @@ description
 
 definition
 	CLUSTER[at0000.1] matches {	-- Inspection of tongue
-		items cardinality matches {0..*; unordered} matches {
+		items matches {
 			CLUSTER[at0001] occurrences matches {0..1} matches {	-- Normal statements
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0002] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
 							DV_CODED_TEXT matches {
@@ -50,14 +50,14 @@ definition
 				}
 			}
 			CLUSTER[at0006] occurrences matches {0..1} matches {	-- Findings
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0036] occurrences matches {0..1} matches {	-- Colour description
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
 					CLUSTER[at0005] occurrences matches {0..1} matches {	-- Location of abnormality
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0022] occurrences matches {0..*} matches {	-- Description
 								value matches {
 									DV_CODED_TEXT matches {
@@ -68,7 +68,7 @@ definition
 						}
 					}
 					CLUSTER[at0018] occurrences matches {0..1} matches {	-- Shape
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0019] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
@@ -99,7 +99,7 @@ definition
 						}
 					}
 					CLUSTER[at0028] occurrences matches {0..1} matches {	-- Edge
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0033] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
@@ -127,7 +127,7 @@ definition
 						}
 					}
 					CLUSTER[at0.58] occurrences matches {0..1} matches {	-- Size
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.59] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT matches {*}
@@ -141,7 +141,7 @@ definition
 								}
 							}
 							CLUSTER[at0.61] occurrences matches {0..1} matches {	-- Details
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									allow_archetype CLUSTER[at0.63] occurrences matches {0..1} matches {
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.size\.v1|openEHR-EHR-CLUSTER\.dimensions\.v1/}
@@ -151,7 +151,7 @@ definition
 						}
 					}
 					CLUSTER[at0.52] occurrences matches {0..1} matches {	-- Movements
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0.53] occurrences matches {0..1} matches {	-- Deviation on protrusion
 								value matches {
 									DV_CODED_TEXT matches {
@@ -172,7 +172,7 @@ definition
 						}
 					}
 					CLUSTER[at0049] occurrences matches {0..1} matches {	-- Detail
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[at0052] occurrences matches {0..1} matches {
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam\.v1/}

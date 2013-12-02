@@ -32,7 +32,7 @@ Use as a component archetype in the context of a suite of archetypes that make u
 
 definition
 	CLUSTER[at0000] matches {	-- Tumour - direct invasion
-		items cardinality matches {0..*; unordered} matches {
+		items matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Tissue name
 				value matches {
 					DV_TEXT matches {*}

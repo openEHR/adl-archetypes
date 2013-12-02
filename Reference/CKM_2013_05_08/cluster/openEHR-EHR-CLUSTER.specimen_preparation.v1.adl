@@ -35,9 +35,9 @@ November 24, 2008 ">
 
 definition
 	CLUSTER[at0000] matches {	-- Specimen preparation
-		items cardinality matches {0..*; unordered} matches {
+		items matches {
 			CLUSTER[at0077] occurrences matches {0..1} matches {	-- Processing step
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0072] occurrences matches {0..1} matches {	-- Date and time of processing step
 						value matches {
 							DV_DATE_TIME matches {*}
@@ -76,7 +76,7 @@ definition
 				}
 			}
 			CLUSTER[at0086] occurrences matches {0..1} matches {	-- Specific preparation
-				items cardinality matches {0..1; unordered} matches {
+				items cardinality matches {1} matches {
 					ELEMENT[at0073] occurrences matches {0..1} matches {	-- Sampling method
 						value matches {
 							DV_TEXT matches {*}

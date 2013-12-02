@@ -28,11 +28,11 @@ definition
 	OBSERVATION[at0000] matches {	-- Electroacoustic Hearing Test
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Test
 										value matches {
 											DV_CODED_TEXT matches {
@@ -50,7 +50,7 @@ definition
 										}
 									}
 									CLUSTER[at0037] occurrences matches {0..1} matches {	-- Normal Statements
-										items cardinality matches {0..*; unordered} matches {
+										items matches {
 											ELEMENT[at0027] occurrences matches {0..1} matches {	-- Normal statement
 												value matches {
 													DV_CODED_TEXT matches {
@@ -66,7 +66,7 @@ definition
 										}
 									}
 									CLUSTER[at0010] occurrences matches {0..*} matches {	-- Details
-										items cardinality matches {0..*; unordered} matches {
+										items matches {
 											ELEMENT[at0040] occurrences matches {0..1} matches {	-- Screening Outcome
 												value matches {
 													DV_CODED_TEXT matches {
@@ -134,7 +134,7 @@ definition
 						}
 						state matches {
 							ITEM_TREE[at0024] matches {	-- Tree
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									ELEMENT[at0025] occurrences matches {0..1} matches {	-- Stimulus presentation
 										value matches {
 											DV_CODED_TEXT matches {
@@ -181,7 +181,7 @@ definition
 		}
 		protocol matches {
 			ITEM_LIST[at0013] matches {	-- List
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Transducer
 						value matches {
 							DV_TEXT matches {*}

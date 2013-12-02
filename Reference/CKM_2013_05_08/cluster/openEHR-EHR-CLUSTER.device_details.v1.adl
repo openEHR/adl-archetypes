@@ -86,37 +86,25 @@ definition
 			ELEMENT[at0011] occurrences matches {0..1} matches {	-- Sampling frequency
 				value matches {
 					DV_TEXT matches {*}
-					C_DV_QUANTITY <
-					>
+					DV_QUANTITY matches {*}
 				}
 			}
 			ELEMENT[at0012] occurrences matches {0..1} matches {	-- Range
 				value matches {
 					DV_TEXT matches {*}
-					DV_INTERVAL<DV_QUANTITY> matches {
-						upper matches {
-							C_DV_QUANTITY <
-							>
-						}
-						lower matches {
-							C_DV_QUANTITY <
-							>
-						}
-					}
+					DV_INTERVAL<DV_QUANTITY> matches {*}
 				}
 			}
 			ELEMENT[at0013] occurrences matches {0..1} matches {	-- Accuracy
 				value matches {
 					DV_TEXT matches {*}
-					C_DV_QUANTITY <
-					>
+					DV_QUANTITY matches {*}
 				}
 			}
 			ELEMENT[at0014] occurrences matches {0..1} matches {	-- Resolution
 				value matches {
 					DV_TEXT matches {*}
-					C_DV_QUANTITY <
-					>
+					DV_QUANTITY matches {*}
 				}
 			}
 			ELEMENT[at0015] occurrences matches {0..1} matches {	-- Regulatory status

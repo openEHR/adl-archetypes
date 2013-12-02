@@ -43,7 +43,7 @@ HL7 International, Implementation Guide for CDA Release 2.0 Personal Healthcare 
 
 definition
 	CLUSTER[at0000] matches {	-- Waveform
-		items cardinality matches {0..*; unordered} matches {
+		items matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Waveform name
 				value matches {
 					DV_TEXT matches {*}
@@ -64,7 +64,7 @@ definition
 				}
 			}
 			CLUSTER[at0006] occurrences matches {0..*} matches {	-- Waveform observation
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Origin
 						value matches {
 							C_DV_QUANTITY <
