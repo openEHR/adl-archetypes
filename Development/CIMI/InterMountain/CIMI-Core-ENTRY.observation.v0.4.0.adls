@@ -22,37 +22,26 @@ description
 
 
 definition
-  ENTRY - CLINICAL ENTRY[at0000] matches { -- Observation
-    item matches {
+  ENTRY[at0000] matches { -- Observation
+    data matches {
       ELEMENT[at0001] occurrences matches {0..*} matches { -- Associated request identifier
         value matches {
           IDENTIFIER matches {*}
         }
       }
-      use_archetype CLUSTER[REF<CIMI-CLUSTER.observe_action>]
-      use_archetype CLUSTER[REF<CIMI-CLUSTER.interpret_action>]
-      use_archetype CLUSTER[REF<CIMI-CLUSTER.approve_action>]
-      use_archetype CLUSTER[REF<CIMI-CLUSTER.report_action>]
-      use_archetype CLUSTER[REF<CIMI-CLUSTER.cancel_action>]
-      use_archetype CLUSTER[REF<CIMI-CLUSTER.update_action>]
-    }
-    data matches {
-      use_archetype CLUSTER[REF<CIMI-CLUSTER.observe_action>]
-      use_archetype CLUSTER[REF<CIMI-CLUSTER.interpret_action>]
-      use_archetype CLUSTER[REF<CIMI-CLUSTER.approve_action>]
-      use_archetype CLUSTER[REF<CIMI-CLUSTER.report_action>]
-      use_archetype CLUSTER[REF<CIMI-CLUSTER.cancel_action>]
-      use_archetype CLUSTER[REF<CIMI-CLUSTER.update_action>]
+      use_archetype CLUSTER[CIMI-Core-CLUSTER.observe_action]
+      use_archetype CLUSTER[CIMI-Core-CLUSTER.interpret_action]
+      use_archetype CLUSTER[CIMI-Core-CLUSTER.approve_action]
+      use_archetype CLUSTER[CIMI-Core-CLUSTER.report_action]
+      use_archetype CLUSTER[CIMI-Core-CLUSTER.cancel_action]
+      use_archetype CLUSTER[CIMI-Core-CLUSTER.update_action]
     }
     link matches {
       LINK[at0002] occurrences matches {0..*} -- Associated request
     }
   }
 
-
-
 ontology
-
   term_definitions = <
     ["en"] = <
       ["at0000"] = <
@@ -104,12 +93,7 @@ ontology
       items = <
         ["at0000"] = <[SNOMED-CT::363787002]>
         ["at0001"] = <[SNOMED-CT::441742003]>
-        ["at0002"] = <[SNOMED-CT::]>
-        ["at0003"] = <[SNOMED-CT::]>
-        ["at0004"] = <[SNOMED-CT::]>
         ["at0005"] = <[SNOMED-CT::308561006]>
-        ["at0006"] = <[SNOMED-CT::]>
-        ["at0007"] = <[SNOMED-CT::]>
         ["at0008"] = <[SNOMED-CT::308539001]>
         ["at0009"] = <[SNOMED-CT::423901009]>
       >
