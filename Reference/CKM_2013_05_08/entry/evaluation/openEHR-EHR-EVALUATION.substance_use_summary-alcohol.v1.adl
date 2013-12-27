@@ -36,7 +36,7 @@ definition
 	EVALUATION[at0000.1] matches {	-- Alcohol Use Summary
 		data matches {
 			ITEM_TREE[at0001] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Substance
 						value matches {
 							DV_CODED_TEXT matches {
@@ -57,8 +57,8 @@ definition
 							}
 						}
 					}
-					CLUSTER[at0007] occurrences matches {0..*} matches {	-- Consumption Summary
-						items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0007] matches {	-- Consumption Summary
+						items matches {
 							ELEMENT[at0008] occurrences matches {0..1} matches {	-- Form
 								value matches {
 									DV_CODED_TEXT matches {

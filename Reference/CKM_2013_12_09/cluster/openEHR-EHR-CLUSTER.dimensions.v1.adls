@@ -1,0 +1,162 @@
+﻿archetype (adl_version=1.5; generated)
+	openEHR-EHR-CLUSTER.dimensions.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Jasmin Buck, Sebastian Garde">
+				["organisation"] = <"University of Heidelberg, Central Queensland University">
+			>
+		>
+	>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Beschreibung der Ausmaße eines betrachteten Teils.">
+			use = <"">
+			keywords = <"Größe", "Volumen">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the dimensions of a body part examined or viewed.">
+			use = <"Use as a re-useable cluster in Entry archetypes and other cluster archetypes that record measurment of body parts.">
+			keywords = <"size", "volume", "area", "width", "length">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"initial">
+	other_details = <
+		["references"] = <"">
+		["MD5-CAM-1.0.1"] = <"B14424CBA9C103AF726A1081BCA771B4">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Dimensions
+		items matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Circumference
+				value matches {
+					DV_QUANTITY[id0205] matches {
+						property matches {[openehr::122]}
+						units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Length
+				value matches {
+					DV_QUANTITY[id0605] matches {
+						property matches {[openehr::122]}
+						units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+					}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Breadth
+				value matches {
+					DV_QUANTITY[id0005] matches {
+						property matches {[openehr::122]}
+						units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Depth
+				value matches {
+					DV_QUANTITY[id0405] matches {
+						property matches {[openehr::122]}
+						units matches {"µm", "mm", "cm", "m", "in", "ft"}
+					}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Area
+				value matches {
+					DV_QUANTITY[id0805] matches {
+						property matches {[openehr::335]}
+						units matches {"mm2", "cm2", "% body", "% head, neck", "% lower limb", "% trunk", "% upper limb", "m2", "in2", "ft2"}
+					}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Volume
+				value matches {
+					DV_QUANTITY[id0206] matches {
+						property matches {[openehr::129]}
+						units matches {"mm3", "ml", "in3", "cc", "ft3"}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["de"] = <
+			["at0000"] = <
+				text = <"Ausmaße">
+				description = <"Die Ausmaße eines betrachteten Teils.">
+			>
+			["at0001"] = <
+				text = <"Umfang">
+				description = <"Der Umfang des betrachteten Teils">
+			>
+			["at0002"] = <
+				text = <"Länge">
+				description = <"Die Länge des betrachteten Teils (longidudinale Körperachse).">
+			>
+			["at0003"] = <
+				text = <"Breite">
+				description = <"Die Breite oder Weite (transversale Körperachse).">
+			>
+			["at0004"] = <
+				text = <"Tiefe">
+				description = <"Die Tiefe des betrachteten Teils (dorsal-ventrale Körperachse).">
+			>
+			["at0005"] = <
+				text = <"Fläche">
+				description = <"Die Fläche des betrachteten Teils.">
+			>
+			["at0006"] = <
+				text = <"Volumen">
+				description = <"Das Volumen des betrachteten Teils.">
+			>
+		>
+		["en"] = <
+			["at0000"] = <
+				text = <"Dimensions">
+				description = <"The physical dimensions of a part examined.">
+			>
+			["at0001"] = <
+				text = <"Circumference">
+				description = <"The circumference of the part examined.">
+			>
+			["at0002"] = <
+				text = <"Length">
+				description = <"The length of the part examined (longitudinal anatomical axis).">
+			>
+			["at0003"] = <
+				text = <"Breadth">
+				description = <"The width or breadth (transverse anatomical axis).">
+			>
+			["at0004"] = <
+				text = <"Depth">
+				description = <"The depth of the part examined (dorso-ventral anatomical axis).">
+			>
+			["at0005"] = <
+				text = <"Area">
+				description = <"The area of the part examined.">
+			>
+			["at0006"] = <
+				text = <"Volume">
+				description = <"The volume of the part examined.">
+			>
+		>
+	>

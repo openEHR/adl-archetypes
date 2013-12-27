@@ -1,0 +1,98 @@
+﻿archetype (adl_version=1.5; generated)
+	openEHR-DEMOGRAPHIC-ADDRESS.electronic_communication-provider.v1.0.0
+
+specialize
+	openEHR-DEMOGRAPHIC-ADDRESS.electronic_communication.v1.0.0
+
+language
+	original_language = <[ISO_639-1::pt-br]>
+	translations = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+				["name"] = <"Sergio Miranda Freire">
+				["organisation"] = <"Universidade do Estado do Rio de Janeiro - UERJ">
+				["email"] = <"sergio@lampada.uerj.br">
+			>
+		>
+	>
+
+description
+	original_author = <
+		["name"] = <"Sergio Miranda Freire & Rigoleta Dutra Mediano Dias">
+		["organisation"] = <"Universidade do Estado do Rio de Janeiro - UERJ">
+		["email"] = <"sergio@lampada.uerj.br">
+		["date"] = <"20/05/2009">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To capture and store the electronic communication contact details of a healthcare provider.">
+			use = <"Used in demographic services to collect data about a healthcare provider electronic communications medium.">
+			keywords = <"Demographic service", "Electronic communication">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Capturar e registrar detalhes de contatos por meio de comunicação eletrônica de prestadores de assistência à saúde.">
+			use = <"Usado em serviços de demografia para registrar os detalhes de um endereço de comunicação eletrônica de prestadores de assistência à saúde.">
+			keywords = <"Serviço demográfico", "Comunicação eletrônica">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Sebastian Garde, Ocean Informatics, Germany (Editor)", "Omer Hotomaroglu, Turkey (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, UK (Editor)">
+	other_details = <
+		["references"] = <"ISO/DTS 27527:2007(E) - Provider Identification - Draft Technnical Specification - International Organization for Standardization.">
+	>
+
+definition
+	ADDRESS[at0000.1] matches {	-- Healthcare provider electronic address
+		/details[at0001]/items matches {
+			after [at0007]
+			ELEMENT[at0.2] occurrences matches {0..1} matches {	-- Communication privacy
+				value matches {
+					DV_BOOLEAN[id0.237] 
+				}
+			}
+			ELEMENT[at0.3] matches {	-- Healthcare Provider Identifier
+				value matches {
+					DV_TEXT[id0.637] 
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0.2"] = <
+				text = <"Communication privacy">
+				description = <"Indicates that this communication mechanism is not to be openly displayed, except to specific providers.">
+			>
+			["at0.3"] = <
+				text = <"Healthcare Provider Identifier">
+				description = <"Identifier of a provider who may access this communication mechanism.">
+			>
+			["at0000.1"] = <
+				text = <"Healthcare provider electronic address">
+				description = <"The address of a healthcare provider electronic communication medium.">
+			>
+		>
+		["pt-br"] = <
+			["at0.2"] = <
+				text = <"Indicador de privacidade">
+				description = <"Indica quando um mecanismo de comunicação não é para ser exibido abertamente, exceto para organizações específicas.">
+			>
+			["at0.3"] = <
+				text = <"Identificador do prestador">
+				description = <"Identificador de um prestador que pode acessar este meio de comunicação.">
+			>
+			["at0000.1"] = <
+				text = <"Meio de Comunicação eletrônica de um prestador de assistência à saúde">
+				description = <"Meio de comunicação eletrônica de um prestador de assistência à saúde.">
+			>
+		>
+	>

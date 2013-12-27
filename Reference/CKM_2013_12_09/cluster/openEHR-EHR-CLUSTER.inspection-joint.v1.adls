@@ -1,0 +1,83 @@
+﻿archetype (adl_version=1.5; generated)
+	openEHR-EHR-CLUSTER.inspection-joint.v1.0.0
+
+specialize
+	openEHR-EHR-CLUSTER.inspection.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"23/04/2007">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"An archetype for recording the findings on inspection of joint.">
+			use = <"For use with the exam clusters for recording findings on inspection">
+			keywords = <"inspect", "visual", "joint">
+			misuse = <"Should only be used in the exam observation">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"initial">
+	other_details = <
+		["references"] = <"">
+	>
+
+definition
+	CLUSTER[at0000.1] matches {	-- Inspection of joint
+		/items[at0006]/items matches {
+			before [at0005]
+			ELEMENT[at0.55] occurrences matches {0..1} matches {	-- Deformity
+				value matches {
+					DV_TEXT[id0.85] 
+				}
+			}
+			before [at0049]
+			CLUSTER[at0.53] occurrences matches {0..1} matches {	-- Muscle wasting
+				items matches {
+					ELEMENT[at0.54] occurrences matches {0..1} matches {	-- Involved muscle group
+						value matches {
+							DV_TEXT[id0.885] 
+						}
+					}
+					ELEMENT[at0.52] occurrences matches {0..1} matches {	-- Description
+						value matches {
+							DV_TEXT[id0.86] 
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0.52"] = <
+				text = <"Description">
+				description = <"*">
+			>
+			["at0.53"] = <
+				text = <"Muscle wasting">
+				description = <"*">
+			>
+			["at0.54"] = <
+				text = <"Involved muscle group">
+				description = <"*">
+			>
+			["at0.55"] = <
+				text = <"Deformity">
+				description = <"*">
+			>
+			["at0000.1"] = <
+				text = <"Inspection of joint">
+				description = <"The findings on physical examination by inspection of joint">
+			>
+		>
+	>

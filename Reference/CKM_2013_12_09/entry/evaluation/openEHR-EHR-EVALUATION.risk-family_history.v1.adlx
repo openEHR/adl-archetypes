@@ -1,0 +1,326 @@
+﻿archetype (adl_version=1.5; generated)
+	openEHR-EHR-EVALUATION.risk-family_history.v1.0.0
+
+specialize
+	openEHR-EHR-EVALUATION.risk.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"23/04/2006">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Record the assessed risk of having or developing a condition due to prevalence in relatives.">
+			use = <"For recording information about the prevalence of the condition in relatives and quantifying risk to the subject of care.">
+			misuse = <"Not for recording problems of individual relatives - use 'openEHR-EHR-EVALUATION.problem' and 'openEHR-EHR-EVALUATION.problem-diagnosis' and set the subject of data to the relative.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"initial">
+	other_details = <
+		["references"] = <"">
+	>
+
+definition
+	EVALUATION[at0000.1] matches {	-- Risk of condition based on family history
+		data matches {
+			ITEM_TREE[at0001] matches {
+				items cardinality matches {1..*; ordered} matches {
+					after [at0002]
+					ELEMENT[at0.31] occurrences matches {0..1} matches {	-- Presence
+						value matches {
+							DV_BOOLEAN[id0.389] matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[at0003.1] occurrences matches {0..1} 	-- Assessed risk
+					CLUSTER[at0.2] occurrences matches {0..*} matches {	-- Relative
+						items matches {
+							ELEMENT[at0.30] occurrences matches {0..1} matches {	-- Relationship
+								value matches {
+									DV_CODED_TEXT[id0.13] matches {
+										defining_code matches {[ac0.1]}		-- Relationship with subject of entry
+									}
+								}
+							}
+							ELEMENT[at0.3] occurrences matches {0..1} matches {	-- Name
+								value matches {
+									DV_TEXT[id0.125] 
+								}
+							}
+							ELEMENT[at0.4] occurrences matches {0..1} matches {	-- Age at onset
+								value matches {
+									DV_QUANTITY[id0.525] matches {
+										property matches {[openehr::128]}
+										[magnitude, units] matches {
+											[{|0.0..200.0|}, {"a"}],
+											[{|0.0..36.0|}, {"mo"}],
+											[{|0.0..52.0|}, {"wk"}],
+											[{|0.0..56.0|}, {"d"}]
+										}
+									}
+								}
+							}
+							ELEMENT[at0.27] occurrences matches {0..1} matches {	-- Date of onset
+								value matches {
+									DV_DATE[id0.413] matches {
+										value matches {yyyy-??-??}
+									}
+								}
+							}
+							ELEMENT[at0.5] occurrences matches {0..1} matches {	-- Age at death
+								value matches {
+									DV_QUANTITY[id0.925] matches {
+										property matches {[openehr::128]}
+										magnitude matches {|0.0..200.0|}
+										units matches {"a"}
+									}
+								}
+							}
+							ELEMENT[at0.6] occurrences matches {0..1} matches {	-- Date of death
+								value matches {
+									DV_DATE[id0.325] matches {
+										value matches {yyyy-??-??}
+									}
+								}
+							}
+							ELEMENT[at0.7] occurrences matches {0..1} matches {	-- Index condition was cause of death
+								value matches {
+									DV_BOOLEAN[id0.725] matches {
+										value matches {True, False}
+									}
+								}
+							}
+							ELEMENT[at0.8] occurrences matches {0..1} matches {	-- Severity
+								value matches {
+									DV_ORDINAL[id0.126] matches {
+										[value, symbol] matches {
+											[{1}, {[local::at0.9]}],
+											[{4}, {[local::at0.10]}],
+											[{7}, {[local::at0.11]}]
+										}
+									}
+								}
+							}
+							ELEMENT[at0.28] occurrences matches {0..1} matches {	-- More specific condition
+								value matches {
+									DV_TEXT[id0.813] 
+								}
+							}
+							ELEMENT[at0.12] occurrences matches {0..1} matches {	-- Clinical description
+								value matches {
+									DV_TEXT[id0.14] 
+								}
+							}
+							ELEMENT[at0.13] occurrences matches {0..1} matches {	-- Genetic relative
+								value matches {
+									DV_BOOLEAN[id0.414] matches {
+										value matches {True, False}
+									}
+								}
+							}
+						}
+					}
+					CLUSTER[at0.14] occurrences matches {0..*} matches {	-- Affected ratio
+						items cardinality matches {0..4; ordered} matches {
+							ELEMENT[at0.15] occurrences matches {0..1} matches {	-- Degree
+								value matches {
+									DV_CODED_TEXT[id0.845] matches {
+										defining_code matches {
+											[local::
+											at0.16, 	-- First degree relatives
+											at0.17, 	-- Second degree relatives
+											at0.18, 	-- Third degree relatives
+											at0.19, 	-- Maternal relatives
+											at0.20, 	-- Paternal relatives
+											at0.21]	-- Family
+										}
+									}
+								}
+							}
+							ELEMENT[at0.22] occurrences matches {0..1} matches {	-- Gender
+								value matches {
+									DV_CODED_TEXT[id0.45] matches {
+										defining_code matches {
+											[local::
+											at0.23, 	-- Male
+											at0.24, 	-- Female
+											at0.25]	-- Male and female
+										}
+									}
+								}
+							}
+							ELEMENT[at0.26] occurrences matches {0..1} matches {	-- Number unaffected
+								value matches {
+									DV_COUNT[id0.645] matches {
+										magnitude matches {|0..100|}
+									}
+								}
+							}
+							ELEMENT[at0.29] matches {	-- Number affected
+								value matches {
+									DV_COUNT[id0.846] matches {
+										magnitude matches {|0..100|}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0.1"] = <
+				text = <"Affected relatives">
+				description = <"The family members affected by the condition">
+			>
+			["at0.10"] = <
+				text = <"Moderate">
+				description = <"Significant morbidity and reduced capability">
+			>
+			["at0.11"] = <
+				text = <"Severe">
+				description = <"Major morbidity with significant social impact">
+			>
+			["at0.12"] = <
+				text = <"Clinical description">
+				description = <"A clinical description of the affected relatives condition">
+			>
+			["at0.13"] = <
+				text = <"Genetic relative">
+				description = <"A genetic relative of the data subject - not an adoptive relative">
+			>
+			["at0.14"] = <
+				text = <"Affected ratio">
+				description = <"A ratio of the affected to non-affected relatives of a particular type">
+			>
+			["at0.15"] = <
+				text = <"Degree">
+				description = <"The proximity or line of the relatives">
+			>
+			["at0.16"] = <
+				text = <"First degree relatives">
+				description = <"Relatives with 50% genetic share - parent, sibling, child">
+			>
+			["at0.17"] = <
+				text = <"Second degree relatives">
+				description = <"Relatives with 25% genetic share - grand parent, aunts and uncles, nieces and nephews, grand children">
+			>
+			["at0.18"] = <
+				text = <"Third degree relatives">
+				description = <"Relatives with 12.5% genetic share, great grand parents, great aunts and uncles, first cousins, children of neices and nephews, great grand children">
+			>
+			["at0.19"] = <
+				text = <"Maternal relatives">
+				description = <"Related through mother">
+			>
+			["at0.2"] = <
+				text = <"Relative">
+				description = <"Details about the affected relative">
+			>
+			["at0.20"] = <
+				text = <"Paternal relatives">
+				description = <"Related through father">
+			>
+			["at0.21"] = <
+				text = <"Family">
+				description = <"Entire family">
+			>
+			["at0.22"] = <
+				text = <"Gender">
+				description = <"The gender of the relatives included in the affected ratio">
+			>
+			["at0.23"] = <
+				text = <"Male">
+				description = <"Male gender">
+			>
+			["at0.24"] = <
+				text = <"Female">
+				description = <"Female gender">
+			>
+			["at0.25"] = <
+				text = <"Male and female">
+				description = <"Male and female relatives">
+			>
+			["at0.26"] = <
+				text = <"Number unaffected">
+				description = <"The number of relatives in this group unaffected by the index condition">
+			>
+			["at0.27"] = <
+				text = <"Date of onset">
+				description = <"Date of onset">
+			>
+			["at0.28"] = <
+				text = <"More specific condition">
+				description = <"A coded entry which is more specific than the index condition">
+			>
+			["at0.29"] = <
+				text = <"Number affected">
+				description = <"The number affected by the index condition">
+			>
+			["at0.3"] = <
+				text = <"Name">
+				description = <"Optional name of the person for future reference">
+			>
+			["at0.30"] = <
+				text = <"Relationship">
+				description = <"The relationship">
+			>
+			["at0.31"] = <
+				text = <"Presence">
+				description = <"Presence of condition in at least one related party">
+			>
+			["at0.4"] = <
+				text = <"Age at onset">
+				description = <"The age at which the condition was apparent">
+			>
+			["at0.5"] = <
+				text = <"Age at death">
+				description = <"The age at which this relative died">
+			>
+			["at0.6"] = <
+				text = <"Date of death">
+				description = <"The year or date of death">
+			>
+			["at0.7"] = <
+				text = <"Index condition was cause of death">
+				description = <"Indication that the index was a significant factor in the death of this relative">
+			>
+			["at0.8"] = <
+				text = <"Severity">
+				description = <"The severity of the condition for this relative">
+			>
+			["at0.9"] = <
+				text = <"Mild">
+				description = <"Little affect on lifestyle">
+			>
+			["at0000.1"] = <
+				text = <"Risk of condition based on family history">
+				description = <"Evaluation to indicate that there is, or is not, a significant risk of this subject of care having, now or in the future, a condition due to prior occurrence in a family member.">
+			>
+			["at0003.1"] = <
+				text = <"Assessed risk">
+				description = <"The degree of risk conferred on the subject by the presence of this condition amongst relatives">
+			>
+		>
+	>
+	constraint_definitions = <
+		["en"] = <
+			["ac0.1"] = <
+				text = <"Relationship with subject of entry">
+				description = <"The relationship of the affected relative with the person of whom this is the family history">
+			>
+		>
+	>

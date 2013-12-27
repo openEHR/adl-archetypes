@@ -1,0 +1,139 @@
+﻿archetype (adl_version=1.5; generated)
+	openEHR-EHR-CLUSTER.inspection-external_ear.v1.0.0
+
+specialize
+	openEHR-EHR-CLUSTER.inspection.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"Ocean Informatics">
+		["date"] = <"02/11/2007">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For recording the findings on inspection of the external ear">
+			use = <"For use with the exam clusters for recording findings on inspection">
+			keywords = <"inspect", "visual", "ear", "external">
+			misuse = <"Should only be used in the exam observation">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"initial">
+	other_details = <
+		["references"] = <"">
+	>
+
+definition
+	CLUSTER[at0000.1] matches {	-- Inspection of External ear
+		/items[at0001]/items matches {
+			ELEMENT[at0002] occurrences matches {0..1} matches {
+				value matches {
+					DV_CODED_TEXT[id0.677] matches {
+						defining_code matches {
+							[local::
+							at0.53, 	-- External ear normal
+							at0.56, 	-- Pinna normal
+							at0.57]	-- External Auditory Canal normal
+						}
+					}
+				}
+			}
+		}
+		/items[at0006]/items[at0005]/items matches {
+			ELEMENT[at0.61] occurrences matches {0..1} matches {	-- Anatomical area
+				value matches {
+					DV_CODED_TEXT[id0.869] matches {
+						defining_code matches {
+							[local::
+							at0.62, 	-- Pinna
+							at0.63]	-- External Auditory Canal
+						}
+					}
+				}
+			}
+		}
+		/items[at0006]/items[at0005]/items[at0022]/value matches {
+			DV_TEXT[id0.965] 
+		}
+		/items[at0006]/items[at0018]/items[at0019]/value matches {
+			DV_CODED_TEXT[id0.957] matches {
+				defining_code matches {
+					[local::
+					at0.58, 	-- Hypoplasia
+					at0.59, 	-- Atresia
+					at0.60]	-- Bat
+				}
+			}
+		}
+		/items[at0006]/items matches {
+			before [at0049]
+			ELEMENT[at0.52] occurrences matches {0..1} matches {	-- Operative scars
+				value matches {
+					DV_TEXT[id0.885] 
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0.52"] = <
+				text = <"Operative scars">
+				description = <"Any ear related operative scars">
+			>
+			["at0.53"] = <
+				text = <"External ear normal">
+				description = <"*">
+			>
+			["at0.54"] = <
+				text = <"Pinna">
+				description = <"*">
+			>
+			["at0.55"] = <
+				text = <"External audiroty Canal">
+				description = <"*">
+			>
+			["at0.56"] = <
+				text = <"Pinna normal">
+				description = <"*">
+			>
+			["at0.57"] = <
+				text = <"External Auditory Canal normal">
+				description = <"*">
+			>
+			["at0.58"] = <
+				text = <"Hypoplasia">
+				description = <"*">
+			>
+			["at0.59"] = <
+				text = <"Atresia">
+				description = <"*">
+			>
+			["at0.60"] = <
+				text = <"Bat">
+				description = <"*">
+			>
+			["at0.61"] = <
+				text = <"Anatomical area">
+				description = <"*">
+			>
+			["at0.62"] = <
+				text = <"Pinna">
+				description = <"*">
+			>
+			["at0.63"] = <
+				text = <"External Auditory Canal">
+				description = <"*">
+			>
+			["at0000.1"] = <
+				text = <"Inspection of External ear">
+				description = <"The findings on physical examination by inspection of external ear">
+			>
+		>
+	>

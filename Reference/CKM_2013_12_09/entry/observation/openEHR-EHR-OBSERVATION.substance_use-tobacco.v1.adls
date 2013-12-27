@@ -1,0 +1,104 @@
+﻿archetype (adl_version=1.5; generated)
+	openEHR-EHR-OBSERVATION.substance_use-tobacco.v1.0.0
+
+specialize
+	openEHR-EHR-OBSERVATION.substance_use.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"6/05/2009">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"This is an archetype used to record details of the use of all common forms of tobacco. ">
+			use = <"Use to record details of the use of all common forms of tobacco.  This includes use at specific point in time, over intervals of time, and use of mathematical functions such as average or minimum eg average consumption over a week.  
+Other types of tobacco use are not included here, but may be added added as a revision as required, or added via a specialisation for groups with need for additional choices.  
+A typical use would be to record usage in an tobacco usage diary.">
+			keywords = <"substance", "addiction", "consumption", "use", "tobacco", "cigarette", "cigar", "smoking", "chewing", "pipe">
+			misuse = <"Not to be used for recording persistent and summary details about the use of the substance - this should be captured using the EVALUATION.substance_use_summary-tobacco archetype.  ">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
+	other_details = <
+		["references"] = <"">
+		["MD5-CAM-1.0.1"] = <"50856E4B402C962DC96B02F1C81BA2FB">
+	>
+
+definition
+	OBSERVATION[at0000.1] matches {	-- Tobacco Use
+		/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value matches {
+			DV_CODED_TEXT[id0.53] matches {
+				defining_code matches {[local::at0.2]}		-- Tobacco
+			}
+		}
+		/data[at0001]/events[at0002]/data[at0003]/items[at0010]/items[at0011]/value matches {
+			DV_CODED_TEXT[id0.501] matches {
+				defining_code matches {
+					[local::
+					at0.3, 	-- Cigarettes - manufactured
+					at0.4, 	-- Cigarettes - roll-your-own
+					at0.5, 	-- Cigars
+					at0.6]	-- Pipe
+				}
+			}
+		}
+		/data[at0001]/events[at0002]/data[at0003]/items[at0010]/items[at0012.1]/value matches {
+			DV_QUANTITY[id0.821] matches {
+				property matches {[openehr::382]}
+				units matches {"/h", "/d", "/wk"}
+			}
+		}
+		/data[at0001]/events[at0002]/data[at0003]/items[at0010]/items[at0012.2]/value matches {
+			DV_QUANTITY[id0.221] matches {
+				property matches {[openehr::347]}
+				units matches {"gm/d", "gm/wk"}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0.2"] = <
+				text = <"Tobacco">
+				description = <"Tobacco used">
+			>
+			["at0.3"] = <
+				text = <"Cigarettes - manufactured">
+				description = <"Commercial, manufactured cigarettes">
+			>
+			["at0.4"] = <
+				text = <"Cigarettes - roll-your-own">
+				description = <"Home-made, roll-your-own cigarettes">
+			>
+			["at0.5"] = <
+				text = <"Cigars">
+				description = <"Commercial cigars">
+			>
+			["at0.6"] = <
+				text = <"Pipe">
+				description = <"Tobacco smoked within a pipe">
+			>
+			["at0000.1"] = <
+				text = <"Tobacco Use">
+				description = <"Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time. ">
+			>
+			["at0012.1"] = <
+				text = <"Number smoked">
+				description = <"Number of units containing tobacco consumed eg cigarettes or cigars">
+			>
+			["at0012.2"] = <
+				text = <"Grams of tobacco">
+				description = <"Weight of tobacco consumed eg in a pipe">
+			>
+		>
+	>

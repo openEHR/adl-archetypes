@@ -1,0 +1,159 @@
+﻿archetype (adl_version=1.5; generated)
+	openEHR-DEMOGRAPHIC-CLUSTER.identifier_other_details.v1.0.0
+
+language
+	original_language = <[ISO_639-1::pt-br]>
+	translations = <
+		["en-gb"] = <
+			language = <[ISO_639-1::en-gb]>
+			author = <
+				["name"] = <"Sergio Miranda Freire">
+				["organisation"] = <"Universidade do Estado do Rio de Janeiro - UERJ">
+				["email"] = <"sergio@lampada.uerj.br">
+			>
+		>
+	>
+
+description
+	original_author = <
+		["name"] = <"Sergio Miranda Freire & Rigoleta Dutra Mediano Dias">
+		["organisation"] = <"Universidade do Estado do Rio de Janeiro - UERJ">
+		["email"] = <"sergio@lampada.uerj.br">
+		["date"] = <"22/05/2009">
+	>
+	details = <
+		["en-gb"] = <
+			language = <[ISO_639-1::en-gb]>
+			purpose = <"Representation of other details about a person/organization identifier">
+			use = <"Used in demographic services to register other details about a person/organisation identifier">
+			keywords = <"demographic service", "identifier">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Representação de outros detalhes relativos a um documento de identificação de uma pessoa/organização">
+			use = <"Usado em serviçoS demográficos para registrar outros detalhes relativos a um documento de identificação de uma pessoa/organização">
+			keywords = <"serviço demográfico", "identificador">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000] matches {	-- Dados adicionais de um identificador
+		items matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Município
+				value matches {
+					DV_CODED_TEXT[id0205] matches {
+						defining_code matches {[ac0000]}		-- Códigos de cidades
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Estado
+				value matches {
+					DV_CODED_TEXT[id0605] matches {
+						defining_code matches {[ac0001]}		-- Códigos de estados
+					}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- País
+				value matches {
+					DV_CODED_TEXT[id0005] matches {
+						defining_code matches {[ac0002]}		-- Códigos de países
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Validade da identificação
+				value matches {
+					DV_INTERVAL<DV_DATE>[id0405] matches {
+						upper matches {
+							DV_DATE[id0874] matches {*}
+						}
+						lower matches {
+							DV_DATE[id0290] matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en-gb"] = <
+			["at0000"] = <
+				text = <"Additional identifier data">
+				description = <"Additional data about an identifier for a person/organisation">
+			>
+			["at0001"] = <
+				text = <"City">
+				description = <"Indicates the city where the identifier was issued">
+			>
+			["at0002"] = <
+				text = <"State">
+				description = <"Indicates the state where the identifier was issued">
+			>
+			["at0003"] = <
+				text = <"Country">
+				description = <"Indicates the country where the identifier was issued">
+			>
+			["at0004"] = <
+				text = <"Time validity">
+				description = <"Period in which this identifier is valid">
+			>
+		>
+		["pt-br"] = <
+			["at0000"] = <
+				text = <"Dados adicionais de um identificador">
+				description = <"Dados adicionais para um identificador para uma pessoa/organização">
+			>
+			["at0001"] = <
+				text = <"Município">
+				description = <"Indica o município onde o documento foi emitido">
+			>
+			["at0002"] = <
+				text = <"Estado">
+				description = <"Indica o estado onde o documento foi emitido">
+			>
+			["at0003"] = <
+				text = <"País">
+				description = <"Indica o país onde o documento foi emitido">
+			>
+			["at0004"] = <
+				text = <"Validade da identificação">
+				description = <"Período de validade da identificacao">
+			>
+		>
+	>
+	constraint_definitions = <
+		["en-gb"] = <
+			["ac0000"] = <
+				text = <"City codes">
+				description = <"Valid codes for cities">
+			>
+			["ac0001"] = <
+				text = <"State codes">
+				description = <"Valid codes for states">
+			>
+			["ac0002"] = <
+				text = <"Country codes">
+				description = <"Valid codes for countries">
+			>
+		>
+		["pt-br"] = <
+			["ac0000"] = <
+				text = <"Códigos de cidades">
+				description = <"códigos válidos para cidade">
+			>
+			["ac0001"] = <
+				text = <"Códigos de estados">
+				description = <"códigos válidos para estados">
+			>
+			["ac0002"] = <
+				text = <"Códigos de países">
+				description = <"códigos válidos para paises">
+			>
+		>
+	>

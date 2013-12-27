@@ -48,19 +48,19 @@ description
 
 definition
     PARTY_IDENTITY[at0000] matches {  -- Person name
-	name matches {		-- A classification that enables differentiation between the usage of names for a person.
-	    DV_TEXT matches {*}
-            DV_CODED_TEXT matches {   
-                 defining_code matches {
-                                        [local::
-                                         at0023,
-                                         at0024,
-                                         at0025,
-                                         at0026,
-                                         at0027,
-                                         at0028]
-                 }
-	    }
+		name matches {		-- A classification that enables differentiation between the usage of names for a person.
+			DV_TEXT matches {*}
+			DV_CODED_TEXT matches {   
+				 defining_code matches {
+					[local::
+					 at0023,
+					 at0024,
+					 at0025,
+					 at0026,
+					 at0027,
+					 at0028]
+				 }
+			}
         }
         details matches {
             ITEM_TREE[at0001] occurrences matches {0..1} matches {  -- name components
@@ -116,7 +116,7 @@ definition
                     }
                     ELEMENT[at0009] occurrences matches {0..1} matches {  -- Conditional use
                         value matches {
-			    DV_TEXT matches {*}
+							DV_TEXT matches {*}
                             DV_CODED_TEXT matches { 
                                 defining_code matches {
                                     [local::

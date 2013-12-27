@@ -50,7 +50,7 @@ definition
 					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Test name
 										value matches {
 											DV_TEXT matches {*}
@@ -90,7 +90,7 @@ definition
 											archetype_id/value matches {/.*/}
 									}
 									CLUSTER[at0.97] occurrences matches {0..*} matches {	-- Immunology result
-										items cardinality matches {0..*; unordered} matches {
+										items matches {
 											ELEMENT[at0078.2] occurrences matches {0..*} matches {	-- Titre
 												value matches {
 													DV_PROPORTION matches {
@@ -103,8 +103,7 @@ definition
 											}
 											ELEMENT[at0.95] occurrences matches {0..*} matches {	-- Amount
 												value matches {
-													C_DV_QUANTITY <
-													>
+													DV_QUANTITY matches {*}
 												}
 											}
 											ELEMENT[at0.96] occurrences matches {0..*} matches {	-- Fluoresence pattern
@@ -157,9 +156,9 @@ definition
 		}
 		protocol matches {
 			ITEM_TREE[at0004] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					CLUSTER[at0013] occurrences matches {0..1} matches {	-- Test identification
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0062] occurrences matches {0..1} matches {	-- Placer order identifier
 								value matches {
 									DV_TEXT matches {*}

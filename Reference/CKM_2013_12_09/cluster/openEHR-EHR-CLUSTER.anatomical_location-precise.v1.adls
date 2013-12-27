@@ -1,0 +1,112 @@
+﻿archetype (adl_version=1.5; generated)
+	openEHR-EHR-CLUSTER.anatomical_location-precise.v1.0.0
+
+specialize
+	openEHR-EHR-CLUSTER.anatomical_location.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"10/11/2008">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Record highly detailed anatomical location.">
+			use = <"Use where highly precise localisation information is required, using co-ordinates.">
+			keywords = <"site", "location">
+			misuse = <"The parent OBSERVATION.anatomical_location archetype is generally sufficient for simple gross/surface anatomical location.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"initial">
+	other_contributors = <"Ian McNicoll Ocean Informatics", ...>
+	other_details = <
+		["references"] = <"Digital Imaging and Communications in Medicine (DICOM) Supplement 122: Specimen Module and Revised Pathology SOP Classes
+DICOM Standards Committee, Working Groups 26, Pathology.">
+		["MD5-CAM-1.0.1"] = <"45C2671752EC737C69B100223F9839DA">
+	>
+
+definition
+	CLUSTER[at0000.1] matches {	-- Precise anatomical location
+		/items matches {
+			before [at0053]
+			CLUSTER[at0.51] occurrences matches {0..1} matches {	-- Coordinates
+				items matches {
+					ELEMENT[at0.52] occurrences matches {0..1} matches {	-- Position frame of reference
+						value matches {
+							DV_TEXT[id0.437] 
+						}
+					}
+					ELEMENT[at0.53] occurrences matches {0..1} matches {	-- X offset
+						value matches {
+							DV_QUANTITY[id0.837] matches {
+								property matches {[openehr::122]}
+							}
+							DV_COUNT[id0.838] matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+					ELEMENT[at0.54] occurrences matches {0..1} matches {	-- Y offset
+						value matches {
+							DV_QUANTITY[id0.237] matches {
+								property matches {[openehr::122]}
+							}
+							DV_COUNT[id0.238] matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+					ELEMENT[at0.56] occurrences matches {0..1} matches {	-- Z offset
+						value matches {
+							DV_QUANTITY[id0.37] matches {
+								property matches {[openehr::122]}
+							}
+							DV_COUNT[id0.38] matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0.51"] = <
+				text = <"Coordinates">
+				description = <"DICOM based coordinate based system for accurate object localisation.">
+			>
+			["at0.52"] = <
+				text = <"Position frame of reference">
+				description = <"Description of coordinate system and origin reference point used for localizing the object.">
+			>
+			["at0.53"] = <
+				text = <"X offset">
+				description = <"Location of object (nominal center) relative to the Position Frame Reference.  Distance can be given in SI units or pixels.
+of ({pixel}, UCUM, “Pixels”).">
+			>
+			["at0.54"] = <
+				text = <"Y offset">
+				description = <"Location of object (nominal center) relative to the Position Frame Reference.  Distance can be given in SI units or pixels.
+of ({pixel}, UCUM, “Pixels”).">
+			>
+			["at0.56"] = <
+				text = <"Z offset">
+				description = <"Location of object (nominal center) relative to the Position Frame Reference.  Distance can be given in SI units or pixels.
+of ({pixel}, UCUM, “Pixels”).">
+			>
+			["at0000.1"] = <
+				text = <"Precise anatomical location">
+				description = <"Record details about the anatomical location of a specimen or body part, including precise localisation information.">
+			>
+		>
+	>

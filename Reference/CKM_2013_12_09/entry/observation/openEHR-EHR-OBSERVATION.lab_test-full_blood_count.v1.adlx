@@ -1,0 +1,352 @@
+﻿archetype (adl_version=1.5; generated)
+	openEHR-EHR-OBSERVATION.lab_test-full_blood_count.v1.0.0
+
+specialize
+	openEHR-EHR-OBSERVATION.lab_test.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"07/11/2009">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record observations on a blood film including microscopic findings and cell counts.
+
+
+">
+			use = <"Will normally be reported back to the requesting clinician within the context of an overall Composition-based laboratory report.
+">
+			keywords = <"lab", "pathology", "haematology", "laboratory", "FBC">
+			misuse = <"This archetype is not a full laboratory report and requires diagnosis and other assessments to be recorded using other archetypes.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"initial">
+	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia", "Koray Atalag, University of Auckland, New Zealand">
+	other_details = <
+		["references"] = <"NEHTA, Australia. Pathology Episode v1.0 - Data Group library [Internet]. 2009;[cited 2009 Dec 8 ] Available from: http://www.nehta.gov.au/data-group-library/data-specifications/dgl-pathology
+
+IHE. IHE, Laboratory Technical Framework, Volume 3 Content [Internet]. 2008;Available from: http://www.ihe.net/Technical_Framework/upload/ihe_lab_TF_rel2_1-Vol-3_FT_2008-08-08.pdf
+
+
+
+
+">
+		["MD5-CAM-1.0.1"] = <"2AF78472619ACBFAD183DC8BC7628242">
+	>
+
+definition
+	OBSERVATION[at0000.1] matches {	-- Full blood count
+		/protocol matches {
+			ITEM_TREE[at0004] matches {
+				items matches {
+					before [at0075]
+					CLUSTER[at0013] occurrences matches {0..1} matches {
+						items matches {
+							ELEMENT[at0062] occurrences matches {0..1} matches {
+								value matches {
+									DV_TEXT[id0.821] 
+								}
+							}
+							ELEMENT[at0063] occurrences matches {0..1} matches {
+								value matches {
+									DV_TEXT[id0.221] 
+								}
+							}
+							ELEMENT[at0068] occurrences matches {0..1} matches {
+								value matches {
+									DV_TEXT[id0.222] 
+								}
+							}
+							allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v1/}
+							}
+						}
+					}
+				}
+			}
+		}
+		/data[at0001]/events matches {
+			EVENT[at0002] occurrences matches {0..1} matches {
+				data matches {
+					ITEM_TREE[at0003] matches {
+						items matches {
+							ELEMENT[at0078.4] occurrences matches {0..1} matches {	-- Haemoglobin
+								value matches {
+									DV_QUANTITY[id0.381] matches {
+										property matches {[openehr::119]}
+										magnitude matches {|>=0.0|}
+										units matches {"gm/l"}
+									}
+								}
+							}
+							ELEMENT[at0078.5] occurrences matches {0..1} matches {	-- Red cell count (RCC)
+								value matches {
+									DV_QUANTITY[id0.781] matches {
+										property matches {[openehr::119]}
+										[magnitude, units] matches {
+											[{|>=0.0|}, {"10*12/l"}],
+											[{|>=0.0|}, {"10*6/mm3"}]
+										}
+									}
+								}
+							}
+							ELEMENT[at0078.6] occurrences matches {0..1} matches {	-- Packed cell volume (PCV)
+								value matches {
+									DV_PROPORTION[id0.181] matches {
+										numerator matches {|0.0..100.0|}
+										denominator matches {100.0}
+										is_integral matches {True}
+										type matches {2}
+									}
+								}
+							}
+							ELEMENT[at0078.7] occurrences matches {0..1} matches {	-- Mean cell haemaglobin concentration (MCHC)
+								value matches {
+									DV_QUANTITY[id0.581] matches {
+										property matches {[openehr::119]}
+										magnitude matches {|>=0.0|}
+										units matches {"gm/l"}
+									}
+								}
+							}
+							ELEMENT[at0078.8] occurrences matches {0..1} matches {	-- Mean cell volume (MCV)
+								value matches {
+									DV_QUANTITY[id0.981] matches {
+										property matches {[openehr::129]}
+										magnitude matches {|>=0.0|}
+										units matches {"fl"}
+									}
+								}
+							}
+							ELEMENT[at0078.9] occurrences matches {0..1} matches {	-- Mean cell haemaglobin (MCH)
+								value matches {
+									DV_QUANTITY[id0.382] matches {
+										property matches {[openehr::124]}
+										magnitude matches {|>=0.0|}
+										units matches {"pg"}
+									}
+								}
+							}
+							ELEMENT[at0078.10] occurrences matches {0..1} matches {	-- Red cell distribution width (RDW)
+								value matches {
+									DV_PROPORTION[id0.317] matches {
+										numerator matches {|0.0..100.0|}
+										denominator matches {1.0}
+										type matches {1}
+									}
+								}
+							}
+							ELEMENT[at0078.11] occurrences matches {0..1} matches {	-- Erythrocyte sedimentation rate (ESR)
+								value matches {
+									DV_QUANTITY[id0.717] matches {
+										property matches {[openehr::338]}
+										magnitude matches {|>=0.0|}
+										units matches {"mm/h"}
+									}
+								}
+							}
+							ELEMENT[at0078.20] occurrences matches {0..1} matches {	-- Mean platelet volume (MPV)
+								value matches {
+									DV_QUANTITY[id0.718] matches {
+										property matches {[openehr::129]}
+										magnitude matches {|>=0.0|}
+										units matches {"fl"}
+									}
+								}
+							}
+							ELEMENT[at0078.21] occurrences matches {0..1} matches {	-- Platelet distribution width
+								value matches {
+									DV_PROPORTION[id0.117] matches {
+										numerator matches {|0.0..100.0|}
+										denominator matches {1.0}
+										type matches {1}
+									}
+								}
+							}
+							ELEMENT[at0078.12] occurrences matches {0..1} matches {	-- Platelet count
+								value matches {
+									DV_QUANTITY[id0.118] matches {
+										property matches {[openehr::119]}
+										magnitude matches {|>=0.0|}
+										units matches {"10*9/l"}
+									}
+								}
+							}
+							ELEMENT[at0078.22] occurrences matches {0..1} matches {	-- Plateletcrit
+								value matches {
+									DV_PROPORTION[id0.517] matches {
+										numerator matches {|0.0..100.0|}
+										denominator matches {100.0}
+										is_integral matches {True}
+										type matches {2}
+									}
+								}
+							}
+							ELEMENT[at0078.13] occurrences matches {0..1} matches {	-- White cell count
+								value matches {
+									DV_QUANTITY[id0.518] matches {
+										property matches {[openehr::119]}
+										magnitude matches {|>=0.0|}
+										units matches {"10*9/l"}
+									}
+								}
+							}
+							CLUSTER[at0078.14] occurrences matches {0..1} matches {	-- White cell differential
+								items cardinality matches {1..5; ordered} matches {
+									ELEMENT[at0078.15] occurrences matches {0..1} matches {	-- Neutrophils
+										value matches {
+											DV_QUANTITY[id0.85] matches {
+												property matches {[openehr::119]}
+												magnitude matches {|>=0.0|}
+												units matches {"10*9/l"}
+											}
+										}
+									}
+									ELEMENT[at0078.16] occurrences matches {0..1} matches {	-- Lymphocytes
+										value matches {
+											DV_QUANTITY[id0.485] matches {
+												property matches {[openehr::119]}
+												magnitude matches {|>=0.0|}
+												units matches {"10*9/l"}
+											}
+										}
+									}
+									ELEMENT[at0078.17] occurrences matches {0..1} matches {	-- Basophils
+										value matches {
+											DV_QUANTITY[id0.885] matches {
+												property matches {[openehr::119]}
+												magnitude matches {|>=0.0|}
+												units matches {"10*9/l"}
+											}
+										}
+									}
+									ELEMENT[at0078.18] occurrences matches {0..1} matches {	-- Monocytes
+										value matches {
+											DV_QUANTITY[id0.285] matches {
+												property matches {[openehr::119]}
+												magnitude matches {|>=0.0|}
+												units matches {"10*9/l"}
+											}
+										}
+									}
+									ELEMENT[at0078.19] occurrences matches {0..1} matches {	-- Eosinophils
+										value matches {
+											DV_QUANTITY[id0.685] matches {
+												property matches {[openehr::119]}
+												magnitude matches {|>=0.0|}
+												units matches {"10*9/l"}
+											}
+										}
+									}
+									ELEMENT[at0078.23] occurrences matches {0..1} matches {	-- Microscopic features
+										value matches {
+											DV_TEXT[id0.686] 
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1"] = <
+				text = <"Full blood count">
+				description = <"The full blood count or examination normally reported by a haematology laboratory.">
+			>
+			["at0078.10"] = <
+				text = <"Red cell distribution width (RDW)">
+				description = <"The variation in red cell volume">
+			>
+			["at0078.11"] = <
+				text = <"Erythrocyte sedimentation rate (ESR)">
+				description = <"The velocity of sedimentation of red cells in the first hour">
+			>
+			["at0078.12"] = <
+				text = <"Platelet count">
+				description = <"The number of platelets per litre">
+			>
+			["at0078.13"] = <
+				text = <"White cell count">
+				description = <"The number of white cells per litre">
+			>
+			["at0078.14"] = <
+				text = <"White cell differential">
+				description = <"The differential count of white cells or leukocytes">
+			>
+			["at0078.15"] = <
+				text = <"Neutrophils">
+				description = <"The number of neutrophils per litre">
+			>
+			["at0078.16"] = <
+				text = <"Lymphocytes">
+				description = <"The number of lymphocytes per litre">
+			>
+			["at0078.17"] = <
+				text = <"Basophils">
+				description = <"The number of basophils per litre">
+			>
+			["at0078.18"] = <
+				text = <"Monocytes">
+				description = <"The number of monocytes per litre">
+			>
+			["at0078.19"] = <
+				text = <"Eosinophils">
+				description = <"The number of eosinophils per litre">
+			>
+			["at0078.20"] = <
+				text = <"Mean platelet volume (MPV)">
+				description = <"The average platelet volume">
+			>
+			["at0078.21"] = <
+				text = <"Platelet distribution width">
+				description = <"The variation in platelet volume">
+			>
+			["at0078.22"] = <
+				text = <"Plateletcrit">
+				description = <"The proportion of the volume of blood taken up by platelets">
+			>
+			["at0078.23"] = <
+				text = <"Microscopic features">
+				description = <"The features of the blood film on microscopy">
+			>
+			["at0078.4"] = <
+				text = <"Haemoglobin">
+				description = <"The mass concentration of haemoglobin">
+			>
+			["at0078.5"] = <
+				text = <"Red cell count (RCC)">
+				description = <"The number of red blood cells per litre">
+			>
+			["at0078.6"] = <
+				text = <"Packed cell volume (PCV)">
+				description = <"(Haematocrit) The proportion of the volume of blood taken up by red blood cells">
+			>
+			["at0078.7"] = <
+				text = <"Mean cell haemaglobin concentration (MCHC)">
+				description = <"The average haemaglobin concentration in the red blood cells">
+			>
+			["at0078.8"] = <
+				text = <"Mean cell volume (MCV)">
+				description = <"The average volume of the red blood cells (PCV/RCC)">
+			>
+			["at0078.9"] = <
+				text = <"Mean cell haemaglobin (MCH)">
+				description = <"The average haemaglobin content of red blood cells">
+			>
+		>
+	>

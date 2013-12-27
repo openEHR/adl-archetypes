@@ -31,11 +31,11 @@ definition
 	OBSERVATION[at0000.1] matches {	-- Carer observation about hearing of subject
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Stimulus
 										value matches {
 											DV_CODED_TEXT matches {
@@ -66,7 +66,7 @@ definition
 										}
 									}
 									CLUSTER[at0013] occurrences matches {0..1} matches {	-- Third Party details
-										items cardinality matches {0..*; unordered} matches {
+										items matches {
 											allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.individual_personal\.v1/}

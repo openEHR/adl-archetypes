@@ -1,0 +1,150 @@
+﻿archetype (adl_version=1.5; generated)
+	openEHR-EHR-OBSERVATION.substance_use-alcohol.v1.0.0
+
+specialize
+	openEHR-EHR-OBSERVATION.substance_use.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"6/05/2009">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"This is an archetype used to record details of the use of all forms of alcohol. ">
+			use = <"Use to record details of the use of all forms of alcohol.  This includes use at specific point in time, over intervals of time, and use of mathematical functions such as average or minimum eg average consumption over a week.  A typical use would be to record usage in an alcohol consumption diary.">
+			keywords = <"substance", "addiction", "consumption", "use">
+			misuse = <"Not to be used for recording persistent and summary details about the use of the substance - this should be captured using the EVALUATION.substance_use_summary archetype.  
+Not to be used for recording use or consumption histories for substances other than alcohol.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
+	other_details = <
+		["references"] = <"">
+		["MD5-CAM-1.0.1"] = <"E80C92427092354E9D124F3E3A5093E0">
+	>
+
+definition
+	OBSERVATION[at0000.1] matches {	-- Alcohol Consumption
+		/protocol matches {
+			ITEM_TREE[at0.29] matches {	-- Tree
+				items matches {
+					ELEMENT[at0.30] occurrences matches {0..1} matches {	-- Alcohol per standard drink
+						value matches {
+							DV_QUANTITY[id0.702] matches {
+								property matches {[openehr::124]}
+								units matches {"gm"}
+							}
+						}
+					}
+				}
+			}
+		}
+		/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value matches {
+			DV_CODED_TEXT[id0.53] matches {
+				defining_code matches {[local::at0.19]}		-- Alcohol
+			}
+		}
+		/data[at0001]/events[at0002]/data[at0003]/items[at0010]/items[at0011]/value matches {
+			DV_CODED_TEXT[id0.501] matches {
+				defining_code matches {
+					[local::
+					at0.20, 	-- All alcohol
+					at0.21, 	-- All beer
+					at0.22, 	-- All wine
+					at0.23, 	-- All spirits
+					at0.24, 	-- Full strength beer
+					at0.25, 	-- Light beer
+					at0.26, 	-- Red wine
+					at0.27, 	-- White wine
+					at0.28]	-- Fortified wine
+				}
+			}
+		}
+		/data[at0001]/events[at0002]/data[at0003]/items[at0010]/items[at0012.1]/value matches {
+			DV_QUANTITY[id0.821] matches {
+				property matches {[openehr::382]}
+				units matches {"/h", "/d", "/wk"}
+			}
+		}
+		/data[at0001]/events[at0002]/data[at0003]/items[at0010]/items[at0012.2]/value matches {
+			DV_QUANTITY[id0.221] matches {
+				property matches {[openehr::347]}
+				units matches {"gm/d", "gm/wk"}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0.19"] = <
+				text = <"Alcohol">
+				description = <"Details about Alcohol consumption">
+			>
+			["at0.20"] = <
+				text = <"All alcohol">
+				description = <"Total amount of alcohol consumed">
+			>
+			["at0.21"] = <
+				text = <"All beer">
+				description = <"All beer consumed">
+			>
+			["at0.22"] = <
+				text = <"All wine">
+				description = <"All wine consumed">
+			>
+			["at0.23"] = <
+				text = <"All spirits">
+				description = <"All spirits consumed">
+			>
+			["at0.24"] = <
+				text = <"Full strength beer">
+				description = <"Full strength beer consumed">
+			>
+			["at0.25"] = <
+				text = <"Light beer">
+				description = <"Light beer consumed">
+			>
+			["at0.26"] = <
+				text = <"Red wine">
+				description = <"Red wine consumed">
+			>
+			["at0.27"] = <
+				text = <"White wine">
+				description = <"White wine consumed">
+			>
+			["at0.28"] = <
+				text = <"Fortified wine">
+				description = <"Fortified wine consumed">
+			>
+			["at0.29"] = <
+				text = <"Tree">
+				description = <"@ internal @">
+			>
+			["at0.30"] = <
+				text = <"Alcohol per standard drink">
+				description = <"Amount of alchohol defining a standard drink - this differs in many countries">
+			>
+			["at0000.1"] = <
+				text = <"Alcohol Consumption">
+				description = <"Archetype to record the actual use or consumption of alcohol at the present time, a specific time or over a period of time. ">
+			>
+			["at0012.1"] = <
+				text = <"Standard drinks">
+				description = <"Number of standard drinks of alcohol consumed">
+			>
+			["at0012.2"] = <
+				text = <"Grams of alcohol">
+				description = <"Number of grams of alcohol consumed">
+			>
+		>
+	>

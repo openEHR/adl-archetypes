@@ -45,7 +45,7 @@ description
 
 definition
 	CLUSTER[at0000] matches {	-- other details of an Identifier
-		items cardinality matches {0..*; ordered} matches {
+		items matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {	-- City
 				value matches {
 					DV_CODED_TEXT matches {

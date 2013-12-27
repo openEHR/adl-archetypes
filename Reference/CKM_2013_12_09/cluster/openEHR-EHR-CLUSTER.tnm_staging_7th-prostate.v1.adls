@@ -1,0 +1,231 @@
+﻿archetype (adl_version=1.5; generated)
+	openEHR-EHR-CLUSTER.tnm_staging_7th-prostate.v1.0.0
+
+specialize
+	openEHR-EHR-CLUSTER.tnm_staging_7th.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics Scotland">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"27/07/2009">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the classification and grading of prostate cancer using the TNM classification 7th Edition.">
+			use = <"">
+			keywords = <"tumour", "TNM", "malignancy", "cancer", "staging", "classification", "grade", "grading", "stage", "lymph node", "metastasis", "prostate">
+			misuse = <"Should not normally be used for TNM classification without specialisation or template-constraints">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"initial">
+	other_contributors = <"Heather Leslie Ocean Informatics Australia", "Sam Heard Ocean Informatics Australia", "Koray Atalag, University of Auckland, New Zealand">
+	other_details = <
+		["references"] = <"Sobin LH. TNM Classification of Malignant Tumours 7th Edition.  John Wiley and Sons; 2009.">
+		["MD5-CAM-1.0.1"] = <"E533BECCE960A42F8E540AA1534A4963">
+	>
+
+definition
+	CLUSTER[at0000.1] matches {	-- Tumour - Prostate Cancer TNM staging 7th Edition
+		/items[at0003]/value matches {
+			DV_CODED_TEXT[id0.5] matches {
+				defining_code matches {
+					[local::
+					at0.46, 	-- TX
+					at0.47, 	-- T0
+					at0.48, 	-- T1
+					at0.49, 	-- T1a
+					at0.50, 	-- T1b
+					at0.51, 	-- T1c
+					at0.59, 	-- T2
+					at0.60, 	-- T2a
+					at0.61, 	-- T2b
+					at0.62, 	-- T2c
+					at0.63, 	-- T3
+					at0.64, 	-- T3a
+					at0.65, 	-- T3b
+					at0.66]	-- T4
+				}
+			}
+		}
+		/items[at0004]/value matches {
+			DV_CODED_TEXT[id0.405] matches {
+				defining_code matches {
+					[local::
+					at0.52, 	-- NX
+					at0.53, 	-- N0
+					at0.54]	-- N1
+				}
+			}
+		}
+		/items[at0005]/value matches {
+			DV_CODED_TEXT[id0.805] matches {
+				defining_code matches {
+					[local::
+					at0.55, 	-- M0
+					at0.56, 	-- M1a
+					at0.57, 	-- M1b
+					at0.58, 	-- M1c
+					at0.67]	-- MX
+				}
+			}
+		}
+		/items[at0025]/value matches {
+			DV_CODED_TEXT[id0.605] matches {
+				defining_code matches {
+					[local::
+					at0.72, 	-- RX
+					at0.73, 	-- R0
+					at0.74, 	-- R1
+					at0.75]	-- R2
+				}
+			}
+		}
+		/items[at0014]/value matches {
+			DV_CODED_TEXT[id0.807] matches {
+				defining_code matches {
+					[local::
+					at0.68, 	-- Stage I
+					at0.69, 	-- Stage II
+					at0.70, 	-- Stage III
+					at0.71]	-- Stage IV
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0.46"] = <
+				text = <"TX">
+				description = <"Primary tumour cannot be assessed.">
+			>
+			["at0.47"] = <
+				text = <"T0">
+				description = <"No evidence of primary tumour">
+			>
+			["at0.48"] = <
+				text = <"T1">
+				description = <"T1 - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.49"] = <
+				text = <"T1a">
+				description = <"T1a - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.50"] = <
+				text = <"T1b">
+				description = <"T1b - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.51"] = <
+				text = <"T1c">
+				description = <"T1c - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.52"] = <
+				text = <"NX">
+				description = <"Regional lymph nodes not sampled.">
+			>
+			["at0.53"] = <
+				text = <"N0">
+				description = <"No positive regional nodes.">
+			>
+			["at0.54"] = <
+				text = <"N1">
+				description = <"Metastasis in regional node(s).">
+			>
+			["at0.55"] = <
+				text = <"M0">
+				description = <"No distant metastasis.">
+			>
+			["at0.56"] = <
+				text = <"M1a">
+				description = <"M1a - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.57"] = <
+				text = <"M1b">
+				description = <"M1b - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.58"] = <
+				text = <"M1c">
+				description = <"M1c - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.59"] = <
+				text = <"T2">
+				description = <"T2 - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.60"] = <
+				text = <"T2a">
+				description = <"T2a - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.61"] = <
+				text = <"T2b">
+				description = <"T2b - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.62"] = <
+				text = <"T2c">
+				description = <"T2c - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.63"] = <
+				text = <"T3">
+				description = <"T3 - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.64"] = <
+				text = <"T3a">
+				description = <"T3a - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.65"] = <
+				text = <"T3b">
+				description = <"T3b - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.66"] = <
+				text = <"T4">
+				description = <"T4 - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.67"] = <
+				text = <"MX">
+				description = <"Distant metastasis not assessed.">
+			>
+			["at0.68"] = <
+				text = <"Stage I">
+				description = <"Stage I - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.69"] = <
+				text = <"Stage II">
+				description = <"Stage II - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.70"] = <
+				text = <"Stage III">
+				description = <"Stage III - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.71"] = <
+				text = <"Stage IV">
+				description = <"Stage IV - as defined by AJCC/UICC TNM system (7th edition) Prostate cancer.">
+			>
+			["at0.72"] = <
+				text = <"RX">
+				description = <"RX - Residual tumour not assessed.">
+			>
+			["at0.73"] = <
+				text = <"R0">
+				description = <"Residual tumour absent.">
+			>
+			["at0.74"] = <
+				text = <"R1">
+				description = <"Microscopic residual tumour present.">
+			>
+			["at0.75"] = <
+				text = <"R2">
+				description = <"Macroscopic residual tumour present.">
+			>
+			["at0000.1"] = <
+				text = <"Tumour - Prostate Cancer TNM staging 7th Edition">
+				description = <"For the classification and grading of prostate cancer using the TNM classification 7th Edition.">
+			>
+		>
+	>
