@@ -37,10 +37,9 @@ definition
 				property matches {[openehr::127]}
 				[units, magnitude] matches {
 					[{"C"}, {|>=4.0|}],
-					[{"F"}, {|>=40.0|}];
-					[{"C"}, {8.0}]
+					[{"F"}, {|>=40.0|}]
 				}
-			>
+			}
 		}
 		clinical_quantity_attr_2 matches {
 			DV_QUANTITY matches {
@@ -62,7 +61,7 @@ definition
 			DV_QUANTITY matches {
 				property matches {[openehr::127]}
 				precision matches {2}
-			>
+			}
 		}
 	}
 

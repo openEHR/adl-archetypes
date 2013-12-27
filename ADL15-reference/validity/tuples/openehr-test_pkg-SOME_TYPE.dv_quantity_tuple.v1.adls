@@ -1,0 +1,46 @@
+archetype (adl_version=1.5)
+	openehr-TEST_PKG-SOME_TYPE.dv_quantity_tuple.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Illustrates DV_QUANTITY tuple constraints">
+			keywords = <"ADL", "test">
+			copyright = <"copyright (c) 2013 The openEHR Foundation">
+		>
+	>
+	other_details = <
+		["regression"] = <"PASS">
+	>
+	lifecycle_state = <"draft">
+
+definition
+	SOME_TYPE[at0000] matches {	-- root item
+		clinical_quantity_attr_1 matches {
+			DV_QUANTITY matches {
+				property matches {[openehr::127]}
+				[units, magnitude] matches {
+					[{"C"}, {|>=4.0|}],
+					[{"F"}, {|>=40.0|}]
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					description = <"xxxx">
+					text = <"root item">
+				>
+			>
+		>
+	>

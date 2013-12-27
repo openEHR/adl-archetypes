@@ -14,17 +14,17 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VSONIR validity check, triggered by legal refinement of occurrences to {0..1} but where at-code not redefined">
+			purpose = <"Test redefinition of occurrences to {0..1}, at-code not redefined">
 		>
 	>
 	other_details = <
-		["regression"] = <"VSONIR">
+		["regression"] = <"PASS">
 	>
 	lifecycle_state = <"draft">
 
 definition
 	OBSERVATION[at0000.1] matches {
-		/data/events matches {
+		/data[id0345]/events matches {
 			EVENT[at0002] occurrences matches {0..1}
 		}
 	}

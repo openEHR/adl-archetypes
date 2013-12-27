@@ -24,7 +24,9 @@ description
 
 definition
 	OBSERVATION[at0000] matches {
-		/data/events cardinality matches {1..8} 
+		/data[id0345]/events matches {
+			EVENT[at0.1] matches {*}
+		}
 	}
 
 ontology
@@ -33,6 +35,10 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"specialised archetype">
+					description = <"">
+				>
+				["at0.1"] = <
+					text = <"special event">
 					description = <"">
 				>
 			>

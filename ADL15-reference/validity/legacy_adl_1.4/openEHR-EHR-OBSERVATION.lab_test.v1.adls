@@ -1,8 +1,9 @@
-﻿archetype (adl_version=2.0; generated)
-	openEHR-EHR-OBSERVATION.lab_test.v1
+﻿archetype (adl_version=1.5)
+	openEHR-EHR-OBSERVATION.lab_test.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
@@ -17,7 +18,7 @@ description
 			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"initial">
 	other_details = <
 		["regression"] = <"PASS">
 	>

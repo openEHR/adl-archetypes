@@ -10,13 +10,13 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VATDF2 validity check, triggered when an at-code used in a coded term is not in the ontology.">
+			purpose = <"Test VATDF validity check, triggered when an at-code used in a coded term is not in the ontology.">
 			keywords = <"ADL", "validation", "test">
 			copyright = <"copyright (c) 2008-2012 The openEHR Foundation">
 		>
 	>
 	other_details = <
-		["regression"] = <"VATDF2">
+		["regression"] = <"VATDF">
 	>
 	lifecycle_state = <"draft">
 

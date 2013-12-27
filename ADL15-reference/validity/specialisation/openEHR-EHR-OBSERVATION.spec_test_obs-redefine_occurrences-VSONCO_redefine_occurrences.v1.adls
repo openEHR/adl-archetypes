@@ -24,7 +24,7 @@ description
 
 definition
 	OBSERVATION[at0000.1.1] matches {
-		/data/events matches {
+		/data[id0345]/events matches {
 			EVENT[at0002.1.1] occurrences matches {1..*}
 		}
 	}

@@ -24,7 +24,7 @@ definition
 	CAR[at0000] matches {	-- car
 		body matches {
 			CAR_BODY[at0001] matches {
-				 model existence matches {1} matches {"existence {1}"}
+				 model existence matches {1} matches {1}
 			}
 		}
 		engine_parts existence matches {1} matches {
