@@ -57,14 +57,14 @@ definition
 								items cardinality matches {1..*; unordered} matches {
 									ELEMENT[at0037] matches {	-- Test Result Name
 										value matches {
-											DV_TEXT[id0453] matches {*}
+											DV_TEXT matches {*}
 										}
 									}
 									CLUSTER[at0006] occurrences matches {0..3} matches {	-- Test
 										items cardinality matches {2..*; unordered} matches {
 											ELEMENT[at0007] matches {	-- Test Ear
 												value matches {
-													DV_CODED_TEXT[id0669] matches {
+													DV_CODED_TEXT matches {
 														defining_code matches {
 															[local::
 															at0008, 	-- Left Ear
@@ -78,7 +78,7 @@ definition
 												items cardinality matches {2; unordered} matches {
 													ELEMENT[at0011] matches {	-- Frequency
 														value matches {
-															DV_QUANTITY[id0309] matches {
+															DV_QUANTITY matches {
 																property matches {[openehr::382]}
 																[magnitude, units, precision] matches {
 																	[{|125.0..16000.0|}, {"Hz"}, {0}],
@@ -89,7 +89,7 @@ definition
 													}
 													ELEMENT[at0012] matches {	-- Threshold Level
 														value matches {
-															DV_QUANTITY[id0709] matches {
+															DV_QUANTITY matches {
 																property matches {[openehr::123]}
 																magnitude matches {|-10.0..120.0|}
 																units matches {"dB"}
@@ -101,19 +101,19 @@ definition
 											}
 											ELEMENT[at0122] occurrences matches {0..1} matches {	-- No Test Result
 												value matches {
-													DV_BOOLEAN[id0213] matches {
+													DV_BOOLEAN matches {
 														value matches {True}
 													}
 												}
 											}
 											ELEMENT[at0123] occurrences matches {0..1} matches {	-- Reason for No Test Result
 												value matches {
-													DV_TEXT[id0613] matches {*}
+													DV_TEXT matches {*}
 												}
 											}
 											ELEMENT[at0051] occurrences matches {0..1} matches {	-- Screening Assessment
 												value matches {
-													DV_CODED_TEXT[id0461] matches {
+													DV_CODED_TEXT matches {
 														defining_code matches {
 															[local::
 															at0052, 	-- Pass
@@ -126,7 +126,7 @@ definition
 												items matches {
 													ELEMENT[at0056] occurrences matches {0..1} matches {	-- Pure Tone Average
 														value matches {
-															DV_QUANTITY[id0597] matches {
+															DV_QUANTITY matches {
 																property matches {[openehr::123]}
 																magnitude matches {|-10.0..120.0|}
 																units matches {"dB"}
@@ -136,7 +136,7 @@ definition
 													}
 													ELEMENT[at0065] occurrences matches {0..1} matches {	-- Type of Loss
 														value matches {
-															DV_CODED_TEXT[id0598] matches {
+															DV_CODED_TEXT matches {
 																defining_code matches {
 																	[local::
 																	at0068, 	-- Conductive
@@ -149,12 +149,12 @@ definition
 													}
 													ELEMENT[at0070] occurrences matches {0..*} matches {	-- Clinical Interpretation
 														value matches {
-															DV_TEXT[id0997] matches {*}
+															DV_TEXT matches {*}
 														}
 													}
 													ELEMENT[at0126] occurrences matches {0..1} matches {	-- Articulation Index
 														value matches {
-															DV_PROPORTION[id0141] matches {
+															DV_PROPORTION matches {
 																numerator matches {|0.0..1.0|; 0.0}
 																is_integral matches {False}
 																type matches {1}
@@ -167,7 +167,7 @@ definition
 									}
 									ELEMENT[at0071] occurrences matches {0..1} matches {	-- Symmetry of Loss
 										value matches {
-											DV_CODED_TEXT[id0653] matches {
+											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
 													at0072, 	-- Symmetrical
@@ -178,7 +178,7 @@ definition
 									}
 									ELEMENT[at0131] occurrences matches {0..1} matches {	-- Laterality of Loss
 										value matches {
-											DV_CODED_TEXT[id0797] matches {
+											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
 													at0133, 	-- Unilateral
@@ -189,12 +189,12 @@ definition
 									}
 									ELEMENT[at0121] occurrences matches {0..*} matches {	-- Overall Interpretation
 										value matches {
-											DV_TEXT[id0397] matches {*}
+											DV_TEXT matches {*}
 										}
 									}
 									ELEMENT[at0026] occurrences matches {0..1} matches {	-- Test Result Image
 										value matches {
-											DV_MULTIMEDIA[id0654] matches {
+											DV_MULTIMEDIA matches {
 												media_type matches {
 													[openEHR::
 													425, 
@@ -208,7 +208,7 @@ definition
 									}
 									ELEMENT[at0027] occurrences matches {0..1} matches {	-- Comment
 										value matches {
-											DV_TEXT[id0053] matches {*}
+											DV_TEXT matches {*}
 										}
 									}
 								}
@@ -219,7 +219,7 @@ definition
 								items matches {
 									ELEMENT[at0028] occurrences matches {0..1} matches {	-- Aided
 										value matches {
-											DV_CODED_TEXT[id0614] matches {
+											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
 													at0029, 	-- Aided
@@ -230,7 +230,7 @@ definition
 									}
 									ELEMENT[at0074] occurrences matches {0..1} matches {	-- Pre-test Conditions
 										value matches {
-											DV_CODED_TEXT[id0013] matches {
+											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
 													at0124, 	-- Pre-test quiet
@@ -251,7 +251,7 @@ definition
 				items matches {
 					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Masking
 						value matches {
-							DV_CODED_TEXT[id0469] matches {
+							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
 									at0022, 	-- Unmasked
@@ -265,7 +265,7 @@ definition
 						items matches {
 							ELEMENT[at0109] occurrences matches {0..1} matches {	-- Air Conduction
 								value matches {
-									DV_CODED_TEXT[id0901] matches {
+									DV_CODED_TEXT matches {
 										defining_code matches {
 											[local::
 											at0110, 	-- Soundfield
@@ -277,7 +277,7 @@ definition
 							}
 							ELEMENT[at0113] occurrences matches {0..1} matches {	-- Bone Conduction
 								value matches {
-									DV_CODED_TEXT[id0902] matches {
+									DV_CODED_TEXT matches {
 										defining_code matches {
 											[local::
 											at0114, 	-- Mastoid
@@ -290,7 +290,7 @@ definition
 					}
 					ELEMENT[at0075] occurrences matches {0..1} matches {	-- Test Environment
 						value matches {
-							DV_CODED_TEXT[id0269] matches {
+							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
 									at0076, 	-- Audiometric booth
@@ -303,7 +303,7 @@ definition
 					}
 					ELEMENT[at0034] occurrences matches {0..1} matches {	-- Test Stimulus
 						value matches {
-							DV_CODED_TEXT[id0270] matches {
+							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
 									at0035, 	-- Tone burst
@@ -318,7 +318,7 @@ definition
 						items matches {
 							ELEMENT[at0086] occurrences matches {0..1} matches {	-- Onset Ramp
 								value matches {
-									DV_QUANTITY[id0205] matches {
+									DV_QUANTITY matches {
 										property matches {[openehr::128]}
 										units matches {"millisec"}
 									}
@@ -326,7 +326,7 @@ definition
 							}
 							ELEMENT[at0087] occurrences matches {0..1} matches {	-- Offset Ramp
 								value matches {
-									DV_QUANTITY[id0605] matches {
+									DV_QUANTITY matches {
 										property matches {[openehr::128]}
 										units matches {"millisec"}
 									}
@@ -334,7 +334,7 @@ definition
 							}
 							ELEMENT[at0088] occurrences matches {0..1} matches {	-- Total Duration
 								value matches {
-									DV_QUANTITY[id0005] matches {
+									DV_QUANTITY matches {
 										property matches {[openehr::128]}
 										units matches {"millisec"}
 									}
@@ -346,7 +346,7 @@ definition
 						items matches {
 							ELEMENT[at0127] occurrences matches {0..1} matches {	-- Threshold Definition
 								value matches {
-									DV_CODED_TEXT[id0462] matches {
+									DV_CODED_TEXT matches {
 										defining_code matches {
 											[local::
 											at0128, 	-- Minimum response level
@@ -358,7 +358,7 @@ definition
 							}
 							ELEMENT[at0094] occurrences matches {0..1} matches {	-- Step Size
 								value matches {
-									DV_CODED_TEXT[id0317] matches {
+									DV_CODED_TEXT matches {
 										defining_code matches {
 											[local::
 											at0095, 	-- 1 dB
@@ -371,7 +371,7 @@ definition
 							}
 							ELEMENT[at0099] occurrences matches {0..1} matches {	-- Direction
 								value matches {
-									DV_CODED_TEXT[id0318] matches {
+									DV_CODED_TEXT matches {
 										defining_code matches {
 											[local::
 											at0100, 	-- Descending/Ascending
@@ -392,17 +392,17 @@ definition
 					}
 					ELEMENT[at0134] occurrences matches {0..2} matches {	-- Reliability
 						value matches {
-							DV_TEXT[id0014] matches {*}
+							DV_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0119] occurrences matches {0..1} matches {	-- Test Modifications Required
 						value matches {
-							DV_TEXT[id0214] matches {*}
+							DV_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0089] occurrences matches {0..1} matches {	-- Calibration Reference dB
 						value matches {
-							DV_CODED_TEXT[id0271] matches {
+							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
 									at0090, 	-- db SPL
@@ -414,21 +414,21 @@ definition
 					}
 					ELEMENT[at0061] occurrences matches {0..1} matches {	-- Criteria for Pure Tone Average
 						value matches {
-							DV_CODED_TEXT[id0272] matches {
+							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
 									at0062, 	-- 3 frequency average
 									at0063]	-- 4 frequency average
 								}
 							}
-							DV_TEXT[id0273] matches {*}
+							DV_TEXT matches {*}
 						}
 					}
 					CLUSTER[at0102] occurrences matches {0..1} matches {	-- Screening Assessment Pass Criteria
 						items matches {
 							ELEMENT[at0103] occurrences matches {0..1} matches {	-- Stimulus Type
 								value matches {
-									DV_CODED_TEXT[id0789] matches {
+									DV_CODED_TEXT matches {
 										defining_code matches {
 											[local::
 											at0104, 	-- Tone
@@ -439,7 +439,7 @@ definition
 							}
 							ELEMENT[at0106] occurrences matches {0..1} matches {	-- Stimulus Level
 								value matches {
-									DV_QUANTITY[id0989] matches {
+									DV_QUANTITY matches {
 										property matches {[openehr::123]}
 										magnitude matches {|-10.0..120.0|}
 										units matches {"dB"}
@@ -449,7 +449,7 @@ definition
 							}
 							ELEMENT[at0107] occurrences matches {0..1} matches {	-- Stimulus Frequency
 								value matches {
-									DV_QUANTITY[id0389] matches {
+									DV_QUANTITY matches {
 										property matches {[openehr::382]}
 										[magnitude, units, precision] matches {
 											[{|0.125..16.0|}, {"kHz"}, {3}],
@@ -462,7 +462,7 @@ definition
 					}
 					ELEMENT[at0120] occurrences matches {0..1} matches {	-- Comment
 						value matches {
-							DV_TEXT[id0015] matches {*}
+							DV_TEXT matches {*}
 						}
 					}
 				}

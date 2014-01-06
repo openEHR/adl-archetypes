@@ -24,30 +24,30 @@ definition
 	CAR[at0000] matches {	-- car
 		body matches {
 			CAR_BODY[at0001] matches {
-				 model existence matches {1} matches {1}
+				 model existence matches {1} matches {"aston martin"}
 			}
 		}
 		engine_parts existence matches {1} matches {
 			ENGINE_PART[at0002] matches {	
 				items existence matches {1} cardinality matches {0..*} matches {
-					ENGINE_PART_ITEM[at0013] matches {*}
+					ENGINE_PART_ITEM[at0012]
 				}
 			}
 			ENGINE_PART[at0003] matches {
 				items cardinality matches {1..*} matches {
-					ENGINE_PART_ITEM[at0004] matches {*}
-					ENGINE_PART_ITEM[at0005] occurrences matches {0..1} matches {*}
-					ENGINE_PART_ITEM[at0006] occurrences matches {1} matches {*}
-					ENGINE_PART_ITEM[at0007] occurrences matches {0..*} matches {*}
-					ENGINE_PART_ITEM[at0008] occurrences matches {1..*} matches {*}
-					ENGINE_PART_ITEM[at0009] occurrences matches {0..5} matches {*}
-					ENGINE_PART_ITEM[at0010] occurrences matches {1..5} matches {*}
-					ENGINE_PART_ITEM[at0011] occurrences matches {10..20} matches {*}
+					ENGINE_PART_ITEM[at0004]
+					ENGINE_PART_ITEM[at0005] occurrences matches {0..1}
+					ENGINE_PART_ITEM[at0006] occurrences matches {1}
+					ENGINE_PART_ITEM[at0007] occurrences matches {6..12} 
+					ENGINE_PART_ITEM[at0008] occurrences matches {12}
+					ENGINE_PART_ITEM[at0009] occurrences matches {4}
+					ENGINE_PART_ITEM[at0010] occurrences matches {1..5}
+					ENGINE_PART_ITEM[at0011] occurrences matches {10..20}
 				}
 			}
 			ENGINE_PART[at0012] matches {	
 				items cardinality matches {2..5} matches {
-					ENGINE_PART_ITEM[at0013] matches {*}
+					ENGINE_PART_ITEM[at0013]
 				}
 			}
 		}
@@ -74,36 +74,36 @@ ontology
 					text = <"block">
 				>
 				["at0004"] = <
-					description = <"Use occurrences {0..*} from RM">
-					text = <"Use occurrences {0..*} from RM">
+					description = <"Timing chain">
+					text = <"Timing chain">
 				>
 				["at0005"] = <
-					description = <"Ocurrences {0..1}">
-					text = <"Ocurrences {0..1}">
+					description = <"Valves">
+					text = <"Valves">
 				>
 				["at0006"] = <
-					description = <"Occurrences {1}">
-					text = <"Occurrences {1}">
+					description = <"Head">
+					text = <"Head">
 				>
 				["at0007"] = <
-					description = <"Occurrences {0..*}">
-					text = <"Occurrences {0..*}">
+					description = <"Piston">
+					text = <"Piston">
 				>
 				["at0008"] = <
-					description = <"Occurrences {1..*}">
-					text = <"Occurrences {1..*}">
+					description = <"Con rod">
+					text = <"Con rod">
 				>
 				["at0009"] = <
-					description = <"Occurrences {0..5}">
-					text = <"Occurrences {0..5}">
+					description = <"Valve cam">
+					text = <"Valve cam">
 				>
 				["at0010"] = <
-					description = <"Occurrences {1..5}">
-					text = <"Occurrences {1..5}">
+					description = <"ECI chip">
+					text = <"ECI chip">
 				>
 				["at0011"] = <
-					description = <"Occurrences {10..20}">
-					text = <"Occurrences {10..20}">
+					description = <"Valve spring">
+					text = <"Valve spring">
 				>
 				["at0012"] = <
 					description = <"exhaust manifold">

@@ -1,10 +1,9 @@
 archetype (adl_version=1.5)
 	openEHR-EHR-OBSERVATION.multiple_alternatives.v1
 
-concept
-	[at0000]	-- top-level archetype
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["organisation"] = <"Ocean Informatics">

@@ -1,5 +1,5 @@
-template (adl_version=1.5)
-	openEHR-EHR-COMPOSITION.t_ext_ref.v1
+archetype (adl_version=1.5)
+	openEHR-EHR-COMPOSITION.ext_ref.v1
 
 language
 	original_language = <[ISO_639-1::en]>

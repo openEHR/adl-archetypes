@@ -1,9 +1,6 @@
 archetype (adl_version=1.5)
 	openEHR-EHR-OBSERVATION.constraint_binding_multiple.v1
 
-concept
-	[at0000]	
-
 language
 	original_language = <[ISO_639-1::en]>
 

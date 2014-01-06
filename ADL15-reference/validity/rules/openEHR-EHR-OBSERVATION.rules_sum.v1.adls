@@ -23,57 +23,77 @@ description
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Apgar score
+	OBSERVATION[id1] matches {	-- Apgar score
 		data matches {
-			HISTORY[at0002] matches {	-- history
+			HISTORY[id3] matches {	-- history
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0003] occurrences matches {0..1} matches {	-- 1 minute
+					POINT_EVENT[id4] occurrences matches {0..1} matches {	-- 1 minute
 						offset matches {
-							DV_DURATION matches {
+							DV_DURATION[id38] matches {
 								value matches {|PT1M|}
 							}
 						}
 						data matches {
-							ITEM_LIST[at0001] matches {	-- structure
+							ITEM_LIST[id2] matches {	-- structure
 								items cardinality matches {1..6; ordered} matches {
-									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Respiratory effort
+									ELEMENT[id10] occurrences matches {0..1} matches {	-- Respiratory effort
 										value matches {
-											0|[local::at0010], 	-- Absent
-											1|[local::at0011], 	-- Weak or irregular
-											2|[local::at0012]  	-- Normal
+											DV_ORDINAL[id39] matches {
+												[value, symbol] matches {
+													[{0}, {[local::at10]}], 	-- Absent
+													[{1}, {[local::at11]}], 	-- Weak or irregular
+													[{2}, {[local::at12]}]  	-- Normal
+												}
+											}
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Heart Rate
+									ELEMENT[id6] occurrences matches {0..1} matches {	-- Heart Rate
 										value matches {
-											0|[local::at0006], 	-- Absent
-											1|[local::at0007], 	-- <100 beats per minute
-											2|[local::at0008]  	-- ≥100 beats per minute
+											DV_ORDINAL[id40] matches {
+												[value, symbol] matches {
+													[{0}, {[local::at6]}], 	-- Absent
+													[{1}, {[local::at7]}], 	-- <100 beats per minute
+													[{2}, {[local::at8]}]  	-- ≥100 beats per minute
+												}
+											}
 										}
 									}
-									ELEMENT[at0013] occurrences matches {0..1} matches {	-- Muscle tone
+									ELEMENT[id14] occurrences matches {0..1} matches {	-- Muscle tone
 										value matches {
-											0|[local::at0014], 	-- Limp or flaccid
-											1|[local::at0015], 	-- Reduced tone
-											2|[local::at0016]  	-- Normal tone
+											DV_ORDINAL[id41] matches {
+												[value, symbol] matches {
+													[{0}, {[local::at14]}], 	-- Limp or flaccid
+													[{1}, {[local::at15]}], 	-- Reduced tone
+													[{2}, {[local::at16]}]  	-- Normal tone
+												}
+											}
 										}
 									}
-									ELEMENT[at0017] occurrences matches {0..1} matches {	-- Reflex irritability
+									ELEMENT[id18] occurrences matches {0..1} matches {	-- Reflex irritability
 										value matches {
-											0|[local::at0018], 	-- No response
-											1|[local::at0019], 	-- Reduced response
-											2|[local::at0020]  	-- Normal response
+											DV_ORDINAL[id42] matches {
+												[value, symbol] matches {
+													[{0}, {[local::at18]}], 	-- No response
+													[{1}, {[local::at19]}], 	-- Reduced response
+													[{2}, {[local::at20]}]  	-- Normal response
+												}
+											}
 										}
 									}
-									ELEMENT[at0021] occurrences matches {0..1} matches {	-- Skin colour
+									ELEMENT[id22] occurrences matches {0..1} matches {	-- Skin colour
 										value matches {
-											0|[local::at0022], 	-- Completely blue
-											1|[local::at0023], 	-- Body pink; extremities blue
-											2|[local::at0024]  	-- Completely pink
+											DV_ORDINAL[id43] matches {
+												[value, symbol] matches {
+													[{0}, {[local::at22]}], 	-- Completely blue
+													[{1}, {[local::at23]}], 	-- Body pink; extremities blue
+													[{2}, {[local::at24]}]  	-- Completely pink
+												}
+											}
 										}
 									}
-									ELEMENT[at0025] occurrences matches {0..1} matches {	-- Total
+									ELEMENT[id26] occurrences matches {0..1} matches {	-- Total
 										value matches {
-											DV_COUNT matches {
+											DV_COUNT[id44] matches {
 												magnitude matches {|0..10|}
 											}
 										}
@@ -82,60 +102,60 @@ definition
 							}
 						}
 					}
-					POINT_EVENT[at0026] occurrences matches {0..1} matches {	-- 2 minute
+					POINT_EVENT[id27] occurrences matches {0..1} matches {	-- 2 minute
 						offset matches {
-							DV_DURATION matches {
+							DV_DURATION[id45] matches {
 								value matches {|PT2M|}
 							}
 						}
 						data matches {
-							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[id46] /data[id3]/events[id4]/data[id2]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
-					POINT_EVENT[at0027] occurrences matches {0..1} matches {	-- 3 minute
+					POINT_EVENT[id28] occurrences matches {0..1} matches {	-- 3 minute
 						offset matches {
-							DV_DURATION matches {
+							DV_DURATION[id47] matches {
 								value matches {|PT3M|}
 							}
 						}
 						data matches {
-							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[id48] /data[id3]/events[id4]/data[id2]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
-					POINT_EVENT[at0028] occurrences matches {0..1} matches {	-- 5 minute
+					POINT_EVENT[id29] occurrences matches {0..1} matches {	-- 5 minute
 						offset matches {
-							DV_DURATION matches {
+							DV_DURATION[id49] matches {
 								value matches {|PT5M|}
 							}
 						}
 						data matches {
-							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[id50] /data[id3]/events[id4]/data[id2]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
-					POINT_EVENT[at0031] occurrences matches {0..1} matches {	-- 10 minute
+					POINT_EVENT[id32] occurrences matches {0..1} matches {	-- 10 minute
 						offset matches {
-							DV_DURATION matches {
+							DV_DURATION[id51] matches {
 								value matches {|PT10M|}
 							}
 						}
 						data matches {
-							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[id52] /data[id3]/events[id4]/data[id2]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
-					EVENT[at0037] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id38] occurrences matches {0..*} matches {	-- Any event
 						data matches {
-							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[id53] /data[id3]/events[id4]/data[id2]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
 				}
 			}
 		}
 		protocol matches {
-			ITEM_LIST[at0029] matches {	-- List
+			ITEM_LIST[id30] matches {	-- List
 				items matches {
-					ELEMENT[at0030] occurrences matches {0..1} matches {	-- Notes on measurement
+					ELEMENT[id31] occurrences matches {0..1} matches {	-- Notes on measurement
 						value matches {
-							DV_TEXT matches {*}
+							DV_TEXT[id54] matches {*}
 						}
 					}
 				}
@@ -145,37 +165,78 @@ definition
 
 invariant
 	score_sum: 
-		/data[at0002]/events[at0003]/data[at0001]/items[at0025]/value/magnitude =
-		/data[at0002]/events[at0003]/data[at0001]/items[at0005]/value/value + 
-		/data[at0002]/events[at0003]/data[at0001]/items[at0009]/value/value +
-		/data[at0002]/events[at0003]/data[at0001]/items[at0013]/value/value + 
-		/data[at0002]/events[at0003]/data[at0001]/items[at0017]/value/value + 
-		/data[at0002]/events[at0003]/data[at0001]/items[at0021]/value/value
+		/data[id3]/events[id4]/data[id2]/items[id26]/value[id44]/magnitude =
+		/data[id3]/events[id4]/data[id2]/items[id6]/value[id40]/value + 
+		/data[id3]/events[id4]/data[id2]/items[id10]/value[id39]/value +
+		/data[id3]/events[id4]/data[id2]/items[id14]/value[id41]/value + 
+		/data[id3]/events[id4]/data[id2]/items[id18]/value[id42]/value + 
+		/data[id3]/events[id4]/data[id2]/items[id22]/value[id43]/value
 
 
 ontology
-	term_definitions = <
+	id_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Apgar score">
 				description = <"Clinical score derived from assessment of respiratory effort, heart rate, reflex irritability, muscle tone and skin colour.">
 			>
-			["at0001"] = <
-				text = <"structure">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
-				text = <"history">
-				description = <"@ internal @">
-			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"1 minute">
 				description = <"Apgar score 1 minute after birth.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Heart Rate">
 				description = <"Recording of the infant's heart rate.">
 			>
+			["id10"] = <
+				text = <"Respiratory effort">
+				description = <"Observation of the infant's respiratory effort.">
+			>
+			["id14"] = <
+				text = <"Muscle tone">
+				description = <"Observation of the infant's muscle tone.">
+			>
+			["id18"] = <
+				text = <"Reflex irritability">
+				description = <"Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter.">
+			>
+			["id22"] = <
+				text = <"Skin colour">
+				description = <"Observation of the skin colour of the infant.">
+			>
+			["id26"] = <
+				text = <"Total">
+				description = <"The sum of the 5 ordinal scores for each component parameter.">
+			>
+			["id27"] = <
+				text = <"2 minute">
+				description = <"Apgar score 2 minutes after birth.">
+			>
+			["id28"] = <
+				text = <"3 minute">
+				description = <"Apgar score 3 minutes after birth.">
+			>
+			["id29"] = <
+				text = <"5 minute">
+				description = <"Apgar score 5 minutes after birth.">
+			>
+			["id31"] = <
+				text = <"Notes on measurement">
+				description = <"Notes on measurement of the Apgar score.">
+			>
+			["id32"] = <
+				text = <"10 minute">
+				description = <"Apgar score 10 minutes after birth.">
+			>
+			["id38"] = <
+				text = <"Any event">
+				description = <"Apgar score at any additional time, as required.">
+			>
+		>
+	>
+
+	term_definitions = <
+		["en"] = <
 			["at0006"] = <
 				text = <"Absent">
 				description = <"No heart beat is seen, felt or heard.">
@@ -187,10 +248,6 @@ ontology
 			["at0008"] = <
 				text = <"≥100 beats per minute">
 				description = <"Heart rate greater than or equal to 100 beats per minute.">
-			>
-			["at0009"] = <
-				text = <"Respiratory effort">
-				description = <"Observation of the infant's respiratory effort.">
 			>
 			["at0010"] = <
 				text = <"Absent">
@@ -204,10 +261,6 @@ ontology
 				text = <"Normal">
 				description = <"Breathing normally or crying.">
 			>
-			["at0013"] = <
-				text = <"Muscle tone">
-				description = <"Observation of the infant's muscle tone.">
-			>
 			["at0014"] = <
 				text = <"Limp or flaccid">
 				description = <"No spontaneous movement.">
@@ -219,10 +272,6 @@ ontology
 			["at0016"] = <
 				text = <"Normal tone">
 				description = <"Normal, vigorous movements.">
-			>
-			["at0017"] = <
-				text = <"Reflex irritability">
-				description = <"Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter.">
 			>
 			["at0018"] = <
 				text = <"No response">
@@ -236,10 +285,6 @@ ontology
 				text = <"Normal response">
 				description = <"Grimace, sneeze, cough or pulls away when stimulated.">
 			>
-			["at0021"] = <
-				text = <"Skin colour">
-				description = <"Observation of the skin colour of the infant.">
-			>
 			["at0022"] = <
 				text = <"Completely blue">
 				description = <"Body and extremities are blue.">
@@ -251,38 +296,6 @@ ontology
 			["at0024"] = <
 				text = <"Completely pink">
 				description = <"Body and extremities are pink; no cyanosis.">
-			>
-			["at0025"] = <
-				text = <"Total">
-				description = <"The sum of the 5 ordinal scores for each component parameter.">
-			>
-			["at0026"] = <
-				text = <"2 minute">
-				description = <"Apgar score 2 minutes after birth.">
-			>
-			["at0027"] = <
-				text = <"3 minute">
-				description = <"Apgar score 3 minutes after birth.">
-			>
-			["at0028"] = <
-				text = <"5 minute">
-				description = <"Apgar score 5 minutes after birth.">
-			>
-			["at0029"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0030"] = <
-				text = <"Notes on measurement">
-				description = <"Notes on measurement of the Apgar score.">
-			>
-			["at0031"] = <
-				text = <"10 minute">
-				description = <"Apgar score 10 minutes after birth.">
-			>
-			["at0037"] = <
-				text = <"Any event">
-				description = <"Apgar score at any additional time, as required.">
 			>
 		>
 	>

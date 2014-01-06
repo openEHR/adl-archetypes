@@ -192,7 +192,7 @@ definition
 				events cardinality matches {1..*; unordered} matches {
 					POINT_EVENT[at0003] occurrences matches {0..1} matches {	-- 1 minute
 						offset matches {
-							DV_DURATION[id0092] matches {
+							DV_DURATION matches {
 								value matches {|PT1M|}
 							}
 						}
@@ -201,7 +201,7 @@ definition
 								items cardinality matches {1..6; ordered} matches {
 									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Respiratory effort
 										value matches {
-											DV_ORDINAL[id0381] matches {
+											DV_ORDINAL matches {
 												[value, symbol] matches {
 													[{0}, {[local::at0010]}],
 													[{1}, {[local::at0011]}],
@@ -212,7 +212,7 @@ definition
 									}
 									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Heart Rate
 										value matches {
-											DV_ORDINAL[id0781] matches {
+											DV_ORDINAL matches {
 												[value, symbol] matches {
 													[{0}, {[local::at0006]}],
 													[{1}, {[local::at0007]}],
@@ -223,7 +223,7 @@ definition
 									}
 									ELEMENT[at0013] occurrences matches {0..1} matches {	-- Muscle tone
 										value matches {
-											DV_ORDINAL[id0382] matches {
+											DV_ORDINAL matches {
 												[value, symbol] matches {
 													[{0}, {[local::at0014]}],
 													[{1}, {[local::at0015]}],
@@ -234,7 +234,7 @@ definition
 									}
 									ELEMENT[at0017] occurrences matches {0..1} matches {	-- Reflex irritability
 										value matches {
-											DV_ORDINAL[id0981] matches {
+											DV_ORDINAL matches {
 												[value, symbol] matches {
 													[{0}, {[local::at0018]}],
 													[{1}, {[local::at0019]}],
@@ -245,7 +245,7 @@ definition
 									}
 									ELEMENT[at0021] occurrences matches {0..1} matches {	-- Skin colour
 										value matches {
-											DV_ORDINAL[id0982] matches {
+											DV_ORDINAL matches {
 												[value, symbol] matches {
 													[{0}, {[local::at0022]}],
 													[{1}, {[local::at0023]}],
@@ -256,7 +256,7 @@ definition
 									}
 									ELEMENT[at0025] occurrences matches {0..1} matches {	-- Total
 										value matches {
-											DV_COUNT[id0581] matches {
+											DV_COUNT matches {
 												magnitude matches {|0..10|}
 											}
 										}
@@ -267,47 +267,47 @@ definition
 					}
 					POINT_EVENT[at0026] occurrences matches {0..1} matches {	-- 2 minute
 						offset matches {
-							DV_DURATION[id0780] matches {
+							DV_DURATION matches {
 								value matches {|PT2M|}
 							}
 						}
 						data matches {
-							use_node ITEM_LIST[id0289] /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
 					POINT_EVENT[at0027] occurrences matches {0..1} matches {	-- 3 minute
 						offset matches {
-							DV_DURATION[id0180] matches {
+							DV_DURATION matches {
 								value matches {|PT3M|}
 							}
 						}
 						data matches {
-							use_node ITEM_LIST[id0769] /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
 					POINT_EVENT[at0028] occurrences matches {0..1} matches {	-- 5 minute
 						offset matches {
-							DV_DURATION[id0580] matches {
+							DV_DURATION matches {
 								value matches {|PT5M|}
 							}
 						}
 						data matches {
-							use_node ITEM_LIST[id0249] /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
 					POINT_EVENT[at0031] occurrences matches {0..1} matches {	-- 10 minute
 						offset matches {
-							DV_DURATION[id0524] matches {
+							DV_DURATION matches {
 								value matches {|PT10M|}
 							}
 						}
 						data matches {
-							use_node ITEM_LIST[id0905] /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
 					EVENT[at0037] occurrences matches {0..*} matches {	-- Any event
 						data matches {
-							use_node ITEM_LIST[id0169] /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
 				}
@@ -318,7 +318,7 @@ definition
 				items matches {
 					ELEMENT[at0030] occurrences matches {0..1} matches {	-- Notes on measurement
 						value matches {
-							DV_TEXT[id0853] matches {*}
+							DV_TEXT matches {*}
 						}
 					}
 				}

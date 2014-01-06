@@ -1,4 +1,4 @@
-template (adl_version=1.5)
+archetype (adl_version=1.5)
 	openEHR-EHR-COMPOSITION.t_non_existent_ext_ref.v1
 
 language

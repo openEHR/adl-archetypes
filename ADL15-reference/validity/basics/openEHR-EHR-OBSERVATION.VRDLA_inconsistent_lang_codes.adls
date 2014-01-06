@@ -1,7 +1,6 @@
 ﻿archetype (adl_version=1.5)
 	openEHR-EHR-OBSERVATION.VRDLA_inconsistent_lang_codes.v1
-concept
-	[at0000]	-- Blood pressure
+
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -13,6 +12,7 @@ language
 			>
 		>
 	>
+
 description
 	original_author = <
 		["name"] = <"Sam Heard">
