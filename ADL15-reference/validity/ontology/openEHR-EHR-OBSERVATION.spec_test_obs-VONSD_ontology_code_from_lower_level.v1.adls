@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-	openEHR-EHR-OBSERVATION.VONSD_ontology_code_from_lower_level.v1
+	openEHR-EHR-OBSERVATION.VONSD_terminology_code_from_lower_level.v1
 specialize
 	openEHR-EHR-OBSERVATION.spec_test_obs.v1
 
@@ -24,7 +24,7 @@ description
 
 definition
 	OBSERVATION[at0000.1] matches {	-- specialisation containing ordered extension nodes
-		/data[id0345]/events[at0002]/data[id0817]/items cardinality matches {2..*} matches {
+		/data/events[at0002]/data/items cardinality matches {2..*} matches {
 			ELEMENT[at0.1] matches {	-- Text field 2
 				value matches {
 					DV_TEXT matches {*}

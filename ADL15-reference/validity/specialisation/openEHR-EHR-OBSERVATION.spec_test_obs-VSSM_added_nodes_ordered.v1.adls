@@ -24,7 +24,7 @@ description
 
 definition
 	OBSERVATION[at0000.1] matches {	-- specialisation containing ordered extension nodes
-		/data[id0345]/events[at0002]/data[id0817]/items matches {
+		/data/events[at0002]/data/items matches {
 			after [at0999]
 			ELEMENT[at0.1] matches {	-- Text field 2
 				value matches {

@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.5)
-	openEHR-EHR-COMPOSITION.annotations_wrong_rm_path.v1
+	openEHR-EHR-COMPOSITION.VRANP_annotations_wrong_rm_path.v1
 
 language
 	original_language = <[ISO_639-1::en]>

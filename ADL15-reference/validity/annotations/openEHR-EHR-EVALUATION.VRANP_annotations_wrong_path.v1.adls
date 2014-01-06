@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.5)
-	openEHR-EHR-EVALUATION.annotations_wrong_path.v1
+	openEHR-EHR-EVALUATION.VRANP_annotations_wrong_path.v1
 
 language
 	original_language = <[ISO_639-1::en]>

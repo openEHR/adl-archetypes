@@ -24,7 +24,7 @@ description
 
 definition
 	OBSERVATION[at0000.1] matches {	-- multi-level redefinition archetype
-		/data[id0345]/events[at0002]/data[id0817]/items matches {
+		/data/events[at0002]/data/items matches {
 			ELEMENT[at0007.1] matches {	-- 1st redefine of at0007 node
 				value matches {
 					DV_QUANTITY matches {*}
