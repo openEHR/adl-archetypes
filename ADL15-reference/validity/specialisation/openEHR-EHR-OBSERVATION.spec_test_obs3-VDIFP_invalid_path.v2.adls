@@ -13,7 +13,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VDIFP validity check, triggered by invalid path attribute in specialssation">
+			purpose = <"Test VDIFP validity check, triggered by invalid path attribute in specialisation">
 			use = <"">
 			misuse = <"">
 		>

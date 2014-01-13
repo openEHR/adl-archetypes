@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-	openEHR-TEST_PKG-ENTRY.VONLC_missing_constraint_definitions_in_one_language.v1
+	openEHR-TEST_PKG-ENTRY.VOTM_terminology_extra_end_mark_before_other_language.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -15,19 +15,21 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VONLC validity check, triggered when the ontology has constraint definitions of the primary language but not of another language.">
+			purpose = <"Test VOTM validity check, triggered when there is an extra > character before the term definitions of the other language in the terminology.">
 			keywords = <"ADL", "validation", "test">
 			copyright = <"copyright (c) 2008 The openEHR Foundation">
 		>
 	>
 	other_details = <
-		["regression"] = <"VONLC">
+		["regression"] = <"VOTM">
 	>
 	lifecycle_state = <"draft">
 
 definition
 	ENTRY[at0000] matches {
-		value matches {[ac0001]}
+		value matches {
+			ELEMENT[at0001] matches {*}
+		}
 	}
 
 ontology
@@ -38,22 +40,20 @@ ontology
 					text = <"">
 					description = <"">
 				>
-			>
-		>
-		["de"] = <
-			items = <
-				["at0000"] = <
+				["at0001"] = <
 					text = <"">
 					description = <"">
 				>
 			>
 		>
 	>
-
-	constraint_definitions = <
-		["en"] = <
+		["de"] = <
 			items = <
-				["ac0001"] = <
+				["at0000"] = <
+					text = <"">
+					description = <"">
+				>
+				["at0001"] = <
 					text = <"">
 					description = <"">
 				>

@@ -31,27 +31,27 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
 								items matches {
-									CLUSTER[at0011] occurrences matches {0..*} matches {	-- level 1
+									CLUSTER[at0011] matches {	-- level 1
 										name matches {
 											DV_CODED_TEXT matches {
 												defining_code matches {[ac0000]}		-- =LOINC::Battery_name
 											}
 										}
 										items matches {
-											CLUSTER[at0012] occurrences matches {0..*} matches {	-- level 2
+											CLUSTER[at0012] matches {	-- level 2
 												name matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {[ac0001]}		-- =LOINC::Battery_name
 													}
 												}
 												items matches {
-													use_node ELEMENT /data[at0001]/events[at0002]/data[at0003]/items[at0013]
+													use_node ELEMENT[at0020] /data[at0001]/events[at0002]/data[at0003]/items[at0013]
 												}
 											}
-											use_node ELEMENT /data[at0001]/events[at0002]/data[at0003]/items[at0013]
+											use_node ELEMENT[at0021] /data[at0001]/events[at0002]/data[at0003]/items[at0013]
 										}
 									}
-									ELEMENT[at0013] occurrences matches {0..*} matches {*}
+									ELEMENT[at0013] matches {*}
 								}
 							}
 						}
@@ -69,17 +69,9 @@ ontology
 					description = <"Generic laboratory result archetype to allow terminology driven results on a generic framework">
 					text = <"Laboratory result">
 				>
-				["at0001"] = <
-					description = <"@ internal @">
-					text = <"history">
-				>
 				["at0002"] = <
 					description = <"Any event in a time series">
 					text = <"Any event">
-				>
-				["at0003"] = <
-					description = <"@ internal @">
-					text = <"Tree">
 				>
 				["at0011"] = <
 					description = <"A cluster to enable level one battery labels">
@@ -92,6 +84,14 @@ ontology
 				["at0013"] = <
 					description = <"Generic result - data type is not set">
 					text = <"Any result">
+				>
+				["at0020"] = <
+					description = <"Use node ref #1">
+					text = <"ref 1">
+				>
+				["at0021"] = <
+					description = <"Use node ref #2">
+					text = <"ref 2">
 				>
 			>
 		>

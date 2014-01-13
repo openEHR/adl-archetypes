@@ -30,7 +30,7 @@ definition
 				items matches {
 					CLUSTER[at0001] matches {
 						items matches {
-							use_node ELEMENT /data/items[at0010]/items[at0012]
+							use_node ELEMENT[at0009] /data/items[at0010]/items[at0012]
 							allow_archetype CLUSTER[at0003] matches {
 								include
 									archetype_id/value matches {/.*/}
@@ -75,6 +75,10 @@ ontology
 				["at0003"] = <
 					description = <"element">
 					text = <"element">
+				>
+				["at0009"] = <
+					description = <"use_node element">
+					text = <"use_node element">
 				>
 			>
 		>

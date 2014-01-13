@@ -28,10 +28,13 @@ description
 definition
 	ENTRY[at0000] matches {
 		ordinal_attr_1 matches {
-			0|[local::at0001],
-			1|[local::at0002],
-			2|[local::at0003]; 	-- This one is missing in the other language!
-			0  	-- assumed value
+			DV_ORDINAL matches {
+				[value, symbol] matches {
+					[{0}, {[local::at0001]}], 	-- +
+					[{1}, {[local::at0002]}], 	-- ++
+					[{2}, {[local::at0004]}] 	-- Missing
+				}
+			}
 		}
 	}
 

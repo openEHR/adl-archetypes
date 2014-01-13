@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-	openEHR-EHR-OBSERVATION.VOTBK_term_bindings_paths.v1
+	openEHR-EHR-OBSERVATION.term_bindings_paths.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -11,11 +11,11 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VOTBK validity check for paths mentioned in term_bindings.">
+			purpose = <"Test parsing of paths used in terminology bindings">
 		>
 	>
 	other_details = <
-		["regression"] = <"VOTBK">
+		["regression"] = <"PASS">
 	>
 
 definition
@@ -34,7 +34,7 @@ definition
 					}
 					POINT_EVENT[at0006] occurrences matches {0..1} matches {
 						data matches {
-							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[at0008] /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
 				}
@@ -77,8 +77,6 @@ ontology
 		["LNC205"] = <
 			items = <
 				["/data[at0002]/events[at0003]/data[at0001]/items[at0004]"] = <[LNC205::9272-6]>
-				["/data[at0002]/events[at0006]/data/items[at0004]"] = <[LNC205::9271-8]>
-				["junk_garbage"] = <[LNC205::9271-8]>
 			>
 		>
 	>

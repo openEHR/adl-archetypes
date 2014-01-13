@@ -1,4 +1,4 @@
-archetype (adl_version=1.5)
+archetype (adl_version=1.5.1)
 	openEHR-EHR-OBSERVATION.rules_sum.v1
 
 language
@@ -174,7 +174,7 @@ invariant
 
 
 ontology
-	id_definitions = <
+	term_definitions = <
 		["en"] = <
 			["id1"] = <
 				text = <"Apgar score">
@@ -232,68 +232,63 @@ ontology
 				text = <"Any event">
 				description = <"Apgar score at any additional time, as required.">
 			>
-		>
-	>
-
-	term_definitions = <
-		["en"] = <
-			["at0006"] = <
+			["at6"] = <
 				text = <"Absent">
 				description = <"No heart beat is seen, felt or heard.">
 			>
-			["at0007"] = <
+			["at7"] = <
 				text = <"<100 beats per minute">
 				description = <"Heart rate less than 100 beats per minute.">
 			>
-			["at0008"] = <
+			["at8"] = <
 				text = <"≥100 beats per minute">
 				description = <"Heart rate greater than or equal to 100 beats per minute.">
 			>
-			["at0010"] = <
+			["at10"] = <
 				text = <"Absent">
 				description = <"No effort to breath.">
 			>
-			["at0011"] = <
+			["at11"] = <
 				text = <"Weak or irregular">
 				description = <"Some effort to breath, moving chest.">
 			>
-			["at0012"] = <
+			["at12"] = <
 				text = <"Normal">
 				description = <"Breathing normally or crying.">
 			>
-			["at0014"] = <
+			["at14"] = <
 				text = <"Limp or flaccid">
 				description = <"No spontaneous movement.">
 			>
-			["at0015"] = <
+			["at15"] = <
 				text = <"Reduced tone">
 				description = <"Some flexion of extremities.">
 			>
-			["at0016"] = <
+			["at16"] = <
 				text = <"Normal tone">
 				description = <"Normal, vigorous movements.">
 			>
-			["at0018"] = <
+			["at18"] = <
 				text = <"No response">
 				description = <"No response to stimulation.">
 			>
-			["at0019"] = <
+			["at19"] = <
 				text = <"Reduced response">
 				description = <"Grimace or feeble cry when stimulated.">
 			>
-			["at0020"] = <
+			["at20"] = <
 				text = <"Normal response">
 				description = <"Grimace, sneeze, cough or pulls away when stimulated.">
 			>
-			["at0022"] = <
+			["at22"] = <
 				text = <"Completely blue">
 				description = <"Body and extremities are blue.">
 			>
-			["at0023"] = <
+			["at23"] = <
 				text = <"Body pink; extremities blue">
 				description = <"Body is pink; extremities are blue.">
 			>
-			["at0024"] = <
+			["at24"] = <
 				text = <"Completely pink">
 				description = <"Body and extremities are pink; no cyanosis.">
 			>

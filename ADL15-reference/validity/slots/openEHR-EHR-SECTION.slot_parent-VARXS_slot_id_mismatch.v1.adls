@@ -28,7 +28,7 @@ description
 definition
 	SECTION[at0000.1] matches {	
 		/items matches {
-			use_archetype OBSERVATION[at0001, openEHR-EHR-OBSERVATION.rm_correct_generic.v1]
+			use_archetype OBSERVATION[at0001] openEHR-EHR-OBSERVATION.rm_correct_generic.v1
 		}
 	}
 

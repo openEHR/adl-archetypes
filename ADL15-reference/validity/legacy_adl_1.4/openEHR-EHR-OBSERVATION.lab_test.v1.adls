@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.lab_test.v1.0.0
 
 language
@@ -24,17 +24,17 @@ description
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Laboratory test
+	OBSERVATION[id1] matches {	-- Laboratory test
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] matches {	-- Any event
+					EVENT[id3] matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {	-- Tree
 								items matches {
-									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Test name
+									ELEMENT[id6] occurrences matches {0..1} matches {	-- Test name
 										value matches {
-											DV_TEXT matches {*}
+											DV_TEXT[id7] 
 										}
 									}
 								}
@@ -46,26 +46,26 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Laboratory test">
 				description = <"To record the result of a laboratory test which may be used to record a single valued test but will often be specialised or templated to represent multiple value or 'panel' tests.  This archetype also acts as the parent for specialisations appropriate for more specific laboratory tests microbiology, histopathology.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Event Series">
 				description = <"@ internal @">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Any event.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Tree">
 				description = <"@ internal @">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Test name">
 				description = <"Specific identifier for this lab test. e.g. Full blood count , blood glucose, urine microbiology.  May equate to the result name for a single value result. Commonly a coded term e.g from LOINC or SNOMED-CT.">
 			>

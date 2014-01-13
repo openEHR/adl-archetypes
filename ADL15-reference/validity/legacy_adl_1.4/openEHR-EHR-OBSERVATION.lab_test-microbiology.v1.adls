@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.lab_test-microbiology.v1.0.0
 
 specialize
@@ -27,14 +27,16 @@ description
 	>
 
 definition
-	OBSERVATION[at0000.1] matches {	-- Microbiolology
-		/data[at0001]/events[at0002]/data[at0003]/items matches {
-			after [at0005]
-			CLUSTER[at0.34] occurrences matches {0..1} matches {	-- Bodily fluid findings
+	OBSERVATION[id1.1] matches {	-- Microbiolology
+		/data[id2]/events[id3]/data[id4]/items[id6]/value matches {
+			DV_TEXT[id0.8] 
+		}
+		/data[id2]/events[id3]/data[id4]/items matches {
+			CLUSTER[id0.34] occurrences matches {0..1} matches {	-- Bodily fluid findings
 				items matches {
-					ELEMENT[at0.36] occurrences matches {0..1} matches {	-- Red cell count
+					ELEMENT[id0.36] occurrences matches {0..1} matches {	-- Red cell count
 						value matches {
-							DV_QUANTITY matches {*}
+							DV_QUANTITY[id0.9] 
 						}
 					}
 				}
@@ -42,18 +44,18 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0.34"] = <
+			["id0.34"] = <
 				text = <"Bodily fluid findings">
 				description = <"Findings related to a bodily fluid specimen.">
 			>
-			["at0.36"] = <
+			["id0.36"] = <
 				text = <"Red cell count">
 				description = <"Red blood cell count in the bodily fluid..">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Microbiolology">
 				description = <"Generic laboratory test archetype for microbiology testing.">
 			>

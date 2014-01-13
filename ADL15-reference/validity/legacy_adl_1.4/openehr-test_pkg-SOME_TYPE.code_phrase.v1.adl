@@ -77,7 +77,7 @@ definition
 								value matches {"local"}
 							}
 						}
-						code_string matches {"at0111", "at0012", "at0013", "at0014", "at0015"}
+						code_string matches {"at0111", "at0112", "at0113", "at0114", "at0115"}
 					}
 				}
 			}

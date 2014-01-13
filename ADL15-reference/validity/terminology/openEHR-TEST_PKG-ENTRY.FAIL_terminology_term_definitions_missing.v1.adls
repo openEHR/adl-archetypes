@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-	openEHR-TEST_PKG-ENTRY.VOTM_ontology_term_definitions_of_original_language_missing.v1
+	openEHR-TEST_PKG-ENTRY.FAIL_terminology_term_definitions_missing.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -10,13 +10,13 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VOTM validity check, triggered when the ontology has term definitions of another language, but not of the original language.">
+			purpose = <"Test what happens when the terminology's term definitions are completely missing.">
 			keywords = <"ADL", "validation", "test">
 			copyright = <"copyright (c) 2008 The openEHR Foundation">
 		>
 	>
 	other_details = <
-		["regression"] = <"VOTM">
+		["regression"] = <"FAIL">
 	>
 	lifecycle_state = <"draft">
 
@@ -24,13 +24,3 @@ definition
 	ENTRY[at0000] matches {*}
 
 ontology
-	term_definitions = <
-		["sv"] = <
-			items = <
-				["at0000"] = <
-					text = <"">
-					description = <"">
-				>
-			>
-		>
-	>

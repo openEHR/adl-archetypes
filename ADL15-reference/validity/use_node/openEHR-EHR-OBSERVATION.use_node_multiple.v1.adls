@@ -107,7 +107,7 @@ definition
 							}
 						}
 						data matches {
-							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[at0040] /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
 					POINT_EVENT[at0027] occurrences matches {0..1} matches {	-- 3 minute
@@ -117,7 +117,7 @@ definition
 							}
 						}
 						data matches {
-							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[at0041] /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
 					POINT_EVENT[at0028] occurrences matches {0..1} matches {	-- 5 minute
@@ -127,7 +127,7 @@ definition
 							}
 						}
 						data matches {
-							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[at0042] /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
 					POINT_EVENT[at0031] occurrences matches {0..1} matches {	-- 10 minute
@@ -137,12 +137,12 @@ definition
 							}
 						}
 						data matches {
-							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[at0043] /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
 					EVENT[at0037] occurrences matches {0..*} matches {	-- Any event
 						data matches {
-							use_node ITEM_LIST /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[at0044] /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
 				}
@@ -167,14 +167,6 @@ ontology
 			["at0000"] = <
 				text = <"Apgar score">
 				description = <"Clinical score derived from assessment of respiratory effort, heart rate, reflex irritability, muscle tone and skin colour.">
-			>
-			["at0001"] = <
-				text = <"structure">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
-				text = <"history">
-				description = <"@ internal @">
 			>
 			["at0003"] = <
 				text = <"1 minute">

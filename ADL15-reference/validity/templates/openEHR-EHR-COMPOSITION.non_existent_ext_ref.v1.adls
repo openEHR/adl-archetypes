@@ -25,18 +25,20 @@ description
 definition
 	COMPOSITION[at0000] matches {
 		content matches {
-			use_archetype OBSERVATION[openEHR-EHR-OBSERVATION.doesnt_exist.v1]
+			use_archetype OBSERVATION[at0001] openEHR-EHR-OBSERVATION.doesnt_exist.v1
 		}
 	}
 
 ontology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"Composition">
-					description = <"Composition">
-				>
+			["at0000"] = <
+				text = <"Composition">
+				description = <"Composition">
+			>
+			["at0001"] = <
+				text = <"Observation">
+				description = <"Observation">
 			>
 		>
 	>

@@ -45,7 +45,6 @@ definition
 	}
 
 ontology
-	terminologies_available = <"AIR93", "AIR93(1.0.0)">
 	term_definitions = <
 		["en"] = <
 			items = <
@@ -79,12 +78,6 @@ ontology
 					text = <"MZN-SIF-Dihanje-Kašelj">
 					description = <"Link to ISPEK termset.">
 				>
-			>
-		>
-	>
-	term_bindings = <
-		["AIR93"] = <
-			items = <
 			>
 		>
 	>

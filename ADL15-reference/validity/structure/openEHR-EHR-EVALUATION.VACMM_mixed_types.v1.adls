@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-	openEHR-EHR-EVALUATION.VACMM_mixed_types.v1
+	openEHR-EHR-EVALUATION.use_node_ref_to_sibling.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -13,13 +13,13 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VACMM validity check, triggered by internal ref whose target at-code is same as at-code of a sibling node of the internal ref">
+			purpose = <"Use node ref (object proxy) whose target at-code is same as at-code of a sibling node of the proxy">
 			keywords = <"ADL", "test">
 			copyright = <"copyright (c) 2010 The openEHR Foundation">
 		>
 	>
 	other_details = <
-		["regression"] = <"VACMM">
+		["regression"] = <"PASS">
 	>
 	lifecycle_state = <"draft">
 
@@ -30,7 +30,7 @@ definition
 				items matches {
 					CLUSTER[at0001] matches {
 						items matches {
-							use_node ELEMENT /data/items[at0001]/items[at0002]
+							use_node ELEMENT[at0004] /data/items[at0001]/items[at0002]
 							allow_archetype CLUSTER[at0003] matches {
 								include
 									archetype_id/value matches {/.*/}
@@ -62,6 +62,10 @@ ontology
 				["at0003"] = <
 					description = <"element">
 					text = <"element">
+				>
+				["at0004"] = <
+					description = <"use node element">
+					text = <"use node element">
 				>
 			>
 		>

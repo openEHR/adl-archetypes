@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-	openEHR-TEST_PKG-ENTRY.VATDF_at_code_in_ordinal_not_in_ontology.v1
+	openEHR-TEST_PKG-ENTRY.VATDF_at_code_in_ordinal_not_in_terminology.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -10,7 +10,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VATDF validity check, triggered by an at-code used in an ordinal is not in the ontology.">
+			purpose = <"Test VATDF validity check, triggered by an at-code used in an ordinal is not in the terminology.">
 			keywords = <"ADL", "validation", "test">
 			copyright = <"copyright (c) 2008-2012 The openEHR Foundation">
 		>
@@ -23,14 +23,17 @@ description
 definition
 	ENTRY[at0000] matches {
 		ordinal_attr_1 matches {
-			0|[local::at0001],
-			1|[local::at0002],
-			2|[local::at0003]; 	-- This one is missing!
-			0  	-- assumed value
+			DV_ORDINAL matches {
+				[value, symbol] matches {
+					[{0}, {[local::at0001]}], 	-- +
+					[{1}, {[local::at0002]}], 	-- ++
+					[{2}, {[local::at0003]}] 	-- missing
+				}
+			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
 			items = <

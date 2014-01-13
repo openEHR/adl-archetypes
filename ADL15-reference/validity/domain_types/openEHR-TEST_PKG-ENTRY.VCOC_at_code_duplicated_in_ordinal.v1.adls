@@ -23,10 +23,14 @@ description
 definition
 	ENTRY[at0000] matches {
 		value matches {
-			1|[local::at0001],
-			2|[local::at0002],
-			3|[local::at0002],
-			4|[local::at0003]
+			DV_ORDINAL matches {
+				[value, symbol] matches {
+					[{0}, {[local::at0001]}], 	-- +
+					[{1}, {[local::at0002]}], 	-- ++
+					[{2}, {[local::at0002]}], 	-- ++
+					[{3}, {[local::at0003]}] 	-- +++
+				}
+			}
 		}
 	}
 

@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-	openEHR-TEST_PKG-ENTRY.VACDF_ontology_constraint_definitions_empty.v1
+	openEHR-TEST_PKG-ENTRY.VACDF_terminology_constraint_definitions_missing.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -10,7 +10,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VACDF validity check, triggered when the ontology's constraint definitions are completely empty.">
+			purpose = <"Test VACDF validity check, triggered when the terminology's constraint definitions are completely missing.">
 			keywords = <"ADL", "validation", "test">
 			copyright = <"copyright (c) 2008 The openEHR Foundation">
 		>
@@ -35,7 +35,4 @@ ontology
 				>
 			>
 		>
-	>
-
-	constraint_definitions = <
 	>

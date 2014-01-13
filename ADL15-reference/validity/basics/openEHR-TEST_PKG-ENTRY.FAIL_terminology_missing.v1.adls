@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-	openEHR-TEST_PKG-ENTRY.VATDF_concept_code_not_in_ontology.v1
+	openEHR-TEST_PKG-ENTRY.FAIL_terminology_missing.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -10,23 +10,15 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VATDF validity check, triggered when the concept code is missing from the ontology.">
+			purpose = <"Test what happens when the whole terminology section is missing.">
 			keywords = <"ADL", "validation", "test">
 			copyright = <"copyright (c) 2008 The openEHR Foundation">
 		>
 	>
 	other_details = <
-		["regression"] = <"VATDF">
+		["regression"] = <"FAIL">
 	>
 	lifecycle_state = <"draft">
 
 definition
 	ENTRY[at0000] matches {*}
-
-ontology
-	term_definitions = <
-		["en"] = <
-			items = <
-			>
-		>
-	>

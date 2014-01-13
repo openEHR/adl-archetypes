@@ -37,7 +37,7 @@ definition
 								items matches {
 									ELEMENT[at0003] occurrences matches {0..1} matches {	-- OrderID
 										value matches {
-											DV_EHR_URI matches {*}
+											DV_EHR_URI[at0014] matches {*}
 											DV_IDENTIFIER matches {*}
 										}
 									}
