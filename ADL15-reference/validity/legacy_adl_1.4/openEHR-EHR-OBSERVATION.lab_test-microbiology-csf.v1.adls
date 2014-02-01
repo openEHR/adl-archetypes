@@ -28,13 +28,8 @@ description
 
 definition
 	OBSERVATION[id1.1.1] matches {	-- Microbiolology of cerebro-spinal fluid
-		/data[id2]/events[id3]/data[id4]/items[id6]/value matches {
-			DV_TEXT[id0.0.10] 
-		}
-		/data[id2]/events[id3]/data[id4]/items[id0.34]/items[id0.36]/value matches {
-			DV_QUANTITY[id0.0.11] 
-		}
 		/data[id2]/events[id3]/data[id4]/items[id0.34]/items matches {
+			after [id0.36]
 			ELEMENT[id0.0.39] occurrences matches {0..1} matches {	-- Lymphocyte count
 				value matches {
 					DV_QUANTITY[id0.0.12] 

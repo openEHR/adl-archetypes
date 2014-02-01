@@ -128,14 +128,6 @@ ontology
 				text = <"Body temperature">
 				description = <"A measurement of the body temperature, which is a surrogate for the whole body temperature of the person.">
 			>
-			["at0001"] = <
-				text = <"Single">
-				description = <"*">
-			>
-			["at0002"] = <
-				text = <"History">
-				description = <"@ internal @">
-			>
 			["at0003"] = <
 				text = <"Any event">
 				description = <"Any event">
@@ -143,10 +135,6 @@ ontology
 			["at0004"] = <
 				text = <"Temperature">
 				description = <"The measured body temperature (as a surrogate for the whole body).">
-			>
-			["at0020"] = <
-				text = <"Protocol">
-				description = <"@ internal @">
 			>
 			["at0021"] = <
 				text = <"Site of measurement">
