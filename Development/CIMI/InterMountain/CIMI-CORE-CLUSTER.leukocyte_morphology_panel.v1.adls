@@ -1,0 +1,46 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.leukocyte_morphology_panel.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000] matches { -- Leukocyte morphology panel
+		item matches {
+			ELEMENT[at0003] occurrences matches {1} matches { -- Name
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.auer_rods_in_blood_by_light_microscopy.v1] -- Auer rods in blood by light microscopy
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"Leukocyte morphology panel">
+				description = <"Leukocyte morphology panel">
+			>
+			["at0003"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0003"] = <[SNOMED-CT::364712009]>
+			>
+		>
+	>

@@ -1,0 +1,158 @@
+archetype (adl_version=1.5; generated)
+	CIMI-PARTY-ROLE.healthcare_provider_individual_role.v1
+
+specialize
+	CIMI-PARTY-ROLE.healthcare_provider_role.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	ROLE[at] matches { -- Healthcare provider individual role
+		details matches {
+			CLUSTER[at] occurrences matches {0..*} -- Registration
+			details matches {
+				ELEMENT[at] occurrences matches {0..1} matches { -- Identifier
+					value matches {
+						TEXT matches {*}
+					}
+				}
+				ELEMENT[at] occurrences matches {0..1} matches { -- Registering organisation
+					value matches {
+						TEXT matches {*}
+					}
+				}
+				ELEMENT[at] occurrences matches {0..1} matches { -- Status
+					value matches {
+						CODED_TEXT matches {*}
+					}
+				}
+				ELEMENT[at] occurrences matches {0..1} matches { -- Datetime range
+					value matches {
+						INTERVAL_VALUE<DATE_TIME> matches {*}
+					}
+				}
+			}
+			CLUSTER[at] occurrences matches {0..*} -- Qualification
+			details matches {
+				ELEMENT[at] occurrences matches {1} matches { -- Name
+					value matches {
+						TEXT matches {*}
+					}
+				}
+				ELEMENT[at] occurrences matches {0..1} matches { -- Level
+					value matches {
+						CODED_TEXT matches {*}
+					}
+				}
+				ELEMENT[at] occurrences matches {0..1} matches { -- Issuing institution
+					value matches {
+						TEXT matches {*}
+					}
+				}
+				ELEMENT[at] occurrences matches {0..1} matches { -- Issuing country
+					value matches {
+						CODED_TEXT matches {*}
+					}
+				}
+				ELEMENT[at] occurrences matches {0..1} matches { -- Date
+					value matches {
+						DATE matches {*}
+					}
+				}
+			}
+			ELEMENT[at] occurrences matches {0..*} matches { -- Role
+				value matches {
+					TEXT matches {*}
+				}
+			}
+		}
+		relationship matches {
+			use_archetype PARTY_RELATIONSHIP [CIMI-CORE-PARTY_RELATIONSHIP.employer_relationship.v1] -- Employer
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at"] = <
+				text = <"Healthcare provider individual role">
+				description = <"Healthcare provider individual role">
+			>
+			["at"] = <
+				text = <"Registration">
+				description = <"Registration">
+			>
+			["at"] = <
+				text = <"Identifier">
+				description = <"Identifier">
+			>
+			["at"] = <
+				text = <"Registering organisation">
+				description = <"Registering organisation">
+			>
+			["at"] = <
+				text = <"Status">
+				description = <"Status">
+			>
+			["at"] = <
+				text = <"Datetime range">
+				description = <"Datetime range">
+			>
+			["at"] = <
+				text = <"Qualification">
+				description = <"Qualification">
+			>
+			["at"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["at"] = <
+				text = <"Level">
+				description = <"Level">
+			>
+			["at"] = <
+				text = <"Issuing institution">
+				description = <"Issuing institution">
+			>
+			["at"] = <
+				text = <"Issuing country">
+				description = <"Issuing country">
+			>
+			["at"] = <
+				text = <"Date">
+				description = <"Date">
+			>
+			["at"] = <
+				text = <"Role">
+				description = <"Role">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at"] = <[SNOMED-CT::138875005]>
+				["at"] = <[SNOMED-CT::138875005]>
+				["at"] = <[SNOMED-CT::138875005]>
+				["at"] = <[SNOMED-CT::138875005]>
+				["at"] = <[SNOMED-CT::138875005]>
+				["at"] = <[SNOMED-CT::138875005]>
+				["at"] = <[SNOMED-CT::138875005]>
+				["at"] = <[SNOMED-CT::138875005]>
+				["at"] = <[SNOMED-CT::138875005]>
+				["at"] = <[SNOMED-CT::138875005]>
+				["at"] = <[SNOMED-CT::138875005]>
+				["at"] = <[SNOMED-CT::138875005]>
+				["at"] = <[SNOMED-CT::138875005]>
+			>
+		>
+	>

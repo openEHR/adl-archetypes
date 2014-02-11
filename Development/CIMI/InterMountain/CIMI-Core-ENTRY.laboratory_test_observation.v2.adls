@@ -1,109 +1,71 @@
-archetype (adl_version=1.5)
-  CIMI-Core-ENTRY.laboratory_test_observation.v2
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-ENTRY.laboratory_test_observation.v2
+
+specialize
+	CIMI-CORE-ENTRY.observation.v4
 
 language
-  original_language = <[ISO_639-1::en]>
-
+	original_language = <[ISO_639-1::en]>
 
 description
-  original_author = <
-    ["name"] = <"">
-    ["date"] = <"05/16/2013">
-  >
-  details = <
-    ["en"] = <
-      language = <[ISO_639-1::en]>
-      purpose = <"">
-      use = <"">
-      misuse = <"">
-      copyright = <"">
-    >
-  >
-  lifecycle_state = <"initial">
-
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
 
 definition
-  ENTRY[at0000] matches { -- laboratory_test_observation
-    item matches {
-      ITEM[at0001] occurrences matches {0..*} -- Details
-      use_archetype CLUSTER[at0002, CIMI-CLUSTER.observe_action.v1] occurrences matches {0..*}
-      use_archetype CLUSTER[at0003, CIMI-CLUSTER.interpret_action.v1] occurrences matches {0..*}
-      use_archetype CLUSTER[at0004, CIMI-CLUSTER.approve_action.v1] occurrences matches {0..*}
-      use_archetype CLUSTER[at0005, CIMI-CLUSTER.report_action.v1] occurrences matches {0..*}
-      use_archetype CLUSTER[at0006, CIMI-CLUSTER.cancel_action.v1] occurrences matches {0..*}
-      use_archetype CLUSTER[at0007, CIMI-CLUSTER.update_action.v1] occurrences matches {0..*}
-      use_archetype CLUSTER[at0008, CIMI-CLUSTER.action.v1] occurrences matches {0..*}
-    }
-    data matches {
-      use_archetype CLUSTER[at0009, CIMI-CLUSTER.laboratory_test_observable.v1] occurrences matches {1}
-      use_archetype CLUSTER[at0010, CIMI-CLUSTER.laboratory_test_result_group.v1] occurrences matches {0..1}
-    }
-  }
-
-
+	ENTRY[at0000.1.1] matches { -- Laboratory Test Observation
+		/data matches {
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.laboratory_test_observable.v1] -- Test observable
+			CLUSTER[at0..1] occurrences matches {0..1} matches { -- Test results
+			item matches {
+				use_archetype CLUSTER [CIMI-CORE-CLUSTER.laboratory_test_result_item.v1] -- Result item
+				use_archetype CLUSTER [CIMI-CORE-CLUSTER.laboratory_test_result_group.v1] -- Result subgroup
+				use_archetype CLUSTER [CIMI-CORE-CLUSTER.specimen.v3] -- Specimen
+				ELEMENT[at0..2] occurrences matches {0..*} matches { -- Diagnosis
+					value matches {
+						TEXT matches {*}
+					}
+				}
+				ELEMENT[at0..3] occurrences matches {0..*} matches { -- Conclusions
+					value matches {
+						TEXT matches {*}
+					}
+				}
+			}}
+		}
+	}
 
 ontology
-
-  term_definitions = <
-    ["en"] = <
-      ["at0000"] = <
-        text = <"Laboratory Test Observation">
-        description = <"Laboratory Test Observation">
-      >
-      ["at0001"] = <
-        text = <"Test observable">
-        description = <"Test observable">
-      >
-      ["at0002"] = <
-        text = <"Test results">
-        description = <"Test results">
-      >
-      ["at0003"] = <
-        text = <"Details">
-        description = <"Details">
-      >
-      ["at0004"] = <
-        text = <"Observe action">
-        description = <"Observe action">
-      >
-      ["at0005"] = <
-        text = <"Interpret action">
-        description = <"Interpret action">
-      >
-      ["at0006"] = <
-        text = <"Approve action">
-        description = <"Approve action">
-      >
-      ["at0007"] = <
-        text = <"Report action">
-        description = <"Report action">
-      >
-      ["at0008"] = <
-        text = <"Cancel action">
-        description = <"Cancel action">
-      >
-      ["at0009"] = <
-        text = <"Update action">
-        description = <"Update action">
-      >
-      ["at0010"] = <
-        text = <"Action">
-        description = <"Action">
-      >
-    >
-  >
-
-
-  term_bindings = <
-    ["SNOMED-CT"] = <
-      items = <
-        ["at0000"] = <[SNOMED-CT::364712009]>
-        ["at0001"] = <[SNOMED-CT::364712009]>
-        ["at0002"] = <[SNOMED-CT::441742003]>
-        ["at0003"] = <[SNOMED-CT::138875005]>
-        ["at0007"] = <[SNOMED-CT::308561006]>
-        ["at0010"] = <[SNOMED-CT::71388002]>
-      >
-    >
-  >
-
+	term_definitions = <
+		["en"] = <
+			["at0000.1.1"] = <
+				text = <"Laboratory Test Observation">
+				description = <"Laboratory Test Observation">
+			>
+			["at0..1"] = <
+				text = <"Test results REF<CIMI-CORE-CLUSTER.laboratory_test_result_group>">
+				description = <"Test results REF<CIMI-CORE-CLUSTER.laboratory_test_result_group>">
+			>
+			["at0..2"] = <
+				text = <"Diagnosis">
+				description = <"Diagnosis">
+			>
+			["at0..3"] = <
+				text = <"Conclusions">
+				description = <"Conclusions">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000.1.1"] = <[SNOMED-CT::364712009]>
+				["at0..1"] = <[SNOMED-CT::441742003]>
+				["at0..2"] = <[SNOMED-CT::123038009]>
+				["at0..3"] = <[SNOMED-CT::123038009]>
+			>
+		>
+	>

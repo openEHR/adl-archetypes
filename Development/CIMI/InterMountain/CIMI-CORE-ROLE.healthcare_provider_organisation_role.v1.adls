@@ -1,0 +1,36 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-ROLE.healthcare_provider_organisation_role.v1
+
+specialize
+	CIMI-CORE-ROLE.healthcare_provider_role.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	ROLE[at0000.1.1.1] -- Healthcare provider organisation role
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1.1.1"] = <
+				text = <"Healthcare provider organisation role">
+				description = <"Healthcare provider organisation role">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000.1.1.1"] = <[SNOMED-CT::138875005]>
+			>
+		>
+	>

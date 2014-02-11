@@ -1,0 +1,50 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-COMPOSITION.laboratory_results_report.v2
+
+specialize
+	CIMI-CORE-COMPOSITION.clinical_report.v2
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	COMPOSITION[at0000.1] matches { -- Laboratory Results Report
+		content matches {
+			use_archetype ENTRY [CIMI-CORE-ENTRY.laboratory_report_header.v3] -- Laboratory report header
+			use_archetype ENTRY [CIMI-CORE-ENTRY.patient_encounter_summary.v2] -- Patient encounter summary
+			use_archetype ENTRY [CIMI-CORE-ENTRY.laboratory_test_request_summary.v2] -- Laboratory test request summary
+		}
+		link matches {
+			LINK[at0.1] occurrences matches {0..*} -- Patient encounter
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1"] = <
+				text = <"Laboratory Results Report">
+				description = <"Laboratory Results Report">
+			>
+			["at0.1"] = <
+				text = <"Patient encounter">
+				description = <"Patient encounter">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000.1"] = <[SNOMED-CT::371528001]>
+				["at0.1"] = <[SNOMED-CT::308335008]>
+			>
+		>
+	>

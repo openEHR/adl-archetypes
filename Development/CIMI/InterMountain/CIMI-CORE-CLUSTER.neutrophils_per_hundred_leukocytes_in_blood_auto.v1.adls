@@ -1,0 +1,53 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.neutrophils_per_hundred_leukocytes_in_blood_auto.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000] matches { -- Neutrophils per hundred leukocytes in blood by automated count
+		item matches {
+			ELEMENT[at0003] occurrences matches {1} matches { -- Name
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches { -- Result value
+				value matches {
+					QUANTITY matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"Neutrophils per hundred leukocytes in blood by automated count">
+				description = <"Neutrophils per hundred leukocytes in blood by automated count">
+			>
+			["at0003"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["at0004"] = <
+				text = <"Result value">
+				description = <"Result value">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+			>
+		>
+	>

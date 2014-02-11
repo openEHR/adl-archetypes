@@ -1,0 +1,144 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.collect_action.v1
+
+specialize
+	CIMI-CORE-CLUSTER.action.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000.1] matches { -- Collect Action
+		/item matches {
+			ELEMENT[at0.1] occurrences matches {1} matches { -- Action type
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.2] occurrences matches {0..1} matches { -- Collection datetime
+				value matches {
+					DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0.3] occurrences matches {0..1} matches { -- Collection datetime range
+				value matches {
+					INTERVAL_VALUE<DATE_TIME> matches {*}
+				}
+			}
+			ELEMENT[at0.4] occurrences matches {0..1} matches { -- Collection duration
+				value matches {
+					DURATION matches {*}
+				}
+			}
+			ELEMENT[at0.5] occurrences matches {0..1} matches { -- Collection timing offset
+				value matches {
+					DURATION matches {*}
+				}
+			}
+			ELEMENT[at0.6] occurrences matches {0..1} matches { -- Collection timing offset origin
+				value matches {
+					DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0.7] occurrences matches {0..1} matches { -- Collection description
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.specimen_collection_site.v1] -- Collection body site
+			ELEMENT[at0.8] occurrences matches {0..1} matches { -- Collection priority
+				value matches {
+					TEXT matches {*}
+				}
+			}
+		}
+		link matches {
+			LINK[at0.9] occurrences matches {0..1} -- Collection procedure
+		}
+		participation matches {
+			PARTICIPATION[at0.10] occurrences matches {0..*} -- Collector
+			PARTICIPATION[at0.11] occurrences matches {0..1} -- Locationof subject
+			PARTICIPATION[at0.12] occurrences matches {0..1} -- Locationof collector
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1"] = <
+				text = <"Collect Action">
+				description = <"Collect Action">
+			>
+			["at0.1"] = <
+				text = <"Action type">
+				description = <"Action type">
+			>
+			["at0.2"] = <
+				text = <"Collection datetime">
+				description = <"Collection datetime">
+			>
+			["at0.3"] = <
+				text = <"Collection datetime range">
+				description = <"Collection datetime range">
+			>
+			["at0.4"] = <
+				text = <"Collection duration">
+				description = <"Collection duration">
+			>
+			["at0.5"] = <
+				text = <"Collection timing offset">
+				description = <"Collection timing offset">
+			>
+			["at0.6"] = <
+				text = <"Collection timing offset origin">
+				description = <"Collection timing offset origin">
+			>
+			["at0.7"] = <
+				text = <"Collection description">
+				description = <"Collection description">
+			>
+			["at0.8"] = <
+				text = <"Collection priority">
+				description = <"Collection priority">
+			>
+			["at0.9"] = <
+				text = <"Collection procedure">
+				description = <"Collection procedure">
+			>
+			["at0.10"] = <
+				text = <"Collector">
+				description = <"Collector">
+			>
+			["at0.11"] = <
+				text = <"Locationof subject">
+				description = <"Locationof subject">
+			>
+			["at0.12"] = <
+				text = <"Locationof collector">
+				description = <"Locationof collector">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0.1"] = <[SNOMED-CT::71388002]>
+				["at0.2"] = <[SNOMED-CT::252129004]>
+				["at0.3"] = <[SNOMED-CT::442371002]>
+				["at0.4"] = <[SNOMED-CT::138875005]>
+				["at0.5"] = <[SNOMED-CT::138875005]>
+				["at0.6"] = <[SNOMED-CT::138875005]>
+				["at0.7"] = <[SNOMED-CT::125676002]>
+				["at0.8"] = <[SNOMED-CT::308916002]>
+				["at0.9"] = <[SNOMED-CT::308916002]>
+			>
+		>
+	>

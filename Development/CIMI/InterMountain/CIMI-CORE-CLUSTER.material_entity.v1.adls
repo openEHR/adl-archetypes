@@ -1,0 +1,66 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.material_entity.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000] matches { -- Material Entity
+		item matches {
+			ELEMENT[at0001] occurrences matches {0..*} matches { -- Identifier
+				value matches {
+					IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches { -- Name
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..*} matches { -- Description
+				value matches {
+					TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"Material Entity">
+				description = <"Material Entity">
+			>
+			["at0001"] = <
+				text = <"Identifier">
+				description = <"Identifier">
+			>
+			["at0002"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["at0003"] = <
+				text = <"Description">
+				description = <"Description">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000"] = <[SNOMED-CT::123037004]>
+				["at0001"] = <[SNOMED-CT::423901009]>
+				["at0002"] = <[SNOMED-CT::123037004]>
+				["at0003"] = <[SNOMED-CT::123037004]>
+			>
+		>
+	>

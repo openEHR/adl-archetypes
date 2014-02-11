@@ -1,0 +1,51 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-ENTRY.patient_encounter_summary.v2
+
+specialize
+	CIMI-CORE-ENTRY.clinical_activity.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	ENTRY[at0000.1.1] matches { -- Patient Encounter Summary
+		participation matches {
+			PARTICIPATION[at0..1] occurrences matches {0..1} -- Subject of care
+			PARTICIPATION[at0..2] occurrences matches {0..1} -- Information subject
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1.1"] = <
+				text = <"Patient Encounter Summary">
+				description = <"Patient Encounter Summary">
+			>
+			["at0..1"] = <
+				text = <"Subject of care">
+				description = <"Subject of care">
+			>
+			["at0..2"] = <
+				text = <"Information subject">
+				description = <"Information subject">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000.1.1"] = <[SNOMED-CT::308335008]>
+				["at0..1"] = <[SNOMED-CT::125676002]>
+				["at0..2"] = <[SNOMED-CT::125676002]>
+			>
+		>
+	>

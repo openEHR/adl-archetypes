@@ -1,0 +1,100 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.finding_item.v1
+
+specialize
+	CIMI-CORE-CLUSTER.finding.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000.1] matches { -- Finding Item
+		/item matches {
+			ELEMENT[at0.1] occurrences matches {0..1} matches { -- Finding value
+				value matches {
+					DATA_VALUE matches {*}
+				}
+			}
+			ELEMENT[at0.2] occurrences matches {0..1} matches { -- Normal range
+				value matches {
+					INTERVAL_VALUE<DATE_TIME> matches {*}
+				}
+			}
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.reference_range.v1] -- Reference range
+			ELEMENT[at0.3] occurrences matches {0..1} matches { -- Delta flag
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.4] occurrences matches {0..1} matches { -- Signal flag
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.5] occurrences matches {0..1} matches { -- Confidence
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.6] occurrences matches {0..*} matches { -- Method
+				value matches {
+					TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1"] = <
+				text = <"Finding Item">
+				description = <"Finding Item">
+			>
+			["at0.1"] = <
+				text = <"Finding value">
+				description = <"Finding value">
+			>
+			["at0.2"] = <
+				text = <"Normal range">
+				description = <"Normal range">
+			>
+			["at0.3"] = <
+				text = <"Delta flag">
+				description = <"Delta flag">
+			>
+			["at0.4"] = <
+				text = <"Signal flag">
+				description = <"Signal flag">
+			>
+			["at0.5"] = <
+				text = <"Confidence">
+				description = <"Confidence">
+			>
+			["at0.6"] = <
+				text = <"Method">
+				description = <"Method">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000.1"] = <[SNOMED-CT::404684003]>
+				["at0.1"] = <[SNOMED-CT::404684003]>
+				["at0.2"] = <[SNOMED-CT::138875005]>
+				["at0.3"] = <[SNOMED-CT::288533004]>
+				["at0.4"] = <[SNOMED-CT::288533004]>
+				["at0.5"] = <[SNOMED-CT::138875005]>
+				["at0.6"] = <[SNOMED-CT::138875005]>
+			>
+		>
+	>

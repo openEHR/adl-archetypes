@@ -1,0 +1,58 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.oxygen_partial_pressure_in_blood.v1
+
+specialize
+	CIMI-CORE-CLUSTER.finding_item.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000.1.1] matches { -- Oxygen partial pressure in blood
+		item matches {
+			ELEMENT[at0..1] occurrences matches {1} matches { -- Name
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0..2] occurrences matches {0..1} matches { -- Result value
+				value matches {
+					DATA_VALUE matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1.1"] = <
+				text = <"Oxygen partial pressure in blood">
+				description = <"Oxygen partial pressure in blood">
+			>
+			["at0..1"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["at0..2"] = <
+				text = <"Result value">
+				description = <"Result value">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0..1"] = <[SNOMED-CT::138875005]>
+				["at0..2"] = <[SNOMED-CT::138875005]>
+			>
+		>
+	>

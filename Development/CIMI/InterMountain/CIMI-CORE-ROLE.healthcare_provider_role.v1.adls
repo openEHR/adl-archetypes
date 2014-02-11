@@ -1,0 +1,92 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-ROLE.healthcare_provider_role.v1
+
+specialize
+	CIMI-CORE-ROLE.role.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	ROLE[at0000.1.1] matches { -- Healthcare provider role
+		details matches {
+			ELEMENT[at0..1] occurrences matches {0..*} matches { -- Field of practice
+				value matches {
+					 CODED_TEXT matches {*}
+				}
+			}
+				ELEMENT[at0..2] occurrences matches {1} matches { -- Value
+					value matches {
+						CODED_TEXT matches {*}
+					}
+				}
+				ELEMENT[at0..3] occurrences matches {0..1} matches { -- Primary indicator
+					value matches {
+						CODED_TEXT matches {*}
+					}
+				}
+			ELEMENT[at0..4] occurrences matches {0..1} matches { -- Provider type
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0..5] occurrences matches {0..1} matches { -- Provider classification
+				value matches {
+					TEXT matches {*}
+				}
+			}
+		}
+		relationship matches {
+			use_archetype PARTY_RELATIONSHIP [CIMI-CORE-PARTY_RELATIONSHIP.organisation_relationship.v1] -- Organisation relationship
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1.1"] = <
+				text = <"Healthcare provider role">
+				description = <"Healthcare provider role">
+			>
+			["at0..1"] = <
+				text = <"Field of practice">
+				description = <"Field of practice">
+			>
+			["at0..2"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["at0..3"] = <
+				text = <"Primary indicator">
+				description = <"Primary indicator">
+			>
+			["at0..4"] = <
+				text = <"Provider type">
+				description = <"Provider type">
+			>
+			["at0..5"] = <
+				text = <"Provider classification">
+				description = <"Provider classification">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000.1.1"] = <[SNOMED-CT::138875005]>
+				["at0..1"] = <[SNOMED-CT::138875005]>
+				["at0..2"] = <[SNOMED-CT::138875005]>
+				["at0..3"] = <[SNOMED-CT::138875005]>
+				["at0..4"] = <[SNOMED-CT::138875005]>
+				["at0..5"] = <[SNOMED-CT::138875005]>
+			>
+		>
+	>

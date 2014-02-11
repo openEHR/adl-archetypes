@@ -1,0 +1,48 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-ENTRY.observation_request.v2
+
+specialize
+	CIMI-CORE-ENTRY.request.v2
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	ENTRY[at0000.1.1.1] matches { -- Observation Request
+		data matches {
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.observation_request_action.v1] -- Request action
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.observable.v1] -- Requested observable
+		}
+		link matches {
+			LINK[at0...1] occurrences matches {0..*} -- Requested observation link
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1.1.1"] = <
+				text = <"Observation Request">
+				description = <"Observation Request">
+			>
+			["at0...1"] = <
+				text = <"Requested observation link">
+				description = <"Requested observation link">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000.1.1.1"] = <[SNOMED-CT::363787002]>
+			>
+		>
+	>

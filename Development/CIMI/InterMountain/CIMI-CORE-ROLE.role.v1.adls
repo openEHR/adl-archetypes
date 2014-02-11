@@ -1,0 +1,79 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-ROLE.role.v1
+
+specialize
+	CIMI-CORE-PARTY.party.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	ROLE[at0000.1] matches { -- Role
+		details matches {
+			ELEMENT[at0.1] occurrences matches {1} matches { -- Role type
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.2] occurrences matches {0..1} matches { -- Datetime range
+				value matches {
+					INTERVAL_VALUE<DATE> matches {*}
+				}
+			}
+			ELEMENT[at0.3] occurrences matches {0..*} matches { -- Confidentialty level
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.4] occurrences matches {0..1} matches { -- Status
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1"] = <
+				text = <"Role">
+				description = <"Role">
+			>
+			["at0.1"] = <
+				text = <"Role type">
+				description = <"Role type">
+			>
+			["at0.2"] = <
+				text = <"Datetime range">
+				description = <"Datetime range">
+			>
+			["at0.3"] = <
+				text = <"Confidentialty level">
+				description = <"Confidentialty level">
+			>
+			["at0.4"] = <
+				text = <"Status">
+				description = <"Status">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000.1"] = <[SNOMED-CT::138875005]>
+				["at0.1"] = <[SNOMED-CT::138875005]>
+				["at0.2"] = <[SNOMED-CT::138875005]>
+				["at0.3"] = <[SNOMED-CT::138875005]>
+				["at0.4"] = <[SNOMED-CT::138875005]>
+			>
+		>
+	>

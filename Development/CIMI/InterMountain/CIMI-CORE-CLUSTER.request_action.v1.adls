@@ -1,0 +1,133 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.request_action.v1
+
+specialize
+	CIMI-CORE-CLUSTER.action.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000.1] matches { -- Request Action
+		/item matches {
+			ELEMENT[at0.1] occurrences matches {1} matches { -- Action type
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.2] occurrences matches {0..*} matches { -- Request identifier
+				value matches {
+					IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0.3] occurrences matches {0..1} matches { -- Request datetime
+				value matches {
+					DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0.4] occurrences matches {0..1} matches { -- Request datetime range
+				value matches {
+					INTERVAL_VALUE<DATE_TIME> matches {*}
+				}
+			}
+			ELEMENT[at0.5] occurrences matches {0..1} matches { -- Request duration
+				value matches {
+					DURATION matches {*}
+				}
+			}
+			ELEMENT[at0.6] occurrences matches {0..1} matches { -- Request timing offset
+				value matches {
+					DURATION matches {*}
+				}
+			}
+			ELEMENT[at0.7] occurrences matches {0..1} matches { -- Request timing offset origin
+				value matches {
+					DATE_TIME matches {*}
+				}
+			}
+			ITEM[at0.8] occurrences matches {0..*} -- Clinical information provided
+		}
+		participation matches {
+			PARTICIPATION[at0.9] occurrences matches {0..*} -- Requester
+			PARTICIPATION[at0.10] occurrences matches {0..1} -- Locationof subject
+			PARTICIPATION[at0.11] occurrences matches {0..1} -- Locationof requester
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1"] = <
+				text = <"Request Action">
+				description = <"Request Action">
+			>
+			["at0.1"] = <
+				text = <"Action type">
+				description = <"Action type">
+			>
+			["at0.2"] = <
+				text = <"Request identifier">
+				description = <"Request identifier">
+			>
+			["at0.3"] = <
+				text = <"Request datetime">
+				description = <"Request datetime">
+			>
+			["at0.4"] = <
+				text = <"Request datetime range">
+				description = <"Request datetime range">
+			>
+			["at0.5"] = <
+				text = <"Request duration">
+				description = <"Request duration">
+			>
+			["at0.6"] = <
+				text = <"Request timing offset">
+				description = <"Request timing offset">
+			>
+			["at0.7"] = <
+				text = <"Request timing offset origin">
+				description = <"Request timing offset origin">
+			>
+			["at0.8"] = <
+				text = <"Clinical information provided">
+				description = <"Clinical information provided">
+			>
+			["at0.9"] = <
+				text = <"Requester">
+				description = <"Requester">
+			>
+			["at0.10"] = <
+				text = <"Locationof subject">
+				description = <"Locationof subject">
+			>
+			["at0.11"] = <
+				text = <"Locationof requester">
+				description = <"Locationof requester">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0.1"] = <[SNOMED-CT::308539001]>
+				["at0.2"] = <[SNOMED-CT::308539001]>
+				["at0.3"] = <[SNOMED-CT::423901009]>
+				["at0.4"] = <[SNOMED-CT::252129004]>
+				["at0.5"] = <[SNOMED-CT::252131008]>
+				["at0.6"] = <[SNOMED-CT::442371002]>
+				["at0.7"] = <[SNOMED-CT::138875005]>
+				["at0.8"] = <[SNOMED-CT::125676002]>
+				["at0.9"] = <[SNOMED-CT::308916002]>
+				["at0.10"] = <[SNOMED-CT::308916002]>
+			>
+		>
+	>

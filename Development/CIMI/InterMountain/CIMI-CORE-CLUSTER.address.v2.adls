@@ -1,0 +1,213 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.address.v2
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000] matches { -- Address
+		item matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches { -- No fixed address indicator
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches { -- Value
+				value matches {
+					PLAIN_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches { -- Status
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..*} matches { -- Use
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches { -- Preference indicator
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches { -- Datetime range
+				value matches {
+					INTERVAL_VALUE<DATE_TIME> matches {*}
+				}
+			}
+			CLUSTER[at0007] occurrences matches {0..*} matches { -- Address part
+			item matches {
+				ELEMENT[at0008] occurrences matches {0..1} matches { -- Part number
+					value matches {
+						COUNT matches {*}
+					}
+				}
+				ELEMENT[at0009] occurrences matches {0..1} matches { -- Value
+					value matches {
+						TEXT matches {*}
+					}
+				}
+				ELEMENT[at0010] occurrences matches {0..1} matches { -- Type
+					value matches {
+						CODED_TEXT matches {*}
+					}
+				}
+			}
+			}
+			CLUSTER[at0011] occurrences matches {0..*} matches { -- Address line
+			item matches {
+				ELEMENT[at0012] occurrences matches {0..1} matches { -- Line number
+					value matches {
+						COUNT matches {*}
+					}
+				}
+				ELEMENT[at0013] occurrences matches {0..1} matches { -- Value
+					value matches {
+						PLAIN_TEXT matches {*}
+					}
+				}
+				ELEMENT[at0014] occurrences matches {0..1} matches { -- Type
+					value matches {
+						CODED_TEXT matches {*}
+					}
+				}
+				CLUSTER[at0015] occurrences matches {0..*} matches { -- Address part
+				item matches {
+					ELEMENT[at0016] occurrences matches {0..1} matches { -- Part number
+						value matches {
+							COUNT matches {*}
+						}
+					}
+					ELEMENT[at0017] occurrences matches {0..1} matches { -- Value
+						value matches {
+							TEXT matches {*}
+						}
+					}
+					ELEMENT[at0018] occurrences matches {0..1} matches { -- Type
+						value matches {
+							CODED_TEXT matches {*}
+						}
+					}
+				}
+				}
+			}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"Address">
+				description = <"Address">
+			>
+			["at0001"] = <
+				text = <"No fixed address indicator">
+				description = <"No fixed address indicator">
+			>
+			["at0002"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["at0003"] = <
+				text = <"Status">
+				description = <"Status">
+			>
+			["at0004"] = <
+				text = <"Use">
+				description = <"Use">
+			>
+			["at0005"] = <
+				text = <"Preference indicator">
+				description = <"Preference indicator">
+			>
+			["at0006"] = <
+				text = <"Datetime range">
+				description = <"Datetime range">
+			>
+			["at0007"] = <
+				text = <"Address part">
+				description = <"Address part">
+			>
+			["at0008"] = <
+				text = <"Part number">
+				description = <"Part number">
+			>
+			["at0009"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["at0010"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["at0011"] = <
+				text = <"Address line">
+				description = <"Address line">
+			>
+			["at0012"] = <
+				text = <"Line number">
+				description = <"Line number">
+			>
+			["at0013"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["at0014"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["at0015"] = <
+				text = <"Address part">
+				description = <"Address part">
+			>
+			["at0016"] = <
+				text = <"Part number">
+				description = <"Part number">
+			>
+			["at0017"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["at0018"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000"] = <[SNOMED-CT::397635003]>
+				["at0001"] = <[SNOMED-CT::138875005]>
+				["at0002"] = <[SNOMED-CT::138875005]>
+				["at0003"] = <[SNOMED-CT::138875005]>
+				["at0004"] = <[SNOMED-CT::138875005]>
+				["at0005"] = <[SNOMED-CT::138875005]>
+				["at0006"] = <[SNOMED-CT::138875005]>
+				["at0007"] = <[SNOMED-CT::138875005]>
+				["at0008"] = <[SNOMED-CT::138875005]>
+				["at0009"] = <[SNOMED-CT::138875005]>
+				["at0010"] = <[SNOMED-CT::138875005]>
+				["at0011"] = <[SNOMED-CT::138875005]>
+				["at0012"] = <[SNOMED-CT::138875005]>
+				["at0013"] = <[SNOMED-CT::138875005]>
+				["at0014"] = <[SNOMED-CT::138875005]>
+				["at0015"] = <[SNOMED-CT::138875005]>
+				["at0016"] = <[SNOMED-CT::48176007]>
+				["at0017"] = <[SNOMED-CT::129264002]>
+				["at0018"] = <[SNOMED-CT::48176007]>
+			>
+		>
+	>

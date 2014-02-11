@@ -1,0 +1,50 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.auto_differential_panel_blood_result_group.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000] matches { -- Auto differential blood panel
+		item matches {
+			ELEMENT[at0003] occurrences matches {1} matches { -- Name
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.neutrophils_per_hundred_leukocytes_in_blood_auto.v1] -- Neutrophils/100 leukocytes in blood by automated count
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.neutrophils_band_form_per_hundred_leukocytes_in_blood_auto.v1] -- Neutrophils band form/100 leukocytes in blood by automated count
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.granulocytes_per_hundred_leukocytes_in_blood_auto.v1] -- Granulocytes/100 leukocytes in blood by automated count
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.lymphocytes_per_hundred_leukocytes_in_blood_auto.v1] -- Lymphocytes/100 leukocytes in blood by automated count
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.lymphocytes_variant_per_hundred_in_blood_auto.v1] -- Lymphocytes variant/100 leukocytes in blood by automated count
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.monocytes_per_hundred_leukocytes_in_blood_auto.v1] -- Monocytes/100 leukocytes in blood by automated count
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"Auto differential blood panel">
+				description = <"Auto differential blood panel">
+			>
+			["at0003"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+			>
+		>
+	>

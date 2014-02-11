@@ -1,0 +1,169 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.specimen.v3
+
+specialize
+	CIMI-CORE-CLUSTER.material_entity.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000.1] matches { -- Specimen
+		/item matches {
+			ELEMENT[at0.1] occurrences matches {0..1} matches { -- Specimen identifier
+				value matches {
+					IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0.2] occurrences matches {0..1} matches { -- Container identifier
+				value matches {
+					IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0.3] occurrences matches {0..1} matches { -- Source specimen identifier
+				value matches {
+					IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0.4] occurrences matches {0..1} matches { -- Specimen type
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.5] occurrences matches {0..1} matches { -- Specimen description
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.6] occurrences matches {0..1} matches { -- Specimen volume
+				value matches {
+					QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0.7] occurrences matches {0..*} matches { -- Specimen weight
+				value matches {
+					QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0.8] occurrences matches {0..*} matches { -- Specimen dimension
+				value matches {
+					QUANTITY matches {*}
+				}
+			}
+			ELEMENT[at0.9] occurrences matches {0..1} matches { -- Specimen size description
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.10] occurrences matches {0..1} matches { -- Sequence number
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.11] occurrences matches {0..1} matches { -- Specimen additive
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.12] occurrences matches {0..1} matches { -- Specimen handling risk
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.13] occurrences matches {0..*} matches { -- Special handling instructions
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.collect_action.v1] -- Collect action
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.receive_action.v1] -- Receive action
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1"] = <
+				text = <"Specimen">
+				description = <"Specimen">
+			>
+			["at0.1"] = <
+				text = <"Specimen identifier">
+				description = <"Specimen identifier">
+			>
+			["at0.2"] = <
+				text = <"Container identifier">
+				description = <"Container identifier">
+			>
+			["at0.3"] = <
+				text = <"Source specimen identifier">
+				description = <"Source specimen identifier">
+			>
+			["at0.4"] = <
+				text = <"Specimen type">
+				description = <"Specimen type">
+			>
+			["at0.5"] = <
+				text = <"Specimen description">
+				description = <"Specimen description">
+			>
+			["at0.6"] = <
+				text = <"Specimen volume">
+				description = <"Specimen volume">
+			>
+			["at0.7"] = <
+				text = <"Specimen weight">
+				description = <"Specimen weight">
+			>
+			["at0.8"] = <
+				text = <"Specimen dimension">
+				description = <"Specimen dimension">
+			>
+			["at0.9"] = <
+				text = <"Specimen size description">
+				description = <"Specimen size description">
+			>
+			["at0.10"] = <
+				text = <"Sequence number">
+				description = <"Sequence number">
+			>
+			["at0.11"] = <
+				text = <"Specimen additive">
+				description = <"Specimen additive">
+			>
+			["at0.12"] = <
+				text = <"Specimen handling risk">
+				description = <"Specimen handling risk">
+			>
+			["at0.13"] = <
+				text = <"Special handling instructions">
+				description = <"Special handling instructions">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000.1"] = <[SNOMED-CT::123038009]>
+				["at0.1"] = <[SNOMED-CT::423901009]>
+				["at0.2"] = <[SNOMED-CT::423901009]>
+				["at0.3"] = <[SNOMED-CT::423901009]>
+				["at0.4"] = <[SNOMED-CT::123038009]>
+				["at0.5"] = <[SNOMED-CT::123038009]>
+				["at0.6"] = <[SNOMED-CT::404230009]>
+				["at0.7"] = <[SNOMED-CT::371506001]>
+				["at0.8"] = <[SNOMED-CT::371475003]>
+				["at0.9"] = <[SNOMED-CT::371475003]>
+				["at0.10"] = <[SNOMED-CT::410681005]>
+				["at0.11"] = <[SNOMED-CT::105590001]>
+			>
+		>
+	>

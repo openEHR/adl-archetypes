@@ -1,0 +1,70 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-ACTOR.actor.v1
+
+specialize
+	CIMI-CORE-PARTY.party.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	ACTOR[at0000.1] matches { -- Actor
+		/details matches {
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.actor_name.v1] -- Name
+			ELEMENT[at0.1] occurrences matches {0..*} matches { -- Language
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.2] occurrences matches {0..1} matches { -- Description
+				value matches {
+					PLAIN_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.3] occurrences matches {1} matches { -- Actor type
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1"] = <
+				text = <"Actor">
+				description = <"Actor">
+			>
+			["at0.1"] = <
+				text = <"Language">
+				description = <"Language">
+			>
+			["at0.2"] = <
+				text = <"Description">
+				description = <"Description">
+			>
+			["at0.3"] = <
+				text = <"Actor type">
+				description = <"Actor type">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000.1"] = <[SNOMED-CT::138875005]>
+				["at0.1"] = <[SNOMED-CT::138875005]>
+				["at0.2"] = <[SNOMED-CT::138875005]>
+				["at0.3"] = <[SNOMED-CT::138875005]>
+			>
+		>
+	>

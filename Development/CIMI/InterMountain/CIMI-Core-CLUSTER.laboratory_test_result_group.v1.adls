@@ -1,152 +1,62 @@
-archetype (adl_version=1.5)
-  CIMI-Core-CLUSTER.laboratory_test_result_group.v1
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.laboratory_test_result_group.v1
+
+specialize
+	CIMI-CORE-CLUSTER.finding_group.v1
 
 language
-  original_language = <[ISO_639-1::en]>
+	original_language = <[ISO_639-1::en]>
 
 description
-  original_author = <
-    ["name"] = <"">
-    ["date"] = <"05/16/2013">
-  >
-  details = <
-    ["en"] = <
-      language = <[ISO_639-1::en]>
-      purpose = <"">
-      use = <"">
-      misuse = <"">
-      copyright = <"">
-    >
-  >
-  lifecycle_state = <"initial">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
 
 definition
-  CLUSTER[at0000] matches { -- laboratory_test_result_group
-    item matches {
-      ELEMENT[at0001] occurrences matches {0..*} matches { -- Identifier
-        value matches {
-          IDENTIFIER matches {*}
-        }
-      }
-      ELEMENT[at0002] occurrences matches {1} matches { -- Name
-        value matches {
-          TEXT matches {*}
-        }
-      }
-      ELEMENT[at0003] occurrences matches {0..1} matches { -- Status
-        value matches {
-          CODED_TEXT matches {*}
-        }
-      }
-      ELEMENT[at0004] occurrences matches {0..1} matches { -- Interpretation category
-        value matches {
-          CODED_TEXT matches {*}
-        }
-      }
-      ELEMENT[at0005] occurrences matches {0..1} matches { -- Sequence
-        value matches {
-          COUNT matches {*}
-        }
-      }
-      ELEMENT[at0006] occurrences matches {0..*} matches { -- Comment
-        value matches {
-          TEXT matches {*}
-        }
-      }
-      ELEMENT[at0007] occurrences matches {0..*} matches { -- Diagnosis
-        value matches {
-          TEXT matches {*}
-        }
-      }
-      ELEMENT[at0008] occurrences matches {0..*} matches { -- Conclusions
-        value matches {
-          TEXT matches {*}
-        }
-      }
-      ITEM[at0009] occurrences matches {0..*} -- Details
-      use_archetype CLUSTER[at0010, CIMI-Core-CLUSTER.laboratory_test_result_item.v1] occurrences matches {0..*}
-      use_archetype CLUSTER[at0011, CIMI-Core-CLUSTER.laboratory_test_result_group.v1] occurrences matches {0..*}
-      use_archetype CLUSTER[at0012, CIMI-Core-CLUSTER.specimen.v1] occurrences matches {0..*}
-    }
-  }
-
-
+	CLUSTER[at0000.1.1] matches { -- Laboratory Test Result Group
+		/item matches {
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.laboratory_test_result_item.v1] -- Result item
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.laboratory_test_result_group.v1] -- Result subgroup
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.specimen.v3] -- Specimen
+			ELEMENT[at0..1] occurrences matches {0..*} matches { -- Diagnosis
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0..2] occurrences matches {0..*} matches { -- Conclusions
+				value matches {
+					TEXT matches {*}
+				}
+			}
+		}
+	}
 
 ontology
-
-  term_definitions = <
-    ["en"] = <
-      ["at0000"] = <
-        text = <"Laboratory Test Result Group">
-        description = <"Laboratory Test Result Group">
-      >
-      ["at0001"] = <
-        text = <"Identifier">
-        description = <"Identifier">
-      >
-      ["at0002"] = <
-        text = <"Name">
-        description = <"Name">
-      >
-      ["at0003"] = <
-        text = <"Result item">
-        description = <"Result item">
-      >
-      ["at0004"] = <
-        text = <"Result subgroup">
-        description = <"Result subgroup">
-      >
-      ["at0005"] = <
-        text = <"Status">
-        description = <"Status">
-      >
-      ["at0006"] = <
-        text = <"Interpretation category">
-        description = <"Interpretation category">
-      >
-      ["at0007"] = <
-        text = <"Sequence">
-        description = <"Sequence">
-      >
-      ["at0008"] = <
-        text = <"Comment">
-        description = <"Comment">
-      >
-      ["at0009"] = <
-        text = <"Specimen">
-        description = <"Specimen">
-      >
-      ["at0010"] = <
-        text = <"Diagnosis">
-        description = <"Diagnosis">
-      >
-      ["at0011"] = <
-        text = <"Conclusions">
-        description = <"Conclusions">
-      >
-      ["at0012"] = <
-        text = <"Details">
-        description = <"Details">
-      >
-    >
-  >
-
-  term_bindings = <
-    ["SNOMED-CT"] = <
-      items = <
-        ["at0000"] = <[SNOMED-CT::441742003]>
-        ["at0001"] = <[SNOMED-CT::423901009]>
-        ["at0002"] = <[SNOMED-CT::364712009]>
-        ["at0003"] = <[SNOMED-CT::138875005]>
-        ["at0004"] = <[SNOMED-CT::138875005]>
-        ["at0005"] = <[SNOMED-CT::138875005]>
-        ["at0006"] = <[SNOMED-CT::138875005]>
-        ["at0008"] = <[SNOMED-CT::138875005]>
-        ["at0009"] = <[SNOMED-CT::123038009]>
-        ["at0010"] = <[SNOMED-CT::123038009]>
-        ["at0011"] = <[SNOMED-CT::123038009]>
-        ["at0012"] = <[SNOMED-CT::138875005]>
-      >
-    >
-  >
-
+	term_definitions = <
+		["en"] = <
+			["at0000.1.1"] = <
+				text = <"Laboratory Test Result Group">
+				description = <"Laboratory Test Result Group">
+			>
+			["at0..1"] = <
+				text = <"Diagnosis">
+				description = <"Diagnosis">
+			>
+			["at0..2"] = <
+				text = <"Conclusions">
+				description = <"Conclusions">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000.1.1"] = <[SNOMED-CT::441742003]>
+				["at0..1"] = <[SNOMED-CT::123038009]>
+				["at0..2"] = <[SNOMED-CT::123038009]>
+			>
+		>
+	>

@@ -1,8 +1,8 @@
 archetype (adl_version=1.5; generated)
-	CIMI-CORE-CLUSTER.finding_group.v1
+	CIMI-PARTY-ROLE.healthcare_provider_organisation_role.v1
 
 specialize
-	CIMI-CORE-CLUSTER.finding.v1
+	CIMI-PARTY-ROLE.healthcare_provider_role.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -16,25 +16,22 @@ description
 	lifecycle_state = <"initial">
 
 definition
-	CLUSTER[at0000.1] matches { -- Finding Group
-		/item matches {
-			use_archetype CLUSTER [CIMI-CORE-CLUSTER.finding_item.v1] -- Finding Item
-		}
+	ROLE[at] matches { -- Healthcare provider organisation role
 	}
 
 ontology
 	term_definitions = <
 		["en"] = <
-			["at0000.1"] = <
-				text = <"Finding Group">
-				description = <"Finding Group">
+			["at"] = <
+				text = <"Healthcare provider organisation role">
+				description = <"Healthcare provider organisation role">
 			>
 		>
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
-				["at0000.1"] = <[SNOMED-CT::404684003]>
+				["at"] = <[SNOMED-CT::138875005]>
 			>
 		>
 	>

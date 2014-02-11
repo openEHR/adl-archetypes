@@ -1,0 +1,36 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.complete_blood_count_result_group.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000] matches { -- Complete blood count result group
+		item matches {
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.complete_blood_count_automated_result_group.v1] -- Complete blood count by automated count
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"Complete blood count result group">
+				description = <"Complete blood count result group">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+			>
+		>
+	>

@@ -1,0 +1,116 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.electronic_contact.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000] matches { -- Electronic contact
+		item matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches { -- Value
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches { -- Protocol
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches { -- Status
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches { -- Medium
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches { -- Use
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches { -- Preferred timing
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches { -- Datetime range
+				value matches {
+					INTERVAL_VALUE<DATE_TIME> matches {*}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches { -- Preference indicator
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"Electronic contact">
+				description = <"Electronic contact">
+			>
+			["at0001"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["at0002"] = <
+				text = <"Protocol">
+				description = <"Protocol">
+			>
+			["at0003"] = <
+				text = <"Status">
+				description = <"Status">
+			>
+			["at0004"] = <
+				text = <"Medium">
+				description = <"Medium">
+			>
+			["at0005"] = <
+				text = <"Use">
+				description = <"Use">
+			>
+			["at0006"] = <
+				text = <"Preferred timing">
+				description = <"Preferred timing">
+			>
+			["at0007"] = <
+				text = <"Datetime range">
+				description = <"Datetime range">
+			>
+			["at0008"] = <
+				text = <"Preference indicator">
+				description = <"Preference indicator">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000"] = <[SNOMED-CT::138875005]>
+				["at0001"] = <[SNOMED-CT::138875005]>
+				["at0002"] = <[SNOMED-CT::138875005]>
+				["at0003"] = <[SNOMED-CT::138875005]>
+				["at0004"] = <[SNOMED-CT::138875005]>
+				["at0005"] = <[SNOMED-CT::138875005]>
+				["at0006"] = <[SNOMED-CT::138875005]>
+				["at0007"] = <[SNOMED-CT::138875005]>
+				["at0008"] = <[SNOMED-CT::138875005]>
+			>
+		>
+	>

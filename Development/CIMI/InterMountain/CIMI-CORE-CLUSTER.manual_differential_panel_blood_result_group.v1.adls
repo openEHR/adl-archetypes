@@ -1,0 +1,60 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.manual_differential_panel_blood_result_group.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000] matches { -- Manual differential panel blood result group
+		item matches {
+			ELEMENT[at0003] occurrences matches {1} matches { -- Name
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.leukocytes_in_blood_manual.v1] -- Leukocytes in blood by manual count
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.basophils_per_hundred_leukocytes_in_blood_manual.v1] -- Basophils per hundred leukocytes in blood
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.basophils_in_blood_manual.v1] -- Basophils in blood
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.basophils_immature_per_hundred_leukocytes_in_blood_manual.v1] -- Basophils immature per hundred leukocytes in blood
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.basophils_immature_in_blood_manual.v1] -- Basophils immature in blood
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.smear_morphology_panel.v1] -- Smear morphology panel
+			ELEMENT[at0007] occurrences matches {0..1} matches { -- Manual differential comment
+				value matches {
+					TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"Manual differential panel blood result group">
+				description = <"Manual differential panel blood result group">
+			>
+			["at0003"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["at0007"] = <
+				text = <"Manual differential comment">
+				description = <"Manual differential comment">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0007"] = <[SNOMED-CT::58445-8]>
+			>
+		>
+	>

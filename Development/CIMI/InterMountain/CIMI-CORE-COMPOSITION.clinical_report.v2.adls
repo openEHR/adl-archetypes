@@ -1,0 +1,45 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-COMPOSITION.clinical_report.v2
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	COMPOSITION[at0000] matches { -- Clinical Report
+		content matches {
+			use_archetype ENTRY [CIMI-CORE-ENTRY.report_header.v1] -- Report header
+		}
+		participation matches {
+			PARTICIPATION[at0001] occurrences matches {0..1} -- Subject of Care
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000"] = <
+				text = <"Clinical Report">
+				description = <"Clinical Report">
+			>
+			["at0001"] = <
+				text = <"Subject of Care">
+				description = <"Subject of Care">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000"] = <[SNOMED-CT::371524004]>
+				["at0001"] = <[SNOMED-CT::125676002]>
+			>
+		>
+	>

@@ -1,0 +1,49 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.anatomical_location.v2
+
+specialize
+	CIMI-CORE-CLUSTER.material_entity.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000.1] matches { -- Anatomical Location
+		/item matches {
+			ELEMENT[at0.1] occurrences matches {0..1} matches { -- Body side
+				value matches {
+					TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1"] = <
+				text = <"Anatomical Location">
+				description = <"Anatomical Location">
+			>
+			["at0.1"] = <
+				text = <"Body side">
+				description = <"Body side">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000.1"] = <[SNOMED-CT::123037004]>
+				["at0.1"] = <[SNOMED-CT::182353008]>
+			>
+		>
+	>

@@ -1,0 +1,59 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.organization_name.v1
+
+specialize
+	CIMI-CORE-CLUSTER.actor_name.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	CLUSTER[at0000.1.1] matches { -- Organization name
+		/item matches {
+			ELEMENT[at0..1] occurrences matches {0..1} matches { -- Identifier
+				value matches {
+					IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0..2] occurrences matches {0..1} matches { -- Usage
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1.1"] = <
+				text = <"Organization name">
+				description = <"Organization name">
+			>
+			["at0..1"] = <
+				text = <"Identifier">
+				description = <"Identifier">
+			>
+			["at0..2"] = <
+				text = <"Usage">
+				description = <"Usage">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000.1.1"] = <[SNOMED-CT::138875005]>
+				["at0..1"] = <[SNOMED-CT::138875005]>
+				["at0..2"] = <[SNOMED-CT::138875005]>
+			>
+		>
+	>
