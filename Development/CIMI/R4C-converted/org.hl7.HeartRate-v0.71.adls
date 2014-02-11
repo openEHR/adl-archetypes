@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-  CIMI-Core-ENTRY.HeartRate.v0.7.1
+  CIMI-Core-INDIVISIBLE_ENTRY.HeartRate.v0.7.1
 
 language
   original_language = <[ISO_639-1::en]>
@@ -10,7 +10,7 @@ description
   lifecycle_state = <"Draft">
 
 definition
-  ENTRY[at0000] matches { -- HeartRate
+  INDIVISIBLE_ENTRY[at0000] matches { -- HeartRate
     data matches {
         ELEMENT[at0001] occurrences matches {1..1} matches { -- Frequency
           value matches {

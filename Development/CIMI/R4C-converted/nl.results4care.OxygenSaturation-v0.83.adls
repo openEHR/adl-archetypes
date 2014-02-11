@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-  CIMI-Core-ENTRY.OxygenSaturation.v1.0.83
+  CIMI-Core-INDIVISIBLE_ENTRY.OxygenSaturation.v1.0.83
 
 language
   original_language = <[ISO_639-1::en]>
@@ -10,7 +10,7 @@ description
   lifecycle_state = <"Draft">
 
 definition
-  ENTRY[at0000] matches { -- OxygenSaturation
+  INDIVISIBLE_ENTRY[at0000] matches { -- OxygenSaturation
     data matches {
         ELEMENT[at0001] occurrences matches {1..1} matches { -- Method
           value matches {

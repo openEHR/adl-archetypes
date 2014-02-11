@@ -1,0 +1,132 @@
+﻿archetype (adl_version=1.5.1)
+	CIMI-Core-COMPLEX_STATEMENT.height.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"2006-03-09">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the length of the body from crown of head to sole of foot of an individual - both actual and approximate, and either in a standing or recumbent position.">
+			use = <"To be used for recording the actual height or body length of an individual at any point in time.  A statement identifying the physical incompleteness of the body can be recorded in the 'Confounding factors' protocol element, if required.  This is the usual archetype to be used for a typical measurement of height or body length, independent of the clinical setting.
+Can also be used for recording an approximation of height or body length measurement in a clinical scenario where it is not possible to measure an accurate height or length - for example, measuring an uncooperative child.  This is not modelled explicitly in the archetype as the openEHR Reference model allows the attribute of Approximation for any Quantity data type.  At implementation, for example, an application user interface could allow clinicians to select an appropriately labelled check box adjacent to the Height data field to indicate that the recorded height is an approximation, rather than actual.
+In general, length measurements are recommended for children under 2 years of age and individuals who cannot stand; height measurements for all others.
+Ideally, height is measured standing on both feet with weight distributed evenly, heels together and both buttocks and heels in contact with a vertical back board; body length is measured in a fully extended, supine position with the pelvis flat, legs extended and feet flexed. 
+Use to record growth and loss of height.  This can currently be modelled by constraining the 'any event' to an interval in a template with associated mathematical function of increase or decrease, as appropriate.">
+			keywords = <"shrinkage", "increase", "decrease", "height loss", "height", "length", "growth">
+			misuse = <"Not to be used to record the first length of an infant soon after birth which is designated as their 'birth length' - use the specialisation of this archetype - see OBSERVATION.height-birth.
+Not to be used to record the adjusted height or body length eg a calculation of the estimated full height of a person with limb contractures, based on other body part measurements and/or an algorithm - use OBSERVATION.height-adjusted.
+Not to be used to record growth velocity.
+Not to be used to record the length of an object or specific body part.">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	COMPLEX_STATEMENT[id1] matches {	-- Height/Length
+		item matches {
+			CLUSTER[id4] matches {
+				item matches {
+					ELEMENT[id5] matches {	-- Height/Length
+						value matches {
+							QUANTITY[id21] matches {
+								value matches {|0.0..1000.0|}
+							}
+						}
+					}
+					ELEMENT[id19] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							TEXT[id22] 
+						}
+					}
+				}
+			}
+		}
+		state matches {
+			CLUSTER[id14] matches {
+				item matches {
+					ELEMENT[id15] occurrences matches {0..1} matches {	-- Position
+						value matches {
+							[local::
+							at17, 	-- Standing
+							at21; 	-- Lying
+							at17]	-- Assumed
+						}
+					}
+					ELEMENT[id20] occurrences matches {0..1} matches {	-- Confounding factors
+						value matches {
+							TEXT[id24] 
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			CLUSTER[id8] matches {
+				item matches {
+					allow_archetype CLUSTER[id12] occurrences matches {0..1} matches {	-- Device
+						include
+							archetype_id/value matches {/CIMI-Core-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Height/Length">
+				description = <"Height, or body length, is measured from crown of head to sole of foot.  Height is measured with the individual in a standing position and body length in a recumbent position.">
+			>
+			["id4"] = <
+				text = <"Primary data">
+				description = <"Primary data">
+			>
+			["id5"] = <
+				text = <"Height/Length">
+				description = <"The length of the body from crown of head to sole of foot.">
+			>
+			["id8"] = <
+				text = <"Primary protocol">
+				description = <"Primary protocol">
+			>
+			["id12"] = <
+				text = <"Device">
+				description = <"Description of the device used to measure height or body length.">
+			>
+			["id14"] = <
+				text = <"Primary state">
+				description = <"Primary state">
+			>
+			["id15"] = <
+				text = <"Position">
+				description = <"Position of individual when measured.">
+			>
+			["at17"] = <
+				text = <"Standing">
+				description = <"Height is measured standing on both feet with weight distributed evenly, heels together and both buttocks and heels in contact with a vertical back board.">
+			>
+			["id19"] = <
+				text = <"Comment">
+				description = <"Comment about the measurement of body height/length.">
+			>
+			["id20"] = <
+				text = <"Confounding factors">
+				description = <"Record any issues or factors that may impact on the measurement of body height/length eg noting of amputation.">
+			>
+			["at21"] = <
+				text = <"Lying">
+				description = <"Length is measured in a fully extended, recumbent position with the pelvis flat, legs extended and feet flexed.">
+			>
+		>
+	>

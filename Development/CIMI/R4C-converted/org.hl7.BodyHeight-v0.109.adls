@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-  CIMI-Core-ENTRY.BodyHeight.v1.0.109
+  CIMI-Core-INDIVISIBLE_ENTRY.BodyHeight.v1.0.109
 
 language
   original_language = <[ISO_639-1::en]>
@@ -10,7 +10,7 @@ description
   lifecycle_state = <"Draft">
 
 definition
-  ENTRY[at0000] matches { -- BodyHeight
+  INDIVISIBLE_ENTRY[at0000] matches { -- BodyHeight
     data matches {
         ELEMENT[at0001] occurrences matches {1} matches { -- BodyHeight
           value matches {
