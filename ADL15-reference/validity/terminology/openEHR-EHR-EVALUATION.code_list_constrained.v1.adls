@@ -25,20 +25,12 @@ description
 
 definition
 	EVALUATION[at0000.1] matches {	-- Exclusion statement - Adverse Reaction
-		/data[at0001]/items matches {
-			ELEMENT[at0002] matches {
-				value matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[local::
-							at0005, 	-- No significant family history
-							at0006, 	-- No known adverse reactions
-							at0009, 	-- No relevant past history
-							at0012] 	-- No relevant family history
-						}
-					}
-				}
-			}
+		/data[at0001]/items[at0002]/value/defining_code matches {
+			[local::
+			at0005, 	-- No significant family history
+			at0006, 	-- No known adverse reactions
+			at0009, 	-- No relevant past history
+			at0012] 	-- No relevant family history
 		}
 	}
 

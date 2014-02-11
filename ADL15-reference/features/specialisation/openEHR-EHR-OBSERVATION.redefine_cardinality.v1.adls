@@ -1,7 +1,7 @@
 archetype (adl_version=1.5)
-	openEHR-EHR-OBSERVATION.redefine_occurrences.v1
+	openEHR-EHR-OBSERVATION.redefine_cardinality.v1
 specialise
-	openEHR-EHR-OBSERVATION.spec_test_obs.v1
+	openEHR-EHR-OBSERVATION.spec_test_parent.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -14,7 +14,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test legal refinement of occurrences to {0..1}">
+			purpose = <"Test legal narrowing of cardinality in specialised archetype">
 		>
 	>
 	other_details = <
@@ -24,9 +24,7 @@ description
 
 definition
 	OBSERVATION[at0000.1] matches {
-		/data/events matches {
-			EVENT[at0002.1] occurrences matches {0..1}
-		}
+		/data/events cardinality matches {2..8} 
 	}
 
 ontology
@@ -35,10 +33,6 @@ ontology
 			items = <
 				["at0000.1"] = <
 					text = <"specialised archetype">
-					description = <"">
-				>
-				["at0002.1"] = <
-					text = <"any event - occurrences specialised">
 					description = <"">
 				>
 			>

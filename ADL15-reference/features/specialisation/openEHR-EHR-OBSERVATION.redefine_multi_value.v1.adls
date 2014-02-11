@@ -1,7 +1,7 @@
 archetype (adl_version=1.5)
 	openEHR-EHR-OBSERVATION.redefine_multi_value.v1
 specialize
-	openEHR-EHR-OBSERVATION.spec_test_obs.v1
+	openEHR-EHR-OBSERVATION.spec_test_parent.v1
 
 language
 	original_language = <[ISO_639-1::en]>

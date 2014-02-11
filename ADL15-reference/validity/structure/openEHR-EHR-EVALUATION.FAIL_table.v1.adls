@@ -1,5 +1,5 @@
 archetype (adl_version=1.5)
-	openEHR-EHR-EVALUATION.table.v1
+	openEHR-EHR-EVALUATION.FAIL_table.v1
 
 language
 	original_language = <[ISO_639-1::en]>

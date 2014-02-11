@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.5)
-	openEHR-EHR-OBSERVATION.body_temp_test.v1
+﻿archetype (adl_version=1.5.1)
+	openEHR-EHR-OBSERVATION.body_temp_test.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -20,24 +20,24 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Body temperature
+	OBSERVATION[id1] matches {	-- Body temperature
 		data matches {
-			HISTORY[at0002] matches {	-- History
+			HISTORY[id3] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0003] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id4] occurrences matches {0..*} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0001] matches {	-- Single
+							ITEM_TREE[id2] matches {
 								items cardinality matches {1; unordered} matches {
-									ELEMENT[at0004] matches {	-- Temperature
+									ELEMENT[id5] matches {	-- Temperature
 										value matches {
-											DV_QUANTITY matches {
-												property matches {[openehr::127]}
+											DV_QUANTITY[id61] matches {
+												property matches {[at57]}
 												[units, precision] matches {
 													[{"°C"}, {1}],
 													[{"°F"}, {1}]
@@ -49,37 +49,30 @@ definition
 							}
 						}
 						state matches {
-							ITEM_TREE[at0029] matches {	-- State
+							ITEM_TREE[id30] matches {	-- State
 								items matches {
-									ELEMENT[at0030] occurrences matches {0..1} matches {	-- Body exposure
+									ELEMENT[id31] occurrences matches {0..1} matches {	-- Body exposure
 										value matches {
-											DV_CODED_TEXT matches {
-												defining_code matches {
-													[local::
-													at0031, 	-- Naked
-													at0032, 	-- Reduced clothing/bedding
-													at0033, 	-- Appropriate clothing/bedding
-													at0034; 	-- Increased clothing/bedding
-													at0033]	-- assumed value
-												}
+											DV_CODED_TEXT[id62] matches {
+												defining_code matches {[ac1; at34]}		-- Body exposure
 											}
 										}
 									}
-									allow_archetype CLUSTER[at0056] occurrences matches {0..1} matches {	-- Environmental Conditions
+									allow_archetype CLUSTER[id57] occurrences matches {0..1} matches {	-- Environmental Conditions
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.environmental_conditions\.v1/}
 									}
-									allow_archetype CLUSTER[at0057] occurrences matches {0..1} matches {	-- Exertion
+									allow_archetype CLUSTER[id58] occurrences matches {0..1} matches {	-- Exertion
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion\.v1/}
 									}
-									allow_archetype ELEMENT[at0058] occurrences matches {0..1} matches {	-- Menstrual Cycle
+									allow_archetype ELEMENT[id59] occurrences matches {0..1} matches {	-- Menstrual Cycle
 										include
 											archetype_id/value matches {/openEHR-EHR-ELEMENT\.last_normal_menstrual_period\.v1|openEHR-EHR-ELEMENT\.menstrual_cycle_day\.v1/}
 									}
-									ELEMENT[at0041] occurrences matches {0..1} matches {	-- Description of thermal stress
+									ELEMENT[id42] occurrences matches {0..1} matches {	-- Description of thermal stress
 										value matches {
-											DV_TEXT matches {*}
+											DV_TEXT[id63] 
 										}
 									}
 								}
@@ -90,29 +83,16 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0020] matches {	-- Protocol
+			ITEM_TREE[id21] matches {
 				items matches {
-					ELEMENT[at0021] occurrences matches {0..1} matches {	-- Site of measurement
+					ELEMENT[id22] occurrences matches {0..1} matches {	-- Site of measurement
 						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0022, 	-- Mouth
-									at0023, 	-- Ear canal
-									at0024, 	-- Axilla
-									at0025, 	-- Rectum
-									at0026, 	-- Nasopharynx
-									at0027, 	-- Urinary bladder
-									at0028, 	-- Intravascular
-									at0043, 	-- Skin
-									at0051, 	-- Vagina
-									at0054, 	-- Oesophagus
-									at0055]	-- Inguinal skin crease
-								}
+							DV_CODED_TEXT[id64] matches {
+								defining_code matches {[ac2]}		-- Site of measurement
 							}
 						}
 					}
-					allow_archetype CLUSTER[at0059] occurrences matches {0..1} matches {	-- Device
+					allow_archetype CLUSTER[id60] occurrences matches {0..1} matches {	-- Device
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device\.v1/}
 					}
@@ -121,117 +101,142 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Body temperature">
 				description = <"A measurement of the body temperature, which is a surrogate for the whole body temperature of the person.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Any event">
 				description = <"Any event">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Temperature">
 				description = <"The measured body temperature (as a surrogate for the whole body).">
 			>
-			["at0021"] = <
+			["id22"] = <
 				text = <"Site of measurement">
 				description = <"The anatomical site of measurement of the temperature.">
 			>
-			["at0022"] = <
+			["at23"] = <
 				text = <"Mouth">
 				description = <"Temperature is measured within the mouth.">
 			>
-			["at0023"] = <
+			["at24"] = <
 				text = <"Ear canal">
 				description = <"Temperature is measured from within the external auditory canal.">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Axilla">
 				description = <"Temperature is measured from the skin of the axilla with the arm positioned down by the side.">
 			>
-			["at0025"] = <
+			["at26"] = <
 				text = <"Rectum">
 				description = <"Temperature measured within the rectum.">
 			>
-			["at0026"] = <
+			["at27"] = <
 				text = <"Nasopharynx">
 				description = <"Temperature is measured within the nasopharynx.">
 			>
-			["at0027"] = <
+			["at28"] = <
 				text = <"Urinary bladder">
 				description = <"Temperature is measured in the urinary bladder.">
 			>
-			["at0028"] = <
+			["at29"] = <
 				text = <"Intravascular">
 				description = <"Temperature is measured within the vascular system.">
 			>
-			["at0029"] = <
+			["id30"] = <
 				text = <"State">
 				description = <"State information about the patient.">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Body exposure">
 				description = <"The thermal situation of the person who is having the temperature taken.">
 			>
-			["at0031"] = <
+			["at32"] = <
 				text = <"Naked">
 				description = <"No clothing, bedding or covering.">
 			>
-			["at0032"] = <
+			["at33"] = <
 				text = <"Reduced clothing/bedding">
 				description = <"The person is covered by a lesser amount of clothing or bedding than deemed appropriate for the environmental circumstances.">
 			>
-			["at0033"] = <
+			["at34"] = <
 				text = <"Appropriate clothing/bedding">
 				description = <"The person is covered by an amount of clothing or bedding deemed appropriate for the environmental circumstances.">
 			>
-			["at0034"] = <
+			["at35"] = <
 				text = <"Increased clothing/bedding">
 				description = <"The person is covered by an increased amount of clothing or bedding than deemed appropriate for the environmental circumstances.">
 			>
-			["at0041"] = <
+			["id42"] = <
 				text = <"Description of thermal stress">
 				description = <"Description of the conditions applied to the subject that might influence their measured body temperature.">
 			>
-			["at0043"] = <
+			["at44"] = <
 				text = <"Skin">
 				description = <"Temperature is measured from exposed skin.">
 			>
-			["at0051"] = <
+			["at52"] = <
 				text = <"Vagina">
 				description = <"Temperature is measured within the vagina.">
 			>
-			["at0054"] = <
+			["at55"] = <
 				text = <"Oesophagus">
 				description = <"Temperatue is measured within the oesophagus.">
 			>
-			["at0055"] = <
+			["at56"] = <
 				text = <"Inguinal skin crease">
 				description = <"Temperature is measured in the inguinal skin crease between the leg and abdominal wall.">
 			>
-			["at0056"] = <
+			["id57"] = <
 				text = <"Environmental Conditions">
 				description = <"Details about the environmental conditions at the time of temperature measurement.">
 			>
-			["at0057"] = <
+			["id58"] = <
 				text = <"Exertion">
 				description = <"Details about the exertion of the person at the time of temperature measurement.">
 			>
-			["at0058"] = <
+			["id59"] = <
 				text = <"Menstrual Cycle">
 				description = <"Details about the menstrual cycle of a woman.">
 			>
-			["at0059"] = <
+			["id60"] = <
 				text = <"Device">
 				description = <"Details about the device use to measure body temperature.">
+			>
+			["ac1"] = <
+				text = <"Body exposure">
+				description = <"The thermal situation of the person who is having the temperature taken.">
+			>
+			["ac2"] = <
+				text = <"Site of measurement">
+				description = <"The anatomical site of measurement of the temperature.">
+			>
+			["at57"] = <
+				text = <"Temperature">
+				description = <"Temperature">
 			>
 		>
 	>
 	term_bindings = <
 		["LNC205"] = <
-			["/data[at0002]/events[at0003]/data[at0001]/items[at0004]"] = <[LNC205::8310-5]>
+			["/data[id3]/events[id4]/data[id2]/items[id5]"] = <http://LNC205.org/id/8310-5>
+		>
+		["openehr"] = <
+			["at57"] = <http://openehr.org/id/127>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at32", "at33", "at34", "at35">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at23", "at24", "at25", "at26", "at27", "at28", "at29", "at44", "at52", "at55", "at56">
 		>
 	>
