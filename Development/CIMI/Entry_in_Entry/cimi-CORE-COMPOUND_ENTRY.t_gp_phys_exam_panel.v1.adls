@@ -1,0 +1,54 @@
+template (adl_version=1.5.1)
+	CIMI-Core-COMPOUND_ENTRY.t_gp_phys_exam_panel.v1.0.0
+
+specialize
+	CIMI-Core-COMPOUND_ENTRY.gp_panel.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"CIMI">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"10/02/2014">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"CIMI templated Compound Entry that fills slots with 'atomic' Entries">
+			copyright = <"© 2014 CIMI">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	COMPOUND_ENTRY[id1.1] matches {	-- Templated panel
+		/parts[id2]/parts matches {
+			use_archetype INDIVISIBLE_ENTRY[id3, CIMI-Core-INDIVISIBLE_ENTRY.body_weight.v1.0.108]  occurrences matches {1}
+			allow_archetype INDIVISIBLE_ENTRY[id3.1] closed 	-- Closed slot
+		}
+		/parts matches {
+			use_archetype INDIVISIBLE_ENTRY[id4, CIMI-Core-INDIVISIBLE_ENTRY.heart_rate.v0.7.1]  occurrences matches {1}
+			allow_archetype INDIVISIBLE_ENTRY[id4.1] closed 	-- Closed slot
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Bedside  panel">
+				description = <"Bedside panel">
+			>
+			["id3.1"] = <
+				text = <"Closed slot">
+				description = <"Closed slot">
+			>
+			["id4.1"] = <
+				text = <"Closed slot">
+				description = <"Closed slot">
+			>
+		>
+	>

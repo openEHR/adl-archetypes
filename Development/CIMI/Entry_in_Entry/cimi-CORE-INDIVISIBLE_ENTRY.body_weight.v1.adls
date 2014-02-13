@@ -1,0 +1,152 @@
+archetype (adl_version=1.5.1)
+	CIMI-Core-INDIVISIBLE_ENTRY.body_weight.v1.0.108
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"CIMI">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"10/02/2014">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Typical 'atomic' Entry - body weight">
+			copyright = <"© 2014 CIMI">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	INDIVISIBLE_ENTRY[id1] matches {	-- BodyWeight
+		data matches {
+			ELEMENT[id2] occurrences matches {1} matches {	-- BodyWeight
+				value matches {
+					QUANTITY[id13] matches {
+						value matches {|1.0..250.0|} 
+                                                units matches {[at1]}
+					}
+				}
+			}
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- BodyWeightValueOrigin
+				value matches {[ac1]}		-- BodyWeightValueOrigin
+			}
+			ELEMENT[id7] occurrences matches {0..1} matches {	-- Clothing
+				value matches {[ac2]}		-- Clothing
+			}
+			ELEMENT[id12] occurrences matches {0..1} matches {	-- Device
+				value matches {[ac3]}		-- Device
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"BodyWeight">
+				description = <"The outcome of the measurement of the body weight of an individual by means of a patient scale.">
+			>
+			["id2"] = <
+				text = <"BodyWeight">
+				description = <"The body weight of the patient.">
+			>
+			["id3"] = <
+				text = <"BodyWeightValueOrigin">
+				description = <"Description for recording whether the weight value is measured, stated, or estimated.">
+			>
+			["at1"] = <
+				text = <"kg">
+				description = <"kilograms">
+			>
+			["at4"] = <
+				text = <"Estimated">
+			>
+			["at5"] = <
+				text = <"Measured">
+			>
+			["at6"] = <
+				text = <"Stated">
+			>
+			["id7"] = <
+				text = <"Clothing">
+				description = <"Description of the amount of clothing worn at the time of the observation of the weight.">
+			>
+			["at8"] = <
+				text = <"Diaper">
+				description = <"Person only wears a diaper during the weighing.">
+                        >
+			["at9"] = <
+				text = <"LightlyDressedOrUnderwear">
+				description = <"Person has taken of the upper layer of clothing on behalf of the weighing.">
+			>
+			["at10"] = <
+				text = <"Naked">
+				description = <"Person wears no clothing during the weighing.">
+			>
+			["at11"] = <
+				text = <"FullyDressed">
+				description = <"Person has not taken of his clothing on behalf of the weighing.">
+			>
+			["id12"] = <
+				text = <"Device">
+				description = <"Description of scale type. Especially in repeated measuring of the body weight it is of importance to use the same scale.">
+			>
+			["at13"] = <
+				text = <"BedScale">
+				description = <"The person is immobile and is measured with his bed.">
+			>
+			["at14"] = <
+				text = <"ChairScale">
+				description = <"A person is limmited in his mobility and can only sit on a scale with an integrated scale.">
+			>
+			["at15"] = <
+				text = <"FloorScale">
+				description = <"A person is mobile and can stand on a scale himself. The scale can be analogue or digital.">
+			>
+			["at16"] = <
+				text = <"Other">
+				description = <"An other type of scale than the types already metioned has been used.">
+			>
+			["ac1"] = <
+				text = <"BodyWeightValueOrigin">
+				description = <"Description for recording whether the weight value is measured, stated, or estimated.">
+			>
+			["ac2"] = <
+				text = <"Clothing">
+				description = <"Description of the amount of clothing worn at the time of the observation of the weight.">
+			>
+			["ac3"] = <
+				text = <"Device">
+				description = <"Description of scale type. Especially in repeated measuring of the body weight it is of importance to use the same scale.">
+			>
+		>
+	>
+	term_bindings = <
+		["snomedct"] = <
+			["id1"] = <http://snomedct.info/id/363808001>
+			["id2"] = <http://snomedct.info/id/27113001>
+			["id3"] = <http://snomedct.info/id/255395001>
+			["at6"] = <http://snomedct.info/id/278412004>
+			["id7"] = <http://snomedct.info/id/248159006>
+			["id12"] = <http://snomedct.info/id/5042005>
+			["at1"] = <http://snomedct.info/id/33333333>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at4", "at5", "at6">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at8", "at9", "at10", "at11">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at13", "at14", "at15", "at16">
+		>
+	>

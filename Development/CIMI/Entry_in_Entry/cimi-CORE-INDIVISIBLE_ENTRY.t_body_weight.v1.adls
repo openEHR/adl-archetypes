@@ -1,0 +1,37 @@
+template (adl_version=1.5.1)
+	CIMI-Core-INDIVISIBLE_ENTRY.t_body_weight.v1.0.0
+
+specialise
+	CIMI-Core-INDIVISIBLE_ENTRY.body_weight.v1.0.108
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"CIMI">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"10/02/2014">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Typical 'atomic' Entry - body weight">
+			copyright = <"© 2014 CIMI">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	INDIVISIBLE_ENTRY[id1.1]
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Templatated body weight">
+				description = <"Templatated body weight">
+			>
+		>
+	>
