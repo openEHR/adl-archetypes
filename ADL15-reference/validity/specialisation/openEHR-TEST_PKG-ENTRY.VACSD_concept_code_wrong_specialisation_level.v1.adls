@@ -1,4 +1,4 @@
-archetype (adl_version=1.5)
+archetype (adl_version=1.5.1)
 	openEHR-TEST_PKG-ENTRY.VACSD_concept_code_wrong_specialisation_level.v1
 
 language
@@ -22,13 +22,13 @@ description
 	lifecycle_state = <"draft">
 
 definition
-	ENTRY[at0000.1] matches {*}
+	ENTRY[id1.1] matches {*}
 
 terminology
 	term_definitions = <
 		["en"] = <
 			items = <
-				["at0000.1"] = <
+				["id1.1"] = <
 					text = <"">
 					description = <"">
 				>

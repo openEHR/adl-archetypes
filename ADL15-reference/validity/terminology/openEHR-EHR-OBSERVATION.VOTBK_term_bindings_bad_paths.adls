@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-OBSERVATION.VOTBK_term_bindings_paths.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-OBSERVATION.VTBK_term_bindings_paths.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -11,30 +11,30 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VOTBK validity check for paths mentioned in term_bindings.">
+			purpose = <"Test VTBK validity check for paths mentioned in term_bindings.">
 		>
 	>
 	other_details = <
-		["regression"] = <"VOTBK">
+		["regression"] = <"VTBK">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Apgar score
+	OBSERVATION[id1] matches {	-- Apgar score
 		data matches {
-			HISTORY[at0002] matches {
+			HISTORY[id3] matches {
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0003] occurrences matches {0..1} matches {
+					POINT_EVENT[id4] occurrences matches {0..1} matches {
 						data matches {
-							ITEM_LIST[at0001] matches {
+							ITEM_LIST[id2] matches {
 								items cardinality matches {1..6; ordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {*}
+									ELEMENT[id5] occurrences matches {0..1} matches {*}
 								}
 							}
 						}
 					}
-					POINT_EVENT[at0006] occurrences matches {0..1} matches {
+					POINT_EVENT[id7] occurrences matches {0..1} matches {
 						data matches {
-							use_node ITEM_LIST[at0008] /data[at0002]/events[at0003]/data[at0001]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[id9] /data[id3]/events[id4]/data[id2]	-- /data[history]/events[1 minute]/data[structure]
 						}
 					}
 				}
@@ -42,43 +42,33 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"Apgar score">
-					description = <"Clinical score derived from assessment of respiratory effort, heart rate, reflex irritability, muscle tone and skin colour.">
-				>
-				["at0001"] = <
-					text = <"structure">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"history">
-					description = <"@ internal @">
-				>
-				["at0003"] = <
-					text = <"1 minute">
-					description = <"Apgar score 1 minute after birth">
-				>
-				["at0004"] = <
-					text = <"Total">
-					description = <"The sum of the 5 ordinal scores for each component parameter.">
-				>
-				["at0006"] = <
-					text = <"5 minute">
-					description = <"Apgar score 5 minutes after birth">
-				>
+			["id1"] = <
+				text = <"Apgar score">
+				description = <"Clinical score derived from assessment of respiratory effort, heart rate, reflex irritability, muscle tone and skin colour.">
+			>
+			["id4"] = <
+				text = <"1 minute">
+				description = <"Apgar score 1 minute after birth">
+			>
+			["id5"] = <
+				text = <"Total">
+				description = <"The sum of the 5 ordinal scores for each component parameter.">
+			>
+			["id7"] = <
+				text = <"5 minute">
+				description = <"Apgar score 5 minutes after birth">
 			>
 		>
 	>
 	term_bindings = <
 		["LNC205"] = <
 			items = <
-				["/data[at0002]/events[at0003]/data[at0001]/items[at0004]"] = <[LNC205::9272-6]>
-				["/data[at0002]/events[at0006]/data/items[at0004]"] = <[LNC205::9271-8]>
-				["junk_garbage"] = <[LNC205::9271-8]>
+				["/data[id3]/events[id4]/data[id2]/items[id5]"] = <http://LNC205.org/id/9272-6>
+				["/data[id3]/events[id7]/data/items[id5]"] = <http://LNC205.org/id/9271-8>
+				["junk_garbage"] = <http://LNC205.org/id/9271-8>
 			>
 		>
 	>

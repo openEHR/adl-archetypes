@@ -1,4 +1,4 @@
-archetype (adl_version=1.5)
+archetype (adl_version=1.5.1)
 	openEHR-EHR-OBSERVATION.VCORMT_rm_non_conforming_type1.v1
 
 language
@@ -23,13 +23,13 @@ description
 	lifecycle_state = <"AuthorDraft">
 
 definition
-	OBSERVATION[at0000] matches {
+	OBSERVATION[id1] matches {
 		data matches {
-			HISTORY<ITEM_LIST> matches {	
+			HISTORY<ITEM_LIST>[id2] matches {	
 				events cardinality matches {1..*; unordered} matches {
-					EVENT<CLUSTER> [at0002] occurrences matches {0..*} matches {
+					EVENT<CLUSTER> [id3] occurrences matches {0..*} matches {
 						data matches {
-							ITEM_LIST matches {*}
+							ITEM_LIST[id4] matches {*}
 						}
 					}
 				}
@@ -37,18 +37,16 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"an Observation">
-					text = <"an Observation">
-				>
-				["at0002"] = <
-					description = <"some Event">
-					text = <"some Event">
-				>
+			["id1"] = <
+				description = <"an Observation">
+				text = <"an Observation">
+			>
+			["id3"] = <
+				description = <"some Event">
+				text = <"some Event">
 			>
 		>
 	>

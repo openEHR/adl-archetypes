@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-EVALUATION.use_node_ref_to_sibling.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-EVALUATION.use_node_ref_to_sibling.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -18,24 +18,24 @@ description
 			copyright = <"copyright (c) 2010 The openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"unstable">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	lifecycle_state = <"draft">
 
 definition
-	EVALUATION[at0000] matches {
+	EVALUATION[id1] matches {	-- Evaluation
 		data matches {
-			ITEM_TREE matches {
+			ITEM_TREE[id6] matches {
 				items matches {
-					CLUSTER[at0001] matches {
+					CLUSTER[id2] matches {	-- cluster
 						items matches {
-							use_node ELEMENT[at0004] /data/items[at0001]/items[at0002]
-							allow_archetype CLUSTER[at0003] matches {
+							use_node ELEMENT[id5] /data[id6]/items[id2]/items[id3]	-- /data[id6]/items[cluster]/items[element]
+							allow_archetype CLUSTER[id4] matches {	-- element
 								include
 									archetype_id/value matches {/.*/}
 							}
-							ELEMENT[at0002] matches {*}
+							ELEMENT[id3] 	-- element
 						}
 					}
 				}
@@ -43,30 +43,28 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"Evaluation">
-					text = <"Evaluation">
-				>
-				["at0001"] = <
-					description = <"cluster">
-					text = <"cluster">
-				>
-				["at0002"] = <
-					description = <"element">
-					text = <"element">
-				>
-				["at0003"] = <
-					description = <"element">
-					text = <"element">
-				>
-				["at0004"] = <
-					description = <"use node element">
-					text = <"use node element">
-				>
+			["id1"] = <
+				text = <"Evaluation">
+				description = <"Evaluation">
+			>
+			["id2"] = <
+				text = <"cluster">
+				description = <"cluster">
+			>
+			["id3"] = <
+				text = <"element">
+				description = <"element">
+			>
+			["id4"] = <
+				text = <"element">
+				description = <"element">
+			>
+			["id5"] = <
+				text = <"use node element">
+				description = <"use node element">
 			>
 		>
 	>

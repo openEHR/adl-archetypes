@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-OBSERVATION.constraint_binding_multiple.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-OBSERVATION.constraint_binding_multiple.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -14,24 +14,24 @@ description
 			purpose = <"To document cough assessment for use in nursing care">
 		>
 	>
-	lifecycle_state = <"0">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
 
 definition
-	OBSERVATION[at0000] matches {
+	OBSERVATION[id1] matches {	-- Cough - ZN
 		data matches {
-			HISTORY[at0001] matches {
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Character
 										value matches {
-											DV_CODED_TEXT matches {
-												defining_code matches {[ac0001]}
+											DV_CODED_TEXT[id6] matches {
+												defining_code matches {[ac2]}		-- MZN-SIF-Dihanje-Kašelj
 											}
 										}
 									}
@@ -44,52 +44,32 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"Cough - ZN">
-					description = <"Documenting cough assessment as needed for nursing care">
-				>
-				["at0001"] = <
-					text = <"Event Series">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"Any event">
-					description = <"*">
-				>
-				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"Character">
-					description = <"The character of the cough.">
-				>
+			["id1"] = <
+				text = <"Cough - ZN">
+				description = <"Documenting cough assessment as needed for nursing care">
+			>
+			["id3"] = <
+				text = <"Any event">
+				description = <"*">
+			>
+			["id5"] = <
+				text = <"Character">
+				description = <"The character of the cough.">
+			>
+			["ac2"] = <
+				text = <"MZN-SIF-Dihanje-Kašelj">
+				description = <"Link to ISPEK termset.">
 			>
 		>
 	>
-	constraint_definitions = <
-		["en"] = <
-			items = <
-				["ac0001"] = <
-					text = <"MZN-SIF-Dihanje-Kašelj">
-					description = <"Link to ISPEK termset.">
-				>
-			>
-		>
-	>
-	constraint_bindings = <
+	term_bindings = <
 		["AIR93(1.0.0)"] = <
-			items = <
-				["ac0001"] = <http://openEHR.org/MZN-SIF-Dihanje-Kašelj>
-			>
+			["ac2"] = <http://air93.org/MZN-SIF-Dihanje-Kašelj>
 		>
 		["AIR93"] = <
-			items = <
-				["ac0001"] = <http://openEHR.org/MZN-SIF-Dihanje-Kašelj>
-			>
+			["ac2"] = <http://air93.org/MZN-SIF-Dihanje-Kašelj>
 		>
 	>

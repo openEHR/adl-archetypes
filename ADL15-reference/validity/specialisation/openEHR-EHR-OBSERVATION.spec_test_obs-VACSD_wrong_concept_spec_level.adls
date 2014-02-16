@@ -1,10 +1,12 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-OBSERVATION.VACSD_wrong_concept_spec_level.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-OBSERVATION.VACSD_wrong_concept_spec_level.v1.0.0
+
 specialise
 	openEHR-EHR-OBSERVATION.spec_test_obs.v1
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["organisation"] = <"Ocean Informatics">
@@ -17,30 +19,28 @@ description
 			purpose = <"Test VACSD validity check triggered by archetype whcih declares specialisation parent, but does not have concept at correct specialisation level">
 		>
 	>
+	lifecycle_state = <"unstable">
 	other_details = <
 		["regression"] = <"VACSD">
 	>
-	lifecycle_state = <"draft">
 
 definition
-	OBSERVATION[at0000] matches {
+	OBSERVATION[id1] matches {	-- specialised archetype
 		/data/events matches {
-			EVENT[at0.1] matches {*}
+			EVENT[id0.1] 	-- special event
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"specialised archetype">
-					description = <"">
-				>
-				["at0.1"] = <
-					text = <"special event">
-					description = <"">
-				>
+			["id1"] = <
+				text = <"specialised archetype">
+				description = <"">
+			>
+			["id0.1"] = <
+				text = <"special event">
+				description = <"">
 			>
 		>
 	>

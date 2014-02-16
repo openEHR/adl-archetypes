@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openEHR-TEST_PKG-ENTRY.VCOV_value_duplicated_in_ordinal.v1
+archetype (adl_version=1.5.1)
+	openEHR-TEST_PKG-ENTRY.VCOV_value_duplicated_in_ordinal.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -16,49 +16,57 @@ description
 			copyright = <"copyright (c) 2008 The openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"unstable">
 	other_details = <
 		["regression"] = <"VCOV">
 	>
-	lifecycle_state = <"draft">
 
 definition
-	ENTRY[at0000] matches {
+	ENTRY[id1] matches {	-- 
 		ordinal_attr_1 matches {
-			DV_ORDINAL matches {
+			DV_ORDINAL[id2] matches {
 				[value, symbol] matches {
-					[{0}, {[local::at0001]}], 	-- +
-					[{1}, {[local::at0002]}], 	-- ++
-					[{1}, {[local::at0003]}], 	-- +++
-					[{2}, {[local::at0004]}] 	-- ++++
+					[{0}, {[at2]}],
+					[{1}, {[at3]}],
+					[{1}, {[at4]}],
+					[{2}, {[at5]}]
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"">
-					description = <"">
-				>
-				["at0001"] = <
-					text = <"">
-					description = <"">
-				>
-				["at0002"] = <
-					text = <"">
-					description = <"">
-				>
-				["at0003"] = <
-					text = <"">
-					description = <"">
-				>
-				["at0004"] = <
-					text = <"">
-					description = <"">
-				>
+			["id1"] = <
+				text = <"">
+				description = <"">
 			>
+			["at2"] = <
+				text = <"">
+				description = <"">
+			>
+			["at3"] = <
+				text = <"">
+				description = <"">
+			>
+			["at4"] = <
+				text = <"">
+				description = <"">
+			>
+			["at5"] = <
+				text = <"">
+				description = <"">
+			>
+			["ac1"] = <
+				text = <"(empty string found in original archetype)">
+				description = <"(empty string found in original archetype)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at2", "at3", "at4", "at5">
 		>
 	>

@@ -1,8 +1,9 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-SECTION.section_parent.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-SECTION.section_parent.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
@@ -15,22 +16,20 @@ description
 			purpose = <"To provide a root heading for physical examination in all structured recordings">
 		>
 	>
+	lifecycle_state = <"initial">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	lifecycle_state = <"AuthorDraft">
 
 definition
-	SECTION[at0000] matches {*}
+	SECTION[id1] 	-- Physical examination
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"An open section for recording physical examination findings">
-					text = <"Physical examination">
-				>
+			["id1"] = <
+				text = <"Physical examination">
+				description = <"An open section for recording physical examination findings">
 			>
 		>
 	>

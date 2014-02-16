@@ -1,8 +1,8 @@
-archetype (adl_version=1.5)
+archetype (adl_version=1.5.1)
 	uk.gov.nhs::openEHR-EHR-OBSERVATION.other_ns_inherit_ns.v5.3.0
 
-specialise
-	org.openehr::openEHR-EHR-OBSERVATION.full_id_1.v1.0.4
+specialize
+	org.openehr::openEHR-EHR-OBSERVATION.full_id_1.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -19,28 +19,24 @@ description
 			purpose = <"Test full namespaced & versioned id">
 		>
 	>
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	lifecycle_state = <"initial">
 
 definition
-	OBSERVATION[at0000.1] matches {
+	OBSERVATION[id1.1] matches {	-- specialised archetype
 		data matches {
-			HISTORY matches
-				{*}
-			}
+			HISTORY[id0.4] 
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000.1"] = <
-					text = <"specialised archetype">
-					description = <"specialised child archetype">
-				>
+			["id1.1"] = <
+				text = <"specialised archetype">
+				description = <"specialised child archetype">
 			>
 		>
 	>

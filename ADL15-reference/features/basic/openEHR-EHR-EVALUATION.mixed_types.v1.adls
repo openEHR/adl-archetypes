@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-EVALUATION.mixed_types.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-EVALUATION.mixed_types.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -18,29 +18,29 @@ description
 			copyright = <"copyright (c) 2010 The openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"unstable">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	lifecycle_state = <"draft">
 
 definition
-	EVALUATION[at0000] matches {
+	EVALUATION[id1] matches {	-- Evaluation
 		data matches {
-			ITEM_TREE matches {
+			ITEM_TREE[id14] matches {
 				items matches {
-					CLUSTER[at0001] matches {
+					CLUSTER[id2] matches {	-- cluster
 						items matches {
-							use_node ELEMENT[at0009] /data/items[at0010]/items[at0012]
-							allow_archetype CLUSTER[at0003] matches {
+							use_node ELEMENT[id10] /data[id14]/items[id11]/items[id13]	-- /data[id14]/items[cluster]/items[element]
+							allow_archetype CLUSTER[id4] matches {	-- element
 								include
 									archetype_id/value matches {/.*/}
 							}
-							ELEMENT[at0002] matches {*}
+							ELEMENT[id3] 	-- element
 						}
 					}
-					CLUSTER[at0010] matches {
+					CLUSTER[id11] matches {	-- cluster
 						items matches {
-							ELEMENT[at0012] matches {*}
+							ELEMENT[id13] 	-- element
 						}
 					}
 				}
@@ -48,38 +48,36 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"Evaluation">
-					text = <"Evaluation">
-				>
-				["at0001"] = <
-					description = <"cluster">
-					text = <"cluster">
-				>
-				["at0002"] = <
-					description = <"element">
-					text = <"element">
-				>
-				["at0010"] = <
-					description = <"cluster">
-					text = <"cluster">
-				>
-				["at0012"] = <
-					description = <"element">
-					text = <"element">
-				>
-				["at0003"] = <
-					description = <"element">
-					text = <"element">
-				>
-				["at0009"] = <
-					description = <"use_node element">
-					text = <"use_node element">
-				>
+			["id1"] = <
+				text = <"Evaluation">
+				description = <"Evaluation">
+			>
+			["id2"] = <
+				text = <"cluster">
+				description = <"cluster">
+			>
+			["id3"] = <
+				text = <"element">
+				description = <"element">
+			>
+			["id11"] = <
+				text = <"cluster">
+				description = <"cluster">
+			>
+			["id13"] = <
+				text = <"element">
+				description = <"element">
+			>
+			["id4"] = <
+				text = <"element">
+				description = <"element">
+			>
+			["id10"] = <
+				text = <"use_node element">
+				description = <"use_node element">
 			>
 		>
 	>

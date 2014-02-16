@@ -95,11 +95,6 @@ definition
 				}
 			}
 		}
-		clinical_coded_text_attr_2 matches {
-			DV_CODED_TEXT matches {
-				defining_code matches {[local::]}
-			}
-		}
 	}
 
 ontology

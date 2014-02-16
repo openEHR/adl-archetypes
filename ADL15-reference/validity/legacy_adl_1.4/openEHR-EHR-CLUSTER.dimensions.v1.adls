@@ -51,7 +51,7 @@ definition
 				value matches {
 					DV_QUANTITY[id8] matches {
 						property matches {[at1]}
-						units matches {"µm"mm"cm"m"ft"in"yd"}
+						units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
 					}
 				}
 			}
@@ -59,7 +59,7 @@ definition
 				value matches {
 					DV_QUANTITY[id9] matches {
 						property matches {[at2]}
-						units matches {"µm"mm"cm"m"ft"in"yd"}
+						units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
 					}
 				}
 			}
@@ -67,7 +67,7 @@ definition
 				value matches {
 					DV_QUANTITY[id10] matches {
 						property matches {[at3]}
-						units matches {"µm"mm"cm"m"ft"in"yd"}
+						units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
 					}
 				}
 			}
@@ -75,7 +75,7 @@ definition
 				value matches {
 					DV_QUANTITY[id11] matches {
 						property matches {[at4]}
-						units matches {"µm"mm"cm"m"in"ft"}
+						units matches {"µm", "mm", "cm", "m", "in", "ft"}
 					}
 				}
 			}
@@ -83,7 +83,7 @@ definition
 				value matches {
 					DV_QUANTITY[id12] matches {
 						property matches {[at5]}
-						units matches {"mm2"cm2"% body"% head, neck"% lower limb"% trunk"% upper limb"m2"in2"ft2"}
+						units matches {"mm2", "cm2", "% body", "% head, neck", "% lower limb", "% trunk", "% upper limb", "m2", "in2", "ft2"}
 					}
 				}
 			}
@@ -91,7 +91,7 @@ definition
 				value matches {
 					DV_QUANTITY[id13] matches {
 						property matches {[at6]}
-						units matches {"mm3"ml"in3"cc"ft3"}
+						units matches {"mm3", "ml", "in3", "cc", "ft3"}
 					}
 				}
 			}
@@ -130,28 +130,28 @@ terminology
 				description = <"Das Volumen des betrachteten Teils.">
 			>
 			["at1"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
+				text = <"*Length (en)">
+				description = <"*Length (en)">
 			>
 			["at2"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
+				text = <"*Length (en)">
+				description = <"*Length (en)">
 			>
 			["at3"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
+				text = <"*Length (en)">
+				description = <"*Length (en)">
 			>
 			["at4"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
+				text = <"*Length (en)">
+				description = <"*Length (en)">
 			>
 			["at5"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
+				text = <"*Area (en)">
+				description = <"*Area (en)">
 			>
 			["at6"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
+				text = <"*Volume (en)">
+				description = <"*Volume (en)">
 			>
 		>
 		["en"] = <

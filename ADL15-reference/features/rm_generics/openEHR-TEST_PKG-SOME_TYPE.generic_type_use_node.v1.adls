@@ -1,0 +1,46 @@
+archetype (adl_version=1.5.1)
+	openEHR-TEST_PKG-SOME_TYPE.generic_type_use_node.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Illustrates the use of generic types">
+			keywords = <"ADL", "test">
+			copyright = <"copyright (c) 2006 The openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_details = <
+		["regression"] = <"PASS">
+	>
+
+definition
+	SOME_TYPE[id1] matches {	-- root item
+		qty_interval_attr_1 matches {
+			DV_INTERVAL<DV_QUANTITY>[id2] 	-- interval of quantities
+		}
+		qty_interval_attr_2 matches {
+			use_node DV_INTERVAL<DV_QUANTITY>[id3] /qty_interval_attr_1[id2]	-- /qty_interval_attr_1[interval of quantities]
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"root item">
+				description = <"xxxx">
+			>
+			["id2"] = <
+				text = <"interval of quantities">
+				description = <"interval">
+			>
+		>
+	>

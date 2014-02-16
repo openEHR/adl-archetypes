@@ -1,8 +1,9 @@
-archetype (adl_version=1.4)
-	openEHR-TEST_PKG-CAR.VACMI_paths_alts_uncoded_interior.v1
+archetype (adl_version=1.5.1)
+	openEHR-TEST_PKG-CAR.VCOID_uncoded_interior_nodes.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
@@ -10,24 +11,24 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VACMI validity check triggered by missing node ids on multiple alternatives of same RM type under single-valued attribute">
+			purpose = <"Test VCOID validity check triggered by missing node ids on multiple alternatives of same RM type under single-valued attribute">
 			keywords = <"ADL", "test">
 			copyright = <"copyright (c) 2006 The openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"unstable">
 	other_details = <
-		["regression"] = <"VACMI">
+		["regression"] = <"VCOID">
 	>
-	lifecycle_state = <"draft">
 
 definition
-	CAR[at0000] matches {	-- car
+	CAR[id1] matches {	-- car
 		body matches {
 			CAR_BODY matches {
 				description matches {"hatchback body"}
 				model matches {"xxxx"}
 				parts matches {
-					CAR_BODY_PART matches {*}
+					CAR_BODY_PART
 				}
 			}
 			CAR_BODY matches {
@@ -37,14 +38,12 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"car">
-					text = <"car">
-				>
+			["id1"] = <
+				text = <"car">
+				description = <"car">
 			>
 		>
 	>

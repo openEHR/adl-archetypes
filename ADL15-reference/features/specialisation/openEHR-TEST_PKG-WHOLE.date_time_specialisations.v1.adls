@@ -1,7 +1,7 @@
-archetype (adl_version=1.5)
-	openehr-TEST_PKG-WHOLE.date_time_specialisations.v1
+archetype (adl_version=1.5.1)
+	openehr-TEST_PKG-WHOLE.date_time_specialisations.v1.0.0
 
-specialise
+specialize
 	openehr-TEST_PKG-WHOLE.basic_types.v1
 
 language
@@ -19,25 +19,22 @@ description
 			copyright = <"copyright (c) 2012 The openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"unstable">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	lifecycle_state = <"draft">
 
 definition
-	WHOLE[at0000.1] matches {	-- test entry
+	WHOLE[id1.1] matches {	-- Specialised duration
 		duration_attr36 matches {PDTHM}
 	}
 
-ontology
-	terminologies_available = <"adl_test", ...>
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000.1"] = <
-					description = <"Specialised duration">
-					text = <"Specialised duration">
-				>
+			["id1.1"] = <
+				text = <"Specialised duration">
+				description = <"Specialised duration">
 			>
 		>
 	>

@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.5)
-	openEHR-EHR-OBSERVATION.empty_bindings.v1
+﻿archetype (adl_version=1.5.1)
+	openEHR-EHR-OBSERVATION.empty_bindings.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -18,32 +18,25 @@ description
 			copyright = <"copyright (c) 2011 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Published">
+	lifecycle_state = <"unmanaged">
 
 definition
-	OBSERVATION[at0000] matches {	-- Indirect oximetry
-		data matches {*}
+	OBSERVATION[id1] matches {	-- Indirect oximetry
+		data 
 	}
 
-ontology
-	terminologies_available = <"SNOMED-CT", "LOINC">
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"Indirect oximetry">
-					description = <"Method of monitoring blood gas measurements such as Spo2 and pTCO2 by indirect, currently non-invasive, means.">
-				>
+			["id1"] = <
+				text = <"Indirect oximetry">
+				description = <"Method of monitoring blood gas measurements such as Spo2 and pTCO2 by indirect, currently non-invasive, means.">
 			>
 		>
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-			>
 		>
 		["LOINC"] = <
-			items = <
-			>
 		>
 	>

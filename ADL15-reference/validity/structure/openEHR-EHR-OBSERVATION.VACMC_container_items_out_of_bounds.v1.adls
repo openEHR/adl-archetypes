@@ -1,4 +1,4 @@
-archetype (adl_version=1.5)
+archetype (adl_version=1.5.1)
 	openEHR-EHR-OBSERVATION.VACMC_container_items_out_of_bounds.v1
 
 language
@@ -23,25 +23,25 @@ description
 	>
 
 definition
-	OBSERVATION[at0000] matches {	
+	OBSERVATION[id1] matches {	
 		data matches {
-			HISTORY[at0001] matches {	
+			HISTORY[id2] matches {	
 				events cardinality matches {1; unordered} matches {
-					EVENT[at0002] matches {	
+					EVENT[id3] matches {	
 						data matches {
-							ITEM_TREE[at0003] matches {	
+							ITEM_TREE[id4] matches {	
 								items matches {
-									CLUSTER[at0004] matches {	
+									CLUSTER[id5] matches {	
 										items cardinality matches {1; unordered} matches {
-											ELEMENT[at0005] occurrences matches {0..1} matches {*}
-											ELEMENT[at0006] occurrences matches {0..1} matches {*}
+											ELEMENT[id6] occurrences matches {0..1} matches {*}
+											ELEMENT[id7] occurrences matches {0..1} matches {*}
 										}
 									}
-									CLUSTER[at0007] matches {	
+									CLUSTER[id8] matches {	
 										items cardinality matches {1..2} matches {
-											ELEMENT[at0008] occurrences matches {1} matches {*}
-											ELEMENT[at0009] occurrences matches {2..*} matches {*}
-											ELEMENT[at0010] occurrences matches {0..1} matches {*}
+											ELEMENT[id9] occurrences matches {1} matches {*}
+											ELEMENT[id10] occurrences matches {2..*} matches {*}
+											ELEMENT[id11] occurrences matches {0..1} matches {*}
 										}
 									}
 								}
@@ -53,54 +53,44 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
+				["id1"] = <
 					text = <"aaa">
 					description = <"aaa">
 				>
-				["at0001"] = <
-					text = <"Event Series">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
+				["id3"] = <
 					text = <"bbbb">
 					description = <"bbbb">
 				>
-				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0004"] = <
+				["id5"] = <
 					text = <"xxx">
 					description = <"xxx">
 				>
-				["at0005"] = <
+				["id6"] = <
 					text = <"cccc">
 					description = <"ccc">
 				>
-				["at0006"] = <
+				["id7"] = <
 					text = <"ddd">
 					description = <"ddd">
 				>
-				["at0007"] = <
+				["id8"] = <
 					text = <"eee">
 					description = <"eee">
 				>
-				["at0008"] = <
+				["id9"] = <
 					text = <"fff">
 					description = <"fff">
 				>
-				["at0009"] = <
+				["id10"] = <
 					text = <"ggg">
 					description = <"ggg">
 				>
-				["at0010"] = <
+				["id11"] = <
 					text = <"hhh">
 					description = <"hhh">
 				>
-			>
 		>
 	>

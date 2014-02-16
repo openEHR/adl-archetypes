@@ -1,8 +1,9 @@
-archetype (adl_version=1.5)
+archetype (adl_version=1.5.1)
 	openEHR-TEST_PKG-ENTRY.FAIL_definition_missing.v1
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"Peter Gummer">
@@ -20,14 +21,12 @@ description
 	>
 	lifecycle_state = <"draft">
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"">
-					description = <"">
-				>
+			["id1"] = <
+				text = <"">
+				description = <"">
 			>
 		>
 	>

@@ -45,7 +45,7 @@ definition
 		clinical_quantity_attr_2 matches {
 			DV_QUANTITY[id5] matches {
 				property matches {[at2]}
-				units matches {"C"F"}
+				units matches {"C", "F"}
 			}
 		}
 		clinical_quantity_attr_4 matches {
@@ -61,7 +61,6 @@ definition
 		clinical_quantity_attr_6 matches {
 			DV_QUANTITY[id8] matches {
 				property matches {[at3]}
-				units matches {""}
 				precision matches {2}
 			}
 		}
@@ -83,16 +82,16 @@ terminology
 				description = <"Fahrenheit temperature">
 			>
 			["at1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Temperature">
+				description = <"Temperature">
 			>
 			["at2"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Temperature">
+				description = <"Temperature">
 			>
 			["at3"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Temperature">
+				description = <"Temperature">
 			>
 		>
 	>

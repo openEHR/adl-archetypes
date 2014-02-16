@@ -1,8 +1,9 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-EVALUATION.VCARM_rm_non_existent_attribute.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-EVALUATION.VCARM_rm_non_existent_attribute.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
@@ -17,29 +18,25 @@ description
 			keywords = <"test", "RM checker">
 		>
 	>
+	lifecycle_state = <"initial">
 	other_details = <
 		["regression"] = <"VCARM">
 	>
-	lifecycle_state = <"AuthorDraft">
 
 definition
-	EVALUATION[at0000] matches {	
+	EVALUATION[id1] matches {	-- Some evaluation
 		data matches {
-			ITEM_TREE matches {
-				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] matches {
+			ITEM_TREE[id5] matches {
+				items matches {
+					ELEMENT[id3] matches {	-- An Element
 						value matches {
-							DV_TEXT matches {*}
+							DV_TEXT[id6] 
 						}
 					}
-					ELEMENT[at0003] occurrences matches {0..1} matches {
+					ELEMENT[id4] occurrences matches {0..1} matches {	-- Another Element
 						value matches {
-							DV_CODED_TEXT matches {
-								refining_code matches {
-									[local::
-									at0004, 
-									at0005]
-								}
+							DV_CODED_TEXT[id7] matches {
+								refining_code matches {[ac1]}		-- Another Element
 							}
 						}
 					}
@@ -48,30 +45,38 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"Some evaluation">
-					text = <"Some evaluation">
-				>
-				["at0002"] = <
-					description = <"An Element">
-					text = <"An Element">
-				>
-				["at0003"] = <
-					description = <"Another Element">
-					text = <"Another Element">
-				>
-				["at0004"] = <
-					description = <"coded item #1">
-					text = <"coded item #1">
-				>
-				["at0005"] = <
-					description = <"coded item #2">
-					text = <"coded item #2">
-				>
+			["id1"] = <
+				text = <"Some evaluation">
+				description = <"Some evaluation">
 			>
+			["id3"] = <
+				text = <"An Element">
+				description = <"An Element">
+			>
+			["id4"] = <
+				text = <"Another Element">
+				description = <"Another Element">
+			>
+			["at5"] = <
+				text = <"coded item #1">
+				description = <"coded item #1">
+			>
+			["at6"] = <
+				text = <"coded item #2">
+				description = <"coded item #2">
+			>
+			["ac1"] = <
+				text = <"Another Element">
+				description = <"Another Element">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at5", "at6">
 		>
 	>

@@ -1,4 +1,4 @@
-archetype (adl_version=1.5)
+archetype (adl_version=1.5.1)
 	openEHR-TEST_PKG-ENTRY.FAIL_definition_empty.v1
 
 language
@@ -22,14 +22,12 @@ description
 
 definition
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"">
-					description = <"">
-				>
+			["id1"] = <
+				text = <"">
+				description = <"">
 			>
 		>
 	>

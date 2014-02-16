@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openEHR-TEST_PKG-CAR.paths_basic.v1
+archetype (adl_version=1.5.1)
+	openEHR-TEST_PKG-CAR.paths_basic.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -16,47 +16,47 @@ description
 			copyright = <"copyright (c) 2006 The openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"unstable">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	lifecycle_state = <"draft">
 
 definition
-	CAR[at0000] matches {	-- car
+	CAR[id1] matches {	-- car
 		body matches {
-			CAR_BODY[at0001] matches {	-- car body
+			CAR_BODY[id2] matches {	-- car body
 				description matches {"principal car body"}
 				model matches {"xxxx"}
 			}
 		}
 		engine_parts matches {
-			ENGINE_PART[at0003] matches {	-- block
+			ENGINE_PART[id4] matches {	-- block
 				items matches {
-					ENGINE_PART_ITEM[at0004] matches {	-- head
+					ENGINE_PART_ITEM[id5] matches {	-- head
 						model matches {"xxx"}
 						type matches {"xxx"}
 					}
-					ENGINE_PART_ITEM[at0005] matches {	-- body
+					ENGINE_PART_ITEM[id6] matches {	-- body
 						model matches {"xxx"}
 						type matches {"xxx"}
 					}
-					ENGINE_PART_ITEM[at0006] matches {	-- pistons
+					ENGINE_PART_ITEM[id7] matches {	-- pistons
 						model matches {"xxx"}
 						type matches {"xxx"}
 					}
-					ENGINE_PART_ITEM[at0007] matches {	-- cam shaft
+					ENGINE_PART_ITEM[id8] matches {	-- cam shaft
 						model matches {"xxx"}
 						type matches {"xxx"}
 					}
-					ENGINE_PART_ITEM[at0008] matches {	-- sump
+					ENGINE_PART_ITEM[id9] matches {	-- sump
 						model matches {"xxx"}
 						type matches {"xxx"}
 					}
 				}
 			}
-			ENGINE_PART[at0009] matches {	-- exhaust manifold
+			ENGINE_PART[id10] matches {	-- exhaust manifold
 				items matches {
-					ENGINE_PART_ITEM[at0010] matches {	-- exhaust manifold gasket
+					ENGINE_PART_ITEM[id11] matches {	-- exhaust manifold gasket
 						model matches {"xxx"}
 						type matches {"xxx"}
 					}
@@ -65,50 +65,48 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"car">
-					text = <"car">
-				>
-				["at0001"] = <
-					description = <"car body">
-					text = <"car body">
-				>
-				["at0003"] = <
-					description = <"engine block">
-					text = <"block">
-				>
-				["at0004"] = <
-					description = <"engine block head">
-					text = <"head">
-				>
-				["at0005"] = <
-					description = <"engine block body">
-					text = <"body">
-				>
-				["at0006"] = <
-					description = <"engine pistons">
-					text = <"pistons">
-				>
-				["at0007"] = <
-					description = <"engine cam shaft">
-					text = <"cam shaft">
-				>
-				["at0008"] = <
-					description = <"oil sump">
-					text = <"sump">
-				>
-				["at0009"] = <
-					description = <"exhaust manifold">
-					text = <"exhaust manifold">
-				>
-				["at0010"] = <
-					description = <"exhaust manifold gasket">
-					text = <"exhaust manifold gasket">
-				>
+			["id1"] = <
+				text = <"car">
+				description = <"car">
+			>
+			["id2"] = <
+				text = <"car body">
+				description = <"car body">
+			>
+			["id4"] = <
+				text = <"block">
+				description = <"engine block">
+			>
+			["id5"] = <
+				text = <"head">
+				description = <"engine block head">
+			>
+			["id6"] = <
+				text = <"body">
+				description = <"engine block body">
+			>
+			["id7"] = <
+				text = <"pistons">
+				description = <"engine pistons">
+			>
+			["id8"] = <
+				text = <"cam shaft">
+				description = <"engine cam shaft">
+			>
+			["id9"] = <
+				text = <"sump">
+				description = <"oil sump">
+			>
+			["id10"] = <
+				text = <"exhaust manifold">
+				description = <"exhaust manifold">
+			>
+			["id11"] = <
+				text = <"exhaust manifold gasket">
+				description = <"exhaust manifold gasket">
 			>
 		>
 	>

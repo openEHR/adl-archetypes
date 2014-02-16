@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-OBSERVATION.max_description.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-OBSERVATION.max_description.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -11,6 +11,7 @@ language
 			>
 		>
 	>
+
 description
 	original_author = <
 		["name"] = <"author name">
@@ -19,11 +20,11 @@ description
 	details = <
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
-			purpose = <"a quoi ça sert">
-			use = <"ceçi explique la fonction de l'archetype">
-			keywords = <"ceçi", "est", "une", "liste", "de", "mots", "clés">
+			purpose = <"a quoi Ã§a sert">
+			use = <"ceÃ§i explique la fonction de l'archetype">
+			keywords = <"ceÃ§i", "est", "une", "liste", "de", "mots", "clÃ©s">
 			misuse = <"les interdictions de cet archetype">
-			copyright = <"c'est à moi tout ce travail!">
+			copyright = <"c'est Ã  moi tout ce travail!">
 			original_resource_uri = <
 				["ligne guide"] = <"http://guidelines.are.us/wherever/fr">
 				["medline"] = <"http://some%20medline%20ref">
@@ -42,33 +43,29 @@ description
 			>
 		>
 	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"friend 1", "friend 2", "friend 3">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	lifecycle_state = <"draft">
-	other_contributors = <"friend 1", "friend 2", "friend 3">
 
 definition
-	OBSERVATION[at0000] matches {	-- most minimal
-		data matches {*}
+	OBSERVATION[id1] matches {	-- most minimal
+		data 
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["fr"] = <
-			items = <
-				["at0000"] = <
-					description = <"le plus minimal">
-					text = <"le plus minimal">
-				>
+			["id1"] = <
+				text = <"le plus minimal">
+				description = <"le plus minimal">
 			>
 		>
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"most minimal">
-					text = <"most minimal">
-				>
+			["id1"] = <
+				text = <"most minimal">
+				description = <"most minimal">
 			>
 		>
 	>

@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.5)
-	openEHR-EHR-EVALUATION.VPOV_code_list_constrained.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-EVALUATION.VPOV_code_list_constrained.v1.0.0
 
 specialize
 	openEHR-EHR-EVALUATION.code_list_parent.v1
@@ -19,54 +19,56 @@ description
 			copyright = <"copyright (c) 2013 openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"VPOV">
 	>
 
 definition
-	EVALUATION[at0000.1] matches {	-- Exclusion statement - Adverse Reaction
-		/data[at0001]/items matches {
-			ELEMENT[at0002] matches {
+	EVALUATION[id1.1] matches {	-- Adverse reaction exclusions
+		/data[id2]/items matches {
+			ELEMENT[id3] matches {
 				value matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[local::
-							at0.3, 	-- No known adverse reactions
-							at0.4, 	-- No known allergic reactions
-							at0.5, 	-- No known hypersensitivity reactions
-							at0.6]	-- No known intolerances
-						}
+					DV_CODED_TEXT[id4] matches {
+						defining_code matches {[ac1.1]}		-- (added by post-parse processor)
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000.1"] = <
-					text = <"Adverse reaction exclusions">
-					description = <"A category of conditions or states which have been excluded as cause of adverse reaction">
-				>
-				["at0.3"] = <
-					text = <"No known adverse reactions">
-					description = <"No known adverse reactions to any substance.">
-				>
-				["at0.4"] = <
-					text = <"No known allergic reactions">
-					description = <"No known allergic reactions to any substance.">
-				>
-				["at0.5"] = <
-					text = <"No known hypersensitivity reactions">
-					description = <"No known hypersensitivity reaction to any substance.">
-				>
-				["at0.6"] = <
-					text = <"No known intolerances">
-					description = <"*">
-				>
+			["id1.1"] = <
+				text = <"Adverse reaction exclusions">
+				description = <"A category of conditions or states which have been excluded as cause of adverse reaction">
+			>
+			["at0.3"] = <
+				text = <"No known adverse reactions">
+				description = <"No known adverse reactions to any substance.">
+			>
+			["at0.4"] = <
+				text = <"No known allergic reactions">
+				description = <"No known allergic reactions to any substance.">
+			>
+			["at0.5"] = <
+				text = <"No known hypersensitivity reactions">
+				description = <"No known hypersensitivity reaction to any substance.">
+			>
+			["at0.6"] = <
+				text = <"No known intolerances">
+				description = <"*">
+			>
+			["ac1.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 		>
 	>
-
+	value_sets = <
+		["ac1.1"] = <
+			id = <"ac1.1">
+			members = <"at0.3", "at0.4", "at0.5", "at0.6">
+		>
+	>

@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-COMPOSITION.t_non_existent_ext_ref.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-COMPOSITION.t_non_existent_ext_ref.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -14,31 +14,27 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test legal external reference">
+			purpose = <"Test external reference that is lexically legal but archetype doesn't exist">
 		>
 	>
 	other_details = <
-		["regression"] = <"FAIL">
+		["regression"] = <"VARXR">
 	>
-	lifecycle_state = <"Initial">
+	lifecycle_state = <"unstable">
 
 definition
-	COMPOSITION[at0000] matches {
+	COMPOSITION[id1] matches {
 		content matches {
-			use_archetype OBSERVATION[at0001] openEHR-EHR-OBSERVATION.doesnt_exist.v1
+			use_archetype OBSERVATION[openEHR-EHR-OBSERVATION.doesnt_exist.v1]
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Composition">
 				description = <"Composition">
-			>
-			["at0001"] = <
-				text = <"Observation">
-				description = <"Observation">
 			>
 		>
 	>

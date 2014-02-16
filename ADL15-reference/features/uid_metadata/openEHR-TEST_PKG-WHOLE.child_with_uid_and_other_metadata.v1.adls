@@ -1,5 +1,5 @@
-archetype (adl_version=1.5; uid=15E82D77-7DB7-4F70-8D8E-EED6FF241B2D; child_flag; some_key=some_replacement_value; child_key=xxxxx)
-	openehr-TEST_PKG-WHOLE.child_with_uid_and_other_metadata.v1
+archetype (adl_version=1.5.1; uid=15E82D77-7DB7-4F70-8D8E-EED6FF241B2D; child_flag=true; some_key=some_replacement_value; child_key=xxxxx)
+	openehr-TEST_PKG-WHOLE.child_with_uid_and_other_metadata.v1.0.0
 
 specialize
 	openehr-TEST_PKG-WHOLE.parent_with_uid_and_other_metadata.v1
@@ -11,22 +11,20 @@ description
 	original_author = <
 		["name"] = <"thomas.beale@oceaninformatics.com">
 	>
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	lifecycle_state = <"Initial">
 
 definition
-	WHOLE[at0000.1] matches {*}
+	WHOLE[id1.1] 	-- Parent archetype with uid
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000.1"] = <
-					description = <"Uid parent">
-					text = <"Parent archetype with uid">
-				>
+			["id1.1"] = <
+				text = <"Parent archetype with uid">
+				description = <"Uid parent">
 			>
 		>
 	>

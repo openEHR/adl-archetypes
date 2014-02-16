@@ -1,4 +1,4 @@
-archetype (adl_version=1.5)
+archetype (adl_version=1.5.1)
 	openEHR-TEST_PKG-ENTRY.VACMC_occurrences_too_big.v1
 
 language
@@ -18,27 +18,25 @@ description
 	other_details = <
 		["regression"] = <"VACMCU">
 	>
-	lifecycle_state = <"draft">
+	lifecycle_state = <"unstable">
 
 definition
-	ENTRY[at0000] matches {
+	ENTRY[id1] matches {
 		element_attr_2 cardinality matches {0..1} matches {
-			ELEMENT[at0001] occurrences matches {1..2} matches {*}
+			ELEMENT[id2] occurrences matches {1..2} matches {*}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"">
-					description = <"">
-				>
-				["at0001"] = <
-					text = <"">
-					description = <"">
-				>
+			["id1"] = <
+				text = <"">
+				description = <"">
+			>
+			["id2"] = <
+				text = <"">
+				description = <"">
 			>
 		>
 	>

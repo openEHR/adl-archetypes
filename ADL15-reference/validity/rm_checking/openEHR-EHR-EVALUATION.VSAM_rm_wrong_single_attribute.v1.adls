@@ -1,8 +1,9 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-EVALUATION.VSAM_rm_cardinality_on_single_attr.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-EVALUATION.VSAM_rm_cardinality_on_single_attr.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
@@ -20,21 +21,19 @@ description
 	other_details = <
 		["regression"] = <"VSAM">
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"unmanaged">
 
 definition
-	EVALUATION[at0000] matches {	
+	EVALUATION[id1] matches {	
 		protocol cardinality matches {1..*} matches {*}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"Some evaluation">
-					text = <"Some evaluation">
-				>
+			["id1"] = <
+				description = <"Some evaluation">
+				text = <"Some evaluation">
 			>
 		>
 	>

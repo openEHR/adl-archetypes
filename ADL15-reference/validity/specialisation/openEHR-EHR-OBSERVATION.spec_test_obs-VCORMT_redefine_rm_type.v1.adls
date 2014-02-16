@@ -1,7 +1,7 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-OBSERVATION.VCORMT_redefine_rm_type.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-OBSERVATION.VCORMT_redefine_rm_type.v1.0.0
 
-specialise
+specialize
 	openEHR-EHR-OBSERVATION.spec_test_obs.v1
 
 language
@@ -19,30 +19,28 @@ description
 			purpose = <"Test VCORMT validity check, triggered by illegal refinement of RM type">
 		>
 	>
+	lifecycle_state = <"unstable">
 	other_details = <
 		["regression"] = <"VCORMT">
 	>
-	lifecycle_state = <"draft">
 
 definition
-	OBSERVATION[at0000.1] matches {
+	OBSERVATION[id1.1] matches {	-- specialised archetype
 		/data/events matches {
-			ITEM_TREE[at0002.1]
+			ITEM_TREE[id3.1] 	-- any event - RM type specialised
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000.1"] = <
-					text = <"specialised archetype">
-					description = <"">
-				>
-				["at0002.1"] = <
-					text = <"any event - RM type specialised">
-					description = <"">
-				>
+			["id1.1"] = <
+				text = <"specialised archetype">
+				description = <"">
+			>
+			["id3.1"] = <
+				text = <"any event - RM type specialised">
+				description = <"">
 			>
 		>
 	>

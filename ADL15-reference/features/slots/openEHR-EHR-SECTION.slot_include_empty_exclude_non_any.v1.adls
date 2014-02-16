@@ -1,8 +1,9 @@
-﻿archetype (adl_version=1.5)
-	openEHR-EHR-SECTION.slot_include_empty_exclude_non_any.v1
+﻿archetype (adl_version=1.5.1)
+	openEHR-EHR-SECTION.slot_include_empty_exclude_non_any.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
@@ -16,33 +17,31 @@ description
 			purpose = <"Test slot with no include and non-any exclude">
 		>
 	>
+	lifecycle_state = <"initial">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	lifecycle_state = <"AuthorDraft">
 
 definition
-	SECTION[at0000] matches {	
+	SECTION[id1] matches {	-- Slot section
 		items cardinality matches {1..*; unordered} matches {
-			allow_archetype OBSERVATION[at0001] occurrences matches {0..1} matches {	
+			allow_archetype OBSERVATION[id2] occurrences matches {0..1} matches {	-- Vital signs
 				exclude
-					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"Slot section">
-					description = <"Slot section">
-				>
-				["at0001"] = <
-					text = <"Vital signs">
-					description = <"Vital signs observations.">
-				>
+			["id1"] = <
+				text = <"Slot section">
+				description = <"Slot section">
+			>
+			["id2"] = <
+				text = <"Vital signs">
+				description = <"Vital signs observations.">
 			>
 		>
 	>

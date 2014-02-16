@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openEHR-TEST_PKG-ENTRY.STCAC_at_code_assumed_code_not_in_list.v1
+archetype (adl_version=1.5.1)
+	openEHR-TEST_PKG-ENTRY.VATDA_at_code_assumed_code_not_in_list.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -16,49 +16,54 @@ description
 		>
 	>
 	other_details = <
-		["regression"] = <"STCAC">
+		["regression"] = <"VATDA">
 	>
 	lifecycle_state = <"draft">
 
 definition
-	ENTRY[at0000] matches {
+	ENTRY[id1] matches {
 		coded_text_value matches {
-			DV_CODED_TEXT matches {
+			DV_CODED_TEXT[id2] matches {
 				defining_code matches {
-					[local::
-					at0001,
-					at0002,
-					at0003;
-					at0009]
+					[ac1; at10]
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"">
-					description = <"">
-				>
-				["at0001"] = <
-					text = <"">
-					description = <"">
-				>
-				["at0002"] = <
-					text = <"">
-					description = <"">
-				>
-				["at0003"] = <
-					text = <"">
-					description = <"">
-				>
-				["at0009"] = <
-					text = <"">
-					description = <"">
-				>
+			["id1"] = <
+				text = <"">
+				description = <"">
+			>
+			["ac1"] = <
+				text = <"value set #1">
+				description = <"">
+			>
+			["at2"] = <
+				text = <"">
+				description = <"">
+			>
+			["at3"] = <
+				text = <"">
+				description = <"">
+			>
+			["at4"] = <
+				text = <"">
+				description = <"">
+			>
+			["at10"] = <
+				text = <"">
+				description = <"">
 			>
 		>
 	>
+
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at2", "at3", "at4">
+        >
+    >

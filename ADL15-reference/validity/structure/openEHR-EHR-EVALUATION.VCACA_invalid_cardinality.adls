@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-EVALUATION.VCACA_invalid_cardinality.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-EVALUATION.VCACA_invalid_cardinality.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -16,43 +16,41 @@ description
 			copyright = <"copyright (c) 2010 The openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"unstable">
 	other_details = <
 		["regression"] = <"VCACA">
 	>
-	lifecycle_state = <"draft">
 
 definition
-	EVALUATION[at0000] matches {
+	EVALUATION[id1] matches {	-- Evaluation
 		data matches {
-			ITEM_TREE matches {
+			ITEM_TREE[id4] matches {
 				items matches {
-					CLUSTER[at0001] matches {
-						items cardinality matches {0..*} matches {*}
+					CLUSTER[id2] matches {	-- cluster
+						items cardinality matches {0..*; ordered} 
 					}
-					CLUSTER[at0002] matches {
-						items matches {*}
+					CLUSTER[id3] matches {	-- cluster
+						items 
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"Evaluation">
-					text = <"Evaluation">
-				>
-				["at0001"] = <
-					description = <"cluster">
-					text = <"cluster">
-				>
-				["at0002"] = <
-					description = <"cluster">
-					text = <"cluster">
-				>
+			["id1"] = <
+				text = <"Evaluation">
+				description = <"Evaluation">
+			>
+			["id2"] = <
+				text = <"cluster">
+				description = <"cluster">
+			>
+			["id3"] = <
+				text = <"cluster">
+				description = <"cluster">
 			>
 		>
 	>

@@ -1,0 +1,49 @@
+archetype (adl_version=1.5.1)
+	openEHR-EHR-COMPOSITION.ext_ref.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"12/03/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Test legal external reference">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["regression"] = <"PASS">
+	>
+
+definition
+	COMPOSITION[id1] matches {	-- Composition
+		content matches {
+			use_archetype SECTION[id2, openEHR-EHR-SECTION.section_parent.v1] occurrences matches {0..1} 
+			use_archetype OBSERVATION[id3, openEHR-EHR-OBSERVATION.spec_test_obs.v1] occurrences matches {1} 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Composition">
+				description = <"Composition">
+			>
+			["id2"] = <
+				text = <"Section">
+				description = <"Section">
+			>
+			["id3"] = <
+				text = <"Observation">
+				description = <"Observation">
+			>
+		>
+	>

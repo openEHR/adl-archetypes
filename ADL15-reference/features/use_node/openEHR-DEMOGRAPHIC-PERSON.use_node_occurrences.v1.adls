@@ -1,8 +1,9 @@
-archetype (adl_version=1.5)
-	openEHR-DEMOGRAPHIC-PERSON.use_node_occurrences.v1
+archetype (adl_version=1.5.1)
+	openEHR-DEMOGRAPHIC-PERSON.use_node_occurrences.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
@@ -15,71 +16,69 @@ description
 			keywords = <"test", "use_node", "occurrences">
 		>
 	>
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	lifecycle_state = <"Initial">
 
 definition
-	PERSON[at0000] matches {	-- person demographics
+	PERSON[id1] matches {	-- person demographics
 		contacts matches {
-			CONTACT[at0005] matches {	-- home contact
+			CONTACT[id6] matches {	-- home contact
 				addresses matches {
-					ADDRESS[at0006] occurrences matches {0..1} matches {*}
-					ADDRESS[at0007] occurrences matches {0..2} matches {*}
-					ADDRESS[at0008] matches {*}
+					ADDRESS[id7] occurrences matches {0..1} 	-- home phone number
+					ADDRESS[id8] occurrences matches {0..2} 	-- home fax number
+					ADDRESS[id9] 	-- home email address
 				}
 			}
-			CONTACT[at0009] matches {	-- work contact
+			CONTACT[id10] matches {	-- work contact
 				addresses matches {
-					use_node ADDRESS[at0010] /contacts[at0005]/addresses[at0006]
-					use_node ADDRESS[at0011] /contacts[at0005]/addresses[at0007]
-					use_node ADDRESS[at0012] occurrences matches {1..3} /contacts[at0005]/addresses[at0008]
+					use_node ADDRESS[id11] /contacts[id6]/addresses[id7]	-- /contacts[home contact]/addresses[home phone number]
+					use_node ADDRESS[id12] /contacts[id6]/addresses[id8]	-- /contacts[home contact]/addresses[home fax number]
+					use_node ADDRESS[id13] occurrences matches {1..3} /contacts[id6]/addresses[id9]	-- /contacts[home contact]/addresses[home email address]
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"demographic person details">
-					text = <"person demographics">
-				>
-				["at0005"] = <
-					description = <"person's home contact details">
-					text = <"home contact">
-				>
-				["at0006"] = <
-					description = <"person's home phone number">
-					text = <"home phone number">
-				>
-				["at0007"] = <
-					description = <"person's home fax number">
-					text = <"home fax number">
-				>
-				["at0008"] = <
-					description = <"person's home email address">
-					text = <"home email address">
-				>
-				["at0009"] = <
-					description = <"person's home contact details">
-					text = <"work contact">
-				>
-				["at0010"] = <
-					description = <"person's work fax number">
-					text = <"work fax number">
-				>
-				["at0011"] = <
-					description = <"person's work email address">
-					text = <"work email address">
-				>
-				["at0012"] = <
-					description = <"person's work contact details">
-					text = <"work contact">
-				>
+			["id1"] = <
+				text = <"person demographics">
+				description = <"demographic person details">
+			>
+			["id6"] = <
+				text = <"home contact">
+				description = <"person's home contact details">
+			>
+			["id7"] = <
+				text = <"home phone number">
+				description = <"person's home phone number">
+			>
+			["id8"] = <
+				text = <"home fax number">
+				description = <"person's home fax number">
+			>
+			["id9"] = <
+				text = <"home email address">
+				description = <"person's home email address">
+			>
+			["id10"] = <
+				text = <"work contact">
+				description = <"person's home contact details">
+			>
+			["id11"] = <
+				text = <"work fax number">
+				description = <"person's work fax number">
+			>
+			["id12"] = <
+				text = <"work email address">
+				description = <"person's work email address">
+			>
+			["id13"] = <
+				text = <"work contact">
+				description = <"person's work contact details">
 			>
 		>
 	>

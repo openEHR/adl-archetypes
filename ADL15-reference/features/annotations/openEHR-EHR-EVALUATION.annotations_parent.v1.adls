@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.5)
-	openEHR-EHR-EVALUATION.annotations_parent.v1
+﻿archetype (adl_version=1.5.1)
+	openEHR-EHR-EVALUATION.annotations_parent.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -16,33 +16,20 @@ description
 			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"initial">
 	other_details = <
 		["regression"] = <"PASS">
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- General statement of exclusions or states
+	EVALUATION[id1] matches {	-- General statement of exclusions or states
 		data matches {
-			ITEM_TREE[at0001] matches {
+			ITEM_TREE[id2] matches {
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {1..*} matches {
+					ELEMENT[id3] occurrences matches {1..*} matches {	-- Statement
 						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0003, 	-- No significant illness
-									at0004, 	-- No significant past history
-									at0005, 	-- No significant family history
-									at0006, 	-- No known adverse reactions
-									at0009, 	-- No relevant past history
-									at0012, 	-- No relevant family history
-									at0013, 	-- No known allergies
-									at0010, 	-- No hospitalisations
-									at0011, 	-- No major surgery
-									at0007, 	-- No known sensitivities
-									at0008]	-- No known intolerances
-								}
+							DV_CODED_TEXT[id4] matches {
+								defining_code matches {[ac1]}		-- Statement
 							}
 						}
 					}
@@ -51,67 +38,71 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"General statement of exclusions or states">
-					description = <"A category of conditions or states which have been excluded">
-				>
-				["at0001"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"Statement">
-					description = <"The statement about what is excluded">
-				>
-				["at0003"] = <
-					text = <"No significant illness">
-					description = <"The person has no significant medical condition">
-				>
-				["at0004"] = <
-					text = <"No significant past history">
-					description = <"The person has no significant past medical history">
-				>
-				["at0005"] = <
-					text = <"No significant family history">
-					description = <"The person has no relatives with significant health problems">
-				>
-				["at0006"] = <
-					text = <"No known adverse reactions">
-					description = <"The person has had no adverse reactions, including intolerances, sensitivities or allergies, to medications, food, animals or chemicals">
-				>
-				["at0007"] = <
-					text = <"No known sensitivities">
-					description = <"No sensitivity to any medications, foods or substances">
-				>
-				["at0008"] = <
-					text = <"No known intolerances">
-					description = <"No known or recorded intolerances to medications, foods or other substances">
-				>
-				["at0009"] = <
-					text = <"No relevant past history">
-					description = <"No past problems or procedures relevant to the current situation">
-				>
-				["at0010"] = <
-					text = <"No hospitalisations">
-					description = <"No admissions to hospital">
-				>
-				["at0011"] = <
-					text = <"No major surgery">
-					description = <"No major operations or procedures">
-				>
-				["at0012"] = <
-					text = <"No relevant family history">
-					description = <"No family history relevant to the current situation">
-				>
-				["at0013"] = <
-					text = <"No known allergies">
-					description = <"No allergies known to any medications, foods or substances">
-				>
+			["id1"] = <
+				text = <"General statement of exclusions or states">
+				description = <"A category of conditions or states which have been excluded">
 			>
+			["id3"] = <
+				text = <"Statement">
+				description = <"The statement about what is excluded">
+			>
+			["at4"] = <
+				text = <"No significant illness">
+				description = <"The person has no significant medical condition">
+			>
+			["at5"] = <
+				text = <"No significant past history">
+				description = <"The person has no significant past medical history">
+			>
+			["at6"] = <
+				text = <"No significant family history">
+				description = <"The person has no relatives with significant health problems">
+			>
+			["at7"] = <
+				text = <"No known adverse reactions">
+				description = <"The person has had no adverse reactions, including intolerances, sensitivities or allergies, to medications, food, animals or chemicals">
+			>
+			["at8"] = <
+				text = <"No known sensitivities">
+				description = <"No sensitivity to any medications, foods or substances">
+			>
+			["at9"] = <
+				text = <"No known intolerances">
+				description = <"No known or recorded intolerances to medications, foods or other substances">
+			>
+			["at10"] = <
+				text = <"No relevant past history">
+				description = <"No past problems or procedures relevant to the current situation">
+			>
+			["at11"] = <
+				text = <"No hospitalisations">
+				description = <"No admissions to hospital">
+			>
+			["at12"] = <
+				text = <"No major surgery">
+				description = <"No major operations or procedures">
+			>
+			["at13"] = <
+				text = <"No relevant family history">
+				description = <"No family history relevant to the current situation">
+			>
+			["at14"] = <
+				text = <"No known allergies">
+				description = <"No allergies known to any medications, foods or substances">
+			>
+			["ac1"] = <
+				text = <"Statement">
+				description = <"The statement about what is excluded">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at4", "at5", "at6", "at7", "at10", "at13", "at14", "at11", "at12", "at8", "at9">
 		>
 	>
 
@@ -119,12 +110,12 @@ annotations
 	items = <
 		["en"] = <
 			items = <
-				["/data[at0001]"] = <
+				["/data[id2]"] = <
 					items = <
 						["ui"] = <"passthrough">
 					>
 				>
-				["/data[at0001]/items[at0002]"] = <
+				["/data[id2]/items[id3]"] = <
 					items = <
 						["design note"] = <"this is a design note on Statement">
 						["requirements note"] = <"this is a requirements note on Statement">
@@ -134,4 +125,3 @@ annotations
 			>
 		>
 	>
-

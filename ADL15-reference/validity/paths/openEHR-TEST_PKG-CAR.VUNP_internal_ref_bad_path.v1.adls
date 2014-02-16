@@ -1,5 +1,5 @@
-archetype 
-	openEHR-TEST_PKG-CAR.VUNP_internal_ref_bad_path.v1
+archetype (adl_version=1.5.1)
+	openEHR-TEST_PKG-CAR.VUNP_internal_ref_bad_path.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,63 +8,90 @@ description
 	original_author = <
 		["name"] = <"Thomas Beale">
 	>
-	lifecycle_state = <"draft">
 	details = <
 		["en"] = <
-			language = <"en">
+			language = <[ISO_639-1::en]>
 			purpose = <"Test VUNP validity check, triggered by incorrect path in internal reference">
 			keywords = <"ADL", "test">
 			copyright = <"copyright (c) 2004 The openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"unstable">
 	other_details = <
 		["regression"] = <"VUNP">
 	>
 
 definition
-	CAR [at0000] matches {  
+	CAR[id1] matches {	-- car
 		wheels matches {
-			WHEEL[at0001] matches {
+			WHEEL[id2] matches {	-- front left hand wheel
 				description matches {"front left hand wheel"}
 				parts matches {
-					RIM[at0002] matches {
+					RIM[id3] matches {	-- wheel part
 						nuts matches {|>=4|}
 						hubcap matches {/metal|plastic/}
 					}
 				}
 			}
-			WHEEL[at0003] matches {
+			WHEEL[id4] matches {	-- front right hand wheel
 				description matches {"front right hand wheel"}
 				parts matches {
-					use_node RIM /wheels[at0001]/parts[at0002] -- will pass
+					use_node RIM[id10] /wheels[id2]/parts[id3]	-- /wheels[front left hand wheel]/parts[wheel part]
 				}
 			}
-			WHEEL[at0004] matches {
+			WHEEL[id5] matches {	-- rear left hand wheel
 				description matches {"rear left hand wheel"}
 				parts matches {
-					use_node RIM /wheels[at0001]/parts[at0002]	-- will pass
+					use_node RIM[id11] /wheels[id2]/parts[id3]	-- /wheels[front left hand wheel]/parts[wheel part]
 				}
 			}
-			WHEEL[at0005] matches {
+			WHEEL[id6] matches {	-- rear right hand wheel
 				description matches {"rear right hand wheel"}
 				parts matches {
-					use_node RIM /engine[at0001]/parts[at0002] -- will fail
+					use_node RIM[id12] /engine[id2]/parts[id3]	-- /engine[front left hand wheel]/parts[wheel part]
 				}
 			}
 		}
 	}
 
-
-ontology 
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <text = <"car">; 				description = <"car">>
-				["at0001"] = <text = <"front left hand wheel">; 	description = <"front left hand wheel">>
-				["at0002"] = <text = <"wheel part">; 			description = <"wheel part">>
-				["at0003"] = <text = <"front right hand wheel">; 	description = <"front right hand wheel">>
-				["at0004"] = <text = <"rear left hand wheel">; 	description = <"rear left hand wheel">>
-				["at0005"] = <text = <"rear right hand wheel">; 	description = <"rear right hand wheel">>
+			["id1"] = <
+				text = <"car">
+				description = <"car">
+			>
+			["id2"] = <
+				text = <"front left hand wheel">
+				description = <"front left hand wheel">
+			>
+			["id3"] = <
+				text = <"wheel part">
+				description = <"wheel part">
+			>
+			["id4"] = <
+				text = <"front right hand wheel">
+				description = <"front right hand wheel">
+			>
+			["id5"] = <
+				text = <"rear left hand wheel">
+				description = <"rear left hand wheel">
+			>
+			["id6"] = <
+				text = <"rear right hand wheel">
+				description = <"rear right hand wheel">
+			>
+			["id10"] = <
+				text = <"ref to wheel part">
+				description = <"ref to wheel part">
+			>
+			["id11"] = <
+				text = <"ref to wheel part">
+				description = <"ref to wheel part">
+			>
+			["id12"] = <
+				text = <"ref to wheel part">
+				description = <"ref to wheel part">
 			>
 		>
 	>

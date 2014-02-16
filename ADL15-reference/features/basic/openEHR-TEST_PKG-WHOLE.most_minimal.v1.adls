@@ -1,28 +1,27 @@
-archetype (adl_version=1.5)
-	openehr-TEST_PKG-WHOLE.most_minimal.v1
+archetype (adl_version=1.5.1)
+	openehr-TEST_PKG-WHOLE.most_minimal.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"unknown">
 	>
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	lifecycle_state = <>
 
 definition
-	WHOLE[at0000] matches {*}
+	WHOLE[id1] 	-- most minimal
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"most minimal">
-					text = <"most minimal">
-				>
+			["id1"] = <
+				text = <"most minimal">
+				description = <"most minimal">
 			>
 		>
 	>

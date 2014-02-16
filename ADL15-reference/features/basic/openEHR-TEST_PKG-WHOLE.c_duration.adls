@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openehr-TEST_PKG-WHOLE.c_duration.v1
+archetype (adl_version=1.5.1)
+	openehr-TEST_PKG-WHOLE.c_duration.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -16,26 +16,23 @@ description
 			copyright = <"copyright (c) 2004 The openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"unstable">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	lifecycle_state = <"draft">
 
 definition
-	WHOLE[at0000] matches {	-- test entry
-		duration_attr1 matches {|PT0S|}
-		duration_attr2 matches {PWD/|PT0S|}
+	WHOLE[id1] matches {	-- test entry
+		duration_attr1 matches {PT0S}
+		duration_attr2 matches {PWD/PT0S}
 	}
 
-ontology
-	terminologies_available = <"adl_test", ...>
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"test entry">
-					text = <"test entry">
-				>
+			["id1"] = <
+				text = <"test entry">
+				description = <"test entry">
 			>
 		>
 	>

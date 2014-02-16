@@ -1,8 +1,9 @@
-archetype (adl_version=1.5)
-	openEHR-TEST_PKG-ENTRY.VOTM_terminology_term_definitions_empty.v1
+archetype (adl_version=1.5.1)
+	openEHR-TEST_PKG-ENTRY.VOTM_terminology_term_definitions_empty.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"Peter Gummer">
@@ -15,14 +16,14 @@ description
 			copyright = <"copyright (c) 2008 The openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"unstable">
 	other_details = <
 		["regression"] = <"VOTM">
 	>
-	lifecycle_state = <"draft">
 
 definition
-	ENTRY[at0000] matches {*}
+	ENTRY[id1] 
 
-ontology
-	term_definitions = <
-	>
+terminology
+    term_definitions = <
+    >
