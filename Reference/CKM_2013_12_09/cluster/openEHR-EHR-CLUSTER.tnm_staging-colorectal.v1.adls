@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.tnm_staging-colorectal.v1.0.0
 
 specialize
-	openEHR-EHR-CLUSTER.tnm_staging.v1.0.0
+	openEHR-EHR-CLUSTER.tnm_staging.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -38,112 +38,50 @@ Available from: http://www.cancerstaging.org/education/tnmschema/tnmschema.html
 	>
 
 definition
-	CLUSTER[at0000.1] matches {	-- TNM staging - Colorectal cancer (Sixth edition)
-		/items[at0002]/items[at0003]/value matches {
-			DV_CODED_TEXT[id0.93] matches {
-				defining_code matches {
-					[local::
-					at0.43, 	-- TX
-					at0.44, 	-- T0
-					at0.45, 	-- Tis
-					at0.46, 	-- T1
-					at0.47, 	-- T2
-					at0.48, 	-- T3
-					at0.49]	-- T4
-				}
+	CLUSTER[id1.1] matches {	-- TNM staging - Colorectal cancer (Sixth edition)
+		/items[id3]/items[id4]/value matches {
+			DV_CODED_TEXT[id0.52] matches {
+				defining_code matches {[ac0.1]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0002]/items[at0004]/value matches {
-			DV_CODED_TEXT[id0.493] matches {
-				defining_code matches {
-					[local::
-					at0.50, 	-- NX
-					at0.51, 	-- N0
-					at0.52, 	-- N1
-					at0.53]	-- N2
-				}
+		/items[id3]/items[id5]/value matches {
+			DV_CODED_TEXT[id0.53] matches {
+				defining_code matches {[ac0.2]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0002]/items[at0005]/value matches {
-			DV_CODED_TEXT[id0.893] matches {
-				defining_code matches {
-					[local::
-					at0.54, 	-- MX
-					at0.55, 	-- M0
-					at0.56]	-- M1
-				}
+		/items[id3]/items[id6]/value matches {
+			DV_CODED_TEXT[id0.54] matches {
+				defining_code matches {[ac0.3]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0002]/items[at0014]/value matches {
-			DV_CODED_TEXT[id0.894] matches {
-				defining_code matches {
-					[local::
-					at0.35, 	-- Stage 0
-					at0.36, 	-- Stage I
-					at0.37, 	-- Stage IIA
-					at0.38, 	-- Stage IIB
-					at0.39, 	-- Stage IIIA
-					at0.40, 	-- Stage IIIB
-					at0.41, 	-- Stage IIIC
-					at0.42]	-- Stage IV
-				}
+		/items[id3]/items[id15]/value matches {
+			DV_CODED_TEXT[id0.57] matches {
+				defining_code matches {[ac0.5]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0006]/items[at0007]/value matches {
-			DV_CODED_TEXT[id0.373] matches {
-				defining_code matches {
-					[local::
-					at0.20, 	-- pTX
-					at0.21, 	-- pT0
-					at0.22, 	-- pTis - no invasion
-					at0.23, 	-- pTis - invasion
-					at0.24, 	-- pT1
-					at0.25, 	-- pT2
-					at0.26, 	-- pT3
-					at0.27, 	-- pT4a
-					at0.28]	-- pT4b
-				}
+		/items[id7]/items[id8]/value matches {
+			DV_CODED_TEXT[id0.59] matches {
+				defining_code matches {[ac0.6]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0006]/items[at0008]/value matches {
-			DV_CODED_TEXT[id0.773] matches {
-				defining_code matches {
-					[local::
-					at0.29, 	-- pNX
-					at0.30, 	-- pT0
-					at0.31, 	-- pN1
-					at0.32]	-- pN2
-				}
+		/items[id7]/items[id9]/value matches {
+			DV_CODED_TEXT[id0.60] matches {
+				defining_code matches {[ac0.7]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0006]/items[at0009]/value matches {
-			DV_CODED_TEXT[id0.173] matches {
-				defining_code matches {
-					[local::
-					at0.33, 	-- pMX
-					at0.34, 	-- pM0
-					at0.57]	-- pM1
-				}
+		/items[id7]/items[id10]/value matches {
+			DV_CODED_TEXT[id0.61] matches {
+				defining_code matches {[ac0.8]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0006]/items[at0015]/value matches {
-			DV_CODED_TEXT[id0.973] matches {
-				defining_code matches {
-					[local::
-					at0.35, 	-- Stage 0
-					at0.36, 	-- Stage I
-					at0.37, 	-- Stage IIA
-					at0.38, 	-- Stage IIB
-					at0.39, 	-- Stage IIIA
-					at0.40, 	-- Stage IIIB
-					at0.41, 	-- Stage IIIC
-					at0.42]	-- Stage IV
-				}
+		/items[id7]/items[id16]/value matches {
+			DV_CODED_TEXT[id0.65] matches {
+				defining_code matches {[ac0.11]}		-- (added by post-parse processor)
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
 			["at0.20"] = <
@@ -298,9 +236,99 @@ ontology
 				text = <"pM1">
 				description = <"*">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"TNM staging - Colorectal cancer (Sixth edition)">
 				description = <"TNM staging classification for colorectal cancer (Sixth edition).">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.2"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.3"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.4"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.5"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.6"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.7"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.8"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.9"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.10"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.11"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.10"] = <
+			id = <"ac0.10">
+			members = <"at39", "at40", "at41", "at42", "at43">
+		>
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at0.43", "at0.44", "at0.45", "at0.46", "at0.47", "at0.48", "at0.49">
+		>
+		["ac0.2"] = <
+			id = <"ac0.2">
+			members = <"at0.50", "at0.51", "at0.52", "at0.53">
+		>
+		["ac0.3"] = <
+			id = <"ac0.3">
+			members = <"at0.54", "at0.55", "at0.56">
+		>
+		["ac0.4"] = <
+			id = <"ac0.4">
+			members = <"at27", "at28", "at29", "at30">
+		>
+		["ac0.5"] = <
+			id = <"ac0.5">
+			members = <"at0.35", "at0.36", "at0.37", "at0.38", "at0.39", "at0.40", "at0.41", "at0.42">
+		>
+		["ac0.6"] = <
+			id = <"ac0.6">
+			members = <"at0.20", "at0.21", "at0.22", "at0.23", "at0.24", "at0.25", "at0.26", "at0.27", "at0.28">
+		>
+		["ac0.7"] = <
+			id = <"ac0.7">
+			members = <"at0.29", "at0.30", "at0.31", "at0.32">
+		>
+		["ac0.8"] = <
+			id = <"ac0.8">
+			members = <"at0.33", "at0.34", "at0.57">
+		>
+		["ac0.9"] = <
+			id = <"ac0.9">
+			members = <"at32", "at33", "at34", "at35">
+		>
+		["ac0.11"] = <
+			id = <"ac0.11">
+			members = <"at0.35", "at0.36", "at0.37", "at0.38", "at0.39", "at0.40", "at0.41", "at0.42">
 		>
 	>

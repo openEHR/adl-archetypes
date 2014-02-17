@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.distraction_hearing_test.v1.0.0
 
 language
@@ -23,92 +23,70 @@ description
 	lifecycle_state = <"initial">
 
 definition
-	OBSERVATION[at0000] matches {	-- Distraction Hearing Test
+	OBSERVATION[id1] matches {	-- Distraction Hearing Test
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Side
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Side
 										value matches {
-											DV_CODED_TEXT[id0053] matches {
-												defining_code matches {
-													[local::
-													at0005, 	-- Left
-													at0006]	-- Right
-												}
+											DV_CODED_TEXT[id27] matches {
+												defining_code matches {[ac1]}		-- Side
 											}
 										}
 									}
-									CLUSTER[at0018] occurrences matches {0..1} matches {	-- Details
+									CLUSTER[id19] occurrences matches {0..1} matches {	-- Details
 										items matches {
-											ELEMENT[at0007] occurrences matches {0..1} matches {	-- Stimulus
+											ELEMENT[id8] occurrences matches {0..1} matches {	-- Stimulus
 												value matches {
-													DV_CODED_TEXT[id0245] matches {
-														defining_code matches {
-															[local::
-															at0012, 	-- High frequency rattle
-															at0013, 	-- Hum (vocal)
-															at0014, 	-- Sibilant 's' (vocal)
-															at0015, 	-- 'G' Chime bar
-															at0016]	-- 'C' Chime bar
-														}
+													DV_CODED_TEXT[id28] matches {
+														defining_code matches {[ac2]}		-- Stimulus
 													}
 												}
 											}
-											ELEMENT[at0017] occurrences matches {0..1} matches {	-- Frequency
+											ELEMENT[id18] occurrences matches {0..1} matches {	-- Frequency
 												value matches {
-													DV_QUANTITY[id0645] matches {
-														property matches {[openehr::382]}
+													DV_QUANTITY[id29] matches {
+														property matches {[at24]}
 														units matches {"Hz", "kHz"}
 													}
 												}
 											}
-											ELEMENT[at0020] occurrences matches {0..1} matches {	-- Hearing Threshold
+											ELEMENT[id21] occurrences matches {0..1} matches {	-- Hearing Threshold
 												value matches {
-													DV_QUANTITY[id0246] matches {
-														property matches {[openehr::123]}
+													DV_QUANTITY[id30] matches {
+														property matches {[at25]}
 														units matches {"dB"}
 													}
 												}
 											}
-											ELEMENT[at0019] occurrences matches {0..1} matches {	-- Response
+											ELEMENT[id20] occurrences matches {0..1} matches {	-- Response
 												value matches {
-													DV_CODED_TEXT[id0445] matches {
-														defining_code matches {
-															[local::
-															at0021, 	-- Positive
-															at0022]	-- Negative
-														}
+													DV_CODED_TEXT[id31] matches {
+														defining_code matches {[ac3]}		-- Response
 													}
 												}
 											}
-											ELEMENT[at0024] occurrences matches {0..1} matches {	-- Image
+											ELEMENT[id25] occurrences matches {0..1} matches {	-- Image
 												value matches {
-													DV_MULTIMEDIA[id0845] matches {
-														media_type matches {
-															[openEHR::
-															425, 
-															426, 
-															427, 
-															428, 
-															429]
-														}
+													DV_MULTIMEDIA[id32] matches {
+														media_type matches {[ac4]}		-- Image
 													}
 												}
 											}
 										}
 									}
-									ELEMENT[at0025] occurrences matches {0..1} matches {	-- Reliability
+									ELEMENT[id26] occurrences matches {0..1} matches {	-- Reliability
 										value matches {
-											DV_TEXT[id0253] matches {*}
+											DV_TEXT[id33] 
 										}
 									}
-									ELEMENT[at0023] occurrences matches {0..1} matches {	-- Comment
+									ELEMENT[id24] occurrences matches {0..1} matches {	-- Comment
 										value matches {
-											DV_TEXT[id0453] matches {*}
+											DV_TEXT[id34] 
 										}
 									}
 								}
@@ -120,96 +98,161 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Distraction Hearing Test">
 				description = <"A paediatric behavioural test, for assessing hearing thresholds of patients with developmental age between seven months and 18 months of age">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"*">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Side">
 				description = <"Side being tested">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Left">
 				description = <"*">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Right">
 				description = <"*">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Stimulus">
 				description = <"Nature of stimulus sound">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"High frequency rattle">
 				description = <"*">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Hum (vocal)">
 				description = <"*">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Sibilant 's' (vocal)">
 				description = <"*">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"'G' Chime bar">
 				description = <"*">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"'C' Chime bar">
 				description = <"*">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Frequency">
 				description = <"Record frequency of stimulus presented">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Details">
 				description = <"Details of the distraction hearing test">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Response">
 				description = <"Consistent response of infant to stimulus">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"Hearing Threshold">
 				description = <"Record of hearing threshold in dB">
 			>
-			["at0021"] = <
+			["at22"] = <
 				text = <"Positive">
 				description = <"*">
 			>
-			["at0022"] = <
+			["at23"] = <
 				text = <"Negative">
 				description = <"*">
 			>
-			["at0023"] = <
+			["id24"] = <
 				text = <"Comment">
 				description = <"Comment on test">
 			>
-			["at0024"] = <
+			["id25"] = <
 				text = <"Image">
 				description = <"Image of test result">
 			>
-			["at0025"] = <
+			["id26"] = <
 				text = <"Reliability">
 				description = <"Estimation of the reliability of the test result - indicated by behaviour of child eg cooperative etc.">
 			>
+			["ac1"] = <
+				text = <"Side">
+				description = <"Side being tested">
+			>
+			["ac2"] = <
+				text = <"Stimulus">
+				description = <"Nature of stimulus sound">
+			>
+			["ac3"] = <
+				text = <"Response">
+				description = <"Consistent response of infant to stimulus">
+			>
+			["ac4"] = <
+				text = <"Image">
+				description = <"Image of test result">
+			>
+			["at24"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["at25"] = <
+				text = <"Loudness">
+				description = <"Loudness">
+			>
+			["at26"] = <
+				text = <"image/cgm">
+				description = <"image/cgm">
+			>
+			["at27"] = <
+				text = <"image/gif">
+				description = <"image/gif">
+			>
+			["at28"] = <
+				text = <"image/png">
+				description = <"image/png">
+			>
+			["at29"] = <
+				text = <"image/tiff">
+				description = <"image/tiff">
+			>
+			["at30"] = <
+				text = <"image/jpeg">
+				description = <"image/jpeg">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at24"] = <http://openehr.org/id/382>
+			["at25"] = <http://openehr.org/id/123>
+			["at26"] = <http://openehr.org/id/425>
+			["at27"] = <http://openehr.org/id/426>
+			["at28"] = <http://openehr.org/id/427>
+			["at29"] = <http://openehr.org/id/428>
+			["at30"] = <http://openehr.org/id/429>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at6", "at7">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at13", "at14", "at15", "at16", "at17">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at22", "at23">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at26", "at27", "at28", "at29", "at30">
 		>
 	>

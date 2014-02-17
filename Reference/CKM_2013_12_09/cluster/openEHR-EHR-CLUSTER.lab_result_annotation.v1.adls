@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.lab_result_annotation.v1.0.0
 
 language
@@ -35,138 +35,142 @@ IHE. IHE, Laboratory Technical Framework, Volume 3 Content [Internet]. 2008;Avai
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Laboratory result annotation
+	CLUSTER[id1] matches {	-- Laboratory result annotation
 		items matches {
-			ELEMENT[at0007] occurrences matches {0..1} matches {	-- Result name
+			ELEMENT[id8] occurrences matches {0..1} matches {	-- Result name
 				value matches {
-					DV_TEXT[id0605] matches {*}
+					DV_TEXT[id19] 
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Result comment
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Result comment
 				value matches {
-					DV_TEXT[id0606] matches {*}
+					DV_TEXT[id20] 
 				}
 			}
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Unexpected result indicator
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Unexpected result indicator
 				value matches {
-					DV_TEXT[id0205] matches {*}
+					DV_TEXT[id21] 
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Testing method
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Testing method
 				value matches {
-					DV_TEXT[id0005] matches {*}
+					DV_TEXT[id22] 
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Result status
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Result status
 				value matches {
-					DV_CODED_TEXT[id0405] matches {
-						defining_code matches {
-							[local::
-							at0008, 	-- Interim
-							at0009, 	-- Final
-							at0010, 	-- Supplementary
-							at0011, 	-- Corrected (amended)
-							at0012, 	-- Aborted
-							at0013]	-- Never performed
-						}
+					DV_CODED_TEXT[id23] matches {
+						defining_code matches {[ac1]}		-- Result status
 					}
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Reference range guidance
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Reference range guidance
 				value matches {
-					DV_TEXT[id0805] matches {*}
+					DV_TEXT[id24] 
 				}
 			}
-			allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {	-- Specimen detail 
+			allow_archetype CLUSTER[id7] occurrences matches {0..*} matches {	-- Specimen detail 
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
 			}
-			ELEMENT[at0015] occurrences matches {0..1} matches {	-- Laboratory result identifier
+			ELEMENT[id16] occurrences matches {0..1} matches {	-- Laboratory result identifier
 				value matches {
-					DV_TEXT[id0206] matches {*}
+					DV_TEXT[id25] 
 				}
 			}
-			allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {	-- Laboratory details
+			allow_archetype CLUSTER[id15] occurrences matches {0..*} matches {	-- Laboratory details
+				include
+					archetype_id/value matches {/.*/}
 			}
-			ELEMENT[at0017] occurrences matches {0..1} matches {	-- Link to original lab test
+			ELEMENT[id18] occurrences matches {0..1} matches {	-- Link to original lab test
 				value matches {
-					DV_EHR_URI[id0006] matches {*}
+					DV_EHR_URI[id26] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Laboratory result annotation">
 				description = <"To record comments and other per-node annotations within a lab_test archetype.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Unexpected result indicator">
 				description = <"Indicates the degree of diagnostic significance associated with a pathology test result based on all the available clinical information.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Result comment">
 				description = <"A comment on an individual lab result.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Testing method">
 				description = <"Description of the method use for an individual result">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Result status">
 				description = <"The status of an individual lab result.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Reference range guidance">
 				description = <"Further advice on the applicability of the reference range.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Specimen detail ">
 				description = <"Details of  the specimen for a particular reb result.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Result name">
 				description = <"Name of the result to which this annotation refers. This will often be coded with a reference terminology such as LOINC.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Interim">
 				description = <"This is an initial or interim result - further updates are anticipated.">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"Final">
 				description = <"This is the final result. No further alterations are anticipated">
 			>
-			["at0010"] = <
+			["at11"] = <
 				text = <"Supplementary">
 				description = <"This is a supplememtary result in addition to the Interim result.">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Corrected (amended)">
 				description = <"This is a Correction which should replace any previous results.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Aborted">
 				description = <"The testing/ reporting process was aborted and never completed.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Never performed">
 				description = <"The test was never performed.">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Laboratory details">
 				description = <"Demographic details of the laboratory with responsibility for the individual result. Details of secondary laboratories may also be included.">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Laboratory result identifier">
 				description = <"The identifier given to the laboratory test result of a pathology 
 investigation.">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Link to original lab test">
 				description = <"If the result was originally reported in  a separate lab test entry, link to that entry.">
 			>
+			["ac1"] = <
+				text = <"Result status">
+				description = <"The status of an individual lab result.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at9", "at10", "at11", "at12", "at13", "at14">
 		>
 	>

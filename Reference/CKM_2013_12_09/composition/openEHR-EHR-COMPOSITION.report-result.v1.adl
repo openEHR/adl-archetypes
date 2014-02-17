@@ -77,10 +77,6 @@ definition
 									DV_TEXT matches {*}
 								}
 							}
-							allow_archetype CLUSTER occurrences matches {0..*} matches {
-								include
-									archetype_id/value matches {/.*/}
-							}
 						}
 					}
 				}

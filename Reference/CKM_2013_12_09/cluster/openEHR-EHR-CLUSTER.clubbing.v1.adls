@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.clubbing.v1.0.0
 
 language
@@ -28,104 +28,114 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Clubbing
+	CLUSTER[id1] matches {	-- Clubbing
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Present
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Present
 				value matches {
-					DV_BOOLEAN[id0205] matches {
+					DV_BOOLEAN[id14] matches {
 						value matches {True, False}
 					}
 				}
 			}
-			ELEMENT[at0010] occurrences matches {0..1} matches {	-- Clinical Description
+			ELEMENT[id11] occurrences matches {0..1} matches {	-- Clinical Description
 				value matches {
-					DV_TEXT[id0206] matches {*}
+					DV_TEXT[id15] 
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Staging
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Staging
 				value matches {
-					DV_ORDINAL[id0005] matches {
+					DV_ORDINAL[id16] matches {
 						[value, symbol] matches {
-							[{1}, {[local::at0004]}],
-							[{2}, {[local::at0005]}],
-							[{3}, {[local::at0006]}],
-							[{4}, {[local::at0007]}],
-							[{5}, {[local::at0008]}],
-							[{6}, {[local::at0009]}]
+							[{1}, {[at5]}],
+							[{2}, {[at6]}],
+							[{3}, {[at7]}],
+							[{4}, {[at8]}],
+							[{5}, {[at9]}],
+							[{6}, {[at10]}]
 						}
 					}
 				}
 			}
-			CLUSTER[at0011] occurrences matches {0..1} matches {	-- Extent
+			CLUSTER[id12] occurrences matches {0..1} matches {	-- Extent
 				items matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Extent
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Extent
 						value matches {
-							DV_TEXT[id0221] matches {*}
+							DV_TEXT[id17] 
 						}
 					}
-					allow_archetype ELEMENT[at0012] occurrences matches {0..*} matches {	-- Body location
+					allow_archetype ELEMENT[id13] occurrences matches {0..*} matches {	-- Body location
 						include
-							archetype_id/value matches {/openEHR-EHR-ELEMENT\.body_location(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-ELEMENT\.body_location(-a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Clubbing">
 				description = <"Record details of clubbing of the fingers or toes.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Present">
 				description = <"Clubbing is present or absent.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Extent">
 				description = <"Description of extent of clubbing.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Staging">
 				description = <"Staging of the clubbing process.">
 			>
-			["at0004"] = <
+			["at5"] = <
 				text = <"Loss of angle">
 				description = <"Loss of normal 160° angle at base of nail.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"AP curvature increase">
 				description = <"Increase in the anterio-posterior curvature of the nail.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Bouncy, spongy nail">
 				description = <"Sponginess of the nail bed.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Drumstick shaped fingertip">
 				description = <"Thickening of the end of the digit.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Wrist pain and onion skinning">
 				description = <"Patient has wrist pain and wrist onion skinning.">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"Hypertrophic osteopathy">
 				description = <"Radiological evidence of hypertrophic osteopathy.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Clinical Description">
 				description = <"Description of clubbing.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Extent">
 				description = <"The extent of the clubbing - assumed to involve all digits to a similar extent unless specifically identified.">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Body location">
 				description = <"The body location.">
 			>
+			["ac1"] = <
+				text = <"Staging">
+				description = <"Staging of the clubbing process.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at5", "at6", "at7", "at8", "at9", "at10">
 		>
 	>

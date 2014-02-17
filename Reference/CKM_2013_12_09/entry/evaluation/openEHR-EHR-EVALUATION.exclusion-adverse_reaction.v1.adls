@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-EVALUATION.exclusion-adverse_reaction.v1.0.0
 
 specialize
-	openEHR-EHR-EVALUATION.exclusion.v1.0.0
+	openEHR-EHR-EVALUATION.exclusion.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -38,41 +38,37 @@ Exclusion statements can only be considered to be current and accurate at the ti
 	>
 
 definition
-	EVALUATION[at0000.1] matches {	-- Exclusion of an Adverse Reaction
+	EVALUATION[id1.1] matches {	-- Exclusion of an Adverse Reaction
 		data matches {
-			ITEM_TREE[at0001] matches {
+			ITEM_TREE[id2] matches {
 				items matches {
-					ELEMENT[at0002.1] 	-- Exclusion Statement
+					ELEMENT[id3.1] 	-- Exclusion Statement
 				}
 			}
 		}
-		/data[at0001]/items[at0003.1]/value matches {
-			before [id0477]
-			DV_CODED_TEXT[id0.477] matches {
+		/data[id2]/items[id4.1]/value matches {
+			before [id10]
+			DV_CODED_TEXT[id0.14] matches {
 				defining_code matches {[ac0.1]}		-- Substances or Agents
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Exclusion of an Adverse Reaction">
 				description = <"Positive statement/s about adverse reactions that need to be recorded as clinically excluded from the health record at a specific point in time.">
 			>
-			["at0002.1"] = <
+			["id3.1"] = <
 				text = <"Exclusion Statement">
 				description = <"A statement about exclusion of known adverse reactions in the health record.">
 			>
-			["at0003.1"] = <
+			["id4.1"] = <
 				text = <"Substance/Agent">
 				description = <"Identification of the specific substance or agent to which the Exclusion Statement applies.">
 			>
-		>
-	>
-	constraint_definitions = <
-		["en"] = <
 			["ac0.1"] = <
 				text = <"Substances or Agents">
 				description = <"All substances or agents that may be responsible for an adverse reaction.">

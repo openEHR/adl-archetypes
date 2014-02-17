@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.pathology_test.v1.0.0
 
 language
@@ -66,125 +66,101 @@ Based on NEHTA 'Pathology Test' archetype. Available from: http://dcm.nehta.org.
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Pathology Test Result
+	OBSERVATION[id1] matches {	-- Pathology Test Result
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..*} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items cardinality matches {2..*; unordered} matches {
-									ELEMENT[at0005] matches {	-- Test Result Name
+									ELEMENT[id6] matches {	-- Test Result Name
 										value matches {
-											DV_TEXT[id0453] matches {*}
+											DV_TEXT[id112] 
 										}
 									}
-									ELEMENT[at0077] occurrences matches {0..1} matches {	-- Diagnostic Service
+									ELEMENT[id78] occurrences matches {0..1} matches {	-- Diagnostic Service
 										value matches {
-											DV_TEXT[id0053] matches {*}
+											DV_TEXT[id113] 
 										}
 									}
-									allow_archetype CLUSTER[at0065] occurrences matches {0..*} matches {	-- Specimen Detail
+									allow_archetype CLUSTER[id66] occurrences matches {0..*} matches {	-- Specimen Detail
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-[a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
 									}
-									ELEMENT[at0073] matches {	-- Overall Test Result Status
+									ELEMENT[id74] matches {	-- Overall Test Result Status
 										value matches {
-											DV_CODED_TEXT[id0454] matches {
-												defining_code matches {
-													[local::
-													at0107, 	-- Registered
-													at0037, 	-- Interim
-													at0038, 	-- Final
-													at0040, 	-- Amended
-													at0074]	-- Cancelled/Aborted
-												}
+											DV_CODED_TEXT[id114] matches {
+												defining_code matches {[ac1]}		-- Overall Test Result Status
 											}
 										}
 									}
-									ELEMENT[at0075] occurrences matches {0..1} matches {	-- DateTime Result Issued
+									ELEMENT[id76] occurrences matches {0..1} matches {	-- DateTime Result Issued
 										value matches {
-											DV_DATE_TIME[id0253] matches {*}
+											DV_DATE_TIME[id115] 
 										}
 									}
-									ELEMENT[at0100] occurrences matches {0..1} matches {	-- Clinical Information Provided
+									ELEMENT[id101] occurrences matches {0..1} matches {	-- Clinical Information Provided
 										value matches {
-											DV_TEXT[id0197] matches {*}
+											DV_TEXT[id116] 
 										}
 									}
-									CLUSTER[at0095] occurrences matches {0..*} matches {	-- Result Group
+									CLUSTER[id96] occurrences matches {0..*} matches {	-- Result Group
 										name matches {
-											DV_TEXT[id0317] matches {*}
+											DV_TEXT[id117] 
 										}
 										items matches {
-											CLUSTER[at0096] occurrences matches {0..*} matches {	-- Result
+											CLUSTER[id97] occurrences matches {0..*} matches {	-- Result
 												name matches {
-													DV_TEXT[id0141] matches {*}
+													DV_TEXT[id118] 
 												}
 												items matches {
-													ELEMENT[at0078] occurrences matches {0..1} matches {*}	-- Result Value
-													ELEMENT[at0102] occurrences matches {0..*} matches {	-- Result Comment
+													ELEMENT[id79] occurrences matches {0..1} 	-- Result Value
+													ELEMENT[id103] occurrences matches {0..*} matches {	-- Result Comment
 														value matches {
-															DV_TEXT[id0445] matches {*}
+															DV_TEXT[id119] 
 														}
 													}
-													ELEMENT[at0103] occurrences matches {0..1} matches {	-- Reference Range Guidance
+													ELEMENT[id104] occurrences matches {0..1} matches {	-- Reference Range Guidance
 														value matches {
-															DV_TEXT[id0845] matches {*}
+															DV_TEXT[id120] 
 														}
 													}
-													ELEMENT[at0108] occurrences matches {0..1} matches {	-- Result Value Status
+													ELEMENT[id109] occurrences matches {0..1} matches {	-- Result Value Status
 														value matches {
-															DV_CODED_TEXT[id0846] matches {
-																defining_code matches {
-																	[local::
-																	at0107, 	-- Registered
-																	at0037, 	-- Interim
-																	at0038, 	-- Final
-																	at0040, 	-- Amended
-																	at0074]	-- Cancelled/Aborted
-																}
+															DV_CODED_TEXT[id121] matches {
+																defining_code matches {[ac2]}		-- Result Value Status
 															}
 														}
 													}
 												}
 											}
-											allow_archetype CLUSTER[at0097] occurrences matches {0..1} matches {	-- Specimen Detail
+											allow_archetype CLUSTER[id98] occurrences matches {0..1} matches {	-- Specimen Detail
 												include
-													archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-[a-zA-Z0-9_]+)*\.v1/}
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
 											}
 										}
 									}
-									ELEMENT[at0057] occurrences matches {0..1} matches {	-- Conclusion
+									ELEMENT[id58] occurrences matches {0..1} matches {	-- Conclusion
 										value matches {
-											DV_TEXT[id0254] matches {*}
+											DV_TEXT[id122] 
 										}
 									}
-									ELEMENT[at0098] occurrences matches {0..*} matches {	-- Pathological Diagnosis
+									ELEMENT[id99] occurrences matches {0..*} matches {	-- Pathological Diagnosis
 										value matches {
-											DV_TEXT[id0255] matches {*}
+											DV_TEXT[id123] 
 										}
 									}
-									ELEMENT[at0010] occurrences matches {0..*} matches {	-- Test Result Representation
+									ELEMENT[id11] occurrences matches {0..*} matches {	-- Test Result Representation
 										value matches {
-											DV_MULTIMEDIA[id0853] matches {
-												media_type matches {
-													[openEHR::
-													417, 
-													418, 
-													419, 
-													517, 
-													518, 
-													519, 
-													682, 
-													683]
-												}
+											DV_MULTIMEDIA[id124] matches {
+												media_type matches {[ac3]}		-- Test Result Representation
 											}
 										}
 									}
-									ELEMENT[at0101] occurrences matches {0..1} matches {	-- Test Comment
+									ELEMENT[id102] occurrences matches {0..1} matches {	-- Test Comment
 										value matches {
-											DV_TEXT[id0597] matches {*}
+											DV_TEXT[id125] 
 										}
 									}
 								}
@@ -195,338 +171,436 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0004] matches {	-- Tree
+			ITEM_TREE[id5] matches {
 				items matches {
-					allow_archetype CLUSTER[at0017] occurrences matches {0..1} matches {	-- Receiving Laboratory
+					allow_archetype CLUSTER[id18] occurrences matches {0..1} matches {	-- Receiving Laboratory
+						include
+							archetype_id/value matches {/.*/}
 					}
-					CLUSTER[at0094] occurrences matches {0..*} matches {	-- Test Request Details
+					CLUSTER[id95] occurrences matches {0..*} matches {	-- Test Request Details
 						items matches {
-							ELEMENT[at0062] occurrences matches {0..1} matches {	-- Requester Order Identifier
+							ELEMENT[id63] occurrences matches {0..1} matches {	-- Requester Order Identifier
 								value matches {
-									DV_IDENTIFIER[id0189] matches {*}
+									DV_IDENTIFIER[id126] 
 								}
 							}
-							ELEMENT[at0106] occurrences matches {0..*} matches {	-- Test Requested Name
+							ELEMENT[id107] occurrences matches {0..*} matches {	-- Test Requested Name
 								value matches {
-									DV_TEXT[id0133] matches {*}
+									DV_TEXT[id127] 
 								}
 							}
-							allow_archetype CLUSTER[at0090] occurrences matches {0..1} matches {	-- Requester
+							allow_archetype CLUSTER[id91] occurrences matches {0..1} matches {	-- Requester
+								include
+									archetype_id/value matches {/.*/}
 							}
-							allow_archetype CLUSTER[at0035] occurrences matches {0..*} matches {	-- Copied Provider
+							allow_archetype CLUSTER[id36] occurrences matches {0..*} matches {	-- Copied Provider
+								include
+									archetype_id/value matches {/.*/}
 							}
-							ELEMENT[at0063] occurrences matches {0..1} matches {	-- Receiver Order Identifier
+							ELEMENT[id64] occurrences matches {0..1} matches {	-- Receiver Order Identifier
 								value matches {
-									DV_IDENTIFIER[id0589] matches {*}
+									DV_IDENTIFIER[id128] 
 								}
 							}
-							ELEMENT[at0068] occurrences matches {0..1} matches {	-- Laboratory Test Result Identifier
+							ELEMENT[id69] occurrences matches {0..1} matches {	-- Laboratory Test Result Identifier
 								value matches {
-									DV_IDENTIFIER[id0590] matches {*}
+									DV_IDENTIFIER[id129] 
 								}
 							}
 						}
 					}
-					allow_archetype CLUSTER[at0110] occurrences matches {0..*} matches {	-- Test Procedure
+					allow_archetype CLUSTER[id111] occurrences matches {0..*} matches {	-- Test Procedure
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Pathology Test Result">
 				description = <"The findings and interpretation of pathology tests performed on patient-related specimens.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Any event.">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Test Result Name">
 				description = <"Identification of the pathology test performed, sometimes including specimen type and patient state.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Test Result Representation">
 				description = <"Rich text representation of the entire result as issued by the diagnostic service.">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Receiving Laboratory">
 				description = <"Demographic details of the laboratory with responsibility for the pathology test.">
 			>
-			["at0035"] = <
+			["id36"] = <
 				text = <"Copied Provider">
 				description = <"Details of the clinician or organisation who will receive a copy of the pathology test result.">
 			>
-			["at0037"] = <
+			["at38"] = <
 				text = <"Interim">
 				description = <"This is an initial or interim result: data may be missing or verification not been performed.">
 			>
-			["at0038"] = <
+			["at39"] = <
 				text = <"Final">
 				description = <"The result is complete and verified by the responsible pathologist.">
 			>
-			["at0040"] = <
+			["at41"] = <
 				text = <"Amended">
 				description = <"The result has been modified subsequent to being Final, and is complete and verified by the responsible pathologist.">
 			>
-			["at0057"] = <
+			["id58"] = <
 				text = <"Conclusion">
 				description = <"Concise and clinically contextualised narrative interpretation of the pathology test results.">
 			>
-			["at0062"] = <
+			["id63"] = <
 				text = <"Requester Order Identifier">
 				description = <"The local ID assigned to the order by the order requester.">
 			>
-			["at0063"] = <
+			["id64"] = <
 				text = <"Receiver Order Identifier">
 				description = <"The local ID assigned to the test order by the order filler, usually by the Laboratory Information System (LIS).">
 			>
-			["at0065"] = <
+			["id66"] = <
 				text = <"Specimen Detail">
 				description = <"Details about the specimen if all individual test results are derived from the same specimen. If the specimen type is sufficiently specified with a code in the Test result name, then this additional data is not required.  If there are multiple specimens, these may be represented per 'Result group'.">
 			>
-			["at0068"] = <
+			["id69"] = <
 				text = <"Laboratory Test Result Identifier">
 				description = <"The identifier given to the laboratory test result of a pathology investigation.">
 			>
-			["at0073"] = <
+			["id74"] = <
 				text = <"Overall Test Result Status">
 				description = <"The publication status of the entire pathology test result.">
 			>
-			["at0074"] = <
+			["at75"] = <
 				text = <"Cancelled/Aborted">
 				description = <"The result is unavailable because the test was not started or not completed.">
 			>
-			["at0075"] = <
+			["id76"] = <
 				text = <"DateTime Result Issued">
 				description = <"The date and/or time that the entire result was issued for the recorded ‘Overall Test result status’.">
 			>
-			["at0077"] = <
+			["id78"] = <
 				text = <"Diagnostic Service">
 				description = <"The diagnostic service that performs the examination.">
 			>
-			["at0078"] = <
+			["id79"] = <
 				text = <"Result Value">
 				description = <"Actual value of the result.">
 			>
-			["at0090"] = <
+			["id91"] = <
 				text = <"Requester">
 				description = <"Details of the clinician or organisation requesting the pathology test result.">
 			>
-			["at0094"] = <
+			["id95"] = <
 				text = <"Test Request Details">
 				description = <"Details concerning a single pathology test requested.">
 			>
-			["at0095"] = <
+			["id96"] = <
 				text = <"Result Group">
 				description = <"A group of results.">
 			>
-			["at0096"] = <
+			["id97"] = <
 				text = <"Result">
 				description = <"Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation.">
 			>
-			["at0097"] = <
+			["id98"] = <
 				text = <"Specimen Detail">
 				description = <"Details about the individual specimen to which these ‘Result group’ test results refer, where testing of multiple specimens is required.">
 			>
-			["at0098"] = <
+			["id99"] = <
 				text = <"Pathological Diagnosis">
 				description = <"Single word, phrase or brief description representing the narrative in the 'Conclusion'.">
 			>
-			["at0100"] = <
+			["id101"] = <
 				text = <"Clinical Information Provided">
 				description = <"Description of clinical information available at the time of interpretation of results, which may include a link to the original clinical information provided in the test request.">
 			>
-			["at0101"] = <
+			["id102"] = <
 				text = <"Test Comment">
 				description = <"Additional narrative about the test not captured in other fields.">
 			>
-			["at0102"] = <
+			["id103"] = <
 				text = <"Result Comment">
 				description = <"Comment about the Result.">
 			>
-			["at0103"] = <
+			["id104"] = <
 				text = <"Reference Range Guidance">
 				description = <"Additional advice on the applicability of the reference range.">
 			>
-			["at0106"] = <
+			["id107"] = <
 				text = <"Test Requested Name">
 				description = <"Identification of pathology test requested, where the test requested differs from the test actually performed.">
 			>
-			["at0107"] = <
+			["at108"] = <
 				text = <"Registered">
 				description = <"No result yet available.">
 			>
-			["at0108"] = <
+			["id109"] = <
 				text = <"Result Value Status">
 				description = <"The status of the result value.">
 			>
-			["at0110"] = <
+			["id111"] = <
 				text = <"Test Procedure">
 				description = <"Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
 			>
+			["ac1"] = <
+				text = <"Overall Test Result Status">
+				description = <"The publication status of the entire pathology test result.">
+			>
+			["ac2"] = <
+				text = <"Result Value Status">
+				description = <"The status of the result value.">
+			>
+			["ac3"] = <
+				text = <"Test Result Representation">
+				description = <"Rich text representation of the entire result as issued by the diagnostic service.">
+			>
+			["at109"] = <
+				text = <"text/html">
+				description = <"text/html">
+			>
+			["at110"] = <
+				text = <"text/plain">
+				description = <"text/plain">
+			>
+			["at111"] = <
+				text = <"text/rtf">
+				description = <"text/rtf">
+			>
+			["at112"] = <
+				text = <"application/msword">
+				description = <"application/msword">
+			>
+			["at113"] = <
+				text = <"application/pdf">
+				description = <"application/pdf">
+			>
+			["at114"] = <
+				text = <"application/rtf">
+				description = <"application/rtf">
+			>
+			["at115"] = <
+				text = <"application/vnd.oasis.opendocument.text">
+				description = <"application/vnd.oasis.opendocument.text">
+			>
+			["at116"] = <
+				text = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+				description = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+			>
 		>
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"الاختبار المعملي">
 				description = <"لتسجيل نتيجة الاختبار و التي قد تستخدم إما لتسجيل اختبار ذي قيمة واحدة كما أنه قد يتم تخصيصه أو وضعه في قالب لتمثيل الاختبارات متعددة القيمة أو رتل من الاختبارات.
 يستخدم هذا النموذج كوالد (أب) للتخصيصات المناسبة لاختبارات أكثر تحديدا مثل حالات الميكروبيولوجيا و الهيستوباثولوجيا.">
 			>
-			["at0001"] = <
-				text = <"*Event Series(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"إحدى الوقائع">
 				description = <"إحدى الوقائع">
 			>
-			["at0003"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"اسم الاختبار">
 				description = <"تعريف معين لهوية هذا الاختبار. مثل العد الدموي الشامل, الغلوكوز (سكر العنب) في الدم. قد يكون هو نفسه اسم النتيجة في الاختبارات ذات النتيجة المتكونة من قيمة وحيدة. عادة ما يكون مُصطَلحاً مُرمَزًا مثل لوينك و سنوميد-سي تي.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"تمثيل الوسائط المتعددة">
 				description = <"تمثيلات الاختبار الكلي عن طريق الوسائط المتعددة مثل: الصورة, الصوت, و الفيديو">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"المعمل المستقبل لطلب الاختبار">
 				description = <"التفاصيل الديموغرافية عن المعمل المسئول عن الاختبار. قد يتضمن معلومات عن معامل أخرى ثانوية.">
 			>
-			["at0035"] = <
+			["id36"] = <
 				text = <"*Copied Provider (en)">
 				description = <"*Details of the clinician or organisation who will receive a copy of the pathology test result. (en)">
 			>
-			["at0037"] = <
+			["at38"] = <
 				text = <"مؤقت">
 				description = <"هذه هي النتيجة المبدئية أو المؤقتة - المزيد من التحديثات للنتيجة متوقَّعة أو منتظَرة">
 			>
-			["at0038"] = <
+			["at39"] = <
 				text = <"نهائية">
 				description = <"هذه هي النتيجة النهائية. لا يوجد المزيد من التعديلات المتوقَّعة">
 			>
-			["at0040"] = <
+			["at41"] = <
 				text = <"بعد التصحيح – معدَّلة">
 				description = <"هذا هو تصحيح لابد و أن يحل محلّ أي نتائج سابقة">
 			>
-			["at0057"] = <
+			["id58"] = <
 				text = <"التفسير الإجمالي">
 				description = <"تعليق تفسيري إجمالي حول هذا الاختبار">
 			>
-			["at0062"] = <
+			["id63"] = <
 				text = <"عنصر معرِّف فريد بواسطة طالب الاختبار">
 				description = <"العنصر التعريفي الفريد الذي يتم إعطاؤه للأمر بالاختبار بواسطة من يقوم بإجراء الأمر. مكافئ للعنصر التعريفي للأمر بواسطة من يقوم بطلب إجرائه.">
 			>
-			["at0063"] = <
+			["id64"] = <
 				text = <"عنصر معرِّف فريد بواسطة مستقبل الاختبار">
 				description = <"العنصر التعريفي الذي يتم إعطاؤه للأمر بالاختبار بواسطة منفذ الاختبار, عادةً النظام المعلومات الخاص بالمعمل. يكافئ رقم الإضافة الخاص بـ دايكوم, و معرِّف أمر الاختبار ">
 			>
-			["at0065"] = <
+			["id66"] = <
 				text = <"تفاصيل العيِّنة">
 				description = <"تفاصيل العينة حيث جميع النتائج مشتقة من نفس العينة">
 			>
-			["at0068"] = <
+			["id69"] = <
 				text = <"العنصر التعريفي الخاص بنتيجة الاختبار">
 				description = <"العنصر التعريفي الذي تم إعطاؤه لنتيجة اختبار معملي خاص بالباثولوجيا – المَرَضية">
 			>
-			["at0073"] = <
+			["id74"] = <
 				text = <"حالة الاختبار">
 				description = <"حالة الاختبار المعملي ككل">
 			>
-			["at0074"] = <
+			["at75"] = <
 				text = <"مُلغاة">
 				description = <"تم إلغاء الاختبار و لم يتم استكماله بعد ذلك.">
 			>
-			["at0075"] = <
+			["id76"] = <
 				text = <"تاريخ و وقت إصدار النتيجة">
 				description = <"التاريخ و / أو الوقت الذي تم فيه إصدار النتيجة لحالة الاختبار المسجَّلة.">
 			>
-			["at0077"] = <
+			["id78"] = <
 				text = <"الخدمة التشخيصية">
 				description = <"نوع الخدمة التشخيصية - مستوى عالي من التشخيص - مثلا: الكيمياء الحيوية و الدمويات">
 			>
-			["at0078"] = <
+			["id79"] = <
 				text = <"النتيجة">
 				description = <"نتيجة الاختبار">
 			>
-			["at0090"] = <
+			["id91"] = <
 				text = <"الطالب">
 				description = <"تفاصيل حول الطبيب السريري أو المؤسسة التي تطلب الاختبار المعملي.">
 			>
-			["at0094"] = <
+			["id95"] = <
 				text = <"*Test Request Details">
 				description = <"*Details concerning a single pathology test requested.">
 			>
-			["at0095"] = <
+			["id96"] = <
 				text = <"*Result Group">
 				description = <"*A group of results.">
 			>
-			["at0096"] = <
+			["id97"] = <
 				text = <"*Result">
 				description = <"*Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation.">
 			>
-			["at0097"] = <
+			["id98"] = <
 				text = <"*Specimen Detail">
 				description = <"*Details about the individual specimen to which these ‘Result group’ test results refer, where testing of multiple specimens is required.">
 			>
-			["at0098"] = <
+			["id99"] = <
 				text = <"*Pathological Diagnosis">
 				description = <"*Single word, phrase or brief description representing the narrative in the 'Conclusion'.">
 			>
-			["at0100"] = <
+			["id101"] = <
 				text = <"*Clinical Information Provided">
 				description = <"*Description of clinical information available at the time of interpretation of results, which may include a link to the original clinical information provided in the test request.">
 			>
-			["at0101"] = <
+			["id102"] = <
 				text = <"*Test Comment">
 				description = <"*Additional narrative about the test not captured in other fields.">
 			>
-			["at0102"] = <
+			["id103"] = <
 				text = <"*Result Comment">
 				description = <"*Comment about the Result.">
 			>
-			["at0103"] = <
+			["id104"] = <
 				text = <"*Reference Range Guidance">
 				description = <"*Additional advice on the applicability of the reference range.">
 			>
-			["at0106"] = <
+			["id107"] = <
 				text = <"*Test Requested Name">
 				description = <"*Identification of pathology test requested, where the test requested differs from the test actually performed.">
 			>
-			["at0107"] = <
+			["at108"] = <
 				text = <"*Registered">
 				description = <"*No result yet available.">
 			>
-			["at0108"] = <
+			["id109"] = <
 				text = <"*Result Value Status">
 				description = <"*The status of the result value.">
 			>
-			["at0110"] = <
+			["id111"] = <
 				text = <"*Test Procedure">
 				description = <"*Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
 			>
+			["ac1"] = <
+				text = <"*Overall Test Result Status(en)">
+				description = <"*The publication status of the entire pathology test result.(en)">
+			>
+			["ac2"] = <
+				text = <"*Result Value Status(en)">
+				description = <"*The status of the result value.(en)">
+			>
+			["ac3"] = <
+				text = <"*Test Result Representation(en)">
+				description = <"*Rich text representation of the entire result as issued by the diagnostic service.(en)">
+			>
+			["at109"] = <
+				text = <"*text/html (en)">
+				description = <"*text/html (en)">
+			>
+			["at110"] = <
+				text = <"*text/plain (en)">
+				description = <"*text/plain (en)">
+			>
+			["at111"] = <
+				text = <"*text/rtf (en)">
+				description = <"*text/rtf (en)">
+			>
+			["at112"] = <
+				text = <"*application/msword (en)">
+				description = <"*application/msword (en)">
+			>
+			["at113"] = <
+				text = <"*application/pdf (en)">
+				description = <"*application/pdf (en)">
+			>
+			["at114"] = <
+				text = <"*application/rtf (en)">
+				description = <"*application/rtf (en)">
+			>
+			["at115"] = <
+				text = <"*application/vnd.oasis.opendocument.text (en)">
+				description = <"*application/vnd.oasis.opendocument.text (en)">
+			>
+			["at116"] = <
+				text = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
+				description = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at109"] = <http://openehr.org/id/417>
+			["at110"] = <http://openehr.org/id/418>
+			["at111"] = <http://openehr.org/id/419>
+			["at112"] = <http://openehr.org/id/517>
+			["at113"] = <http://openehr.org/id/518>
+			["at114"] = <http://openehr.org/id/519>
+			["at115"] = <http://openehr.org/id/682>
+			["at116"] = <http://openehr.org/id/683>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at108", "at38", "at39", "at41", "at75">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at108", "at38", "at39", "at41", "at75">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at109", "at110", "at111", "at112", "at113", "at114", "at115", "at116">
 		>
 	>

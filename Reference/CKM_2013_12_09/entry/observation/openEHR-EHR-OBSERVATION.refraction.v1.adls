@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.refraction.v1.0.0
 
 language
@@ -45,76 +45,65 @@ American Academy Of Ophthalmology (Author), Fred M. Wilson II (Editor), MD (Edit
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Refraction assessment
+	OBSERVATION[id1] matches {	-- Refraction assessment
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0134] occurrences matches {0..1} matches {	-- Any event
+					POINT_EVENT[id135] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0039] occurrences matches {0..1} matches {	-- Description
+									ELEMENT[id40] occurrences matches {0..1} matches {	-- Description
 										value matches {
-											DV_TEXT[id0317] matches {*}
+											DV_TEXT[id141] 
 										}
 									}
-									CLUSTER[at0053] occurrences matches {0..2} matches {	-- Per Eye
+									CLUSTER[id54] occurrences matches {0..2} matches {	-- Per Eye
 										items matches {
-											ELEMENT[at0055] occurrences matches {0..1} matches {	-- Absent Result
+											ELEMENT[id56] occurrences matches {0..1} matches {	-- Absent Result
 												value matches {
-													DV_CODED_TEXT[id0341] matches {
-														defining_code matches {
-															[local::
-															at0064, 	-- Not performed
-															at0065]	-- Not completed
-														}
+													DV_CODED_TEXT[id142] matches {
+														defining_code matches {[ac1]}		-- Absent Result
 													}
-													DV_TEXT[id0342] matches {*}
+													DV_TEXT[id143] 
 												}
 											}
-											allow_archetype CLUSTER[at0139] occurrences matches {0..1} matches {	-- Refraction details
+											allow_archetype CLUSTER[id140] occurrences matches {0..1} matches {	-- Refraction details
 												include
-													archetype_id/value matches {/openEHR-EHR-CLUSTER\.refraction_details(-[a-zA-Z0-9_]+)*\.v1/}
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.refraction_details(-a-zA-Z0-9_]+)*\.v1/}
 											}
-											ELEMENT[at0066] occurrences matches {0..*} matches {	-- Interpretation
+											ELEMENT[id67] occurrences matches {0..*} matches {	-- Interpretation
 												value matches {
-													DV_TEXT[id0141] matches {*}
+													DV_TEXT[id144] 
 												}
 											}
 										}
 									}
-									ELEMENT[at0054] occurrences matches {0..*} matches {	-- Overall Interpretation
+									ELEMENT[id55] occurrences matches {0..*} matches {	-- Overall Interpretation
 										value matches {
-											DV_TEXT[id0309] matches {*}
+											DV_TEXT[id145] 
 										}
 									}
-									ELEMENT[at0040] occurrences matches {0..1} matches {	-- Additional Comment
+									ELEMENT[id41] occurrences matches {0..1} matches {	-- Additional Comment
 										value matches {
-											DV_TEXT[id0117] matches {*}
+											DV_TEXT[id146] 
 										}
 									}
 								}
 							}
 						}
 						state matches {
-							ITEM_TREE[at0041] matches {	-- Tree
+							ITEM_TREE[id42] matches {
 								items matches {
-									ELEMENT[at0112] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[id113] occurrences matches {0..*} matches {	-- Confounding Factors
 										value matches {
-											DV_TEXT[id0901] matches {*}
+											DV_TEXT[id147] 
 										}
 									}
-									ELEMENT[at0042] occurrences matches {0..*} matches {	-- Refractive Correction
+									ELEMENT[id43] occurrences matches {0..*} matches {	-- Refractive Correction
 										value matches {
-											DV_CODED_TEXT[id0357] matches {
-												defining_code matches {
-													[local::
-													at0071, 	-- Spectacles
-													at0072, 	-- Contact lenses
-													at0073, 	-- Pinhole
-													at0074, 	-- Autorefraction
-													at0075]	-- Retinoscopy
-												}
+											DV_CODED_TEXT[id148] matches {
+												defining_code matches {[ac2]}		-- Refractive Correction
 											}
 										}
 									}
@@ -126,123 +115,125 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0020] matches {	-- Tree
+			ITEM_TREE[id21] matches {
 				items matches {
-					allow_archetype CLUSTER[at0025] occurrences matches {0..1} matches {	-- Device Details
+					allow_archetype CLUSTER[id26] occurrences matches {0..1} matches {	-- Device Details
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Refraction assessment">
 				description = <"Assessment of the refraction required to achieve optimal visual acuity.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0020"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0025"] = <
+			["id26"] = <
 				text = <"Device Details">
 				description = <"Details of the device used to measure refraction.">
 			>
-			["at0039"] = <
+			["id40"] = <
 				text = <"Description">
 				description = <"An overall narrative description of the visual acuity test result.">
 			>
-			["at0040"] = <
+			["id41"] = <
 				text = <"Additional Comment">
 				description = <"Any additional narrative comment about the visual acuity test.">
 			>
-			["at0041"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0042"] = <
+			["id43"] = <
 				text = <"Refractive Correction">
 				description = <"The specific type(s) of refractive correction applied.">
 			>
-			["at0053"] = <
+			["id54"] = <
 				text = <"Per Eye">
 				description = <"Details of the refraction result for each eye.">
 			>
-			["at0054"] = <
+			["id55"] = <
 				text = <"Overall Interpretation">
 				description = <"A term, commonly coded, expressing an overall interpretation of the visual acuity test.">
 			>
-			["at0055"] = <
+			["id56"] = <
 				text = <"Absent Result">
 				description = <"Details of a test result which could not be recorded.">
 			>
-			["at0064"] = <
+			["at65"] = <
 				text = <"Not performed">
 				description = <"The visual acuity test was never performed.">
 			>
-			["at0065"] = <
+			["at66"] = <
 				text = <"Not completed">
 				description = <"The visual acuity test was started but could not be completed.">
 			>
-			["at0066"] = <
+			["id67"] = <
 				text = <"Interpretation">
 				description = <"The test result expressed as a qualitative term, normally coded.">
 			>
-			["at0071"] = <
+			["at72"] = <
 				text = <"Spectacles">
 				description = <"The subject's vision was corrected by spectacles.">
 			>
-			["at0072"] = <
+			["at73"] = <
 				text = <"Contact lenses">
 				description = <"The subject's vision was corrected by contact lenses.">
 			>
-			["at0073"] = <
+			["at74"] = <
 				text = <"Pinhole">
 				description = <"The subject's vision was corrected by use of a pinhole.">
 			>
-			["at0074"] = <
+			["at75"] = <
 				text = <"Autorefraction">
 				description = <"The subject's vision was corrected by autorefraction.">
 			>
-			["at0075"] = <
+			["at76"] = <
 				text = <"Retinoscopy">
 				description = <"The subject's vision was corrected by retinoscopy.">
 			>
-			["at0112"] = <
+			["id113"] = <
 				text = <"Confounding Factors">
 				description = <"Patient circumstances which affect interpretation of the result. Often termed 'reliability' in opthalmological documentation.">
 			>
-			["at0134"] = <
+			["id135"] = <
 				text = <"Any event">
 				description = <"Any refraction assessment event.">
 			>
-			["at0139"] = <
+			["id140"] = <
 				text = <"Refraction details">
 				description = <"Details of refraction for a single eye.">
+			>
+			["ac1"] = <
+				text = <"Absent Result">
+				description = <"Details of a test result which could not be recorded.">
+			>
+			["ac2"] = <
+				text = <"Refractive Correction">
+				description = <"The specific type(s) of refractive correction applied.">
 			>
 		>
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["at0000"] = <[SNOMED-CT::252886007]>
-			["at0039"] = <[SNOMED-CT::117364006]>
-			["at0040"] = <[SNOMED-CT::117364006]>
-			["at0054"] = <[SNOMED-CT::366060000]>
-			["at0066"] = <[SNOMED-CT::366060000]>
-			["at0071"] = <[SNOMED-CT::50121007]>
-			["at0072"] = <[SNOMED-CT::57368009]>
-			["at0075"] = <[SNOMED-CT::397524001]>
+			["id1"] = <http://snomedct.info/id/252886007>
+			["id40"] = <http://snomedct.info/id/117364006>
+			["id41"] = <http://snomedct.info/id/117364006>
+			["id55"] = <http://snomedct.info/id/366060000>
+			["id67"] = <http://snomedct.info/id/366060000>
+			["at72"] = <http://snomedct.info/id/50121007>
+			["at73"] = <http://snomedct.info/id/57368009>
+			["at76"] = <http://snomedct.info/id/397524001>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at65", "at66">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at72", "at73", "at74", "at75", "at76">
 		>
 	>

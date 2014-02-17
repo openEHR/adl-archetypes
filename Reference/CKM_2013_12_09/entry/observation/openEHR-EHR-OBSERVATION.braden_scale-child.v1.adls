@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.braden_scale-child.v1.0.0
 
 specialize
-	openEHR-EHR-OBSERVATION.braden_scale.v1.0.0
+	openEHR-EHR-OBSERVATION.braden_scale.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -41,16 +41,74 @@ Modified Braden Q Scale for Paediatric Use [Internet]. [date unknown];[cited 201
 	>
 
 definition
-	OBSERVATION[at0000.1] matches {	-- Modified Braden Q Scale
-		/data[at0001]/events[at0002]/data[at0003]/items[at0022]/value[id0055]/magnitude matches {|6..20|}
+	OBSERVATION[id1.1] matches {	-- Modified Braden Q Scale
+		/data[id2]/events[id3]/data[id4]/items[id23]/value[id44]/magnitude matches {|6..20|}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Modified Braden Q Scale">
 				description = <"The Modified Braden Q Scale for paediatric use.">
 			>
+			["ac0.1"] = <
+				text = <"Sensory perception">
+				description = <"Ability to respond meaningfully to pressure-related discomfort.">
+			>
+			["ac0.2"] = <
+				text = <"Moisture">
+				description = <"Degree to which skin is exposed to moisture.">
+			>
+			["ac0.3"] = <
+				text = <"Activity">
+				description = <"Degree of physical ability.">
+			>
+			["ac0.4"] = <
+				text = <"Mobility">
+				description = <"Ability to change and control body position.">
+			>
+			["ac0.5"] = <
+				text = <"Nutrition">
+				description = <"Usual food intake pattern.">
+			>
+			["ac0.6"] = <
+				text = <"Friction and shear">
+				description = <"Friction occurs when skin moves against support surfaces.  Shear occurs when skin and adjacent bony surface slide across one another.">
+			>
+			["ac0.7"] = <
+				text = <"Braden risk grade">
+				description = <"A graded risk score based upon addition of all sub-scores that determines the patient's overall risk for developing a pressure ulcer.">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at6", "at7", "at8", "at9">
+		>
+		["ac0.2"] = <
+			id = <"ac0.2">
+			members = <"at16", "at17", "at18", "at19">
+		>
+		["ac0.3"] = <
+			id = <"ac0.3">
+			members = <"at12", "at13", "at14", "at15">
+		>
+		["ac0.4"] = <
+			id = <"ac0.4">
+			members = <"at27", "at28", "at29", "at30">
+		>
+		["ac0.5"] = <
+			id = <"ac0.5">
+			members = <"at31", "at32", "at33", "at34">
+		>
+		["ac0.6"] = <
+			id = <"ac0.6">
+			members = <"at24", "at25", "at26">
+		>
+		["ac0.7"] = <
+			id = <"ac0.7">
+			members = <"at37", "at38", "at39", "at40", "at41">
 		>
 	>

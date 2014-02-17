@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.exam-generic-lymphnode.v1.0.0
 
 specialize
-	openEHR-EHR-CLUSTER.exam-generic.v1.0.0
+	openEHR-EHR-CLUSTER.exam-generic.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -31,29 +31,29 @@ description
 	>
 
 definition
-	CLUSTER[at0000.1.1] matches {	-- Examination of lymph nodes
+	CLUSTER[id1.1.1] matches {	-- Examination of lymph nodes
 		items matches {
-			ELEMENT[at0.9.1] 	-- Lymph node group
+			ELEMENT[id0.9.1] 	-- Lymph node group
 		}
-		/items[at0008.0.1]/items matches {
-			ELEMENT[at0.0.15] occurrences matches {0..1} matches {	-- Description
+		/items[id9.0.1]/items matches {
+			ELEMENT[id0.0.15] occurrences matches {0..1} matches {	-- Description
 				value matches {
-					DV_TEXT[id0.0.61] 
+					DV_TEXT[id0.0.78] 
 				}
 			}
-			before [at0.11]
-			CLUSTER[at0.0.14] occurrences matches {0..1} matches {	-- Individual nodes
+			before [id0.11]
+			CLUSTER[id0.0.14] occurrences matches {0..1} matches {	-- Individual nodes
 				items matches {
-					CLUSTER[at0.0.12] occurrences matches {0..1} matches {	-- Node
+					CLUSTER[id0.0.12] occurrences matches {0..1} matches {	-- Node
 						items matches {
-							ELEMENT[at0.0.11] occurrences matches {0..1} matches {	-- Node name
+							ELEMENT[id0.0.11] occurrences matches {0..1} matches {	-- Node name
 								value matches {
-									DV_TEXT[id0.0.734] 
+									DV_TEXT[id0.0.79] 
 								}
 							}
-							ELEMENT[at0.0.13] occurrences matches {0..1} matches {	-- Description
+							ELEMENT[id0.0.13] occurrences matches {0..1} matches {	-- Description
 								value matches {
-									DV_TEXT[id0.0.533] 
+									DV_TEXT[id0.0.80] 
 								}
 							}
 						}
@@ -63,40 +63,50 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0.0.11"] = <
+			["id0.0.11"] = <
 				text = <"Node name">
 				description = <"The name of the node.">
 			>
-			["at0.0.12"] = <
+			["id0.0.12"] = <
 				text = <"Node">
 				description = <"Group of findings relating to an individual node.">
 			>
-			["at0.0.13"] = <
+			["id0.0.13"] = <
 				text = <"Description">
 				description = <"Description of individual node.">
 			>
-			["at0.0.14"] = <
+			["id0.0.14"] = <
 				text = <"Individual nodes">
 				description = <"*">
 			>
-			["at0.0.15"] = <
+			["id0.0.15"] = <
 				text = <"Description">
 				description = <"Text description related to lymph node group.">
 			>
-			["at0.9.1"] = <
+			["id0.9.1"] = <
 				text = <"Lymph node group">
 				description = <"The group of nodes examined.">
 			>
-			["at0000.1.1"] = <
+			["id1.1.1"] = <
 				text = <"Examination of lymph nodes">
 				description = <"For recording the findings on physical examination of lymph nodes.">
 			>
-			["at0008.0.1"] = <
+			["id9.0.1"] = <
 				text = <"Findings">
 				description = <"Clinical findings.">
 			>
+			["ac0.0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.0.1"] = <
+			id = <"ac0.0.1">
+			members = <"at1", "at2", "at3">
 		>
 	>

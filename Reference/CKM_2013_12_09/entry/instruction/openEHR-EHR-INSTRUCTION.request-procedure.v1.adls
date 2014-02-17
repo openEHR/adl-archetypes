@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-INSTRUCTION.request-procedure.v1.0.0
 
 specialize
-	openEHR-EHR-INSTRUCTION.request.v1.0.0
+	openEHR-EHR-INSTRUCTION.request.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -32,46 +32,64 @@ description
 	>
 
 definition
-	INSTRUCTION[at0000.1] matches {	-- Procedure request
-		/activities[at0001]/action_archetype_id matches {/openEHR-EHR-ACTION\.procedure\.v1/}
-		/activities[at0001]/description[at0009]/items matches {
-			ELEMENT[at0.146] occurrences matches {0..1} matches {	-- Type of procedure
+	INSTRUCTION[id1.1] matches {	-- Procedure request
+		/activities[id2]/action_archetype_id matches {/openEHR-EHR-ACTION\\.procedure\\.v1/}
+		/activities[id2]/description[id10]/items matches {
+			ELEMENT[id0.146] occurrences matches {0..1} matches {	-- Type of procedure
 				value matches {
-					DV_TEXT[id0.653] 
+					DV_TEXT[id0.186] 
 				}
 			}
-			allow_archetype CLUSTER[at0132] occurrences matches {0..1} matches {
+			allow_archetype CLUSTER[id133] occurrences matches {0..1} matches {
+				include
+					archetype_id/value matches {/.*/}
 			}
-			ELEMENT[at0.145] occurrences matches {0..1} matches {	-- Objective
+			ELEMENT[id0.145] occurrences matches {0..1} matches {	-- Objective
 				value matches {
-					DV_TEXT[id0.253] 
+					DV_TEXT[id0.190] 
 				}
 			}
-			allow_archetype CLUSTER[at0116] occurrences matches {0..1} matches {
+			allow_archetype CLUSTER[id117] occurrences matches {0..1} matches {
+				include
+					archetype_id/value matches {/.*/}
 			}
 		}
-		/protocol[at0008]/items matches {
-			allow_archetype CLUSTER[at0141] occurrences matches {0..1} matches {
+		/protocol[id9]/items matches {
+			allow_archetype CLUSTER[id142] occurrences matches {0..1} matches {
+				include
+					archetype_id/value matches {/.*/}
 			}
-			allow_archetype CLUSTER[at0142] occurrences matches {0..1} matches {
+			allow_archetype CLUSTER[id143] occurrences matches {0..1} matches {
+				include
+					archetype_id/value matches {/.*/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0.145"] = <
+			["id0.145"] = <
 				text = <"Objective">
 				description = <"Details about specific objective or goal to be achieved by procedure.">
 			>
-			["at0.146"] = <
+			["id0.146"] = <
 				text = <"Type of procedure">
 				description = <"*">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Procedure request">
 				description = <"Request for a procedure to be performed.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at137", "at138", "at139">
 		>
 	>

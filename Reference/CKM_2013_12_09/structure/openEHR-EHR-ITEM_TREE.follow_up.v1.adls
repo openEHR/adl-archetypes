@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-ITEM_TREE.follow_up.v1.0.0
 
 language
@@ -26,40 +26,40 @@ description
 	>
 
 definition
-	ITEM_TREE[at0000] occurrences matches {0..*} matches {	-- Follow up
+	ITEM_TREE[id1] occurrences matches {0..*} matches {	-- Follow up
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Service
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Service
 				value matches {
-					DV_TEXT[id0605] matches {*}
+					DV_TEXT[id9] 
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Details
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Details
 				value matches {
-					DV_TEXT[id0405] matches {*}
+					DV_TEXT[id10] 
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Appointment date and time
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Appointment date and time
 				value matches {
-					DV_DATE_TIME[id0005] matches {
+					DV_DATE_TIME[id11] matches {
 						value matches {yyyy-mm-ddTHH:MM:SS}
 					}
 				}
 			}
-			CLUSTER[at0005] occurrences matches {0..1} matches {	-- Due date
+			CLUSTER[id6] occurrences matches {0..1} matches {	-- Due date
 				items matches {
-					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Due by absolute date
+					ELEMENT[id7] occurrences matches {0..1} matches {	-- Due by absolute date
 						value matches {
-							DV_DATE_TIME[id0149] matches {*}
+							DV_DATE_TIME[id12] 
 						}
 					}
-					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Due within time interval
+					ELEMENT[id8] occurrences matches {0..1} matches {	-- Due within time interval
 						value matches {
-							DV_INTERVAL<DV_DATE_TIME>[id0549] matches {
+							DV_INTERVAL<DV_DATE_TIME>[id13] matches {
 								upper matches {
-									DV_DATE_TIME[id0066] matches {*}
+									DV_DATE_TIME[id14] 
 								}
 								lower matches {
-									DV_DATE_TIME[id0482] matches {*}
+									DV_DATE_TIME[id15] 
 								}
 							}
 						}
@@ -69,34 +69,34 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Follow up">
 				description = <"Information about follow up">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Service">
 				description = <"The name of a service">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Appointment date and time">
 				description = <"The current active appointment date and time">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Details">
 				description = <"Details of the service">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Due date">
 				description = <"*">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Due by absolute date">
 				description = <"Date due by">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Due within time interval">
 				description = <"Due within a time interaval eg 'x' weeks">
 			>

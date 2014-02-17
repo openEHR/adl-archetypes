@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.tos_classification.v1.0.0
 
 language
@@ -34,17 +34,17 @@ This archetype extends the Tos Classification to allow recording of Tos Grade 5 
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Tos Classification
+	CLUSTER[id1] matches {	-- Tos Classification
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Tos Classification
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Tos Classification
 				value matches {
-					DV_ORDINAL[id0205] matches {
+					DV_ORDINAL[id3] matches {
 						[value, symbol] matches {
-							[{1}, {[local::at0002]}],
-							[{2}, {[local::at0003]}],
-							[{3}, {[local::at0004]}],
-							[{4}, {[local::at0005]}],
-							[{5}, {[local::at0006]}]
+							[{1}, {[at3]}],
+							[{2}, {[at4]}],
+							[{3}, {[at5]}],
+							[{4}, {[at6]}],
+							[{5}, {[at7]}]
 						}
 					}
 				}
@@ -52,36 +52,46 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Tos Classification">
 				description = <"A classification of the degree of tympanic membrane pars flaccida retraction, related to extent and severity and as described by Tos and Poulsen.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Tos Classification">
 				description = <"Grading of the degree of tympanic membrane pars tensa retraction / atelectasis based on the Tos & Poulson Classification.">
 			>
-			["at0002"] = <
+			["at3"] = <
 				text = <"Grade 1">
 				description = <"Pars flaccida is dimpled and is more retracted than normal. It is not adherent to the malleus (airspace visible).">
 			>
-			["at0003"] = <
+			["at4"] = <
 				text = <"Grade 2">
 				description = <"Retraction onto neck of malleus - no airspace visible behind membrane.">
 			>
-			["at0004"] = <
+			["at5"] = <
 				text = <"Grade 3">
 				description = <"Retraction extends beyond osseous malleus full extent seen.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Grade 4">
 				description = <"Erosion of outer attic wall. Part of the retraction pocket may be hidden.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Grade 5">
 				description = <"Bottom of the retraction pocket can be seen only by using an endoscope.">
 			>
+			["ac1"] = <
+				text = <"Tos Classification">
+				description = <"Grading of the degree of tympanic membrane pars tensa retraction / atelectasis based on the Tos & Poulson Classification.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at3", "at4", "at5", "at6", "at7">
 		>
 	>

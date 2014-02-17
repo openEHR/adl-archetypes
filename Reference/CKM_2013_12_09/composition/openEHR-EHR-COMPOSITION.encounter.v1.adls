@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-COMPOSITION.encounter.v1.0.0
 
 language
@@ -76,18 +76,20 @@ description
 	>
 
 definition
-	COMPOSITION[at0000] matches {	-- Encounter
+	COMPOSITION[id1] matches {	-- Encounter
 		category matches {
-			DV_CODED_TEXT[id0577] matches {
-				defining_code matches {[openehr::433]}
+			DV_CODED_TEXT[id4] matches {
+				defining_code matches {[at1]}
 			}
 		}
 		context matches {
-			EVENT_CONTEXT[id0636] matches {
+			EVENT_CONTEXT[id5] matches {
 				other_context matches {
-					ITEM_TREE[at0001] matches {	-- Tree
+					ITEM_TREE[id2] matches {
 						items matches {
-							allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {	-- Local context
+							allow_archetype CLUSTER[id3] occurrences matches {0..*} matches {	-- Local context
+								include
+									archetype_id/value matches {/.*/}
 							}
 						}
 					}
@@ -96,62 +98,67 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"المقابلة">
 				description = <"مقابلة جنيسة (غير محدودة الملكية) أو بِنْية ملاحظة تقدم حالة المريض">
 			>
-			["at0001"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"*Local context(en)">
 				description = <"*Additional local context.(en)">
+			>
+			["at1"] = <
+				text = <"*event (en)">
+				description = <"*event (en)">
 			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Encounter">
 				description = <"Generic encounter or progress note composition.">
 			>
-			["at0001"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Local context">
 				description = <"Additional local context.">
 			>
+			["at1"] = <
+				text = <"event">
+				description = <"event">
+			>
 		>
 		["es-ar"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Consulta">
 				description = <"Composition de consulta generica o notas de evolucion ">
 			>
-			["at0001"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"*Local context(en)">
 				description = <"*Additional local context.(en)">
 			>
+			["at1"] = <
+				text = <"*event (en)">
+				description = <"*event (en)">
+			>
 		>
 		["ko"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"환자대면">
 				description = <"외래기록, 경과기록, 간호기록와 일반노트와 같은 환자를 대면한 후 작성하는 기록 composition">
 			>
-			["at0001"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"사용자 환경">
 				description = <"추가적인 사용자 환경">
 			>
+			["at1"] = <
+				text = <"*event (en)">
+				description = <"*event (en)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at1"] = <http://openehr.org/id/433>
 		>
 	>

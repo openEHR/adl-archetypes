@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.synthesis_lymphoma.v1.0.0
 
 language
@@ -31,69 +31,73 @@ Available from: http://www.cap.org/apps/docs/committees/cancer/cancer_protocols/
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Diagnostic synthesis - lymphoma
+	CLUSTER[id1] matches {	-- Diagnostic synthesis - lymphoma
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Lineage
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Lineage
 				value matches {
-					DV_TEXT[id0205] matches {*}
+					DV_TEXT[id10] 
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Clonality
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Clonality
 				value matches {
-					DV_CODED_TEXT[id0605] matches {
-						defining_code matches {
-							[local::
-							at0004, 	-- Monoclonal
-							at0005, 	-- Polyclonal
-							at0006, 	-- Oligoclonal
-							at0007]	-- Indeterminate
-						}
+					DV_CODED_TEXT[id11] matches {
+						defining_code matches {[ac1]}		-- Clonality
 					}
-					DV_TEXT[id0606] matches {*}
+					DV_TEXT[id12] 
 				}
 			}
-			ELEMENT[at0008] occurrences matches {0..1} matches {	-- Staging
+			ELEMENT[id9] occurrences matches {0..1} matches {	-- Staging
 				value matches {
-					DV_TEXT[id0005] matches {*}
+					DV_TEXT[id13] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Diagnostic synthesis - lymphoma">
 				description = <"Detailed aspects of diagnostic synthesis for lymphoma.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Lineage">
 				description = <"Description of cell lineage.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Clonality">
 				description = <"*">
 			>
-			["at0004"] = <
+			["at5"] = <
 				text = <"Monoclonal">
 				description = <"Monoclonal cell clonality.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Polyclonal">
 				description = <"Polyclonal cell clonality.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Oligoclonal">
 				description = <"Oligoclonal cell clonality.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Indeterminate">
 				description = <"Cell clonality has not been determined.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Staging">
 				description = <"Cancer staging.">
 			>
+			["ac1"] = <
+				text = <"Clonality">
+				description = <"*">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at5", "at6", "at7", "at8">
 		>
 	>

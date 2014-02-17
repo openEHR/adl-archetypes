@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-EVALUATION.check_list-medication.v1.0.0
 
 specialize
-	openEHR-EHR-EVALUATION.check_list.v1.0.0
+	openEHR-EHR-EVALUATION.check_list.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -47,26 +47,26 @@ description
 	>
 
 definition
-	EVALUATION[at0000.1] matches {	-- A check list for medications
-		/data[at0001]/items[at0004]/items[at0002]/items matches {
-			ELEMENT[at0003] occurrences matches {1..*} matches {
+	EVALUATION[id1.1] matches {	-- A check list for medications
+		/data[id2]/items[id5]/items[id3]/items matches {
+			ELEMENT[id4] occurrences matches {1..*} matches {
 				value matches {
-					DV_TEXT[id0.53] 
+					DV_TEXT[id0.10] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["de"] = <
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Eine Kontrollliste für Medikationen">
 				description = <"Ein allgemeiner Archetyp zur Dokumentation von Fragen und Antworten zur Medikation">
 			>
 		>
 		["en"] = <
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"A check list for medications">
 				description = <"A generic archetype for recording questions and answers about medication.">
 			>

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.tympanogram_hf.v1.0.0
 
 language
@@ -77,33 +77,29 @@ Vanhuyse VJ, Creten WL, Van Camp KJ. On the W-notching of tympanograms. Scand Au
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Tympanogram Result - High Frequency
+	OBSERVATION[id1] matches {	-- Tympanogram Result - High Frequency
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									CLUSTER[at0012] occurrences matches {0..2} matches {	-- Test Details
+									CLUSTER[id13] occurrences matches {0..2} matches {	-- Test Details
 										items matches {
-											ELEMENT[at0009] matches {	-- Test Ear
+											ELEMENT[id10] matches {	-- Test Ear
 												value matches {
-													DV_CODED_TEXT[id0333] matches {
-														defining_code matches {
-															[local::
-															at0010, 	-- Left Ear
-															at0011]	-- Right Ear
-														}
+													DV_CODED_TEXT[id87] matches {
+														defining_code matches {[ac1]}		-- Test Ear
 													}
 												}
 											}
-											CLUSTER[at0027] occurrences matches {0..1} matches {	-- Measurement Details
+											CLUSTER[id28] occurrences matches {0..1} matches {	-- Measurement Details
 												items cardinality matches {2..*; unordered} matches {
-													ELEMENT[at0013] occurrences matches {0..1} matches {	-- Peak Pressure
+													ELEMENT[id14] occurrences matches {0..1} matches {	-- Peak Pressure
 														value matches {
-															DV_QUANTITY[id0205] matches {
-																property matches {[openehr::125]}
+															DV_QUANTITY[id88] matches {
+																property matches {[at81]}
 																[magnitude, units, precision] matches {
 																	[{|-400.0..200.0|}, {"daPa"}, {0}],
 																	[{|>=0.0|}, {"mm[H20]"}, {|>=0|}]
@@ -111,28 +107,26 @@ definition
 															}
 														}
 													}
-													ELEMENT[at0014] occurrences matches {0..1} matches {	-- Y Peak
+													ELEMENT[id15] occurrences matches {0..1} matches {	-- Y Peak
 														value matches {
-															DV_QUANTITY[id0605] matches {
-																property matches {[openehr::502]}
+															DV_QUANTITY[id89] matches {
+																property matches {[at82]}
 																magnitude matches {|0.0..5.0|}
-																units matches {"mmho"}
-																precision matches {1}
 															}
 														}
 													}
-													ELEMENT[at0074] occurrences matches {0..1} matches {	-- Y+200
+													ELEMENT[id75] occurrences matches {0..1} matches {	-- Y+200
 														value matches {
-															DV_QUANTITY[id0005] matches {
-																property matches {[openehr::502]}
+															DV_QUANTITY[id90] matches {
+																property matches {[at83]}
 																units matches {"mmho"}
 															}
 														}
 													}
-													ELEMENT[at0018] occurrences matches {0..1} matches {	-- Ear Canal Volume
+													ELEMENT[id19] occurrences matches {0..1} matches {	-- Ear Canal Volume
 														value matches {
-															DV_QUANTITY[id0206] matches {
-																property matches {[openehr::129]}
+															DV_QUANTITY[id91] matches {
+																property matches {[at84]}
 																[magnitude, units, precision] matches {
 																	[{|0.0..5.0|}, {"cc"}, {1}],
 																	[{|0.0..5.0|}, {"ml"}, {1}]
@@ -140,18 +134,18 @@ definition
 															}
 														}
 													}
-													ELEMENT[at0075] occurrences matches {0..1} matches {	-- Ear Baseline Value
+													ELEMENT[id76] occurrences matches {0..1} matches {	-- Ear Baseline Value
 														value matches {
-															DV_QUANTITY[id0405] matches {
-																property matches {[openehr::129]}
+															DV_QUANTITY[id92] matches {
+																property matches {[at85]}
 																units matches {"ml", "cc"}
 															}
 														}
 													}
-													ELEMENT[at0076] occurrences matches {0..1} matches {	-- Resonant Frequency
+													ELEMENT[id77] occurrences matches {0..1} matches {	-- Resonant Frequency
 														value matches {
-															DV_QUANTITY[id0805] matches {
-																property matches {[openehr::382]}
+															DV_QUANTITY[id93] matches {
+																property matches {[at86]}
 																[magnitude, units, precision] matches {
 																	[{|200.0..2000.0|}, {"Hz"}, {0}],
 																	[{|0.2..2.0|}, {"kHz"}, {1}]
@@ -159,31 +153,29 @@ definition
 															}
 														}
 													}
-													ELEMENT[at0077] occurrences matches {0..1} matches {	-- F45 Degree
+													ELEMENT[id78] occurrences matches {0..1} matches {	-- F45 Degree
 														value matches {
-															DV_QUANTITY[id0207] matches {
-																property matches {[openehr::382]}
+															DV_QUANTITY[id94] matches {
+																property matches {[at87]}
 																units matches {"Hz", "kHz"}
 															}
 														}
 													}
-													ELEMENT[at0029] occurrences matches {0..1} matches {	-- Tympanometric Width
+													ELEMENT[id30] occurrences matches {0..1} matches {	-- Tympanometric Width
 														value matches {
-															DV_QUANTITY[id0006] matches {
-																property matches {[openehr::125]}
+															DV_QUANTITY[id95] matches {
+																property matches {[at88]}
 																magnitude matches {|0.0..400.0|}
-																units matches {"daPa"}
-																precision matches {0}
 															}
 														}
 													}
-													ELEMENT[at0030] occurrences matches {0..1} matches {	-- Tympanometric Gradient
+													ELEMENT[id31] occurrences matches {0..1} matches {	-- Tympanometric Gradient
 														value matches {
-															DV_QUANTITY[id0806] matches {
-																property matches {[openehr::502]}
+															DV_QUANTITY[id96] matches {
+																property matches {[at89]}
 																units matches {"mmho"}
 															}
-															DV_PROPORTION[id0807] matches {
+															DV_PROPORTION[id97] matches {
 																numerator matches {|0.0..1.0|}
 																is_integral matches {False}
 																type matches {1}
@@ -192,109 +184,87 @@ definition
 													}
 												}
 											}
-											ELEMENT[at0031] occurrences matches {0..1} matches {	-- No Test Result
+											ELEMENT[id32] occurrences matches {0..1} matches {	-- No Test Result
 												value matches {
-													DV_BOOLEAN[id0334] matches {
+													DV_BOOLEAN[id98] matches {
 														value matches {True}
 													}
 												}
 											}
-											ELEMENT[at0032] occurrences matches {0..1} matches {	-- Reason for No Test Result
+											ELEMENT[id33] occurrences matches {0..1} matches {	-- Reason for No Test Result
 												value matches {
-													DV_TEXT[id0733] matches {*}
+													DV_TEXT[id99] 
 												}
 											}
-											ELEMENT[at0004] occurrences matches {0..1} matches {	-- Tympanogram Type
+											ELEMENT[id5] occurrences matches {0..1} matches {	-- Tympanogram Type
 												value matches {
-													DV_CODED_TEXT[id0335] matches {
-														defining_code matches {
-															[local::
-															at0005, 	-- Type 1
-															at0006, 	-- Type 2
-															at0057, 	-- Type 3
-															at0007, 	-- Type 4
-															at0070, 	-- Type 4u
-															at0035]	-- Indeterminate
-														}
+													DV_CODED_TEXT[id100] matches {
+														defining_code matches {[ac2]}		-- Tympanogram Type
 													}
 												}
 											}
-											ELEMENT[at0066] occurrences matches {0..1} matches {	-- Vanhuyse Classification Type
+											ELEMENT[id67] occurrences matches {0..1} matches {	-- Vanhuyse Classification Type
 												value matches {
-													DV_CODED_TEXT[id0533] matches {
-														defining_code matches {
-															[local::
-															at0067, 	-- 1B1G
-															at0068, 	-- 3B1G
-															at0078, 	-- 3B3G
-															at0079, 	-- 5B3G
-															at0035]	-- Indeterminate
-														}
+													DV_CODED_TEXT[id101] matches {
+														defining_code matches {[ac3]}		-- Vanhuyse Classification Type
 													}
 												}
 											}
-											ELEMENT[at0033] occurrences matches {0..1} matches {	-- Clinical Interpretation
+											ELEMENT[id34] occurrences matches {0..1} matches {	-- Clinical Interpretation
 												value matches {
-													DV_TEXT[id0133] matches {*}
+													DV_TEXT[id102] 
 												}
 											}
 										}
 									}
-									ELEMENT[at0036] occurrences matches {0..1} matches {	-- Overall Interpretation
+									ELEMENT[id37] occurrences matches {0..1} matches {	-- Overall Interpretation
 										value matches {
-											DV_TEXT[id0053] matches {*}
+											DV_TEXT[id103] 
 										}
 									}
-									ELEMENT[at0020] occurrences matches {0..*} matches {	-- Test Result Image
+									ELEMENT[id21] occurrences matches {0..*} matches {	-- Test Result Image
 										value matches {
-											DV_MULTIMEDIA[id0253] matches {
-												media_type matches {
-													[openEHR::
-													425, 
-													426, 
-													427, 
-													428, 
-													429]
-												}
+											DV_MULTIMEDIA[id104] matches {
+												media_type matches {[ac4]}		-- Test Result Image
 											}
 										}
 									}
-									ELEMENT[at0021] occurrences matches {0..1} matches {	-- Comment
+									ELEMENT[id22] occurrences matches {0..1} matches {	-- Comment
 										value matches {
-											DV_TEXT[id0653] matches {*}
+											DV_TEXT[id105] 
 										}
 									}
 								}
 							}
 						}
 					}
-					POINT_EVENT[at0037] occurrences matches {0..1} matches {	-- Baseline
+					POINT_EVENT[id38] occurrences matches {0..1} matches {	-- Baseline
 						data matches {
-							use_node ITEM_TREE[id0153] /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any event]/data[Tree]
+							use_node ITEM_TREE[id106] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[Any event]/data[id4]
 						}
 					}
-					POINT_EVENT[at0038] occurrences matches {0..1} matches {	-- Post Valsalva
+					POINT_EVENT[id39] occurrences matches {0..1} matches {	-- Post Valsalva
 						data matches {
-							use_node ITEM_TREE[id0633] /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any event]/data[Tree]
+							use_node ITEM_TREE[id107] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[Any event]/data[id4]
 						}
 					}
-					POINT_EVENT[at0039] occurrences matches {0..1} matches {	-- Post Toynbee
+					POINT_EVENT[id40] occurrences matches {0..1} matches {	-- Post Toynbee
 						data matches {
-							use_node ITEM_TREE[id0305] /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any event]/data[Tree]
+							use_node ITEM_TREE[id108] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[Any event]/data[id4]
 						}
 					}
 				}
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0040] matches {	-- Tree
+			ITEM_TREE[id41] matches {
 				items matches {
-					CLUSTER[at0082] occurrences matches {0..1} matches {	-- Sweep Pressure
+					CLUSTER[id83] occurrences matches {0..1} matches {	-- Sweep Pressure
 						items matches {
-							ELEMENT[at0080] occurrences matches {0..1} matches {	-- Probe Tone Frequency
+							ELEMENT[id81] occurrences matches {0..1} matches {	-- Probe Tone Frequency
 								value matches {
-									DV_QUANTITY[id0981] matches {
-										property matches {[openehr::382]}
+									DV_QUANTITY[id109] matches {
+										property matches {[at90]}
 										[magnitude, units, precision] matches {
 											[{|200.0..2000.0|}, {"Hz"}, {0}],
 											[{|0.2..2.0|}, {"kHz"}, {1}]
@@ -302,42 +272,38 @@ definition
 									}
 								}
 							}
-							ELEMENT[at0046] occurrences matches {0..1} matches {	-- Rate of Pressure Change
+							ELEMENT[id47] occurrences matches {0..1} matches {	-- Rate of Pressure Change
 								value matches {
-									DV_QUANTITY[id0781] matches {
-										property matches {[openehr::708]}
+									DV_QUANTITY[id110] matches {
+										property matches {[at91]}
 										units matches {"daPa/s"}
 									}
 								}
 							}
-							ELEMENT[at0051] occurrences matches {0..1} matches {	-- Start Pressure
+							ELEMENT[id52] occurrences matches {0..1} matches {	-- Start Pressure
 								value matches {
-									DV_QUANTITY[id0181] matches {
-										property matches {[openehr::125]}
+									DV_QUANTITY[id111] matches {
+										property matches {[at92]}
 										magnitude matches {|-600.0..400.0|}
-										units matches {"daPa"}
-										precision matches {0}
 									}
 								}
 							}
-							ELEMENT[at0052] occurrences matches {0..1} matches {	-- Stop Pressure
+							ELEMENT[id53] occurrences matches {0..1} matches {	-- Stop Pressure
 								value matches {
-									DV_QUANTITY[id0581] matches {
-										property matches {[openehr::125]}
+									DV_QUANTITY[id112] matches {
+										property matches {[at93]}
 										magnitude matches {|-600.0..400.0|}
-										units matches {"daPa"}
-										precision matches {0}
 									}
 								}
 							}
 						}
 					}
-					CLUSTER[at0050] occurrences matches {0..1} matches {	-- Sweep Frequency
+					CLUSTER[id51] occurrences matches {0..1} matches {	-- Sweep Frequency
 						items matches {
-							ELEMENT[at0081] occurrences matches {0..1} matches {	-- Pressure
+							ELEMENT[id82] occurrences matches {0..1} matches {	-- Pressure
 								value matches {
-									DV_QUANTITY[id0717] matches {
-										property matches {[openehr::125]}
+									DV_QUANTITY[id113] matches {
+										property matches {[at94]}
 										[magnitude, units, precision] matches {
 											[{|-600.0..400.0|}, {"daPa"}, {0}],
 											[{|-600.0..400.0|}, {"mm[H20]"}, {|>=0|}]
@@ -345,18 +311,18 @@ definition
 									}
 								}
 							}
-							ELEMENT[at0085] occurrences matches {0..1} matches {	-- Rate of Frequency Change
+							ELEMENT[id86] occurrences matches {0..1} matches {	-- Rate of Frequency Change
 								value matches {
-									DV_QUANTITY[id0317] matches {
-										property matches {[openehr::754]}
+									DV_QUANTITY[id114] matches {
+										property matches {[at95]}
 										units matches {"Hz/s"}
 									}
 								}
 							}
-							ELEMENT[at0083] occurrences matches {0..1} matches {	-- Start Frequency
+							ELEMENT[id84] occurrences matches {0..1} matches {	-- Start Frequency
 								value matches {
-									DV_QUANTITY[id0517] matches {
-										property matches {[openehr::382]}
+									DV_QUANTITY[id115] matches {
+										property matches {[at96]}
 										[magnitude, units, precision] matches {
 											[{|200.0..2000.0|}, {"Hz"}, {0}],
 											[{|0.2..2.0|}, {"kHz"}, {1}]
@@ -364,10 +330,10 @@ definition
 									}
 								}
 							}
-							ELEMENT[at0084] occurrences matches {0..1} matches {	-- Stop Frequency
+							ELEMENT[id85] occurrences matches {0..1} matches {	-- Stop Frequency
 								value matches {
-									DV_QUANTITY[id0917] matches {
-										property matches {[openehr::382]}
+									DV_QUANTITY[id116] matches {
+										property matches {[at97]}
 										[magnitude, units, precision] matches {
 											[{|200.0..2000.0|}, {"Hz"}, {0}],
 											[{|0.2..2.0|}, {"kHz"}, {1}]
@@ -377,13 +343,13 @@ definition
 							}
 						}
 					}
-					allow_archetype CLUSTER[at0053] occurrences matches {0..*} matches {	-- Tympanometer
+					allow_archetype CLUSTER[id54] occurrences matches {0..*} matches {	-- Tympanometer
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}
-					ELEMENT[at0054] occurrences matches {0..1} matches {	-- Comment
+					ELEMENT[id55] occurrences matches {0..1} matches {	-- Comment
 						value matches {
-							DV_TEXT[id0773] matches {*}
+							DV_TEXT[id117] 
 						}
 					}
 				}
@@ -391,426 +357,654 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"*Tympanogram Result - High Frequency(en)">
 				description = <"*Record of measurements of movement at the tympanic membrane in response to a multifrequency probe tone, or a probe tone higher than 226Hz, and changes in air pressure in the ear canal, and their clinical interpretation as an indication of middle ear function.(en)">
 			>
-			["at0001"] = <
-				text = <"*Event Series(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"*Any event(en)">
 				description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
 			>
-			["at0003"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"*Tympanogram Type(en)">
 				description = <"*Classification of the the shape of the tympanogram curve.(en)">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"*Type 1(en)">
 				description = <"*Curve with a single peak and TPP around 0 daPa.(en)">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"*Type 2(en)">
 				description = <"*Flat sloping curve  with no distinct peak, Ypeak < 0.2 mmho and/or TW >= 200 daPa.(en)">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"*Type 4(en)">
 				description = <"*Double-peaked curve with TPP around 0 daPa.(en)">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"*Test Ear(en)">
 				description = <"*Identification of the ear being tested.(en)">
 			>
-			["at0010"] = <
+			["at11"] = <
 				text = <"*Left Ear(en)">
 				description = <"*The probe was in the left ear.(en)">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"*Right Ear(en)">
 				description = <"*The probe was in the right ear.(en)">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"*Test Details(en)">
 				description = <"*The tympanogram test details, recorded per ear.(en)">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"*Peak Pressure(en)">
 				description = <"*Peak pressure (also called tympanometric preak pressure or middle ear pressure or MEP) is the ear canal pressure at which the peak(s) of the tympanogram occurs.(en)">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"*Y Peak(en)">
 				description = <"*Peak compensated static admittance.(en)">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"*Ear Canal Volume(en)">
 				description = <"*An estimate of the volume of air between the probe tip and the tympanic membrane if the tympanic membrane is intact, or the volume of the ear canal and the middle ear space if the tympanic membrane is perforated. (Fowler & Shanks, 2002, p. 180).(en)">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"*Test Result Image(en)">
 				description = <"*Digital representation of the entire result.(en)">
 			>
-			["at0021"] = <
+			["id22"] = <
 				text = <"*Comment(en)">
 				description = <"*Additional narrative about the test results and intepretation not captured in other fields.(en)">
 			>
-			["at0027"] = <
+			["id28"] = <
 				text = <"*Measurement Details(en)">
 				description = <"*Measurements derived from the tympanomgram.(en)">
 			>
-			["at0029"] = <
+			["id30"] = <
 				text = <"*Tympanometric Width(en)">
 				description = <"*The pressure interval corresponding to a 50% reduction in the peak static admittance.(en)">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"*Tympanometric Gradient(en)">
 				description = <"*The steepness of the slope of the tympanogram near the peak.(en)">
 			>
-			["at0031"] = <
+			["id32"] = <
 				text = <"*No Test Result(en)">
 				description = <"*No test result is available for the test ear.(en)">
 			>
-			["at0032"] = <
+			["id33"] = <
 				text = <"*Reason for No Test Result(en)">
 				description = <"*Reason why no result is available for the test ear.(en)">
 			>
-			["at0033"] = <
+			["id34"] = <
 				text = <"*Clinical Interpretation(en)">
 				description = <"*Clinical interpretation of all measurements for the test ear.(en)">
 			>
-			["at0035"] = <
+			["at36"] = <
 				text = <"*Indeterminate(en)">
 				description = <"*It is not possible to classify the type of tympanogram.(en)">
 			>
-			["at0036"] = <
+			["id37"] = <
 				text = <"*Overall Interpretation(en)">
 				description = <"*Overall clinical interpretation of the measurements and related findings using an tympanometer.(en)">
 			>
-			["at0037"] = <
+			["id38"] = <
 				text = <"*Baseline(en)">
 				description = <"*Measurement collection recorded as the basis for comparison with following measurement collections that may included other variables of time or patient state.(en)">
 			>
-			["at0038"] = <
+			["id39"] = <
 				text = <"*Post Valsalva(en)">
 				description = <"*Measurements are recorded after the patient has performed a valsalva manoeuvre.(en)">
 			>
-			["at0039"] = <
+			["id40"] = <
 				text = <"*Post Toynbee(en)">
 				description = <"*Measurements are recorded after the patient has performed a toynbee manoeuvre.(en)">
 			>
-			["at0040"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0046"] = <
+			["id47"] = <
 				text = <"*Rate of Pressure Change(en)">
 				description = <"*The rate of change of pressure used in tympanometry.(en)">
 			>
-			["at0050"] = <
+			["id51"] = <
 				text = <"*Sweep Frequency(en)">
 				description = <"*Parameters used for Sweep Frequency tympanometry.(en)">
 			>
-			["at0051"] = <
+			["id52"] = <
 				text = <"*Start Pressure(en)">
 				description = <"*The pressure value at which the pressure sweep for tympanometry begins.(en)">
 			>
-			["at0052"] = <
+			["id53"] = <
 				text = <"*Stop Pressure(en)">
 				description = <"*The pressure value at which the pressure sweep for tympanometry ends. It is a negative pressure if the direction of pressure change is descending and a positive pressure if the direction of pressure change is ascending.(en)">
 			>
-			["at0053"] = <
+			["id54"] = <
 				text = <"*Tympanometer(en)">
 				description = <"*Details of tympanometer used to conduct the test.(en)">
 			>
-			["at0054"] = <
+			["id55"] = <
 				text = <"*Comment(en)">
 				description = <"*Additional narrative about the protocol for the tympanogram not captured in other fields.(en)">
 			>
-			["at0057"] = <
+			["at58"] = <
 				text = <"*Type 3(en)">
 				description = <"*Curve with a single peak and TPP <-150 daPa.(en)">
 			>
-			["at0066"] = <
+			["id67"] = <
 				text = <"*Vanhuyse Classification Type(en)">
 				description = <"*Classification of tympanogram type based on Vanhuyse classification system.(en)">
 			>
-			["at0067"] = <
+			["at68"] = <
 				text = <"*1B1G(en)">
 				description = <"*The pattern of results showing 1 susceptance (B) peak and 1 conductance (G) peak.(en)">
 			>
-			["at0068"] = <
+			["at69"] = <
 				text = <"*3B1G(en)">
 				description = <"*The pattern of results showing 3 susceptance peaks and 1 conductance peak.(en)">
 			>
-			["at0070"] = <
+			["at71"] = <
 				text = <"*Type 4u(en)">
 				description = <"*Double-peaked curve with TPP <-150 daPa.(en)">
 			>
-			["at0074"] = <
+			["id75"] = <
 				text = <"*Y+200(en)">
 				description = <"*Admittance at +200Hz.(en)">
 			>
-			["at0075"] = <
+			["id76"] = <
 				text = <"*Ear Baseline Value(en)">
 				description = <"*Derived ear canal volume.(en)">
 			>
-			["at0076"] = <
+			["id77"] = <
 				text = <"*Resonant Frequency(en)">
 				description = <"*Frequency at which the total susceptance is zero.(en)">
 			>
-			["at0077"] = <
+			["id78"] = <
 				text = <"*F45 Degree(en)">
 				description = <"*The frequency corresponding to a 45° phase angle.(en)">
 			>
-			["at0078"] = <
+			["at79"] = <
 				text = <"*3B3G(en)">
 				description = <"*The pattern of results showing 3 susceptance (B) peaks and 3 conductance (G) peaks.(en)">
 			>
-			["at0079"] = <
+			["at80"] = <
 				text = <"*5B3G(en)">
 				description = <"*The pattern of results showing 5 susceptance (B) peaks and 3 conductance (G) peaks.(en)">
 			>
-			["at0080"] = <
+			["id81"] = <
 				text = <"*Probe Tone Frequency(en)">
 				description = <"*The frequency of the probe tone played into the ear canal for tympanometry measurement.(en)">
 			>
-			["at0081"] = <
+			["id82"] = <
 				text = <"*Pressure(en)">
 				description = <"*The pressure in the ear canal, which is changed over a defined range , while the probe tone frequency is kept constant.(en)">
 			>
-			["at0082"] = <
+			["id83"] = <
 				text = <"*Sweep Pressure(en)">
 				description = <"*Parameters used for Sweep Pressure high frequency probe tone tympanometry.(en)">
 			>
-			["at0083"] = <
+			["id84"] = <
 				text = <"*Start Frequency(en)">
 				description = <"*The frequncy value at which the frequency sweep for tympanometry begins.(en)">
 			>
-			["at0084"] = <
+			["id85"] = <
 				text = <"*Stop Frequency(en)">
 				description = <"*The frequncy value at which the frequency sweep for tympanometry ends.(en)">
 			>
-			["at0085"] = <
+			["id86"] = <
 				text = <"*Rate of Frequency Change(en)">
 				description = <"*The rate of change of the probe tone frequency used in tympanometry.(en)">
 			>
+			["ac1"] = <
+				text = <"*Test Ear(en)">
+				description = <"*Identification of the ear being tested.(en)">
+			>
+			["ac2"] = <
+				text = <"*Tympanogram Type(en)">
+				description = <"*Classification of the the shape of the tympanogram curve.(en)">
+			>
+			["ac3"] = <
+				text = <"*Vanhuyse Classification Type(en)">
+				description = <"*Classification of tympanogram type based on Vanhuyse classification system.(en)">
+			>
+			["ac4"] = <
+				text = <"*Test Result Image(en)">
+				description = <"*Digital representation of the entire result.(en)">
+			>
+			["at81"] = <
+				text = <"*Pressure (en)">
+				description = <"*Pressure (en)">
+			>
+			["at82"] = <
+				text = <"*Electrical conductance (en)">
+				description = <"*Electrical conductance (en)">
+			>
+			["at83"] = <
+				text = <"*Electrical conductance (en)">
+				description = <"*Electrical conductance (en)">
+			>
+			["at84"] = <
+				text = <"*Volume (en)">
+				description = <"*Volume (en)">
+			>
+			["at85"] = <
+				text = <"*Volume (en)">
+				description = <"*Volume (en)">
+			>
+			["at86"] = <
+				text = <"*Frequency (en)">
+				description = <"*Frequency (en)">
+			>
+			["at87"] = <
+				text = <"*Frequency (en)">
+				description = <"*Frequency (en)">
+			>
+			["at88"] = <
+				text = <"*Pressure (en)">
+				description = <"*Pressure (en)">
+			>
+			["at89"] = <
+				text = <"*Electrical conductance (en)">
+				description = <"*Electrical conductance (en)">
+			>
+			["at90"] = <
+				text = <"*Frequency (en)">
+				description = <"*Frequency (en)">
+			>
+			["at91"] = <
+				text = <"*Rate of Change - Pressure (en)">
+				description = <"*Rate of Change - Pressure (en)">
+			>
+			["at92"] = <
+				text = <"*Pressure (en)">
+				description = <"*Pressure (en)">
+			>
+			["at93"] = <
+				text = <"*Pressure (en)">
+				description = <"*Pressure (en)">
+			>
+			["at94"] = <
+				text = <"*Pressure (en)">
+				description = <"*Pressure (en)">
+			>
+			["at95"] = <
+				text = <"*Rate of Change - Frequency (en)">
+				description = <"*Rate of Change - Frequency (en)">
+			>
+			["at96"] = <
+				text = <"*Frequency (en)">
+				description = <"*Frequency (en)">
+			>
+			["at97"] = <
+				text = <"*Frequency (en)">
+				description = <"*Frequency (en)">
+			>
+			["at98"] = <
+				text = <"*image/cgm (en)">
+				description = <"*image/cgm (en)">
+			>
+			["at99"] = <
+				text = <"*image/gif (en)">
+				description = <"*image/gif (en)">
+			>
+			["at100"] = <
+				text = <"*image/png (en)">
+				description = <"*image/png (en)">
+			>
+			["at101"] = <
+				text = <"*image/tiff (en)">
+				description = <"*image/tiff (en)">
+			>
+			["at102"] = <
+				text = <"*image/jpeg (en)">
+				description = <"*image/jpeg (en)">
+			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Tympanogram Result - High Frequency">
 				description = <"Record of measurements of movement at the tympanic membrane in response to a multifrequency probe tone, or a probe tone higher than 226Hz, and changes in air pressure in the ear canal, and their clinical interpretation as an indication of middle ear function.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Tympanogram Type">
 				description = <"Classification of the the shape of the tympanogram curve.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Type 1">
 				description = <"Curve with a single peak and TPP around 0 daPa.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Type 2">
 				description = <"Flat sloping curve  with no distinct peak, Ypeak < 0.2 mmho and/or TW >= 200 daPa.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Type 4">
 				description = <"Double-peaked curve with TPP around 0 daPa.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Test Ear">
 				description = <"Identification of the ear being tested.">
 			>
-			["at0010"] = <
+			["at11"] = <
 				text = <"Left Ear">
 				description = <"The probe was in the left ear.">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Right Ear">
 				description = <"The probe was in the right ear.">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Test Details">
 				description = <"The tympanogram test details, recorded per ear.">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Peak Pressure">
 				description = <"Peak pressure (also called tympanometric preak pressure or middle ear pressure or MEP) is the ear canal pressure at which the peak(s) of the tympanogram occurs.">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Y Peak">
 				description = <"Peak compensated static admittance.">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Ear Canal Volume">
 				description = <"An estimate of the volume of air between the probe tip and the tympanic membrane if the tympanic membrane is intact, or the volume of the ear canal and the middle ear space if the tympanic membrane is perforated. (Fowler & Shanks, 2002, p. 180).">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"Test Result Image">
 				description = <"Digital representation of the entire result.">
 			>
-			["at0021"] = <
+			["id22"] = <
 				text = <"Comment">
 				description = <"Additional narrative about the test results and intepretation not captured in other fields.">
 			>
-			["at0027"] = <
+			["id28"] = <
 				text = <"Measurement Details">
 				description = <"Measurements derived from the tympanomgram.">
 			>
-			["at0029"] = <
+			["id30"] = <
 				text = <"Tympanometric Width">
 				description = <"The pressure interval corresponding to a 50% reduction in the peak static admittance.">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Tympanometric Gradient">
 				description = <"The steepness of the slope of the tympanogram near the peak.">
 			>
-			["at0031"] = <
+			["id32"] = <
 				text = <"No Test Result">
 				description = <"No test result is available for the test ear.">
 			>
-			["at0032"] = <
+			["id33"] = <
 				text = <"Reason for No Test Result">
 				description = <"Reason why no result is available for the test ear.">
 			>
-			["at0033"] = <
+			["id34"] = <
 				text = <"Clinical Interpretation">
 				description = <"Clinical interpretation of all measurements for the test ear.">
 			>
-			["at0035"] = <
+			["at36"] = <
 				text = <"Indeterminate">
 				description = <"It is not possible to classify the type of tympanogram.">
 			>
-			["at0036"] = <
+			["id37"] = <
 				text = <"Overall Interpretation">
 				description = <"Overall clinical interpretation of the measurements and related findings using an tympanometer.">
 			>
-			["at0037"] = <
+			["id38"] = <
 				text = <"Baseline">
 				description = <"Measurement collection recorded as the basis for comparison with following measurement collections that may included other variables of time or patient state.">
 			>
-			["at0038"] = <
+			["id39"] = <
 				text = <"Post Valsalva">
 				description = <"Measurements are recorded after the patient has performed a valsalva manoeuvre.">
 			>
-			["at0039"] = <
+			["id40"] = <
 				text = <"Post Toynbee">
 				description = <"Measurements are recorded after the patient has performed a toynbee manoeuvre.">
 			>
-			["at0040"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0046"] = <
+			["id47"] = <
 				text = <"Rate of Pressure Change">
 				description = <"The rate of change of pressure used in tympanometry.">
 			>
-			["at0050"] = <
+			["id51"] = <
 				text = <"Sweep Frequency">
 				description = <"Parameters used for Sweep Frequency tympanometry.">
 			>
-			["at0051"] = <
+			["id52"] = <
 				text = <"Start Pressure">
 				description = <"The pressure value at which the pressure sweep for tympanometry begins.">
 			>
-			["at0052"] = <
+			["id53"] = <
 				text = <"Stop Pressure">
 				description = <"The pressure value at which the pressure sweep for tympanometry ends. It is a negative pressure if the direction of pressure change is descending and a positive pressure if the direction of pressure change is ascending.">
 			>
-			["at0053"] = <
+			["id54"] = <
 				text = <"Tympanometer">
 				description = <"Details of tympanometer used to conduct the test.">
 			>
-			["at0054"] = <
+			["id55"] = <
 				text = <"Comment">
 				description = <"Additional narrative about the protocol for the tympanogram not captured in other fields.">
 			>
-			["at0057"] = <
+			["at58"] = <
 				text = <"Type 3">
 				description = <"Curve with a single peak and TPP <-150 daPa.">
 			>
-			["at0066"] = <
+			["id67"] = <
 				text = <"Vanhuyse Classification Type">
 				description = <"Classification of tympanogram type based on Vanhuyse classification system.">
 			>
-			["at0067"] = <
+			["at68"] = <
 				text = <"1B1G">
 				description = <"The pattern of results showing 1 susceptance (B) peak and 1 conductance (G) peak.">
 			>
-			["at0068"] = <
+			["at69"] = <
 				text = <"3B1G">
 				description = <"The pattern of results showing 3 susceptance peaks and 1 conductance peak.">
 			>
-			["at0070"] = <
+			["at71"] = <
 				text = <"Type 4u">
 				description = <"Double-peaked curve with TPP <-150 daPa.">
 			>
-			["at0074"] = <
+			["id75"] = <
 				text = <"Y+200">
 				description = <"Admittance at +200Hz.">
 			>
-			["at0075"] = <
+			["id76"] = <
 				text = <"Ear Baseline Value">
 				description = <"Derived ear canal volume.">
 			>
-			["at0076"] = <
+			["id77"] = <
 				text = <"Resonant Frequency">
 				description = <"Frequency at which the total susceptance is zero.">
 			>
-			["at0077"] = <
+			["id78"] = <
 				text = <"F45 Degree">
 				description = <"The frequency corresponding to a 45° phase angle.">
 			>
-			["at0078"] = <
+			["at79"] = <
 				text = <"3B3G">
 				description = <"The pattern of results showing 3 susceptance (B) peaks and 3 conductance (G) peaks.">
 			>
-			["at0079"] = <
+			["at80"] = <
 				text = <"5B3G">
 				description = <"The pattern of results showing 5 susceptance (B) peaks and 3 conductance (G) peaks.">
 			>
-			["at0080"] = <
+			["id81"] = <
 				text = <"Probe Tone Frequency">
 				description = <"The frequency of the probe tone played into the ear canal for tympanometry measurement.">
 			>
-			["at0081"] = <
+			["id82"] = <
 				text = <"Pressure">
 				description = <"The pressure in the ear canal, which is changed over a defined range , while the probe tone frequency is kept constant.">
 			>
-			["at0082"] = <
+			["id83"] = <
 				text = <"Sweep Pressure">
 				description = <"Parameters used for Sweep Pressure high frequency probe tone tympanometry.">
 			>
-			["at0083"] = <
+			["id84"] = <
 				text = <"Start Frequency">
 				description = <"The frequncy value at which the frequency sweep for tympanometry begins.">
 			>
-			["at0084"] = <
+			["id85"] = <
 				text = <"Stop Frequency">
 				description = <"The frequncy value at which the frequency sweep for tympanometry ends.">
 			>
-			["at0085"] = <
+			["id86"] = <
 				text = <"Rate of Frequency Change">
 				description = <"The rate of change of the probe tone frequency used in tympanometry.">
 			>
+			["ac1"] = <
+				text = <"Test Ear">
+				description = <"Identification of the ear being tested.">
+			>
+			["ac2"] = <
+				text = <"Tympanogram Type">
+				description = <"Classification of the the shape of the tympanogram curve.">
+			>
+			["ac3"] = <
+				text = <"Vanhuyse Classification Type">
+				description = <"Classification of tympanogram type based on Vanhuyse classification system.">
+			>
+			["ac4"] = <
+				text = <"Test Result Image">
+				description = <"Digital representation of the entire result.">
+			>
+			["at81"] = <
+				text = <"Pressure">
+				description = <"Pressure">
+			>
+			["at82"] = <
+				text = <"Electrical conductance">
+				description = <"Electrical conductance">
+			>
+			["at83"] = <
+				text = <"Electrical conductance">
+				description = <"Electrical conductance">
+			>
+			["at84"] = <
+				text = <"Volume">
+				description = <"Volume">
+			>
+			["at85"] = <
+				text = <"Volume">
+				description = <"Volume">
+			>
+			["at86"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["at87"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["at88"] = <
+				text = <"Pressure">
+				description = <"Pressure">
+			>
+			["at89"] = <
+				text = <"Electrical conductance">
+				description = <"Electrical conductance">
+			>
+			["at90"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["at91"] = <
+				text = <"Rate of Change - Pressure">
+				description = <"Rate of Change - Pressure">
+			>
+			["at92"] = <
+				text = <"Pressure">
+				description = <"Pressure">
+			>
+			["at93"] = <
+				text = <"Pressure">
+				description = <"Pressure">
+			>
+			["at94"] = <
+				text = <"Pressure">
+				description = <"Pressure">
+			>
+			["at95"] = <
+				text = <"Rate of Change - Frequency">
+				description = <"Rate of Change - Frequency">
+			>
+			["at96"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["at97"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["at98"] = <
+				text = <"image/cgm">
+				description = <"image/cgm">
+			>
+			["at99"] = <
+				text = <"image/gif">
+				description = <"image/gif">
+			>
+			["at100"] = <
+				text = <"image/png">
+				description = <"image/png">
+			>
+			["at101"] = <
+				text = <"image/tiff">
+				description = <"image/tiff">
+			>
+			["at102"] = <
+				text = <"image/jpeg">
+				description = <"image/jpeg">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at81"] = <http://openehr.org/id/125>
+			["at82"] = <http://openehr.org/id/502>
+			["at83"] = <http://openehr.org/id/502>
+			["at84"] = <http://openehr.org/id/129>
+			["at85"] = <http://openehr.org/id/129>
+			["at86"] = <http://openehr.org/id/382>
+			["at87"] = <http://openehr.org/id/382>
+			["at88"] = <http://openehr.org/id/125>
+			["at89"] = <http://openehr.org/id/502>
+			["at90"] = <http://openehr.org/id/382>
+			["at91"] = <http://openehr.org/id/708>
+			["at92"] = <http://openehr.org/id/125>
+			["at93"] = <http://openehr.org/id/125>
+			["at94"] = <http://openehr.org/id/125>
+			["at95"] = <http://openehr.org/id/754>
+			["at96"] = <http://openehr.org/id/382>
+			["at97"] = <http://openehr.org/id/382>
+			["at98"] = <http://openehr.org/id/425>
+			["at99"] = <http://openehr.org/id/426>
+			["at100"] = <http://openehr.org/id/427>
+			["at101"] = <http://openehr.org/id/428>
+			["at102"] = <http://openehr.org/id/429>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at11", "at12">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at6", "at7", "at58", "at8", "at71", "at36">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at68", "at69", "at79", "at80", "at36">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at98", "at99", "at100", "at101", "at102">
 		>
 	>

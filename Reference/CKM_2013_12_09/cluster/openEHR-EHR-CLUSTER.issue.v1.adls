@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.issue.v1.0.0
 
 language
@@ -29,33 +29,33 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Issue presented by a person
+	CLUSTER[id1] matches {	-- Issue presented by a person
 		items matches {
-			ELEMENT[at0001] matches {	-- Issue
+			ELEMENT[id2] matches {	-- Issue
 				value matches {
-					DV_TEXT[id0205] matches {*}
+					DV_TEXT[id4] 
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Detail
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Detail
 				value matches {
-					DV_TEXT[id0605] matches {*}
+					DV_TEXT[id5] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Issue presented by a person">
 				description = <"An issue, symptom, or complaint presented to the health provider seeking explanation, education, understanding, investigation or treatment">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Issue">
 				description = <"The issue as presented by the person">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Detail">
 				description = <"Detailed information about the issue or health problem">
 			>

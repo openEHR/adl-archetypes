@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-ELEMENT.menstrual_cycle_day.v1.0.0
 
 language
@@ -27,18 +27,18 @@ description
 	>
 
 definition
-	ELEMENT[at0000] matches {	-- Current Day of Menstrual cycle
+	ELEMENT[id1] matches {	-- Current Day of Menstrual cycle
 		value matches {
-			DV_COUNT[id0893] matches {
+			DV_COUNT[id2] matches {
 				magnitude matches {|>=1|}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Current Day of Menstrual cycle">
 				description = <"Number of days since onset of last normal menstrual period">
 			>

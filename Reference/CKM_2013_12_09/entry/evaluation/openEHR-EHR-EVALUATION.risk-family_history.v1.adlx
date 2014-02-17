@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-EVALUATION.risk-family_history.v1.0.0
 
 specialize
@@ -29,36 +29,36 @@ description
 	>
 
 definition
-	EVALUATION[at0000.1] matches {	-- Risk of condition based on family history
+	EVALUATION[id1.1] matches {	-- Risk of condition based on family history
 		data matches {
-			ITEM_TREE[at0001] matches {
+			ITEM_TREE[id2] matches {
 				items cardinality matches {1..*; ordered} matches {
-					after [at0002]
-					ELEMENT[at0.31] occurrences matches {0..1} matches {	-- Presence
+					after [id3]
+					ELEMENT[id0.31] occurrences matches {0..1} matches {	-- Presence
 						value matches {
-							DV_BOOLEAN[id0.389] matches {
+							DV_BOOLEAN[id0.168] matches {
 								value matches {True, False}
 							}
 						}
 					}
-					ELEMENT[at0003.1] occurrences matches {0..1} 	-- Assessed risk
-					CLUSTER[at0.2] occurrences matches {0..*} matches {	-- Relative
+					ELEMENT[id4.1] occurrences matches {0..1} 	-- Assessed risk
+					CLUSTER[id0.2] occurrences matches {0..*} matches {	-- Relative
 						items matches {
-							ELEMENT[at0.30] occurrences matches {0..1} matches {	-- Relationship
+							ELEMENT[id0.30] occurrences matches {0..1} matches {	-- Relationship
 								value matches {
-									DV_CODED_TEXT[id0.13] matches {
-										defining_code matches {[ac0.1]}		-- Relationship with subject of entry
+									DV_CODED_TEXT[id0.170] matches {
+										defining_code matches {[local::ac0.1]}
 									}
 								}
 							}
-							ELEMENT[at0.3] occurrences matches {0..1} matches {	-- Name
+							ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Name
 								value matches {
-									DV_TEXT[id0.125] 
+									DV_TEXT[id0.171] 
 								}
 							}
-							ELEMENT[at0.4] occurrences matches {0..1} matches {	-- Age at onset
+							ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Age at onset
 								value matches {
-									DV_QUANTITY[id0.525] matches {
+									DV_QUANTITY[id0.172] matches {
 										property matches {[openehr::128]}
 										[magnitude, units] matches {
 											[{|0.0..200.0|}, {"a"}],
@@ -69,39 +69,39 @@ definition
 									}
 								}
 							}
-							ELEMENT[at0.27] occurrences matches {0..1} matches {	-- Date of onset
+							ELEMENT[id0.27] occurrences matches {0..1} matches {	-- Date of onset
 								value matches {
-									DV_DATE[id0.413] matches {
+									DV_DATE[id0.173] matches {
 										value matches {yyyy-??-??}
 									}
 								}
 							}
-							ELEMENT[at0.5] occurrences matches {0..1} matches {	-- Age at death
+							ELEMENT[id0.5] occurrences matches {0..1} matches {	-- Age at death
 								value matches {
-									DV_QUANTITY[id0.925] matches {
+									DV_QUANTITY[id0.174] matches {
 										property matches {[openehr::128]}
 										magnitude matches {|0.0..200.0|}
 										units matches {"a"}
 									}
 								}
 							}
-							ELEMENT[at0.6] occurrences matches {0..1} matches {	-- Date of death
+							ELEMENT[id0.6] occurrences matches {0..1} matches {	-- Date of death
 								value matches {
-									DV_DATE[id0.325] matches {
+									DV_DATE[id0.175] matches {
 										value matches {yyyy-??-??}
 									}
 								}
 							}
-							ELEMENT[at0.7] occurrences matches {0..1} matches {	-- Index condition was cause of death
+							ELEMENT[id0.7] occurrences matches {0..1} matches {	-- Index condition was cause of death
 								value matches {
-									DV_BOOLEAN[id0.725] matches {
+									DV_BOOLEAN[id0.176] matches {
 										value matches {True, False}
 									}
 								}
 							}
-							ELEMENT[at0.8] occurrences matches {0..1} matches {	-- Severity
+							ELEMENT[id0.8] occurrences matches {0..1} matches {	-- Severity
 								value matches {
-									DV_ORDINAL[id0.126] matches {
+									DV_ORDINAL[id0.177] matches {
 										[value, symbol] matches {
 											[{1}, {[local::at0.9]}],
 											[{4}, {[local::at0.10]}],
@@ -110,30 +110,30 @@ definition
 									}
 								}
 							}
-							ELEMENT[at0.28] occurrences matches {0..1} matches {	-- More specific condition
+							ELEMENT[id0.28] occurrences matches {0..1} matches {	-- More specific condition
 								value matches {
-									DV_TEXT[id0.813] 
+									DV_TEXT[id0.178] 
 								}
 							}
-							ELEMENT[at0.12] occurrences matches {0..1} matches {	-- Clinical description
+							ELEMENT[id0.12] occurrences matches {0..1} matches {	-- Clinical description
 								value matches {
-									DV_TEXT[id0.14] 
+									DV_TEXT[id0.179] 
 								}
 							}
-							ELEMENT[at0.13] occurrences matches {0..1} matches {	-- Genetic relative
+							ELEMENT[id0.13] occurrences matches {0..1} matches {	-- Genetic relative
 								value matches {
-									DV_BOOLEAN[id0.414] matches {
+									DV_BOOLEAN[id0.180] matches {
 										value matches {True, False}
 									}
 								}
 							}
 						}
 					}
-					CLUSTER[at0.14] occurrences matches {0..*} matches {	-- Affected ratio
+					CLUSTER[id0.14] occurrences matches {0..*} matches {	-- Affected ratio
 						items cardinality matches {0..4; ordered} matches {
-							ELEMENT[at0.15] occurrences matches {0..1} matches {	-- Degree
+							ELEMENT[id0.15] occurrences matches {0..1} matches {	-- Degree
 								value matches {
-									DV_CODED_TEXT[id0.845] matches {
+									DV_CODED_TEXT[id0.181] matches {
 										defining_code matches {
 											[local::
 											at0.16, 	-- First degree relatives
@@ -146,9 +146,9 @@ definition
 									}
 								}
 							}
-							ELEMENT[at0.22] occurrences matches {0..1} matches {	-- Gender
+							ELEMENT[id0.22] occurrences matches {0..1} matches {	-- Gender
 								value matches {
-									DV_CODED_TEXT[id0.45] matches {
+									DV_CODED_TEXT[id0.182] matches {
 										defining_code matches {
 											[local::
 											at0.23, 	-- Male
@@ -158,16 +158,16 @@ definition
 									}
 								}
 							}
-							ELEMENT[at0.26] occurrences matches {0..1} matches {	-- Number unaffected
+							ELEMENT[id0.26] occurrences matches {0..1} matches {	-- Number unaffected
 								value matches {
-									DV_COUNT[id0.645] matches {
+									DV_COUNT[id0.183] matches {
 										magnitude matches {|0..100|}
 									}
 								}
 							}
-							ELEMENT[at0.29] matches {	-- Number affected
+							ELEMENT[id0.29] matches {	-- Number affected
 								value matches {
-									DV_COUNT[id0.846] matches {
+									DV_COUNT[id0.184] matches {
 										magnitude matches {|0..100|}
 									}
 								}
@@ -179,7 +179,7 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
 			["at0.1"] = <
@@ -194,19 +194,19 @@ ontology
 				text = <"Severe">
 				description = <"Major morbidity with significant social impact">
 			>
-			["at0.12"] = <
+			["id0.12"] = <
 				text = <"Clinical description">
 				description = <"A clinical description of the affected relatives condition">
 			>
-			["at0.13"] = <
+			["id0.13"] = <
 				text = <"Genetic relative">
 				description = <"A genetic relative of the data subject - not an adoptive relative">
 			>
-			["at0.14"] = <
+			["id0.14"] = <
 				text = <"Affected ratio">
 				description = <"A ratio of the affected to non-affected relatives of a particular type">
 			>
-			["at0.15"] = <
+			["id0.15"] = <
 				text = <"Degree">
 				description = <"The proximity or line of the relatives">
 			>
@@ -226,7 +226,7 @@ ontology
 				text = <"Maternal relatives">
 				description = <"Related through mother">
 			>
-			["at0.2"] = <
+			["id0.2"] = <
 				text = <"Relative">
 				description = <"Details about the affected relative">
 			>
@@ -238,7 +238,7 @@ ontology
 				text = <"Family">
 				description = <"Entire family">
 			>
-			["at0.22"] = <
+			["id0.22"] = <
 				text = <"Gender">
 				description = <"The gender of the relatives included in the affected ratio">
 			>
@@ -254,51 +254,51 @@ ontology
 				text = <"Male and female">
 				description = <"Male and female relatives">
 			>
-			["at0.26"] = <
+			["id0.26"] = <
 				text = <"Number unaffected">
 				description = <"The number of relatives in this group unaffected by the index condition">
 			>
-			["at0.27"] = <
+			["id0.27"] = <
 				text = <"Date of onset">
 				description = <"Date of onset">
 			>
-			["at0.28"] = <
+			["id0.28"] = <
 				text = <"More specific condition">
 				description = <"A coded entry which is more specific than the index condition">
 			>
-			["at0.29"] = <
+			["id0.29"] = <
 				text = <"Number affected">
 				description = <"The number affected by the index condition">
 			>
-			["at0.3"] = <
+			["id0.3"] = <
 				text = <"Name">
 				description = <"Optional name of the person for future reference">
 			>
-			["at0.30"] = <
+			["id0.30"] = <
 				text = <"Relationship">
 				description = <"The relationship">
 			>
-			["at0.31"] = <
+			["id0.31"] = <
 				text = <"Presence">
 				description = <"Presence of condition in at least one related party">
 			>
-			["at0.4"] = <
+			["id0.4"] = <
 				text = <"Age at onset">
 				description = <"The age at which the condition was apparent">
 			>
-			["at0.5"] = <
+			["id0.5"] = <
 				text = <"Age at death">
 				description = <"The age at which this relative died">
 			>
-			["at0.6"] = <
+			["id0.6"] = <
 				text = <"Date of death">
 				description = <"The year or date of death">
 			>
-			["at0.7"] = <
+			["id0.7"] = <
 				text = <"Index condition was cause of death">
 				description = <"Indication that the index was a significant factor in the death of this relative">
 			>
-			["at0.8"] = <
+			["id0.8"] = <
 				text = <"Severity">
 				description = <"The severity of the condition for this relative">
 			>
@@ -306,18 +306,14 @@ ontology
 				text = <"Mild">
 				description = <"Little affect on lifestyle">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Risk of condition based on family history">
 				description = <"Evaluation to indicate that there is, or is not, a significant risk of this subject of care having, now or in the future, a condition due to prior occurrence in a family member.">
 			>
-			["at0003.1"] = <
+			["id4.1"] = <
 				text = <"Assessed risk">
 				description = <"The degree of risk conferred on the subject by the presence of this condition amongst relatives">
 			>
-		>
-	>
-	constraint_definitions = <
-		["en"] = <
 			["ac0.1"] = <
 				text = <"Relationship with subject of entry">
 				description = <"The relationship of the affected relative with the person of whom this is the family history">

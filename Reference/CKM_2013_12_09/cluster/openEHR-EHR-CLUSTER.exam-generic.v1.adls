@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.exam-generic.v1.0.0
 
 specialize
-	openEHR-EHR-CLUSTER.exam.v1.0.0
+	openEHR-EHR-CLUSTER.exam.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -31,38 +31,48 @@ description
 	>
 
 definition
-	CLUSTER[at0000.1] matches {	-- Examination of a named body part
+	CLUSTER[id1.1] matches {	-- Examination of a named body part
 		/items matches {
-			before [at0004]
-			ELEMENT[at0.9] matches {	-- Name of object
+			before [id5]
+			ELEMENT[id0.9] matches {	-- Name of object
 				value matches {
-					DV_TEXT[id0.669] 
+					DV_TEXT[id0.67] 
 				}
 			}
 		}
-		/items[at0008]/items matches {
-			before [at0009]
-			allow_archetype CLUSTER[at0.11] occurrences matches {0..1} matches {	-- Size
+		/items[id9]/items matches {
+			before [id10]
+			allow_archetype CLUSTER[id0.11] occurrences matches {0..1} matches {	-- Size
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0.11"] = <
+			["id0.11"] = <
 				text = <"Size">
 				description = <"Information about the size of the object for examination.">
 			>
-			["at0.9"] = <
+			["id0.9"] = <
 				text = <"Name of object">
 				description = <"The object of examination.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Examination of a named body part">
 				description = <"Generic examination cluster for describing a finding on physical examination.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at1", "at2", "at3">
 		>
 	>

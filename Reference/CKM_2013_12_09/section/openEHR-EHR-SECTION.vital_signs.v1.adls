@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-SECTION.vital_signs.v1.0.0
 
 language
@@ -63,59 +63,59 @@ description
 	>
 
 definition
-	SECTION[at0000] matches {	-- Vital signs
+	SECTION[id1] matches {	-- Vital signs
 		items cardinality matches {1..*; unordered} matches {
-			allow_archetype OBSERVATION[at0001] occurrences matches {0..*} matches {	-- Vital signs
+			allow_archetype OBSERVATION[id2] occurrences matches {0..*} matches {	-- Vital signs
 				include
-					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.body_temperature(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.indirect_oximetry(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.respiration(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.pulse(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.body_temperature(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.indirect_oximetry(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.respiration(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.pulse(-a-zA-Z0-9_]+)*\.v1/}
 			}
-			allow_archetype EVALUATION[at0002] occurrences matches {0..1} matches {	-- Synopsis
+			allow_archetype EVALUATION[id3] occurrences matches {0..1} matches {	-- Synopsis
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.clinical_synopsis(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.clinical_synopsis(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Vital signs">
 				description = <"A group of observations that are recorded at the same time and record the blood pressure, pulse, temperature and other readings.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Vital signs">
 				description = <"Vital signs observations.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Synopsis">
 				description = <"Textual summary of vital signs.">
 			>
 		>
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Vitalparameter">
 				description = <"Eine Gruppe von Observationen, die zur selben Zeit erfasst werden und den Blutdruck, Puls, Temperatur und andere Messungen beinhalten.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"*Vital signs(en)">
 				description = <"*Vital signs observations.(en)">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"*Synopsis(en)">
 				description = <"*Textual summary of vital signs(en)">
 			>
 		>
 		["ko"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"생체 징후">
 				description = <"동시에 기록되는 관찰사항들의 묶음으로 혈압, 맥박수, 체온과 기타 결과들을 기록한다.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"생체 징후">
 				description = <"생체 징후 관찰사항">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"요약">
 				description = <"생체 징후에 대한 문자로 된 요약">
 			>

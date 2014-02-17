@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-DEMOGRAPHIC-ROLE.third_party_payer.v1.0.0
 
 language
@@ -42,59 +42,59 @@ description
 	lifecycle_state = <"unstable">
 
 definition
-	ROLE[at0000] matches {	-- Fonte pagadora
+	ROLE[id1] matches {	-- Fonte pagadora
 		details matches {
-			ITEM_TREE[at0001] occurrences matches {0..1} matches {	-- Documentos de Identificação
+			ITEM_TREE[id2] occurrences matches {0..1} matches {	-- Documentos de Identificação
 				items cardinality matches {1..*; unordered; unique} matches {
-					allow_archetype CLUSTER[at0010] occurrences matches {1..*} matches {	-- Documento de Identificação
+					allow_archetype CLUSTER[id11] occurrences matches {1..*} matches {	-- Documento de Identificação
 						include
-							archetype_id/value matches {/(provider_identifier)[a-zA-Z0-9_-]*\.v1/}
+							archetype_id/value matches {/(provider_identifier)a-zA-Z0-9_-]*\.v1/}
 					}
 				}
 			}
 		}
 		identities cardinality matches {1..*; ordered} matches {
-			allow_archetype PARTY_IDENTITY[at0002] occurrences matches {1..*} matches {	-- Nome
+			allow_archetype PARTY_IDENTITY[id3] occurrences matches {1..*} matches {	-- Nome
 				include
-					archetype_id/value matches {/(organisation_name)[a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(organisation_name)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Fonte pagadora">
 				description = <"Organização no papel de uma fonta pagadora">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Documentos de Identificação">
 				description = <"Documentos utilizados pela organização quando atua como fonte pagadora">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Nome">
 				description = <"Especifica como a fonte pagadora é conhecida">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Documento de Identificação">
 				description = <"Documento de identificação utilizado pela organização quando atua como fonte pagadora">
 			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Third-party payer">
 				description = <"Organisation in the role of a third-party payer">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Identifiers">
 				description = <"The identifiers used by the organisation in the role of a third-party payer">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Name">
 				description = <"Indicates how the third-party payer is known by">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Identifier">
 				description = <"The identifier used by the organisation in the role of a third-party payer">
 			>

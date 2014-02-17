@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.sade_classification.v1.0.0
 
 language
@@ -34,68 +34,78 @@ Lancaster J, Srinivasan V. Management of tympanic membrane retraction pockets. A
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Sade Classification
+	CLUSTER[id1] matches {	-- Sade Classification
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Sade Classification
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Sade Classification
 				value matches {
-					DV_ORDINAL[id0205] matches {
+					DV_ORDINAL[id4] matches {
 						[value, symbol] matches {
-							[{0}, {[local::at0003]}],
-							[{1}, {[local::at0004]}],
-							[{2}, {[local::at0005]}],
-							[{3}, {[local::at0006]}],
-							[{4}, {[local::at0007]}],
-							[{5}, {[local::at0008]}]
+							[{0}, {[at4]}],
+							[{1}, {[at5]}],
+							[{2}, {[at6]}],
+							[{3}, {[at7]}],
+							[{4}, {[at8]}],
+							[{5}, {[at9]}]
 						}
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Comment
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Comment
 				value matches {
-					DV_TEXT[id0605] matches {*}
+					DV_TEXT[id5] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Sade Classification">
 				description = <"Grading of the degree of tympanic membrane pars tensa retraction / atelectasis.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Sade Classification">
 				description = <"Grading of the degree of tympanic membrane pars tensa retraction / atelectasis based on the Sade Classification.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Comment">
 				description = <"Additional comment about the classification.">
 			>
-			["at0003"] = <
+			["at4"] = <
 				text = <"No visible retraction">
 				description = <"The tympanic membrane pars tensa is not visibly retracted.">
 			>
-			["at0004"] = <
+			["at5"] = <
 				text = <"Stage 1 :  Mild retraction">
 				description = <"The tympanic membrane pars tensa is mildly retracted.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Stage 2 : Retraction onto incudostapedial joint">
 				description = <"The tympanic membrane pars tensa is retracted onto the incudostapedial joint.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Stage 3 :  Retraction onto promontary">
 				description = <"The tympanic membrane pars tensa is retracted onto the promontary.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Stage 4 : Adhesion of pars tensa to medial wall">
 				description = <"The tympanic membrane pars tensa is adherent to the medial wall.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Stage 5 : Spontaneous perforation with otorrhea and polyp formation">
 				description = <"The tympanic membrane is spontaneously perforated with evidence of otorrhea and polyp formation.">
 			>
+			["ac1"] = <
+				text = <"Sade Classification">
+				description = <"Grading of the degree of tympanic membrane pars tensa retraction / atelectasis based on the Sade Classification.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at4", "at5", "at6", "at7", "at8", "at9">
 		>
 	>

@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.lab_test-microbiology.v1.0.0
 
 specialize
-	openEHR-EHR-OBSERVATION.lab_test.v1.0.0
+	openEHR-EHR-OBSERVATION.lab_test.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -37,186 +37,179 @@ Specific tests will gnerally require further specialisation or templating constr
 	>
 
 definition
-	OBSERVATION[at0000.1] matches {	-- Microbiolology
-		/data[at0001]/events[at0002]/data[at0003]/items matches {
-			after [at0065]
-			CLUSTER[at0.25] occurrences matches {0..*} matches {	-- Macroscopic findings
+	OBSERVATION[id1.1] matches {	-- Microbiolology
+		/data[id2]/events[id3]/data[id4]/items matches {
+			after [id66]
+			CLUSTER[id0.25] occurrences matches {0..*} matches {	-- Macroscopic findings
 				items matches {
-					ELEMENT[at0.14] occurrences matches {0..1} matches {	-- Colony count
+					ELEMENT[id0.14] occurrences matches {0..1} matches {	-- Colony count
 						value matches {
-							DV_COUNT[id0.173] matches {
+							DV_COUNT[id0.248] matches {
 								magnitude matches {|>=0|}
 							}
 						}
 					}
-					ELEMENT[at0078.3] occurrences matches {0..*} matches {	-- Macroscopic result
+					ELEMENT[id79.3] occurrences matches {0..*} matches {	-- Macroscopic result
 						value matches {
-							DV_TEXT[id0.629] 
+							DV_TEXT[id0.249] 
 						}
 					}
-					ELEMENT[at0.15] occurrences matches {0..1} matches {	-- Description
+					ELEMENT[id0.15] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0.573] 
+							DV_TEXT[id0.250] 
 						}
 					}
 				}
 			}
-			CLUSTER[at0.26] occurrences matches {0..*} matches {	-- Microscopic findings
+			CLUSTER[id0.26] occurrences matches {0..*} matches {	-- Microscopic findings
 				items matches {
-					ELEMENT[at0.18] occurrences matches {0..1} matches {	-- Field count
+					ELEMENT[id0.18] occurrences matches {0..1} matches {	-- Field count
 						value matches {
-							DV_COUNT[id0.597] matches {
+							DV_COUNT[id0.251] matches {
 								magnitude matches {|>=0|}
 							}
 						}
 					}
-					ELEMENT[at0078.6] occurrences matches {0..*} matches {	-- Gram smear result
+					ELEMENT[id79.6] occurrences matches {0..*} matches {	-- Gram smear result
 						value matches {
-							DV_TEXT[id0.661] 
+							DV_TEXT[id0.252] 
 						}
 					}
-					ELEMENT[at0078.4] occurrences matches {0..*} matches {	-- Microscopic result
+					ELEMENT[id79.4] occurrences matches {0..*} matches {	-- Microscopic result
 						value matches {
-							DV_TEXT[id0.861] 
+							DV_TEXT[id0.253] 
 						}
 					}
-					ELEMENT[at0.17] occurrences matches {0..1} matches {	-- Description
+					ELEMENT[id0.17] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0.197] 
+							DV_TEXT[id0.254] 
 						}
 					}
 				}
 			}
-			CLUSTER[at0.34] occurrences matches {0..1} matches {	-- Bodily fluid findings
+			CLUSTER[id0.34] occurrences matches {0..1} matches {	-- Bodily fluid findings
 				items matches {
-					allow_archetype CLUSTER[at0.35] occurrences matches {0..1} matches {	-- Fluid details
+					allow_archetype CLUSTER[id0.35] occurrences matches {0..1} matches {	-- Fluid details
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-a-zA-Z0-9_]+)*\.v1/}
 					}
-					ELEMENT[at0.36] occurrences matches {0..1} matches {	-- Red cell count
+					ELEMENT[id0.36] occurrences matches {0..1} matches {	-- Red cell count
 						value matches {
-							DV_QUANTITY[id0.301] matches {
-								property matches {[openehr::119]}
+							DV_QUANTITY[id0.255] matches {
+								property matches {[at0.14]}
 								magnitude matches {|>=0.0|}
-								units matches {"10*6/l"}
 							}
 						}
 					}
-					ELEMENT[at0.37] occurrences matches {0..1} matches {	-- White cell count
+					ELEMENT[id0.37] occurrences matches {0..1} matches {	-- White cell count
 						value matches {
-							DV_QUANTITY[id0.701] matches {
-								property matches {[openehr::119]}
+							DV_QUANTITY[id0.256] matches {
+								property matches {[at0.15]}
 								magnitude matches {|>=0.0|}
-								units matches {"10*6/l"}
 							}
 						}
 					}
-					ELEMENT[at0.38] occurrences matches {0..1} matches {	-- Description
+					ELEMENT[id0.38] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0.101] 
+							DV_TEXT[id0.257] 
 						}
 					}
 				}
 			}
-			CLUSTER[at0.27] occurrences matches {0..*} matches {	-- Culture findings
+			CLUSTER[id0.27] occurrences matches {0..*} matches {	-- Culture findings
 				items matches {
-					ELEMENT[at0.24] occurrences matches {0..*} matches {	-- Culture method
+					ELEMENT[id0.24] occurrences matches {0..*} matches {	-- Culture method
 						value matches {
-							DV_TEXT[id0.413] 
+							DV_TEXT[id0.258] 
 						}
 					}
-					ELEMENT[at0.32] occurrences matches {0..1} matches {	-- Growth duration
+					ELEMENT[id0.32] occurrences matches {0..1} matches {	-- Growth duration
 						value matches {
-							DV_TEXT[id0.13] 
+							DV_TEXT[id0.259] 
 						}
 					}
-					ELEMENT[at0078.7] occurrences matches {0..*} matches {	-- Beta lactamase
+					ELEMENT[id79.7] occurrences matches {0..*} matches {	-- Beta lactamase
 						value matches {
-							DV_TEXT[id0.893] 
+							DV_TEXT[id0.260] 
 						}
 					}
-					ELEMENT[at0078.8] occurrences matches {0..*} matches {	-- Culture result
+					ELEMENT[id79.8] occurrences matches {0..*} matches {	-- Culture result
 						value matches {
-							DV_TEXT[id0.293] 
+							DV_TEXT[id0.261] 
 						}
 					}
-					ELEMENT[at0.33] occurrences matches {0..1} matches {	-- Description
+					ELEMENT[id0.33] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0.414] 
+							DV_TEXT[id0.262] 
 						}
 					}
-					CLUSTER[at0.20] occurrences matches {0..*} matches {	-- Microbial findings
+					CLUSTER[id0.20] occurrences matches {0..*} matches {	-- Microbial findings
 						items matches {
-							ELEMENT[at0078.1] occurrences matches {0..1} matches {	-- Organism
+							ELEMENT[id79.1] occurrences matches {0..1} matches {	-- Organism
 								value matches {
-									DV_TEXT[id0.598] 
+									DV_TEXT[id0.263] 
 								}
 							}
-							ELEMENT[at0078.9] occurrences matches {0..1} matches {	-- Biotype
+							ELEMENT[id79.9] occurrences matches {0..1} matches {	-- Biotype
 								value matches {
-									DV_TEXT[id0.797] 
+									DV_TEXT[id0.264] 
 								}
 							}
-							ELEMENT[at0078.10] occurrences matches {0..*} 	-- Microbial result
-							ELEMENT[at0.21] occurrences matches {0..1} matches {	-- Description
+							ELEMENT[id79.10] occurrences matches {0..*} 	-- Microbial result
+							ELEMENT[id0.21] occurrences matches {0..1} matches {	-- Description
 								value matches {
-									DV_TEXT[id0.957] 
+									DV_TEXT[id0.265] 
 								}
 							}
-							CLUSTER[at0.7] occurrences matches {0..*} matches {	-- Therapeutic sensitivities
+							CLUSTER[id0.7] occurrences matches {0..*} matches {	-- Therapeutic sensitivities
 								items matches {
-									ELEMENT[at0.30] occurrences matches {0..1} matches {	-- Agent
+									ELEMENT[id0.30] occurrences matches {0..1} matches {	-- Agent
 										value matches {
-											DV_TEXT[id0.229] 
+											DV_TEXT[id0.266] 
 										}
 									}
-									ELEMENT[at0.8] occurrences matches {0..1} matches {	-- Sensitivity
+									ELEMENT[id0.8] occurrences matches {0..1} matches {	-- Sensitivity
 										value matches {
-											DV_CODED_TEXT[id0.365] matches {
-												defining_code matches {
-													[local::
-													at0.11, 	-- Sensitive
-													at0.12, 	-- Resistant
-													at0.13]	-- Borderline resistant
-												}
+											DV_CODED_TEXT[id0.267] matches {
+												defining_code matches {[ac0.2]}		-- (added by post-parse processor)
 											}
 										}
 									}
-									ELEMENT[at0.10] occurrences matches {0..1} matches {	-- Quantified sensitivity
+									ELEMENT[id0.10] occurrences matches {0..1} matches {	-- Quantified sensitivity
 										value matches {
-											DV_QUANTITY[id0.429] matches {
-												property matches {[openehr::119]}
+											DV_QUANTITY[id0.268] matches {
+												property matches {[at0.16]}
 											}
 										}
 									}
-									ELEMENT[at0.9] occurrences matches {0..1} matches {	-- Method of sensitivity
+									ELEMENT[id0.9] occurrences matches {0..1} matches {	-- Method of sensitivity
 										value matches {
-											DV_TEXT[id0.765] 
+											DV_TEXT[id0.269] 
 										}
 									}
 								}
 							}
-							ELEMENT[at0.29] occurrences matches {0..1} matches {	-- Antimicrobial advice
+							ELEMENT[id0.29] occurrences matches {0..1} matches {	-- Antimicrobial advice
 								value matches {
-									DV_TEXT[id0.157] 
+									DV_TEXT[id0.270] 
 								}
 							}
 						}
 					}
 				}
 			}
-			before [at0078]
-			allow_archetype CLUSTER[at0.28] occurrences matches {0..*} matches {	-- Notifications
+			before [id79]
+			allow_archetype CLUSTER[id0.28] occurrences matches {0..*} matches {	-- Notifications
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.notifiable_condition(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.outbreak_identification(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.case_identification(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.notifiable_condition(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.outbreak_identification(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.case_identification(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0.10"] = <
+			["id0.10"] = <
 				text = <"Quantified sensitivity">
 				description = <"A measure of the sensitivity based on a quantifiable method such as the Minimum Inhhibitory Concentration (MIC).">
 			>
@@ -232,133 +225,170 @@ ontology
 				text = <"Borderline resistant">
 				description = <"The microbe is borderline resistant to the therapeutic agent">
 			>
-			["at0.14"] = <
+			["id0.14"] = <
 				text = <"Colony count">
 				description = <"The count of colonies">
 			>
-			["at0.15"] = <
+			["id0.15"] = <
 				text = <"Description">
 				description = <"Description of macroscopic findings">
 			>
-			["at0.17"] = <
+			["id0.17"] = <
 				text = <"Description">
 				description = <"Description of the microscopic findings">
 			>
-			["at0.18"] = <
+			["id0.18"] = <
 				text = <"Field count">
 				description = <"Microscopy field count">
 			>
-			["at0.20"] = <
+			["id0.20"] = <
 				text = <"Microbial findings">
 				description = <"Multiple results obtained from the culture, normally per-microbe.">
 			>
-			["at0.21"] = <
+			["id0.21"] = <
 				text = <"Description">
 				description = <"Information specific to a specific microbial finding.">
 			>
-			["at0.24"] = <
+			["id0.24"] = <
 				text = <"Culture method">
 				description = <"The method of culturing, may be multiple e.g. aerobic and anaerobic cultures. Unbounded as all culture methods may be reported as a combined result or reported singly.">
 			>
-			["at0.25"] = <
+			["id0.25"] = <
 				text = <"Macroscopic findings">
 				description = <"Findings on macroscopic examination.">
 			>
-			["at0.26"] = <
+			["id0.26"] = <
 				text = <"Microscopic findings">
 				description = <"Findings on microscopic examination.">
 			>
-			["at0.27"] = <
+			["id0.27"] = <
 				text = <"Culture findings">
 				description = <"Findings on specimen culture.">
 			>
-			["at0.28"] = <
+			["id0.28"] = <
 				text = <"Notifications">
 				description = <"*">
 			>
-			["at0.29"] = <
+			["id0.29"] = <
 				text = <"Antimicrobial advice">
 				description = <"A text description of antimicrobial advice such as dosing, pharmacokinetic issues, and drug costings.">
 			>
-			["at0.30"] = <
+			["id0.30"] = <
 				text = <"Agent">
 				description = <"Name of the anti-microbial agent.">
 			>
-			["at0.32"] = <
+			["id0.32"] = <
 				text = <"Growth duration">
 				description = <"Duration of growth.">
 			>
-			["at0.33"] = <
+			["id0.33"] = <
 				text = <"Description">
 				description = <"A description of the overall culture finding.">
 			>
-			["at0.34"] = <
+			["id0.34"] = <
 				text = <"Bodily fluid findings">
 				description = <"Findings related to a bodily fluid specimen.">
 			>
-			["at0.35"] = <
+			["id0.35"] = <
 				text = <"Fluid details">
 				description = <"Details of the bodily fluid being examined.">
 			>
-			["at0.36"] = <
+			["id0.36"] = <
 				text = <"Red cell count">
 				description = <"Red blood cell count in the bodily fluid..">
 			>
-			["at0.37"] = <
+			["id0.37"] = <
 				text = <"White cell count">
 				description = <"White blood cell count in the bodily fluid. ">
 			>
-			["at0.38"] = <
+			["id0.38"] = <
 				text = <"Description">
 				description = <"Text description of bodily fluid findings.">
 			>
-			["at0.7"] = <
+			["id0.7"] = <
 				text = <"Therapeutic sensitivities">
 				description = <"The name of the anti-microbial agent against which the organism was tested for susceptabiliity.">
 			>
-			["at0.8"] = <
+			["id0.8"] = <
 				text = <"Sensitivity">
 				description = <"Coded sensitivity">
 			>
-			["at0.9"] = <
+			["id0.9"] = <
 				text = <"Method of sensitivity">
 				description = <"Method used to determine sensitivity.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Microbiolology">
 				description = <"Generic laboratory test archetype for microbiology testing.">
 			>
-			["at0078.1"] = <
+			["id79.1"] = <
 				text = <"Organism">
 				description = <"The name of the organism identified.">
 			>
-			["at0078.10"] = <
+			["id79.10"] = <
 				text = <"Microbial result">
 				description = <"Records other findings related to organisms e.g protein-typing.">
 			>
-			["at0078.3"] = <
+			["id79.3"] = <
 				text = <"Macroscopic result">
 				description = <"The result of the macroscopic aspect of the test.">
 			>
-			["at0078.4"] = <
+			["id79.4"] = <
 				text = <"Microscopic result">
 				description = <"The result of the microscopic aspect of the test.">
 			>
-			["at0078.6"] = <
+			["id79.6"] = <
 				text = <"Gram smear result">
 				description = <"Findings on gram smear testing.">
 			>
-			["at0078.7"] = <
+			["id79.7"] = <
 				text = <"Beta lactamase">
 				description = <"Beta-lactamase result(s).">
 			>
-			["at0078.8"] = <
+			["id79.8"] = <
 				text = <"Culture result">
 				description = <"Results relating to microbial culture.">
 			>
-			["at0078.9"] = <
+			["id79.9"] = <
 				text = <"Biotype">
 				description = <"The organism biotype.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.2"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["at0.14"] = <
+				text = <"Concentration">
+				description = <"Concentration">
+			>
+			["at0.15"] = <
+				text = <"Concentration">
+				description = <"Concentration">
+			>
+			["at0.16"] = <
+				text = <"Concentration">
+				description = <"Concentration">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at0.14"] = <http://openehr.org/id/119>
+			["at0.15"] = <http://openehr.org/id/119>
+			["at0.16"] = <http://openehr.org/id/119>
+		>
+	>
+	value_sets = <
+		["ac0.2"] = <
+			id = <"ac0.2">
+			members = <"at0.11", "at0.12", "at0.13">
+		>
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at38", "at39", "at40", "at41", "at75", "at80">
 		>
 	>

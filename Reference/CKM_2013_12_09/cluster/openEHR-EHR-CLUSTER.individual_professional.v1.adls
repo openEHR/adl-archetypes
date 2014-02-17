@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.individual_professional.v1.0.0
 
 language
@@ -47,59 +47,63 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Professional Individual demographics
+	CLUSTER[id1] matches {	-- Professional Individual demographics
 		items matches {
-			allow_archetype CLUSTER[at0015] occurrences matches {0..1} matches {	-- Name
+			allow_archetype CLUSTER[id16] occurrences matches {0..1} matches {	-- Name
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.person_name\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
 			}
-			CLUSTER[at0003] occurrences matches {0..1} matches {	-- Professional details
+			CLUSTER[id4] occurrences matches {0..1} matches {	-- Professional details
 				items matches {
-					allow_archetype CLUSTER[at0016] occurrences matches {0..*} matches {	-- Professional Role
+					allow_archetype CLUSTER[id17] occurrences matches {0..*} matches {	-- Professional Role
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.professional_role\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
 					}
-					ELEMENT[at0013] occurrences matches {0..1} matches {	-- Period of involvement
+					ELEMENT[id14] occurrences matches {0..1} matches {	-- Period of involvement
 						value matches {
-							DV_INTERVAL<DV_DATE_TIME>[id0317] matches {
+							DV_INTERVAL<DV_DATE_TIME>[id21] matches {
 								upper matches {
-									DV_DATE_TIME[id0418] matches {*}
+									DV_DATE_TIME[id22] 
 								}
 								lower matches {
-									DV_DATE_TIME[id0834] matches {*}
+									DV_DATE_TIME[id23] 
 								}
 							}
 						}
 					}
-					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Grade
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Grade
 						value matches {
-							DV_TEXT[id0717] matches {*}
+							DV_TEXT[id24] 
 						}
 					}
-					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Specialty
+					ELEMENT[id7] occurrences matches {0..1} matches {	-- Specialty
 						value matches {
-							DV_TEXT[id0117] matches {*}
+							DV_TEXT[id25] 
 						}
 					}
-					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Team
+					ELEMENT[id13] occurrences matches {0..1} matches {	-- Team
 						value matches {
-							DV_TEXT[id0917] matches {*}
+							DV_TEXT[id26] 
 						}
 					}
-					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Professional Identifier
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Professional Identifier
 						value matches {
-							DV_TEXT[id0517] matches {*}
+							DV_TEXT[id27] 
 						}
 					}
-					allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {	-- Telecoms
+					allow_archetype CLUSTER[id18] occurrences matches {0..*} matches {	-- Telecoms
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.telecom_details(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.telecom_details(-a-zA-Z0-9_]+)*\.v1/}
 					}
-					allow_archetype CLUSTER[at0019] occurrences matches {0..*} matches {	-- Address
+					allow_archetype CLUSTER[id20] occurrences matches {0..*} matches {	-- Address
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.address(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.address(-a-zA-Z0-9_]+)*\.v1/}
 					}
-					allow_archetype CLUSTER[at0018] occurrences matches {0..*} matches {	-- Organisation
+					allow_archetype CLUSTER[id19] occurrences matches {0..*} matches {	-- Organisation
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v2/}
 					}
@@ -108,104 +112,104 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Professional Individual demographics">
 				description = <"Professional demographics details including name(s) , addresse(s) and telecommunication contact details.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Professional details">
 				description = <"Details of a professional carer.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Grade">
 				description = <"The employment grade or position of the carer.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Specialty">
 				description = <"The speciality of the carer.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Professional Identifier">
 				description = <"Professional identifier of the individual.">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Team">
 				description = <"Team to which the individual belongs.">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Period of involvement">
 				description = <"The period during which this professional was involved in care of the subject.">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Name">
 				description = <"Personal name details of the individual.">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Professional Role">
 				description = <"Professional role details of the individual.">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Telecoms">
 				description = <"Telecommunication details of the individual.">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Organisation">
 				description = <"Organisation details to which the individual is attached.">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Address">
 				description = <"Address details of the individual.">
 			>
 		>
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Persönliche Daten Heilberufler">
 				description = <"Persönliche Daten eines Heilberuflers wie Name(n), Adresse(n) und Kontaktmöglichkeit(en)">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Persönliche Daten">
 				description = <"Weitere Angaben zu einem Helberufler">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Position">
 				description = <"Gibt das Beschäftigungsverhältnis bzw. die Position des Heilberuflers an">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Fachbezeichnung">
 				description = <"Gibt die Fachbezeichnung des Heilberuflers an">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Identifikationsnummer">
 				description = <"*">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Arbeitsgruppe">
 				description = <"Beschreibt die Zugehörigkeit zu einer Gruppe">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Zeitdauer der Betreuung">
 				description = <"Die Zeitspanne während der eine Betreuung durch den Heilberufler stattgefunden hat">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Name">
 				description = <"*">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Rolle">
 				description = <"*">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Kontaktdaten">
 				description = <"*">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Einrichtung">
 				description = <"*">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Adressdaten">
 				description = <"*">
 			>

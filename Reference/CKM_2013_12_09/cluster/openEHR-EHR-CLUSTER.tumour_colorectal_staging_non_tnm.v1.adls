@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.tumour_colorectal_staging_non_tnm.v1.0.0
 
 language
@@ -35,146 +35,148 @@ Available from: http://www.rcpath.org/index.asp?PageID=1153
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Tumour - Colorectal staging (non-TNM)
+	CLUSTER[id1] matches {	-- Tumour - Colorectal staging (non-TNM)
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Dukes Score
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Dukes Score
 				value matches {
-					DV_CODED_TEXT[id0205] matches {
-						defining_code matches {
-							[local::
-							at0007, 	-- Dukes A
-							at0008, 	-- Dukes B
-							at0009, 	-- Dukes C1
-							at0010]	-- Dukes C2
-						}
+					DV_CODED_TEXT[id18] matches {
+						defining_code matches {[ac1]}		-- Dukes Score
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- ACPS Score
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- ACPS Score
 				value matches {
-					DV_CODED_TEXT[id0605] matches {
-						defining_code matches {
-							[local::
-							at0011, 	-- Stage A0
-							at0012, 	-- Stage A
-							at0013, 	-- Stage B
-							at0014, 	-- Stage C
-							at0015]	-- Stage D
-						}
+					DV_CODED_TEXT[id19] matches {
+						defining_code matches {[ac2]}		-- ACPS Score
 					}
 				}
 			}
-			ELEMENT[at0016] occurrences matches {0..1} matches {	-- ACPS Concord variant
+			ELEMENT[id17] occurrences matches {0..1} matches {	-- ACPS Concord variant
 				value matches {
-					DV_CODED_TEXT[id0606] matches {
-						defining_code matches {
-							[local::
-							at0017, 	-- Stage A1
-							at0018, 	-- Stage A2
-							at0019, 	-- Stage A3
-							at0020, 	-- Stage B1
-							at0021, 	-- Stage B2
-							at0022, 	-- Stage C1
-							at0023, 	-- Stage C2
-							at0024, 	-- Stage D1
-							at0025]	-- Stage D2
-						}
+					DV_CODED_TEXT[id20] matches {
+						defining_code matches {[ac3]}		-- ACPS Concord variant
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Tumour - Colorectal staging (non-TNM)">
 				description = <"Non-TNM staging scores for colorectal cancer.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Dukes Score">
 				description = <"Dukes classification for colorectal cancer (Dukes and Bussey modification)">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"ACPS Score">
 				description = <"Australian clinicopathological staging (ACPS) system.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Dukes A">
 				description = <"Tumour limited to the wall of the bowel, lymph nodes negative.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Dukes B">
 				description = <"Tumour spread beyond muscularis propria, lymph nodes negative.">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"Dukes C1">
 				description = <"Lymph nodes positive but highest node spared.">
 			>
-			["at0010"] = <
+			["at11"] = <
 				text = <"Dukes C2">
 				description = <"Highest lymph node involved.">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Stage A0">
 				description = <"Mucosa involved.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Stage A">
 				description = <"Submucosa involved.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Stage B">
 				description = <"Muscularis propria involved.">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Stage C">
 				description = <"Local nodes involved.">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Stage D">
 				description = <"Tumour transected (histological).">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"ACPS Concord variant">
 				description = <"Concord substage variant of Australian clinicopathological staging (ACPS) system.">
 			>
-			["at0017"] = <
+			["at18"] = <
 				text = <"Stage A1">
 				description = <"Mucosa involved.">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"Stage A2">
 				description = <"Submucosa involved.">
 			>
-			["at0019"] = <
+			["at20"] = <
 				text = <"Stage A3">
 				description = <"Muscularis propria involved">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Stage B1">
 				description = <"Involvement beyond muscularis propria.">
 			>
-			["at0021"] = <
+			["at22"] = <
 				text = <"Stage B2">
 				description = <"Involvement of free serosal surface.">
 			>
-			["at0022"] = <
+			["at23"] = <
 				text = <"Stage C1">
 				description = <"Local nodes involved">
 			>
-			["at0023"] = <
+			["at24"] = <
 				text = <"Stage C2">
 				description = <"Apical nodes involved.">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Stage D1">
 				description = <"Tumour transected (histological)">
 			>
-			["at0025"] = <
+			["at26"] = <
 				text = <"Stage D2">
 				description = <"Distant metastases (clinical or histological).">
 			>
+			["ac1"] = <
+				text = <"Dukes Score">
+				description = <"Dukes classification for colorectal cancer (Dukes and Bussey modification)">
+			>
+			["ac2"] = <
+				text = <"ACPS Score">
+				description = <"Australian clinicopathological staging (ACPS) system.">
+			>
+			["ac3"] = <
+				text = <"ACPS Concord variant">
+				description = <"Concord substage variant of Australian clinicopathological staging (ACPS) system.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at8", "at9", "at10", "at11">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at12", "at13", "at14", "at15", "at16">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at18", "at19", "at20", "at21", "at22", "at23", "at24", "at25", "at26">
 		>
 	>

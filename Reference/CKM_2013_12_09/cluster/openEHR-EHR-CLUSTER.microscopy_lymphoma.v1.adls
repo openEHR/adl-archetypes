@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.microscopy_lymphoma.v1.0.0
 
 language
@@ -35,133 +35,72 @@ Available from: http://www.cap.org/apps/docs/committees/cancer/cancer_protocols/
 	>
 
 definition
-	CLUSTER[at0000] occurrences matches {0..1} matches {	-- Microscopic findings - Lymphoma
+	CLUSTER[id1] occurrences matches {0..1} matches {	-- Microscopic findings - Lymphoma
 		items matches {
-			ELEMENT[at0078] occurrences matches {0..1} matches {	-- Infiltration pattern
+			ELEMENT[id79] occurrences matches {0..1} matches {	-- Infiltration pattern
 				value matches {
-					DV_TEXT[id0805] matches {*}
+					DV_TEXT[id139] 
 				}
 			}
-			ELEMENT[at0079] occurrences matches {0..1} matches {	-- Tumour cell size
+			ELEMENT[id80] occurrences matches {0..1} matches {	-- Tumour cell size
 				value matches {
-					DV_CODED_TEXT[id0205] matches {
-						defining_code matches {
-							[local::
-							at0098, 	-- Small
-							at0099, 	-- Medium
-							at0100, 	-- Large
-							at0101, 	-- Indeterminate
-							at0136]	-- Mixed
-						}
+					DV_CODED_TEXT[id140] matches {
+						defining_code matches {[ac1]}		-- Tumour cell size
 					}
 				}
 			}
-			ELEMENT[at0125] occurrences matches {0..1} matches {	-- Proliferative indicators
+			ELEMENT[id126] occurrences matches {0..1} matches {	-- Proliferative indicators
 				value matches {
-					DV_TEXT[id0349] matches {*}
+					DV_TEXT[id141] 
 				}
 			}
-			CLUSTER[at0080] occurrences matches {0..1} matches {	-- Abnormal cytomorphology
+			CLUSTER[id81] occurrences matches {0..1} matches {	-- Abnormal cytomorphology
 				items matches {
-					CLUSTER[at0131] occurrences matches {0..1} matches {	-- Cytomorphology findings
+					CLUSTER[id132] occurrences matches {0..1} matches {	-- Cytomorphology findings
 						items matches {
-							ELEMENT[at0081] occurrences matches {0..*} matches {	-- Generic features
+							ELEMENT[id82] occurrences matches {0..*} matches {	-- Generic features
 								value matches {
-									DV_CODED_TEXT[id0933] matches {
-										defining_code matches {
-											[local::
-											at0102, 	-- Pleomorphic
-											at0103, 	-- Hyperbolate
-											at0104, 	-- Anaplastic
-											at0105, 	-- Clear cell
-											at0106, 	-- Giant cell
-											at0107, 	-- Spindle cell
-											at0108, 	-- Signet ring cell
-											at0109, 	-- Blastic
-											at0110]	-- Indeterminate
-										}
+									DV_CODED_TEXT[id142] matches {
+										defining_code matches {[ac2]}		-- Generic features
 									}
-									DV_TEXT[id0934] matches {*}
+									DV_TEXT[id143] 
 								}
 							}
-							ELEMENT[at0082] occurrences matches {0..*} matches {	-- Specific features
+							ELEMENT[id83] occurrences matches {0..*} matches {	-- Specific features
 								value matches {
-									DV_CODED_TEXT[id0333] matches {
-										defining_code matches {
-											[local::
-											at0111, 	-- Centroblastic
-											at0112, 	-- Centrocytic
-											at0113, 	-- Immunoblastic
-											at0114, 	-- Plasmacytic
-											at0115, 	-- Lymphoplasmacytic
-											at0116, 	-- Lymphoplasmacytoid
-											at0117, 	-- Prolymphocytic
-											at0118, 	-- Paraimmunoblastic
-											at0119, 	-- Plasmablastic
-											at0120, 	-- Monocytoid
-											at0121, 	-- Centrocyte-like
-											at0122, 	-- Popcorn cell
-											at0123, 	-- Reed-Sternberg cell-like
-											at0133]	-- Indeterminate
-										}
+									DV_CODED_TEXT[id144] matches {
+										defining_code matches {[ac3]}		-- Specific features
 									}
-									DV_TEXT[id0334] matches {*}
+									DV_TEXT[id145] 
 								}
 							}
 						}
 					}
 				}
 			}
-			ELEMENT[at0137] occurrences matches {0..1} matches {	-- Grade (follicular lymphoma)
+			ELEMENT[id138] occurrences matches {0..1} matches {	-- Grade (follicular lymphoma)
 				value matches {
-					DV_CODED_TEXT[id0549] matches {
-						defining_code matches {
-							[local::
-							at0138, 	-- Grade 1
-							at0139, 	-- Grade 2
-							at0140, 	-- Grade 3
-							at0141, 	-- Grade 3a
-							at0142]	-- Grade 3b
-						}
+					DV_CODED_TEXT[id146] matches {
+						defining_code matches {[ac4]}		-- Grade (follicular lymphoma)
 					}
 				}
 			}
-			CLUSTER[at0075] occurrences matches {0..1} matches {	-- Host cell/tissue reactions
+			CLUSTER[id76] occurrences matches {0..1} matches {	-- Host cell/tissue reactions
 				items matches {
-					ELEMENT[at0076] occurrences matches {0..*} matches {	-- Host cell reaction
+					ELEMENT[id77] occurrences matches {0..*} matches {	-- Host cell reaction
 						value matches {
-							DV_CODED_TEXT[id0949] matches {
-								defining_code matches {
-									[local::
-									at0092, 	-- T-cell rich
-									at0093, 	-- Eosinophil-rich
-									at0094, 	-- Histiocyte-rich
-									at0095, 	-- Neutrophil-rich
-									at0096, 	-- Plasma cell-rich
-									at0097, 	-- Erythrophagocytic
-									at0134]	-- Indeterminate
-								}
+							DV_CODED_TEXT[id147] matches {
+								defining_code matches {[ac5]}		-- Host cell reaction
 							}
-							DV_TEXT[id0950] matches {*}
+							DV_TEXT[id148] 
 						}
 					}
-					ELEMENT[at0077] occurrences matches {0..*} matches {	-- Host tissue reaction
+					ELEMENT[id78] occurrences matches {0..*} matches {	-- Host tissue reaction
 						value matches {
-							DV_CODED_TEXT[id0350] matches {
-								defining_code matches {
-									[local::
-									at0084, 	-- Necrotic
-									at0085, 	-- Sclerotic
-									at0086, 	-- Granulomatous
-									at0087, 	-- Suppurative
-									at0088, 	-- High Endothelial Venule (HEV) hyperplasia
-									at0089, 	-- Starry sky pattern
-									at0090, 	-- Amyloid
-									at0091, 	-- Increased reticulin
-									at0135]	-- Indeterminate
-								}
+							DV_CODED_TEXT[id149] matches {
+								defining_code matches {[ac6]}		-- Host tissue reaction
 							}
-							DV_TEXT[id0351] matches {*}
+							DV_TEXT[id150] 
 						}
 					}
 				}
@@ -169,252 +108,302 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Microscopic findings - Lymphoma">
 				description = <"Microscopic anatomical pathology findings related to lymphoma and other haematopoietic tumours, excluding leukaemias.">
 			>
-			["at0075"] = <
+			["id76"] = <
 				text = <"Host cell/tissue reactions">
 				description = <"Findings of host cell reactions to tumour.">
 			>
-			["at0076"] = <
+			["id77"] = <
 				text = <"Host cell reaction">
 				description = <"Finding of a host cell reaction to tumour.">
 			>
-			["at0077"] = <
+			["id78"] = <
 				text = <"Host tissue reaction">
 				description = <"Finding of host tissue reactions to tumour.">
 			>
-			["at0078"] = <
+			["id79"] = <
 				text = <"Infiltration pattern">
 				description = <"Findings of pattern of abnormal cell infiltration.">
 			>
-			["at0079"] = <
+			["id80"] = <
 				text = <"Tumour cell size">
 				description = <"Estimates of tumour cell size.">
 			>
-			["at0080"] = <
+			["id81"] = <
 				text = <"Abnormal cytomorphology">
 				description = <"Findings of abnormal cell morphology.">
 			>
-			["at0081"] = <
+			["id82"] = <
 				text = <"Generic features">
 				description = <"Finding of generic cytomorphology features.">
 			>
-			["at0082"] = <
+			["id83"] = <
 				text = <"Specific features">
 				description = <"Finding of specific cytomorphology features.">
 			>
-			["at0084"] = <
+			["at85"] = <
 				text = <"Necrotic">
 				description = <"Necrotic host tissue reaction is present.">
 			>
-			["at0085"] = <
+			["at86"] = <
 				text = <"Sclerotic">
 				description = <"Sclerotic host tissue reaction is present.">
 			>
-			["at0086"] = <
+			["at87"] = <
 				text = <"Granulomatous">
 				description = <"Granulomatous host tissue reaction is present.">
 			>
-			["at0087"] = <
+			["at88"] = <
 				text = <"Suppurative">
 				description = <"Suppurative host tissue reaction to tumour is present.">
 			>
-			["at0088"] = <
+			["at89"] = <
 				text = <"High Endothelial Venule (HEV) hyperplasia">
 				description = <"High Endothelial Venule (HEV) hyperplasia is present.">
 			>
-			["at0089"] = <
+			["at90"] = <
 				text = <"Starry sky pattern">
 				description = <"Starry sky pattern is present.">
 			>
-			["at0090"] = <
+			["at91"] = <
 				text = <"Amyloid">
 				description = <"Amyloid host tissue reaction is present.">
 			>
-			["at0091"] = <
+			["at92"] = <
 				text = <"Increased reticulin">
 				description = <"Increased reticulin is present.">
 			>
-			["at0092"] = <
+			["at93"] = <
 				text = <"T-cell rich">
 				description = <"T-cell rich host cell reaction is present.">
 			>
-			["at0093"] = <
+			["at94"] = <
 				text = <"Eosinophil-rich">
 				description = <"Eosinophil-rich host cell reaction is present.">
 			>
-			["at0094"] = <
+			["at95"] = <
 				text = <"Histiocyte-rich">
 				description = <"Histiocyte-rich host cell reaction is present.">
 			>
-			["at0095"] = <
+			["at96"] = <
 				text = <"Neutrophil-rich">
 				description = <"Neutrophil-rich host cell reaction is present.">
 			>
-			["at0096"] = <
+			["at97"] = <
 				text = <"Plasma cell-rich">
 				description = <"Plasma cell-rich host cell reaction is present.">
 			>
-			["at0097"] = <
+			["at98"] = <
 				text = <"Erythrophagocytic">
 				description = <"Erythrophagocytic host cell reaction is present.">
 			>
-			["at0098"] = <
+			["at99"] = <
 				text = <"Small">
 				description = <"Small or intermediate tumour cell size (smaller than a histiocyte  nucleus).">
 			>
-			["at0099"] = <
+			["at100"] = <
 				text = <"Medium">
 				description = <"Medium tumour cell size (equal to a histiocyte nucleus).">
 			>
-			["at0100"] = <
+			["at101"] = <
 				text = <"Large">
 				description = <"Large tumour cell size (larger than a histiocyte nucleus).">
 			>
-			["at0101"] = <
+			["at102"] = <
 				text = <"Indeterminate">
 				description = <"The tumour cell size has not been determined.">
 			>
-			["at0102"] = <
+			["at103"] = <
 				text = <"Pleomorphic">
 				description = <"Pleomorphic features are present.">
 			>
-			["at0103"] = <
+			["at104"] = <
 				text = <"Hyperbolate">
 				description = <"Hyperbolate features are present.">
 			>
-			["at0104"] = <
+			["at105"] = <
 				text = <"Anaplastic">
 				description = <"Anaplastic features are present.">
 			>
-			["at0105"] = <
+			["at106"] = <
 				text = <"Clear cell">
 				description = <"Clear cell features are present.">
 			>
-			["at0106"] = <
+			["at107"] = <
 				text = <"Giant cell">
 				description = <"Giant cell features are present.">
 			>
-			["at0107"] = <
+			["at108"] = <
 				text = <"Spindle cell">
 				description = <"Spindle cell features are present.">
 			>
-			["at0108"] = <
+			["at109"] = <
 				text = <"Signet ring cell">
 				description = <"Signet ring cell features are present.">
 			>
-			["at0109"] = <
+			["at110"] = <
 				text = <"Blastic">
 				description = <"Blastic features are present.">
 			>
-			["at0110"] = <
+			["at111"] = <
 				text = <"Indeterminate">
 				description = <"Generic abnormal cell features have not been determined.">
 			>
-			["at0111"] = <
+			["at112"] = <
 				text = <"Centroblastic">
 				description = <"Centroblastic features are present.">
 			>
-			["at0112"] = <
+			["at113"] = <
 				text = <"Centrocytic">
 				description = <"Centrocytic features are present.">
 			>
-			["at0113"] = <
+			["at114"] = <
 				text = <"Immunoblastic">
 				description = <"Immunoblastic features are present.">
 			>
-			["at0114"] = <
+			["at115"] = <
 				text = <"Plasmacytic">
 				description = <"Plasmacytic features are present.">
 			>
-			["at0115"] = <
+			["at116"] = <
 				text = <"Lymphoplasmacytic">
 				description = <"Lymphoplasmacytic features are present.">
 			>
-			["at0116"] = <
+			["at117"] = <
 				text = <"Lymphoplasmacytoid">
 				description = <"Lymphoplasmacytoid features are present.">
 			>
-			["at0117"] = <
+			["at118"] = <
 				text = <"Prolymphocytic">
 				description = <"Prolymphocytic features are present.">
 			>
-			["at0118"] = <
+			["at119"] = <
 				text = <"Paraimmunoblastic">
 				description = <"Paraimmunoblastic features are present.">
 			>
-			["at0119"] = <
+			["at120"] = <
 				text = <"Plasmablastic">
 				description = <"Plasmablastic features are present.">
 			>
-			["at0120"] = <
+			["at121"] = <
 				text = <"Monocytoid">
 				description = <"Monocytoid features are present.">
 			>
-			["at0121"] = <
+			["at122"] = <
 				text = <"Centrocyte-like">
 				description = <"Centrocyte-like features are present.">
 			>
-			["at0122"] = <
+			["at123"] = <
 				text = <"Popcorn cell">
 				description = <"Popcorn cell features are present.">
 			>
-			["at0123"] = <
+			["at124"] = <
 				text = <"Reed-Sternberg cell-like">
 				description = <"Reed-Sternberg cell-like cytomorphology features are present.">
 			>
-			["at0125"] = <
+			["id126"] = <
 				text = <"Proliferative indicators">
 				description = <"Proilerative indicators of abnormal cells.">
 			>
-			["at0131"] = <
+			["id132"] = <
 				text = <"Cytomorphology findings">
 				description = <"Findings of generic cytomorphology.">
 			>
-			["at0133"] = <
+			["at134"] = <
 				text = <"Indeterminate">
 				description = <"Specific cytomorphology features have not been determined.">
 			>
-			["at0134"] = <
+			["at135"] = <
 				text = <"Indeterminate">
 				description = <"Presence of a host cell reaction has not been determined.">
 			>
-			["at0135"] = <
+			["at136"] = <
 				text = <"Indeterminate">
 				description = <"Presence of a host tissue reaction has not been determined.">
 			>
-			["at0136"] = <
+			["at137"] = <
 				text = <"Mixed">
 				description = <"Mixed tumour cell size.">
 			>
-			["at0137"] = <
+			["id138"] = <
 				text = <"Grade (follicular lymphoma)">
 				description = <"Histological grade - follicular lymphoma only.">
 			>
-			["at0138"] = <
+			["at139"] = <
 				text = <"Grade 1">
 				description = <"Follicular lymphoma Grade 1.">
 			>
-			["at0139"] = <
+			["at140"] = <
 				text = <"Grade 2">
 				description = <"Follicular lymphoma Grade 2.">
 			>
-			["at0140"] = <
+			["at141"] = <
 				text = <"Grade 3">
 				description = <"Follicular lymphoma Grade 3.">
 			>
-			["at0141"] = <
+			["at142"] = <
 				text = <"Grade 3a">
 				description = <"Follicular lymphoma Grade 3a.">
 			>
-			["at0142"] = <
+			["at143"] = <
 				text = <"Grade 3b">
 				description = <"Follicular lymphoma Grade 3b.">
 			>
+			["ac1"] = <
+				text = <"Tumour cell size">
+				description = <"Estimates of tumour cell size.">
+			>
+			["ac2"] = <
+				text = <"Generic features">
+				description = <"Finding of generic cytomorphology features.">
+			>
+			["ac3"] = <
+				text = <"Specific features">
+				description = <"Finding of specific cytomorphology features.">
+			>
+			["ac4"] = <
+				text = <"Grade (follicular lymphoma)">
+				description = <"Histological grade - follicular lymphoma only.">
+			>
+			["ac5"] = <
+				text = <"Host cell reaction">
+				description = <"Finding of a host cell reaction to tumour.">
+			>
+			["ac6"] = <
+				text = <"Host tissue reaction">
+				description = <"Finding of host tissue reactions to tumour.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at99", "at100", "at101", "at102", "at137">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at103", "at104", "at105", "at106", "at107", "at108", "at109", "at110", "at111">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at112", "at113", "at114", "at115", "at116", "at117", "at118", "at119", "at120", "at121", "at122", "at123", "at124", "at134">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at139", "at140", "at141", "at142", "at143">
+		>
+		["ac5"] = <
+			id = <"ac5">
+			members = <"at93", "at94", "at95", "at96", "at97", "at98", "at135">
+		>
+		["ac6"] = <
+			id = <"ac6">
+			members = <"at85", "at86", "at87", "at88", "at89", "at90", "at91", "at92", "at136">
 		>
 	>

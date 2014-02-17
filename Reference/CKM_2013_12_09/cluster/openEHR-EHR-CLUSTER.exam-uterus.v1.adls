@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.exam-uterus.v1.0.0
 
 specialize
-	openEHR-EHR-CLUSTER.exam.v1.0.0
+	openEHR-EHR-CLUSTER.exam.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -31,82 +31,71 @@ description
 	>
 
 definition
-	CLUSTER[at0000.1] matches {	-- Examination of the uterus
-		/items[at0008.1]/items matches {
-			after [at0009]
-			ELEMENT[at0.24] occurrences matches {0..1} matches {	-- Position
+	CLUSTER[id1.1] matches {	-- Examination of the uterus
+		/items[id9.1]/items matches {
+			after [id10]
+			ELEMENT[id0.24] occurrences matches {0..1} matches {	-- Position
 				value matches {
-					DV_CODED_TEXT[id0.13] matches {
-						defining_code matches {
-							[local::
-							at0.26, 	-- Anteverted
-							at0.27]	-- Retroverted
-						}
+					DV_CODED_TEXT[id0.121] matches {
+						defining_code matches {[ac0.1]}		-- (added by post-parse processor)
 					}
 				}
 			}
-			CLUSTER[at0.1] occurrences matches {0..1} matches {	-- Size
+			CLUSTER[id0.1] occurrences matches {0..1} matches {	-- Size
 				items matches {
-					ELEMENT[at0.2] occurrences matches {0..1} matches {	-- Fundal height
+					ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Fundal height
 						value matches {
-							DV_QUANTITY[id0.221] matches {
-								property matches {[openehr::122]}
+							DV_QUANTITY[id0.122] matches {
+								property matches {[at0.28]}
 								magnitude matches {|0.0..100.0|}
-								units matches {"cm"}
-								precision matches {1}
 							}
 						}
 					}
-					allow_archetype CLUSTER[at0.31] occurrences matches {0..1} matches {	-- Size
+					allow_archetype CLUSTER[id0.31] occurrences matches {0..1} matches {	-- Size
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1/}
 					}
-					ELEMENT[at0.3] occurrences matches {0..1} matches {	-- Weeks of gestation
+					ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Weeks of gestation
 						value matches {
-							DV_DURATION[id0.621] matches {
-								value matches {PW/}
+							DV_DURATION[id0.123] matches {
+								value matches {PW}
 							}
 						}
 					}
-					ELEMENT[at0.20] occurrences matches {0..1} matches {	-- Relative to anatomical markers
+					ELEMENT[id0.20] occurrences matches {0..1} matches {	-- Relative to anatomical markers
 						value matches {
-							DV_CODED_TEXT[id0.109] matches {
-								defining_code matches {
-									[local::
-									at0.21, 	-- At symphisis pubis
-									at0.22, 	-- At umbilicus
-									at0.23]	-- At xiphisternum
-								}
+							DV_CODED_TEXT[id0.124] matches {
+								defining_code matches {[ac0.2]}		-- (added by post-parse processor)
 							}
 						}
 					}
 				}
 			}
-			ELEMENT[at0.4] occurrences matches {0..1} matches {	-- Assessment of liquor volume
+			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Assessment of liquor volume
 				value matches {
-					DV_ORDINAL[id0.333] matches {
+					DV_ORDINAL[id0.125] matches {
 						[value, symbol] matches {
-							[{-3}, {[local::at0.5]}],
-							[{-2}, {[local::at0.6]}],
-							[{-1}, {[local::at0.7]}],
-							[{0}, {[local::at0.8]}],
-							[{1}, {[local::at0.9]}],
-							[{2}, {[local::at0.10]}],
-							[{3}, {[local::at0.11]}]
+							[{-3}, {[at0.5]}],
+							[{-2}, {[at0.6]}],
+							[{-1}, {[at0.7]}],
+							[{0}, {[at0.8]}],
+							[{1}, {[at0.9]}],
+							[{2}, {[at0.10]}],
+							[{3}, {[at0.11]}]
 						}
 					}
 				}
 			}
-			ELEMENT[at0.12] occurrences matches {0..1} matches {	-- Number of fetuses
+			ELEMENT[id0.12] occurrences matches {0..1} matches {	-- Number of fetuses
 				value matches {
-					DV_COUNT[id0.813] matches {
+					DV_COUNT[id0.126] matches {
 						magnitude matches {|>=0|}
 					}
 				}
 			}
-			CLUSTER[at0.18] occurrences matches {0..1} matches {	-- Fetus
+			CLUSTER[id0.18] occurrences matches {0..1} matches {	-- Fetus
 				items matches {
-					allow_archetype CLUSTER[at0.30] occurrences matches {0..*} matches {	-- Fetal detail
+					allow_archetype CLUSTER[id0.30] occurrences matches {0..*} matches {	-- Fetal detail
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-fetus\.v1/}
 					}
@@ -115,10 +104,10 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0.1"] = <
+			["id0.1"] = <
 				text = <"Size">
 				description = <"Information about the size of the object for examination.">
 			>
@@ -130,19 +119,19 @@ ontology
 				text = <"Markedly increased">
 				description = <"The amount of liquor is greatly increased compared to normal for gestation.">
 			>
-			["at0.12"] = <
+			["id0.12"] = <
 				text = <"Number of fetuses">
 				description = <"The number of foetuses that are in the uterus.">
 			>
-			["at0.18"] = <
+			["id0.18"] = <
 				text = <"Fetus">
 				description = <"Information about one or more foetuses.">
 			>
-			["at0.2"] = <
+			["id0.2"] = <
 				text = <"Fundal height">
 				description = <"The height of the uterine fundus measured from the symphysis pubis.">
 			>
-			["at0.20"] = <
+			["id0.20"] = <
 				text = <"Relative to anatomical markers">
 				description = <"Relative size of uterus related to anatomy of person.">
 			>
@@ -158,7 +147,7 @@ ontology
 				text = <"At xiphisternum">
 				description = <"*">
 			>
-			["at0.24"] = <
+			["id0.24"] = <
 				text = <"Position">
 				description = <"Position of uterus.">
 			>
@@ -170,19 +159,19 @@ ontology
 				text = <"Retroverted">
 				description = <"Uterine fundus is tipped backward.">
 			>
-			["at0.3"] = <
+			["id0.3"] = <
 				text = <"Weeks of gestation">
 				description = <"The size in terms of weeks of pregnancy.">
 			>
-			["at0.30"] = <
+			["id0.30"] = <
 				text = <"Fetal detail">
 				description = <"Detailed information about one or more foetuses.">
 			>
-			["at0.31"] = <
+			["id0.31"] = <
 				text = <"Size">
 				description = <"Details of uterine size.">
 			>
-			["at0.4"] = <
+			["id0.4"] = <
 				text = <"Assessment of liquor volume">
 				description = <"The relative amount of liquor present in the uterus.">
 			>
@@ -206,13 +195,56 @@ ontology
 				text = <"Slightly increased">
 				description = <"The amount of liquor is slightly increased.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Examination of the uterus">
 				description = <"For recording findings of the uterus including when pregnant.">
 			>
-			["at0008.1"] = <
+			["id9.1"] = <
 				text = <"Findings">
 				description = <"Clinical findings.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.2"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.3"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["at0.28"] = <
+				text = <"Length">
+				description = <"Length">
+			>
+			["ac0.4"] = <
+				text = <"Assessment of liquor volume">
+				description = <"The relative amount of liquor present in the uterus.">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at0.28"] = <http://openehr.org/id/122>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at0.26", "at0.27">
+		>
+		["ac0.2"] = <
+			id = <"ac0.2">
+			members = <"at0.21", "at0.22", "at0.23">
+		>
+		["ac0.3"] = <
+			id = <"ac0.3">
+			members = <"at1", "at2", "at3">
+		>
+		["ac0.4"] = <
+			id = <"ac0.4">
+			members = <"at0.5", "at0.6", "at0.7", "at0.8", "at0.9", "at0.10", "at0.11">
 		>
 	>

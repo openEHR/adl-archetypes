@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.menstrual_cycle.v1.0.0
 
 language
@@ -28,51 +28,44 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Menstrual cycle
+	CLUSTER[id1] matches {	-- Menstrual cycle
 		items matches {
-			CLUSTER[at0001] occurrences matches {0..1} matches {	-- Normal Statements
+			CLUSTER[id2] occurrences matches {0..1} matches {	-- Normal Statements
 				items matches {
-					ELEMENT[at0002] occurrences matches {0..*} matches {	-- Normal Statement
+					ELEMENT[id3] occurrences matches {0..*} matches {	-- Normal Statement
 						value matches {
-							DV_TEXT[id0677] matches {*}
+							DV_TEXT[id65] 
 						}
 					}
 				}
 			}
-			ELEMENT[at0061] occurrences matches {0..1} matches {	-- Clinical description
+			ELEMENT[id62] occurrences matches {0..1} matches {	-- Clinical description
 				value matches {
-					DV_TEXT[id0605] matches {*}
+					DV_TEXT[id66] 
 				}
 			}
-			CLUSTER[at0003] occurrences matches {0..1} matches {	-- Findings
+			CLUSTER[id4] occurrences matches {0..1} matches {	-- Findings
 				items matches {
-					CLUSTER[at0022] occurrences matches {0..1} matches {	-- Cycle
+					CLUSTER[id23] occurrences matches {0..1} matches {	-- Cycle
 						items matches {
-							ELEMENT[at0020] occurrences matches {0..1} matches {	-- Length of cycle
+							ELEMENT[id21] occurrences matches {0..1} matches {	-- Length of cycle
 								value matches {
-									DV_QUANTITY[id0149] matches {
-										property matches {[openehr::128]}
+									DV_QUANTITY[id67] matches {
+										property matches {[at57]}
 										units matches {"d", "wk", "mo"}
 									}
 								}
 							}
-							ELEMENT[at0023] occurrences matches {0..1} matches {	-- Relative duration of cycle
+							ELEMENT[id24] occurrences matches {0..1} matches {	-- Relative duration of cycle
 								value matches {
-									DV_CODED_TEXT[id0349] matches {
-										defining_code matches {
-											[local::
-											at0024, 	-- Longer than usual
-											at0026, 	-- As usual
-											at0027, 	-- Shorter than usual
-											at0028, 	-- Much shorter than usual
-											at0029]	-- Much longer than usual
-										}
+									DV_CODED_TEXT[id68] matches {
+										defining_code matches {[ac1]}		-- Relative duration of cycle
 									}
 								}
 							}
-							CLUSTER[at0062] occurrences matches {0..1} matches {	-- Day of cycle
+							CLUSTER[id63] occurrences matches {0..1} matches {	-- Day of cycle
 								items matches {
-									allow_archetype ELEMENT[at0063] occurrences matches {0..*} matches {	-- Cluster: Day of cycle
+									allow_archetype ELEMENT[id64] occurrences matches {0..*} matches {	-- Cluster: Day of cycle
 										include
 											archetype_id/value matches {/openEHR-EHR-ELEMENT\.menstrual_cycle_day\.v1/}
 									}
@@ -80,60 +73,52 @@ definition
 							}
 						}
 					}
-					CLUSTER[at0033] occurrences matches {0..1} matches {	-- Menstruation
+					CLUSTER[id34] occurrences matches {0..1} matches {	-- Menstruation
 						items matches {
-							ELEMENT[at0043] occurrences matches {0..1} matches {	-- Clinical Descripton
+							ELEMENT[id44] occurrences matches {0..1} matches {	-- Clinical Descripton
 								value matches {
-									DV_TEXT[id0709] matches {*}
+									DV_TEXT[id69] 
 								}
 							}
-							CLUSTER[at0056] occurrences matches {0..1} matches {	-- Menstrual flow
+							CLUSTER[id57] occurrences matches {0..1} matches {	-- Menstrual flow
 								items matches {
-									ELEMENT[at0057] occurrences matches {0..1} matches {	-- Clinical Description
+									ELEMENT[id58] occurrences matches {0..1} matches {	-- Clinical Description
 										value matches {
-											DV_TEXT[id0253] matches {*}
+											DV_TEXT[id70] 
 										}
 									}
-									ELEMENT[at0035] occurrences matches {0..1} matches {	-- Relative Description
+									ELEMENT[id36] occurrences matches {0..1} matches {	-- Relative Description
 										value matches {
-											DV_CODED_TEXT[id0653] matches {
-												defining_code matches {
-													[local::
-													at0037, 	-- Very heavy flow
-													at0038, 	-- Heavy flow
-													at0039, 	-- Normal flow
-													at0040, 	-- Light flow
-													at0041, 	-- Spotting
-													at0042]	-- Absent
-												}
+											DV_CODED_TEXT[id71] matches {
+												defining_code matches {[ac2]}		-- Relative Description
 											}
 										}
 									}
-									ELEMENT[at0059] occurrences matches {0..1} matches {	-- Colour
+									ELEMENT[id60] occurrences matches {0..1} matches {	-- Colour
 										value matches {
-											DV_TEXT[id0053] matches {*}
+											DV_TEXT[id72] 
 										}
 									}
-									ELEMENT[at0021] occurrences matches {0..1} matches {	-- Presence of blood clots
+									ELEMENT[id22] occurrences matches {0..1} matches {	-- Presence of blood clots
 										value matches {
-											DV_BOOLEAN[id0654] matches {
+											DV_BOOLEAN[id73] matches {
 												value matches {True}
 											}
 										}
 									}
-									ELEMENT[at0034] occurrences matches {0..1} matches {	-- Flooding
+									ELEMENT[id35] occurrences matches {0..1} matches {	-- Flooding
 										value matches {
-											DV_BOOLEAN[id0254] matches {
+											DV_BOOLEAN[id74] matches {
 												value matches {True, False}
 											}
 										}
 									}
-									CLUSTER[at0031] occurrences matches {0..1} matches {	-- Duration of Menstruation
+									CLUSTER[id32] occurrences matches {0..1} matches {	-- Duration of Menstruation
 										items matches {
-											ELEMENT[at0017] occurrences matches {0..1} matches {	-- Duration of menstruation
+											ELEMENT[id18] occurrences matches {0..1} matches {	-- Duration of menstruation
 												value matches {
-													DV_QUANTITY[id0301] matches {
-														property matches {[openehr::128]}
+													DV_QUANTITY[id75] matches {
+														property matches {[at58]}
 														[magnitude, units, precision] matches {
 															[{|>=0.0|}, {"d"}, {0}],
 															[{|>=0.0|}, {"wk"}, {0}]
@@ -141,45 +126,27 @@ definition
 													}
 												}
 											}
-											ELEMENT[at0032] occurrences matches {0..1} matches {	-- Relative duration of menstruation
+											ELEMENT[id33] occurrences matches {0..1} matches {	-- Relative duration of menstruation
 												value matches {
-													DV_CODED_TEXT[id0101] matches {
-														defining_code matches {
-															[local::
-															at0024, 	-- Longer than usual
-															at0025, 	-- Normal
-															at0026, 	-- As usual
-															at0027, 	-- Shorter than usual
-															at0028, 	-- Much shorter than usual
-															at0029]	-- Much longer than usual
-														}
+													DV_CODED_TEXT[id76] matches {
+														defining_code matches {[ac3]}		-- Relative duration of menstruation
 													}
 												}
 											}
 										}
 									}
-									CLUSTER[at0046] occurrences matches {0..1} matches {	-- Use of Sanitary products
+									CLUSTER[id47] occurrences matches {0..1} matches {	-- Use of Sanitary products
 										items matches {
-											ELEMENT[at0047] occurrences matches {0..*} matches {	-- Type of Sanitary product
+											ELEMENT[id48] occurrences matches {0..*} matches {	-- Type of Sanitary product
 												value matches {
-													DV_CODED_TEXT[id0933] matches {
-														defining_code matches {
-															[local::
-															at0048, 	-- Sanitary napkins - 'super'
-															at0049, 	-- Sanitary napkins - 'normal'
-															at0050, 	-- Sanitary napkins - 'light flow'
-															at0051, 	-- Tampon - 'super'
-															at0052, 	-- Tampon - 'normal'
-															at0053, 	-- Sea sponge
-															at0054, 	-- Menstrual cup
-															at0055]	-- Cloth pad or towel
-														}
+													DV_CODED_TEXT[id77] matches {
+														defining_code matches {[ac4]}		-- Type of Sanitary product
 													}
 												}
 											}
-											ELEMENT[at0036] occurrences matches {0..1} matches {	-- Number used
+											ELEMENT[id37] occurrences matches {0..1} matches {	-- Number used
 												value matches {
-													DV_COUNT[id0133] matches {
+													DV_COUNT[id78] matches {
 														magnitude matches {|>=0|}
 													}
 												}
@@ -195,184 +162,232 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Menstrual cycle">
 				description = <"Details about menstrual cycle.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Normal Statements">
 				description = <"Collection of normal statements about menstrual cycle.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Normal Statement">
 				description = <"Normal statement about the menstrual cycle.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Findings">
 				description = <"Finding about menstrual cycle.">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Duration of menstruation">
 				description = <"Duration of menstruation.">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"Length of cycle">
 				description = <"Length of menstrual cycle.">
 			>
-			["at0021"] = <
+			["id22"] = <
 				text = <"Presence of blood clots">
 				description = <"Blood clots were present during cycle.">
 			>
-			["at0022"] = <
+			["id23"] = <
 				text = <"Cycle">
 				description = <"Duration of Menstrual Cycle.">
 			>
-			["at0023"] = <
+			["id24"] = <
 				text = <"Relative duration of cycle">
 				description = <"Description of the relative duration of menstrual cycle.">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Longer than usual">
 				description = <"Menstrual cycle duration is longer than a 'usual' cycle.">
 			>
-			["at0025"] = <
+			["at26"] = <
 				text = <"Normal">
 				description = <"Menstrual cycle duration is the same as a 'usual' cycle.">
 			>
-			["at0026"] = <
+			["at27"] = <
 				text = <"As usual">
 				description = <"Menstrual cycle duration is the same as a 'usual' cycle.">
 			>
-			["at0027"] = <
+			["at28"] = <
 				text = <"Shorter than usual">
 				description = <"Menstrual cycle duration is shorter than a 'usual' cycle.">
 			>
-			["at0028"] = <
+			["at29"] = <
 				text = <"Much shorter than usual">
 				description = <"Menstrual cycle duration is much shorter than a 'usual' cycle.">
 			>
-			["at0029"] = <
+			["at30"] = <
 				text = <"Much longer than usual">
 				description = <"Menstrual cycle duration is much longer than a 'usual' cycle.">
 			>
-			["at0031"] = <
+			["id32"] = <
 				text = <"Duration of Menstruation">
 				description = <"Details about duration of menstruation.">
 			>
-			["at0032"] = <
+			["id33"] = <
 				text = <"Relative duration of menstruation">
 				description = <"Relative duration of menstruation.">
 			>
-			["at0033"] = <
+			["id34"] = <
 				text = <"Menstruation">
 				description = <"Description of the menstruation, or period of bleeding">
 			>
-			["at0034"] = <
+			["id35"] = <
 				text = <"Flooding">
 				description = <"Heavy menstrual flow that exceeds capacity sanitary napkins and other menstrual products to absorb the menstrual flow.">
 			>
-			["at0035"] = <
+			["id36"] = <
 				text = <"Relative Description">
 				description = <"Relative description of menstrual blood flow.">
 			>
-			["at0036"] = <
+			["id37"] = <
 				text = <"Number used">
 				description = <"Number of sanitary products used per day to absorb menstrual flow.">
 			>
-			["at0037"] = <
+			["at38"] = <
 				text = <"Very heavy flow">
 				description = <"The amount of menstrual blood loss considered very heavy when compared to normal for the woman.">
 			>
-			["at0038"] = <
+			["at39"] = <
 				text = <"Heavy flow">
 				description = <"The amount of menstrual blood loss considered heavier than normal for the woman.">
 			>
-			["at0039"] = <
+			["at40"] = <
 				text = <"Normal flow">
 				description = <"The amount of menstrual blood loss considered normal for the woman.">
 			>
-			["at0040"] = <
+			["at41"] = <
 				text = <"Light flow">
 				description = <"The amount of menstrual blood loss considered lighter than normal for the woman.">
 			>
-			["at0041"] = <
+			["at42"] = <
 				text = <"Spotting">
 				description = <"Small amounts of menstrual blood loss that may have no pattern.">
 			>
-			["at0042"] = <
+			["at43"] = <
 				text = <"Absent">
 				description = <"No menstrual flow.">
 			>
-			["at0043"] = <
+			["id44"] = <
 				text = <"Clinical Descripton">
 				description = <"Description of the characteristics of menstruation.">
 			>
-			["at0046"] = <
+			["id47"] = <
 				text = <"Use of Sanitary products">
 				description = <"Details about use of Sanitary products during menstruation.">
 			>
-			["at0047"] = <
+			["id48"] = <
 				text = <"Type of Sanitary product">
 				description = <"Type of sanitary product used.">
 			>
-			["at0048"] = <
+			["at49"] = <
 				text = <"Sanitary napkins - 'super'">
 				description = <"'Super' size/thickness of disposable pads worn in the underwear to absorb menstrual flow.">
 			>
-			["at0049"] = <
+			["at50"] = <
 				text = <"Sanitary napkins - 'normal'">
 				description = <"'Normal' size/thickness of disposable pads worn in the underwear to absorb menstrual flow.">
 			>
-			["at0050"] = <
+			["at51"] = <
 				text = <"Sanitary napkins - 'light flow'">
 				description = <"'Light' size/thickness of disposable pads worn in the underwear to absorb menstrual flow.">
 			>
-			["at0051"] = <
+			["at52"] = <
 				text = <"Tampon - 'super'">
 				description = <"'Super' size/thickness of disposable cylinders of absorbant material that are inserted into the vagina to absorb menstrual flow.">
 			>
-			["at0052"] = <
+			["at53"] = <
 				text = <"Tampon - 'normal'">
 				description = <"'Normal' size/thickness of disposable cylinders of absorbant material that are inserted into the vagina to absorb menstrual flow.">
 			>
-			["at0053"] = <
+			["at54"] = <
 				text = <"Sea sponge">
 				description = <"Natural sponges that are inserted into the vagina to absorb menstrual flow.">
 			>
-			["at0054"] = <
+			["at55"] = <
 				text = <"Menstrual cup">
 				description = <"A firm, flexible bell-shaped device worn inside the vagina to catch menstrual flow. Reusable versions include rubber or silicone cups.">
 			>
-			["at0055"] = <
+			["at56"] = <
 				text = <"Cloth pad or towel">
 				description = <"Re-usable fabric worn in the underwear to absorb menstrual flow.">
 			>
-			["at0056"] = <
+			["id57"] = <
 				text = <"Menstrual flow">
 				description = <"Details about menstrual blood flow.">
 			>
-			["at0057"] = <
+			["id58"] = <
 				text = <"Clinical Description">
 				description = <"Description of Menstrual blood flow.">
 			>
-			["at0059"] = <
+			["id60"] = <
 				text = <"Colour">
 				description = <"Colour of menstrual blood.">
 			>
-			["at0061"] = <
+			["id62"] = <
 				text = <"Clinical description">
 				description = <"Information about the cycle.">
 			>
-			["at0062"] = <
+			["id63"] = <
 				text = <"Day of cycle">
 				description = <"Number of days since onset of last period.">
 			>
-			["at0063"] = <
+			["id64"] = <
 				text = <"Cluster: Day of cycle">
 				description = <"Number of days since onset of last period.">
 			>
+			["ac1"] = <
+				text = <"Relative duration of cycle">
+				description = <"Description of the relative duration of menstrual cycle.">
+			>
+			["ac2"] = <
+				text = <"Relative Description">
+				description = <"Relative description of menstrual blood flow.">
+			>
+			["ac3"] = <
+				text = <"Relative duration of menstruation">
+				description = <"Relative duration of menstruation.">
+			>
+			["ac4"] = <
+				text = <"Type of Sanitary product">
+				description = <"Type of sanitary product used.">
+			>
+			["at57"] = <
+				text = <"Time">
+				description = <"Time">
+			>
+			["at58"] = <
+				text = <"Time">
+				description = <"Time">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at57"] = <http://openehr.org/id/128>
+			["at58"] = <http://openehr.org/id/128>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at25", "at27", "at28", "at29", "at30">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at38", "at39", "at40", "at41", "at42", "at43">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at25", "at26", "at27", "at28", "at29", "at30">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at49", "at50", "at51", "at52", "at53", "at54", "at55", "at56">
 		>
 	>

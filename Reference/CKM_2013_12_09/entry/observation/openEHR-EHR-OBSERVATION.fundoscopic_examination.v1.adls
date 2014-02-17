@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.fundoscopic_examination.v1.0.0
 
 language
@@ -44,112 +44,103 @@ description
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Fundoscopic examination of eyes
+	OBSERVATION[id1] matches {	-- Fundoscopic examination of eyes
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0008] occurrences matches {0..1} matches {	-- Clinical Description
+									ELEMENT[id9] occurrences matches {0..1} matches {	-- Clinical Description
 										value matches {
-											DV_TEXT[id0653] matches {*}
+											DV_TEXT[id31] 
 										}
 									}
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Side
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Side
 										value matches {
-											DV_CODED_TEXT[id0053] matches {
-												defining_code matches {
-													[local::
-													at0005, 	-- Left
-													at0006]	-- Right
-												}
+											DV_CODED_TEXT[id32] matches {
+												defining_code matches {[ac1]}		-- Side
 											}
 										}
 									}
-									CLUSTER[at0007] occurrences matches {0..1} matches {	-- Details
+									CLUSTER[id8] occurrences matches {0..1} matches {	-- Details
 										items matches {
-											ELEMENT[at0010] occurrences matches {0..1} matches {	-- Red reflex
+											ELEMENT[id11] occurrences matches {0..1} matches {	-- Red reflex
 												value matches {
-													DV_BOOLEAN[id0285] matches {
+													DV_BOOLEAN[id33] matches {
 														value matches {True, False}
 													}
 												}
 											}
-											ELEMENT[at0011] occurrences matches {0..1} matches {	-- Lens
+											ELEMENT[id12] occurrences matches {0..1} matches {	-- Lens
 												value matches {
-													DV_TEXT[id0685] matches {*}
+													DV_TEXT[id34] 
 												}
 											}
-											ELEMENT[at0012] occurrences matches {0..1} matches {	-- Optic Disc
+											ELEMENT[id13] occurrences matches {0..1} matches {	-- Optic Disc
 												value matches {
-													DV_TEXT[id0085] matches {*}
+													DV_TEXT[id35] 
 												}
 											}
-											ELEMENT[at0016] occurrences matches {0..1} matches {	-- Papilloedema
+											ELEMENT[id17] occurrences matches {0..1} matches {	-- Papilloedema
 												value matches {
-													DV_BOOLEAN[id0686] matches {
+													DV_BOOLEAN[id36] matches {
 														value matches {True, False}
 													}
 												}
 											}
-											ELEMENT[at0017] occurrences matches {0..1} matches {	-- Macula
+											ELEMENT[id18] occurrences matches {0..1} matches {	-- Macula
 												value matches {
-													DV_TEXT[id0086] matches {*}
+													DV_TEXT[id37] 
 												}
 											}
-											ELEMENT[at0018] occurrences matches {0..1} matches {	-- Retinal arteries
+											ELEMENT[id19] occurrences matches {0..1} matches {	-- Retinal arteries
 												value matches {
-													DV_TEXT[id0485] matches {*}
+													DV_TEXT[id38] 
 												}
 											}
-											ELEMENT[at0019] occurrences matches {0..1} matches {	-- Retinal veins
+											ELEMENT[id20] occurrences matches {0..1} matches {	-- Retinal veins
 												value matches {
-													DV_TEXT[id0885] matches {*}
+													DV_TEXT[id39] 
 												}
 											}
-											ELEMENT[at0020] occurrences matches {0..1} matches {	-- 'Cotton Wool' artefacts
+											ELEMENT[id21] occurrences matches {0..1} matches {	-- 'Cotton Wool' artefacts
 												value matches {
-													DV_BOOLEAN[id0687] matches {
+													DV_BOOLEAN[id40] matches {
 														value matches {True, False}
 													}
 												}
 											}
-											ELEMENT[at0021] occurrences matches {0..1} matches {	-- Retinal haemorrhages
+											ELEMENT[id22] occurrences matches {0..1} matches {	-- Retinal haemorrhages
 												value matches {
-													DV_BOOLEAN[id0087] matches {
+													DV_BOOLEAN[id41] matches {
 														value matches {True, False}
 													}
 												}
 											}
-											ELEMENT[at0022] occurrences matches {0..1} matches {	-- Retinal background
+											ELEMENT[id23] occurrences matches {0..1} matches {	-- Retinal background
 												value matches {
-													DV_TEXT[id0486] matches {*}
+													DV_TEXT[id42] 
 												}
 											}
-											ELEMENT[at0023] occurrences matches {0..1} matches {	-- Vitreous
+											ELEMENT[id24] occurrences matches {0..1} matches {	-- Vitreous
 												value matches {
-													DV_TEXT[id0886] matches {*}
+													DV_TEXT[id43] 
 												}
 											}
-											CLUSTER[at0009] occurrences matches {0..1} matches {	-- Visualisation
+											CLUSTER[id10] occurrences matches {0..1} matches {	-- Visualisation
 												items matches {
-													ELEMENT[at0015] occurrences matches {0..1} matches {	-- Ease of Visualisation
+													ELEMENT[id16] occurrences matches {0..1} matches {	-- Ease of Visualisation
 														value matches {
-															DV_CODED_TEXT[id0973] matches {
-																defining_code matches {
-																	[local::
-																	at0024, 	-- Fully visualised
-																	at0025, 	-- Partially visualised
-																	at0026]	-- Not visualised
-																}
+															DV_CODED_TEXT[id44] matches {
+																defining_code matches {[ac2]}		-- Ease of Visualisation
 															}
 														}
 													}
-													ELEMENT[at0027] occurrences matches {0..1} matches {	-- Comment
+													ELEMENT[id28] occurrences matches {0..1} matches {	-- Comment
 														value matches {
-															DV_TEXT[id0173] matches {*}
+															DV_TEXT[id45] 
 														}
 													}
 												}
@@ -160,11 +151,11 @@ definition
 							}
 						}
 						state matches {
-							ITEM_TREE[at0013] matches {	-- Tree
+							ITEM_TREE[id14] matches {
 								items matches {
-									ELEMENT[at0014] occurrences matches {0..1} matches {	-- Mydriatic used
+									ELEMENT[id15] occurrences matches {0..1} matches {	-- Mydriatic used
 										value matches {
-											DV_BOOLEAN[id0613] matches {
+											DV_BOOLEAN[id46] matches {
 												value matches {True, False; False}
 											}
 										}
@@ -177,16 +168,12 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0028] matches {	-- Tree
+			ITEM_TREE[id29] matches {
 				items matches {
-					ELEMENT[at0029] occurrences matches {0..1} matches {	-- Method
+					ELEMENT[id30] occurrences matches {0..1} matches {	-- Method
 						value matches {
-							DV_CODED_TEXT[id0037] matches {
-								defining_code matches {
-									[local::
-									at0030, 	-- Direct
-									at0031]	-- Indirect
-								}
+							DV_CODED_TEXT[id47] matches {
+								defining_code matches {[ac3]}		-- Method
 							}
 						}
 					}
@@ -195,266 +182,272 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Fundoscopic examination of eyes">
 				description = <"Record of clinical findings on fundoscopy of eyes">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"*">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Side">
 				description = <"*">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Left">
 				description = <"*">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Right">
 				description = <"*">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Details">
 				description = <"*">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Clinical Description">
 				description = <"Descriptive overview of examination findings">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Visualisation">
 				description = <"*">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Red reflex">
 				description = <"True if Red Reflex is present">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Lens">
 				description = <"Description of lens">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Optic Disc">
 				description = <"Description of optic disc">
 			>
-			["at0013"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Mydriatic used">
 				description = <"True if mydriatic is used">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Ease of Visualisation">
 				description = <"Description of ease to visualise all the sturctures during fundoscopy">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Papilloedema">
 				description = <"True if papilloedema present">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Macula">
 				description = <"Description of macula">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Retinal arteries">
 				description = <"Description of retinal arteries">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Retinal veins">
 				description = <"Description of retinal veins">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"'Cotton Wool' artefacts">
 				description = <"True if 'cotton wool' artefacts are present">
 			>
-			["at0021"] = <
+			["id22"] = <
 				text = <"Retinal haemorrhages">
 				description = <"True if retinal haemorrhages are present">
 			>
-			["at0022"] = <
+			["id23"] = <
 				text = <"Retinal background">
 				description = <"Description of retinal background">
 			>
-			["at0023"] = <
+			["id24"] = <
 				text = <"Vitreous">
 				description = <"Description of vitreous humour">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Fully visualised">
 				description = <"*">
 			>
-			["at0025"] = <
+			["at26"] = <
 				text = <"Partially visualised">
 				description = <"*">
 			>
-			["at0026"] = <
+			["at27"] = <
 				text = <"Not visualised">
 				description = <"*">
 			>
-			["at0027"] = <
+			["id28"] = <
 				text = <"Comment">
 				description = <"Comment, especially if not fully visualised">
 			>
-			["at0028"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0029"] = <
+			["id30"] = <
 				text = <"Method">
 				description = <"*">
 			>
-			["at0030"] = <
+			["at31"] = <
 				text = <"Direct">
 				description = <"*">
 			>
-			["at0031"] = <
+			["at32"] = <
 				text = <"Indirect">
+				description = <"*">
+			>
+			["ac1"] = <
+				text = <"Side">
+				description = <"*">
+			>
+			["ac2"] = <
+				text = <"Ease of Visualisation">
+				description = <"Description of ease to visualise all the sturctures during fundoscopy">
+			>
+			["ac3"] = <
+				text = <"Method">
 				description = <"*">
 			>
 		>
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Exame de fundoscopia">
 				description = <"Registrar resultados clínicos sobre fundoscopia dos olhos.">
 			>
-			["at0001"] = <
-				text = <"Série de Eventos">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"*">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Lado">
 				description = <"Lado examinado.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Esquerdo">
 				description = <"Olho esquerdo.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Direito">
 				description = <"Olho direito.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Detalhes">
 				description = <"Detalhes da fundoscopia.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Descrição clínica">
 				description = <"Descição dos achados em fundoscopia.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Visualização">
 				description = <"*">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Reflexo vermelho">
 				description = <"Reflexo vermelho é presente?">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Cristalino">
 				description = <"Descrição dos achados no cristalino.">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Nervo óptico">
 				description = <"Descrição dos achados no nervo óptico.">
 			>
-			["at0013"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"*Mydriatic used(en)">
 				description = <"*True if mydriatic is used(en)">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Visibilidade">
 				description = <"Facilidade de visualizar as estruturas durante fundoscopia.">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Papiledema">
 				description = <"Papiledema (inchaço) do nervo óptico é presente?">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Mácula">
 				description = <"Descrição dos achados na mácula.">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Artérias da retina">
 				description = <"Descrição dos achados nas artérias da retina.">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Veias da retina">
 				description = <"Descrição dos achados nas veias da retina.">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"Flocos de algodão">
 				description = <"Existem manchas em flocos de algodão?">
 			>
-			["at0021"] = <
+			["id22"] = <
 				text = <"Hemorragias retinianas">
 				description = <"Existem hemorragias na retina?">
 			>
-			["at0022"] = <
+			["id23"] = <
 				text = <"Fundo da retina">
 				description = <"Descrição dos achados no fundo da retina.">
 			>
-			["at0023"] = <
+			["id24"] = <
 				text = <"Vítreo">
 				description = <"Descrição dos achados no vítreo.">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Totalmente visível">
 				description = <"Facilidade total para visualizar todas as estruturas durante fundoscopia.">
 			>
-			["at0025"] = <
+			["at26"] = <
 				text = <"Parcialmente visível">
 				description = <"Algumas estruturas são visíveis e outras não.">
 			>
-			["at0026"] = <
+			["at27"] = <
 				text = <"Não visível">
 				description = <"Estruturas não são visível durante a fundoscopia.">
 			>
-			["at0027"] = <
+			["id28"] = <
 				text = <"Comentário">
 				description = <"Comentário sobre a fundoscopia.">
 			>
-			["at0028"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0029"] = <
+			["id30"] = <
 				text = <"Método">
 				description = <"Método usado no exame de fundoscopia.">
 			>
-			["at0030"] = <
+			["at31"] = <
 				text = <"Direto">
 				description = <"*">
 			>
-			["at0031"] = <
+			["at32"] = <
 				text = <"Indireto">
 				description = <"*">
 			>
+			["ac1"] = <
+				text = <"*Side(en)">
+				description = <"**(en)">
+			>
+			["ac2"] = <
+				text = <"*Ease of Visualisation(en)">
+				description = <"*Description of ease to visualise all the sturctures during fundoscopy(en)">
+			>
+			["ac3"] = <
+				text = <"*Method(en)">
+				description = <"**(en)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at6", "at7">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at25", "at26", "at27">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at31", "at32">
 		>
 	>

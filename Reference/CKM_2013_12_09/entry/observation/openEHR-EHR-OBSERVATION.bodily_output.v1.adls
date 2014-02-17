@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.bodily_output.v1.0.0
 
 language
@@ -32,42 +32,42 @@ Used in combination with CLUSTER.fluid.v1 to describe the bodily substance invol
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Bodily output
+	OBSERVATION[id1] matches {	-- Bodily output
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0002] occurrences matches {0..*} matches {	-- Timing
+					POINT_EVENT[id3] occurrences matches {0..*} matches {	-- Timing
 						data matches {
-							ITEM_TREE[at0003] matches {	-- List
+							ITEM_TREE[id4] matches {
 								items cardinality matches {1..*; unordered} matches {
-									allow_archetype CLUSTER[at0016] occurrences matches {0..1} matches {	-- Substance detail
+									allow_archetype CLUSTER[id17] occurrences matches {0..1} matches {	-- Substance detail
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-[a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-a-zA-Z0-9_]+)*\.v1/}
 									}
-									CLUSTER[at0032] occurrences matches {0..1} matches {	-- Voiding
+									CLUSTER[id33] occurrences matches {0..1} matches {	-- Voiding
 										items matches {
-											ELEMENT[at0033] occurrences matches {0..1} matches {	-- Substance voided
+											ELEMENT[id34] occurrences matches {0..1} matches {	-- Substance voided
 												value matches {
-													DV_BOOLEAN[id0221] matches {
+													DV_BOOLEAN[id39] matches {
 														value matches {True, False}
 													}
 												}
 											}
-											ELEMENT[at0034] occurrences matches {0..1} matches {	-- Datetime substance last voided
+											ELEMENT[id35] occurrences matches {0..1} matches {	-- Datetime substance last voided
 												value matches {
-													DV_DATE_TIME[id0621] matches {*}
+													DV_DATE_TIME[id40] 
 												}
 											}
-											ELEMENT[at0036] occurrences matches {0..1} matches {	-- Period since substance last voided
+											ELEMENT[id37] occurrences matches {0..1} matches {	-- Period since substance last voided
 												value matches {
-													DV_DURATION[id0421] matches {
+													DV_DURATION[id41] matches {
 														value matches {|>=PT0S|}
 													}
 												}
 											}
-											ELEMENT[at0037] occurrences matches {0..1} matches {	-- Voiding difficulty
+											ELEMENT[id38] occurrences matches {0..1} matches {	-- Voiding difficulty
 												value matches {
-													DV_TEXT[id0821] matches {*}
+													DV_TEXT[id42] 
 												}
 											}
 										}
@@ -76,135 +76,146 @@ definition
 							}
 						}
 					}
-					INTERVAL_EVENT[at0006] occurrences matches {0..*} matches {	-- Total
+					INTERVAL_EVENT[id7] occurrences matches {0..*} matches {	-- Total
 						math_function matches {
-							DV_CODED_TEXT[id0862] matches {
-								defining_code matches {[openehr::148]}
+							DV_CODED_TEXT[id43] matches {
+								defining_code matches {[at22]}
 							}
 						}
 						data matches {
-							use_node ITEM_TREE[id0473] /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Timing]/data[List]
+							use_node ITEM_TREE[id44] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[Timing]/data[id4]
 						}
 					}
-					INTERVAL_EVENT[at0007] occurrences matches {0..*} matches {	-- Actual
+					INTERVAL_EVENT[id8] occurrences matches {0..*} matches {	-- Actual
 						math_function matches {
-							DV_CODED_TEXT[id0838] matches {
-								defining_code matches {[openehr::640]}
+							DV_CODED_TEXT[id45] matches {
+								defining_code matches {[at23]}
 							}
 						}
 						data matches {
-							use_node ITEM_TREE[id0953] /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Timing]/data[List]
+							use_node ITEM_TREE[id46] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[Timing]/data[id4]
 						}
 					}
 				}
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0008] matches {	-- List
+			ITEM_TREE[id9] matches {
 				items matches {
-					ELEMENT[at0031] occurrences matches {0..1} matches {	-- Measurement precision
+					ELEMENT[id32] occurrences matches {0..1} matches {	-- Measurement precision
 						value matches {
-							DV_CODED_TEXT[id0149] matches {
-								defining_code matches {
-									[local::
-									at0018, 	-- Estimated
-									at0019, 	-- Measured
-									at0020]	-- Stated
-								}
+							DV_CODED_TEXT[id47] matches {
+								defining_code matches {[ac1]}		-- Measurement precision
 							}
 						}
 					}
-					allow_archetype CLUSTER[at0030] occurrences matches {0..1} matches {	-- Body location  
+					allow_archetype CLUSTER[id31] occurrences matches {0..1} matches {	-- Body location  
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
 					}
-					allow_archetype CLUSTER[at0028] occurrences matches {0..1} matches {	-- Measurement device 
+					allow_archetype CLUSTER[id29] occurrences matches {0..1} matches {	-- Measurement device 
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Bodily output">
 				description = <"Recording of findings and measurement (or estimation) of bodily output such as fluid output and defaecation.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Timing">
 				description = <"The estimation of fluid output without specifying the period of time.">
 			>
-			["at0003"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Total">
 				description = <"For recording total fluid output over a period (may transcend a number of interval or point in time records).">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Actual">
 				description = <"For recording the fluid output over a period of time when this will later be totalled.">
 			>
-			["at0008"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Substance detail">
 				description = <"Details of the fluid or substance observed being observed.">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"Estimated">
 				description = <"The fluid volume has been estimated.">
 			>
-			["at0019"] = <
+			["at20"] = <
 				text = <"Measured">
 				description = <"The fluid volume has been directly measured.">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Stated">
 				description = <"The fluid output has been stated.">
 			>
-			["at0028"] = <
+			["id29"] = <
 				text = <"Measurement device ">
 				description = <"Details of device used to measure the fluid output.">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Body location  ">
 				description = <"The location of the body from which the substance was collected.">
 			>
-			["at0031"] = <
+			["id32"] = <
 				text = <"Measurement precision">
 				description = <"Records the level of precision of the fluid output observation.">
 			>
-			["at0032"] = <
+			["id33"] = <
 				text = <"Voiding">
 				description = <"Description of any difficulty voiding the bodily substance.">
 			>
-			["at0033"] = <
+			["id34"] = <
 				text = <"Substance voided">
 				description = <"Has the substance been voided?">
 			>
-			["at0034"] = <
+			["id35"] = <
 				text = <"Datetime substance last voided">
 				description = <"The date and /or time that the substance was last voided.">
 			>
-			["at0036"] = <
+			["id37"] = <
 				text = <"Period since substance last voided">
 				description = <"The time elpased since the substance was last voided.">
 			>
-			["at0037"] = <
+			["id38"] = <
 				text = <"Voiding difficulty">
 				description = <"Description of  any difficulty voiding.">
 			>
+			["ac1"] = <
+				text = <"Measurement precision">
+				description = <"Records the level of precision of the fluid output observation.">
+			>
+			["at22"] = <
+				text = <"total">
+				description = <"total">
+			>
+			["at23"] = <
+				text = <"actual">
+				description = <"actual">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at22"] = <http://openehr.org/id/148>
+			["at23"] = <http://openehr.org/id/640>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at19", "at20", "at21">
 		>
 	>

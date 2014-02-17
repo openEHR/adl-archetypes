@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-SECTION.medication_order_list.v1.0.0
 
 language
@@ -69,33 +69,33 @@ INSTRUCTION.medication is suggested as the best archetype to represent a Medicat
 	>
 
 definition
-	SECTION[at0000] matches {	-- Medication Order List
+	SECTION[id1] matches {	-- Medication Order List
 		items matches {
-			allow_archetype ENTRY[at0004] occurrences matches {0..*} matches {	-- Medication inclusions/exclusions
+			allow_archetype ENTRY[id5] occurrences matches {0..*} matches {	-- Medication inclusions/exclusions
 				include
-					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.medication(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-medication(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.medication(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-medication(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Medication Order List">
 				description = <"Suggested design pattern for including an Medication Order List in a template.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Medication inclusions/exclusions">
 				description = <"Slot constrained to specifically include archetypes representing known medication orders and exclusion or absence of medication orders.">
 			>
 		>
 		["ru"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Лист лекарственных назначений">
 				description = <"Дизайн для включения листа назначений в шаблон">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Включения/исключения медикаментов">
 				description = <"Слот, ограничивающий включение архетипов, представляющих назначение известных медикаментов и исключение/отсутствие таких назначений">
 			>

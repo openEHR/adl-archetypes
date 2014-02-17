@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.story.v1.0.0
 
 language
@@ -61,22 +61,22 @@ Use to record a simple narrative and/or as a container archetype - to provide a 
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Story/History
+	OBSERVATION[id1] matches {	-- Story/History
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items cardinality matches {1..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Story
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Story
 										value matches {
-											DV_TEXT[id0053] matches {*}
+											DV_TEXT[id8] 
 										}
 									}
-									allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {	-- Details
+									allow_archetype CLUSTER[id7] occurrences matches {0..*} matches {	-- Details
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.health_event(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.issue(-[a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.health_event(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.issue(-a-zA-Z0-9_]+)*\.v1/}
 									}
 								}
 							}
@@ -87,82 +87,58 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"قصة المرض أو التاريخ - سوابق المرض">
 				description = <"*The clinical history of a person, as told to a clinician or recorded directly by an individual/patient.(en)">
 			>
-			["at0001"] = <
-				text = <"*Event Series(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"إحدى الوقائع">
 				description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
 			>
-			["at0003"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"قصة المريض">
 				description = <"*Narrative description of the clinical history or story.(en)">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"التفاصيل">
 				description = <"*Additional structured details about the individual's story or patient's history.(en)">
 			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Story/History">
 				description = <"The clinical history of a person, as told to a clinician or recorded directly by an individual/patient.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Story">
 				description = <"Narrative description of the clinical history or story.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Details">
 				description = <"Additional structured details about the individual's story or patient's history.">
 			>
 		>
 		["es-ar"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Evolucion o historia">
 				description = <"*The clinical history of a person, as told to a clinician or recorded directly by an individual/patient.(en)">
 			>
-			["at0001"] = <
-				text = <"Eventos">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"*Any event(en)">
 				description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
 			>
-			["at0003"] = <
-				text = <"Arbol">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Historia">
 				description = <"*Narrative description of the clinical history or story.(en)">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Detalles">
 				description = <"*Additional structured details about the individual's story or patient's history.(en)">
 			>

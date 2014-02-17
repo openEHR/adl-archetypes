@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-ELEMENT.last_normal_menstrual_period.v1.0.0
 
 language
@@ -27,18 +27,18 @@ description
 	>
 
 definition
-	ELEMENT[at0000] matches {	-- Last Normal Menstrual Period
+	ELEMENT[id1] matches {	-- Last Normal Menstrual Period
 		value matches {
-			DV_DATE_TIME[id0893] matches {
+			DV_DATE_TIME[id2] matches {
 				value matches {yyyy-??-??T??:??:??}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Last Normal Menstrual Period">
 				description = <"Record of the date of 1st day of last normal menstrual period">
 			>

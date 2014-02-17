@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.exam.v1.0.0
 
 language
@@ -51,40 +51,42 @@ Not to be used to record stand-alone clinical observations - use specific OBSERV
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Physical Examination Findings
+	OBSERVATION[id1] matches {	-- Physical Examination Findings
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Description
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Description
 										value matches {
-											DV_TEXT[id0053] matches {*}
+											DV_TEXT[id13] 
 										}
 									}
-									allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {	-- Examination Detail
+									allow_archetype CLUSTER[id6] occurrences matches {0..*} matches {	-- Examination Detail
+										include
+											archetype_id/value matches {/.*/}
 									}
-									ELEMENT[at0006] occurrences matches {0..*} matches {	-- Interpretation
+									ELEMENT[id7] occurrences matches {0..*} matches {	-- Interpretation
 										value matches {
-											DV_TEXT[id0853] matches {*}
+											DV_TEXT[id14] 
 										}
 									}
-									ELEMENT[at0011] occurrences matches {0..1} matches {	-- Comment
+									ELEMENT[id12] occurrences matches {0..1} matches {	-- Comment
 										value matches {
-											DV_TEXT[id0253] matches {*}
+											DV_TEXT[id15] 
 										}
 									}
 								}
 							}
 						}
 						state matches {
-							ITEM_TREE[at0009] matches {	-- Tree
+							ITEM_TREE[id10] matches {
 								items matches {
-									ELEMENT[at0008] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[id9] occurrences matches {0..*} matches {	-- Confounding Factors
 										value matches {
-											DV_TEXT[id0981] matches {*}
+											DV_TEXT[id16] 
 										}
 									}
 								}
@@ -95,115 +97,83 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0007] matches {	-- Tree
+			ITEM_TREE[id8] matches {
 				items matches {
-					allow_archetype CLUSTER[at0010] occurrences matches {0..*} matches {	-- Device Details
+					allow_archetype CLUSTER[id11] occurrences matches {0..*} matches {	-- Device Details
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"*Physical Examination Findings(en)">
 				description = <"*Findings observed during the physical examination of a subject.(en)">
 			>
-			["at0001"] = <
-				text = <"*Event Series(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"*Any event(en)">
 				description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
 			>
-			["at0003"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"*Description(en)">
 				description = <"*Narrative description of the overall findings observed during a physical examination of a patient.(en)">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"*Examination Detail(en)">
 				description = <"*Structured details of the physical examination.(en)">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"*Interpretation(en)">
 				description = <"*Single word, phrase or brief description represents the clinical meaning and significance of the physical examination findings.(en)">
 			>
-			["at0007"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"*Confounding Factors(en)">
 				description = <"*Description of any incidental factors that may have contributed to the physical examination findings.(en)">
 			>
-			["at0009"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"*Device Details(en)">
 				description = <"*Details about any device used during the physical examination.(en)">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"*Comment(en)">
 				description = <"*Any additional narrative comment not covered by other elements.(en)">
 			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Physical Examination Findings">
 				description = <"Findings observed during the physical examination of a subject.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Description">
 				description = <"Narrative description of the overall findings observed during a physical examination of a patient.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Examination Detail">
 				description = <"Structured details of the physical examination.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Interpretation">
 				description = <"Single word, phrase or brief description represents the clinical meaning and significance of the physical examination findings.">
 			>
-			["at0007"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Confounding Factors">
 				description = <"Description of any incidental factors that may have contributed to the physical examination findings.">
 			>
-			["at0009"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Device Details">
 				description = <"Details about any device used during the physical examination.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Comment">
 				description = <"Any additional narrative comment not covered by other elements.">
 			>

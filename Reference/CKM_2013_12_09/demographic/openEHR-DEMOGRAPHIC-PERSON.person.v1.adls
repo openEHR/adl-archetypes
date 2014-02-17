@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-DEMOGRAPHIC-PERSON.person.v1.0.0
 
 language
@@ -46,40 +46,40 @@ description
 	>
 
 definition
-	PERSON[at0000] matches {	-- Dados da pessoa
+	PERSON[id1] matches {	-- Dados da pessoa
 		details matches {
-			allow_archetype ITEM_TREE[at0001] occurrences matches {1} matches {	-- Detalhes
+			allow_archetype ITEM_TREE[id2] occurrences matches {1} matches {	-- Detalhes
 				include
-					archetype_id/value matches {/(person_details)[a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(person_details)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		identities matches {
-			allow_archetype PARTY_IDENTITY[at0002] occurrences matches {1} matches {	-- Nome
+			allow_archetype PARTY_IDENTITY[id3] occurrences matches {1} matches {	-- Nome
 				include
-					archetype_id/value matches {/(person_name)[a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(person_name)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		contacts matches {
-			CONTACT[at0003] occurrences matches {1} matches {	-- Contatos
+			CONTACT[id4] occurrences matches {1} matches {	-- Contatos
 				addresses matches {
-					allow_archetype ADDRESS[at0030] occurrences matches {1} matches {	-- Endereço
+					allow_archetype ADDRESS[id31] occurrences matches {1} matches {	-- Endereço
 						include
-							archetype_id/value matches {/(address)([a-zA-Z0-9_-]+)*\.v1/}
-							archetype_id/value matches {/(electronic_communication)[a-zA-Z0-9_-]*\.v1/}
+							archetype_id/value matches {/(address)(a-zA-Z0-9_-]+)*\.v1/}
+							archetype_id/value matches {/(electronic_communication)a-zA-Z0-9_-]*\.v1/}
 					}
 				}
 			}
 		}
 		relationships matches {
-			PARTY_RELATIONSHIP[at0004] matches {	-- Relacionamentos
+			PARTY_RELATIONSHIP[id5] matches {	-- Relacionamentos
 				details matches {
-					ITEM_TREE[id0979] matches {
+					ITEM_TREE[id42] matches {
 						items matches {
-							ELEMENT[at0040] matches {	-- Grau de parentesco
+							ELEMENT[id41] matches {	-- Grau de parentesco
 								value matches {
-									DV_TEXT[id0037] matches {*}
-									DV_CODED_TEXT[id0038] matches {
-										defining_code matches {[ac0000]}		-- Códigos para tipo de parentesco
+									DV_TEXT[id43] 
+									DV_CODED_TEXT[id44] matches {
+										defining_code matches {[ac1]}		-- Códigos para tipo de parentesco
 									}
 								}
 							}
@@ -90,78 +90,72 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Dados da pessoa">
 				description = <"Dados da pessoa.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Detalhes">
 				description = <"Detalhes demográficos da pessoa.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Nome">
 				description = <"Conjunto de dados que especificam o nome da pessoa.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Contatos">
 				description = <"Contatos da pessoa.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Relacionamentos">
 				description = <"Relacionamentos de uma pessoa, especialmente laços familiares.">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Endereço">
 				description = <"Endereços vinculados a um único contato, ou seja, com o mesmo período de validade.">
 			>
-			["at0040"] = <
+			["id41"] = <
 				text = <"Grau de parentesco">
 				description = <"Define o grau de parentesco entre as pessoas envolvidas.">
 			>
-		>
-		["en"] = <
-			["at0000"] = <
-				text = <"Person">
-				description = <"Personal demographic data.">
-			>
-			["at0001"] = <
-				text = <"Demographic details">
-				description = <"A person's demographic details.">
-			>
-			["at0002"] = <
-				text = <"Name">
-				description = <"A person's name.">
-			>
-			["at0003"] = <
-				text = <"Contacts">
-				description = <"A person's contacts.">
-			>
-			["at0004"] = <
-				text = <"Relationships">
-				description = <"A person's relationships, especially family ties.">
-			>
-			["at0030"] = <
-				text = <"Addresses">
-				description = <"Addresses linked to a single contact, i.e. with the same time validity.">
-			>
-			["at0040"] = <
-				text = <"Relationship type">
-				description = <"Defines the type of relationship between related persons.">
-			>
-		>
-	>
-	constraint_definitions = <
-		["pt-br"] = <
-			["ac0000"] = <
+			["ac1"] = <
 				text = <"Códigos para tipo de parentesco">
 				description = <"códigos válidos para tipo de parentesco.">
 			>
 		>
 		["en"] = <
-			["ac0000"] = <
+			["id1"] = <
+				text = <"Person">
+				description = <"Personal demographic data.">
+			>
+			["id2"] = <
+				text = <"Demographic details">
+				description = <"A person's demographic details.">
+			>
+			["id3"] = <
+				text = <"Name">
+				description = <"A person's name.">
+			>
+			["id4"] = <
+				text = <"Contacts">
+				description = <"A person's contacts.">
+			>
+			["id5"] = <
+				text = <"Relationships">
+				description = <"A person's relationships, especially family ties.">
+			>
+			["id31"] = <
+				text = <"Addresses">
+				description = <"Addresses linked to a single contact, i.e. with the same time validity.">
+			>
+			["id41"] = <
+				text = <"Relationship type">
+				description = <"Defines the type of relationship between related persons.">
+			>
+			["ac1"] = <
 				text = <"Codes for type of relationship">
 				description = <"Valid codes for type of relationship.">
 			>

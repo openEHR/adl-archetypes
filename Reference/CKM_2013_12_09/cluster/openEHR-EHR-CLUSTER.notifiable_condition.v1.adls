@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.notifiable_condition.v1.0.0
 
 language
@@ -28,77 +28,84 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Notifiable condition
+	CLUSTER[id1] matches {	-- Notifiable condition
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Specimen surce
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Specimen surce
 				value matches {
-					DV_TEXT[id0205] matches {*}
+					DV_TEXT[id9] 
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Status
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Status
 				value matches {
-					DV_CODED_TEXT[id0605] matches {
-						defining_code matches {
-							[local::
-							at0003, 	-- Completed
-							at0004]	-- Aborted
-						}
+					DV_CODED_TEXT[id10] matches {
+						defining_code matches {[ac1]}		-- Status
 					}
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Date of notification
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Date of notification
 				value matches {
-					DV_DATE_TIME[id0805] matches {*}
+					DV_DATE_TIME[id11] 
 				}
 			}
-			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Notifiable condition
+			ELEMENT[id7] occurrences matches {0..1} matches {	-- Notifiable condition
 				value matches {
-					DV_TEXT[id0206] matches {*}
+					DV_TEXT[id12] 
 				}
 			}
-			ELEMENT[at0007] occurrences matches {0..1} matches {	-- Record of notifiable condition
+			ELEMENT[id8] occurrences matches {0..1} matches {	-- Record of notifiable condition
 				value matches {
-					DV_EHR_URI[id0606] matches {*}
+					DV_EHR_URI[id13] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Notifiable condition">
 				description = <"To record details of a notifiable condition as part of a microbiology result.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Specimen surce">
 				description = <"Identifies the specimen source of the condition – patient, food, soil,...">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Status">
 				description = <"A status of completed means the patient has been associated with the given notifiable condition.
 A status of aborted means the patient was associated with the notifiable condition in error.">
 			>
-			["at0003"] = <
+			["at4"] = <
 				text = <"Completed">
 				description = <"Patient correctly associated with notifiable condition.">
 			>
-			["at0004"] = <
+			["at5"] = <
 				text = <"Aborted">
 				description = <"Patient associated with notifiable condition in error.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Date of notification">
 				description = <"The data and time that the notification was made.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Notifiable condition">
 				description = <"A description or coded entry for the notifiable condition.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Record of notifiable condition">
 				description = <"A link to the original record identifying the notifiable condition.">
 			>
+			["ac1"] = <
+				text = <"Status">
+				description = <"A status of completed means the patient has been associated with the given notifiable condition.
+A status of aborted means the patient was associated with the notifiable condition in error.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at4", "at5">
 		>
 	>

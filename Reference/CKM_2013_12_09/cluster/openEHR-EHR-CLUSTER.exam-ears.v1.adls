@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.exam-ears.v1.0.0
 
 specialize
-	openEHR-EHR-CLUSTER.exam.v1.0.0
+	openEHR-EHR-CLUSTER.exam.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -31,115 +31,103 @@ description
 	>
 
 definition
-	CLUSTER[at0000.1] matches {	-- Examination of the ears
+	CLUSTER[id1.1] matches {	-- Examination of the ears
 		/items matches {
-			after [at0002]
-			CLUSTER[at0.66] occurrences matches {0..2} matches {	-- Lateral Findings
+			after [id3]
+			CLUSTER[id0.66] occurrences matches {0..2} matches {	-- Lateral Findings
 				items matches {
-					ELEMENT[at0.16] occurrences matches {0..1} matches {	-- Side
+					ELEMENT[id0.16] occurrences matches {0..1} matches {	-- Side
 						value matches {
-							DV_CODED_TEXT[id0.869] matches {
-								defining_code matches {
-									[local::
-									at0.17, 	-- Left
-									at0.18]	-- Right
-								}
+							DV_CODED_TEXT[id0.41] matches {
+								defining_code matches {[ac0.2]}		-- (added by post-parse processor)
 							}
 						}
 					}
-					CLUSTER[at0.57] occurrences matches {0..1} matches {	-- Physical
+					CLUSTER[id0.57] occurrences matches {0..1} matches {	-- Physical
 						items matches {
-							allow_archetype CLUSTER[at0.76] occurrences matches {0..1} matches {	-- External ear detail
+							allow_archetype CLUSTER[id0.76] occurrences matches {0..1} matches {	-- External ear detail
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation-external_ear(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection-external_ear(-[a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation-external_ear(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection-external_ear(-a-zA-Z0-9_]+)*\.v1/}
 							}
-							allow_archetype CLUSTER[at0.77] occurrences matches {0..*} matches {	-- Auditory canal detail
+							allow_archetype CLUSTER[id0.77] occurrences matches {0..*} matches {	-- Auditory canal detail
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection-ear_canal(-[a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection-ear_canal(-a-zA-Z0-9_]+)*\.v1/}
 							}
-							allow_archetype CLUSTER[at0.75] occurrences matches {0..1} matches {	-- Tympanic membrane detail
+							allow_archetype CLUSTER[id0.75] occurrences matches {0..1} matches {	-- Tympanic membrane detail
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection-tympanic_perforation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection-tympanic_membrane(-[a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection-tympanic_perforation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection-tympanic_membrane(-a-zA-Z0-9_]+)*\.v1/}
 							}
 						}
 					}
-					CLUSTER[at0.56] occurrences matches {0..1} matches {	-- Functional
+					CLUSTER[id0.56] occurrences matches {0..1} matches {	-- Functional
 						items matches {
-							ELEMENT[at0.24] occurrences matches {0..1} matches {	-- Whisper test
+							ELEMENT[id0.24] occurrences matches {0..1} matches {	-- Whisper test
 								value matches {
-									DV_TEXT[id0.197] 
+									DV_TEXT[id0.42] 
 								}
 							}
-							ELEMENT[at0.68] occurrences matches {0..1} matches {	-- Rinne Test
+							ELEMENT[id0.68] occurrences matches {0..1} matches {	-- Rinne Test
 								value matches {
-									DV_ORDINAL[id0.397] matches {
+									DV_ORDINAL[id0.43] matches {
 										[value, symbol] matches {
-											[{0}, {[local::at0.69]}],
-											[{1}, {[local::at0.70]}]
+											[{0}, {[at0.69]}],
+											[{1}, {[at0.70]}]
 										}
 									}
 								}
 							}
 						}
 					}
-					allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {
+					allow_archetype CLUSTER[id10] occurrences matches {0..*} matches {
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1/}
 					}
-					ELEMENT[at0006] occurrences matches {0..*} matches {
+					ELEMENT[id7] occurrences matches {0..*} matches {
 						value matches {
-							DV_MULTIMEDIA[id0.957] matches {
-								media_type matches {
-									[openEHR::
-									426, 
-									427, 
-									429]
-								}
+							DV_MULTIMEDIA[id0.44] matches {
+								media_type matches {[ac0.3]}		-- (added by post-parse processor)
 							}
 						}
 					}
 				}
 			}
 		}
-		/items[at0004]/items matches {
-			ELEMENT[at0005] occurrences matches {0..1} matches {
+		/items[id5]/items matches {
+			ELEMENT[id6] occurrences matches {0..1} matches {
 				value matches {
-					DV_CODED_TEXT[id0.733] matches {
-						defining_code matches {
-							[local::
-							at0.48, 	-- Both ears normal
-							at0.49, 	-- Left ear normal
-							at0.50]	-- Right ear normal
-						}
+					DV_CODED_TEXT[id0.39] matches {
+						defining_code matches {[ac0.1]}		-- (added by post-parse processor)
 					}
 				}
 			}
 		}
-		/items[at0008.1]/items matches {
-			CLUSTER[at0.67] occurrences matches {0..1} matches {	-- Functional
+		/items[id9.1]/items matches {
+			CLUSTER[id0.67] occurrences matches {0..1} matches {	-- Functional
 				items matches {
-					ELEMENT[at0.71] occurrences matches {0..1} matches {	-- Weber Test
+					ELEMENT[id0.71] occurrences matches {0..1} matches {	-- Weber Test
 						value matches {
-							DV_ORDINAL[id0.709] matches {
+							DV_ORDINAL[id0.45] matches {
 								[value, symbol] matches {
-									[{0}, {[local::at0.72]}],
-									[{1}, {[local::at0.73]}],
-									[{2}, {[local::at0.74]}]
+									[{0}, {[at0.72]}],
+									[{1}, {[at0.73]}],
+									[{2}, {[at0.74]}]
 								}
 							}
 						}
 					}
-					allow_archetype CLUSTER[at0.78] occurrences matches {0..*} matches {	-- Detail
+					allow_archetype CLUSTER[id0.78] occurrences matches {0..*} matches {	-- Detail
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0.16"] = <
+			["id0.16"] = <
 				text = <"Side">
 				description = <"Left or Right ear examined?">
 			>
@@ -151,7 +139,7 @@ ontology
 				text = <"Right">
 				description = <"Right ear.">
 			>
-			["at0.24"] = <
+			["id0.24"] = <
 				text = <"Whisper test">
 				description = <"A simple hearing test.">
 			>
@@ -167,23 +155,23 @@ ontology
 				text = <"Right ear normal">
 				description = <"The right ear is normal.">
 			>
-			["at0.56"] = <
+			["id0.56"] = <
 				text = <"Functional">
 				description = <"Lateral tests of ear function.">
 			>
-			["at0.57"] = <
+			["id0.57"] = <
 				text = <"Physical">
 				description = <"Physical examination of the ear.">
 			>
-			["at0.66"] = <
+			["id0.66"] = <
 				text = <"Lateral Findings">
 				description = <"Clinical findings related to a single ear.">
 			>
-			["at0.67"] = <
+			["id0.67"] = <
 				text = <"Functional">
 				description = <"Central functional auditory tests.">
 			>
-			["at0.68"] = <
+			["id0.68"] = <
 				text = <"Rinne Test">
 				description = <"A test to compare bone and air conduction of sound.">
 			>
@@ -195,7 +183,7 @@ ontology
 				text = <"Positive">
 				description = <"The Rinne test is negative.">
 			>
-			["at0.71"] = <
+			["id0.71"] = <
 				text = <"Weber Test">
 				description = <"A test to distinguish conductive and sensoineural hearing loss.">
 			>
@@ -211,29 +199,71 @@ ontology
 				text = <"Lateralising Right">
 				description = <"The result of the Weber test is lateralising to the right.">
 			>
-			["at0.75"] = <
+			["id0.75"] = <
 				text = <"Tympanic membrane detail">
 				description = <"Detailed findings related to the tmpanic membrane or perforation.">
 			>
-			["at0.76"] = <
+			["id0.76"] = <
 				text = <"External ear detail">
 				description = <"Detailed findings related to the external ear.">
 			>
-			["at0.77"] = <
+			["id0.77"] = <
 				text = <"Auditory canal detail">
 				description = <"Detailed findings related to the audiory canal.">
 			>
-			["at0.78"] = <
+			["id0.78"] = <
 				text = <"Detail">
 				description = <"Further detailed functional findings.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Examination of the ears">
 				description = <"Examination cluster for describing findings on physical examination of the eyes.">
 			>
-			["at0008.1"] = <
+			["id9.1"] = <
 				text = <"Central findings">
 				description = <"Clinical findings related to both ears.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.2"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.3"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.4"] = <
+				text = <"Rinne Test">
+				description = <"A test to compare bone and air conduction of sound.">
+			>
+			["ac0.5"] = <
+				text = <"Weber Test">
+				description = <"A test to distinguish conductive and sensoineural hearing loss.">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at0.48", "at0.49", "at0.50">
+		>
+		["ac0.2"] = <
+			id = <"ac0.2">
+			members = <"at0.17", "at0.18">
+		>
+		["ac0.3"] = <
+			id = <"ac0.3">
+			members = <"at1", "at2", "at3">
+		>
+		["ac0.4"] = <
+			id = <"ac0.4">
+			members = <"at0.69", "at0.70">
+		>
+		["ac0.5"] = <
+			id = <"ac0.5">
+			members = <"at0.72", "at0.73", "at0.74">
 		>
 	>

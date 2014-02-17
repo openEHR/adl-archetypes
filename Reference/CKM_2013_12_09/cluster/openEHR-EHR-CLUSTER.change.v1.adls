@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.change.v1.0.0
 
 language
@@ -24,143 +24,146 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Change
+	CLUSTER[id1] matches {	-- Change
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Readiness to change
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Readiness to change
 				value matches {
-					DV_CODED_TEXT[id0205] matches {
-						defining_code matches {
-							[local::
-							at0012, 	-- Not ready (Precontemplation)
-							at0013, 	-- Unsure (Contemplation)
-							at0014, 	-- Ready (Preparation)
-							at0015, 	-- Action
-							at0016]	-- Maintenance
-						}
+					DV_CODED_TEXT[id13] matches {
+						defining_code matches {[ac1]}		-- Readiness to change
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Reasons for current use of substance
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Reasons for current use of substance
 				value matches {
-					DV_TEXT[id0605] matches {*}
+					DV_TEXT[id14] 
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Triggers for use
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Triggers for use
 				value matches {
-					DV_TEXT[id0005] matches {*}
+					DV_TEXT[id15] 
 				}
 			}
-			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Perceptions about current use
+			CLUSTER[id5] occurrences matches {0..1} matches {	-- Perceptions about current use
 				items matches {
-					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Positive
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Positive
 						value matches {
-							DV_TEXT[id0733] matches {*}
+							DV_TEXT[id16] 
 						}
 					}
-					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Negative
+					ELEMENT[id7] occurrences matches {0..1} matches {	-- Negative
 						value matches {
-							DV_TEXT[id0133] matches {*}
+							DV_TEXT[id17] 
 						}
 					}
 				}
 			}
-			CLUSTER[at0007] occurrences matches {0..1} matches {	-- Perceptions about ceasing current use
+			CLUSTER[id8] occurrences matches {0..1} matches {	-- Perceptions about ceasing current use
 				items matches {
-					ELEMENT[at0008] occurrences matches {0..1} matches {	-- Positive
+					ELEMENT[id9] occurrences matches {0..1} matches {	-- Positive
 						value matches {
-							DV_TEXT[id0789] matches {*}
+							DV_TEXT[id18] 
 						}
 					}
-					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Negative
+					ELEMENT[id10] occurrences matches {0..1} matches {	-- Negative
 						value matches {
-							DV_TEXT[id0189] matches {*}
+							DV_TEXT[id19] 
 						}
 					}
 				}
 			}
-			ELEMENT[at0010] occurrences matches {0..1} matches {	-- Barriers to ceasing use
+			ELEMENT[id11] occurrences matches {0..1} matches {	-- Barriers to ceasing use
 				value matches {
-					DV_TEXT[id0206] matches {*}
+					DV_TEXT[id20] 
 				}
 			}
-			ELEMENT[at0011] occurrences matches {0..1} matches {	-- Comment
+			ELEMENT[id12] occurrences matches {0..1} matches {	-- Comment
 				value matches {
-					DV_TEXT[id0606] matches {*}
+					DV_TEXT[id21] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Change">
 				description = <"Record details about readiness to change current status.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Readiness to change">
 				description = <"Record person's inclination to change current status.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Reasons for current use of substance">
 				description = <"Record person's reasons for current use of substance.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Triggers for use">
 				description = <"Identify triggers for person to use substance.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Perceptions about current use">
 				description = <"Person's perceptions about their use of the substance.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Positive">
 				description = <"Record why the person likes to use substance.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Negative">
 				description = <"Record why the person doesn't like to use substance.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Perceptions about ceasing current use">
 				description = <"Person's perceptions about stopping use of substance.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Positive">
 				description = <"Record why the person would like to cease their use of substance.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Negative">
 				description = <"Record why the person would not like to cease their use of substance.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Barriers to ceasing use">
 				description = <"Identify barriers which prevent person from ceasing use.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Comment">
 				description = <"Comment about person's preparedness for changing their status.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Not ready (Precontemplation)">
 				description = <"These people are not seriously considering changing in the next 6 months.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Unsure (Contemplation)">
 				description = <"These perople are seriously considering changing in the next 6 months.">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Ready (Preparation)">
 				description = <"These people are planning to change in the next 30 days.">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Action">
 				description = <"Includes former users who have changed in the last 6 months.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Maintenance">
 				description = <"These are users who changed over 6 months ago.">
 			>
+			["ac1"] = <
+				text = <"Readiness to change">
+				description = <"Record person's inclination to change current status.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at13", "at14", "at15", "at16", "at17">
 		>
 	>

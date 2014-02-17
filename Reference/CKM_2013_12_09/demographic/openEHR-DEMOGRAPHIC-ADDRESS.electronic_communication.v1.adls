@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-DEMOGRAPHIC-ADDRESS.electronic_communication.v1.0.0
 
 language
@@ -46,57 +46,36 @@ description
 	>
 
 definition
-	ADDRESS[at0000] matches {	-- Electronic address
+	ADDRESS[id1] matches {	-- Electronic address
 		name matches {
-			DV_TEXT[id0717] matches {*}
-			DV_CODED_TEXT[id0718] matches {
-				defining_code matches {
-					[local::
-					at0020, 	-- Telephone
-					at0021, 	-- Mobile
-					at0022, 	-- Fax
-					at0023, 	-- Pager
-					at0024, 	-- E-mail
-					at0025]	-- URL
-				}
+			DV_TEXT[id14] 
+			DV_CODED_TEXT[id15] matches {
+				defining_code matches {[ac1]}		-- *Meio de Comunicação eletrônica(pt-br)
 			}
 		}
 		details matches {
-			ITEM_TREE[at0001] occurrences matches {1} matches {	-- Components
+			ITEM_TREE[id2] occurrences matches {1} matches {	-- Components
 				items matches {
-					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Usage
+					ELEMENT[id4] occurrences matches {0..1} matches {	-- Usage
 						value matches {
-							DV_TEXT[id0797] matches {*}
-							DV_CODED_TEXT[id0798] matches {
-								defining_code matches {
-									[local::
-									at0030, 	-- Personal
-									at0031, 	-- Business
-									at0032, 	-- Personal/Business
-									at0033]	-- Other use
-								}
+							DV_TEXT[id16] 
+							DV_CODED_TEXT[id17] matches {
+								defining_code matches {[ac2]}		-- *Forma de utilização(pt-br)
 							}
 						}
 					}
-					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Time preferences
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Time preferences
 						value matches {
-							DV_TEXT[id0197] matches {*}
-							DV_CODED_TEXT[id0198] matches {
-								defining_code matches {
-									[local::
-									at0040, 	-- Use during business hours
-									at0041, 	-- Use during day time
-									at0042, 	-- Use at weekend
-									at0043, 	-- Use at any time
-									at0044]	-- Use during evening/night.
-								}
+							DV_TEXT[id18] 
+							DV_CODED_TEXT[id19] matches {
+								defining_code matches {[ac3]}		-- *Horário de Utilização(pt-br)
 							}
 						}
 					}
-					ELEMENT[at0007] occurrences matches {1} matches {	-- Details
+					ELEMENT[id8] occurrences matches {1} matches {	-- Details
 						value matches {
-							DV_TEXT[at0012] matches {*}	-- Identification of the electronic communication medium
-							DV_URI[at0009] matches {*}	-- Internet address
+							DV_TEXT[id13] 	-- Identification of the electronic communication medium
+							DV_URI[id10] 	-- Internet address
 						}
 					}
 				}
@@ -104,186 +83,224 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Meio de Comunicação eletrônica">
 				description = <"Meio de comunicação eletrônica.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Componentes">
 				description = <"Componentes de um meio de comunicação eletrônica.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Forma de utilização">
 				description = <"Um código que representa a forma de uso que uma pessoa/organização faz deste meio de comunicação.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Horário de Utilização">
 				description = <"Uma indicação das preferências de horário de uso para este tipo de contato.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Detalhes">
 				description = <"Uma combinação única de caracteres usada em um equipamento de comunicação eletrônica com o propósito de estabelecer contato.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Endereço na internet">
 				description = <"Endereço na internet.">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Identificação do meio de comunicação">
 				description = <"Identificação do telefone, pager, correio eletrônico, etc.">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Telefone">
 				description = <"Indica que se trata de um telefone.">
 			>
-			["at0022"] = <
+			["at23"] = <
 				text = <"Celular">
 				description = <"Indica que se trata de um telefone celular.">
 			>
-			["at0021"] = <
+			["at22"] = <
 				text = <"Fax">
 				description = <"Indica que se trata de um fax.">
 			>
-			["at0023"] = <
+			["at24"] = <
 				text = <"Pager">
 				description = <"Indica que se trata de um pager.">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Correio eletrônico">
 				description = <"Indica que se trata de um correio eletrônico.">
 			>
-			["at0025"] = <
+			["at26"] = <
 				text = <"URL">
 				description = <"Indica que se trata de um endereço na internet.">
 			>
-			["at0030"] = <
+			["at31"] = <
 				text = <"Uso Pessoal">
 				description = <"Equipamento de uso pessoal.">
 			>
-			["at0031"] = <
+			["at32"] = <
 				text = <"Uso no Negócio">
 				description = <"Equipamento de uso profissional/negócio.">
 			>
-			["at0032"] = <
+			["at33"] = <
 				text = <"Uso Pessoal/Negócio">
 				description = <"Equipamento de uso pessoal e profissional/negócio.">
 			>
-			["at0033"] = <
+			["at34"] = <
 				text = <"Outro uso">
 				description = <"Equipamento para outro tipo de uso. Por exemplo, um telefone para contato, parente, etc.">
 			>
-			["at0040"] = <
+			["at41"] = <
 				text = <"Horário comercial">
 				description = <"Indica que este meio de comunicação deve ser utilizado durante o horário comercial.">
 			>
-			["at0041"] = <
+			["at42"] = <
 				text = <"Durante o dia">
 				description = <"Indica que este meio de comunicação deve ser utilizado durante o dia.">
 			>
-			["at0042"] = <
+			["at43"] = <
 				text = <"Final de semana">
 				description = <"Indica que este meio de comunicação deve ser utilizado aos finais de semana.">
 			>
-			["at0043"] = <
+			["at44"] = <
 				text = <"Qualquer hora">
 				description = <"Indica que este meio de comunicação pode ser utilizado a qualquer hora.">
 			>
-			["at0044"] = <
+			["at45"] = <
 				text = <"Durante a noite">
 				description = <"Indica que este meio de comunicação deve ser utilizado durante a noite.">
 			>
+			["ac1"] = <
+				text = <"Meio de Comunicação eletrônica">
+				description = <"Meio de comunicação eletrônica.">
+			>
+			["ac2"] = <
+				text = <"Forma de utilização">
+				description = <"Um código que representa a forma de uso que uma pessoa/organização faz deste meio de comunicação.">
+			>
+			["ac3"] = <
+				text = <"Horário de Utilização">
+				description = <"Uma indicação das preferências de horário de uso para este tipo de contato.">
+			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Electronic address">
 				description = <"The address of an electronic communication medium.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Components">
 				description = <"Electronic communication medium components.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Usage">
 				description = <"A code representing the manner of use that a person/organization applies to an electronic medium.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Time preferences">
 				description = <"An indication of the time of day preference for use of this electronic contact address.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Details">
 				description = <"A unique combination of characters used as input to electronic telecommunication equipment for the purpose of establishing contact.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Internet address">
 				description = <"Internet address.">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Identification of the electronic communication medium">
 				description = <"Identification of telephone, fax, pager, e-mail, etc.">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Telephone">
 				description = <"The medium is a telephone (not a mobile phone).">
 			>
-			["at0021"] = <
+			["at22"] = <
 				text = <"Mobile">
 				description = <"The medium is a mobile phone (not a landline).">
 			>
-			["at0022"] = <
+			["at23"] = <
 				text = <"Fax">
 				description = <"The medium is a faxsimile machine.">
 			>
-			["at0023"] = <
+			["at24"] = <
 				text = <"Pager">
 				description = <"The medium is a pager.">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"E-mail">
 				description = <"The medium is e-mail.">
 			>
-			["at0025"] = <
+			["at26"] = <
 				text = <"URL">
 				description = <"The medium is an internet address.">
 			>
-			["at0030"] = <
+			["at31"] = <
 				text = <"Personal">
 				description = <"The medium is for personal use.">
 			>
-			["at0031"] = <
+			["at32"] = <
 				text = <"Business">
 				description = <"The medium is for business use.">
 			>
-			["at0032"] = <
+			["at33"] = <
 				text = <"Personal/Business">
 				description = <"The medium is for both business and personal use.">
 			>
-			["at0033"] = <
+			["at34"] = <
 				text = <"Other use">
 				description = <"The medium is for another use, e.g., a telephone for contact, a relative's phone.">
 			>
-			["at0040"] = <
+			["at41"] = <
 				text = <"Use during business hours">
 				description = <"The medium is accessible during the business hours.">
 			>
-			["at0041"] = <
+			["at42"] = <
 				text = <"Use during day time">
 				description = <"The medium should be used during day time hours.">
 			>
-			["at0042"] = <
+			["at43"] = <
 				text = <"Use at weekend">
 				description = <"The medium should be used at the weekend.">
 			>
-			["at0043"] = <
+			["at44"] = <
 				text = <"Use at any time">
 				description = <"The medium can be used at all times.">
 			>
-			["at0044"] = <
+			["at45"] = <
 				text = <"Use during evening/night.">
 				description = <"The medium should be used during the evening or at night.">
 			>
+			["ac1"] = <
+				text = <"*Meio de Comunicação eletrônica(pt-br)">
+				description = <"*Meio de comunicação eletrônica.(pt-br)">
+			>
+			["ac2"] = <
+				text = <"*Forma de utilização(pt-br)">
+				description = <"*Um código que representa a forma de uso que uma pessoa/organização faz deste meio de comunicação.(pt-br)">
+			>
+			["ac3"] = <
+				text = <"*Horário de Utilização(pt-br)">
+				description = <"*Uma indicação das preferências de horário de uso para este tipo de contato.(pt-br)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at21", "at22", "at23", "at24", "at25", "at26">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at31", "at32", "at33", "at34">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at41", "at42", "at43", "at44", "at45">
 		>
 	>

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.third_party_observation.v1.0.0
 
 language
@@ -24,37 +24,37 @@ description
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Carer observation
+	OBSERVATION[id1] matches {	-- Carer observation
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Stimulus
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Stimulus
 										value matches {
-											DV_TEXT[id0053] matches {*}
+											DV_TEXT[id16] 
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Description
+									ELEMENT[id6] occurrences matches {0..1} matches {	-- Description
 										value matches {
-											DV_TEXT[id0453] matches {*}
+											DV_TEXT[id17] 
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Comment
+									ELEMENT[id7] occurrences matches {0..1} matches {	-- Comment
 										value matches {
-											DV_TEXT[id0853] matches {*}
+											DV_TEXT[id18] 
 										}
 									}
-									ELEMENT[at0007] occurrences matches {0..1} matches {	-- Level of concern
+									ELEMENT[id8] occurrences matches {0..1} matches {	-- Level of concern
 										value matches {
-											DV_TEXT[id0253] matches {*}
+											DV_TEXT[id19] 
 										}
 									}
-									CLUSTER[at0013] occurrences matches {0..1} matches {	-- Third Party details
+									CLUSTER[id14] occurrences matches {0..1} matches {	-- Third Party details
 										items matches {
-											allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {	-- Cluster: Third Party details
+											allow_archetype CLUSTER[id15] occurrences matches {0..*} matches {	-- Cluster: Third Party details
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.individual_personal\.v1/}
 											}
@@ -69,47 +69,39 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Carer observation">
 				description = <"Third party observer/carer's observation of subject
 ">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"*">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Stimulus">
 				description = <"Stimulus triggering the response being observed">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Description">
 				description = <"Detailed description of response by subject to stimulus">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Comment">
 				description = <"Additional comments about the observation and response">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Level of concern">
 				description = <"Degree of concern displayed by third party">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Third Party details">
 				description = <"*">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Cluster: Third Party details">
 				description = <"*">
 			>

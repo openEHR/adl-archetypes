@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-DEMOGRAPHIC-CLUSTER.person_death_data_iso.v1.0.0
 
 language
@@ -45,110 +45,117 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Dados do óbito
+	CLUSTER[id1] matches {	-- Dados do óbito
 		items matches {
-			ELEMENT[at0001] occurrences matches {1} matches {	-- Data do óbito
+			ELEMENT[id2] occurrences matches {1} matches {	-- Data do óbito
 				value matches {
-					DV_DATE[id0205] matches {*}
+					DV_DATE[id5] 
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Fonte da notificação
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Fonte da notificação
 				value matches {
-					DV_CODED_TEXT[id0605] matches {
-						defining_code matches {
-							[local::
-							at0020, 	-- Cartório
-							at0021, 	-- Prestador de assistência à saúde
-							at0022, 	-- Parente
-							at0023, 	-- Outra fonte
-							at0024]	-- Desconhecida
-						}
+					DV_CODED_TEXT[id6] matches {
+						defining_code matches {[ac1]}		-- Fonte da notificação
 					}
 				}
 			}
-			allow_archetype CLUSTER[at0003] occurrences matches {0..1} matches {	-- Dados adicionais do óbito que são específicos de cada país
+			allow_archetype CLUSTER[id4] occurrences matches {0..1} matches {	-- Dados adicionais do óbito que são específicos de cada país
 				include
-					archetype_id/value matches {/(person_other_death_data)[a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(person_other_death_data)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Dados do óbito">
 				description = <"Dados demográficos do óbito">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Data do óbito">
 				description = <"A data do óbito da pessoa">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Fonte da notificação">
 				description = <"Um código que informa sobre a fonte de notificação do óbito. Este campo fornece uma indicação da confiabilidade da informação">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Dados adicionais do óbito que são específicos de cada país">
 				description = <"Dados específicos de um país">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Cartório">
 				description = <"Indica que este óbito foi comunicado por um cartório">
 			>
-			["at0021"] = <
+			["at22"] = <
 				text = <"Prestador de assistência à saúde">
 				description = <"Indica que este óbito foi comunicado por um prestador de assistência à saúde">
 			>
-			["at0022"] = <
+			["at23"] = <
 				text = <"Parente">
 				description = <"Indica que este óbito foi comunicado por um parente">
 			>
-			["at0023"] = <
+			["at24"] = <
 				text = <"Outra fonte">
 				description = <"Indica que este óbito foi comunicado por uma outra fonte">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Desconhecida">
 				description = <"Indica que a fonte de notificação deste óbito é desconhecida">
 			>
+			["ac1"] = <
+				text = <"Fonte da notificação">
+				description = <"Um código que informa sobre a fonte de notificação do óbito. Este campo fornece uma indicação da confiabilidade da informação">
+			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Death data">
 				description = <"Death demographic data">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Death date">
 				description = <"The date of death of a person">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Source of notification">
 				description = <"Indicates the source of information about a subject of care’s death. This field provides an indication of the certainty of the information">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Additional death data that are country specific">
 				description = <"Country specific data">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Registry">
 				description = <"Indicate that the notification source is a registry">
 			>
-			["at0021"] = <
+			["at22"] = <
 				text = <"Healthcare provider">
 				description = <"Indicate that the notification source is a healthcare provider">
 			>
-			["at0022"] = <
+			["at23"] = <
 				text = <"Relative">
 				description = <"Indicate that the notification source is a relative">
 			>
-			["at0023"] = <
+			["at24"] = <
 				text = <"Other">
 				description = <"Indicate that the notification source is another source">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Unknown">
 				description = <"Indicate that the notification source is unknown">
 			>
+			["ac1"] = <
+				text = <"*Fonte da notificação(pt-br)">
+				description = <"*Um código que informa sobre a fonte de notificação do óbito. Este campo fornece uma indicação da confiabilidade da informação(pt-br)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at21", "at22", "at23", "at24", "at25">
 		>
 	>

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-SECTION.adverse_list.v1.0.0
 
 language
@@ -63,33 +63,33 @@ While EVALUATION.adverse and EVALUATION.exclusion-adverse archetypes and their s
 	>
 
 definition
-	SECTION[at0000] matches {	-- Adverse Reaction List
+	SECTION[id1] matches {	-- Adverse Reaction List
 		items cardinality matches {1..*; unordered} matches {
-			allow_archetype EVALUATION[at0001] occurrences matches {0..*} matches {	-- Adverse reactions inclusions/exclusions
+			allow_archetype EVALUATION[id2] occurrences matches {0..*} matches {	-- Adverse reactions inclusions/exclusions
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-adverse_reaction(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.adverse_reaction(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-adverse_reaction(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.adverse_reaction(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Adverse Reaction List">
 				description = <"Suggested design pattern for including an Adverse Reaction List in a template.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Adverse reactions inclusions/exclusions">
 				description = <"Slot constrained to specifically include archetypes representing known adverse reactions and exclusion of adverse reactions.">
 			>
 		>
 		["ru"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Список побочных реакций">
 				description = <"дизайн списка побочных реакций для включения в шаблоны">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"наличие/отсутвие побочных реакций">
 				description = <"Слот, содержащий ограничения на включение архетипов, описывающих наличие или отсутствие побочных реакий">
 			>

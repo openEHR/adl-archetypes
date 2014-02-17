@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.substance_use-alcohol.v1.0.0
 
 specialize
-	openEHR-EHR-OBSERVATION.substance_use.v1.0.0
+	openEHR-EHR-OBSERVATION.substance_use.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -33,14 +33,14 @@ Not to be used for recording use or consumption histories for substances other t
 	>
 
 definition
-	OBSERVATION[at0000.1] matches {	-- Alcohol Consumption
+	OBSERVATION[id1.1] matches {	-- Alcohol Consumption
 		/protocol matches {
-			ITEM_TREE[at0.29] matches {	-- Tree
+			ITEM_TREE[id0.29] matches {
 				items matches {
-					ELEMENT[at0.30] occurrences matches {0..1} matches {	-- Alcohol per standard drink
+					ELEMENT[id0.30] occurrences matches {0..1} matches {	-- Alcohol per standard drink
 						value matches {
-							DV_QUANTITY[id0.702] matches {
-								property matches {[openehr::124]}
+							DV_QUANTITY[id0.34] matches {
+								property matches {[at0.31]}
 								units matches {"gm"}
 							}
 						}
@@ -48,42 +48,31 @@ definition
 				}
 			}
 		}
-		/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value matches {
-			DV_CODED_TEXT[id0.53] matches {
-				defining_code matches {[local::at0.19]}		-- Alcohol
+		/data[id2]/events[id3]/data[id4]/items[id5]/value matches {
+			DV_CODED_TEXT[id0.26] matches {
+				defining_code matches {[at0.19]}
 			}
 		}
-		/data[at0001]/events[at0002]/data[at0003]/items[at0010]/items[at0011]/value matches {
-			DV_CODED_TEXT[id0.501] matches {
-				defining_code matches {
-					[local::
-					at0.20, 	-- All alcohol
-					at0.21, 	-- All beer
-					at0.22, 	-- All wine
-					at0.23, 	-- All spirits
-					at0.24, 	-- Full strength beer
-					at0.25, 	-- Light beer
-					at0.26, 	-- Red wine
-					at0.27, 	-- White wine
-					at0.28]	-- Fortified wine
-				}
+		/data[id2]/events[id3]/data[id4]/items[id11]/items[id12]/value matches {
+			DV_CODED_TEXT[id0.27] matches {
+				defining_code matches {[ac0.1]}		-- (added by post-parse processor)
 			}
 		}
-		/data[at0001]/events[at0002]/data[at0003]/items[at0010]/items[at0012.1]/value matches {
-			DV_QUANTITY[id0.821] matches {
-				property matches {[openehr::382]}
+		/data[id2]/events[id3]/data[id4]/items[id11]/items[id13.1]/value matches {
+			DV_QUANTITY[id0.30] matches {	-- Alcohol per standard drink
+				property matches {[at0.29]}
 				units matches {"/h", "/d", "/wk"}
 			}
 		}
-		/data[at0001]/events[at0002]/data[at0003]/items[at0010]/items[at0012.2]/value matches {
-			DV_QUANTITY[id0.221] matches {
-				property matches {[openehr::347]}
+		/data[id2]/events[id3]/data[id4]/items[id11]/items[id13.2]/value matches {
+			DV_QUANTITY[id0.31] matches {
+				property matches {[at0.30]}
 				units matches {"gm/d", "gm/wk"}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
 			["at0.19"] = <
@@ -126,25 +115,58 @@ ontology
 				text = <"Fortified wine">
 				description = <"Fortified wine consumed">
 			>
-			["at0.29"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0.30"] = <
+			["id0.30"] = <
 				text = <"Alcohol per standard drink">
 				description = <"Amount of alchohol defining a standard drink - this differs in many countries">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Alcohol Consumption">
 				description = <"Archetype to record the actual use or consumption of alcohol at the present time, a specific time or over a period of time. ">
 			>
-			["at0012.1"] = <
+			["id13.1"] = <
 				text = <"Standard drinks">
 				description = <"Number of standard drinks of alcohol consumed">
 			>
-			["at0012.2"] = <
+			["id13.2"] = <
 				text = <"Grams of alcohol">
 				description = <"Number of grams of alcohol consumed">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.2"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["at0.29"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["at0.30"] = <
+				text = <"Flow rate, mass">
+				description = <"Flow rate, mass">
+			>
+			["at0.31"] = <
+				text = <"Mass">
+				description = <"Mass">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at0.29"] = <http://openehr.org/id/382>
+			["at0.30"] = <http://openehr.org/id/347>
+			["at0.31"] = <http://openehr.org/id/124>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at0.20", "at0.21", "at0.22", "at0.23", "at0.24", "at0.25", "at0.26", "at0.27", "at0.28">
+		>
+		["ac0.2"] = <
+			id = <"ac0.2">
+			members = <"at7", "at8", "at9", "at10">
 		>
 	>

@@ -51,8 +51,7 @@ definition
 			ELEMENT[at0016] occurrences matches {0..*} matches {	-- Size
 				value matches {
 					DV_COUNT matches {*}
-					C_DV_QUANTITY <
-					>
+					DV_QUANTITY matches {*}
 					DV_TEXT matches {*}
 				}
 			}

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.cessation_attempts.v1.0.0
 
 language
@@ -28,55 +28,50 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Cessation attempts
+	CLUSTER[id1] matches {	-- Cessation attempts
 		items matches {
-			CLUSTER[at0002] occurrences matches {0..*} matches {	-- Attempt details
+			CLUSTER[id3] occurrences matches {0..*} matches {	-- Attempt details
 				items matches {
-					ELEMENT[at0001] occurrences matches {0..1} matches {	-- Location
+					ELEMENT[id2] occurrences matches {0..1} matches {	-- Location
 						value matches {
-							DV_TEXT[id0293] matches {*}
+							DV_TEXT[id12] 
 						}
 					}
-					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Date of attempt
+					ELEMENT[id4] occurrences matches {0..1} matches {	-- Date of attempt
 						value matches {
-							DV_DATE_TIME[id0093] matches {*}
+							DV_DATE_TIME[id13] 
 						}
 					}
-					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Description
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0493] matches {*}
+							DV_TEXT[id14] 
 						}
 					}
-					CLUSTER[at0005] occurrences matches {0..*} matches {	-- Therapeutic intervention
+					CLUSTER[id6] occurrences matches {0..*} matches {	-- Therapeutic intervention
 						items matches {
-							ELEMENT[at0006] occurrences matches {0..1} matches {	-- Agent
+							ELEMENT[id7] occurrences matches {0..1} matches {	-- Agent
 								value matches {
-									DV_TEXT[id0101] matches {*}
+									DV_TEXT[id15] 
 								}
 							}
-							ELEMENT[at0008] occurrences matches {0..1} matches {	-- Used optimally
+							ELEMENT[id9] occurrences matches {0..1} matches {	-- Used optimally
 								value matches {
-									DV_BOOLEAN[id0901] matches {
+									DV_BOOLEAN[id16] matches {
 										value matches {True, False}
 									}
 								}
 							}
-							ELEMENT[at0009] occurrences matches {0..1} matches {	-- Comment
+							ELEMENT[id10] occurrences matches {0..1} matches {	-- Comment
 								value matches {
-									DV_TEXT[id0301] matches {*}
+									DV_TEXT[id17] 
 								}
 							}
 						}
 					}
-					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Outcome
+					ELEMENT[id11] occurrences matches {0..1} matches {	-- Outcome
 						value matches {
-							DV_CODED_TEXT[id0294] matches {
-								defining_code matches {
-									[local::
-									at0011, 	-- Successful
-									at0012, 	-- Successful but relapsed
-									at0013]	-- Failed
-								}
+							DV_CODED_TEXT[id18] matches {
+								defining_code matches {[ac1]}		-- Outcome
 							}
 						}
 					}
@@ -85,60 +80,70 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Cessation attempts">
 				description = <"Cease use or consumption of a substance.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Location">
 				description = <"Place where attempt to cease use occurred eg home or name of institution.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Attempt details">
 				description = <"Details about cessation attempt/s.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Date of attempt">
 				description = <"Date of commencement of cessation attempt.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Description">
 				description = <"Description of the attempt.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Therapeutic intervention">
 				description = <"Details of therapeutic agent/s used.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Agent">
 				description = <"Name of agent used.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Used optimally">
 				description = <"Was the agent used optimally?">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Comment">
 				description = <"Comment about the effect of the agent on the attempt.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Outcome">
 				description = <"Outcome of attempt.">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Successful">
 				description = <"Outcome was successful; Use/consumption of substance ceased.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Successful but relapsed">
 				description = <"Outcome was initially successful but use/consumption of substance was resumed.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Failed">
 				description = <"Outcome was not successful; Use/consumption continued.">
 			>
+			["ac1"] = <
+				text = <"Outcome">
+				description = <"Outcome of attempt.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at12", "at13", "at14">
 		>
 	>

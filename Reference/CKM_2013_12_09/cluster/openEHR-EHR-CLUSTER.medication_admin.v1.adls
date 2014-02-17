@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.medication_admin.v1.0.0
 
 language
@@ -46,87 +46,87 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Medication administration
+	CLUSTER[id1] matches {	-- Medication administration
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Route
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Route
 				value matches {
-					DV_TEXT[id0205] matches {*}
+					DV_TEXT[id7] 
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Site
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Site
 				value matches {
-					DV_TEXT[id0605] matches {*}
+					DV_TEXT[id8] 
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Delivery method
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Delivery method
 				value matches {
-					DV_TEXT[id0005] matches {*}
+					DV_TEXT[id9] 
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Dose duration
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Dose duration
 				value matches {
-					DV_DURATION[id0405] matches {
+					DV_DURATION[id10] matches {
 						value matches {|>=PT0S|}
 					}
 				}
 			}
-			allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {	-- Infusion details
+			allow_archetype CLUSTER[id6] occurrences matches {0..*} matches {	-- Infusion details
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.infusion_details(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.infusion_details(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Medication administration">
 				description = <"Information about the future or actual administration of medication.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Route">
 				description = <"The route by which the medication is administered (e.g. oral, sublingual etc).">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Site">
 				description = <"A description of the site of administration.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Delivery method">
 				description = <"The method of delivery if this should be specified (e.g. via a nebuliser or spacer).">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Dose duration">
 				description = <"The length of time over which to administer each dose (e.g. an intravenous administration may have to be over a period of 5 minutes).">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Infusion details">
 				description = <"Details of administration via infusion.">
 			>
 		>
 		["sl"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Aplikacija cepiva">
 				description = <"Podatki o aplikaciji cepiva">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Pot uporabe">
 				description = <"Poti uporabe zdravila">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Mesto aplikacije">
 				description = <"Mesto aplikacije">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Vrsta aplikacije">
 				description = <"Vrsta apliciranja, če je določena (npr. inhalacije, oralno...)">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Trajanje doze aplikacije">
 				description = <"Čas trajanja ene doze apliciranega zdravila">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Podatki o infuziji">
 				description = <"Podatki o infuziji">
 			>

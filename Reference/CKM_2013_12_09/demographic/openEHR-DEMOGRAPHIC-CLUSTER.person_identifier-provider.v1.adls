@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-DEMOGRAPHIC-CLUSTER.person_identifier-provider.v1.0.0
 
 specialize
-	openEHR-DEMOGRAPHIC-CLUSTER.person_identifier.v1.0.0
+	openEHR-DEMOGRAPHIC-CLUSTER.person_identifier.v1
 
 language
 	original_language = <[ISO_639-1::pt-br]>
@@ -48,42 +48,42 @@ description
 	>
 
 definition
-	CLUSTER[at0000.1] matches {	-- Identificador de um prestador de assistência à saúde
+	CLUSTER[id1.1] matches {	-- Identificador de um prestador de assistência à saúde
 		/items matches {
-			after [at0006]
-			ELEMENT[at0.2] occurrences matches {1..*} matches {	-- Uso da identificação
+			after [id7]
+			ELEMENT[id0.2] occurrences matches {1..*} matches {	-- Uso da identificação
 				value matches {
-					DV_TEXT[id0.869] 
-					DV_CODED_TEXT[id0.870] matches {
-						defining_code matches {[ac0000.1]}		-- Código de uso do identificador.
+					DV_TEXT[id0.28] 
+					DV_CODED_TEXT[id0.29] matches {
+						defining_code matches {[ac1.1]}		-- Código de uso do identificador.
 					}
 				}
 			}
-			CLUSTER[at0.3] occurrences matches {0..*} matches {	-- Resolução de duplicidade
+			CLUSTER[id0.3] occurrences matches {0..*} matches {	-- Resolução de duplicidade
 				items cardinality matches {3..*; ordered} matches {
-					ELEMENT[at0.30] occurrences matches {0..1} matches {	-- Não é duplicata de
+					ELEMENT[id0.30] occurrences matches {0..1} matches {	-- Não é duplicata de
 						value matches {
-							DV_TEXT[id0.293] 
+							DV_TEXT[id0.30] 	-- Não é duplicata de
 						}
 					}
-					ELEMENT[at0.31] occurrences matches {0..1} matches {	-- Duplicata de
+					ELEMENT[id0.31] occurrences matches {0..1} matches {	-- Duplicata de
 						value matches {
-							DV_TEXT[id0.693] 
+							DV_TEXT[id0.31] 	-- Duplicata de
 						}
 					}
-					ELEMENT[at0.32] occurrences matches {1..*} matches {	-- Confirmado pela organização
+					ELEMENT[id0.32] occurrences matches {1..*} matches {	-- Confirmado pela organização
 						value matches {
-							DV_TEXT[id0.93] 
+							DV_TEXT[id0.32] 	-- Confirmado pela organização
 						}
 					}
-					ELEMENT[at0.33] occurrences matches {1..*} matches {	-- Data da confirmação
+					ELEMENT[id0.33] occurrences matches {1..*} matches {	-- Data da confirmação
 						value matches {
-							DV_DATE[id0.493] 
+							DV_DATE[id0.33] 	-- Data da confirmação
 						}
 					}
-					ELEMENT[at0.34] occurrences matches {1..*} matches {	-- Identificador desativado
+					ELEMENT[id0.34] occurrences matches {1..*} matches {	-- Identificador desativado
 						value matches {
-							DV_TEXT[id0.893] 
+							DV_TEXT[id0.34] 	-- Identificador desativado
 						}
 					}
 				}
@@ -91,88 +91,96 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Healthcare provider identifier">
 				description = <"Healthcare provider identifier.">
 			>
-			["at0.2"] = <
+			["id0.2"] = <
 				text = <"Identifier Usage">
 				description = <"The purpose or intended use of this unique identifier.">
 			>
-			["at0.3"] = <
+			["id0.3"] = <
 				text = <"Duplicate resolution">
 				description = <"This group of data allow users to identify where they have determined that two identifiers which appears to be duplicates are not duplicated, or to indicate that where they are discovered to be duplicates -  which number is retired and no longer used, and which is retained.">
 			>
-			["at0.30"] = <
+			["id0.30"] = <
 				text = <"Not a duplicate of">
 				description = <"The identifier entered into this field is not a duplicate entry of this identifier.">
 			>
-			["at0.31"] = <
+			["id0.31"] = <
 				text = <"Duplicate of">
 				description = <"The identifier entered into this field is a duplicate entry of this identifier.">
 			>
-			["at0.32"] = <
+			["id0.32"] = <
 				text = <"Confirmed by organisation">
 				description = <"The organisation that has confirmed the duplicate or not duplicate status of this identifier.">
 			>
-			["at0.33"] = <
+			["id0.33"] = <
 				text = <"Date confirmed">
 				description = <"The date upon which this identifier was determined as a duplicate or not a duplicate.">
 			>
-			["at0.34"] = <
+			["id0.34"] = <
 				text = <"Retired identifider">
 				description = <"For a duplicate identifier set this field indicates if this number is the one retired (nor for further use) or not.">
 			>
-		>
-		["pt-br"] = <
-			["at0000.1"] = <
-				text = <"Identificador de um prestador de assistência à saúde">
-				description = <"Identificador de um prestador de assistência à saúde.">
-			>
-			["at0.2"] = <
-				text = <"Uso da identificação">
-				description = <"O propósito de uso deste identificador único.">
-			>
-			["at0.3"] = <
-				text = <"Resolução de duplicidade">
-				description = <"Este grupo de dados permite aos usuários identificar onde eles determinaram que dois identificadores que parecem ser duplicatas não são duplicatas, ou indicar, no caso de se descobrir qe eles são duplicatas: que número está inativo e não é mais usado, e qual deve ser mantido.">
-			>
-			["at0.30"] = <
-				text = <"Não é duplicata de">
-				description = <"O identificador digitado neste campo não é uma duplicata deste identificador.">
-			>
-			["at0.31"] = <
-				text = <"Duplicata de">
-				description = <"O identificador digitado neste campo não é uma duplicata deste identificador.">
-			>
-			["at0.32"] = <
-				text = <"Confirmado pela organização">
-				description = <"A organização que confirmou o status de duplicata ou não deste identificador.">
-			>
-			["at0.33"] = <
-				text = <"Data da confirmação">
-				description = <"A data onde este identificador foi determinado como sendo ou não uma duplicata.">
-			>
-			["at0.34"] = <
-				text = <"Identificador desativado">
-				description = <"Para um conjunto de identificadores duplicados, este campo indica se este número é o que deve ser desativado (não mais usado) ou não.">
-			>
-		>
-	>
-	constraint_definitions = <
-		["en"] = <
-			["ac0000.1"] = <
+			["ac1.1"] = <
 				text = <"Identifier usage code">
 				description = <"Valid codes for usage of identifiers.">
 			>
+			["ac0.1"] = <
+				text = <"*(added by post-parse processor)(pt-br)">
+				description = <"*(added by post-parse processor)(pt-br)">
+			>
 		>
 		["pt-br"] = <
-			["ac0000.1"] = <
+			["id1.1"] = <
+				text = <"Identificador de um prestador de assistência à saúde">
+				description = <"Identificador de um prestador de assistência à saúde.">
+			>
+			["id0.2"] = <
+				text = <"Uso da identificação">
+				description = <"O propósito de uso deste identificador único.">
+			>
+			["id0.3"] = <
+				text = <"Resolução de duplicidade">
+				description = <"Este grupo de dados permite aos usuários identificar onde eles determinaram que dois identificadores que parecem ser duplicatas não são duplicatas, ou indicar, no caso de se descobrir qe eles são duplicatas: que número está inativo e não é mais usado, e qual deve ser mantido.">
+			>
+			["id0.30"] = <
+				text = <"Não é duplicata de">
+				description = <"O identificador digitado neste campo não é uma duplicata deste identificador.">
+			>
+			["id0.31"] = <
+				text = <"Duplicata de">
+				description = <"O identificador digitado neste campo não é uma duplicata deste identificador.">
+			>
+			["id0.32"] = <
+				text = <"Confirmado pela organização">
+				description = <"A organização que confirmou o status de duplicata ou não deste identificador.">
+			>
+			["id0.33"] = <
+				text = <"Data da confirmação">
+				description = <"A data onde este identificador foi determinado como sendo ou não uma duplicata.">
+			>
+			["id0.34"] = <
+				text = <"Identificador desativado">
+				description = <"Para um conjunto de identificadores duplicados, este campo indica se este número é o que deve ser desativado (não mais usado) ou não.">
+			>
+			["ac1.1"] = <
 				text = <"Código de uso do identificador.">
 				description = <"códigos válidos para os usos de identificadores.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at11", "at12", "at13", "at14">
 		>
 	>

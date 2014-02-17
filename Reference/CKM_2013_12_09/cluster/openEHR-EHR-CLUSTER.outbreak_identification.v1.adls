@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.outbreak_identification.v1.0.0
 
 language
@@ -27,68 +27,75 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Outbreak identification
+	CLUSTER[id1] matches {	-- Outbreak identification
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Outbreak identifier
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Outbreak identifier
 				value matches {
-					DV_TEXT[id0205] matches {*}
+					DV_TEXT[id8] 
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Date outbreak identified
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Date outbreak identified
 				value matches {
-					DV_DATE_TIME[id0605] matches {*}
+					DV_DATE_TIME[id9] 
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Status
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Status
 				value matches {
-					DV_CODED_TEXT[id0005] matches {
-						defining_code matches {
-							[local::
-							at0004, 	-- Completed
-							at0005]	-- Aborted
-						}
+					DV_CODED_TEXT[id10] matches {
+						defining_code matches {[ac1]}		-- Status
 					}
 				}
 			}
-			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Outbreak
+			ELEMENT[id7] occurrences matches {0..1} matches {	-- Outbreak
 				value matches {
-					DV_TEXT[id0206] matches {*}
+					DV_TEXT[id11] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Outbreak identification">
 				description = <"To record Outbreak identification details for public health purposes.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Outbreak identifier">
 				description = <"*">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Date outbreak identified">
 				description = <"The date that the outbreak was identified.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Status">
 				description = <"The status of the outbreak association with the subject.  A status of completed means the patient has been associated with the outbreak. 
 A status of aborted means the patient was associated with the outbreak in error.">
 			>
-			["at0004"] = <
+			["at5"] = <
 				text = <"Completed">
 				description = <"The case has been associated with the given case identifier.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Aborted">
 				description = <"The subject was associated with the case identifier in error.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Outbreak">
 				description = <"Text or coded description of the outbreak identified e.g. Salmonella.">
 			>
+			["ac1"] = <
+				text = <"Status">
+				description = <"The status of the outbreak association with the subject.  A status of completed means the patient has been associated with the outbreak. 
+A status of aborted means the patient was associated with the outbreak in error.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at5", "at6">
 		>
 	>

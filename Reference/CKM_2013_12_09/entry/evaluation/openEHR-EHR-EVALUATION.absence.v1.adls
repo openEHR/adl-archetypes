@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-EVALUATION.absence.v1.0.0
 
 language
@@ -35,24 +35,24 @@ This archetype has been designed specifically to avoid the need to use of flags 
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- Absence of Information
+	EVALUATION[id1] matches {	-- Absence of Information
 		data matches {
-			ITEM_TREE[at0001] matches {	-- Tree
+			ITEM_TREE[id2] matches {
 				items matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Absence Statement
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Absence Statement
 						value matches {
-							DV_TEXT[id0077] matches {*}
+							DV_TEXT[id6] 
 						}
 					}
 				}
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0003] matches {	-- Tree
+			ITEM_TREE[id4] matches {
 				items matches {
-					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Date Verified
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Date Verified
 						value matches {
-							DV_DATE_TIME[id0261] matches {*}
+							DV_DATE_TIME[id7] 
 						}
 					}
 				}
@@ -60,26 +60,18 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Absence of Information">
 				description = <"Positive statement/s about information that is not available within the health record at a specific point in time.">
 			>
-			["at0001"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Absence Statement">
 				description = <"Positive statement that no information is available.">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Date Verified">
 				description = <"The date at which the information was deemed to be absent.">
 			>

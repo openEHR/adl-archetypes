@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-COMPOSITION.prescription.v1.0.0
 
 language
@@ -27,26 +27,21 @@ description
 	>
 
 definition
-	COMPOSITION[at0000] matches {	-- Prescription
+	COMPOSITION[id1] matches {	-- Prescription
 		category matches {
-			DV_CODED_TEXT[id0577] matches {
-				defining_code matches {[openehr::433]}
+			DV_CODED_TEXT[id8] matches {
+				defining_code matches {[at7]}
 			}
 		}
 		context matches {
-			EVENT_CONTEXT[id0636] matches {
+			EVENT_CONTEXT[id9] matches {
 				other_context matches {
-					ITEM_TREE[at0001] matches {	-- Tree
+					ITEM_TREE[id2] matches {
 						items matches {
-							ELEMENT[at0002] occurrences matches {0..1} matches {	-- Prescription category
+							ELEMENT[id3] occurrences matches {0..1} matches {	-- Prescription category
 								value matches {
-									DV_CODED_TEXT[id0021] matches {
-										defining_code matches {
-											[local::
-											at0003, 	-- PBS
-											at0004, 	-- RPBS
-											at0005]	-- Private
-										}
+									DV_CODED_TEXT[id10] matches {
+										defining_code matches {[ac1]}		-- Prescription category
 									}
 								}
 							}
@@ -56,43 +51,60 @@ definition
 			}
 		}
 		content matches {
-			allow_archetype SECTION[at0006] matches {	-- Section: Medications
+			allow_archetype SECTION[id7] matches {	-- Section: Medications
 				include
 					archetype_id/value matches {/openEHR-EHR-SECTION\.medications\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Prescription">
 				description = <"Set of medication orders communicated to pharmacy">
 			>
-			["at0001"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Prescription category">
 				description = <"Australian prescription category">
 			>
-			["at0003"] = <
+			["at4"] = <
 				text = <"PBS">
 				description = <"Australian pharmaceutical benefits scheme">
 			>
-			["at0004"] = <
+			["at5"] = <
 				text = <"RPBS">
 				description = <"Repatriation pharmaceutical benefits scheme (ADF)">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Private">
 				description = <"Entire cost met by patient or agent">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Section: Medications">
 				description = <"*">
 			>
+			["ac1"] = <
+				text = <"Prescription category">
+				description = <"Australian prescription category">
+			>
+			["at7"] = <
+				text = <"event">
+				description = <"event">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at7"] = <http://openehr.org/id/433>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at4", "at5", "at6">
 		>
 	>

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.ccs_angina_status.v1.0.0
 
 language
@@ -32,23 +32,23 @@ Available from: http://www.pulsus.com/ccc2003/abs/a853.htm">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Angina symptom Classification (CCS)
+	OBSERVATION[id1] matches {	-- Angina symptom Classification (CCS)
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Angina classification
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Angina classification
 										value matches {
-											DV_ORDINAL[id0053] matches {
+											DV_ORDINAL[id6] matches {
 												[value, symbol] matches {
-													[{0}, {[local::at0005]}],
-													[{1}, {[local::at0006]}],
-													[{2}, {[local::at0007]}],
-													[{3}, {[local::at0008]}],
-													[{4}, {[local::at0009]}]
+													[{0}, {[at6]}],
+													[{1}, {[at7]}],
+													[{2}, {[at8]}],
+													[{3}, {[at9]}],
+													[{4}, {[at10]}]
 												}
 											}
 										}
@@ -62,58 +62,60 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Angina symptom Classification (CCS)">
 				description = <"Angina symptom score based on Canadian Cardiovascular Society (CCS) Angina Status score.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Any event.">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Angina classification">
 				description = <"Angina symptom score based on Canadian Cardiovascular Society (CCS) Angina Status classification.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Class 0">
 				description = <"Patient has no angina symptoms.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Class I">
 				description = <"Angina which does not limit ordinary physical activity.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Class II">
 				description = <"Slight limitation of ordinary activity.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Class III">
 				description = <"Marked limitation of ordinary physical activity.">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"Class IV">
 				description = <"Inability to perform any physical activity without discomfort.">
+			>
+			["ac1"] = <
+				text = <"Angina classification">
+				description = <"Angina symptom score based on Canadian Cardiovascular Society (CCS) Angina Status classification.">
 			>
 		>
 	>
 	term_bindings = <
 		["Snomed"] = <
-			["at0000"] = <[Snomed::134438001]>
-			["at0004"] = <[Snomed::134438001]>
-			["at0006"] = <[Snomed::61490001]>
-			["at0007"] = <[Snomed::41334000]>
-			["at0008"] = <[Snomed::85284003]>
-			["at0009"] = <[Snomed::89323001]>
+			["id1"] = <http://Snomed.org/id/134438001>
+			["id5"] = <http://Snomed.org/id/134438001>
+			["at7"] = <http://Snomed.org/id/61490001>
+			["at8"] = <http://Snomed.org/id/41334000>
+			["at9"] = <http://Snomed.org/id/85284003>
+			["at10"] = <http://Snomed.org/id/89323001>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at6", "at7", "at8", "at9", "at10">
 		>
 	>

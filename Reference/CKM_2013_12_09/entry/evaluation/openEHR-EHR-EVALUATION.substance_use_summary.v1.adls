@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-EVALUATION.substance_use_summary.v1.0.0
 
 language
@@ -64,68 +64,62 @@ description
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- Substance Use Summary
+	EVALUATION[id1] matches {	-- Substance Use Summary
 		data matches {
-			ITEM_TREE[at0001] matches {	-- Tree
+			ITEM_TREE[id2] matches {
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Substance
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Substance
 						value matches {
-							DV_TEXT[id0277] matches {*}
+							DV_TEXT[id17] 
 						}
 					}
-					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Usage Status
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Usage Status
 						value matches {
-							DV_CODED_TEXT[id0077] matches {
-								defining_code matches {
-									[local::
-									at0003, 	-- Current User
-									at0004, 	-- Former Regular User
-									at0006, 	-- Former Occasional User
-									at0016]	-- Never Used
-								}
+							DV_CODED_TEXT[id18] matches {
+								defining_code matches {[ac1]}		-- Usage Status
 							}
 						}
 					}
-					CLUSTER[at0007] occurrences matches {1..*} matches {	-- Consumption Summary
+					CLUSTER[id8] occurrences matches {1..*} matches {	-- Consumption Summary
 						items matches {
-							ELEMENT[at0008] occurrences matches {0..1} matches {	-- Form
+							ELEMENT[id9] occurrences matches {0..1} matches {	-- Form
 								value matches {
-									DV_TEXT[id0109] matches {*}
+									DV_TEXT[id19] 
 								}
 							}
-							ELEMENT[at0015] occurrences matches {0..1} matches {	-- Method of use
+							ELEMENT[id16] occurrences matches {0..1} matches {	-- Method of use
 								value matches {
-									DV_TEXT[id0309] matches {*}
+									DV_TEXT[id20] 
 								}
 							}
-							ELEMENT[at0009] occurrences matches {0..1} matches {	-- Date commenced
+							ELEMENT[id10] occurrences matches {0..1} matches {	-- Date commenced
 								value matches {
-									DV_DATE_TIME[id0509] matches {*}
+									DV_DATE_TIME[id21] 
 								}
 							}
-							ELEMENT[at0010] occurrences matches {0..1} matches {	-- Age commenced
+							ELEMENT[id11] occurrences matches {0..1} matches {	-- Age commenced
 								value matches {
-									DV_DURATION[id0310] matches {*}
+									DV_DURATION[id22] 
 								}
 							}
-							ELEMENT[at0011] occurrences matches {0..1} matches {	-- Date ceased
+							ELEMENT[id12] occurrences matches {0..1} matches {	-- Date ceased
 								value matches {
-									DV_DATE_TIME[id0709] matches {*}
+									DV_DATE_TIME[id23] 
 								}
 							}
-							ELEMENT[at0012] occurrences matches {0..1} matches {	-- Age ceased
+							ELEMENT[id13] occurrences matches {0..1} matches {	-- Age ceased
 								value matches {
-									DV_DURATION[id0110] matches {*}
+									DV_DURATION[id24] 
 								}
 							}
-							ELEMENT[at0013] occurrences matches {0..1} matches {	-- Comment
+							ELEMENT[id14] occurrences matches {0..1} matches {	-- Comment
 								value matches {
-									DV_TEXT[id0510] matches {*}
+									DV_TEXT[id25] 
 								}
 							}
 						}
 					}
-					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {	-- Cessation attempts
+					allow_archetype CLUSTER[id15] occurrences matches {0..*} matches {	-- Cessation attempts
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.cessation_attempts\.v1/}
 					}
@@ -134,216 +128,222 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Substance Use Summary">
 				description = <"Generic archetype to record a persisting summary or overview of use or consumption of a defined substance over time.">
 			>
-			["at0001"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Usage Status">
 				description = <"Overview of usage of the substance.">
 			>
-			["at0003"] = <
+			["at4"] = <
 				text = <"Current User">
 				description = <"Person is a current user of the substance.">
 			>
-			["at0004"] = <
+			["at5"] = <
 				text = <"Former Regular User">
 				description = <"Person a former or ex-user of the substance on a regular basis.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Substance">
 				description = <"Identification of the substance.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Former Occasional User">
 				description = <"Person a former or ex-user of the substance on a regular basis.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Consumption Summary">
 				description = <"Summary of the pattern of use for any and all forms of the substance, and for multiple episodes of use.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Form">
 				description = <"Identify the form of the substance.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Date commenced">
 				description = <"Date that use of the substance commenced (can be a partial date, such as a year).">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Age commenced">
 				description = <"Age that use of the substance commenced.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Date ceased">
 				description = <"Date that use of the substance ceased (can be a partial date, such as a year).">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Age ceased">
 				description = <"Age that use of the substance ceased.">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Comment">
 				description = <"Comment on the usage of the substance.">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Cessation attempts">
 				description = <"Details about attempts to cease use of the substance.">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Method of use">
 				description = <"Method of use or consumption of the substance.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Never Used">
 				description = <"Person has never used the substance.">
 			>
+			["ac1"] = <
+				text = <"Usage Status">
+				description = <"Overview of usage of the substance.">
+			>
 		>
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"ملخص استخدام المادة">
 				description = <"نموذج جنيس (غير محدودو الملكية) لتسجل ملخص مستمر أو نظرة عامة عن استخدام أو استهلاك مادة معينة عبر الزمن.">
 			>
-			["at0001"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"حالة الاستعمال">
 				description = <"نظرة عامة حول استعمال المادة">
 			>
-			["at0003"] = <
+			["at4"] = <
 				text = <"مستخدم حالي">
 				description = <"الشخص يستخدم المادة حاليا">
 			>
-			["at0004"] = <
+			["at5"] = <
 				text = <"كان يستعمله بانتظام سابقا">
 				description = <"كان الشخص يستخدم المادة بانتظام في السابق">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"المادة">
 				description = <"تعريف المادة">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"كان يستعمله في مناسبات معينة سابقا">
 				description = <"كان الشخص يستعمل المادة في مناسبات معينة سابقا">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"ملخص الاستهلاك">
 				description = <"ملخص نمط الاستهلاك أي شكل من أو جميع أشكال المادة, و للنوبات المتعددة من الاستخدام">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"الشكل">
 				description = <"تعريف شكل المادة">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"تاريخ البداية">
 				description = <"التاريخ الذي تم عنده بداية استخدام المادة - من الممكن أن يكون تاريخا جزئيا, مثل العام الذي تم عنده البداية">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"العمر عند بداية الاستخدام">
 				description = <"العمر الذي بدأ الشخص عنده تناول المادة">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"تاريخ التوقف">
 				description = <"التاريخ الذي توقف عنده استخدام المادة - من الممكن أن يكون تاريخا جزئيا, مثل العام الذي توقف عنده الاستخدام">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"العمر عند التوقف">
 				description = <"التاريخ الذي توقف عنده استخدام المادة">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"تعليق">
 				description = <"تعليق حول استعمال المادة">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"محاولات التوقف">
 				description = <"تفاصيل حول محاولات التوقف عن استخدام المادة">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"طريقة الاستخدام">
 				description = <"طريقة استخدام أو استهلاك المادة">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"لم يستعمله أبدا">
 				description = <"الشخص لم يستخدم المادة أبداً">
 			>
+			["ac1"] = <
+				text = <"*Usage Status(en)">
+				description = <"*Overview of usage of the substance.(en)">
+			>
 		>
 		["es-ar"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Sumario del uso de sustancias">
 				description = <"Arquetipo genérico para registrar un sumario persistente o visión general del uso o consumo de una sustancia definida, a lo largo del tiempo.">
 			>
-			["at0001"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Estado de uso">
 				description = <"Visión general del uso de la sustancia.">
 			>
-			["at0003"] = <
+			["at4"] = <
 				text = <"Usuario actual">
 				description = <"La persona es un usuario actual de la sustancia.">
 			>
-			["at0004"] = <
+			["at5"] = <
 				text = <"Antiguo usuario regular">
 				description = <"Persona que anteriormente fue usuario regular de la sustancia, pero que no la usa actualmente.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Sustancia">
 				description = <"Identificación de la sustancia.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Antiguo usuario ocasional">
 				description = <"Persona que anteriormente fue usuario ocasional de la sustancia, pero que no la usa actualmente.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Sumario de consumo">
 				description = <"Sumario del patrón de uso de todas y cada una de las sustancias y para múltiples episodios de uso.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Forma">
 				description = <"Identificar la forma de la sustancia.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Fecha de comienzo">
 				description = <"Fecha en que comenzó el uso de la sustancia (puede ser una fecha parcial, como ser el año solamente).">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Edad de comienzo">
 				description = <"Edad en que comenzó el uso de la sustancia.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Fecha de cesación">
 				description = <"Fecha que el uso de la sustancia cesó (puede ser una fecha parcial, tal como un año).">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Edad de cesación">
 				description = <"Edad en la que el uso de la sustancia cesó.">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Comentarios">
 				description = <"Comentarios en el uso de la sustancia.">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Intentos de cesación">
 				description = <"Detalles acerca de intentos de cesación del uso de la sustancia.">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Método de uso">
 				description = <"Método de uso o consumo de la sustancia.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Nunca fue usuario">
 				description = <"Persona que nunca usó la sustancia.">
 			>
+			["ac1"] = <
+				text = <"*Usage Status(en)">
+				description = <"*Overview of usage of the substance.(en)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at4", "at5", "at7", "at17">
 		>
 	>

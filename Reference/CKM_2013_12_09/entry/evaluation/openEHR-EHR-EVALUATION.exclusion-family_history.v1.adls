@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-EVALUATION.exclusion-family_history.v1.0.0
 
 specialize
-	openEHR-EHR-EVALUATION.exclusion.v1.0.0
+	openEHR-EHR-EVALUATION.exclusion.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -38,30 +38,26 @@ http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1314_1(accessed 3 Sept 2013)">
 	>
 
 definition
-	EVALUATION[at0000.1] matches {	-- Exclusion of Family History
-		/data[at0001]/items[at0003.1]/value matches {
-			after [id0477]
-			DV_CODED_TEXT[id0.478] matches {
+	EVALUATION[id1.1] matches {	-- Exclusion of Family History
+		/data[id2]/items[id4.1]/value matches {
+			after [id10]
+			DV_CODED_TEXT[id0.20] matches {
 				defining_code matches {[ac0.1]}		-- Family History
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Exclusion of Family History">
 				description = <"Positive statement/s about family history that need to be recorded as clinically excluded from the health record at a specific point in time.">
 			>
-			["at0003.1"] = <
+			["id4.1"] = <
 				text = <"Family History">
 				description = <"Identification of the specific fanily history to which the Exclusion Statement applies.">
 			>
-		>
-	>
-	constraint_definitions = <
-		["en"] = <
 			["ac0.1"] = <
 				text = <"Family History">
 				description = <"All possible findings of Family History">

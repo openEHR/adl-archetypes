@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.tumour_resection_margins.v1.0.0
 
 language
@@ -28,128 +28,146 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Tumour - Surgical resection margins
+	CLUSTER[id1] matches {	-- Tumour - Surgical resection margins
 		items matches {
-			ELEMENT[at0018] occurrences matches {0..1} matches {	-- Margin name
+			ELEMENT[id19] occurrences matches {0..1} matches {	-- Margin name
 				value matches {
-					DV_TEXT[id0405] matches {*}
+					DV_TEXT[id22] 
 				}
 			}
-			allow_archetype CLUSTER[at0019] occurrences matches {0..*} matches {	-- Margin location
+			allow_archetype CLUSTER[id20] occurrences matches {0..*} matches {	-- Margin location
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location-precise\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
 			}
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Marginal involvement
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Marginal involvement
 				value matches {
-					DV_CODED_TEXT[id0205] matches {
-						defining_code matches {
-							[local::
-							at0014, 	-- Present
-							at0015, 	-- Absent
-							at0017, 	-- Equivocal
-							at0016]	-- Indeterminate
-						}
+					DV_CODED_TEXT[id23] matches {
+						defining_code matches {[ac1]}		-- Marginal involvement
 					}
 				}
 			}
-			CLUSTER[at0006] occurrences matches {0..1} matches {	-- Tumour present
+			CLUSTER[id7] occurrences matches {0..1} matches {	-- Tumour present
 				items matches {
-					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Maximum linear involvement
+					ELEMENT[id8] occurrences matches {0..1} matches {	-- Maximum linear involvement
 						value matches {
-							DV_QUANTITY[id0373] matches {
-								property matches {[openehr::122]}
+							DV_QUANTITY[id24] matches {
+								property matches {[at19]}
 								magnitude matches {|>=0.0|}
-								units matches {"mm"}
 							}
 						}
 					}
-					ELEMENT[at0020] occurrences matches {0..1} matches {	-- Nature of involvement
+					ELEMENT[id21] occurrences matches {0..1} matches {	-- Nature of involvement
 						value matches {
-							DV_TEXT[id0374] matches {*}
+							DV_TEXT[id25] 
 						}
 					}
 				}
 			}
-			CLUSTER[at0008] occurrences matches {0..1} matches {	-- Tumour absent
+			CLUSTER[id9] occurrences matches {0..1} matches {	-- Tumour absent
 				items matches {
-					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Distance from closest resection margin
+					ELEMENT[id10] occurrences matches {0..1} matches {	-- Distance from closest resection margin
 						value matches {
-							DV_QUANTITY[id0206] matches {
-								property matches {[openehr::122]}
+							DV_QUANTITY[id26] matches {
+								property matches {[at20]}
 								magnitude matches {|>=0.0|}
-								units matches {"mm"}
 							}
 						}
 					}
 				}
 			}
-			ELEMENT[at0010] occurrences matches {0..1} matches {	-- Description
+			ELEMENT[id11] occurrences matches {0..1} matches {	-- Description
 				value matches {
-					DV_TEXT[id0207] matches {*}
+					DV_TEXT[id27] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Tumour - Surgical resection margins">
 				description = <"Details of tumour involvement at margins of surgical resections/biopsies.
 ">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Marginal involvement">
 				description = <"Evidence of tumour at a surgical resection margin.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Tumour present">
 				description = <"Details where tumour is present at the surgical resection margin.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Maximum linear involvement">
 				description = <"When tumour is present at surgical resection margin, the maximal length of involvement.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Tumour absent">
 				description = <"Details where tumour is absent from surgical resection margins.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Distance from closest resection margin">
 				description = <"When tumour is absent, the distance from tumour to the closest surgical resection margin.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Description">
 				description = <"A text description of  tumour involvement at the surgical resection margin.">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Present">
 				description = <"Ttumour is present at the surgical resection margin.">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Absent">
 				description = <"Tumour is absent from the surgical resection margin.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Indeterminate">
 				description = <"Presence of tumour at surgical resection margins has not been determined.">
 			>
-			["at0017"] = <
+			["at18"] = <
 				text = <"Equivocal">
 				description = <"Presence of tumour at the surgical resection margin is equivocal.">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Margin name">
 				description = <"The name of the margin being described e.g. Deep margin, Vascular margin, Bronchial margin.">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Margin location">
 				description = <"The location of the margin being described.">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"Nature of involvement">
 				description = <"The nature of involvement of the tumour with the surgical margin.">
 			>
+			["ac1"] = <
+				text = <"Marginal involvement">
+				description = <"Evidence of tumour at a surgical resection margin.">
+			>
+			["at19"] = <
+				text = <"Length">
+				description = <"Length">
+			>
+			["at20"] = <
+				text = <"Length">
+				description = <"Length">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at19"] = <http://openehr.org/id/122>
+			["at20"] = <http://openehr.org/id/122>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at15", "at16", "at18", "at17">
 		>
 	>

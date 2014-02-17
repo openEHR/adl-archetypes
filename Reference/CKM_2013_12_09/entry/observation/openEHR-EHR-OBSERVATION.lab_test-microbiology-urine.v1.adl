@@ -151,8 +151,7 @@ definition
 											}
 											ELEMENT[at0.0.39] occurrences matches {0..1} matches {	-- Epithelial cell count
 												value matches {
-													C_DV_QUANTITY <
-													>
+													DV_QUANTITY matches {*}
 												}
 											}
 											ELEMENT[at0.38] occurrences matches {0..1} matches {	-- Description
@@ -265,9 +264,7 @@ definition
 									}
 									ELEMENT[at0010] occurrences matches {0..*} matches {	-- Multimedia representation
 										value matches {
-											DV_MULTIMEDIA matches {
-												media_type matches {[openEHR::]}
-											}
+											DV_MULTIMEDIA matches {*}
 										}
 									}
 								}

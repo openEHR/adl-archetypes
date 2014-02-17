@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-ITEM_TREE.gas_administration.v1.0.0
 
 language
@@ -45,64 +45,53 @@ description
 	>
 
 definition
-	ITEM_TREE[at0000] occurrences matches {0..*} matches {	-- Gas administration
+	ITEM_TREE[id1] occurrences matches {0..*} matches {	-- Gas administration
 		items matches {
-			ELEMENT[at0014] occurrences matches {0..1} matches {	-- Gas
+			ELEMENT[id15] occurrences matches {0..1} matches {	-- Gas
 				value matches {
-					DV_TEXT[id0805] matches {*}
+					DV_TEXT[id17] 
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Means of delivery
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Means of delivery
 				value matches {
-					DV_CODED_TEXT[id0005] matches {
-						defining_code matches {
-							[local::
-							at0006, 	-- Nasal canula
-							at0007, 	-- Mask
-							at0008, 	-- Ventilator
-							at0009, 	-- Enclosure
-							at0011]	-- Hyperbaric chamber
-						}
+					DV_CODED_TEXT[id18] matches {
+						defining_code matches {[ac1]}		-- Means of delivery
 					}
 				}
 			}
-			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Amount
+			CLUSTER[id5] occurrences matches {0..1} matches {	-- Amount
 				items matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Inspired oxygen
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Inspired oxygen
 						value matches {
-							DV_PROPORTION[id0533] matches {
+							DV_PROPORTION[id19] matches {
 								numerator matches {|>20.0|}
 								denominator matches {100.0}
 								type matches {2}
 							}
 						}
 					}
-					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Flow rate
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Flow rate
 						value matches {
-							DV_QUANTITY[id0733] matches {
-								property matches {[openehr::126]}
+							DV_QUANTITY[id20] matches {
+								property matches {[at13]}
 								magnitude matches {|>=0.0|}
-								units matches {"l/m"}
-								precision matches {0}
 							}
 						}
 					}
-					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Partial pressure of oxygen
+					ELEMENT[id13] occurrences matches {0..1} matches {	-- Partial pressure of oxygen
 						value matches {
-							DV_QUANTITY[id0933] matches {
-								property matches {[openehr::125]}
+							DV_QUANTITY[id21] matches {
+								property matches {[at14]}
 								magnitude matches {|>=0.0|}
-								units matches {"bar"}
-								precision matches {1}
 							}
 						}
 					}
 				}
 			}
-			ELEMENT[at0010] occurrences matches {0..1} matches {	-- Atmospheric pressure
+			ELEMENT[id11] occurrences matches {0..1} matches {	-- Atmospheric pressure
 				value matches {
-					DV_QUANTITY[id0205] matches {
-						property matches {[openehr::125]}
+					DV_QUANTITY[id22] matches {
+						property matches {[at15]}
 						[magnitude, units, precision] matches {
 							[{|>=0.0|}, {"atm"}, {1}],
 							[{|>=0.3|}, {"bar"}, {1}]
@@ -110,14 +99,14 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0013] occurrences matches {0..1} matches {	-- Duration of therapy
+			ELEMENT[id14] occurrences matches {0..1} matches {	-- Duration of therapy
 				value matches {
-					DV_DURATION[id0405] matches {*}
+					DV_DURATION[id23] 
 				}
 			}
-			ELEMENT[at0015] occurrences matches {0..1} matches {	-- Self-administered
+			ELEMENT[id16] occurrences matches {0..1} matches {	-- Self-administered
 				value matches {
-					DV_BOOLEAN[id0206] matches {
+					DV_BOOLEAN[id24] matches {
 						value matches {True, False}
 					}
 				}
@@ -125,130 +114,175 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Gasverabreichung">
 				description = <"Verabreichung von Gas als Therapie">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"angereicherter Sauerstoff">
 				description = <"Der prozentuale Anteil an Sauerstoff im verabreichten Gemisch">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Zuführungsart">
 				description = <"Die Art der Zuführung">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Menge">
 				description = <"Die gemessene Menge des zugeführten oder verabreichten Sauerstoffs">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Durchflussgeschwindigkeit">
 				description = <"Die Durchflussgeschwindigkeit">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"nasale Kanüle">
 				description = <"nasale Beatmung per Kanüle">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Maske">
 				description = <"Beatmung per Gesichtsmaske">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Beatmungsgerät">
 				description = <"Beatmung per Beatmungsgerät">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"Gondel">
 				description = <"Sauerstoff in einer kontrollierten Umgebung">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Atmosphärendruck">
 				description = <"der Druck der Atmosphäre">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Überdruckkammer">
 				description = <"Eine Druckausgleichskammer">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Partialdruck des Sauerstoffs">
 				description = <"Der Partialdruck des verabreichten Sauerstoffs">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Dauer der Therapie">
 				description = <"Die Dauer der Sauerdstofftherapie">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Gas">
 				description = <"Verabreichtes Objekt, z.B. Sauerstoff oder Stickstoffoxid usw.">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Selbstverabreichung">
 				description = <"Verabreichung vom Patienten selbst, wenn erforderlich">
 			>
+			["ac1"] = <
+				text = <"*Means of delivery(en)">
+				description = <"*The means of delivery(en)">
+			>
+			["at13"] = <
+				text = <"*Flow rate, volume (en)">
+				description = <"*Flow rate, volume (en)">
+			>
+			["at14"] = <
+				text = <"*Pressure (en)">
+				description = <"*Pressure (en)">
+			>
+			["at15"] = <
+				text = <"*Pressure (en)">
+				description = <"*Pressure (en)">
+			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Gas administration">
 				description = <"Administration of a gas as therapy">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Inspired oxygen">
 				description = <"The percentage oxygen in the administered mixture">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Means of delivery">
 				description = <"The means of delivery">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Amount">
 				description = <"The quantified amount of oxygen delivered or inspired">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Flow rate">
 				description = <"The flow rate">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Nasal canula">
 				description = <"Nasal inspiration via canula">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Mask">
 				description = <"Inspiration via a facial mask">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Ventilator">
 				description = <"Inspiration via a ventilator">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"Enclosure">
 				description = <"Oxygen in a controlled environment">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Atmospheric pressure">
 				description = <"The atmospheric pressure">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Hyperbaric chamber">
 				description = <"A pressurisation chamber">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Partial pressure of oxygen">
 				description = <"The partial pressure of inspired oxygen">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Duration of therapy">
 				description = <"The duration of oxygen therapy">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Gas">
 				description = <"Object of administration eg oxygen or nitrous oxide etc">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Self-administered">
 				description = <"Is the administration by the patient as required">
 			>
+			["ac1"] = <
+				text = <"Means of delivery">
+				description = <"The means of delivery">
+			>
+			["at13"] = <
+				text = <"Flow rate, volume">
+				description = <"Flow rate, volume">
+			>
+			["at14"] = <
+				text = <"Pressure">
+				description = <"Pressure">
+			>
+			["at15"] = <
+				text = <"Pressure">
+				description = <"Pressure">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at13"] = <http://openehr.org/id/126>
+			["at14"] = <http://openehr.org/id/125>
+			["at15"] = <http://openehr.org/id/125>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at7", "at8", "at9", "at10", "at12">
 		>
 	>

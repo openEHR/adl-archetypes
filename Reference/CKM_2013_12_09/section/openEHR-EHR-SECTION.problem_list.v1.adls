@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-SECTION.problem_list.v1.0.0
 
 language
@@ -37,23 +37,23 @@ While EVALUATION.problem and it's specialisations, including EVALUATION.problem-
 	>
 
 definition
-	SECTION[at0000] matches {	-- Problem List
+	SECTION[id1] matches {	-- Problem List
 		items matches {
-			allow_archetype EVALUATION[at0001] occurrences matches {0..*} matches {	-- Problems & Diagnoses inclusions/exclusions 
+			allow_archetype EVALUATION[id2] occurrences matches {0..*} matches {	-- Problems & Diagnoses inclusions/exclusions 
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.problem(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-problem_diagnosis(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.problem(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-problem_diagnosis(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Problem List">
 				description = <"Suggested design pattern for including a Problem List in a template.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Problems & Diagnoses inclusions/exclusions ">
 				description = <"Slot constrained to specifically include archetypes representing known problems/diagnoses and any exclusions of problems/diagnoses.">
 			>

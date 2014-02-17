@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-DEMOGRAPHIC-CLUSTER.person_other_death_data.v1.0.0
 
 language
@@ -42,109 +42,103 @@ description
 	lifecycle_state = <"initial">
 
 definition
-	CLUSTER[at0000] matches {	-- Dados adicionais do óbito
+	CLUSTER[id1] matches {	-- Dados adicionais do óbito
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- País
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- País
 				value matches {
-					DV_CODED_TEXT[id0205] matches {
-						defining_code matches {[ac0000]}		-- Códigos de países
+					DV_CODED_TEXT[id6] matches {
+						defining_code matches {[ac1]}		-- Códigos de países
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Estado/território/província
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Estado/território/província
 				value matches {
-					DV_CODED_TEXT[id0605] matches {
-						defining_code matches {[ac0001]}		-- Códigos de estados
+					DV_CODED_TEXT[id7] matches {
+						defining_code matches {[ac2]}		-- Códigos de estados
 					}
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Cidade/localidade
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Cidade/localidade
 				value matches {
-					DV_CODED_TEXT[id0005] matches {
-						defining_code matches {[ac0002]}		-- Códigos de cidades
+					DV_CODED_TEXT[id8] matches {
+						defining_code matches {[ac3]}		-- Códigos de cidades
 					}
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Número do certificado
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Número do certificado
 				value matches {
-					DV_TEXT[id0405] matches {*}
+					DV_TEXT[id9] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Dados adicionais do óbito">
 				description = <"Dados demográficos adicionais do óbito">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"País">
 				description = <"O país onde a pessoa faleceu">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Estado/território/província">
 				description = <"O estado/território/província onde a pessoa faleceu">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Cidade/localidade">
 				description = <"A cidade/localidade onde a pessoa faleceu">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Número do certificado">
 				description = <"Informa o número do certificado de óbito">
 			>
-		>
-		["en"] = <
-			["at0000"] = <
-				text = <"Death additional data">
-				description = <"Death additional demographic data">
-			>
-			["at0001"] = <
-				text = <"Country">
-				description = <"The country where a person  died">
-			>
-			["at0002"] = <
-				text = <"State/territory/province">
-				description = <"The state/territory/province where a person died">
-			>
-			["at0003"] = <
-				text = <"City/town/locality">
-				description = <"The city/town/locality where a person died">
-			>
-			["at0004"] = <
-				text = <"Death certificate number">
-				description = <"The number of the death certificate">
-			>
-		>
-	>
-	constraint_definitions = <
-		["pt-br"] = <
-			["ac0000"] = <
+			["ac1"] = <
 				text = <"Códigos de países">
 				description = <"códigos válidos para paises">
 			>
-			["ac0001"] = <
+			["ac2"] = <
 				text = <"Códigos de estados">
 				description = <"códigos válidos para estados">
 			>
-			["ac0002"] = <
+			["ac3"] = <
 				text = <"Códigos de cidades">
 				description = <"códigos válidos para cidade">
 			>
 		>
 		["en"] = <
-			["ac0000"] = <
+			["id1"] = <
+				text = <"Death additional data">
+				description = <"Death additional demographic data">
+			>
+			["id2"] = <
+				text = <"Country">
+				description = <"The country where a person  died">
+			>
+			["id3"] = <
+				text = <"State/territory/province">
+				description = <"The state/territory/province where a person died">
+			>
+			["id4"] = <
+				text = <"City/town/locality">
+				description = <"The city/town/locality where a person died">
+			>
+			["id5"] = <
+				text = <"Death certificate number">
+				description = <"The number of the death certificate">
+			>
+			["ac1"] = <
 				text = <"Country codes">
 				description = <"valid codes for countries">
 			>
-			["ac0001"] = <
+			["ac2"] = <
 				text = <"State codes">
 				description = <"valid codes for state/territory/province">
 			>
-			["ac0002"] = <
+			["ac3"] = <
 				text = <"City codes">
 				description = <"valid codes for city/town/locality">
 			>

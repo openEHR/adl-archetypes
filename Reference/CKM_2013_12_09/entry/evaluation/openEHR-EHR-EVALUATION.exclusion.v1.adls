@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-EVALUATION.exclusion.v1.0.0
 
 language
@@ -35,34 +35,34 @@ http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1301_2 (accessed 3 Sept 2013)"
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- Exclusion Statement
+	EVALUATION[id1] matches {	-- Exclusion Statement
 		data matches {
-			ITEM_TREE[at0001] matches {	-- Tree
+			ITEM_TREE[id2] matches {
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {1..*} matches {	-- Exclusion Statement
+					ELEMENT[id3] occurrences matches {1..*} matches {	-- Exclusion Statement
 						value matches {
-							DV_TEXT[id0077] matches {*}
+							DV_TEXT[id9] 
 						}
 					}
-					ELEMENT[at0003] occurrences matches {0..*} matches {	-- Specific Object
+					ELEMENT[id4] occurrences matches {0..*} matches {	-- Specific Object
 						value matches {
-							DV_TEXT[id0477] matches {*}
+							DV_TEXT[id10] 
 						}
 					}
-					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Comment
+					ELEMENT[id8] occurrences matches {0..1} matches {	-- Comment
 						value matches {
-							DV_TEXT[id0078] matches {*}
+							DV_TEXT[id11] 
 						}
 					}
 				}
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0006] matches {	-- Tree
+			ITEM_TREE[id7] matches {
 				items matches {
-					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Date Last Updated
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Date Last Updated
 						value matches {
-							DV_DATE_TIME[id0117] matches {*}
+							DV_DATE_TIME[id12] 
 						}
 					}
 				}
@@ -70,34 +70,26 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Exclusion Statement">
 				description = <"Generic, positive statement/s that need to be recorded as clinically excluded from the health record at a specific point in time.">
 			>
-			["at0001"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Exclusion Statement">
 				description = <"The statement about an exclusion in the health record.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Specific Object">
 				description = <"Identification of the specific object/s to which the Exclusion Statement applies.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Date Last Updated">
 				description = <"The date at which the exclusion was last clinically asserted, affirmed or confirmed.">
 			>
-			["at0006"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Comment">
 				description = <"Additional narrative about the Exclusion not captured in other fields.">
 			>

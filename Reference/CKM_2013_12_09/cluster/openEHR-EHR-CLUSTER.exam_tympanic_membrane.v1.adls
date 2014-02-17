@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.exam_tympanic_membrane.v1.0.0
 
 language
@@ -41,939 +41,1106 @@ OATSIH:  The Recommendations for Clinical Care Guidelines on the Management of O
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Examination of External Auditory Canal and Tympanic Membrane
+	CLUSTER[id1] matches {	-- Examination of External Auditory Canal and Tympanic Membrane
 		items matches {
-			ELEMENT[at0097] occurrences matches {0..1} matches {	-- Ear Examined
+			ELEMENT[id98] occurrences matches {0..1} matches {	-- Ear Examined
 				value matches {
-					DV_CODED_TEXT[id0205] matches {
-						defining_code matches {
-							[local::
-							at0098, 	-- Left
-							at0099]	-- Right
-						}
+					DV_CODED_TEXT[id175] matches {
+						defining_code matches {[ac1]}		-- Ear Examined
 					}
 				}
 			}
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Clinical Description
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Clinical Description
 				value matches {
-					DV_TEXT[id0206] matches {*}
+					DV_TEXT[id176] 
 				}
 			}
-			ELEMENT[at0106] occurrences matches {0..1} matches {	-- Consistency of Wax
+			ELEMENT[id107] occurrences matches {0..1} matches {	-- Consistency of Wax
 				value matches {
-					DV_CODED_TEXT[id0949] matches {
-						defining_code matches {
-							[local::
-							at0107, 	-- Hard
-							at0108]	-- Soft
-						}
+					DV_CODED_TEXT[id177] matches {
+						defining_code matches {[ac2]}		-- Consistency of Wax
 					}
 				}
 			}
-			ELEMENT[at0109] occurrences matches {0..1} matches {	-- State of Wax
+			ELEMENT[id110] occurrences matches {0..1} matches {	-- State of Wax
 				value matches {
-					DV_CODED_TEXT[id0149] matches {
-						defining_code matches {
-							[local::
-							at0110, 	-- Impacted
-							at0111]	-- Not impacted
-						}
+					DV_CODED_TEXT[id178] matches {
+						defining_code matches {[ac3]}		-- State of Wax
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- View of Tympanic Membrane
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- View of Tympanic Membrane
 				value matches {
-					DV_CODED_TEXT[id0605] matches {
-						defining_code matches {
-							[local::
-							at0003, 	-- Full view
-							at0004, 	-- Partial occlusion
-							at0005]	-- Total occlusion
-						}
+					DV_CODED_TEXT[id179] matches {
+						defining_code matches {[ac4]}		-- View of Tympanic Membrane
 					}
 				}
 			}
-			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Reason for Occlusion of View
+			ELEMENT[id7] occurrences matches {0..1} matches {	-- Reason for Occlusion of View
 				value matches {
-					DV_TEXT[id0207] matches {*}
+					DV_TEXT[id180] 
 				}
 			}
-			ELEMENT[at0139] occurrences matches {0..1} matches {	-- Tenderness of Canal
+			ELEMENT[id140] occurrences matches {0..1} matches {	-- Tenderness of Canal
 				value matches {
-					DV_CODED_TEXT[id0349] matches {
-						defining_code matches {
-							[local::
-							at0140, 	-- Present
-							at0141]	-- Absent
-						}
+					DV_CODED_TEXT[id181] matches {
+						defining_code matches {[ac5]}		-- Tenderness of Canal
 					}
 				}
 			}
-			ELEMENT[at0132] occurrences matches {0..1} matches {	-- Oedema of Canal
+			ELEMENT[id133] occurrences matches {0..1} matches {	-- Oedema of Canal
 				value matches {
-					DV_CODED_TEXT[id0549] matches {
-						defining_code matches {
-							[local::
-							at0133, 	-- Present
-							at0134]	-- Absent
-						}
+					DV_CODED_TEXT[id182] matches {
+						defining_code matches {[ac6]}		-- Oedema of Canal
 					}
 				}
 			}
-			ELEMENT[at0124] occurrences matches {0..1} matches {	-- Erythema of Canal
+			ELEMENT[id125] occurrences matches {0..1} matches {	-- Erythema of Canal
 				value matches {
-					DV_CODED_TEXT[id0950] matches {
-						defining_code matches {
-							[local::
-							at0125, 	-- Present
-							at0126]	-- Absent
-						}
+					DV_CODED_TEXT[id183] matches {
+						defining_code matches {[ac7]}		-- Erythema of Canal
 					}
 				}
 			}
-			ELEMENT[at0143] occurrences matches {0..1} matches {	-- Offensive Odour
+			ELEMENT[id144] occurrences matches {0..1} matches {	-- Offensive Odour
 				value matches {
-					DV_CODED_TEXT[id0350] matches {
-						defining_code matches {
-							[local::
-							at0145, 	-- Present
-							at0144]	-- Absent
-						}
+					DV_CODED_TEXT[id184] matches {
+						defining_code matches {[ac8]}		-- Offensive Odour
 					}
 				}
 			}
-			ELEMENT[at0157] occurrences matches {0..1} matches {	-- Discharge Type
+			ELEMENT[id158] occurrences matches {0..1} matches {	-- Discharge Type
 				value matches {
-					DV_CODED_TEXT[id0351] matches {
-						defining_code matches {
-							[local::
-							at0090, 	-- Serous
-							at0091, 	-- Bloody
-							at0092, 	-- Purulent
-							at0093, 	-- Mucous
-							at0094, 	-- Mucopurulent
-							at0095]	-- Haemoserous
-						}
+					DV_CODED_TEXT[id185] matches {
+						defining_code matches {[ac9]}		-- Discharge Type
 					}
 				}
 			}
-			ELEMENT[at0151] occurrences matches {0..1} matches {	-- Discharge Amount
+			ELEMENT[id152] occurrences matches {0..1} matches {	-- Discharge Amount
 				value matches {
-					DV_CODED_TEXT[id0951] matches {
-						defining_code matches {
-							[local::
-							at0152, 	-- None
-							at0153, 	-- Scant
-							at0154, 	-- Moderate
-							at0155]	-- Profuse
-						}
+					DV_CODED_TEXT[id186] matches {
+						defining_code matches {[ac10]}		-- Discharge Amount
 					}
 				}
 			}
-			ELEMENT[at0156] occurrences matches {0..1} matches {	-- Discharge Description
+			ELEMENT[id157] occurrences matches {0..1} matches {	-- Discharge Description
 				value matches {
-					DV_TEXT[id0952] matches {*}
+					DV_TEXT[id187] 
 				}
 			}
-			ELEMENT[at0166] occurrences matches {0..1} matches {	-- Ventilation Tube Position
+			ELEMENT[id167] occurrences matches {0..1} matches {	-- Ventilation Tube Position
 				value matches {
-					DV_CODED_TEXT[id0352] matches {
-						defining_code matches {
-							[local::
-							at0167, 	-- In situ
-							at0168, 	-- Partially extruded
-							at0169, 	-- Extruded - remains in canal
-							at0170, 	-- Extruded - missing
-							at0171]	-- Unknown
-						}
+					DV_CODED_TEXT[id188] matches {
+						defining_code matches {[ac11]}		-- Ventilation Tube Position
 					}
 				}
 			}
-			CLUSTER[at0064] occurrences matches {0..1} matches {	-- Abnormal Features
+			CLUSTER[id65] occurrences matches {0..1} matches {	-- Abnormal Features
 				items matches {
-					ELEMENT[at0112] occurrences matches {0..1} matches {	-- Polyps
+					ELEMENT[id113] occurrences matches {0..1} matches {	-- Polyps
 						value matches {
-							DV_CODED_TEXT[id0133] matches {
-								defining_code matches {
-									[local::
-									at0113, 	-- Present
-									at0114]	-- Absent
-								}
+							DV_CODED_TEXT[id189] matches {
+								defining_code matches {[ac12]}		-- Polyps
 							}
 						}
 					}
-					ELEMENT[at0147] occurrences matches {0..1} matches {	-- Fungal Spores
+					ELEMENT[id148] occurrences matches {0..1} matches {	-- Fungal Spores
 						value matches {
-							DV_CODED_TEXT[id0333] matches {
-								defining_code matches {
-									[local::
-									at0148, 	-- Present
-									at0149]	-- Absent
-								}
+							DV_CODED_TEXT[id190] matches {
+								defining_code matches {[ac13]}		-- Fungal Spores
 							}
 						}
 					}
-					ELEMENT[at0159] occurrences matches {0..1} matches {	-- Foreign Body
+					ELEMENT[id160] occurrences matches {0..1} matches {	-- Foreign Body
 						value matches {
-							DV_CODED_TEXT[id0533] matches {
-								defining_code matches {
-									[local::
-									at0160, 	-- Present
-									at0161]	-- Absent
-								}
+							DV_CODED_TEXT[id191] matches {
+								defining_code matches {[ac14]}		-- Foreign Body
 							}
 						}
 					}
-					ELEMENT[at0163] occurrences matches {0..1} matches {	-- Location of Foreign Body
+					ELEMENT[id164] occurrences matches {0..1} matches {	-- Location of Foreign Body
 						value matches {
-							DV_CODED_TEXT[id0534] matches {
-								defining_code matches {
-									[local::
-									at0164, 	-- Outer canal
-									at0165]	-- Deep canal
-								}
+							DV_CODED_TEXT[id192] matches {
+								defining_code matches {[ac15]}		-- Location of Foreign Body
 							}
 						}
 					}
 				}
 			}
-			CLUSTER[at0104] occurrences matches {0..1} matches {	-- Tympanic Membrane Details
+			CLUSTER[id105] occurrences matches {0..1} matches {	-- Tympanic Membrane Details
 				items matches {
-					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Membrane Intact?
+					ELEMENT[id8] occurrences matches {0..1} matches {	-- Membrane Intact?
 						value matches {
-							DV_CODED_TEXT[id0365] matches {
-								defining_code matches {
-									[local::
-									at0008, 	-- Intact
-									at0009, 	-- Perforated
-									at0182]	-- Indeterminate
-								}
+							DV_CODED_TEXT[id193] matches {
+								defining_code matches {[ac16]}		-- Membrane Intact?
 							}
 						}
 						null_flavour matches {
-							DV_CODED_TEXT[id0050] matches {
-								defining_code matches {
-									[openehr::
-									253, 
-									271, 
-									273, 
-									272]
-								}
+							DV_CODED_TEXT[id194] matches {
+								defining_code matches {[ac17]}		-- Membrane Intact?
 							}
 						}
 					}
-					ELEMENT[at0018] occurrences matches {0..1} matches {	-- Appearance
+					ELEMENT[id19] occurrences matches {0..1} matches {	-- Appearance
 						value matches {
-							DV_CODED_TEXT[id0165] matches {
-								defining_code matches {
-									[local::
-									at0019, 	-- Translucent
-									at0021]	-- Opaque
-								}
+							DV_CODED_TEXT[id195] matches {
+								defining_code matches {[ac18]}		-- Appearance
 							}
 						}
 					}
-					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Normal Light Reflex
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Normal Light Reflex
 						value matches {
-							DV_CODED_TEXT[id0366] matches {
-								defining_code matches {
-									[local::
-									at0012, 	-- Present
-									at0013]	-- Absent
-								}
+							DV_CODED_TEXT[id196] matches {
+								defining_code matches {[ac19]}		-- Normal Light Reflex
 							}
 						}
 					}
-					ELEMENT[at0022] occurrences matches {0..*} matches {	-- Surface Features
+					ELEMENT[id23] occurrences matches {0..*} matches {	-- Surface Features
 						value matches {
-							DV_CODED_TEXT[id0166] matches {
-								defining_code matches {
-									[local::
-									at0023, 	-- Blistering present
-									at0024, 	-- Scarring present
-									at0025, 	-- Granulation present
-									at0026, 	-- Thickening present
-									at0175]	-- Tympanosclerosis present
-								}
+							DV_CODED_TEXT[id197] matches {
+								defining_code matches {[ac20]}		-- Surface Features
 							}
 						}
 					}
-					ELEMENT[at0028] occurrences matches {0..1} matches {	-- Colour
+					ELEMENT[id29] occurrences matches {0..1} matches {	-- Colour
 						value matches {
-							DV_TEXT[id0565] matches {*}
+							DV_TEXT[id198] 
 						}
 					}
-					CLUSTER[at0010] occurrences matches {0..1} matches {	-- Landmark Anatomy
+					CLUSTER[id11] occurrences matches {0..1} matches {	-- Landmark Anatomy
 						items matches {
-							ELEMENT[at0014] occurrences matches {0..1} matches {	-- Annulus
+							ELEMENT[id15] occurrences matches {0..1} matches {	-- Annulus
 								value matches {
-									DV_TEXT[id0125] matches {*}
+									DV_TEXT[id199] 
 								}
 							}
-							ELEMENT[at0015] occurrences matches {0..1} matches {	-- Malleus Handle
+							ELEMENT[id16] occurrences matches {0..1} matches {	-- Malleus Handle
 								value matches {
-									DV_TEXT[id0525] matches {*}
+									DV_TEXT[id200] 
 								}
 							}
-							ELEMENT[at0016] occurrences matches {0..1} matches {	-- Malleus Head
+							ELEMENT[id17] occurrences matches {0..1} matches {	-- Malleus Head
 								value matches {
-									DV_TEXT[id0925] matches {*}
+									DV_TEXT[id201] 
 								}
 							}
-							ELEMENT[at0017] occurrences matches {0..1} matches {	-- Umbo
+							ELEMENT[id18] occurrences matches {0..1} matches {	-- Umbo
 								value matches {
-									DV_TEXT[id0325] matches {*}
+									DV_TEXT[id202] 
 								}
 							}
-							ELEMENT[at0061] occurrences matches {0..1} matches {	-- Incus
+							ELEMENT[id62] occurrences matches {0..1} matches {	-- Incus
 								value matches {
-									DV_TEXT[id0926] matches {*}
+									DV_TEXT[id203] 
 								}
 							}
-							ELEMENT[at0060] occurrences matches {0..1} matches {	-- Stapes
+							ELEMENT[id61] occurrences matches {0..1} matches {	-- Stapes
 								value matches {
-									DV_TEXT[id0526] matches {*}
+									DV_TEXT[id204] 
 								}
 							}
 						}
 					}
-					ELEMENT[at0034] occurrences matches {0..*} matches {	-- Location of Tympanosclerosis
+					ELEMENT[id35] occurrences matches {0..*} matches {	-- Location of Tympanosclerosis
 						value matches {
-							DV_TEXT[id0367] matches {*}
+							DV_TEXT[id205] 
 						}
 					}
-					ELEMENT[at0035] occurrences matches {0..1} matches {	-- Position of Tympanic Membrane
+					ELEMENT[id36] occurrences matches {0..1} matches {	-- Position of Tympanic Membrane
 						value matches {
-							DV_CODED_TEXT[id0765] matches {
-								defining_code matches {
-									[local::
-									at0037, 	-- Bulging
-									at0036, 	-- Neutral
-									at0038]	-- Retracted
-								}
+							DV_CODED_TEXT[id206] matches {
+								defining_code matches {[ac21]}		-- Position of Tympanic Membrane
 							}
 						}
 					}
-					ELEMENT[at0040] occurrences matches {0..1} matches {	-- Description of Retraction
+					ELEMENT[id41] occurrences matches {0..1} matches {	-- Description of Retraction
 						value matches {
-							DV_TEXT[id0167] matches {*}
+							DV_TEXT[id207] 
 						}
 					}
-					allow_archetype CLUSTER[at0044] occurrences matches {0..*} matches {	-- Retraction Grade
+					allow_archetype CLUSTER[id45] occurrences matches {0..*} matches {	-- Retraction Grade
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.sade_classification(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.tos_classification(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.sade_classification(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.tos_classification(-a-zA-Z0-9_]+)*\.v1/}
 					}
-					ELEMENT[at0048] occurrences matches {0..1} matches {	-- Fluid Level Presence
+					ELEMENT[id49] occurrences matches {0..1} matches {	-- Fluid Level Presence
 						value matches {
-							DV_CODED_TEXT[id0368] matches {
-								defining_code matches {
-									[local::
-									at0049, 	-- Present
-									at0050]	-- Absent
-								}
+							DV_CODED_TEXT[id208] matches {
+								defining_code matches {[ac22]}		-- Fluid Level Presence
 							}
 						}
 					}
-					ELEMENT[at0051] occurrences matches {0..1} matches {	-- Fluid Level Description
+					ELEMENT[id52] occurrences matches {0..1} matches {	-- Fluid Level Description
 						value matches {
-							DV_TEXT[id0965] matches {*}
+							DV_TEXT[id209] 
 						}
 					}
-					ELEMENT[at0052] occurrences matches {0..1} matches {	-- Mobility
+					ELEMENT[id53] occurrences matches {0..1} matches {	-- Mobility
 						value matches {
-							DV_CODED_TEXT[id0369] matches {
-								defining_code matches {
-									[local::
-									at0053, 	-- Immobile
-									at0054, 	-- Hypomobile
-									at0055, 	-- Mobile
-									at0056]	-- Hypermobile
-								}
+							DV_CODED_TEXT[id210] matches {
+								defining_code matches {[ac23]}		-- Mobility
 							}
 						}
 					}
-					CLUSTER[at0062] occurrences matches {0..1} matches {	-- Perforation Details
+					CLUSTER[id63] occurrences matches {0..1} matches {	-- Perforation Details
 						items matches {
-							ELEMENT[at0065] occurrences matches {0..1} matches {	-- Estimation of Size
+							ELEMENT[id66] occurrences matches {0..1} matches {	-- Estimation of Size
 								value matches {
-									DV_CODED_TEXT[id0277] matches {
-										defining_code matches {
-											[local::
-											at0066, 	-- Pinhole
-											at0067, 	-- Intermediate
-											at0068, 	-- Subtotal
-											at0069]	-- Total
-										}
+									DV_CODED_TEXT[id211] matches {
+										defining_code matches {[ac24]}		-- Estimation of Size
 									}
 								}
 							}
-							allow_archetype CLUSTER[at0070] occurrences matches {0..*} matches {	-- Measurement
+							allow_archetype CLUSTER[id71] occurrences matches {0..*} matches {	-- Measurement
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-[a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-a-zA-Z0-9_]+)*\.v1/}
 							}
-							ELEMENT[at0074] occurrences matches {0..1} matches {	-- Region
+							ELEMENT[id75] occurrences matches {0..1} matches {	-- Region
 								value matches {
-									DV_CODED_TEXT[id0278] matches {
-										defining_code matches {
-											[local::
-											at0180, 	-- Pars flaccida
-											at0181]	-- Pars tensa
-										}
+									DV_CODED_TEXT[id212] matches {
+										defining_code matches {[ac25]}		-- Region
 									}
 								}
 							}
-							ELEMENT[at0071] occurrences matches {0..1} matches {	-- Marginal?
+							ELEMENT[id72] occurrences matches {0..1} matches {	-- Marginal?
 								value matches {
-									DV_CODED_TEXT[id0077] matches {
-										defining_code matches {
-											[local::
-											at0072, 	-- Central
-											at0073]	-- Marginal
-										}
+									DV_CODED_TEXT[id213] matches {
+										defining_code matches {[ac26]}		-- Marginal?
 									}
 								}
 							}
-							ELEMENT[at0076] occurrences matches {0..1} matches {	-- Anterior?
+							ELEMENT[id77] occurrences matches {0..1} matches {	-- Anterior?
 								value matches {
-									DV_CODED_TEXT[id0078] matches {
-										defining_code matches {
-											[local::
-											at0077, 	-- Present
-											at0078]	-- Absent
-										}
+									DV_CODED_TEXT[id214] matches {
+										defining_code matches {[ac27]}		-- Anterior?
 									}
 								}
 							}
-							ELEMENT[at0079] occurrences matches {0..1} matches {	-- Edge
+							ELEMENT[id80] occurrences matches {0..1} matches {	-- Edge
 								value matches {
-									DV_TEXT[id0279] matches {*}
+									DV_TEXT[id215] 
 								}
 							}
 						}
 					}
 				}
 			}
-			ELEMENT[at0172] occurrences matches {0..*} matches {	-- Image
+			ELEMENT[id173] occurrences matches {0..*} matches {	-- Image
 				value matches {
-					DV_MULTIMEDIA[id0150] matches {
-						media_type matches {
-							[openEHR::
-							425, 
-							426, 
-							427, 
-							428, 
-							429, 
-							401, 
-							402, 
-							404, 
-							405, 
-							406, 
-							407, 
-							414]
-						}
+					DV_MULTIMEDIA[id216] matches {
+						media_type matches {[ac28]}		-- Image
 					}
 				}
 			}
-			ELEMENT[at0105] occurrences matches {0..*} matches {	-- Clinical Interpretation
+			ELEMENT[id106] occurrences matches {0..*} matches {	-- Clinical Interpretation
 				value matches {
-					DV_TEXT[id0550] matches {*}
+					DV_TEXT[id217] 
 				}
 			}
-			ELEMENT[at0173] occurrences matches {0..1} matches {	-- Comments
+			ELEMENT[id174] occurrences matches {0..1} matches {	-- Comments
 				value matches {
-					DV_TEXT[id0551] matches {*}
+					DV_TEXT[id218] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Examination of External Auditory Canal and Tympanic Membrane">
 				description = <"Physical examination of the external auditory canal and tympanic membrane
  by a clinician.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Clinical Description">
 				description = <"Narrative description of findings observed by a clinician during a physical examination of the external auditory canal and tympanic membrane.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"View of Tympanic Membrane">
 				description = <"View of the tympanic membrane.">
 			>
-			["at0003"] = <
+			["at4"] = <
 				text = <"Full view">
 				description = <"All of the tympanic membrane was visualised.">
 			>
-			["at0004"] = <
+			["at5"] = <
 				text = <"Partial occlusion">
 				description = <"Part of the tympanic membrane was not clearly visualised, but sufficient to permit a clinical opinion to be formed.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Total occlusion">
 				description = <"None of the tympanic membrane visualised, such that a clinical opinion of the state of the tympanic membrane could not be formed.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Reason for Occlusion of View">
 				description = <"Description of the reason for occlusion to the view of the tympanic membrane.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Membrane Intact?">
 				description = <"Is the tympanic membrane intact?">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Intact">
 				description = <"The tympanic membrane appears intact.">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"Perforated">
 				description = <"The tympanic membrane appears perforated.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Landmark Anatomy">
 				description = <"Details about visibility of anatomical landmarks of the middle ear at the tympanic membrane.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Normal Light Reflex">
 				description = <"Presence of a normal light reflex noted.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Present">
 				description = <"A normal light reflex is visible.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Absent">
 				description = <"A normal light reflex is not visible.">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Annulus">
 				description = <"Narrative description of the Annulus.">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Malleus Handle">
 				description = <"Narrative description of the Malleus Handle.">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Malleus Head">
 				description = <"Narrative description of the Malleus Head.">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Umbo">
 				description = <"Narrative description of the Umbo.">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Appearance">
 				description = <"Category describing the appearance of the tympanic membrane.">
 			>
-			["at0019"] = <
+			["at20"] = <
 				text = <"Translucent">
 				description = <"The tympanic membrane appears healthy.">
 			>
-			["at0021"] = <
+			["at22"] = <
 				text = <"Opaque">
 				description = <"The tympanic membrane appears dull and opaque.">
 			>
-			["at0022"] = <
+			["id23"] = <
 				text = <"Surface Features">
 				description = <"Features observed on the surface of the tympanic membrane.">
 			>
-			["at0023"] = <
+			["at24"] = <
 				text = <"Blistering present">
 				description = <"Blistering is observed on the surface of the tympanic membrane.">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Scarring present">
 				description = <"Scarring is observed on the surface of the tympanic membrane.">
 			>
-			["at0025"] = <
+			["at26"] = <
 				text = <"Granulation present">
 				description = <"Granulation is observed on the surface of the tympanic membrane.">
 			>
-			["at0026"] = <
+			["at27"] = <
 				text = <"Thickening present">
 				description = <"Thickening is observed on the surface of the tympanic membrane.">
 			>
-			["at0028"] = <
+			["id29"] = <
 				text = <"Colour">
 				description = <"Description of the overall colour of the tympanic membrane.">
 			>
-			["at0034"] = <
+			["id35"] = <
 				text = <"Location of Tympanosclerosis">
 				description = <"Description of the location of any tympanosclerosis observed on the tympanic membrane.">
 			>
-			["at0035"] = <
+			["id36"] = <
 				text = <"Position of Tympanic Membrane">
 				description = <"Description of the position of the tympanic membrane.">
 			>
-			["at0036"] = <
+			["at37"] = <
 				text = <"Neutral">
 				description = <"The tympanic membrane is in a normal, neutral position - neither bulging or retracted.">
 			>
-			["at0037"] = <
+			["at38"] = <
 				text = <"Bulging">
 				description = <"The tympanic membrane appears to be bulging.">
 			>
-			["at0038"] = <
+			["at39"] = <
 				text = <"Retracted">
 				description = <"The tympanic membrane appears to be retracted.">
 			>
-			["at0040"] = <
+			["id41"] = <
 				text = <"Description of Retraction">
 				description = <"Description of retraction of the tympanic membrane.">
 			>
-			["at0044"] = <
+			["id45"] = <
 				text = <"Retraction Grade">
 				description = <"Description of retraction using formal classification/grading.">
 			>
-			["at0048"] = <
+			["id49"] = <
 				text = <"Fluid Level Presence">
 				description = <"Presence of a fluid level behind the tympanic membrane.">
 			>
-			["at0049"] = <
+			["at50"] = <
 				text = <"Present">
 				description = <"A fluid level is observed behind the tympanic membrane.">
 			>
-			["at0050"] = <
+			["at51"] = <
 				text = <"Absent">
 				description = <"A fluid level is not observed behind the tympanic membrane.">
 			>
-			["at0051"] = <
+			["id52"] = <
 				text = <"Fluid Level Description">
 				description = <"Narrative description of the fluid level and other related features observed behind the tympanic membrane.">
 			>
-			["at0052"] = <
+			["id53"] = <
 				text = <"Mobility">
 				description = <"Description of mobility of the tympanic membrane, usually as determined by pneumatic otoscopy.">
 			>
-			["at0053"] = <
+			["at54"] = <
 				text = <"Immobile">
 				description = <"There is minimal or no movement of the tympanic membrane when positive pressure is applied.">
 			>
-			["at0054"] = <
+			["at55"] = <
 				text = <"Hypomobile">
 				description = <"The tympanic membrane moves with less excursion and in a more sluggish fashion when positive pressure is applied.">
 			>
-			["at0055"] = <
+			["at56"] = <
 				text = <"Mobile">
 				description = <"The tympanic membrane shows a crisp inward (medial) movement (approx 1mm) with positive pressure.">
 			>
-			["at0056"] = <
+			["at57"] = <
 				text = <"Hypermobile">
 				description = <"There is exaggerated movement of the tympanic membrane when positive pressure is applied.">
 			>
-			["at0060"] = <
+			["id61"] = <
 				text = <"Stapes">
 				description = <"Narrative description of the Stapes.">
 			>
-			["at0061"] = <
+			["id62"] = <
 				text = <"Incus">
 				description = <"Narrative description of the Incus.">
 			>
-			["at0062"] = <
+			["id63"] = <
 				text = <"Perforation Details">
 				description = <"Details about the tympanic membrane perforation.">
 			>
-			["at0064"] = <
+			["id65"] = <
 				text = <"Abnormal Features">
 				description = <"Details about abnormal features noted during the examination of the external auditory canal.">
 			>
-			["at0065"] = <
+			["id66"] = <
 				text = <"Estimation of Size">
 				description = <"Estimation of the size of the tympanic membrane perforation, based on anatomical landmarks.">
 			>
-			["at0066"] = <
+			["at67"] = <
 				text = <"Pinhole">
 				description = <"A pinhole perforation is present in the tympanic membrane.">
 			>
-			["at0067"] = <
+			["at68"] = <
 				text = <"Intermediate">
 				description = <"A perforation is present in the tympanic membrane, that is larger than a pinhole but smaller than a subtotal perforation.">
 			>
-			["at0068"] = <
+			["at69"] = <
 				text = <"Subtotal">
 				description = <"A subtotal perforation is present in the tympanic membrane: the pars tensa is absent but the perforation does not include the annulus.">
 			>
-			["at0069"] = <
+			["at70"] = <
 				text = <"Total">
 				description = <"A total perforation is present in the tympanic membrane; the tympanic membrane is essentially absent.">
 			>
-			["at0070"] = <
+			["id71"] = <
 				text = <"Measurement">
 				description = <"Direct measurement of the size of the tympanic membrane perforation, usually using a photograph as the source for direct measurement.">
 			>
-			["at0071"] = <
+			["id72"] = <
 				text = <"Marginal?">
 				description = <"Location of the tympanic membrane perforation.">
 			>
-			["at0072"] = <
+			["at73"] = <
 				text = <"Central">
 				description = <"The perforation is not involving the annulus and is bounded on all sides by the remnant of the tympanic membrane.">
 			>
-			["at0073"] = <
+			["at74"] = <
 				text = <"Marginal">
 				description = <"The perforation involves the annulus of the tympanic membrane.">
 			>
-			["at0074"] = <
+			["id75"] = <
 				text = <"Region">
 				description = <"Description of the region of the tympanic membrane perforation.">
 			>
-			["at0076"] = <
+			["id77"] = <
 				text = <"Anterior?">
 				description = <"Is an anterior perforation present?">
 			>
-			["at0077"] = <
+			["at78"] = <
 				text = <"Present">
 				description = <"An anterior perforation is present in the pars tensa.">
 			>
-			["at0078"] = <
+			["at79"] = <
 				text = <"Absent">
 				description = <"An anterior perforation is not present in the pars tensa.">
 			>
-			["at0079"] = <
+			["id80"] = <
 				text = <"Edge">
 				description = <"Narrative description of the edge of the perforation.">
 			>
-			["at0090"] = <
+			["at91"] = <
 				text = <"Serous">
 				description = <"The discharge appears to consist mostly of clear, watery fluid.">
 			>
-			["at0091"] = <
+			["at92"] = <
 				text = <"Bloody">
 				description = <"The discharge appears to consist mostly of blood.">
 			>
-			["at0092"] = <
+			["at93"] = <
 				text = <"Purulent">
 				description = <"The discharge appears to consist mostly of pus.">
 			>
-			["at0093"] = <
+			["at94"] = <
 				text = <"Mucous">
 				description = <"The discharge appears to consist mostly of a thick, mucoid substance.">
 			>
-			["at0094"] = <
+			["at95"] = <
 				text = <"Mucopurulent">
 				description = <"The discharge appears to consist of both mucous and pus.">
 			>
-			["at0095"] = <
+			["at96"] = <
 				text = <"Haemoserous">
 				description = <"The discharge appears to consist of both blood and clear, watery fluid.">
 			>
-			["at0097"] = <
+			["id98"] = <
 				text = <"Ear Examined">
 				description = <"Identification of the ear under examination.">
 			>
-			["at0098"] = <
+			["at99"] = <
 				text = <"Left">
 				description = <"The left external auditory canal and tympanic membrane.">
 			>
-			["at0099"] = <
+			["at100"] = <
 				text = <"Right">
 				description = <"The right external auditory canal and tympanic membrane.">
 			>
-			["at0104"] = <
+			["id105"] = <
 				text = <"Tympanic Membrane Details">
 				description = <"Details about findings on examination of the tympanic membrane.">
 			>
-			["at0105"] = <
+			["id106"] = <
 				text = <"Clinical Interpretation">
 				description = <"Single word, phrase or brief description representing a summary of the examination findings.">
 			>
-			["at0106"] = <
+			["id107"] = <
 				text = <"Consistency of Wax">
 				description = <"Description of the type of wax in the external auditory canal.">
 			>
-			["at0107"] = <
+			["at108"] = <
 				text = <"Hard">
 				description = <"The wax is hard.">
 			>
-			["at0108"] = <
+			["at109"] = <
 				text = <"Soft">
 				description = <"The wax is soft.">
 			>
-			["at0109"] = <
+			["id110"] = <
 				text = <"State of Wax">
 				description = <"Description of the state of the wax observed in the external auditory canal.">
 			>
-			["at0110"] = <
+			["at111"] = <
 				text = <"Impacted">
 				description = <"Ear wax is tightly packed in the external auditory canal, such that it may be hard to remove or cause difficulty with hearing.">
 			>
-			["at0111"] = <
+			["at112"] = <
 				text = <"Not impacted">
 				description = <"Ear wax is not tightly packed in the external auditory canal.">
 			>
-			["at0112"] = <
+			["id113"] = <
 				text = <"Polyps">
 				description = <"Presence of polyp/polyps in the external auditory canal.">
 			>
-			["at0113"] = <
+			["at114"] = <
 				text = <"Present">
 				description = <"Polyps are observed in the external auditory canal.">
 			>
-			["at0114"] = <
+			["at115"] = <
 				text = <"Absent">
 				description = <"No polyps are observed in the external auditory canal.">
 			>
-			["at0124"] = <
+			["id125"] = <
 				text = <"Erythema of Canal">
 				description = <"Presence of erythema or redness in the external auditory canal.">
 			>
-			["at0125"] = <
+			["at126"] = <
 				text = <"Present">
 				description = <"Erythema, or redness, is observed in the wall of the external auditory canal.">
 			>
-			["at0126"] = <
+			["at127"] = <
 				text = <"Absent">
 				description = <"There is no erythema or redness observed in the wall of the external auditory canal.">
 			>
-			["at0132"] = <
+			["id133"] = <
 				text = <"Oedema of Canal">
 				description = <"Presence of oedema in the external auditory canal.">
 			>
-			["at0133"] = <
+			["at134"] = <
 				text = <"Present">
 				description = <"Oedema is observed in the external auditory canal wall.">
 			>
-			["at0134"] = <
+			["at135"] = <
 				text = <"Absent">
 				description = <"Oedema is not observed in the external auditory canal wall.">
 			>
-			["at0139"] = <
+			["id140"] = <
 				text = <"Tenderness of Canal">
 				description = <"Presence of tenderness in the external auditory canal.">
 			>
-			["at0140"] = <
+			["at141"] = <
 				text = <"Present">
 				description = <"Tenderness is noted in the external auditory canal wall.">
 			>
-			["at0141"] = <
+			["at142"] = <
 				text = <"Absent">
 				description = <"Tenderness is not noted in the external auditory canal wall.">
 			>
-			["at0143"] = <
+			["id144"] = <
 				text = <"Offensive Odour">
 				description = <"Presence of any offensive odour originating from the external auditory canal.">
 			>
-			["at0144"] = <
+			["at145"] = <
 				text = <"Absent">
 				description = <"No odour is noted as originating from the external auditory canal.">
 			>
-			["at0145"] = <
+			["at146"] = <
 				text = <"Present">
 				description = <"An offensive odour is noted as originating from the external auditory canal.">
 			>
-			["at0147"] = <
+			["id148"] = <
 				text = <"Fungal Spores">
 				description = <"Presence of fungal spores in the external auditory canal.">
 			>
-			["at0148"] = <
+			["at149"] = <
 				text = <"Present">
 				description = <"Fungal spores are observed in the external auditory canal.">
 			>
-			["at0149"] = <
+			["at150"] = <
 				text = <"Absent">
 				description = <"No fungal spores are observed in the external auditory canal.">
 			>
-			["at0151"] = <
+			["id152"] = <
 				text = <"Discharge Amount">
 				description = <"Amount of discharge observed in the external auditory canal or at the tympanic membrane perforation.">
 			>
-			["at0152"] = <
+			["at153"] = <
 				text = <"None">
 				description = <"No discharge is observed in the external auditory canal.">
 			>
-			["at0153"] = <
+			["at154"] = <
 				text = <"Scant">
 				description = <"A small amount of discharge is observed in the external auditory canal.">
 			>
-			["at0154"] = <
+			["at155"] = <
 				text = <"Moderate">
 				description = <"A moderate amount of discharge is observed in the external auditory canal.">
 			>
-			["at0155"] = <
+			["at156"] = <
 				text = <"Profuse">
 				description = <"A profuse amount of discharge is observed in the external auditory canal.">
 			>
-			["at0156"] = <
+			["id157"] = <
 				text = <"Discharge Description">
 				description = <"Narrative description of the discharge observed in the external auditory canal or at the tympanic membrane perforation.">
 			>
-			["at0157"] = <
+			["id158"] = <
 				text = <"Discharge Type">
 				description = <"Type of discharge observed in the external auditory canal or at the tympanic membrane perforation.">
 			>
-			["at0159"] = <
+			["id160"] = <
 				text = <"Foreign Body">
 				description = <"Presence of a foreign body in the external auditory canal.">
 			>
-			["at0160"] = <
+			["at161"] = <
 				text = <"Present">
 				description = <"A foreign body is present in the external auditory canal.">
 			>
-			["at0161"] = <
+			["at162"] = <
 				text = <"Absent">
 				description = <"A foreign body is present in the external auditory canal.">
 			>
-			["at0163"] = <
+			["id164"] = <
 				text = <"Location of Foreign Body">
 				description = <"Location of the foreign body within the external auditory canal.">
 			>
-			["at0164"] = <
+			["at165"] = <
 				text = <"Outer canal">
 				description = <"The foreign body is located in the outer part of the external auditory canal.">
 			>
-			["at0165"] = <
+			["at166"] = <
 				text = <"Deep canal">
 				description = <"The foreign body is located in the deep, inner part of the external auditory canal.">
 			>
-			["at0166"] = <
+			["id167"] = <
 				text = <"Ventilation Tube Position">
 				description = <"Observed position of the ventilation tube (or grommet) in the tympanic membrane or the auditory canal.">
 			>
-			["at0167"] = <
+			["at168"] = <
 				text = <"In situ">
 				description = <"The ventilation tube is located in situ in the tympanic membrane.">
 			>
-			["at0168"] = <
+			["at169"] = <
 				text = <"Partially extruded">
 				description = <"The ventilation tube is partially extruded from it's original position in the tympanic membrane.">
 			>
-			["at0169"] = <
+			["at170"] = <
 				text = <"Extruded - remains in canal">
 				description = <"The ventilation tube has been extruded from the tympanic membrane but is visualised within the external auditory canal.">
 			>
-			["at0170"] = <
+			["at171"] = <
 				text = <"Extruded - missing">
 				description = <"The ventilation tube has been extruded from the tympanic membrane and is not visualised anywhere within the external auditory canal.">
 			>
-			["at0171"] = <
+			["at172"] = <
 				text = <"Unknown">
 				description = <"The position of the ventilation tube cannot be determined because the tympanic membrane is obscured and the ventilation tube is not observed within the external auditory canal.">
 			>
-			["at0172"] = <
+			["id173"] = <
 				text = <"Image">
 				description = <"Multimedia image taken during the physical examination of the external auditory canal and tympanic membrane.">
 			>
-			["at0173"] = <
+			["id174"] = <
 				text = <"Comments">
 				description = <"Additional narrative about the physical examination findings of the external auditory canal and tympanic membrane, not captured in other fields.">
 			>
-			["at0175"] = <
+			["at176"] = <
 				text = <"Tympanosclerosis present">
 				description = <"White patches, consistent with tympanosclerosis, are observed on surface of the tympanic membrane.">
 			>
-			["at0180"] = <
+			["at181"] = <
 				text = <"Pars flaccida">
 				description = <"The tympanic membrane perforation is located in the pars flaccida.">
 			>
-			["at0181"] = <
+			["at182"] = <
 				text = <"Pars tensa">
 				description = <"The tympanic membrane perforation is located in the pars tensa.">
 			>
-			["at0182"] = <
+			["at183"] = <
 				text = <"Indeterminate">
 				description = <"It is not possible to tell if the tympanic membrane is intact or perforated.">
 			>
+			["ac1"] = <
+				text = <"Ear Examined">
+				description = <"Identification of the ear under examination.">
+			>
+			["ac2"] = <
+				text = <"Consistency of Wax">
+				description = <"Description of the type of wax in the external auditory canal.">
+			>
+			["ac3"] = <
+				text = <"State of Wax">
+				description = <"Description of the state of the wax observed in the external auditory canal.">
+			>
+			["ac4"] = <
+				text = <"View of Tympanic Membrane">
+				description = <"View of the tympanic membrane.">
+			>
+			["ac5"] = <
+				text = <"Tenderness of Canal">
+				description = <"Presence of tenderness in the external auditory canal.">
+			>
+			["ac6"] = <
+				text = <"Oedema of Canal">
+				description = <"Presence of oedema in the external auditory canal.">
+			>
+			["ac7"] = <
+				text = <"Erythema of Canal">
+				description = <"Presence of erythema or redness in the external auditory canal.">
+			>
+			["ac8"] = <
+				text = <"Offensive Odour">
+				description = <"Presence of any offensive odour originating from the external auditory canal.">
+			>
+			["ac9"] = <
+				text = <"Discharge Type">
+				description = <"Type of discharge observed in the external auditory canal or at the tympanic membrane perforation.">
+			>
+			["ac10"] = <
+				text = <"Discharge Amount">
+				description = <"Amount of discharge observed in the external auditory canal or at the tympanic membrane perforation.">
+			>
+			["ac11"] = <
+				text = <"Ventilation Tube Position">
+				description = <"Observed position of the ventilation tube (or grommet) in the tympanic membrane or the auditory canal.">
+			>
+			["ac12"] = <
+				text = <"Polyps">
+				description = <"Presence of polyp/polyps in the external auditory canal.">
+			>
+			["ac13"] = <
+				text = <"Fungal Spores">
+				description = <"Presence of fungal spores in the external auditory canal.">
+			>
+			["ac14"] = <
+				text = <"Foreign Body">
+				description = <"Presence of a foreign body in the external auditory canal.">
+			>
+			["ac15"] = <
+				text = <"Location of Foreign Body">
+				description = <"Location of the foreign body within the external auditory canal.">
+			>
+			["ac16"] = <
+				text = <"Membrane Intact?">
+				description = <"Is the tympanic membrane intact?">
+			>
+			["ac17"] = <
+				text = <"Membrane Intact?">
+				description = <"Is the tympanic membrane intact?">
+			>
+			["ac18"] = <
+				text = <"Appearance">
+				description = <"Category describing the appearance of the tympanic membrane.">
+			>
+			["ac19"] = <
+				text = <"Normal Light Reflex">
+				description = <"Presence of a normal light reflex noted.">
+			>
+			["ac20"] = <
+				text = <"Surface Features">
+				description = <"Features observed on the surface of the tympanic membrane.">
+			>
+			["ac21"] = <
+				text = <"Position of Tympanic Membrane">
+				description = <"Description of the position of the tympanic membrane.">
+			>
+			["ac22"] = <
+				text = <"Fluid Level Presence">
+				description = <"Presence of a fluid level behind the tympanic membrane.">
+			>
+			["ac23"] = <
+				text = <"Mobility">
+				description = <"Description of mobility of the tympanic membrane, usually as determined by pneumatic otoscopy.">
+			>
+			["ac24"] = <
+				text = <"Estimation of Size">
+				description = <"Estimation of the size of the tympanic membrane perforation, based on anatomical landmarks.">
+			>
+			["ac25"] = <
+				text = <"Region">
+				description = <"Description of the region of the tympanic membrane perforation.">
+			>
+			["ac26"] = <
+				text = <"Marginal?">
+				description = <"Location of the tympanic membrane perforation.">
+			>
+			["ac27"] = <
+				text = <"Anterior?">
+				description = <"Is an anterior perforation present?">
+			>
+			["ac28"] = <
+				text = <"Image">
+				description = <"Multimedia image taken during the physical examination of the external auditory canal and tympanic membrane.">
+			>
+			["at184"] = <
+				text = <"unknown">
+				description = <"unknown">
+			>
+			["at185"] = <
+				text = <"no information">
+				description = <"no information">
+			>
+			["at186"] = <
+				text = <"not applicable">
+				description = <"not applicable">
+			>
+			["at187"] = <
+				text = <"masked">
+				description = <"masked">
+			>
+			["at188"] = <
+				text = <"image/cgm">
+				description = <"image/cgm">
+			>
+			["at189"] = <
+				text = <"image/gif">
+				description = <"image/gif">
+			>
+			["at190"] = <
+				text = <"image/png">
+				description = <"image/png">
+			>
+			["at191"] = <
+				text = <"image/tiff">
+				description = <"image/tiff">
+			>
+			["at192"] = <
+				text = <"image/jpeg">
+				description = <"image/jpeg">
+			>
+			["at193"] = <
+				text = <"video/BT656">
+				description = <"video/BT656">
+			>
+			["at194"] = <
+				text = <"video/CelB">
+				description = <"video/CelB">
+			>
+			["at195"] = <
+				text = <"video/H261">
+				description = <"video/H261">
+			>
+			["at196"] = <
+				text = <"video/H263">
+				description = <"video/H263">
+			>
+			["at197"] = <
+				text = <"video/H263-1998">
+				description = <"video/H263-1998">
+			>
+			["at198"] = <
+				text = <"video/H263-2000">
+				description = <"video/H263-2000">
+			>
+			["at199"] = <
+				text = <"video/quicktime">
+				description = <"video/quicktime">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at184"] = <http://openehr.org/id/253>
+			["at185"] = <http://openehr.org/id/271>
+			["at186"] = <http://openehr.org/id/273>
+			["at187"] = <http://openehr.org/id/272>
+			["at188"] = <http://openehr.org/id/425>
+			["at189"] = <http://openehr.org/id/426>
+			["at190"] = <http://openehr.org/id/427>
+			["at191"] = <http://openehr.org/id/428>
+			["at192"] = <http://openehr.org/id/429>
+			["at193"] = <http://openehr.org/id/401>
+			["at194"] = <http://openehr.org/id/402>
+			["at195"] = <http://openehr.org/id/404>
+			["at196"] = <http://openehr.org/id/405>
+			["at197"] = <http://openehr.org/id/406>
+			["at198"] = <http://openehr.org/id/407>
+			["at199"] = <http://openehr.org/id/414>
+		>
+	>
+	value_sets = <
+		["ac9"] = <
+			id = <"ac9">
+			members = <"at91", "at92", "at93", "at94", "at95", "at96">
+		>
+		["ac20"] = <
+			id = <"ac20">
+			members = <"at24", "at25", "at26", "at27", "at176">
+		>
+		["ac17"] = <
+			id = <"ac17">
+			members = <"at184", "at185", "at186", "at187">
+		>
+		["ac25"] = <
+			id = <"ac25">
+			members = <"at181", "at182">
+		>
+		["ac28"] = <
+			id = <"ac28">
+			members = <"at188", "at189", "at190", "at191", "at192", "at193", "at194", "at195", "at196", "at197", "at198", "at199">
+		>
+		["ac26"] = <
+			id = <"ac26">
+			members = <"at73", "at74">
+		>
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at99", "at100">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at108", "at109">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at111", "at112">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at4", "at5", "at6">
+		>
+		["ac5"] = <
+			id = <"ac5">
+			members = <"at141", "at142">
+		>
+		["ac6"] = <
+			id = <"ac6">
+			members = <"at134", "at135">
+		>
+		["ac7"] = <
+			id = <"ac7">
+			members = <"at126", "at127">
+		>
+		["ac8"] = <
+			id = <"ac8">
+			members = <"at146", "at145">
+		>
+		["ac10"] = <
+			id = <"ac10">
+			members = <"at153", "at154", "at155", "at156">
+		>
+		["ac11"] = <
+			id = <"ac11">
+			members = <"at168", "at169", "at170", "at171", "at172">
+		>
+		["ac12"] = <
+			id = <"ac12">
+			members = <"at114", "at115">
+		>
+		["ac13"] = <
+			id = <"ac13">
+			members = <"at149", "at150">
+		>
+		["ac14"] = <
+			id = <"ac14">
+			members = <"at161", "at162">
+		>
+		["ac15"] = <
+			id = <"ac15">
+			members = <"at165", "at166">
+		>
+		["ac16"] = <
+			id = <"ac16">
+			members = <"at9", "at10", "at183">
+		>
+		["ac18"] = <
+			id = <"ac18">
+			members = <"at20", "at22">
+		>
+		["ac19"] = <
+			id = <"ac19">
+			members = <"at13", "at14">
+		>
+		["ac21"] = <
+			id = <"ac21">
+			members = <"at38", "at37", "at39">
+		>
+		["ac22"] = <
+			id = <"ac22">
+			members = <"at50", "at51">
+		>
+		["ac23"] = <
+			id = <"ac23">
+			members = <"at54", "at55", "at56", "at57">
+		>
+		["ac24"] = <
+			id = <"ac24">
+			members = <"at67", "at68", "at69", "at70">
+		>
+		["ac27"] = <
+			id = <"ac27">
+			members = <"at78", "at79">
 		>
 	>

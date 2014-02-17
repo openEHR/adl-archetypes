@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-DEMOGRAPHIC-CLUSTER.provider_identifier.v1.0.0
 
 language
@@ -45,220 +45,222 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Identificador de um prestador de assistência à saúde
+	CLUSTER[id1] matches {	-- Identificador de um prestador de assistência à saúde
 		items cardinality matches {4..*; ordered} matches {
-			ELEMENT[at0001] occurrences matches {1} matches {	-- Designação
+			ELEMENT[id2] occurrences matches {1} matches {	-- Designação
 				value matches {
-					DV_TEXT[id0205] matches {*}
+					DV_TEXT[id26] 
 				}
 			}
-			ELEMENT[at0002] occurrences matches {1} matches {	-- Área geografica
+			ELEMENT[id3] occurrences matches {1} matches {	-- Área geografica
 				value matches {
-					DV_CODED_TEXT[id0605] matches {
-						defining_code matches {
-							[local::
-							at0010, 	-- Local
-							at0011, 	-- Regional
-							at0012, 	-- Estadual
-							at0013]	-- Nacional
-						}
+					DV_CODED_TEXT[id27] matches {
+						defining_code matches {[ac2]}		-- Área geografica
 					}
 				}
 			}
-			ELEMENT[at0003] occurrences matches {1..*} matches {	-- Emissor
+			ELEMENT[id4] occurrences matches {1..*} matches {	-- Emissor
 				value matches {
-					DV_TEXT[id0005] matches {*}
+					DV_TEXT[id28] 
 				}
 			}
-			ELEMENT[at0004] occurrences matches {1..*} matches {	-- Uso da identificação
+			ELEMENT[id5] occurrences matches {1..*} matches {	-- Uso da identificação
 				value matches {
-					DV_CODED_TEXT[id0405] matches {
-						defining_code matches {[ac0000]}		-- Código de uso do identificador
+					DV_CODED_TEXT[id29] matches {
+						defining_code matches {[ac1]}		-- Código de uso do identificador
 					}
 				}
 			}
-			CLUSTER[at0005] occurrences matches {0..*} matches {	-- Resolução de duplicidade
+			CLUSTER[id6] occurrences matches {0..*} matches {	-- Resolução de duplicidade
 				items cardinality matches {3..*; ordered} matches {
-					ELEMENT[at0020] occurrences matches {0..1} matches {	-- Não é duplicata de
+					ELEMENT[id21] occurrences matches {0..1} matches {	-- Não é duplicata de
 						value matches {
-							DV_TEXT[id0549] matches {*}
+							DV_TEXT[id30] 
 						}
 					}
-					ELEMENT[at0021] occurrences matches {0..1} matches {	-- Duplicata de
+					ELEMENT[id22] occurrences matches {0..1} matches {	-- Duplicata de
 						value matches {
-							DV_TEXT[id0949] matches {*}
+							DV_TEXT[id31] 
 						}
 					}
-					ELEMENT[at0022] occurrences matches {1..*} matches {	-- Confirmado pela organização
+					ELEMENT[id23] occurrences matches {1..*} matches {	-- Confirmado pela organização
 						value matches {
-							DV_TEXT[id0349] matches {*}
+							DV_TEXT[id32] 
 						}
 					}
-					ELEMENT[at0023] occurrences matches {1..*} matches {	-- Data da confirmação
+					ELEMENT[id24] occurrences matches {1..*} matches {	-- Data da confirmação
 						value matches {
-							DV_DATE[id0749] matches {*}
+							DV_DATE[id33] 
 						}
 					}
-					ELEMENT[at0024] occurrences matches {1..*} matches {	-- Identificador desativado
+					ELEMENT[id25] occurrences matches {1..*} matches {	-- Identificador desativado
 						value matches {
-							DV_TEXT[id0149] matches {*}
+							DV_TEXT[id34] 
 						}
 					}
 				}
 			}
-			allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {	-- Outros dados
+			allow_archetype CLUSTER[id7] occurrences matches {0..*} matches {	-- Outros dados
 				include
-					archetype_id/value matches {/(identifier)[a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(identifier)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en-gb"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Healthcare provider identifier">
 				description = <"Healthcare provider identifier">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Identifier designation">
 				description = <"A number or code assigned to a healthcare provider in order to identify that provider">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Geographic area">
 				description = <"Indicates the geographic area within which the identifier is used">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Issuer">
 				description = <"Identifier issuer">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Identifier Usage">
 				description = <"The purpose or intended use of this unique identifier">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Duplicate resolution">
 				description = <"This group of data allow users to identify where they have determined that two identifiers which appears to be duplicates are not duplicated, or to indicate that where they are discovered to be duplicates -  which number is retired and no longer used, and which is retained">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Other data">
 				description = <"Other data about a specific identifier">
 			>
-			["at0010"] = <
+			["at11"] = <
 				text = <"Local">
 				description = <"Indicates that this identifier is used locally">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Area/Regional/District">
 				description = <"Indicates that this identifier is used within a specific area">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"State/Province/Territory">
 				description = <"Indicates that this identifier is used within a political boundary such as a state or territory or province">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"National">
 				description = <"Indicates that this identifier is used nationally">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"Not a duplicate of">
 				description = <"The identifier entered into this field is not a duplicate entry of this identifier">
 			>
-			["at0021"] = <
+			["id22"] = <
 				text = <"Duplicate of">
 				description = <"The identifier entered into this field is a duplicate entry of this identifier">
 			>
-			["at0022"] = <
+			["id23"] = <
 				text = <"Confirmed by organisation">
 				description = <"The organisation that has confirmed the duplicate or not duplicate status of this identifier">
 			>
-			["at0023"] = <
+			["id24"] = <
 				text = <"Date confirmed">
 				description = <"The date upon which this identifier was determined as a duplicate or not a duplicate">
 			>
-			["at0024"] = <
+			["id25"] = <
 				text = <"Retired identifider">
 				description = <"For a duplicate identifier set this field indicates if this number is the one retired (nor for further use) or not">
 			>
-		>
-		["pt-br"] = <
-			["at0000"] = <
-				text = <"Identificador de um prestador de assistência à saúde">
-				description = <"Identificador de um prestador de assistência à saúde">
-			>
-			["at0001"] = <
-				text = <"Designação">
-				description = <"Número ou código do documento de identificação">
-			>
-			["at0002"] = <
-				text = <"Área geografica">
-				description = <"Indica a área geográfica onde o documento é utilizado">
-			>
-			["at0003"] = <
-				text = <"Emissor">
-				description = <"Órgão emissor da identificação">
-			>
-			["at0004"] = <
-				text = <"Uso da identificação">
-				description = <"O propósito de uso deste identificador único">
-			>
-			["at0005"] = <
-				text = <"Resolução de duplicidade">
-				description = <"Este grupo de dados permite aos usuários identificar onde eles determinaram que dois identificadores que parecem ser duplicatas não são duplicatas, ou indicar, no caso de se descobrir qe eles são duplicatas: que número está inativo e não é mais usado, e qual deve ser mantido">
-			>
-			["at0006"] = <
-				text = <"Outros dados">
-				description = <"Outros dados sobre um identificador específico">
-			>
-			["at0010"] = <
-				text = <"Local">
-				description = <"Indica que esta identificação é usada localmente">
-			>
-			["at0011"] = <
-				text = <"Regional">
-				description = <"Indica que esta identificação é usada em uma região">
-			>
-			["at0012"] = <
-				text = <"Estadual">
-				description = <"Indica que esta identificação é usada em nível de um estado">
-			>
-			["at0013"] = <
-				text = <"Nacional">
-				description = <"Indica que esta identificação é usada em nível nacional">
-			>
-			["at0020"] = <
-				text = <"Não é duplicata de">
-				description = <"O identificador digitado neste campo não é uma duplicata deste identificador">
-			>
-			["at0021"] = <
-				text = <"Duplicata de">
-				description = <"O identificador digitado neste campo não é uma duplicata deste identificador">
-			>
-			["at0022"] = <
-				text = <"Confirmado pela organização">
-				description = <"A organização que confirmou o status de duplicata ou não deste identificador">
-			>
-			["at0023"] = <
-				text = <"Data da confirmação">
-				description = <"A data onde este identificador foi determinado como sendo ou não uma duplicata">
-			>
-			["at0024"] = <
-				text = <"Identificador desativado">
-				description = <"Para um conjunto de identificadores duplicados, este campo indica se este número é o que deve ser desativado (não mais usado) ou não">
-			>
-		>
-	>
-	constraint_definitions = <
-		["en-gb"] = <
-			["ac0000"] = <
+			["ac1"] = <
 				text = <"Identifier usage code">
 				description = <"Valid codes for usage of identifiers">
 			>
+			["ac2"] = <
+				text = <"*Área geografica(pt-br)">
+				description = <"*Indica a área geográfica onde o documento é utilizado(pt-br)">
+			>
 		>
 		["pt-br"] = <
-			["ac0000"] = <
+			["id1"] = <
+				text = <"Identificador de um prestador de assistência à saúde">
+				description = <"Identificador de um prestador de assistência à saúde">
+			>
+			["id2"] = <
+				text = <"Designação">
+				description = <"Número ou código do documento de identificação">
+			>
+			["id3"] = <
+				text = <"Área geografica">
+				description = <"Indica a área geográfica onde o documento é utilizado">
+			>
+			["id4"] = <
+				text = <"Emissor">
+				description = <"Órgão emissor da identificação">
+			>
+			["id5"] = <
+				text = <"Uso da identificação">
+				description = <"O propósito de uso deste identificador único">
+			>
+			["id6"] = <
+				text = <"Resolução de duplicidade">
+				description = <"Este grupo de dados permite aos usuários identificar onde eles determinaram que dois identificadores que parecem ser duplicatas não são duplicatas, ou indicar, no caso de se descobrir qe eles são duplicatas: que número está inativo e não é mais usado, e qual deve ser mantido">
+			>
+			["id7"] = <
+				text = <"Outros dados">
+				description = <"Outros dados sobre um identificador específico">
+			>
+			["at11"] = <
+				text = <"Local">
+				description = <"Indica que esta identificação é usada localmente">
+			>
+			["at12"] = <
+				text = <"Regional">
+				description = <"Indica que esta identificação é usada em uma região">
+			>
+			["at13"] = <
+				text = <"Estadual">
+				description = <"Indica que esta identificação é usada em nível de um estado">
+			>
+			["at14"] = <
+				text = <"Nacional">
+				description = <"Indica que esta identificação é usada em nível nacional">
+			>
+			["id21"] = <
+				text = <"Não é duplicata de">
+				description = <"O identificador digitado neste campo não é uma duplicata deste identificador">
+			>
+			["id22"] = <
+				text = <"Duplicata de">
+				description = <"O identificador digitado neste campo não é uma duplicata deste identificador">
+			>
+			["id23"] = <
+				text = <"Confirmado pela organização">
+				description = <"A organização que confirmou o status de duplicata ou não deste identificador">
+			>
+			["id24"] = <
+				text = <"Data da confirmação">
+				description = <"A data onde este identificador foi determinado como sendo ou não uma duplicata">
+			>
+			["id25"] = <
+				text = <"Identificador desativado">
+				description = <"Para um conjunto de identificadores duplicados, este campo indica se este número é o que deve ser desativado (não mais usado) ou não">
+			>
+			["ac1"] = <
 				text = <"Código de uso do identificador">
 				description = <"códigos válidos para os usos de identificadores">
 			>
+			["ac2"] = <
+				text = <"Área geografica">
+				description = <"Indica a área geográfica onde o documento é utilizado">
+			>
+		>
+	>
+	value_sets = <
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at11", "at12", "at13", "at14">
 		>
 	>

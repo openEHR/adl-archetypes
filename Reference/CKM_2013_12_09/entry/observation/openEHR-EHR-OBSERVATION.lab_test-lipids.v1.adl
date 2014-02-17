@@ -40,11 +40,11 @@ definition
 	OBSERVATION[at0000.1] matches {	-- Lipid studies
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
-				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+				events matches {
+					EVENT[at0002.1] occurrences matches {0..1} matches {	-- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
-								items cardinality matches {0..*; unordered} matches {
+								items matches {
 									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Test name
 										value matches {
 											DV_TEXT matches {*}
@@ -161,9 +161,7 @@ definition
 									}
 									ELEMENT[at0010] occurrences matches {0..*} matches {	-- Multimedia representation
 										value matches {
-											DV_MULTIMEDIA matches {
-												media_type matches {[openEHR::]}
-											}
+											DV_MULTIMEDIA matches {*}
 										}
 									}
 								}
@@ -175,9 +173,9 @@ definition
 		}
 		protocol matches {
 			ITEM_TREE[at0004] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
+				items matches {
 					CLUSTER[at0013] occurrences matches {0..1} matches {	-- Test identification
-						items cardinality matches {0..*; unordered} matches {
+						items matches {
 							ELEMENT[at0062] occurrences matches {0..1} matches {	-- Placer order identifier
 								value matches {
 									DV_TEXT matches {*}
@@ -229,7 +227,7 @@ This archetype also acts as the parent for specialisations appropriate for more 
 					text = <"Event Series">
 					description = <"@ internal @">
 				>
-				["at0002"] = <
+				["at0002.1"] = <
 					text = <"Any event">
 					description = <"*">
 				>

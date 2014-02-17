@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.tnm_staging_7th-lung.v1.0.0
 
 specialize
-	openEHR-EHR-CLUSTER.tnm_staging_7th.v1.0.0
+	openEHR-EHR-CLUSTER.tnm_staging_7th.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -33,79 +33,35 @@ Not to be used for other editions of TNM classification.">
 	>
 
 definition
-	CLUSTER[at0000.1] matches {	-- Tumour - Lung cancer TNM staging 7th Edition
-		/items[at0003]/value matches {
-			DV_CODED_TEXT[id0.5] matches {
-				defining_code matches {
-					[local::
-					at0.52, 	-- TX
-					at0.53, 	-- T0
-					at0.54, 	-- Tis
-					at0.55, 	-- T1
-					at0.56, 	-- T1a
-					at0.57, 	-- T1b
-					at0.58, 	-- T2
-					at0.59, 	-- T2a
-					at0.60, 	-- T2b
-					at0.61, 	-- T3
-					at0.62]	-- T4
-				}
+	CLUSTER[id1.1] matches {	-- Tumour - Lung cancer TNM staging 7th Edition
+		/items[id4]/value matches {
+			DV_CODED_TEXT[id0.82] matches {
+				defining_code matches {[ac0.1]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0004]/value matches {
-			DV_CODED_TEXT[id0.405] matches {
-				defining_code matches {
-					[local::
-					at0.63, 	-- NX
-					at0.64, 	-- N0
-					at0.65, 	-- N1
-					at0.66, 	-- N2
-					at0.67]	-- N3
-				}
+		/items[id5]/value matches {
+			DV_CODED_TEXT[id0.83] matches {
+				defining_code matches {[ac0.2]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0005]/value matches {
-			DV_CODED_TEXT[id0.805] matches {
-				defining_code matches {
-					[local::
-					at0.68, 	-- MX
-					at0.69, 	-- M0
-					at0.70, 	-- M1
-					at0.71, 	-- M1a
-					at0.72]	-- M1b
-				}
+		/items[id6]/value matches {
+			DV_CODED_TEXT[id0.84] matches {
+				defining_code matches {[ac0.3]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0025]/value matches {
-			DV_CODED_TEXT[id0.605] matches {
-				defining_code matches {
-					[local::
-					at0.73, 	-- RX
-					at0.74, 	-- R0
-					at0.75, 	-- R(is)
-					at0.76, 	-- R1
-					at0.77]	-- R2
-				}
+		/items[id26]/value matches {
+			DV_CODED_TEXT[id0.85] matches {
+				defining_code matches {[ac0.4]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0014]/value matches {
-			DV_CODED_TEXT[id0.807] matches {
-				defining_code matches {
-					[local::
-					at0.78, 	-- Stage 0
-					at0.79, 	-- Stage IA
-					at0.80, 	-- Stage IB
-					at0.81, 	-- Stage IIA
-					at0.82, 	-- Stage IIB
-					at0.83, 	-- Stage IIIA
-					at0.84, 	-- Stage IIIB
-					at0.85]	-- Stage IV
-				}
+		/items[id15]/value matches {
+			DV_CODED_TEXT[id0.89] matches {
+				defining_code matches {[ac0.6]}		-- (added by post-parse processor)
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
 			["at0.52"] = <
@@ -244,9 +200,59 @@ ontology
 				text = <"Stage IV">
 				description = <"Stage IV -  as defined by AJCC/UICC TNM system (7th edition) Lung cancer.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Tumour - Lung cancer TNM staging 7th Edition">
 				description = <"TNM Staging classification for lung cancer (Seventh edition).">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.2"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.3"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.4"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.5"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.6"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at0.52", "at0.53", "at0.54", "at0.55", "at0.56", "at0.57", "at0.58", "at0.59", "at0.60", "at0.61", "at0.62">
+		>
+		["ac0.2"] = <
+			id = <"ac0.2">
+			members = <"at0.63", "at0.64", "at0.65", "at0.66", "at0.67">
+		>
+		["ac0.3"] = <
+			id = <"ac0.3">
+			members = <"at0.68", "at0.69", "at0.70", "at0.71", "at0.72">
+		>
+		["ac0.4"] = <
+			id = <"ac0.4">
+			members = <"at0.73", "at0.74", "at0.75", "at0.76", "at0.77">
+		>
+		["ac0.5"] = <
+			id = <"ac0.5">
+			members = <"at48", "at49", "at50", "at51", "at52">
+		>
+		["ac0.6"] = <
+			id = <"ac0.6">
+			members = <"at0.78", "at0.79", "at0.80", "at0.81", "at0.82", "at0.83", "at0.84", "at0.85">
 		>
 	>

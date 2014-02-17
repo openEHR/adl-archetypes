@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.telecom_details.v1.0.0
 
 language
@@ -47,222 +47,237 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Telecom details
+	CLUSTER[id1] matches {	-- Telecom details
 		items matches {
-			ELEMENT[at0010] occurrences matches {0..*} matches {	-- Mode
+			ELEMENT[id11] occurrences matches {0..*} matches {	-- Mode
 				value matches {
-					DV_CODED_TEXT[id0205] matches {
-						defining_code matches {
-							[local::
-							at0011, 	-- Home
-							at0012, 	-- Work
-							at0018]	-- Contact
-						}
+					DV_CODED_TEXT[id21] matches {
+						defining_code matches {[ac1]}		-- Mode
 					}
 				}
 			}
-			CLUSTER[at0001] occurrences matches {0..*} matches {	-- Telecoms
+			CLUSTER[id2] occurrences matches {0..*} matches {	-- Telecoms
 				items matches {
-					ELEMENT[at0004] matches {	-- Telecoms type
+					ELEMENT[id5] matches {	-- Telecoms type
 						value matches {
-							DV_CODED_TEXT[id0477] matches {
-								defining_code matches {
-									[local::
-									at0013, 	-- Telephone
-									at0014, 	-- Fax
-									at0015, 	-- Mobile phone
-									at0016]	-- Pager
-								}
+							DV_CODED_TEXT[id22] matches {
+								defining_code matches {[ac2]}		-- Telecoms type
 							}
 						}
 					}
-					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Unstuctured telecoms
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Unstuctured telecoms
 						value matches {
-							DV_TEXT[id0677] matches {*}
+							DV_TEXT[id23] 
 						}
 					}
-					CLUSTER[at0003] occurrences matches {0..1} matches {	-- Structured telecoms
+					CLUSTER[id4] occurrences matches {0..1} matches {	-- Structured telecoms
 						items matches {
-							ELEMENT[at0005] occurrences matches {0..1} matches {	-- Country code
+							ELEMENT[id6] occurrences matches {0..1} matches {	-- Country code
 								value matches {
-									DV_TEXT[id0253] matches {*}
+									DV_TEXT[id24] 
 								}
 							}
-							ELEMENT[at0006] occurrences matches {0..1} matches {	-- Area code
+							ELEMENT[id7] occurrences matches {0..1} matches {	-- Area code
 								value matches {
-									DV_TEXT[id0653] matches {*}
+									DV_TEXT[id25] 
 								}
 							}
-							ELEMENT[at0007] occurrences matches {0..1} matches {	-- Number
+							ELEMENT[id8] occurrences matches {0..1} matches {	-- Number
 								value matches {
-									DV_TEXT[id0053] matches {*}
+									DV_TEXT[id26] 
 								}
 							}
-							ELEMENT[at0019] occurrences matches {0..1} matches {	-- Extension
+							ELEMENT[id20] occurrences matches {0..1} matches {	-- Extension
 								value matches {
-									DV_TEXT[id0254] matches {*}
+									DV_TEXT[id27] 
 								}
 							}
 						}
 					}
 				}
 			}
-			ELEMENT[at0009] occurrences matches {0..*} matches {	-- Email address
+			ELEMENT[id10] occurrences matches {0..*} matches {	-- Email address
 				value matches {
-					DV_TEXT[id0405] matches {*}
+					DV_TEXT[id28] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Telecom details">
 				description = <"Personal or organisational telephone, fax, and email details.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Telecoms">
 				description = <"One or more telecoms contacts for an individual.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Unstuctured telecoms">
 				description = <"An unstructured description of telecoms.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Structured telecoms">
 				description = <"A structure for telephone numbers composed of separately identifiable elements. ENV13606-4:2000 7.11.18.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Telecoms type">
 				description = <"Telecom mechanism e.g. telephone, facsimile, pager etc.  ENV 13606-4:2000 7.11.19.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Country code">
 				description = <"Telephone country code.  ENV13606-4:2000 7.11.18.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Area code">
 				description = <"Telephone area code.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Number">
 				description = <"Telephone number.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Email address">
 				description = <"Email address.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Mode">
 				description = <"A qualifier for a telecom contact, describing its context e.g. 'Work', 'Home'.   ENV 13606 - 4:2000 7.11.19.">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Home">
 				description = <"Telecommunication detail for home.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Work">
 				description = <"Telecommunication detail for work.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Telephone">
 				description = <"Telephone number details.">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Fax">
 				description = <"Facsimile number details.">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Mobile phone">
 				description = <"Mobile phone number details.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Pager">
 				description = <"Pager number details.">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"Contact">
 				description = <"Contact.">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Extension">
 				description = <"Telephone extension number.  ENV13606-4:2000 7.11.18.">
 			>
+			["ac1"] = <
+				text = <"Mode">
+				description = <"A qualifier for a telecom contact, describing its context e.g. 'Work', 'Home'.   ENV 13606 - 4:2000 7.11.19.">
+			>
+			["ac2"] = <
+				text = <"Telecoms type">
+				description = <"Telecom mechanism e.g. telephone, facsimile, pager etc.  ENV 13606-4:2000 7.11.19.">
+			>
 		>
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Kontaktdaten">
 				description = <"Angaben zur Kontaktaufnahme mit einer Person oder Einrichtung per Telefon, Faxgerät oder Email">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Kontaktdaten">
 				description = <"Eine oder mehrere Kontaktadressen einer Person oder Einrichtung">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Unstrukturierte Kontaktadresse">
 				description = <"Unstrukturierte Kontaktadresse">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Strukturierte Kontaktadresse">
 				description = <"Strukturierte Angabe von Telefonnummern mit Feldern nach ENV13606-4:2000 7.11.18">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Kontakttyp">
 				description = <"Typ des Kontakts z.B. Telefon, Fax, Pager etc.  ENV 13606-4:2000 7.11.19">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Landesvorwahl">
 				description = <"Landesvorwahl.  ENV13606-4:2000 7.11.18">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Ortsnetzkennzahl">
 				description = <"Ortsnetzkennzahl oder Vorwahlteil einer Sonderrufnummer">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Nummer">
 				description = <"Telefonnummer">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Emailadresse">
 				description = <"Emailadresse">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Art">
 				description = <"Zuordnung einer Kontaktangabe bzgl. der Umgebung z.B. 'Arbeit', 'Privat'.   ENV 13606 - 4:2000 7.11.19(en)">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Privat">
 				description = <"*">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Arbeit">
 				description = <"*">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Telefon">
 				description = <"*">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Telefax">
 				description = <"*">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Mobiltelefon">
 				description = <"*">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Pager">
 				description = <"*">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"Kontakt">
 				description = <"*">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Durchwahl">
 				description = <"Durchwahl. ENV13606-4:2000 7.11.18">
 			>
+			["ac1"] = <
+				text = <"*Mode(en)">
+				description = <"*A qualifier for a telecom contact, describing its context e.g. 'Work', 'Home'.   ENV 13606 - 4:2000 7.11.19.(en)">
+			>
+			["ac2"] = <
+				text = <"*Telecoms type(en)">
+				description = <"*Telecom mechanism e.g. telephone, facsimile, pager etc.  ENV 13606-4:2000 7.11.19.(en)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at12", "at13", "at19">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at14", "at15", "at16", "at17">
 		>
 	>

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.asa_status.v1.0.0
 
 language
@@ -32,94 +32,91 @@ Cleveland Clinic (provided examples of each state): http://my.clevelandclinic.or
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- ASA Physical Status Classification
+	CLUSTER[id1] matches {	-- ASA Physical Status Classification
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- ASA patient status
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- ASA patient status
 				value matches {
-					DV_CODED_TEXT[id0205] matches {
-						defining_code matches {
-							[local::
-							at0003, 	-- 1 - A normal healthy patient
-							at0004, 	-- 2 - A patient with mild systemic disease
-							at0005, 	-- 3 - A patient with severe systemic disease
-							at0006, 	-- 4 - A patient with severe systemic disease that is a constant threat to life
-							at0007, 	-- 5 - A moribund patient who is not expected to survive without the operation
-							at0008, 	-- 6 - A declared brain-dead patient whose organs are being removed for donor purposes
-							at0009, 	-- 1E - A normal healthy patient (Emergency)
-							at0010, 	-- 2E - A patient with mild systemic disease (Emergency)
-							at0011, 	-- 3E - A patient with severe systemic disease (Emergency)
-							at0012, 	-- 4E - A patient with severe systemic disease that is a constant threat to life (Emergency)
-							at0013]	-- 5E - A moribund patient who is not expected to survive without the operation (Emergency)
-						}
+					DV_CODED_TEXT[id16] matches {
+						defining_code matches {[ac1]}		-- ASA patient status
 					}
 				}
 			}
-			ELEMENT[at0014] occurrences matches {0..1} matches {	-- Comment
+			ELEMENT[id15] occurrences matches {0..1} matches {	-- Comment
 				value matches {
-					DV_TEXT[id0805] matches {*}
+					DV_TEXT[id17] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"ASA Physical Status Classification">
 				description = <"Classification system adopted by the American Society of Anesthesiologists for assessing preoperative physical status.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"ASA patient status">
 				description = <"Assessed pre-operative status of a patient.">
 			>
-			["at0003"] = <
+			["at4"] = <
 				text = <"1 - A normal healthy patient">
 				description = <"No organic, physiologic, or psychiatric disturbance; excludes the very young and very old; healthy with good exercise tolerance.">
 			>
-			["at0004"] = <
+			["at5"] = <
 				text = <"2 - A patient with mild systemic disease">
 				description = <"No functional limitations; has a well-controlled disease of one body system; controlled hypertension or diabetes without systemic effects, cigarette smoking without chronic obstructive pulmonary disease (COPD); mild obesity, pregnancy.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"3 - A patient with severe systemic disease">
 				description = <"Some functional limitation; has a controlled disease of more than one body system or one major system; no immediate danger of death; controlled congestive heart failure (CHF), stable angina, old heart attack, poorly controlled hypertension, morbid obesity, chronic renal failure; bronchospastic disease with intermittent symptoms.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"4 - A patient with severe systemic disease that is a constant threat to life">
 				description = <"Has at least one severe disease that is poorly controlled or at end stage; possible risk of death; unstable angina, symptomatic COPD, symptomatic CHF, hepatorenal failure.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"5 - A moribund patient who is not expected to survive without the operation">
 				description = <"Not expected to survive > 24 hours without surgery; imminent risk of death; multiorgan failure, sepsis syndrome with hemodynamic instability, hypothermia, poorly controlled coagulopathy.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"6 - A declared brain-dead patient whose organs are being removed for donor purposes">
 				description = <"6 - A declared brain-dead patient whose organs are being removed for donor purposes.">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"1E - A normal healthy patient (Emergency)">
 				description = <"ASA status 1, in an emergency situation.">
 			>
-			["at0010"] = <
+			["at11"] = <
 				text = <"2E - A patient with mild systemic disease (Emergency)">
 				description = <"ASA status 2, in an emergency situation.">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"3E - A patient with severe systemic disease (Emergency)">
 				description = <"ASA status 3, in an emergency situation.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"4E - A patient with severe systemic disease that is a constant threat to life (Emergency)">
 				description = <"ASA status 4, in an emergency situation.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"5E - A moribund patient who is not expected to survive without the operation (Emergency)">
 				description = <"ASA status 5, in an emergency situation.">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Comment">
 				description = <"Narrative comment about the ASA patient status assessment.">
 			>
+			["ac1"] = <
+				text = <"ASA patient status">
+				description = <"Assessed pre-operative status of a patient.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at4", "at5", "at6", "at7", "at8", "at9", "at10", "at11", "at12", "at13", "at14">
 		>
 	>

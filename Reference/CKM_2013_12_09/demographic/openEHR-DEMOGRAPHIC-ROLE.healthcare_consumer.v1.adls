@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-DEMOGRAPHIC-ROLE.healthcare_consumer.v1.0.0
 
 language
@@ -42,33 +42,33 @@ description
 	lifecycle_state = <"initial">
 
 definition
-	ROLE[at0000] matches {	-- Consumidor em saúde
+	ROLE[id1] matches {	-- Consumidor em saúde
 		identities cardinality matches {1..*; ordered} matches {
-			allow_archetype PARTY_IDENTITY[at0001] matches {	-- Nome do consumidor
+			allow_archetype PARTY_IDENTITY[id2] matches {	-- Nome do consumidor
 				include
-					archetype_id/value matches {/(person_name)[a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(person_name)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		relationships cardinality matches {1..*; ordered} matches {
-			PARTY_RELATIONSHIP[at0002] matches {	-- Beneficiário
+			PARTY_RELATIONSHIP[id3] matches {	-- Beneficiário
 				details matches {
-					ITEM_TREE[at0020] matches {	-- Identificações do beneficiário
+					ITEM_TREE[id21] matches {	-- Identificações do beneficiário
 						items cardinality matches {1..*; ordered} matches {
-							allow_archetype CLUSTER[at0021] matches {	-- Identificação do beneficiário
+							allow_archetype CLUSTER[id22] matches {	-- Identificação do beneficiário
 								include
-									archetype_id/value matches {/(person_identifier)[a-zA-Z0-9_-]*\.v1/}
+									archetype_id/value matches {/(person_identifier)a-zA-Z0-9_-]*\.v1/}
 							}
 						}
 					}
 				}
 			}
-			PARTY_RELATIONSHIP[at0003] matches {	-- Paciente
+			PARTY_RELATIONSHIP[id4] matches {	-- Paciente
 				details matches {
-					ITEM_TREE[at0030] matches {	-- Identificações no prestador
+					ITEM_TREE[id31] matches {	-- Identificações no prestador
 						items cardinality matches {1..*; ordered} matches {
-							allow_archetype CLUSTER[at0031] matches {	-- Identificação no prestador
+							allow_archetype CLUSTER[id32] matches {	-- Identificação no prestador
 								include
-									archetype_id/value matches {/(person_identifier)[a-zA-Z0-9_-]*\.v1/}
+									archetype_id/value matches {/(person_identifier)a-zA-Z0-9_-]*\.v1/}
 							}
 						}
 					}
@@ -77,72 +77,72 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Consumidor em saúde">
 				description = <"Papel Consumidor de serviços de saúde">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Nome do consumidor">
 				description = <"Nome do consumidor de saúde">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Beneficiário">
 				description = <"Beneficiário: Relacionamento do Consumidor com uma Fonte Pagadora">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Paciente">
 				description = <"Paciente: Relacionamento do Consumidor com uma organização prestadora de serviço de saúde/profissional de saúde">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"Identificações do beneficiário">
 				description = <"Identificações do beneficiário junto à fonte pagadora">
 			>
-			["at0021"] = <
+			["id22"] = <
 				text = <"Identificação do beneficiário">
 				description = <"Documento de identificação do beneficiário junto à fonte pagadora">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Identificações no prestador">
 				description = <"Identificações do paciente junto ao prestador">
 			>
-			["at0031"] = <
+			["id32"] = <
 				text = <"Identificação no prestador">
 				description = <"Documento de identificação do paciente junto ao prestador">
 			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Healthcare consumer">
 				description = <"A person performing the role of a healthcare consumer">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Consumer name">
 				description = <"Healthcare consumer's name">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Consumer-Third party payer">
 				description = <"Relationship between a healthcare consumer and a third-party payer">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Patient">
 				description = <"Patient: relationship between a healthcare consumer and a healthcare provider organisation/health professional">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"Healthcare consumer identifiers">
 				description = <"Identifiers of a healthcare consumer at the third-party payer">
 			>
-			["at0021"] = <
+			["id22"] = <
 				text = <"Healthcare consumer identifier">
 				description = <"Identifier of a healthcare consumer at the third-party payer">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Patient identifiers">
 				description = <"Patient identifiers at the related healthcare provider">
 			>
-			["at0031"] = <
+			["id32"] = <
 				text = <"Patient identifier">
 				description = <"A patient identifier at the related healthcare provider">
 			>

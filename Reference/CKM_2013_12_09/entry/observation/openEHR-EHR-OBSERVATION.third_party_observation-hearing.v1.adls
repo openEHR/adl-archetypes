@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.third_party_observation-hearing.v1.0.0
 
 specialize
-	openEHR-EHR-OBSERVATION.third_party_observation.v1.0.0
+	openEHR-EHR-OBSERVATION.third_party_observation.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -27,22 +27,15 @@ description
 	>
 
 definition
-	OBSERVATION[at0000.1] matches {	-- Carer observation about hearing of subject
-		/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value matches {
-			DV_CODED_TEXT[id0.53] matches {
-				defining_code matches {
-					[local::
-					at0.17, 	-- Quiet sounds
-					at0.18, 	-- Music
-					at0.19, 	-- Loud Sounds
-					at0.20, 	-- Television
-					at0.21]	-- School room
-				}
+	OBSERVATION[id1.1] matches {	-- Carer observation about hearing of subject
+		/data[id2]/events[id3]/data[id4]/items[id5]/value matches {
+			DV_CODED_TEXT[id0.20] matches {
+				defining_code matches {[ac0.1]}		-- (added by post-parse processor)
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
 			["at0.17"] = <
@@ -65,9 +58,19 @@ ontology
 				text = <"School room">
 				description = <"*">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Carer observation about hearing of subject">
 				description = <"Third party observier/carer's observation of subject's hearing">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at0.17", "at0.18", "at0.19", "at0.20", "at0.21">
 		>
 	>

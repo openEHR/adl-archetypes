@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-EVALUATION.source.v1.0.0
 
 language
@@ -32,34 +32,30 @@ Each piece of clinical evidence that has been received from a third party source
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- Source Information
+	EVALUATION[id1] matches {	-- Source Information
 		data matches {
-			ITEM_TREE[at0001] matches {	-- Tree
+			ITEM_TREE[id2] matches {
 				items matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Source Information
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Source Information
 						value matches {
-							DV_TEXT[id0077] matches {*}
+							DV_TEXT[id9] 
 						}
 					}
-					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Path
+					ELEMENT[id4] occurrences matches {0..1} matches {	-- Path
 						value matches {
-							DV_URI[id0477] matches {*}
+							DV_URI[id10] 
 						}
 					}
-					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Quality
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Quality
 						value matches {
-							DV_CODED_TEXT[id0877] matches {
-								defining_code matches {
-									[local::
-									at0005, 	-- Adequate for Use
-									at0006]	-- Not Adequate for Use
-								}
+							DV_CODED_TEXT[id11] matches {
+								defining_code matches {[ac1]}		-- Quality
 							}
 						}
 					}
-					ELEMENT[at0007] occurrences matches {0..*} matches {	-- Comment
+					ELEMENT[id8] occurrences matches {0..*} matches {	-- Comment
 						value matches {
-							DV_TEXT[id0078] matches {*}
+							DV_TEXT[id12] 
 						}
 					}
 				}
@@ -67,40 +63,46 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Source Information">
 				description = <"Information sourced from a third party that is utilised as part of a remote assessment or report.">
 			>
-			["at0001"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Source Information">
 				description = <"Identification of the original, or source of, information being assessed.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Path">
 				description = <"Identification of the path to the archetype or data node for  the original information.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Quality">
 				description = <"Assessment regarding 'fitness for use' of the original information.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Adequate for Use">
 				description = <"The original information is deemed to be 'fit for use'.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Not Adequate for Use">
 				description = <"The original information is not deemed to be 'fit for use'.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Comment">
 				description = <"Narrative about the source information not captured in other data fields.">
 			>
+			["ac1"] = <
+				text = <"Quality">
+				description = <"Assessment regarding 'fitness for use' of the original information.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at6", "at7">
 		>
 	>

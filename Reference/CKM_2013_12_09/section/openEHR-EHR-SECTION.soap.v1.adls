@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-SECTION.soap.v1.0.0
 
 language
@@ -33,129 +33,153 @@ http://www.prorec.it/documenti/EPR_EHR/NHS-Update-POMR-SOAP.doc">
 	>
 
 definition
-	SECTION[at0000] matches {	-- SOAP
+	SECTION[id1] matches {	-- SOAP
 		items matches {
-			SECTION[at0001] occurrences matches {0..1} matches {	-- S
+			SECTION[id2] occurrences matches {0..1} matches {	-- S
 				items matches {
-					allow_archetype OBSERVATION[at0006] occurrences matches {0..*} matches {	-- Story and reports from the person and others 
+					allow_archetype OBSERVATION[id7] occurrences matches {0..*} matches {	-- Story and reports from the person and others 
+						include
+							archetype_id/value matches {/.*/}
 						exclude
-							archetype_id/value matches {/openEHR-EHR-OBSERVATION\.exam(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.heart_rate(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.height(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.body_temperature(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.body_weight(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.urinalysis(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.blood_pressure(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-OBSERVATION\.exam(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.heart_rate(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.height(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.body_temperature(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.body_weight(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.urinalysis(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1/}
 					}
-					allow_archetype SECTION[at0007] occurrences matches {0..1} matches {	-- Subsections
-					}
-				}
-			}
-			SECTION[at0002] occurrences matches {0..1} matches {	-- O
-				items matches {
-					allow_archetype OBSERVATION[at0008] occurrences matches {0..*} matches {	-- Observations and physical exam 
-					}
-					allow_archetype SECTION[at0009] occurrences matches {0..1} matches {	-- Subsections 
+					allow_archetype SECTION[id8] occurrences matches {0..1} matches {	-- Subsections
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
-			SECTION[at0003] occurrences matches {0..1} matches {	-- A
+			SECTION[id3] occurrences matches {0..1} matches {	-- O
 				items matches {
-					allow_archetype EVALUATION[at0010] occurrences matches {0..*} matches {	-- Assessment, summary and diagnoses 
+					allow_archetype OBSERVATION[id9] occurrences matches {0..*} matches {	-- Observations and physical exam 
+						include
+							archetype_id/value matches {/.*/}
 					}
-					allow_archetype SECTION[at0011] occurrences matches {0..1} matches {	-- Subsections
+					allow_archetype SECTION[id10] occurrences matches {0..1} matches {	-- Subsections 
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
-			SECTION[at0004] occurrences matches {0..1} matches {	-- P
+			SECTION[id4] occurrences matches {0..1} matches {	-- A
 				items matches {
-					allow_archetype INSTRUCTION[at0012] occurrences matches {0..*} matches {	-- Planned actions 
+					allow_archetype EVALUATION[id11] occurrences matches {0..*} matches {	-- Assessment, summary and diagnoses 
+						include
+							archetype_id/value matches {/.*/}
 					}
-					allow_archetype ACTION[at0013] occurrences matches {0..*} matches {	-- Actions taken
-					}
-					allow_archetype ADMIN_ENTRY[at0015] occurrences matches {0..*} matches {	-- Administrative notes
-					}
-					allow_archetype SECTION[at0014] occurrences matches {0..1} matches {	-- Subsections
+					allow_archetype SECTION[id12] occurrences matches {0..1} matches {	-- Subsections
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
-			SECTION[at0005] occurrences matches {0..1} matches {	-- E
+			SECTION[id5] occurrences matches {0..1} matches {	-- P
 				items matches {
-					allow_archetype INSTRUCTION[at0016] occurrences matches {0..*} matches {	-- Planned educational activities 
+					allow_archetype INSTRUCTION[id13] occurrences matches {0..*} matches {	-- Planned actions 
+						include
+							archetype_id/value matches {/.*/}
 					}
-					allow_archetype ACTION[at0017] occurrences matches {0..*} matches {	-- Educational activities
+					allow_archetype ACTION[id14] occurrences matches {0..*} matches {	-- Actions taken
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype ADMIN_ENTRY[id16] occurrences matches {0..*} matches {	-- Administrative notes
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype SECTION[id15] occurrences matches {0..1} matches {	-- Subsections
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+			SECTION[id6] occurrences matches {0..1} matches {	-- E
+				items matches {
+					allow_archetype INSTRUCTION[id17] occurrences matches {0..*} matches {	-- Planned educational activities 
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype ACTION[id18] occurrences matches {0..*} matches {	-- Educational activities
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"SOAP">
 				description = <"Problem-oriented heading in the record of the problem presented by the patient or client">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"S">
 				description = <"The subjective findings or story told by the person.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"O">
 				description = <"The objective findings or observations made by the clinician.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"A">
 				description = <"The assessment made by the clinician.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"P">
 				description = <"Plans made or procedures carried out.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"E">
 				description = <"Educational components offered.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Story and reports from the person and others ">
 				description = <"Subjective clinical history taken from the patient or others.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Subsections">
 				description = <"Further detail.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Observations and physical exam ">
 				description = <"Clinical findings arrived at through observation or physical examination.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Subsections ">
 				description = <"Further detail.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Assessment, summary and diagnoses ">
 				description = <"Summative assessments or evaluations of the issues presented by the patient, including diagnoses.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Subsections">
 				description = <"*">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Planned actions ">
 				description = <"Actions which are planned or have been instructed. e.g orders.">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Actions taken">
 				description = <"Actions which have been undertaken e.g. medication immediately administered.">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Subsections">
 				description = <"Further detail">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Administrative notes">
 				description = <"Administrative notes.">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Planned educational activities ">
 				description = <"Patient educational resources which have been ordered or planned.">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Educational activities">
 				description = <"Patient-centrededucational resources which have been delivered e.g. smoking cessation leaflet given.">
 			>

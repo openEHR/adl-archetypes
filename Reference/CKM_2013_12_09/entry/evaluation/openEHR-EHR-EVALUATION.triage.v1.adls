@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-EVALUATION.triage.v1.0.0
 
 language
@@ -59,26 +59,26 @@ description
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- Triage evaluation
+	EVALUATION[id1] matches {	-- Triage evaluation
 		data matches {
-			ITEM_TREE[at0001] matches {	-- Tree
+			ITEM_TREE[id2] matches {
 				items matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Triage evaluation
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Triage evaluation
 						value matches {
-							DV_ORDINAL[id0077] matches {
+							DV_ORDINAL[id10] matches {
 								[value, symbol] matches {
-									[{1}, {[local::at0014]}],
-									[{2}, {[local::at0015]}],
-									[{3}, {[local::at0016]}],
-									[{4}, {[local::at0017]}],
-									[{5}, {[local::at0018]}]
+									[{1}, {[at15]}],
+									[{2}, {[at16]}],
+									[{3}, {[at17]}],
+									[{4}, {[at18]}],
+									[{5}, {[at19]}]
 								}
 							}
 						}
 					}
-					ELEMENT[at0008] occurrences matches {0..1} matches {	-- Rationale
+					ELEMENT[id9] occurrences matches {0..1} matches {	-- Rationale
 						value matches {
-							DV_TEXT[id0477] matches {*}
+							DV_TEXT[id11] 
 						}
 					}
 				}
@@ -86,120 +86,126 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Triage evaluation">
 				description = <"The evaluation of need for immediacy of treatment">
 			>
-			["at0001"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Triage evaluation">
 				description = <"Record of need for prioritisation of treatment">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Rationale">
 				description = <"The rationale for the evaluation provided">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Immediate">
 				description = <"*">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Very urgent">
 				description = <"*">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Urgent">
 				description = <"*">
 			>
-			["at0017"] = <
+			["at18"] = <
 				text = <"Standard">
 				description = <"*">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"Non-urgent">
 				description = <"*">
 			>
+			["ac1"] = <
+				text = <"Triage evaluation">
+				description = <"Record of need for prioritisation of treatment">
+			>
 		>
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"تقييم الفرز">
 				description = <"تقييم الحاجة لفورية المعالجة">
 			>
-			["at0001"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"تقييم الفرز">
 				description = <"تسجيل للحاجة إلى ترتيب أولويات المعالجة">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"الأساس المنطقي">
 				description = <"الأساس المنطقي للتقييم الذي يتم تقديمه">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <" مباشر/فوري/عاجل">
 				description = <"*">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"عاجل/مُلِحّ جدا">
 				description = <"*">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"عاجل/مُلِحّ">
 				description = <"*">
 			>
-			["at0017"] = <
+			["at18"] = <
 				text = <"عياري">
 				description = <"*">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"غير عاجل/غير مُلِحّ">
 				description = <"*">
 			>
+			["ac1"] = <
+				text = <"*Triage evaluation(en)">
+				description = <"*Record of need for prioritisation of treatment(en)">
+			>
 		>
 		["es-ar"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Evaluación Triage">
 				description = <"Evaluación de que urgencia es requerida para el tratamiento.">
 			>
-			["at0001"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Evaluación Triage">
 				description = <"Registro de la necesidad de priorización del tratamiento.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Fundamentación">
 				description = <"La fundamentación de la evaluación provista.">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Inmediata">
 				description = <"*">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Muy urgente">
 				description = <"*">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Urgente">
 				description = <"*">
 			>
-			["at0017"] = <
+			["at18"] = <
 				text = <"Estándar">
 				description = <"*">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"No urgente">
 				description = <"*">
 			>
+			["ac1"] = <
+				text = <"*Triage evaluation(en)">
+				description = <"*Record of need for prioritisation of treatment(en)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at15", "at16", "at17", "at18", "at19">
 		>
 	>

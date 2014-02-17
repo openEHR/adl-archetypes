@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.substance_use-tobacco.v1.0.0
 
 specialize
-	openEHR-EHR-OBSERVATION.substance_use.v1.0.0
+	openEHR-EHR-OBSERVATION.substance_use.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -34,38 +34,32 @@ A typical use would be to record usage in an tobacco usage diary.">
 	>
 
 definition
-	OBSERVATION[at0000.1] matches {	-- Tobacco Use
-		/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value matches {
-			DV_CODED_TEXT[id0.53] matches {
-				defining_code matches {[local::at0.2]}		-- Tobacco
+	OBSERVATION[id1.1] matches {	-- Tobacco Use
+		/data[id2]/events[id3]/data[id4]/items[id5]/value matches {
+			DV_CODED_TEXT[id0.44] matches {
+				defining_code matches {[at0.2]}
 			}
 		}
-		/data[at0001]/events[at0002]/data[at0003]/items[at0010]/items[at0011]/value matches {
-			DV_CODED_TEXT[id0.501] matches {
-				defining_code matches {
-					[local::
-					at0.3, 	-- Cigarettes - manufactured
-					at0.4, 	-- Cigarettes - roll-your-own
-					at0.5, 	-- Cigars
-					at0.6]	-- Pipe
-				}
+		/data[id2]/events[id3]/data[id4]/items[id11]/items[id12]/value matches {
+			DV_CODED_TEXT[id0.45] matches {
+				defining_code matches {[ac0.1]}		-- (added by post-parse processor)
 			}
 		}
-		/data[at0001]/events[at0002]/data[at0003]/items[at0010]/items[at0012.1]/value matches {
-			DV_QUANTITY[id0.821] matches {
-				property matches {[openehr::382]}
+		/data[id2]/events[id3]/data[id4]/items[id11]/items[id13.1]/value matches {
+			DV_QUANTITY[id0.48] matches {
+				property matches {[at0.7]}
 				units matches {"/h", "/d", "/wk"}
 			}
 		}
-		/data[at0001]/events[at0002]/data[at0003]/items[at0010]/items[at0012.2]/value matches {
-			DV_QUANTITY[id0.221] matches {
-				property matches {[openehr::347]}
+		/data[id2]/events[id3]/data[id4]/items[id11]/items[id13.2]/value matches {
+			DV_QUANTITY[id0.49] matches {
+				property matches {[at0.8]}
 				units matches {"gm/d", "gm/wk"}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
 			["at0.2"] = <
@@ -88,17 +82,49 @@ ontology
 				text = <"Pipe">
 				description = <"Tobacco smoked within a pipe">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Tobacco Use">
 				description = <"Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time. ">
 			>
-			["at0012.1"] = <
+			["id13.1"] = <
 				text = <"Number smoked">
 				description = <"Number of units containing tobacco consumed eg cigarettes or cigars">
 			>
-			["at0012.2"] = <
+			["id13.2"] = <
 				text = <"Grams of tobacco">
 				description = <"Weight of tobacco consumed eg in a pipe">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.2"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["at0.7"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["at0.8"] = <
+				text = <"Flow rate, mass">
+				description = <"Flow rate, mass">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at0.7"] = <http://openehr.org/id/382>
+			["at0.8"] = <http://openehr.org/id/347>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at0.3", "at0.4", "at0.5", "at0.6">
+		>
+		["ac0.2"] = <
+			id = <"ac0.2">
+			members = <"at7", "at8", "at9", "at10">
 		>
 	>

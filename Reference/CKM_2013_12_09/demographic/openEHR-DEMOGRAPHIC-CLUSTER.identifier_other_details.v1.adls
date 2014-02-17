@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-DEMOGRAPHIC-CLUSTER.identifier_other_details.v1.0.0
 
 language
@@ -42,37 +42,37 @@ description
 	lifecycle_state = <"initial">
 
 definition
-	CLUSTER[at0000] matches {	-- Dados adicionais de um identificador
+	CLUSTER[id1] matches {	-- Dados adicionais de um identificador
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Município
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Município
 				value matches {
-					DV_CODED_TEXT[id0205] matches {
-						defining_code matches {[ac0000]}		-- Códigos de cidades
+					DV_CODED_TEXT[id6] matches {
+						defining_code matches {[ac1]}		-- Códigos de cidades
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Estado
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Estado
 				value matches {
-					DV_CODED_TEXT[id0605] matches {
-						defining_code matches {[ac0001]}		-- Códigos de estados
+					DV_CODED_TEXT[id7] matches {
+						defining_code matches {[ac2]}		-- Códigos de estados
 					}
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- País
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- País
 				value matches {
-					DV_CODED_TEXT[id0005] matches {
-						defining_code matches {[ac0002]}		-- Códigos de países
+					DV_CODED_TEXT[id8] matches {
+						defining_code matches {[ac3]}		-- Códigos de países
 					}
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Validade da identificação
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Validade da identificação
 				value matches {
-					DV_INTERVAL<DV_DATE>[id0405] matches {
+					DV_INTERVAL<DV_DATE>[id9] matches {
 						upper matches {
-							DV_DATE[id0874] matches {*}
+							DV_DATE[id10] 
 						}
 						lower matches {
-							DV_DATE[id0290] matches {*}
+							DV_DATE[id11] 
 						}
 					}
 				}
@@ -80,78 +80,72 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en-gb"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Additional identifier data">
 				description = <"Additional data about an identifier for a person/organisation">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"City">
 				description = <"Indicates the city where the identifier was issued">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"State">
 				description = <"Indicates the state where the identifier was issued">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Country">
 				description = <"Indicates the country where the identifier was issued">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Time validity">
 				description = <"Period in which this identifier is valid">
 			>
-		>
-		["pt-br"] = <
-			["at0000"] = <
-				text = <"Dados adicionais de um identificador">
-				description = <"Dados adicionais para um identificador para uma pessoa/organização">
-			>
-			["at0001"] = <
-				text = <"Município">
-				description = <"Indica o município onde o documento foi emitido">
-			>
-			["at0002"] = <
-				text = <"Estado">
-				description = <"Indica o estado onde o documento foi emitido">
-			>
-			["at0003"] = <
-				text = <"País">
-				description = <"Indica o país onde o documento foi emitido">
-			>
-			["at0004"] = <
-				text = <"Validade da identificação">
-				description = <"Período de validade da identificacao">
-			>
-		>
-	>
-	constraint_definitions = <
-		["en-gb"] = <
-			["ac0000"] = <
+			["ac1"] = <
 				text = <"City codes">
 				description = <"Valid codes for cities">
 			>
-			["ac0001"] = <
+			["ac2"] = <
 				text = <"State codes">
 				description = <"Valid codes for states">
 			>
-			["ac0002"] = <
+			["ac3"] = <
 				text = <"Country codes">
 				description = <"Valid codes for countries">
 			>
 		>
 		["pt-br"] = <
-			["ac0000"] = <
+			["id1"] = <
+				text = <"Dados adicionais de um identificador">
+				description = <"Dados adicionais para um identificador para uma pessoa/organização">
+			>
+			["id2"] = <
+				text = <"Município">
+				description = <"Indica o município onde o documento foi emitido">
+			>
+			["id3"] = <
+				text = <"Estado">
+				description = <"Indica o estado onde o documento foi emitido">
+			>
+			["id4"] = <
+				text = <"País">
+				description = <"Indica o país onde o documento foi emitido">
+			>
+			["id5"] = <
+				text = <"Validade da identificação">
+				description = <"Período de validade da identificacao">
+			>
+			["ac1"] = <
 				text = <"Códigos de cidades">
 				description = <"códigos válidos para cidade">
 			>
-			["ac0001"] = <
+			["ac2"] = <
 				text = <"Códigos de estados">
 				description = <"códigos válidos para estados">
 			>
-			["ac0002"] = <
+			["ac3"] = <
 				text = <"Códigos de países">
 				description = <"códigos válidos para paises">
 			>

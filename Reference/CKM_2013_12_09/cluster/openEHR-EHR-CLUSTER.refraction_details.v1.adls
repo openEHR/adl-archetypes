@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.refraction_details.v1.0.0
 
 language
@@ -35,166 +35,200 @@ DICOM Supplement 30 [Internet]. [cited 2012 Sep 26]. Available from: http://medi
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Refraction Details
+	CLUSTER[id1] matches {	-- Refraction Details
 		items matches {
-			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Power of Sphere
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Power of Sphere
 				value matches {
-					DV_QUANTITY[id0405] matches {
-						property matches {[openehr::685]}
+					DV_QUANTITY[id18] matches {
+						property matches {[at15]}
 						magnitude matches {|-100.0..100.0|}
-						units matches {"dioptre"}
-						precision matches {2}
 					}
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Power of Cylinder
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Power of Cylinder
 				value matches {
-					DV_QUANTITY[id0805] matches {
-						property matches {[openehr::685]}
+					DV_QUANTITY[id19] matches {
+						property matches {[at16]}
 						magnitude matches {|-100.0..100.0|}
-						units matches {"dioptre"}
-						precision matches {2}
 					}
 				}
 			}
-			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Axis of Cylinder
+			ELEMENT[id7] occurrences matches {0..1} matches {	-- Axis of Cylinder
 				value matches {
-					DV_QUANTITY[id0205] matches {
-						property matches {[openehr::497]}
+					DV_QUANTITY[id20] matches {
+						property matches {[at17]}
 						magnitude matches {|0.0..180.0|}
-						units matches {"°"}
-						precision matches {1}
 					}
 				}
 			}
-			ELEMENT[at0007] occurrences matches {0..1} matches {	-- Prism Strength
+			ELEMENT[id8] occurrences matches {0..1} matches {	-- Prism Strength
 				value matches {
-					DV_QUANTITY[id0605] matches {
-						property matches {[openehr::685]}
+					DV_QUANTITY[id21] matches {
+						property matches {[at18]}
 						units matches {"dioptre"}
 					}
 				}
 			}
-			ELEMENT[at0008] occurrences matches {0..1} matches {	-- Prism Base Direction
+			ELEMENT[id9] occurrences matches {0..1} matches {	-- Prism Base Direction
 				value matches {
-					DV_CODED_TEXT[id0005] matches {
-						defining_code matches {
-							[local::
-							at0009, 	-- Base in
-							at0010, 	-- Base out
-							at0011, 	-- Base up
-							at0012, 	-- Base down
-							at0013]	-- Base oblique
-						}
+					DV_CODED_TEXT[id22] matches {
+						defining_code matches {[ac1]}		-- Prism Base Direction
 					}
-					DV_QUANTITY[id0006] matches {
-						property matches {[openehr::497]}
+					DV_QUANTITY[id23] matches {
+						property matches {[at19]}
 						magnitude matches {|0.0..360.0|}
-						units matches {"°"}
 					}
 				}
 			}
-			ELEMENT[at0014] occurrences matches {0..1} matches {	-- Reading Addition Power
+			ELEMENT[id15] occurrences matches {0..1} matches {	-- Reading Addition Power
 				value matches {
-					DV_QUANTITY[id0806] matches {
-						property matches {[openehr::685]}
-						units matches {"dioptre"}
+					DV_QUANTITY[id24] matches {
+						property matches {[at20]}
 						precision matches {2}
 					}
 				}
 			}
-			ELEMENT[at0015] occurrences matches {0..1} matches {	-- Intermediate Distance Power
+			ELEMENT[id16] occurrences matches {0..1} matches {	-- Intermediate Distance Power
 				value matches {
-					DV_QUANTITY[id0206] matches {
-						property matches {[openehr::685]}
-						units matches {"dioptre"}
+					DV_QUANTITY[id25] matches {
+						property matches {[at21]}
 						precision matches {2}
 					}
 				}
 			}
-			ELEMENT[at0016] occurrences matches {0..1} matches {	-- Interpupillary Distance
+			ELEMENT[id17] occurrences matches {0..1} matches {	-- Interpupillary Distance
 				value matches {
-					DV_QUANTITY[id0606] matches {
-						property matches {[openehr::122]}
+					DV_QUANTITY[id26] matches {
+						property matches {[at22]}
 						magnitude matches {|0.0..500.0|}
-						units matches {"mm"}
-						precision matches {1}
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Refraction Details">
 				description = <"Details of ocular refraction for both measurement and therapetic purposes.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Power of Sphere">
 				description = <"Correction of the sphere,  the base correction upon which cylinder, reading addition and prism may be superimposed.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Power of Cylinder">
 				description = <"Correction of the cylinder.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Axis of Cylinder">
 				description = <"Correction of the axis.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Prism Strength">
 				description = <"Strength of the prism.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Prism Base Direction">
 				description = <"Prism base direction expressed as a numeric angle or as coded text.">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"Base in">
 				description = <"The prism base is directed inwards.">
 			>
-			["at0010"] = <
+			["at11"] = <
 				text = <"Base out">
 				description = <"The prism base is directed outwards.">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Base up">
 				description = <"The prism base is directed upwards.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Base down">
 				description = <"The prism base is directed downwards.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Base oblique">
 				description = <"The prism base is directed obliquely.">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Reading Addition Power">
 				description = <"The difference in spherical power between distance and near corrections.">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Intermediate Distance Power">
 				description = <"The intermediate distance power applied to the correction.">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Interpupillary Distance">
 				description = <"The distance between the center of the pupils of the two eyes.">
+			>
+			["ac1"] = <
+				text = <"Prism Base Direction">
+				description = <"Prism base direction expressed as a numeric angle or as coded text.">
+			>
+			["at15"] = <
+				text = <"Refractive power">
+				description = <"Refractive power">
+			>
+			["at16"] = <
+				text = <"Refractive power">
+				description = <"Refractive power">
+			>
+			["at17"] = <
+				text = <"Angle, plane">
+				description = <"Angle, plane">
+			>
+			["at18"] = <
+				text = <"Refractive power">
+				description = <"Refractive power">
+			>
+			["at19"] = <
+				text = <"Angle, plane">
+				description = <"Angle, plane">
+			>
+			["at20"] = <
+				text = <"Refractive power">
+				description = <"Refractive power">
+			>
+			["at21"] = <
+				text = <"Refractive power">
+				description = <"Refractive power">
+			>
+			["at22"] = <
+				text = <"Length">
+				description = <"Length">
 			>
 		>
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["at0004"] = <[SNOMED-CT::251795007]>
-			["at0005"] = <[SNOMED-CT::251797004]>
-			["at0006"] = <[SNOMED-CT::251799001]>
-			["at0007"] = <[SNOMED-CT::251762001]>
-			["at0008"] = <[SNOMED-CT::246223004]>
-			["at0014"] = <[SNOMED-CT::397282003]>
-			["at0015"] = <[SNOMED-CT::251802005]>
-			["at0016"] = <[SNOMED-CT::397258008]>
+			["id5"] = <http://snomedct.info/id/251795007>
+			["id6"] = <http://snomedct.info/id/251797004>
+			["id7"] = <http://snomedct.info/id/251799001>
+			["id8"] = <http://snomedct.info/id/251762001>
+			["id9"] = <http://snomedct.info/id/246223004>
+			["id15"] = <http://snomedct.info/id/397282003>
+			["id16"] = <http://snomedct.info/id/251802005>
+			["id17"] = <http://snomedct.info/id/397258008>
+		>
+		["openehr"] = <
+			["at15"] = <http://openehr.org/id/685>
+			["at16"] = <http://openehr.org/id/685>
+			["at17"] = <http://openehr.org/id/497>
+			["at18"] = <http://openehr.org/id/685>
+			["at19"] = <http://openehr.org/id/497>
+			["at20"] = <http://openehr.org/id/685>
+			["at21"] = <http://openehr.org/id/685>
+			["at22"] = <http://openehr.org/id/122>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at10", "at11", "at12", "at13", "at14">
 		>
 	>

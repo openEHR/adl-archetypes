@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.penetration_aspiration_scale.v1.0.0
 
 language
@@ -28,26 +28,26 @@ description
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Penetration-Aspiration scale
+	OBSERVATION[id1] matches {	-- Penetration-Aspiration scale
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Penetration-Aspiration Scale
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Penetration-Aspiration Scale
 										value matches {
-											DV_ORDINAL[id0053] matches {
+											DV_ORDINAL[id6] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0005]}],
-													[{2}, {[local::at0006]}],
-													[{3}, {[local::at0007]}],
-													[{4}, {[local::at0008]}],
-													[{5}, {[local::at0009]}],
-													[{6}, {[local::at0010]}],
-													[{7}, {[local::at0011]}],
-													[{8}, {[local::at0012]}]
+													[{1}, {[at6]}],
+													[{2}, {[at7]}],
+													[{3}, {[at8]}],
+													[{4}, {[at9]}],
+													[{5}, {[at10]}],
+													[{6}, {[at11]}],
+													[{7}, {[at12]}],
+													[{8}, {[at13]}]
 												}
 											}
 										}
@@ -61,60 +61,62 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Penetration-Aspiration scale">
 				description = <"Scale to describe the disordered physiology of a person's swallow.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Penetration-Aspiration Scale">
 				description = <"Scale to describe penetration and aspiration events.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Neither Penetration nor Aspiration">
 				description = <"Material does not enter airway.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Penetration; Above Vocal Folds; Ejected">
 				description = <"Material enters airway, but remains above vocal folds; ejected from airway; no stasis.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Penetration; Above Vocal Folds; Not Ejected">
 				description = <"Material remains above vocal folds; visible stasis remains.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Penetration; Contacts Vocal Folds; Ejected">
 				description = <"Material contacts vocal folds, but is ejected; no stasis.">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"Penetration; Contacts Vocal Folds; Not Ejected">
 				description = <"Material contacts vocal folds, and is not ejected; visible stasis remains.">
 			>
-			["at0010"] = <
+			["at11"] = <
 				text = <"Aspiration; Ejected">
 				description = <"Material passes glottis, but is ejected from airway; no visible subglottic stasis.">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Aspiration; Not Ejected Despite Effort">
 				description = <"Material passes glottis, but is not ejected from airway; visible subglottic stasis despite patient's response.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Aspiration; No Effort to Eject">
 				description = <"Material passes glottis, and is not ejected; visible subglottic stasis; absent patient response.">
 			>
+			["ac1"] = <
+				text = <"Penetration-Aspiration Scale">
+				description = <"Scale to describe penetration and aspiration events.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at6", "at7", "at8", "at9", "at10", "at11", "at12", "at13">
 		>
 	>

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.glasgow_coma.v1.0.0
 
 language
@@ -59,104 +59,104 @@ Teasdale GM, Murray L. Revisiting the Glasgow Coma Scale and Coma Score. Intensi
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Glasgow Coma Scale
+	OBSERVATION[id1] matches {	-- Glasgow Coma Scale
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Best eye response (E)
+									ELEMENT[id10] occurrences matches {0..1} matches {	-- Best eye response (E)
 										value matches {
-											DV_ORDINAL[id0053] matches {
+											DV_ORDINAL[id42] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0010]}],
-													[{2}, {[local::at0011]}],
-													[{3}, {[local::at0012]}],
-													[{4}, {[local::at0013]}]
+													[{1}, {[at11]}],
+													[{2}, {[at12]}],
+													[{3}, {[at13]}],
+													[{4}, {[at14]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0034] occurrences matches {0..1} matches {	-- Not able to test eye response
+									ELEMENT[id35] occurrences matches {0..1} matches {	-- Not able to test eye response
 										value matches {
-											DV_BOOLEAN[id0253] matches {
+											DV_BOOLEAN[id43] matches {
 												value matches {True}
 											}
 										}
 									}
-									ELEMENT[at0038] occurrences matches {0..1} matches {	-- Reason for inability to test eye response
+									ELEMENT[id39] occurrences matches {0..1} matches {	-- Reason for inability to test eye response
 										value matches {
-											DV_TEXT[id0853] matches {*}
+											DV_TEXT[id44] 
 										}
 									}
-									ELEMENT[at0008] occurrences matches {0..1} matches {	-- Best motor response (M)
+									ELEMENT[id9] occurrences matches {0..1} matches {	-- Best motor response (M)
 										value matches {
-											DV_ORDINAL[id0653] matches {
+											DV_ORDINAL[id45] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0019]}],
-													[{2}, {[local::at0020]}],
-													[{3}, {[local::at0021]}],
-													[{4}, {[local::at0022]}],
-													[{5}, {[local::at0023]}],
-													[{6}, {[local::at0024]}]
+													[{1}, {[at20]}],
+													[{2}, {[at21]}],
+													[{3}, {[at22]}],
+													[{4}, {[at23]}],
+													[{5}, {[at24]}],
+													[{6}, {[at25]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0036] occurrences matches {0..1} matches {	-- Not able to test motor response
+									ELEMENT[id37] occurrences matches {0..1} matches {	-- Not able to test motor response
 										value matches {
-											DV_BOOLEAN[id0054] matches {
+											DV_BOOLEAN[id46] matches {
 												value matches {True}
 											}
 										}
 									}
-									ELEMENT[at0040] occurrences matches {0..1} matches {	-- Reason for inability to test motor response
+									ELEMENT[id41] occurrences matches {0..1} matches {	-- Reason for inability to test motor response
 										value matches {
-											DV_TEXT[id0055] matches {*}
+											DV_TEXT[id47] 
 										}
 									}
-									ELEMENT[at0007] occurrences matches {0..1} matches {	-- Best verbal response (V)
+									ELEMENT[id8] occurrences matches {0..1} matches {	-- Best verbal response (V)
 										value matches {
-											DV_ORDINAL[id0254] matches {
+											DV_ORDINAL[id48] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0014]}],
-													[{2}, {[local::at0015]}],
-													[{3}, {[local::at0016]}],
-													[{4}, {[local::at0017]}],
-													[{5}, {[local::at0018]}]
+													[{1}, {[at15]}],
+													[{2}, {[at16]}],
+													[{3}, {[at17]}],
+													[{4}, {[at18]}],
+													[{5}, {[at19]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0035] occurrences matches {0..1} matches {	-- Not able to test verbal response
+									ELEMENT[id36] occurrences matches {0..1} matches {	-- Not able to test verbal response
 										value matches {
-											DV_BOOLEAN[id0654] matches {
+											DV_BOOLEAN[id49] matches {
 												value matches {True}
 											}
 										}
 									}
-									ELEMENT[at0039] occurrences matches {0..1} matches {	-- Reason for inability to test verbal response
+									ELEMENT[id40] occurrences matches {0..1} matches {	-- Reason for inability to test verbal response
 										value matches {
-											DV_TEXT[id0255] matches {*}
+											DV_TEXT[id50] 
 										}
 									}
-									ELEMENT[at0026] occurrences matches {0..1} matches {	-- Total score
+									ELEMENT[id27] occurrences matches {0..1} matches {	-- Total score
 										value matches {
-											DV_COUNT[id0655] matches {
+											DV_COUNT[id51] matches {
 												magnitude matches {|3..15|}
 											}
 										}
 									}
-									ELEMENT[at0030] occurrences matches {0..1} matches {	-- EMV profile
+									ELEMENT[id31] occurrences matches {0..1} matches {	-- EMV profile
 										value matches {
-											DV_TEXT[id0656] matches {*}
+											DV_TEXT[id52] 
 										}
 									}
-									ELEMENT[at0037] occurrences matches {0..*} matches {	-- Comment
+									ELEMENT[id38] occurrences matches {0..*} matches {	-- Comment
 										value matches {
-											DV_TEXT[id0453] matches {*}
+											DV_TEXT[id53] 
 										}
 									}
 								}
@@ -168,258 +168,280 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Glasgow Coma Scale">
 				description = <"Fifteen point scale used to assess the level of consciousness of a subject. Also known as the Modified Glasgow Coma Scale.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Any event">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Best verbal response (V)">
 				description = <"Best verbal response to stimulus.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Best motor response (M)">
 				description = <"Best motor response to stimulus.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Best eye response (E)">
 				description = <"Best eye response to stimulus.">
 			>
-			["at0010"] = <
+			["at11"] = <
 				text = <"No response">
 				description = <"Does not open eyes.">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Eyes open in response to pain">
 				description = <"Opens eyes in response to painful stimuli in limbs.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Eyes open in response to speech">
 				description = <"Opens eyes in response to any verbal approach.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Spontaneous eye opening">
 				description = <"Opens eyes spontaneously.">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"No response">
 				description = <"No verbal response.">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Incomprehensible sounds">
 				description = <"Moans or groans, but no recognisable words.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Inappropriate speech">
 				description = <"Intelligible speech, but no conversational exchange.">
 			>
-			["at0017"] = <
+			["at18"] = <
 				text = <"Confused conversation">
 				description = <"Converses, but confused and disoriented in their environment.">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"Oriented">
 				description = <"Converses, oriented to their environment.">
 			>
-			["at0019"] = <
+			["at20"] = <
 				text = <"No response">
 				description = <"No motor response; limbs flaccid.">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Extensor response">
 				description = <"Abnormal extension to pain.">
 			>
-			["at0021"] = <
+			["at22"] = <
 				text = <"Flexor response">
 				description = <"Abnormal flexion to pain.">
 			>
-			["at0022"] = <
+			["at23"] = <
 				text = <"Withdrawal response">
 				description = <"Flexion withdrawal response to pain.">
 			>
-			["at0023"] = <
+			["at24"] = <
 				text = <"Localises pain">
 				description = <"Localised movement in response to pain.">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Obeys commands">
 				description = <"Follows simple verbal commands.">
 			>
-			["at0026"] = <
+			["id27"] = <
 				text = <"Total score">
 				description = <"The sum of the 3 ordinal scores for each component parameter.">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"EMV profile">
 				description = <"Eye Motor Verbal profile expressing each component individually. This can be derived as a combination of the preceding elements.">
 			>
-			["at0034"] = <
+			["id35"] = <
 				text = <"Not able to test eye response">
 				description = <"Not possible to test eye responses - for example in the case of associated severe facial/eye swelling or damage.">
 			>
-			["at0035"] = <
+			["id36"] = <
 				text = <"Not able to test verbal response">
 				description = <"Not possible to test verbal responses - for example in the case of associated intubation.">
 			>
-			["at0036"] = <
+			["id37"] = <
 				text = <"Not able to test motor response">
 				description = <"Not possible to test motor responses - for example in the case of associated limb paralysis.">
 			>
-			["at0037"] = <
+			["id38"] = <
 				text = <"Comment">
 				description = <"Comment about measurement of the Scale, especially if it was not possible to assess a response.">
 			>
-			["at0038"] = <
+			["id39"] = <
 				text = <"Reason for inability to test eye response">
 				description = <"Reason for inability to test eye response.">
 			>
-			["at0039"] = <
+			["id40"] = <
 				text = <"Reason for inability to test verbal response">
 				description = <"Reason for inability to test verbal response.">
 			>
-			["at0040"] = <
+			["id41"] = <
 				text = <"Reason for inability to test motor response">
 				description = <"Reason for inability to test motor response.">
 			>
+			["ac1"] = <
+				text = <"Best eye response (E)">
+				description = <"Best eye response to stimulus.">
+			>
+			["ac2"] = <
+				text = <"Best motor response (M)">
+				description = <"Best motor response to stimulus.">
+			>
+			["ac3"] = <
+				text = <"Best verbal response (V)">
+				description = <"Best verbal response to stimulus.">
+			>
 		>
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Escala de Coma de Glasgow">
 				description = <"Escala de quize pontos utilizada para avaliar o nível de consciência de um sujeito. Também conhecida como a Escala de Coma de Glasgow Modificada - ECG.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Any event">
 			>
-			["at0003"] = <
-				text = <"*Tree(en)">
-				description = <"@ internal @">
-			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Melhor resposta verbal (MRV)">
 				description = <"Melhor resposta verbal a estímulos.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Melhor resposta motora (MRM)">
 				description = <"Melhor resposta motora a estímulos.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Abertura ocular (AO)">
 				description = <"Melhor resposta ocular a estímulos.">
 			>
-			["at0010"] = <
+			["at11"] = <
 				text = <"Olhos não se abrem">
 				description = <"Não abre os olhos.">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Olhos se abrem por estímulo doloroso">
 				description = <"Abre os olhos em resposta a estímulo de dor.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Olhos se abrem ao comando verbal">
 				description = <"Abre os olhos em resposta a um chamado verbal.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Olhos se abrem espontaneamente">
 				description = <"Abre os olhos espontaneamente.">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Ausente">
 				description = <"Emudecido, sem resposta verbal.">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Sons ininteligíveis">
 				description = <"Emite sons incompreensíveis como gemidos, grunido, mas sem articular palavras.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Palavras inapropriadas">
 				description = <"Pronuncia palavras desconexas, com fala aleatória, mas sem troca conversacional.">
 			>
-			["at0017"] = <
+			["at18"] = <
 				text = <"Confuso">
 				description = <"O paciente responde às perguntas coerentemente mas há alguma desorientação e confusão.">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"Orientado">
 				description = <"O paciente responde coerentemente e apropriadamente às perguntas sobre seu nome e idade, onde está e porquê, a data etc.">
 			>
-			["at0019"] = <
+			["at20"] = <
 				text = <"Sem resposta motora">
 				description = <"Membros flácidos, o paciente não se movimenta.">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Padrão extensor à dor">
 				description = <"Extensão anormal a estímulos dolorosos (descerebração).">
 			>
-			["at0021"] = <
+			["at22"] = <
 				text = <"Padrão flexor à dor">
 				description = <"Flexão anormal a estímulos dolorosos (decorticação).">
 			>
-			["at0022"] = <
+			["at23"] = <
 				text = <"Reflexo de retirada à dor">
 				description = <"Flexão inespecífica/ Reflexo de retirada a estímulos dolorosos.">
 			>
-			["at0023"] = <
+			["at24"] = <
 				text = <"Localiza estímulo doloroso">
 				description = <"Movimento localizado em resposta a estímulos dolorosos.">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Obedece a comandos">
 				description = <"O paciente faz coisas simples quando lhe é ordenado verbalmente.">
 			>
-			["at0026"] = <
+			["id27"] = <
 				text = <"Pontuação total">
 				description = <"Escala ECG - O somatório das 3 pontuações (AO+MRM+MRV)">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Perfil ECG">
 				description = <"Perfil da Escala de Coma de Glasgow - Ocular (AO), Motor (MRM) e Verbal (MRV); expressando cada componente individualmente.">
 			>
-			["at0034"] = <
+			["id35"] = <
 				text = <"Não foi possível testar AO">
 				description = <"Não é possível testar as respostas da abertura dos olhos - por exemplo no caso de edema facial ou ocular grave ou ferimento.">
 			>
-			["at0035"] = <
+			["id36"] = <
 				text = <"Não foi possível testar MRV">
 				description = <"Não foi possível testar as respostas verbais - por exemplo no caso de intubação.">
 			>
-			["at0036"] = <
+			["id37"] = <
 				text = <"Não foi possível testar MRM">
 				description = <"Não é possível testar as respostas motoras - por exemplo, no caso de paralisia de membros associados.">
 			>
-			["at0037"] = <
+			["id38"] = <
 				text = <"Comentário">
 				description = <"Comentário sobre a avaliação do como, especialmente se não foi possível avaliar uma resposta.">
 			>
-			["at0038"] = <
+			["id39"] = <
 				text = <"Motivo da impossibilidade de testar AO">
 				description = <"Motivo da impossibilidade de testar a resposta da abertura ocular.">
 			>
-			["at0039"] = <
+			["id40"] = <
 				text = <"Não foi possível testar MRV">
 				description = <"Motivo da impossibilidade de testar a resposta verbal.">
 			>
-			["at0040"] = <
+			["id41"] = <
 				text = <"Motivo da impossibilidade de testar MRM">
 				description = <"Motivo da impossibilidade de testar a resposta motora.">
 			>
+			["ac1"] = <
+				text = <"*Best eye response (E)(en)">
+				description = <"*Best eye response to stimulus.(en)">
+			>
+			["ac2"] = <
+				text = <"*Best motor response (M)(en)">
+				description = <"*Best motor response to stimulus.(en)">
+			>
+			["ac3"] = <
+				text = <"*Best verbal response (V)(en)">
+				description = <"*Best verbal response to stimulus.(en)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at11", "at12", "at13", "at14">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at20", "at21", "at22", "at23", "at24", "at25">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at15", "at16", "at17", "at18", "at19">
 		>
 	>

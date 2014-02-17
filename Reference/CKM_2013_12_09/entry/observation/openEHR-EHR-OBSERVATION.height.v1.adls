@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.height.v1.0.0
 
 language
@@ -197,18 +197,18 @@ Not to be used to record the length of an object or specific body part.">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Height/Length
+	OBSERVATION[id1] matches {	-- Height/Length
 		data matches {
-			HISTORY[at0001] matches {	-- history
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {1..*} matches {	-- Any event
+					EVENT[id3] occurrences matches {1..*} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Simple
+							ITEM_TREE[id4] matches {
 								items cardinality matches {1..*; unordered} matches {
-									ELEMENT[at0004] matches {	-- Height/Length
+									ELEMENT[id5] matches {	-- Height/Length
 										value matches {
-											DV_QUANTITY[id0053] matches {
-												property matches {[openehr::122]}
+											DV_QUANTITY[id21] matches {
+												property matches {[at22]}
 												[magnitude, units] matches {
 													[{|0.0..1000.0|}, {"cm"}],
 													[{|0.0..250.0|}, {"in"}]
@@ -216,32 +216,27 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0018] occurrences matches {0..1} matches {	-- Comment
+									ELEMENT[id19] occurrences matches {0..1} matches {	-- Comment
 										value matches {
-											DV_TEXT[id0054] matches {*}
+											DV_TEXT[id22] 
 										}
 									}
 								}
 							}
 						}
 						state matches {
-							ITEM_TREE[at0013] matches {	-- Tree
+							ITEM_TREE[id14] matches {
 								items matches {
-									ELEMENT[at0014] occurrences matches {0..1} matches {	-- Position
+									ELEMENT[id15] occurrences matches {0..1} matches {	-- Position
 										value matches {
-											DV_CODED_TEXT[id0613] matches {
-												defining_code matches {
-													[local::
-													at0016, 	-- Standing
-													at0020; 	-- Lying
-													at0016]	-- Assumed
-												}
+											DV_CODED_TEXT[id23] matches {
+												defining_code matches {[ac1; at17]}		-- Position
 											}
 										}
 									}
-									ELEMENT[at0019] occurrences matches {0..1} matches {	-- Confounding factors
+									ELEMENT[id20] occurrences matches {0..1} matches {	-- Confounding factors
 										value matches {
-											DV_TEXT[id0614] matches {*}
+											DV_TEXT[id24] 
 										}
 									}
 								}
@@ -252,396 +247,351 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0007] matches {	-- List
+			ITEM_TREE[id8] matches {
 				items matches {
-					allow_archetype CLUSTER[at0011] occurrences matches {0..1} matches {	-- Device
+					allow_archetype CLUSTER[id12] occurrences matches {0..1} matches {	-- Device
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["nl"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Lengte">
 				description = <"De lichaamslengte wordt gemeten vanaf de kruin van het hoofd tot en met de voetzool. In het engelse taaldomein wordt er verschil gemaakt tussen hoogte (height) en lengte (length), waarbij hoogte staande gemeten wordt en lengte liggend.">
 			>
-			["at0001"] = <
-				text = <"history">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Op enig tijdstip gemeten lengte.">
 			>
-			["at0003"] = <
-				text = <"Simple">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Lengte">
 				description = <"De lichaamslengte vanaf de kruin van het hoofd tot en met de voetzool.">
 			>
-			["at0007"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Apparaat">
 				description = <"Beschrijving van het bij de meting gebruikte apparaat.">
 			>
-			["at0013"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Positie">
 				description = <"Positie tijdens de meting, van de gemeten persoon.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Staand">
 				description = <"De lengte is gemeten, staand op beide voeten met het gewicht gelijkmatig verdeeld, hielen tegen elkaar en beide billen en hakken in contact met een verticale achterkant.">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Opmerking">
 				description = <"Opmerking over de meting van de lichaamslengte.">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Beïnvloedende factoren">
 				description = <"Vermeld ieder probleem of feit die de meting van de lengte beïnvloedt, b.v. notitie maken van een amputatie.">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Liggend">
 				description = <"De lengte is liggend gemeten, volledig uitgestrekt, plat bekken, benen gestrekt en voeten gebogen.">
 			>
+			["ac1"] = <
+				text = <"*Position(en)">
+				description = <"*Position of individual when measured.(en)">
+			>
+			["at22"] = <
+				text = <"*Length (en)">
+				description = <"*Length (en)">
+			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Height/Length">
 				description = <"Height, or body length, is measured from crown of head to sole of foot.  Height is measured with the individual in a standing position and body length in a recumbent position.">
 			>
-			["at0001"] = <
-				text = <"history">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Any timed measurement of height or body length.">
 			>
-			["at0003"] = <
-				text = <"Simple">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Height/Length">
 				description = <"The length of the body from crown of head to sole of foot.">
 			>
-			["at0007"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Device">
 				description = <"Description of the device used to measure height or body length.">
 			>
-			["at0013"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Position">
 				description = <"Position of individual when measured.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Standing">
 				description = <"Height is measured standing on both feet with weight distributed evenly, heels together and both buttocks and heels in contact with a vertical back board.">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Comment">
 				description = <"Comment about the measurement of body height/length.">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Confounding factors">
 				description = <"Record any issues or factors that may impact on the measurement of body height/length eg noting of amputation.">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Lying">
 				description = <"Length is measured in a fully extended, recumbent position with the pelvis flat, legs extended and feet flexed.">
 			>
+			["ac1"] = <
+				text = <"Position">
+				description = <"Position of individual when measured.">
+			>
+			["at22"] = <
+				text = <"Length">
+				description = <"Length">
+			>
 		>
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Größe/Länge">
 				description = <"Größe bzw. Körperlänge wird vom Scheitel bis zur Fußsohle gemessen. Größe wird in einer stehenden Position gemessen, Körperlänge in einer liegenden Position.">
 			>
-			["at0001"] = <
-				text = <"History">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Jede zu einem Zeitpunkt gemessene Körpergröße/-länge.">
 			>
-			["at0003"] = <
-				text = <"Simple">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Größe/Länge">
 				description = <"Die Länge des Körpers von Scheitel bis Sohle.">
 			>
-			["at0007"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Gerät">
 				description = <"Beschreibung des Geräts, das zur Messung der Größe oder Länge verwendet wurde.">
 			>
-			["at0013"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Position">
 				description = <"Position des Individiums bei der Messung.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Stehend">
 				description = <"Größe wird stehend auf beiden Füßen gemessen, mit dem Gewicht gleichmäßig verteilt, den Hacken zusammen und beiden Gesäßbacken und Hacken in Kontakt mit einem senkrechten Brett.">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Kommentar">
 				description = <"Kommentar über die Messung der Körpergröße/-länge.">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Einflussfaktoren">
 				description = <"Zur Dokumentation von Faktoren, die sich auf die Messung der Körpergröße/-länge auswirken können, z.B. einer Amputation.">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Liegend">
 				description = <"Länge wird in einer voll ausgestreckten, liegenden Position gemessen. Hierbei wird das Becken flach gehalten, die Beine ausgestreckt und die Füße gebeugt.">
 			>
+			["ac1"] = <
+				text = <"*Position(en)">
+				description = <"*Position of individual when measured.(en)">
+			>
+			["at22"] = <
+				text = <"*Length (en)">
+				description = <"*Length (en)">
+			>
 		>
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Altura / comprimento">
 				description = <"Altura ou comprimento do corpo, é medida a partir da coroa da cabeça a sola do pé.
 A altura é medida com o indivíduo na posição de pé e comprimento do corpo na posição decúbito dorsal.">
 			>
-			["at0001"] = <
-				text = <"history">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Qualquer evento">
 				description = <"Medida a qualquer momento da altura ou comprimento do corpo.">
 			>
-			["at0003"] = <
-				text = <"Simple">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Altura / comprimento">
 				description = <"O comprimento do corpo da coroa da cabeça a sola do pé.">
 			>
-			["at0007"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Dispositivo">
 				description = <"Descrição do dispositivo utilizado para medir altura ou comprimento do corpo.">
 			>
-			["at0013"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Posição">
 				description = <"Posição individual quando medido.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"De pé">
 				description = <"A altura é medida de pé sobre os dois pés com o peso distribuído uniformemente, calcanhares juntos e as nádegas e os calcanhares em contato com uma placa traseira vertical.">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Comentário">
 				description = <"Comentário sobre a medição da altura/comprimento do corpo.">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Fatore de erro">
 				description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição da altura/comprimento do corpo, por exemplo, observação de amputação.">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Decúbito dorsal">
 				description = <"O comprimento é medido em uma posição totalmente estendida, deitada com a pelve plana, pernas estendidas e os pés flexionados.">
 			>
+			["ac1"] = <
+				text = <"*Position(en)">
+				description = <"*Position of individual when measured.(en)">
+			>
+			["at22"] = <
+				text = <"*Length (en)">
+				description = <"*Length (en)">
+			>
 		>
 		["fa"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"قد و یا طول">
 				description = <"قد یا طول بدن از نوک سر تا کف پا اندازه گیری می شود.بلندی در حالت ایستاده و طول بدن فرد در حالت خوابیده اندازه گیری می شود ">
 			>
-			["at0001"] = <
-				text = <"*history(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"هر رویداد">
 				description = <"اندازه گیری زمانی قد یا طول بدن">
 			>
-			["at0003"] = <
-				text = <"*Simple(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"قد و یا طول">
 				description = <"طول فرد از نوک سر تا کف پا ">
 			>
-			["at0007"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"تجهیز">
 				description = <"توصیف تجهیز استفاده شده برای اندازه گیری قد یا طول فرد">
 			>
-			["at0013"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"موقعیت">
 				description = <"وضعیت فرد در حال اندازه گیری">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"ایستاده">
 				description = <"قد بصورت ایستاده بر هر دو پا، پاشنه  ها کنار هم ، باسن و پاشنه ها در راستای خط عمودی پشت  با توزیع وزن مساوی اندازه گیری می شود">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"نظر">
 				description = <"نظر در مورد اندازه گیری قد و یا طول فرد">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"فاکتورهای جانبی">
 				description = <"ثبت هر گونه مساله یا فاکتوری که ممکن است روی اندازه گیری قد یا طول تاثیر داشته باشه به عنوان مثال ذکر قطع عضو">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"خوابیده">
 				description = <"  طول در حالت کاملا کشیده و طاقباز با لگن صاف، ساق های کشیده و پاهای جمع شده از مچ پا اندازه گیری می شود">
 			>
+			["ac1"] = <
+				text = <"*Position(en)">
+				description = <"*Position of individual when measured.(en)">
+			>
+			["at22"] = <
+				text = <"*Length (en)">
+				description = <"*Length (en)">
+			>
 		>
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"الارتفاع / الطول">
 				description = <"الارتفاع أو طول الجسم, يتم قياسه من تاج الرأس إلى أخمص القدم. يتم قياس الارتفاع عندما يكون الفرد واقفا, و طول الجسم عندما يكون الفرد مستلقيا.">
 			>
-			["at0001"] = <
-				text = <"*history(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"إحدى الوقائع">
 				description = <"قياس في لحظة زمنية معينة لطول أو ارتفاع الجسم.">
 			>
-			["at0003"] = <
-				text = <"*Simple(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"الارتفاع / الطول">
 				description = <"طول الجسم من تاج الرأس إلى أخمص القدم.">
 			>
-			["at0007"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"الجهيزة">
 				description = <"وصف الجهيزة المستخدمة لقياس طول أو ارتفاع الجسم.">
 			>
-			["at0013"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"الوضع">
 				description = <"وضع الشخص عند القياس.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"واقف">
 				description = <"يتم قياس الارتفاع و الفرد في وضع الوقوف على القدمين مع توزيع الوزن بشكل متساوٍ, و وضع الكعبين متجاورين, و كلا الأليتين متلامستين مع لوح ظهري عمودي.">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"تعليق">
 				description = <"تعليق حول قياس طول / ارتفاع الجسم.">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"العوامل المربكة">
 				description = <"لتسجيل أي مسائل أو عوامل قد تؤثر على قياس طول / ارتفاع الجسم, مثل آثار البتر.">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"مستلقٍ">
 				description = <"يتم قياس الطول في وضع مستلقٍ متمدد بشكل تام مع استواء الحوض, و الأرجل ممتدة و الأقدام مرتخية.">
 			>
+			["ac1"] = <
+				text = <"*Position(en)">
+				description = <"*Position of individual when measured.(en)">
+			>
+			["at22"] = <
+				text = <"*Length (en)">
+				description = <"*Length (en)">
+			>
 		>
 		["es-ar"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Altura/Longitud corporal">
 				description = <"La altura o longitud corporal es medida desde la coronilla de la cabeza hasta la planta de los pies. La altura es medida con el individuo en posición erguida y la longitud corporal, en posición recostada.">
 			>
-			["at0001"] = <
-				text = <"*history(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Cualquier evento">
 				description = <"Cualquier registro de altura o longitud corporal en un momento determinado.">
 			>
-			["at0003"] = <
-				text = <"*Simple(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Altura/Longitud corporal">
 				description = <"La longitud corporal desde la coronilla de la cabeza hasta la planta de los pies.">
 			>
-			["at0007"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Instrumento">
 				description = <"Descripción del dispositivo usado para medir la altura o la longitud corporal.">
 			>
-			["at0013"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Posición">
 				description = <"Posición del individuo durante la medición de estatura.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"De pie">
 				description = <"La altura se mide de pie, sobre ambos pies con el peso distribuido en forma homogénea, con los talones juntos y ambos glúteos y talones en contacto con una placa posterior vertical o pared.">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Comentario">
 				description = <"Comentario acerca de la medición de la altura/longitud corporal.">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Factores de confusión">
 				description = <"Registro de todos las aspectos, condiciones o factores que pueden afectar la medición de la altura/longitud corporal, por ejemplo la amputación de miembros inferiores.">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Acostado">
 				description = <"La longitud corporal es medida en una posición recostada y completamente extendida, con la pelvis plana, las piernas extendidas y los pies flexionados.">
 			>
+			["ac1"] = <
+				text = <"*Position(en)">
+				description = <"*Position of individual when measured.(en)">
+			>
+			["at22"] = <
+				text = <"*Length (en)">
+				description = <"*Length (en)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at22"] = <http://openehr.org/id/122>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at17", "at21">
 		>
 	>

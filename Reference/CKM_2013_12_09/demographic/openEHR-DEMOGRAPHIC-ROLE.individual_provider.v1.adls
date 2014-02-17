@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-DEMOGRAPHIC-ROLE.individual_provider.v1.0.0
 
 language
@@ -43,54 +43,54 @@ description
 	other_contributors = <"Sebastian Garde, Ocean Informatics, Germany (Editor)", "Omer Hotomaroglu, Turkey (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)">
 
 definition
-	ROLE[at0000] matches {	-- Profissional de saúde
+	ROLE[id1] matches {	-- Profissional de saúde
 		identities matches {
-			allow_archetype PARTY_IDENTITY[at0001] occurrences matches {1} matches {	-- Nome do profissional
+			allow_archetype PARTY_IDENTITY[id2] occurrences matches {1} matches {	-- Nome do profissional
 				include
-					archetype_id/value matches {/(person_name)[a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(person_name)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		capabilities matches {
-			allow_archetype CAPABILITY[at0002] occurrences matches {0..*} matches {	-- Capacitação
+			allow_archetype CAPABILITY[id3] occurrences matches {0..*} matches {	-- Capacitação
 				include
-					archetype_id/value matches {/(individual_credentials)[a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(individual_credentials)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		contacts matches {
-			CONTACT[at0003] occurrences matches {0..*} matches {	-- Contato
+			CONTACT[id4] occurrences matches {0..*} matches {	-- Contato
 				addresses matches {
-					allow_archetype ADDRESS[at0030] occurrences matches {1} matches {	-- Endereço
+					allow_archetype ADDRESS[id31] occurrences matches {1} matches {	-- Endereço
 						include
-							archetype_id/value matches {/(address)([a-zA-Z0-9_]+)*\.v1/}
-							archetype_id/value matches {/(electronic_communication)[a-zA-Z0-9_-]*\.v1/}
+							archetype_id/value matches {/(address)(a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/(electronic_communication)a-zA-Z0-9_-]*\.v1/}
 					}
 				}
 			}
 		}
 		relationships matches {
-			PARTY_RELATIONSHIP[at0004] occurrences matches {0..*} matches {	-- Relacionamento com uma fonte pagadora
+			PARTY_RELATIONSHIP[id5] occurrences matches {0..*} matches {	-- Relacionamento com uma fonte pagadora
 				details matches {
-					ITEM_TREE[at0040] occurrences matches {0..1} matches {	-- Detalhes
+					ITEM_TREE[id41] occurrences matches {0..1} matches {	-- Detalhes
 						items cardinality matches {1; unordered; unique} matches {
-							allow_archetype CLUSTER[at0041] occurrences matches {1} matches {	-- Documento de Identificação
+							allow_archetype CLUSTER[id42] occurrences matches {1} matches {	-- Documento de Identificação
 								include
-									archetype_id/value matches {/(provider_identifier)[a-zA-Z0-9_-]*\.v1/}
+									archetype_id/value matches {/(provider_identifier)a-zA-Z0-9_-]*\.v1/}
 							}
 						}
 					}
 				}
 			}
-			PARTY_RELATIONSHIP[at0005] occurrences matches {0..*} matches {	-- Relacionamento empregador/empregado
+			PARTY_RELATIONSHIP[id6] occurrences matches {0..*} matches {	-- Relacionamento empregador/empregado
 				details matches {
-					ITEM_TREE[at0050] occurrences matches {0..1} matches {	-- Detalhes
+					ITEM_TREE[id51] occurrences matches {0..1} matches {	-- Detalhes
 						items cardinality matches {1..*; ordered} matches {
-							allow_archetype CLUSTER[at0051] occurrences matches {1} matches {	-- Documento de Identificação
+							allow_archetype CLUSTER[id52] occurrences matches {1} matches {	-- Documento de Identificação
 								include
-									archetype_id/value matches {/(provider_identifier)[a-zA-Z0-9_-]*\.v1/}
+									archetype_id/value matches {/(provider_identifier)a-zA-Z0-9_-]*\.v1/}
 							}
-							ELEMENT[at0052] occurrences matches {0..1} matches {	-- Função
+							ELEMENT[id53] occurrences matches {0..1} matches {	-- Função
 								value matches {
-									DV_TEXT[id0309] matches {*}
+									DV_TEXT[id54] 
 								}
 							}
 						}
@@ -100,104 +100,104 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Profissional de saúde">
 				description = <"Dados sobre uma pessoa que exerce o papel de um profissional de saúde.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Nome do profissional">
 				description = <"Nome do profissional de saúde.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Capacitação">
 				description = <"Capacitação do Profissional.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Contato">
 				description = <"Contato do profissional de saúde.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Relacionamento com uma fonte pagadora">
 				description = <"Relacionamento entre um profissional de saúde e uma fonte pagadora.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Relacionamento empregador/empregado">
 				description = <"Relacionamento empregador/empregado entre um profissional de saúde e uma organização prestadora de assistência à saúde.">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Endereço">
 				description = <"Endereço onde o profissional pode ser contactado.">
 			>
-			["at0040"] = <
+			["id41"] = <
 				text = <"Detalhes">
 				description = <"Detalhes do relacionamento profissional/fonte pagadora.">
 			>
-			["at0041"] = <
+			["id42"] = <
 				text = <"Documento de Identificação">
 				description = <"A identificação do profissional de saúde junto à fonte pagadora.">
 			>
-			["at0050"] = <
+			["id51"] = <
 				text = <"Detalhes">
 				description = <"Detalhes do relacionamento profissional de saúde/prestador de assistência.">
 			>
-			["at0051"] = <
+			["id52"] = <
 				text = <"Documento de Identificação">
 				description = <"Identificação do profissional de saúde junto à organização prestadora de assistência à saúde.">
 			>
-			["at0052"] = <
+			["id53"] = <
 				text = <"Função">
 				description = <"A função do profissional de saúde junto à organização prestadora de assistência à saúde.">
 			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Individual healthcare provider">
 				description = <"Data about a person who performs the role of an individual healthcare provider.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Name">
 				description = <"Individual healthcare provider's name.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Capability">
 				description = <"Individual healthcare provider's capability.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Contact">
 				description = <"Individual healthcare provider's contact.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Relationship with a third-party payer">
 				description = <"Relationship between an individual healthcare provider and a third-party payer.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Employer/employee relationship">
 				description = <"Employer/employee relationship between an individual healthcare provider and a healthcare provider organisation.">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Address">
 				description = <"Address where the individual provider can be contacted.">
 			>
-			["at0040"] = <
+			["id41"] = <
 				text = <"Relationship details">
 				description = <"Details of an individual healthcare provider/third-party payer relationship.">
 			>
-			["at0041"] = <
+			["id42"] = <
 				text = <"Identifier">
 				description = <"The identifer of the individual healthcare provider at the third-party payer.">
 			>
-			["at0050"] = <
+			["id51"] = <
 				text = <"Details">
 				description = <"Details of the employer/employee relationship.">
 			>
-			["at0051"] = <
+			["id52"] = <
 				text = <"Identifier">
 				description = <"The identifer of the individual healthcare provider at the healthcare provider organisation.">
 			>
-			["at0052"] = <
+			["id53"] = <
 				text = <"Employment role">
 				description = <"The role of the individual healthcare provider at the healthcare provider organisation.">
 			>

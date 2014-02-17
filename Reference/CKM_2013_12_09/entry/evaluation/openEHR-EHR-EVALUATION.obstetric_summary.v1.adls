@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-EVALUATION.obstetric_summary.v1.0.0
 
 language
@@ -37,92 +37,92 @@ Not for recording detailed information about each of the individual pregnancies,
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- Obstetric summary
+	EVALUATION[id1] matches {	-- Obstetric summary
 		data matches {
-			ITEM_TREE[at0001] matches {	-- Tree
+			ITEM_TREE[id2] matches {
 				items matches {
-					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Ever Pregnant?
+					ELEMENT[id15] occurrences matches {0..1} matches {	-- Ever Pregnant?
 						value matches {
-							DV_BOOLEAN[id0277] matches {
+							DV_BOOLEAN[id20] matches {
 								value matches {True}
 							}
 						}
 					}
-					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Gravidity (G)
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Gravidity (G)
 						value matches {
-							DV_COUNT[id0077] matches {
+							DV_COUNT[id21] matches {
 								magnitude matches {|0..<100|}
 							}
 						}
 					}
-					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Parity
+					ELEMENT[id4] occurrences matches {0..1} matches {	-- Parity
 						value matches {
-							DV_COUNT[id0477] matches {
+							DV_COUNT[id22] matches {
 								magnitude matches {|>=0|}
 							}
 						}
 					}
-					ELEMENT[at0015] occurrences matches {0..1} matches {	-- Term Births (T)
+					ELEMENT[id16] occurrences matches {0..1} matches {	-- Term Births (T)
 						value matches {
-							DV_COUNT[id0677] matches {*}
+							DV_COUNT[id23] 
 						}
 					}
-					ELEMENT[at0016] occurrences matches {0..1} matches {	-- Preterm Births (P)
+					ELEMENT[id17] occurrences matches {0..1} matches {	-- Preterm Births (P)
 						value matches {
-							DV_COUNT[id0078] matches {*}
+							DV_COUNT[id24] 
 						}
 					}
-					ELEMENT[at0017] occurrences matches {0..1} matches {	-- Abortions (A)
+					ELEMENT[id18] occurrences matches {0..1} matches {	-- Abortions (A)
 						value matches {
-							DV_COUNT[id0478] matches {*}
+							DV_COUNT[id25] 
 						}
 					}
-					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Miscarriages
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Miscarriages
 						value matches {
-							DV_COUNT[id0877] matches {
+							DV_COUNT[id26] matches {
 								magnitude matches {|>=0|}
 							}
 						}
 					}
-					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Terminations
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Terminations
 						value matches {
-							DV_COUNT[id0278] matches {
+							DV_COUNT[id27] matches {
 								magnitude matches {|>=0|}
 							}
 						}
 					}
-					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Ectopic Pregnancies
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Ectopic Pregnancies
 						value matches {
-							DV_COUNT[id0079] matches {*}
+							DV_COUNT[id28] 
 						}
 					}
-					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Stillbirths
+					ELEMENT[id13] occurrences matches {0..1} matches {	-- Stillbirths
 						value matches {
-							DV_COUNT[id0479] matches {*}
+							DV_COUNT[id29] 
 						}
 					}
-					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Live Births
+					ELEMENT[id7] occurrences matches {0..1} matches {	-- Live Births
 						value matches {
-							DV_COUNT[id0678] matches {
+							DV_COUNT[id30] matches {
 								magnitude matches {|>=0|}
 							}
 						}
 					}
-					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Caesarean Sections
+					ELEMENT[id11] occurrences matches {0..1} matches {	-- Caesarean Sections
 						value matches {
-							DV_COUNT[id0679] matches {
+							DV_COUNT[id31] matches {
 								magnitude matches {|>=0|}
 							}
 						}
 					}
-					ELEMENT[at0018] occurrences matches {0..1} matches {	-- Multiple Births (M)
+					ELEMENT[id19] occurrences matches {0..1} matches {	-- Multiple Births (M)
 						value matches {
-							DV_COUNT[id0878] matches {*}
+							DV_COUNT[id32] 
 						}
 					}
-					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Living Children (L)
+					ELEMENT[id8] occurrences matches {0..1} matches {	-- Living Children (L)
 						value matches {
-							DV_COUNT[id0080] matches {
+							DV_COUNT[id33] matches {
 								magnitude matches {|>=0|}
 							}
 						}
@@ -131,16 +131,16 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0008] matches {	-- Tree
+			ITEM_TREE[id9] matches {
 				items matches {
-					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Date Updated
+					ELEMENT[id10] occurrences matches {0..1} matches {	-- Date Updated
 						value matches {
-							DV_DATE_TIME[id0149] matches {*}
+							DV_DATE_TIME[id34] 
 						}
 					}
-					ELEMENT[at0013] occurrences matches {0..1} matches {	-- Stillbirth Definition
+					ELEMENT[id14] occurrences matches {0..1} matches {	-- Stillbirth Definition
 						value matches {
-							DV_TEXT[id0150] matches {*}
+							DV_TEXT[id35] 
 						}
 					}
 				}
@@ -148,82 +148,74 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Obstetric summary">
 				description = <"An overview of the obstetric history of a woman, including a summary of all pregnancies and the associated outcomes or interventions.">
 			>
-			["at0001"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Gravidity (G)">
 				description = <"Number of times a woman has been pregnant, including the current pregnancy, if appropriate.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Parity">
 				description = <"Number of times a woman has given birth after 20 weeks and 0 days gestation.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Miscarriages">
 				description = <"Number of times a woman has had a miscarriage at less than 20 weeks of gestation.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Terminations">
 				description = <"Number of times a woman has had a pregnancy terminated, regardless of gestation.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Live Births">
 				description = <"Number of babies born alive.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Living Children (L)">
 				description = <"Number of children who remain alive.">
 			>
-			["at0008"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Date Updated">
 				description = <"The date this summary was last updated.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Caesarean Sections">
 				description = <"Number of Caesarean sections performed.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Ectopic Pregnancies">
 				description = <"Number of ectopic pregnancies.">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Stillbirths">
 				description = <"Number of stillbirths.">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Stillbirth Definition">
 				description = <"Definition of stillbirth.">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Ever Pregnant?">
 				description = <"Has the woman ever been pregnant?">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Term Births (T)">
 				description = <"Number of infants born on or after 37 weeks of gestation.">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Preterm Births (P)">
 				description = <"Number of infants born at less than 37 weeks of gestation.">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Abortions (A)">
 				description = <"Number of non-viable pregnancies from all causes and at any gestation, including miscarriages, induced terminations and ectopic pregnancies.">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Multiple Births (M)">
 				description = <"Number of birth events in which more than one fetus has been born.">
 			>

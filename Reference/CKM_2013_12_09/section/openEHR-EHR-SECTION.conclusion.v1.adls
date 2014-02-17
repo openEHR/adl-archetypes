@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-SECTION.conclusion.v1.0.0
 
 language
@@ -45,33 +45,33 @@ description
 	>
 
 definition
-	SECTION[at0000] matches {	-- Conclusion
+	SECTION[id1] matches {	-- Conclusion
 		items matches {
-			allow_archetype EVALUATION[at0001] occurrences matches {0..*} matches {	-- Evaluation of a problem, diagnosis etc.
+			allow_archetype EVALUATION[id2] occurrences matches {0..*} matches {	-- Evaluation of a problem, diagnosis etc.
 				include
 					archetype_id/value matches {/openEHR-EHR-EVALUATION\.differential_diagnosis\.v1|openEHR-EHR-EVALUATION\.problem\.v1|openEHR-EHR-EVALUATION\.problem-diagnosis\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Conclusion">
 				description = <"Section to record conclusions of an encounter with a patient">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Evaluation of a problem, diagnosis etc.">
 				description = <"*">
 			>
 		>
 		["ru"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Заключение">
 				description = <"Раздел для записи заключения (выводов) после встречи с пациентом (осмотра, консультации) ">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Оценка проблемы, диагноз и т.д.">
 				description = <"Итоговое мнение врача после осмотра пациента, включая диагноз">
 			>

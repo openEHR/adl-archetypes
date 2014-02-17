@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-DEMOGRAPHIC-CLUSTER.birth_data_additional_detail_br.v1.0.0
 
 language
@@ -42,60 +42,60 @@ description
 	lifecycle_state = <"initial">
 
 definition
-	CLUSTER[at0000] matches {	-- Other birth certificate data
+	CLUSTER[id1] matches {	-- Other birth certificate data
 		items matches {
-			ELEMENT[at0001] matches {	-- Book number
+			ELEMENT[id2] matches {	-- Book number
 				value matches {
-					DV_TEXT[id0205] matches {*}
+					DV_TEXT[id5] 
 				}
 			}
-			ELEMENT[at0002] matches {	-- Page number
+			ELEMENT[id3] matches {	-- Page number
 				value matches {
-					DV_TEXT[id0605] matches {*}
+					DV_TEXT[id6] 
 				}
 			}
-			ELEMENT[at0003] matches {	-- Section
+			ELEMENT[id4] matches {	-- Section
 				value matches {
-					DV_TEXT[id0005] matches {*}
+					DV_TEXT[id7] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Outros dados da certidão de nascimento">
 				description = <"Outros dados da certidão de nascimento brasileira">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Livro">
 				description = <"Número do livro da certidão de nascimento">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Folha">
 				description = <"Número da folha da certidão de nascimento">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Termo">
 				description = <"Número do termo da certidão de nascimento">
 			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Other birth certificate data">
 				description = <"Other birth certificate data still used in Brazil">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Book number">
 				description = <"Book number where the birth was registered">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Page number">
 				description = <"Page number in the book where the birth was registered">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Section">
 				description = <"Section in the page where the birth was registered">
 			>

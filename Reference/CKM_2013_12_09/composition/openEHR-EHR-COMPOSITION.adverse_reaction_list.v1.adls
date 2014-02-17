@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-COMPOSITION.adverse_reaction_list.v1.0.0
 
 language
@@ -38,46 +38,55 @@ In order for this list to be accurate and safe to use as the basis for decision 
 	>
 
 definition
-	COMPOSITION[at0000] matches {	-- Adverse Reaction List
+	COMPOSITION[id1] matches {	-- Adverse Reaction List
 		category matches {
-			DV_CODED_TEXT[id0577] matches {
-				defining_code matches {[openehr::431]}
+			DV_CODED_TEXT[id6] matches {
+				defining_code matches {[at1]}
 			}
 		}
 		content cardinality matches {1..*; unordered} matches {
-			allow_archetype EVALUATION[at0002] occurrences matches {0..*} matches {	-- Adverse Reactions
+			allow_archetype EVALUATION[id3] occurrences matches {0..*} matches {	-- Adverse Reactions
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.adverse_reaction(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.adverse_reaction(-a-zA-Z0-9_]+)*\.v1/}
 			}
-			allow_archetype EVALUATION[at0003] occurrences matches {0..*} matches {	-- Exclusion Statement
+			allow_archetype EVALUATION[id4] occurrences matches {0..*} matches {	-- Exclusion Statement
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-adverse_reaction(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-adverse_reaction(-a-zA-Z0-9_]+)*\.v1/}
 			}
-			allow_archetype EVALUATION[at0004] occurrences matches {0..*} matches {	-- Absent Information
+			allow_archetype EVALUATION[id5] occurrences matches {0..*} matches {	-- Absent Information
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.absence(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.absence(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Adverse Reaction List">
 				description = <"A persistent and managed list of adverse reactions experienced by the subject that may influence clinical decision-making and care provision.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Adverse Reactions">
 				description = <"Details about known adverse reactions.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Exclusion Statement">
 				description = <"Positive statement about exclusion of known adverse reactions.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Absent Information">
 				description = <"Positive statement that no information is available about adverse reactions.">
 			>
+			["at1"] = <
+				text = <"persistent">
+				description = <"persistent">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at1"] = <http://openehr.org/id/431>
 		>
 	>

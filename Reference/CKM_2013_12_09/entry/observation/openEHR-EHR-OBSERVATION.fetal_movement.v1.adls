@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.fetal_movement.v1.0.0
 
 language
@@ -64,68 +64,59 @@ Not to be used to represent formal fetal heart rate monitoring eg using cardioto
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Fetal Movement
+	OBSERVATION[id1] matches {	-- Fetal Movement
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Presence
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Presence
 										value matches {
-											DV_CODED_TEXT[id0053] matches {
-												defining_code matches {
-													[local::
-													at0007, 	-- Present
-													at0011]	-- Absent
-												}
+											DV_CODED_TEXT[id30] matches {
+												defining_code matches {[ac1]}		-- Presence
 											}
 										}
 									}
-									ELEMENT[at0019] occurrences matches {0..1} matches {	-- Pattern
+									ELEMENT[id20] occurrences matches {0..1} matches {	-- Pattern
 										value matches {
-											DV_CODED_TEXT[id0453] matches {
-												defining_code matches {
-													[local::
-													at0021, 	-- Increased
-													at0022, 	-- Normal
-													at0024]	-- Reduced
-												}
+											DV_CODED_TEXT[id31] matches {
+												defining_code matches {[ac2]}		-- Pattern
 											}
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Movements
+									ELEMENT[id7] occurrences matches {0..1} matches {	-- Movements
 										value matches {
-											DV_COUNT[id0853] matches {
+											DV_COUNT[id32] matches {
 												magnitude matches {|>=0|}
 											}
 										}
 									}
-									ELEMENT[at0025] occurrences matches {0..1} matches {	-- Time since last movement
+									ELEMENT[id26] occurrences matches {0..1} matches {	-- Time since last movement
 										value matches {
-											DV_DURATION[id0253] matches {
+											DV_DURATION[id33] matches {
 												value matches {PWDTH/|>=PT0S|}
 											}
 										}
 									}
-									ELEMENT[at0028] occurrences matches {0..1} matches {	-- Description
+									ELEMENT[id29] occurrences matches {0..1} matches {	-- Description
 										value matches {
-											DV_TEXT[id0454] matches {*}
+											DV_TEXT[id34] 
 										}
 									}
 								}
 							}
 						}
 					}
-					INTERVAL_EVENT[at0027] occurrences matches {0..1} matches {	-- Observation Interval
+					INTERVAL_EVENT[id28] occurrences matches {0..1} matches {	-- Observation Interval
 						math_function matches {
-							DV_CODED_TEXT[id0990] matches {
-								defining_code matches {[openehr::148]}
+							DV_CODED_TEXT[id35] matches {
+								defining_code matches {[at26]}
 							}
 						}
 						data matches {
-							use_node ITEM_TREE[id0753] /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any event]/data[Tree]
+							use_node ITEM_TREE[id36] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[Any event]/data[id4]
 						}
 					}
 				}
@@ -133,131 +124,154 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Fetal Movement">
 				description = <"Spontaneous movements of the fetus in utero, as perceived by the mother. Movements include kicks, jabs, rolls, twists, and turns.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Presence">
 				description = <"Presence of spontaneous fetal movements.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Movements">
 				description = <"Number of spontaneous fetal movements counted during the period of observation.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Present">
 				description = <"Spontaneous fetal movements have been perceived by the mother.">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Absent">
 				description = <"Spontaneous fetal movements have not been perceived by the mother.">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Pattern">
 				description = <"Pattern of spontaneous fetal movements.">
 			>
-			["at0021"] = <
+			["at22"] = <
 				text = <"Increased">
 				description = <"Spontaneous fetal movements are increased or stronger compared to normal.">
 			>
-			["at0022"] = <
+			["at23"] = <
 				text = <"Normal">
 				description = <"The fetus is moving and kicking normally.">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Reduced">
 				description = <"Spontaneous fetal movements are reduced or weaker compared to normal.">
 			>
-			["at0025"] = <
+			["id26"] = <
 				text = <"Time since last movement">
 				description = <"Length of time since last spontaneous fetal movement was noticed by mother.">
 			>
-			["at0027"] = <
+			["id28"] = <
 				text = <"Observation Interval">
 				description = <"Period of time during which the number of spontaneous fetal movements) are counted or observed.">
 			>
-			["at0028"] = <
+			["id29"] = <
 				text = <"Description">
 				description = <"Narrative description of the fetal movements as noted by the mother.">
 			>
+			["ac1"] = <
+				text = <"Presence">
+				description = <"Presence of spontaneous fetal movements.">
+			>
+			["ac2"] = <
+				text = <"Pattern">
+				description = <"Pattern of spontaneous fetal movements.">
+			>
+			["at26"] = <
+				text = <"total">
+				description = <"total">
+			>
 		>
 		["es-cl"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Movimiento del feto">
 				description = <"Los movimientos espontáneos del feto in utero
 ">
 			>
-			["at0001"] = <
-				text = <"*Serie de eventos (es)">
-				description = <"*@ interno @(es)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Cualquier evento">
 				description = <"*">
 			>
-			["at0003"] = <
-				text = <"*Lista (es)">
-				description = <"*@ interno @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Presencia">
 				description = <"La presencia de  movimientos espontáneos">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Número de ocurrencias">
 				description = <"El número  de ocurrencias  en un tiempo determinado">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Movimientos fetal sentidos">
 				description = <"Movimientos fetales sentidos">
 			>
-			["at0011"] = <
+			["at12"] = <
 				text = <"Movimientos Fetal no sentidos">
 				description = <"No se sienten los movimientos fetales">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Patrón">
 				description = <"Patrón de movimientos fetales">
 			>
-			["at0021"] = <
+			["at22"] = <
 				text = <"Aumentados">
 				description = <"Los movimientos fetales ocurren más frecuentemente que lo esperado">
 			>
-			["at0022"] = <
+			["at23"] = <
 				text = <"Normales">
 				description = <"El feto se mueve y patea normalmente">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Disminuidos">
 				description = <"Se reducen los movimientos fetales">
 			>
-			["at0025"] = <
+			["id26"] = <
 				text = <"Tiempo pasado desde el último movimiento">
 				description = <"Tiempo transcurrido desde el último movimiento fetal  sentido">
 			>
-			["at0027"] = <
+			["id28"] = <
 				text = <"Período de monitoreo de los movimientos">
 				description = <"Período de tiempo en que se contabiliza el número de movimientos fetales">
 			>
-			["at0028"] = <
+			["id29"] = <
 				text = <"*Description(en)">
 				description = <"*Narrative description of the fetal movements as noted by the mother.(en)">
 			>
+			["ac1"] = <
+				text = <"*Presence(en)">
+				description = <"*Presence of spontaneous fetal movements.(en)">
+			>
+			["ac2"] = <
+				text = <"*Pattern(en)">
+				description = <"*Pattern of spontaneous fetal movements.(en)">
+			>
+			["at26"] = <
+				text = <"*total (en)">
+				description = <"*total (en)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at26"] = <http://openehr.org/id/148>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at8", "at12">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at22", "at23", "at25">
 		>
 	>

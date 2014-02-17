@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-INSTRUCTION.request-imaging_exam.v1.0.0
 
 specialize
-	openEHR-EHR-INSTRUCTION.request.v1.0.0
+	openEHR-EHR-INSTRUCTION.request.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -33,14 +33,14 @@ If there are more details about the examination required, include this informati
 	>
 
 definition
-	INSTRUCTION[at0000.1] matches {	-- Imaging Examination Request
+	INSTRUCTION[id1.1] matches {	-- Imaging Examination Request
 		activities matches {
-			ACTIVITY[at0001] matches {
+			ACTIVITY[id2] matches {
 				description matches {
-					ITEM_TREE[at0009] matches {
+					ITEM_TREE[id10] matches {
 						items matches {
-							ELEMENT[at0121.1] 	-- Examination requested
-							ELEMENT[at0135.1] 	-- Description of examination
+							ELEMENT[id122.1] 	-- Examination requested
+							ELEMENT[id136.1] 	-- Description of examination
 						}
 					}
 				}
@@ -48,20 +48,30 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Imaging Examination Request">
 				description = <"Generic request for an imaging examination request.">
 			>
-			["at0121.1"] = <
+			["id122.1"] = <
 				text = <"Examination requested">
 				description = <"Identification of the examination requested. This is often coded with an external terminology.">
 			>
-			["at0135.1"] = <
+			["id136.1"] = <
 				text = <"Description of examination">
 				description = <"A detailed narrative description of the examination requested.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at137", "at138", "at139">
 		>
 	>

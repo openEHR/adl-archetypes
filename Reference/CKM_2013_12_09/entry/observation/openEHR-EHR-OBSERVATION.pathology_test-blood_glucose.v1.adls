@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.pathology_test-blood_glucose.v1.0.0
 
 specialize
-	openEHR-EHR-OBSERVATION.pathology_test.v1.0.0
+	openEHR-EHR-OBSERVATION.pathology_test.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -64,34 +64,34 @@ Laboratory Technical Framework, Volume 3: Content, Revision 3.0 [Internet]. USA:
 	>
 
 definition
-	OBSERVATION[at0000.1] matches {	-- Blood Glucose Test Result
-		/data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096]/items[at0078.1]/value matches {
-			DV_QUANTITY[id0.101] matches {
-				property matches {[openehr::119]}
+	OBSERVATION[id1.1] matches {	-- Blood Glucose Test Result
+		/data[id2]/events[id3]/data[id4]/items[id96]/items[id97]/items[id79.1]/value matches {
+			DV_QUANTITY[id0.137] matches {
+				property matches {[at0.18]}
 				units matches {"mg/dl", "mmol/l"}
 			}
 		}
-		/data[at0001]/events[at0002]/state matches {
-			ITEM_TREE[at0.8] matches {	-- Tree
+		/data[id2]/events[id3]/state matches {
+			ITEM_TREE[id0.8] matches {
 				items matches {
-					ELEMENT[at0.9] occurrences matches {0..1} matches {	-- Fasting State
+					ELEMENT[id0.9] occurrences matches {0..1} matches {	-- Fasting State
 						value matches {
-							DV_BOOLEAN[id0.693] matches {
+							DV_BOOLEAN[id0.145] matches {
 								value matches {True}
 							}
 						}
 					}
-					ELEMENT[at0.11] occurrences matches {0..1} matches {	-- Duration of Fasting
+					ELEMENT[id0.11] occurrences matches {0..1} matches {	-- Duration of Fasting
 						value matches {
-							DV_DURATION[id0.565] matches {
+							DV_DURATION[id0.146] matches {
 								value matches {PTHM/|>=PT0S|}
 							}
 						}
 					}
-					ELEMENT[at0.13] occurrences matches {0..1} matches {	-- Glucose Load
+					ELEMENT[id0.13] occurrences matches {0..1} matches {	-- Glucose Load
 						value matches {
-							DV_QUANTITY[id0.365] matches {
-								property matches {[openehr::124]}
+							DV_QUANTITY[id0.147] matches {
+								property matches {[at0.19]}
 								[units, precision] matches {
 									[{"mg"}, {|>=0|}],
 									[{"gm"}, {0}]
@@ -99,11 +99,10 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0.14] occurrences matches {0..1} matches {	-- Insulin Load
+					ELEMENT[id0.14] occurrences matches {0..1} matches {	-- Insulin Load
 						value matches {
-							DV_QUANTITY[id0.765] matches {
-								property matches {[openehr::385]}
-								units matches {"IU"}
+							DV_QUANTITY[id0.148] matches {
+								property matches {[at0.20]}
 								precision matches {0}
 							}
 						}
@@ -111,114 +110,110 @@ definition
 				}
 			}
 		}
-		/data[at0001]/events matches {
-			POINT_EVENT[at0.2] occurrences matches {0..1} matches {	-- Baseline Measurement
+		/data[id2]/events matches {
+			POINT_EVENT[id0.2] occurrences matches {0..1} matches {	-- Baseline Measurement
 				offset matches {
-					DV_DURATION[id0.668] matches {
-						value matches {|PT0S|}
+					DV_DURATION[id0.149] matches {
+						value matches {PT0S}
 					}
 				}
 				data matches {
-					use_node ITEM_TREE[id0.97] /data[at0001]/events[at0002]/data[at0003]	-- /data[at0001]/events[at0002]/data[at0003]
+					use_node ITEM_TREE[id0.150] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
 				}
 				state matches {
-					use_node ITEM_TREE[id0.941] /data[at0001]/events[at0002]/state[at0.8]	-- /data[at0001]/events[at0002]/state[Tree]
+					use_node ITEM_TREE[id0.151] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
 				}
 			}
-			POINT_EVENT[at0.3] occurrences matches {0..1} matches {	-- 1 Hour Measurement
+			POINT_EVENT[id0.3] occurrences matches {0..1} matches {	-- 1 Hour Measurement
 				offset matches {
-					DV_DURATION[id0.68] matches {
-						value matches {|PT1H|}
+					DV_DURATION[id0.152] matches {
+						value matches {PT1H}
 					}
 				}
 				data matches {
-					use_node ITEM_TREE[id0.577] /data[at0001]/events[at0002]/data[at0003]	-- /data[at0001]/events[at0002]/data[at0003]
+					use_node ITEM_TREE[id0.153] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
 				}
 				state matches {
-					use_node ITEM_TREE[id0.341] /data[at0001]/events[at0002]/state[at0.8]	-- /data[at0001]/events[at0002]/state[Tree]
+					use_node ITEM_TREE[id0.154] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
 				}
 			}
-			POINT_EVENT[at0.5] occurrences matches {0..1} matches {	-- 2 Hour Measurement
+			POINT_EVENT[id0.5] occurrences matches {0..1} matches {	-- 2 Hour Measurement
 				offset matches {
-					DV_DURATION[id0.868] matches {
-						value matches {|PT2H|}
+					DV_DURATION[id0.155] matches {
+						value matches {PT2H}
 					}
 				}
 				data matches {
-					use_node ITEM_TREE[id0.729] /data[at0001]/events[at0002]/data[at0003]	-- /data[at0001]/events[at0002]/data[at0003]
+					use_node ITEM_TREE[id0.156] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
 				}
 				state matches {
-					use_node ITEM_TREE[id0.142] /data[at0001]/events[at0002]/state[at0.8]	-- /data[at0001]/events[at0002]/state[Tree]
+					use_node ITEM_TREE[id0.157] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
 				}
 			}
-			POINT_EVENT[at0.6] occurrences matches {0..1} matches {	-- Pre-prandial Measurement
+			POINT_EVENT[id0.6] occurrences matches {0..1} matches {	-- Pre-prandial Measurement
 				data matches {
-					use_node ITEM_TREE[id0.209] /data[at0001]/events[at0002]/data[at0003]	-- /data[at0001]/events[at0002]/data[at0003]
+					use_node ITEM_TREE[id0.158] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
 				}
 				state matches {
-					use_node ITEM_TREE[id0.541] /data[at0001]/events[at0002]/state[at0.8]	-- /data[at0001]/events[at0002]/state[Tree]
+					use_node ITEM_TREE[id0.159] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
 				}
 			}
-			POINT_EVENT[at0.7] occurrences matches {0..1} matches {	-- Post-prandial Measurement
+			POINT_EVENT[id0.7] occurrences matches {0..1} matches {	-- Post-prandial Measurement
 				data matches {
-					use_node ITEM_TREE[id0.689] /data[at0001]/events[at0002]/data[at0003]	-- /data[at0001]/events[at0002]/data[at0003]
+					use_node ITEM_TREE[id0.160] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
 				}
 				state matches {
-					use_node ITEM_TREE[id0.942] /data[at0001]/events[at0002]/state[at0.8]	-- /data[at0001]/events[at0002]/state[Tree]
+					use_node ITEM_TREE[id0.161] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
 				}
 			}
 		}
-		/protocol[at0004]/items matches {
-			ELEMENT[at0.12] occurrences matches {0..1} matches {	-- Point of Care Device Used
+		/protocol[id5]/items matches {
+			ELEMENT[id0.12] occurrences matches {0..1} matches {	-- Point of Care Device Used
 				value matches {
-					DV_BOOLEAN[id0.389] matches {
+					DV_BOOLEAN[id0.162] matches {
 						value matches {True}
 					}
 				}
 			}
-			ELEMENT[at0.15] occurrences matches {0..1} matches {	-- Route of Administration
+			ELEMENT[id0.15] occurrences matches {0..1} matches {	-- Route of Administration
 				value matches {
-					DV_CODED_TEXT[id0.589] matches {
-						defining_code matches {
-							[local::
-							at0.16, 	-- Oral
-							at0.17]	-- Intravenous
-						}
+					DV_CODED_TEXT[id0.163] matches {
+						defining_code matches {[ac0.4]}		-- (added by post-parse processor)
 					}
 				}
 			}
-			before [at0017]
-			allow_archetype CLUSTER[at0.10] occurrences matches {0..*} matches {	-- Testing Device
+			before [id18]
+			allow_archetype CLUSTER[id0.10] occurrences matches {0..*} matches {	-- Testing Device
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0.10"] = <
+			["id0.10"] = <
 				text = <"Testing Device">
 				description = <"The device used to test the specimen.">
 			>
-			["at0.11"] = <
+			["id0.11"] = <
 				text = <"Duration of Fasting">
 				description = <"The duration of fasting completed by the test subject prior to the sample being taken.">
 			>
-			["at0.12"] = <
+			["id0.12"] = <
 				text = <"Point of Care Device Used">
 				description = <"The test was performed using a point of care device or a home-based device.">
 			>
-			["at0.13"] = <
+			["id0.13"] = <
 				text = <"Glucose Load">
 				description = <"The amount of glucose administered to the test subject.">
 			>
-			["at0.14"] = <
+			["id0.14"] = <
 				text = <"Insulin Load">
 				description = <"The amount of insulin administered to the test subject.">
 			>
-			["at0.15"] = <
+			["id0.15"] = <
 				text = <"Route of Administration">
 				description = <"Route that the glucose was administered.">
 			>
@@ -230,65 +225,89 @@ ontology
 				text = <"Intravenous">
 				description = <"Glucose load was administered intravenously.">
 			>
-			["at0.2"] = <
+			["id0.2"] = <
 				text = <"Baseline Measurement">
 				description = <"Specific point in time measurement which provides a reference glucose reading against which subsequent measurements can be compared.">
 			>
-			["at0.3"] = <
+			["id0.3"] = <
 				text = <"1 Hour Measurement">
 				description = <"Specific point in time measurement taken 1 hour after the Baseline Measurement and subsequent glucose/insulin challenge.">
 			>
-			["at0.5"] = <
+			["id0.5"] = <
 				text = <"2 Hour Measurement">
 				description = <"Specific point in time measurement taken 2 hours after the Baseline Measurement and subsequent glucose/insulin challenge.">
 			>
-			["at0.6"] = <
+			["id0.6"] = <
 				text = <"Pre-prandial Measurement">
 				description = <"Measurement taken before a meal.">
 			>
-			["at0.7"] = <
+			["id0.7"] = <
 				text = <"Post-prandial Measurement">
 				description = <"Measurement taken after a meal.">
 			>
-			["at0.8"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0.9"] = <
+			["id0.9"] = <
 				text = <"Fasting State">
 				description = <"A fasting specimen was used for the measurement.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Blood Glucose Test Result">
 				description = <"The findings and interpretation of glucose tests performed on plasma, serum or whole blood.">
 			>
-			["at0078.1"] = <
+			["id79.1"] = <
 				text = <"Glucose Result">
 				description = <"Actual value of the glucose test result.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.2"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.3"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.4"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["at0.18"] = <
+				text = <"Concentration">
+				description = <"Concentration">
+			>
+			["at0.19"] = <
+				text = <"Mass">
+				description = <"Mass">
+			>
+			["at0.20"] = <
+				text = <"Mass (IU)">
+				description = <"Mass (IU)">
+			>
 		>
 		["ar-sy"] = <
-			["at0.10"] = <
+			["id0.10"] = <
 				text = <"*Testing Device">
 				description = <"The device used to test the specimen.">
 			>
-			["at0.11"] = <
+			["id0.11"] = <
 				text = <"*Duration of Fasting">
 				description = <"The duration of fasting completed by the test subject prior to the sample being taken.">
 			>
-			["at0.12"] = <
+			["id0.12"] = <
 				text = <"*Point of Care Device Used">
 				description = <"The test was performed using a point of care device or a home-based device.">
 			>
-			["at0.13"] = <
+			["id0.13"] = <
 				text = <"*Glucose Load">
 				description = <"The amount of glucose administered to the test subject.">
 			>
-			["at0.14"] = <
+			["id0.14"] = <
 				text = <"*Insulin Load">
 				description = <"The amount of insulin administered to the test subject.">
 			>
-			["at0.15"] = <
+			["id0.15"] = <
 				text = <"*Route of Administration">
 				description = <"Route that the glucose was administered.">
 			>
@@ -300,41 +319,90 @@ ontology
 				text = <"*Intravenous">
 				description = <"Glucose load was administered intravenously.">
 			>
-			["at0.2"] = <
+			["id0.2"] = <
 				text = <"*Baseline Measurement">
 				description = <"Specific point in time measurement which provides a reference glucose reading against which subsequent measurements can be compared.">
 			>
-			["at0.3"] = <
+			["id0.3"] = <
 				text = <"*1 Hour Measurement">
 				description = <"Specific point in time measurement taken 1 hour after the Baseline Measurement and subsequent glucose/insulin challenge.">
 			>
-			["at0.5"] = <
+			["id0.5"] = <
 				text = <"*2 Hour Measurement">
 				description = <"Specific point in time measurement taken 2 hours after the Baseline Measurement and subsequent glucose/insulin challenge.">
 			>
-			["at0.6"] = <
+			["id0.6"] = <
 				text = <"*Pre-prandial Measurement">
 				description = <"Measurement taken before a meal.">
 			>
-			["at0.7"] = <
+			["id0.7"] = <
 				text = <"*Post-prandial Measurement">
 				description = <"Measurement taken after a meal.">
 			>
-			["at0.8"] = <
-				text = <"*Tree">
-				description = <"@ internal @">
-			>
-			["at0.9"] = <
+			["id0.9"] = <
 				text = <"*Fasting State">
 				description = <"A fasting specimen was used for the measurement.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"*Blood Glucose Test Result">
 				description = <"The findings and interpretation of glucose tests performed on plasma, serum or whole blood.">
 			>
-			["at0078.1"] = <
+			["id79.1"] = <
 				text = <"*Glucose Result">
 				description = <"*Actual value of the glucose test result.">
 			>
+			["ac0.1"] = <
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
+			>
+			["ac0.2"] = <
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
+			>
+			["ac0.3"] = <
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
+			>
+			["ac0.4"] = <
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
+			>
+			["at0.18"] = <
+				text = <"*Concentration (en)">
+				description = <"*Concentration (en)">
+			>
+			["at0.19"] = <
+				text = <"*Mass (en)">
+				description = <"*Mass (en)">
+			>
+			["at0.20"] = <
+				text = <"*Mass (IU) (en)">
+				description = <"*Mass (IU) (en)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at0.18"] = <http://openehr.org/id/119>
+			["at0.19"] = <http://openehr.org/id/124>
+			["at0.20"] = <http://openehr.org/id/385>
+		>
+	>
+	value_sets = <
+		["ac0.2"] = <
+			id = <"ac0.2">
+			members = <"at108", "at38", "at39", "at41", "at75">
+		>
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at108", "at38", "at39", "at41", "at75">
+		>
+		["ac0.3"] = <
+			id = <"ac0.3">
+			members = <"at109", "at110", "at111", "at112", "at113", "at114", "at115", "at116">
+		>
+		["ac0.4"] = <
+			id = <"ac0.4">
+			members = <"at0.16", "at0.17">
 		>
 	>

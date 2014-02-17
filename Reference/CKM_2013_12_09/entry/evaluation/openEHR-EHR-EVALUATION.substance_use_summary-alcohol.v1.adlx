@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-EVALUATION.substance_use_summary-alcohol.v1.0.0
 
 specialize
@@ -33,18 +33,18 @@ Not to be used for recording data about substances other than alcohol. ">
 	>
 
 definition
-	EVALUATION[at0000.1] matches {	-- Alcohol Use Summary
-		/data[at0001]/items[at0005]/value matches {
-			DV_CODED_TEXT[id0.277] matches {
+	EVALUATION[id1.1] matches {	-- Alcohol Use Summary
+		/data[id2]/items[id6]/value matches {
+			DV_CODED_TEXT[id0.174] matches {
 				defining_code matches {[local::at0.17]}		-- Alcohol
 			}
 		}
-		/data[at0001]/items matches {
-			CLUSTER[at0007] occurrences matches {0..*} matches {
+		/data[id2]/items matches {
+			CLUSTER[id8] occurrences matches {0..*} matches {
 				items matches {
-					ELEMENT[at0008] occurrences matches {0..1} matches {
+					ELEMENT[id9] occurrences matches {0..1} matches {
 						value matches {
-							DV_CODED_TEXT[id0.109] matches {
+							DV_CODED_TEXT[id0.176] matches {
 								defining_code matches {
 									[local::
 									at0.18, 	-- All alcohol
@@ -65,7 +65,7 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
 			["at0.17"] = <
@@ -108,7 +108,7 @@ ontology
 				text = <"Fortified wine">
 				description = <"Fortified wine consumed">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Alcohol Use Summary">
 				description = <"Record a persisting summary or overview of use or consumption of alcohol over time.">
 			>

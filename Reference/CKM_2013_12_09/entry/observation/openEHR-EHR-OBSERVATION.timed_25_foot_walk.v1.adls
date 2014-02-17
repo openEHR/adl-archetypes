@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.timed_25_foot_walk.v1.0.0
 
 language
@@ -47,99 +47,88 @@ description
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Timed 25-Foot Walk
+	OBSERVATION[id1] matches {	-- Timed 25-Foot Walk
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Trial 1
+					POINT_EVENT[id3] occurrences matches {0..1} matches {	-- Trial 1
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Time
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Time
 										value matches {
-											DV_DURATION[id0053] matches {
+											DV_DURATION[id22] matches {
 												value matches {PTS/|PT0S..PT180S|}
 											}
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Trial Not Completed?
+									ELEMENT[id6] occurrences matches {0..1} matches {	-- Trial Not Completed?
 										value matches {
-											DV_BOOLEAN[id0453] matches {
+											DV_BOOLEAN[id23] matches {
 												value matches {True}
 											}
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..*} matches {	-- Reasons For Non-completion
+									ELEMENT[id7] occurrences matches {0..*} matches {	-- Reasons For Non-completion
 										value matches {
-											DV_TEXT[id0853] matches {*}
+											DV_TEXT[id24] 
 										}
 									}
 								}
 							}
 						}
 						state matches {
-							ITEM_TREE[at0009] matches {	-- Tree
+							ITEM_TREE[id10] matches {
 								items matches {
-									ELEMENT[at0010] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[id11] occurrences matches {0..*} matches {	-- Confounding Factors
 										value matches {
-											DV_TEXT[id0181] matches {*}
+											DV_TEXT[id25] 
 										}
 									}
 								}
 							}
 						}
 					}
-					POINT_EVENT[at0007] occurrences matches {0..1} matches {	-- Trial 2
+					POINT_EVENT[id8] occurrences matches {0..1} matches {	-- Trial 2
 						data matches {
-							use_node ITEM_TREE[id0953] /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Trial 1]/data[Tree]
+							use_node ITEM_TREE[id26] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[Trial 1]/data[id4]
 						}
 						state matches {
-							use_node ITEM_TREE[id0269] /data[at0001]/events[at0002]/state[at0009]	-- /data[Event Series]/events[Trial 1]/state[Tree]
+							use_node ITEM_TREE[id27] /data[id2]/events[id3]/state[id10]	-- /data[id2]/events[Trial 1]/state[id10]
 						}
 					}
 				}
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0011] matches {	-- Tree
+			ITEM_TREE[id12] matches {
 				items matches {
-					ELEMENT[at0012] occurrences matches {0..*} matches {	-- Unilateral Assistive Device
+					ELEMENT[id13] occurrences matches {0..*} matches {	-- Unilateral Assistive Device
 						value matches {
-							DV_CODED_TEXT[id0565] matches {
-								defining_code matches {
-									[local::
-									at0013, 	-- Ankle-foot orthosis
-									at0014, 	-- Cane
-									at0015]	-- Crutch
-								}
+							DV_CODED_TEXT[id28] matches {
+								defining_code matches {[ac1]}		-- *Unilaterale Gehhilfe(de)
 							}
-							DV_TEXT[id0566] matches {*}
+							DV_TEXT[id29] 
 						}
 					}
-					ELEMENT[at0020] occurrences matches {0..*} matches {	-- Bilateral Assistive Device
+					ELEMENT[id21] occurrences matches {0..*} matches {	-- Bilateral Assistive Device
 						value matches {
-							DV_CODED_TEXT[id0165] matches {
-								defining_code matches {
-									[local::
-									at0013, 	-- Ankle-foot orthosis
-									at0014, 	-- Cane
-									at0015, 	-- Crutch
-									at0016]	-- Walker/rollator
-								}
+							DV_CODED_TEXT[id30] matches {
+								defining_code matches {[ac2]}		-- *Bilaterale Gehhilfen(de)
 							}
-							DV_TEXT[id0166] matches {*}
+							DV_TEXT[id31] 
 						}
 					}
-					ELEMENT[at0017] occurrences matches {0..1} matches {	-- More Than Two Attempts?
+					ELEMENT[id18] occurrences matches {0..1} matches {	-- More Than Two Attempts?
 						value matches {
-							DV_BOOLEAN[id0567] matches {
+							DV_BOOLEAN[id32] matches {
 								value matches {True}
 							}
 						}
 					}
-					ELEMENT[at0018] occurrences matches {0..*} matches {	-- Reasons For More Than Two Attempts
+					ELEMENT[id19] occurrences matches {0..*} matches {	-- Reasons For More Than Two Attempts
 						value matches {
-							DV_TEXT[id0965] matches {*}
+							DV_TEXT[id33] 
 						}
 					}
 				}
@@ -147,162 +136,156 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Timed 25-Foot Walk">
 				description = <"Der Timed 25-Foot Walk ist eine quantitative Messung der Beweglichkeit und Motorik der unteren Extremitäten. Dieser Test bildet die erste Komponente des Multiple Sclerosis Functional Composite (MSFC), eine Reihe von drei Tests zur Verlaufsdokumentation der Multiplen Sklerose.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Test 1">
 				description = <"Erster von zwei Teilen des Timed 25-Foot Walk.">
 			>
-			["at0003"] = <
-				text = <"Baum">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Zeit">
 				description = <"Benötigte Zeit für eine erfolgreich zurückgelegte Gehstrecke von 25 Fuß.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Test nicht beendet?">
 				description = <"Konnte die Strecke nicht zurückgelegt werden oder wurde der Test vorzeitig abgebrochen?">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Gründe für Nichtbeenden">
 				description = <"Angabe der Gründe, falls die Strecke nicht zurückgelegt werden konnte oder der Test vorzeitig abgebrochen wurde.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Test 2">
 				description = <"Zweiter von zwei Teilen des Timed 25-Foot Walk.">
 			>
-			["at0009"] = <
-				text = <"Baum">
-				description = <"@ internal @">
-			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Begleitumstände">
 				description = <"Angabe jedweder Umstände, welche die Leistung des Patienten beeinflusst haben könnten.">
 			>
-			["at0011"] = <
-				text = <"Baum">
-				description = <"@ internal @">
-			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Unilaterale Gehhilfe">
 				description = <"Angabe, welches unterstützende Hilfsmittel verwendet wurde.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Sprunggelenkorthese">
 				description = <"Gehorthese, Knöchel-Fuss-Orthese.">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Stock">
 				description = <"Geh- oder Krückstock.">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Krücke">
 				description = <"Unterarmgehstütze.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Gehwagen/Rollator">
 				description = <"Gehwagen oder Rollator.">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Mehr als zwei Anläufe?">
 				description = <"Wurden mehr als zwei Anläufe benötigt, um zwei erfolgreiche Testläufe zu erhalten?">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Gründe für mehr als zwei Anläufe">
 				description = <"Gründe für mehr als zwei Anläufe, um zwei erfolgreiche Testläufe zu erhalten.">
 			>
-			["at0020"] = <
+			["id21"] = <
+				text = <"Bilaterale Gehhilfen">
+				description = <"Angabe, welche unterstützenden Hilfsmittel verwendet wurden.">
+			>
+			["ac1"] = <
+				text = <"Unilaterale Gehhilfe">
+				description = <"Angabe, welches unterstützende Hilfsmittel verwendet wurde.">
+			>
+			["ac2"] = <
 				text = <"Bilaterale Gehhilfen">
 				description = <"Angabe, welche unterstützenden Hilfsmittel verwendet wurden.">
 			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Timed 25-Foot Walk">
 				description = <"The Timed 25-Foot Walk is a quantitative test of lower extremity mobility and motor function. It is the first component of the Multiple Sclerosis Functional Composite (MSFC), a series of three tests to document the course of Multiple Sclerosis.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Trial 1">
 				description = <"First of two trials of the Timed 25-Foot Walk.">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Time">
 				description = <"Time required to successfully complete the 25-foot walking distance.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Trial Not Completed?">
 				description = <"Could the distance not be completed or was the trial terminated prematurely?">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Reasons For Non-completion">
 				description = <"Record the reasons, if the distance could not be completed or the test was terminated prematurely.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Trial 2">
 				description = <"Second of two trials of the Timed 25-Foot Walk.">
 			>
-			["at0009"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Confounding Factors">
 				description = <"Record any circumstances that you believe may have affected the patient's performance.">
 			>
-			["at0011"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Unilateral Assistive Device">
 				description = <"Record which unilateral assistive devices were used.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Ankle-foot orthosis">
 				description = <"Ankle-Foot Orthosis (AFO).">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Cane">
 				description = <"Walking stick or cane.">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Crutch">
 				description = <"Underarm crutch.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Walker/rollator">
 				description = <"Walker or rollator device.">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"More Than Two Attempts?">
 				description = <"Were there more than two attempts to get two successful trials?">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Reasons For More Than Two Attempts">
 				description = <"Reasons for more than two attempts to get two successful trials.">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"Bilateral Assistive Device">
 				description = <"Record which bilateral assistive devices were used.">
 			>
+			["ac1"] = <
+				text = <"*Unilaterale Gehhilfe(de)">
+				description = <"*Angabe, welches unterstützende Hilfsmittel verwendet wurde.(de)">
+			>
+			["ac2"] = <
+				text = <"*Bilaterale Gehhilfen(de)">
+				description = <"*Angabe, welche unterstützenden Hilfsmittel verwendet wurden.(de)">
+			>
+		>
+	>
+	value_sets = <
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at14", "at15", "at16", "at17">
+		>
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at14", "at15", "at16">
 		>
 	>

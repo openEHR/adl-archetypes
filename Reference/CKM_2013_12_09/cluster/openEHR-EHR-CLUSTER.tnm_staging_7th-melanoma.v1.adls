@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.tnm_staging_7th-melanoma.v1.0.0
 
 specialize
-	openEHR-EHR-CLUSTER.tnm_staging_7th.v1.0.0
+	openEHR-EHR-CLUSTER.tnm_staging_7th.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -32,77 +32,30 @@ description
 	>
 
 definition
-	CLUSTER[at0000.1] matches {	-- Tumour - Primary Cutaneous Melanoma TNM staging 7th Edition
-		/items[at0003]/value matches {
-			DV_CODED_TEXT[id0.5] matches {
-				defining_code matches {
-					[local::
-					at0.52, 	-- TX
-					at0.53, 	-- T0
-					at0.54, 	-- Tis
-					at0.55, 	-- T1
-					at0.56, 	-- T1a
-					at0.57, 	-- T1b
-					at0.58, 	-- T2
-					at0.59, 	-- T2a
-					at0.60, 	-- T2b
-					at0.61, 	-- T3
-					at0.62, 	-- T3a
-					at0.63, 	-- T3b
-					at0.64, 	-- T4
-					at0.65, 	-- T4a
-					at0.66]	-- T4b
-				}
+	CLUSTER[id1.1] matches {	-- Tumour - Primary Cutaneous Melanoma TNM staging 7th Edition
+		/items[id4]/value matches {
+			DV_CODED_TEXT[id0.100] matches {
+				defining_code matches {[ac0.1]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0004]/value matches {
-			DV_CODED_TEXT[id0.405] matches {
-				defining_code matches {
-					[local::
-					at0.67, 	-- NX
-					at0.68, 	-- N0
-					at0.69, 	-- N1
-					at0.70, 	-- N1a
-					at0.71, 	-- N1b
-					at0.72, 	-- N2
-					at0.73, 	-- N2a
-					at0.74, 	-- N2b
-					at0.75, 	-- N2c
-					at0.76]	-- N3
-				}
+		/items[id5]/value matches {
+			DV_CODED_TEXT[id0.101] matches {
+				defining_code matches {[ac0.2]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0005]/value matches {
-			DV_CODED_TEXT[id0.805] matches {
-				defining_code matches {
-					[local::
-					at0.77, 	-- M0
-					at0.78, 	-- M1a
-					at0.79, 	-- M1b
-					at0.80]	-- M1c
-				}
+		/items[id6]/value matches {
+			DV_CODED_TEXT[id0.102] matches {
+				defining_code matches {[ac0.3]}		-- (added by post-parse processor)
 			}
 		}
-		/items[at0014]/value matches {
-			DV_CODED_TEXT[id0.807] matches {
-				defining_code matches {
-					[local::
-					at0.81, 	-- Stage 0
-					at0.82, 	-- Stage IA
-					at0.83, 	-- Stage IB
-					at0.84, 	-- Stage IIA
-					at0.85, 	-- Stage IIB
-					at0.86, 	-- Stage IIC
-					at0.87, 	-- Stage IIIA
-					at0.88, 	-- Stage IIIB
-					at0.89, 	-- Stage IIIC
-					at0.90]	-- Stage IV
-				}
+		/items[id15]/value matches {
+			DV_CODED_TEXT[id0.107] matches {
+				defining_code matches {[ac0.5]}		-- (added by post-parse processor)
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
 			["at0.52"] = <
@@ -261,9 +214,51 @@ ontology
 				text = <"Stage IV">
 				description = <"*">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Tumour - Primary Cutaneous Melanoma TNM staging 7th Edition">
 				description = <"For the classification and grading of primary cutaneous melanom using the TNM classification 7th Edition.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.2"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.3"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.4"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["ac0.5"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at0.52", "at0.53", "at0.54", "at0.55", "at0.56", "at0.57", "at0.58", "at0.59", "at0.60", "at0.61", "at0.62", "at0.63", "at0.64", "at0.65", "at0.66">
+		>
+		["ac0.3"] = <
+			id = <"ac0.3">
+			members = <"at0.77", "at0.78", "at0.79", "at0.80">
+		>
+		["ac0.2"] = <
+			id = <"ac0.2">
+			members = <"at0.67", "at0.68", "at0.69", "at0.70", "at0.71", "at0.72", "at0.73", "at0.74", "at0.75", "at0.76">
+		>
+		["ac0.4"] = <
+			id = <"ac0.4">
+			members = <"at48", "at49", "at50", "at51", "at52">
+		>
+		["ac0.5"] = <
+			id = <"ac0.5">
+			members = <"at0.81", "at0.82", "at0.83", "at0.84", "at0.85", "at0.86", "at0.87", "at0.88", "at0.89", "at0.90">
 		>
 	>

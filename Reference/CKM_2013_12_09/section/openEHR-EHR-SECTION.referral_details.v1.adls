@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-SECTION.referral_details.v1.0.0
 
 language
@@ -30,23 +30,23 @@ Supporting summary information can be added to the COMPOSITION slots - for examp
 	>
 
 definition
-	SECTION[at0000] matches {	-- Referral Details
+	SECTION[id1] matches {	-- Referral Details
 		items matches {
-			allow_archetype INSTRUCTION[at0001] occurrences matches {0..1} matches {	-- Referral Request
+			allow_archetype INSTRUCTION[id2] occurrences matches {0..1} matches {	-- Referral Request
 				include
-					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.request(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.request(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Referral Details">
 				description = <"To demonstrate a design pattern for representation Referral details within a Referral composition.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Referral Request">
 				description = <"Slot constrained to specifically include archetypes representing referral requests.">
 			>

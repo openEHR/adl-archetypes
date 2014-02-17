@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-EVALUATION.pregnancy_bf_status.v1.0.0
 
 language
@@ -35,20 +35,20 @@ Not to be used to record details about a specific pregnancy - use EVALUATION.pre
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- Pregnancy/Breast Feeding Status
+	EVALUATION[id1] matches {	-- Pregnancy/Breast Feeding Status
 		data matches {
-			ITEM_TREE[at0001] matches {	-- Tree
+			ITEM_TREE[id2] matches {
 				items matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Pregnant
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Pregnant
 						value matches {
-							DV_BOOLEAN[id0077] matches {
+							DV_BOOLEAN[id7] matches {
 								value matches {True}
 							}
 						}
 					}
-					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Breast Feeding
+					ELEMENT[id4] occurrences matches {0..1} matches {	-- Breast Feeding
 						value matches {
-							DV_BOOLEAN[id0477] matches {
+							DV_BOOLEAN[id8] matches {
 								value matches {True}
 							}
 						}
@@ -57,11 +57,11 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0004] matches {	-- Tree
+			ITEM_TREE[id5] matches {
 				items matches {
-					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Last Updated
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Last Updated
 						value matches {
-							DV_DATE_TIME[id0677] matches {*}
+							DV_DATE_TIME[id9] 
 						}
 					}
 				}
@@ -69,30 +69,22 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Pregnancy/Breast Feeding Status">
 				description = <"Record of the positive state of pregnancy or breast feeding.">
 			>
-			["at0001"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Pregnant">
 				description = <"The woman is pregnant.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Breast Feeding">
 				description = <"The woman is breast feeding.">
 			>
-			["at0004"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Last Updated">
 				description = <"Date and optional time when the pregnancy and /or breast feeding statement was last updated.">
 			>

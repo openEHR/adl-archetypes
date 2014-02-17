@@ -453,14 +453,14 @@ definition
 					}
 					ELEMENT[at0061] occurrences matches {0..1} matches {	-- Criteria for Pure Tone Average
 						value matches {
-							DV_CODED_TEXT matches {
+							DV_CODED_TEXT[at0150] matches {
 								defining_code matches {
 									[local::
 									at0062, 	-- 3 frequency average
 									at0063]	-- 4 frequency average
 								}
 							}
-							DV_TEXT matches {*}
+							DV_TEXT[at0151] matches {*}
 						}
 					}
 					CLUSTER[at0102] occurrences matches {0..1} matches {	-- Screening Assessment Pass Criteria
@@ -950,6 +950,14 @@ ontology
 					text = <"Reliability">
 					description = <"Narrative description of the reliability of the test results, as determined by the tester.">
 					comment = <"If an appropriate value set can be determined, this could be coded. The maximum occurrences of this data element have been set to two to allow for both narrative and a coded value to be selected in a template.">
+				>
+				["at0150"] = <
+					text = <"Coded term">
+					description = <"Coded term">
+				>
+				["at0151"] = <
+					text = <"Free text term">
+					description = <"Free text term">
 				>
 			>
 		>

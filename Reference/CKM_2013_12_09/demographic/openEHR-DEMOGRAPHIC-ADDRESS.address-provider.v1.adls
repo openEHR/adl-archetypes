@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-DEMOGRAPHIC-ADDRESS.address-provider.v1.0.0
 
 specialize
-	openEHR-DEMOGRAPHIC-ADDRESS.address.v1.0.0
+	openEHR-DEMOGRAPHIC-ADDRESS.address.v1
 
 language
 	original_language = <[ISO_639-1::pt-br]>
@@ -49,50 +49,64 @@ description
 	>
 
 definition
-	ADDRESS[at0000.1] matches {	-- Healthcare provider address
-		/details[at0001]/items matches {
-			after [at0011]
-			ELEMENT[at0.2] occurrences matches {0..1} matches {	-- Communication privacy
+	ADDRESS[id1.1] matches {	-- Healthcare provider address
+		/details[id2]/items matches {
+			after [id12]
+			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Communication privacy
 				value matches {
-					DV_BOOLEAN[id0.237] 
+					DV_BOOLEAN[id0.83] 
 				}
 			}
-			ELEMENT[at0.3] occurrences matches {0..*} matches {	-- Healthcare provider identifier
+			ELEMENT[id0.3] occurrences matches {0..*} matches {	-- Healthcare provider identifier
 				value matches {
-					DV_TEXT[id0.637] 
+					DV_TEXT[id0.84] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0.2"] = <
+			["id0.2"] = <
 				text = <"Communication privacy">
 				description = <"Indicates that this communication mechanism is not to be openly displayed, except to specific providers.">
 			>
-			["at0.3"] = <
+			["id0.3"] = <
 				text = <"Healthcare provider identifier">
 				description = <"Identifier of a healthcare provider who may access this communication mechanism.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Healthcare provider address">
 				description = <"Healthcare provider address, based on ISO standards.">
 			>
+			["ac0.1"] = <
+				text = <"*(added by post-parse processor)(pt-br)">
+				description = <"*(added by post-parse processor)(pt-br)">
+			>
 		>
 		["pt-br"] = <
-			["at0.2"] = <
+			["id0.2"] = <
 				text = <"Indicador de privacidade">
 				description = <"Indica quando um mecanismo de comunicação não é para ser exibido abertamente, exceto para organizações específicas.">
 			>
-			["at0.3"] = <
+			["id0.3"] = <
 				text = <"Identificador do prestador">
 				description = <"Identificador de um prestador que pode acessar este meio de comunicação.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Endereço de um Prestador de Assistência à Saúde">
 				description = <"Endereço Postal de um Prestador de Assistência à Saúde.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at462", "at463", "at464", "at465", "at466", "at467">
 		>
 	>

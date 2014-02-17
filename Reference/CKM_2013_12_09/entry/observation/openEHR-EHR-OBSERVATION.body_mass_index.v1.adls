@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.body_mass_index.v1.0.0
 
 language
@@ -168,18 +168,18 @@ Tzamaloukas AH, Patron A, Malhotra D. Body Mass Index in Amputees. Journal of Pa
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Body mass index
+	OBSERVATION[id1] matches {	-- Body mass index
 		data matches {
-			HISTORY[at0001] matches {	-- history
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {1..*} matches {	-- Any event
+					EVENT[id3] occurrences matches {1..*} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Single
+							ITEM_TREE[id4] matches {
 								items cardinality matches {1..*; unordered} matches {
-									ELEMENT[at0004] matches {	-- Body Mass Index
+									ELEMENT[id5] matches {	-- Body Mass Index
 										value matches {
-											DV_QUANTITY[id0053] matches {
-												property matches {[openehr::349]}
+											DV_QUANTITY[id13] matches {
+												property matches {[at10]}
 												[magnitude, units, precision] matches {
 													[{|0.0..<1000.0|}, {"kg/m2"}, {1}],
 													[{|0.0..<1000.0|}, {"lb/in2"}, {1}]
@@ -195,27 +195,23 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_LIST[at0005] matches {	-- List
+			ITEM_LIST[id6] matches {
 				items matches {
-					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Method
+					ELEMENT[id7] occurrences matches {0..1} matches {	-- Method
 						value matches {
-							DV_CODED_TEXT[id0901] matches {
-								defining_code matches {
-									[local::
-									at0007, 	-- Automatic entry
-									at0008]	-- Direct entry
-								}
+							DV_CODED_TEXT[id14] matches {
+								defining_code matches {[ac1]}		-- Method
 							}
 						}
 					}
-					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Formula
+					ELEMENT[id11] occurrences matches {0..1} matches {	-- Formula
 						value matches {
-							DV_TEXT[id0093] matches {*}
+							DV_TEXT[id15] 
 						}
 					}
-					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Comment
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Comment
 						value matches {
-							DV_TEXT[id0493] matches {*}
+							DV_TEXT[id16] 
 						}
 					}
 				}
@@ -223,291 +219,276 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Indice de massa corpórea">
 				description = <"IMC - medida que compara o peso de uma pessoa com a altura.">
 			>
-			["at0001"] = <
-				text = <"history">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Qualquer evento">
 				description = <"Gravação a qualquer momento do Índice de Massa Corpórea.">
 			>
-			["at0003"] = <
-				text = <"Single">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Indice de massa corpórea">
 				description = <"Índice que descreve a relação de peso com a altura.">
 			>
-			["at0005"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Método">
 				description = <"Método de entrada do IMC.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Entrada automática">
 				description = <"IMC registrado automaticamente, sem a intervenção do usuário.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Entrada direta">
 				description = <"IMC registrado diretamente pelo usuário.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Fórmula">
 				description = <"Fórmula usada para calcular o IMC (somente se for diferente de peso/altura^2).">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Comentário">
 				description = <"Comentário sobre a medição, por exemplo, IMC observando que as medidas utilizadas foram ajustadas para peso / altura.">
 			>
+			["ac1"] = <
+				text = <"*Method(en)">
+				description = <"*The method of entering the Body Mass Index.(en)">
+			>
+			["at10"] = <
+				text = <"*Mass per area (en)">
+				description = <"*Mass per area (en)">
+			>
 		>
 		["es-ar"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Índice de masa corporal">
 				description = <"Medición calculada que compara el peso y altura de un individuo">
 			>
-			["at0001"] = <
-				text = <"*history(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Cualquier evento">
 				description = <"Cualquier registro en el tiempo del Índice de Masa Corporal">
 			>
-			["at0003"] = <
-				text = <"*Single(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Índice de Masa Corporal">
 				description = <"Índice que describe el cociente entre peso y altura.">
 			>
-			["at0005"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Método">
 				description = <"El método de registro del Índice de Masa Corporal.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Registro automático">
 				description = <"Índice de Masa Corporal calculado e ingresado automáticamente sin intervención del usuario.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Entrada directa">
 				description = <"Índice de Masa Corporal calculado e ingresado directamente por el usuario.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Fórmula">
 				description = <"Fórmula usada para calcular el Índice de Masa Corporal.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Comentario">
 				description = <"Comentario sobre la medición del Índice de Masa Corporal ej: informando que la medición registrada fue peso/altura ajustado. ">
 			>
+			["ac1"] = <
+				text = <"*Method(en)">
+				description = <"*The method of entering the Body Mass Index.(en)">
+			>
+			["at10"] = <
+				text = <"*Mass per area (en)">
+				description = <"*Mass per area (en)">
+			>
 		>
 		["fa"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"شاخص توده بدن">
 				description = <"اندازه گیری محاسبه شده ای که وزن و قد افراد را مقایسه می کند
 ">
 			>
-			["at0001"] = <
-				text = <"*history(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"هر رویداد">
 				description = <"هر گونه ثبت زمانی شاخص توده بدن">
 			>
-			["at0003"] = <
-				text = <"*Single(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"شاخص توده بدن">
 				description = <"شاخصی که نسبت وزن به قد را توصیف می کند">
 			>
-			["at0005"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"روش">
 				description = <"روش ثبت شاخص توده بدن">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"ثبت خودکار">
 				description = <" شاخص توده بدن بطور خودکار بدون مداخله کاربر محاسبه و ثبت می شود">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"ورود مستقیم داده ها">
 				description = <"شاخص توده بدن مستقیما توسط کاربر محاسبه و ثبت می شود">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"فرمول">
 				description = <"فرمول مورد استفاده برای استخراج شاخص توده بدن">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"نظر">
 				description = <"نظر در مورد اندازه گیری شاخص توده بدن به عنوان مثال ذکر اینکه در اندازه گیری های انجام شده از وزن و یا قد معادل استفاده شده است ">
 			>
+			["ac1"] = <
+				text = <"*Method(en)">
+				description = <"*The method of entering the Body Mass Index.(en)">
+			>
+			["at10"] = <
+				text = <"*Mass per area (en)">
+				description = <"*Mass per area (en)">
+			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Body mass index">
 				description = <"Calculated measurement which compares a person's weight and height.">
 			>
-			["at0001"] = <
-				text = <"history">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Any timed recording of Body Mass Index.">
 			>
-			["at0003"] = <
-				text = <"Single">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Body Mass Index">
 				description = <"Index describing ratio of weight to height.">
 			>
-			["at0005"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Method">
 				description = <"The method of entering the Body Mass Index.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Automatic entry">
 				description = <"Body Mass Index calculated and entered automatically without user intervention.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Direct entry">
 				description = <"Body Mass Index calculated and entered directly by user.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Formula">
 				description = <"Formula used to derive the Body Mass Index.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Comment">
 				description = <"Comment about the Body Mass Index measurement eg noting that the measurements used were adjusted weight/height.">
 			>
+			["ac1"] = <
+				text = <"Method">
+				description = <"The method of entering the Body Mass Index.">
+			>
+			["at10"] = <
+				text = <"Mass per area">
+				description = <"Mass per area">
+			>
 		>
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"معامل كتلة الجسم">
 				description = <"قياس حسابي يجمع بين وزن الشخص و طوله">
 			>
-			["at0001"] = <
-				text = <"*history(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"إحدى الوقائع">
 				description = <"قياس معامل كتلة الجسم في وقت معين">
 			>
-			["at0003"] = <
-				text = <"*Single(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"معامل كتلة الجسم">
 				description = <"معامل يصف النسبة بين الوزن و الطول">
 			>
-			["at0005"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"الطريقة">
 				description = <"طريقة إدخال معامل كتلة الجسم">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"إدخال تلقائي">
 				description = <"يتم حساب و إدخال معامل كتلةالجسم تلقائيا بدون تدخل من المستخدِم">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"إدخال مباشر">
 				description = <"يتم حساب و إدخال كتلة الجسم مباشرة بواسطة المستخدم">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"الصيغة">
 				description = <"الصيغة المستخدمة لاشتقاق معامل كتلة الجسم">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"تعليق">
 				description = <"تعليق حول قياس معامل كتلة الجسم مثل ملاحظة أن القياسات المستخدمة هي قياسات مصححة للوزن و الطول">
 			>
+			["ac1"] = <
+				text = <"*Method(en)">
+				description = <"*The method of entering the Body Mass Index.(en)">
+			>
+			["at10"] = <
+				text = <"*Mass per area (en)">
+				description = <"*Mass per area (en)">
+			>
 		>
 		["nl"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Body mass index">
 				description = <"Berekende meting welke gewicht en lengte van een persoon vergelijkt.">
 			>
-			["at0001"] = <
-				text = <"*history(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Elke gebeurtenis">
 				description = <"Opslag van iedere meting van de Body Mass Index">
 			>
-			["at0003"] = <
-				text = <"*Single(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Body Mass Index">
 				description = <"Index om ratio gewicht - lengte te beschrijven">
 			>
-			["at0005"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Methode">
 				description = <"De methode om de Body Mass Index in te voeren.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Automatische invoer">
 				description = <"Body Mass Index is automatisch berekend en ingevoerd, zonder tussenkomst van gebruikers.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Direkte invoer">
 				description = <"Body Mass Index is berekend en ingevoerd door de gebruiker.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Formule">
 				description = <"De formule die gebruikt wordt om de Body Mass Index te berekenen">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Opmerking">
 				description = <"Opmerking over de Body Mass Index meting, b.v. dat de metingen die gebruikt werden voor de berekening, aangepaste lengte/gewicht zijn.">
+			>
+			["ac1"] = <
+				text = <"*Method(en)">
+				description = <"*The method of entering the Body Mass Index.(en)">
+			>
+			["at10"] = <
+				text = <"*Mass per area (en)">
+				description = <"*Mass per area (en)">
 			>
 		>
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["at0004"] = <[SNOMED-CT::60621009]>
+			["id5"] = <http://snomedct.info/id/60621009>
 		>
 		["LOINC"] = <
-			["at0004"] = <[LOINC::39156-5]>
+			["id5"] = <http://loinc.org/id/39156-5>
+		>
+		["openehr"] = <
+			["at10"] = <http://openehr.org/id/349>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at8", "at9">
 		>
 	>

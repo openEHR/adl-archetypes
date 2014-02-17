@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-COMPOSITION.review.v1.0.0
 
 language
@@ -28,20 +28,29 @@ description
 	>
 
 definition
-	COMPOSITION[at0000] matches {	-- Review
+	COMPOSITION[id1] matches {	-- Review
 		category matches {
-			DV_CODED_TEXT[id0577] matches {
-				defining_code matches {[openehr::433]}
+			DV_CODED_TEXT[id2] matches {
+				defining_code matches {[at1]}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Review">
 				description = <"Composition for the recording of the details of a formal review of a subject's clinical situation or any specific aspect of their clinical care.">
 			>
+			["at1"] = <
+				text = <"event">
+				description = <"event">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at1"] = <http://openehr.org/id/433>
 		>
 	>

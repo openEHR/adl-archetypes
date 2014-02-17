@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.braden_scale_neonate.v1.0.0
 
 language
@@ -34,104 +34,104 @@ Use the adult Braden Scale for children over 5 years of age and adults - OPEN-EH
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Neonatal Braden scale (NSRAS)
+	OBSERVATION[id1] matches {	-- Neonatal Braden scale (NSRAS)
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0011] occurrences matches {0..1} matches {	-- General physical condition
+									ELEMENT[id12] occurrences matches {0..1} matches {	-- General physical condition
 										value matches {
-											DV_ORDINAL[id0253] matches {
+											DV_ORDINAL[id18] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0012]}],
-													[{2}, {[local::at0013]}],
-													[{3}, {[local::at0014]}],
-													[{4}, {[local::at0015]}]
+													[{1}, {[at13]}],
+													[{2}, {[at14]}],
+													[{3}, {[at15]}],
+													[{4}, {[at16]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Moisture
+									ELEMENT[id6] occurrences matches {0..1} matches {	-- Moisture
 										value matches {
-											DV_ORDINAL[id0453] matches {
+											DV_ORDINAL[id19] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0017]}],
-													[{2}, {[local::at0018]}],
-													[{3}, {[local::at0019]}],
-													[{4}, {[local::at0020]}]
+													[{1}, {[at18]}],
+													[{2}, {[at19]}],
+													[{3}, {[at20]}],
+													[{4}, {[at21]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..1} matches {	-- Nutrition
+									ELEMENT[id7] occurrences matches {0..1} matches {	-- Nutrition
 										value matches {
-											DV_ORDINAL[id0853] matches {
+											DV_ORDINAL[id20] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0021]}],
-													[{2}, {[local::at0022]}],
-													[{3}, {[local::at0023]}],
-													[{4}, {[local::at0024]}]
+													[{1}, {[at22]}],
+													[{2}, {[at23]}],
+													[{3}, {[at24]}],
+													[{4}, {[at25]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0007] occurrences matches {0..1} matches {	-- Activity
+									ELEMENT[id8] occurrences matches {0..1} matches {	-- Activity
 										value matches {
-											DV_ORDINAL[id0254] matches {
+											DV_ORDINAL[id21] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0025]}],
-													[{2}, {[local::at0026]}],
-													[{3}, {[local::at0027]}],
-													[{4}, {[local::at0028]}]
+													[{1}, {[at26]}],
+													[{2}, {[at27]}],
+													[{3}, {[at28]}],
+													[{4}, {[at29]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0008] occurrences matches {0..1} matches {	-- Mobility
+									ELEMENT[id9] occurrences matches {0..1} matches {	-- Mobility
 										value matches {
-											DV_ORDINAL[id0653] matches {
+											DV_ORDINAL[id22] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0029]}],
-													[{2}, {[local::at0030]}],
-													[{3}, {[local::at0031]}],
-													[{4}, {[local::at0032]}]
+													[{1}, {[at30]}],
+													[{2}, {[at31]}],
+													[{3}, {[at32]}],
+													[{4}, {[at33]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Mental status
+									ELEMENT[id10] occurrences matches {0..1} matches {	-- Mental status
 										value matches {
-											DV_ORDINAL[id0053] matches {
+											DV_ORDINAL[id23] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0033]}],
-													[{2}, {[local::at0034]}],
-													[{3}, {[local::at0035]}],
-													[{4}, {[local::at0036]}]
+													[{1}, {[at34]}],
+													[{2}, {[at35]}],
+													[{3}, {[at36]}],
+													[{4}, {[at37]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0016] occurrences matches {0..1} matches {	-- Comment
+									ELEMENT[id17] occurrences matches {0..1} matches {	-- Comment
 										value matches {
-											DV_TEXT[id0255] matches {*}
+											DV_TEXT[id24] 
 										}
 									}
-									ELEMENT[at0010] occurrences matches {0..1} matches {	-- Total score
+									ELEMENT[id11] occurrences matches {0..1} matches {	-- Total score
 										value matches {
-											DV_COUNT[id0854] matches {
+											DV_COUNT[id25] matches {
 												magnitude matches {|2..24|}
 											}
 										}
 									}
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Graded risk
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Graded risk
 										value matches {
-											DV_ORDINAL[id0054] matches {
+											DV_ORDINAL[id26] matches {
 												[value, symbol] matches {
-													[{0}, {[local::at0038]}],
-													[{1}, {[local::at0037]}]
+													[{0}, {[at39]}],
+													[{1}, {[at38]}]
 												}
 											}
 										}
@@ -145,164 +145,214 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Neonatal Braden scale (NSRAS)">
 				description = <"Neonatal Skin Risk Assessment Scale (NSRAS), an instrument to assess neonates at risk for skin breakdown, based on the Braden Scale for Predicting Pressure Sore Risk in adults.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Any event.">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Graded risk">
 				description = <"A graded risk derived from the summed Total score.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Moisture">
 				description = <"The dgree to which the infant's skin is exposed to moisture.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Nutrition">
 				description = <"The usual food intake of the neonate.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Activity">
 				description = <"The amount of physical activity of the neonate.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Mobility">
 				description = <"The neonate's ability ot change and control body position.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Mental status">
 				description = <"An evaluation of the mental status or sensory preception of the neonate.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Total score">
 				description = <"The total score, derived from the sum of all sub-scores for identifying if a neonate is at risk for pressure ulcers.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"General physical condition">
 				description = <"An assessment of general condition, based on gestational age.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Best">
 				description = <"Gestational Age > 38 Weeks To Posterm.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Good">
 				description = <"Gestational Age > 33 Weeks But < 38 weeks.">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Poor">
 				description = <"Gestational Age > 28 Weeks But < 33 weeks.">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Very poor">
 				description = <"Gestational Age > 28 Weeks But < 33 weeks.">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Comment">
 				description = <"An additional comment about the neonatal pressure risk assessment.">
 			>
-			["at0017"] = <
+			["at18"] = <
 				text = <"Rarely moist">
 				description = <"Skin is usually dry, linen requires changing only every 24 hours.">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"Occasionally moist">
 				description = <"Skin is occasionally moist/damp. Requiring an extra linen change approximately once a day.">
 			>
-			["at0019"] = <
+			["at20"] = <
 				text = <"Moist">
 				description = <"Skin is often but not always moist/damp; linen must be changed at least once a shift.">
 			>
-			["at0020"] = <
+			["at21"] = <
 				text = <"Constantly moist">
 				description = <"Skin is moist/damp every time infant is moved or turned.">
 			>
-			["at0021"] = <
+			["at22"] = <
 				text = <"Excellent">
 				description = <"Bottlehreastfeeds every meal which  meets nutritional needs  for growth.">
 			>
-			["at0022"] = <
+			["at23"] = <
 				text = <"Adequate">
 				description = <"Is on tube feedings which  meet nutritional needs for growth.">
 			>
-			["at0023"] = <
+			["at24"] = <
 				text = <"Inadequate">
 				description = <"Receives less than  optimum amount of liquid diet for growth (formula/breast milk) and supplemented with intravenous fluids.">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Very poor">
 				description = <"NPO on intravenous  fluids.">
 			>
-			["at0025"] = <
+			["at26"] = <
 				text = <"Unlimited">
 				description = <"In an open crib.">
 			>
-			["at0026"] = <
+			["at27"] = <
 				text = <"Slightly limited">
 				description = <"In a double walled isolette.">
 			>
-			["at0027"] = <
+			["at28"] = <
 				text = <"Limited bed-bound">
 				description = <"In a radiant warmer without a clear plastic “saran” tent.">
 			>
-			["at0028"] = <
+			["at29"] = <
 				text = <"Completely bed-bound">
 				description = <"In a radiant warmer with a clear plastic “saran” tent.">
 			>
-			["at0029"] = <
+			["at30"] = <
 				text = <"No limitation">
 				description = <"Makes major and frequent changes in position without assistance (e.g., turn  head).">
 			>
-			["at0030"] = <
+			["at31"] = <
 				text = <"Slightly limited">
 				description = <"Makes frequent though slight changes in body or extremity position independently.">
 			>
-			["at0031"] = <
+			["at32"] = <
 				text = <"Very limited">
 				description = <"Makes occasional slight changes in body or extremity position but unable to make frequent or significant changes independently.">
 			>
-			["at0032"] = <
+			["at33"] = <
 				text = <"Completely immobile">
 				description = <"Does not make even slight changes in body or extremity position without assistance (e.g., Pavulon).">
 			>
-			["at0033"] = <
+			["at34"] = <
 				text = <"No impairment">
 				description = <"Alert and active.">
 			>
-			["at0034"] = <
+			["at35"] = <
 				text = <"Slightly limited">
 				description = <"Lethargic.">
 			>
-			["at0035"] = <
+			["at36"] = <
 				text = <"Very limited">
 				description = <"Responds only to painful stimuli (flinches, grasps, moans, increased blood pressure or heart rate).">
 			>
-			["at0036"] = <
+			["at37"] = <
 				text = <"Completely limited">
 				description = <"Unresponsive (does not flinch, grasp, moan, increase blood pressure, or heart rate) to painful stimuli due to diminished level of consciousness or sedation.">
 			>
-			["at0037"] = <
+			["at38"] = <
 				text = <"At risk - Total score 13 or over">
 				description = <"The neonate is not at risk of developing a pressure ulcer.">
 			>
-			["at0038"] = <
+			["at39"] = <
 				text = <"Not at risk - Total score less than 13">
 				description = <"The neonate is at risk of developing a pressure ulcer.">
 			>
+			["ac1"] = <
+				text = <"General physical condition">
+				description = <"An assessment of general condition, based on gestational age.">
+			>
+			["ac2"] = <
+				text = <"Moisture">
+				description = <"The dgree to which the infant's skin is exposed to moisture.">
+			>
+			["ac3"] = <
+				text = <"Nutrition">
+				description = <"The usual food intake of the neonate.">
+			>
+			["ac4"] = <
+				text = <"Activity">
+				description = <"The amount of physical activity of the neonate.">
+			>
+			["ac5"] = <
+				text = <"Mobility">
+				description = <"The neonate's ability ot change and control body position.">
+			>
+			["ac6"] = <
+				text = <"Mental status">
+				description = <"An evaluation of the mental status or sensory preception of the neonate.">
+			>
+			["ac7"] = <
+				text = <"Graded risk">
+				description = <"A graded risk derived from the summed Total score.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at13", "at14", "at15", "at16">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at18", "at19", "at20", "at21">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at22", "at23", "at24", "at25">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at26", "at27", "at28", "at29">
+		>
+		["ac5"] = <
+			id = <"ac5">
+			members = <"at30", "at31", "at32", "at33">
+		>
+		["ac6"] = <
+			id = <"ac6">
+			members = <"at34", "at35", "at36", "at37">
+		>
+		["ac7"] = <
+			id = <"ac7">
+			members = <"at39", "at38">
 		>
 	>

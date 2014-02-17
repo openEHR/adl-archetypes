@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.nine_hole_peg_test.v1.0.0
 
 language
@@ -52,139 +52,135 @@ Mathiowetz V, Weber K, Kashman N, Volland G. Adult Norms For The Nine Hole Peg T
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Nine Hole Peg Test
+	OBSERVATION[id1] matches {	-- Nine Hole Peg Test
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0074] occurrences matches {0..1} matches {	-- Dominant Hand - Trial 1
+					POINT_EVENT[id75] occurrences matches {0..1} matches {	-- Dominant Hand - Trial 1
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0035] occurrences matches {0..1} matches {	-- Interim Time
+									ELEMENT[id36] occurrences matches {0..1} matches {	-- Interim Time
 										value matches {
-											DV_DURATION[id0709] matches {
+											DV_DURATION[id90] matches {
 												value matches {PTS/|PT0S..PT1000S|}
 											}
 										}
 									}
-									ELEMENT[at0017] occurrences matches {0..1} matches {	-- Total Time
+									ELEMENT[id18] occurrences matches {0..1} matches {	-- Total Time
 										value matches {
-											DV_DURATION[id0710] matches {
+											DV_DURATION[id91] matches {
 												value matches {PTS/|PT0S..PT1000S|}
 											}
 										}
 									}
-									ELEMENT[at0050] occurrences matches {0..1} matches {	-- Number Of Pegs Placed
+									ELEMENT[id51] occurrences matches {0..1} matches {	-- Number Of Pegs Placed
 										value matches {
-											DV_COUNT[id0509] matches {
+											DV_COUNT[id92] matches {
 												magnitude matches {|0..9|}
 											}
 										}
 									}
-									ELEMENT[at0051] occurrences matches {0..1} matches {	-- Number Of Pegs Returned
+									ELEMENT[id52] occurrences matches {0..1} matches {	-- Number Of Pegs Returned
 										value matches {
-											DV_COUNT[id0909] matches {
+											DV_COUNT[id93] matches {
 												magnitude matches {|0..9|}
 											}
 										}
 									}
-									ELEMENT[at0080] occurrences matches {0..1} matches {	-- Trial Not Completed?
+									ELEMENT[id81] occurrences matches {0..1} matches {	-- Trial Not Completed?
 										value matches {
-											DV_BOOLEAN[id0711] matches {
+											DV_BOOLEAN[id94] matches {
 												value matches {True}
 											}
 										}
 									}
-									ELEMENT[at0081] occurrences matches {0..*} matches {	-- Reason For Non-completion
+									ELEMENT[id82] occurrences matches {0..*} matches {	-- Reason For Non-completion
 										value matches {
-											DV_TEXT[id0109] matches {*}
+											DV_TEXT[id95] 
 										}
 									}
 								}
 							}
 						}
 						state matches {
-							ITEM_TREE[at0004] matches {	-- Tree
+							ITEM_TREE[id5] matches {
 								items matches {
-									ELEMENT[at0064] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[id65] occurrences matches {0..*} matches {	-- Confounding Factors
 										value matches {
-											DV_TEXT[id0925] matches {*}
+											DV_TEXT[id96] 
 										}
 									}
 								}
 							}
 						}
 					}
-					POINT_EVENT[at0075] occurrences matches {0..1} matches {	-- Dominant Hand - Trial 2
+					POINT_EVENT[id76] occurrences matches {0..1} matches {	-- Dominant Hand - Trial 2
 						data matches {
-							use_node ITEM_TREE[id0793] /data[at0001]/events[at0074]/data[at0003]	-- /data[Event Series]/events[Dominant Hand - Trial 1]/data[Tree]
+							use_node ITEM_TREE[id97] /data[id2]/events[id75]/data[id4]	-- /data[id2]/events[Dominant Hand - Trial 1]/data[id4]
 						}
 						state matches {
-							use_node ITEM_TREE[id0269] /data[at0001]/events[at0074]/state[at0004]	-- /data[Event Series]/events[Dominant Hand - Trial 1]/state[Tree]
+							use_node ITEM_TREE[id98] /data[id2]/events[id75]/state[id5]	-- /data[id2]/events[Dominant Hand - Trial 1]/state[id5]
 						}
 					}
-					POINT_EVENT[at0076] occurrences matches {0..1} matches {	-- Non-dominant Hand - Trial 1
+					POINT_EVENT[id77] occurrences matches {0..1} matches {	-- Non-dominant Hand - Trial 1
 						data matches {
-							use_node ITEM_TREE[id0273] /data[at0001]/events[at0074]/data[at0003]	-- /data[Event Series]/events[Dominant Hand - Trial 1]/data[Tree]
+							use_node ITEM_TREE[id99] /data[id2]/events[id75]/data[id4]	-- /data[id2]/events[Dominant Hand - Trial 1]/data[id4]
 						}
 						state matches {
-							use_node ITEM_TREE[id0669] /data[at0001]/events[at0074]/state[at0004]	-- /data[Event Series]/events[Dominant Hand - Trial 1]/state[Tree]
+							use_node ITEM_TREE[id100] /data[id2]/events[id75]/state[id5]	-- /data[id2]/events[Dominant Hand - Trial 1]/state[id5]
 						}
 					}
-					POINT_EVENT[at0077] occurrences matches {0..1} matches {	-- Non-dominant Hand - Trial 2
+					POINT_EVENT[id78] occurrences matches {0..1} matches {	-- Non-dominant Hand - Trial 2
 						data matches {
-							use_node ITEM_TREE[id0753] /data[at0001]/events[at0074]/data[at0003]	-- /data[Event Series]/events[Dominant Hand - Trial 1]/data[Tree]
+							use_node ITEM_TREE[id101] /data[id2]/events[id75]/data[id4]	-- /data[id2]/events[Dominant Hand - Trial 1]/data[id4]
 						}
 						state matches {
-							use_node ITEM_TREE[id0069] /data[at0001]/events[at0074]/state[at0004]	-- /data[Event Series]/events[Dominant Hand - Trial 1]/state[Tree]
+							use_node ITEM_TREE[id102] /data[id2]/events[id75]/state[id5]	-- /data[id2]/events[Dominant Hand - Trial 1]/state[id5]
 						}
 					}
 				}
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0008] matches {	-- Tree
+			ITEM_TREE[id9] matches {
 				items matches {
-					ELEMENT[at0083] occurrences matches {0..1} matches {	-- Dominant Hand
+					ELEMENT[id84] occurrences matches {0..1} matches {	-- Dominant Hand
 						value matches {
-							DV_CODED_TEXT[id0949] matches {
-								defining_code matches {
-									[local::
-									at0085, 	-- Right hand dominant
-									at0086]	-- Left hand dominant
-								}
+							DV_CODED_TEXT[id103] matches {
+								defining_code matches {[ac1]}		-- *Dominante Hand(de)
 							}
 						}
 					}
-					ELEMENT[at0013] occurrences matches {0..1} matches {	-- Practice Trial For Dominant Hand?
+					ELEMENT[id14] occurrences matches {0..1} matches {	-- Practice Trial For Dominant Hand?
 						value matches {
-							DV_BOOLEAN[id0149] matches {
+							DV_BOOLEAN[id104] matches {
 								value matches {True, False}
 							}
 						}
 					}
-					ELEMENT[at0082] occurrences matches {0..1} matches {	-- Practice Trial For Non-dominant Hand?
+					ELEMENT[id83] occurrences matches {0..1} matches {	-- Practice Trial For Non-dominant Hand?
 						value matches {
-							DV_BOOLEAN[id0549] matches {
+							DV_BOOLEAN[id105] matches {
 								value matches {True, False}
 							}
 						}
 					}
-					ELEMENT[at0087] occurrences matches {0..1} matches {	-- More Than Two Attempts?
+					ELEMENT[id88] occurrences matches {0..1} matches {	-- More Than Two Attempts?
 						value matches {
-							DV_BOOLEAN[id0550] matches {
+							DV_BOOLEAN[id106] matches {
 								value matches {True}
 							}
 						}
 					}
-					ELEMENT[at0088] occurrences matches {0..*} matches {	-- Reason For More Than Two Attempts
+					ELEMENT[id89] occurrences matches {0..*} matches {	-- Reason For More Than Two Attempts
 						value matches {
-							DV_TEXT[id0950] matches {*}
+							DV_TEXT[id107] 
 						}
 					}
-					ELEMENT[at0084] occurrences matches {0..1} matches {	-- Pegs Placed But Not Returned
+					ELEMENT[id85] occurrences matches {0..1} matches {	-- Pegs Placed But Not Returned
 						value matches {
-							DV_BOOLEAN[id0349] matches {
+							DV_BOOLEAN[id108] matches {
 								value matches {True}
 							}
 						}
@@ -194,202 +190,184 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Nine Hole Peg Test">
 				description = <"Der Nine Hole Peg Test ist eine quantitative Messung der Funktion der oberen Extremitäten und dient zur schnellen Beurteilung der Fingerfertigkeit eines Probanden. Er bildet die zweite Komponente des Multiple Sclerosis Functional Composite (MSFC), einer Testreihe zur Verlaufsdokumentation von Multipler Sklerose. Er ist auch als NHTP, als 9-Hole Peg Test oder 9-HPT bekannt.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0003"] = <
-				text = <"Baum">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
-				text = <"Baum">
-				description = <"@ internal @">
-			>
-			["at0008"] = <
-				text = <"Baum">
-				description = <"@ internal @">
-			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Probelauf dominante Hand?">
 				description = <"Wurde mit der dominanten Hand ein Probelauf ohne Zeitmessung durchgeführt, vor dem Testlauf der dominanten Hand mit Zeitmessung?">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Gesamtzeit">
 				description = <"Die Zeit, die zum erfolgreichen Abschließen eines Testlaufs mit einer Hand benötigt wird.">
 			>
-			["at0035"] = <
+			["id36"] = <
 				text = <"Zwischenzeit">
 				description = <"Zwischenzeit, gemessen nach der Platzierung des letzten Steckers auf dem Steckbrett, bevor diese in den Behälter zurückgelegt werden.">
 			>
-			["at0050"] = <
+			["id51"] = <
 				text = <"Anzahl platzierter Stecker">
 				description = <"Die Anzahl der Stecker, die erfolgreich auf dem Steckbrett platziert wurden.">
 			>
-			["at0051"] = <
+			["id52"] = <
 				text = <"Anzahl zurückgelegter Stecker">
 				description = <"Die Anzahl der Stecker, die erfolgreich in den Behälter zurückgelegt wurden.">
 			>
-			["at0064"] = <
+			["id65"] = <
 				text = <"Begleitumstände">
 				description = <"Angabe jedweder Umstände, welche die Leistung des Patienten beeinflusst haben könnten.">
 			>
-			["at0074"] = <
+			["id75"] = <
 				text = <"Dominante Hand - Test 1">
 				description = <"Erster Testlauf der dominanten Hand.">
 			>
-			["at0075"] = <
+			["id76"] = <
 				text = <"Dominante Hand - Test 2">
 				description = <"Zweiter Testlauf der dominanten Hand.">
 			>
-			["at0076"] = <
+			["id77"] = <
 				text = <"Nichtdominante Hand - Test 1">
 				description = <"Erster Testlauf der nichtdominanten Hand.">
 			>
-			["at0077"] = <
+			["id78"] = <
 				text = <"Nichtdominante Hand - Test 2">
 				description = <"Zweiter Testlauf der nichtdominanten Hand.">
 			>
-			["at0080"] = <
+			["id81"] = <
 				text = <"Testlauf nicht beendet?">
 				description = <"Konnte der Testlauf nicht beendet werden?">
 			>
-			["at0081"] = <
+			["id82"] = <
 				text = <"Grund für Nichtbeenden">
 				description = <"Wenn der Testlauf vorzeitig beendet wurde, jedwede Gründe angeben.">
 			>
-			["at0082"] = <
+			["id83"] = <
 				text = <"Probelauf nichtdominante Hand?">
 				description = <"Wurde mit der nichtdominanten Hand ein Probelauf ohne Zeitmessung durchgeführt, vor dem Testlauf der nichtdominanten Hand mit Zeitmessung?">
 			>
-			["at0083"] = <
+			["id84"] = <
 				text = <"Dominante Hand">
 				description = <"Angabe der dominanten Hand (wenn der Proband beide Hände gleichrangig verwendet, die Hand die zum Schreiben bevorzugt wird).">
 			>
-			["at0084"] = <
+			["id85"] = <
 				text = <"Stecker platziert aber nicht zurückgelegt">
 				description = <"Als Wahr kennzeichnen, wenn die Testläufe nur darin bestehen, die Stecker auf dem Steckbrett zu platzieren, d.h. ohne sie wieder in den Behälter zurückzulegen.">
 			>
-			["at0085"] = <
+			["at86"] = <
 				text = <"Rechte Hand dominant">
 				description = <"Die rechte Hand des Probanden ist dominant.">
 			>
-			["at0086"] = <
+			["at87"] = <
 				text = <"Linke Hand dominant">
 				description = <"Die linke Hand des Probanden ist dominant.">
 			>
-			["at0087"] = <
+			["id88"] = <
 				text = <"Mehr als zwei Anläufe?">
 				description = <"Wurden mehr als zwei Anläufe benötigt, um zwei erfolgreiche Testläufe für jede Hand zu bekommen?">
 			>
-			["at0088"] = <
+			["id89"] = <
 				text = <"Grund für mehr als zwei Anläufe">
 				description = <"Falls mehrere Anläufe benötigt wurden, um die Testläufe abzuschließen, bitte Gründe angeben.">
 			>
+			["ac1"] = <
+				text = <"Dominante Hand">
+				description = <"Angabe der dominanten Hand (wenn der Proband beide Hände gleichrangig verwendet, die Hand die zum Schreiben bevorzugt wird).">
+			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Nine Hole Peg Test">
 				description = <"The Nine Hole Peg Test is a quantitative measure of upper extremity function, and used for rapid assessment of finger dexterity of a subject. It is the second component of the Multiple Sclerosis Functional Composite (MSFC), a series of three tests to document the course of Multiple Sclerosis. It is also known as NHTP, as 9-Hole Peg Test, or 9-HPT.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0008"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Practice Trial For Dominant Hand?">
 				description = <"Was an untimed practice trial conducted with the dominant hand prior to the timed dominant hand trial?">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Total Time">
 				description = <"The time taken to successfully complete the trial for one hand.">
 			>
-			["at0035"] = <
+			["id36"] = <
 				text = <"Interim Time">
 				description = <"Interim time measured after the placement of the last peg on the pegboard, before returning them to the container.">
 			>
-			["at0050"] = <
+			["id51"] = <
 				text = <"Number Of Pegs Placed">
 				description = <"The number of pegs successfully placed on the pegboard.">
 			>
-			["at0051"] = <
+			["id52"] = <
 				text = <"Number Of Pegs Returned">
 				description = <"The number of pegs successfully returned to the container.">
 			>
-			["at0064"] = <
+			["id65"] = <
 				text = <"Confounding Factors">
 				description = <"Record any circumstances that are believed to have affected the patient's perfomance.">
 			>
-			["at0074"] = <
+			["id75"] = <
 				text = <"Dominant Hand - Trial 1">
 				description = <"First trial of the dominant hand.">
 			>
-			["at0075"] = <
+			["id76"] = <
 				text = <"Dominant Hand - Trial 2">
 				description = <"Second trial of the dominant hand.">
 			>
-			["at0076"] = <
+			["id77"] = <
 				text = <"Non-dominant Hand - Trial 1">
 				description = <"First trial of the non-dominant hand.">
 			>
-			["at0077"] = <
+			["id78"] = <
 				text = <"Non-dominant Hand - Trial 2">
 				description = <"Second trial of the non-dominant hand.">
 			>
-			["at0080"] = <
+			["id81"] = <
 				text = <"Trial Not Completed?">
 				description = <"Was the trial incomplete?">
 			>
-			["at0081"] = <
+			["id82"] = <
 				text = <"Reason For Non-completion">
 				description = <"If the trial was terminated prematurely, record any reasons.">
 			>
-			["at0082"] = <
+			["id83"] = <
 				text = <"Practice Trial For Non-dominant Hand?">
 				description = <"Was an untimed practice trial conducted with the non-dominant hand prior to the timed non-dominant hand trial?">
 			>
-			["at0083"] = <
+			["id84"] = <
 				text = <"Dominant Hand">
 				description = <"Indication of the dominant hand (if the subject uses both hands equally, the hand that is prefered for writing).">
 			>
-			["at0084"] = <
+			["id85"] = <
 				text = <"Pegs Placed But Not Returned">
 				description = <"Mark as true if the trial only consists in placing the pegs on the board, i.e. without returning them to the container.">
 			>
-			["at0085"] = <
+			["at86"] = <
 				text = <"Right hand dominant">
 				description = <"The subject's right hand is dominant.">
 			>
-			["at0086"] = <
+			["at87"] = <
 				text = <"Left hand dominant">
 				description = <"The subject's left hand is dominant.">
 			>
-			["at0087"] = <
+			["id88"] = <
 				text = <"More Than Two Attempts?">
 				description = <"Did it take more than two attempts to get two successful trials per hand? ">
 			>
-			["at0088"] = <
+			["id89"] = <
 				text = <"Reason For More Than Two Attempts">
 				description = <"If multiple attempts were needed to complete the trials, please specify reasons.">
 			>
+			["ac1"] = <
+				text = <"*Dominante Hand(de)">
+				description = <"*Angabe der dominanten Hand (wenn der Proband beide Hände gleichrangig verwendet, die Hand die zum Schreiben bevorzugt wird).(de)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at86", "at87">
 		>
 	>

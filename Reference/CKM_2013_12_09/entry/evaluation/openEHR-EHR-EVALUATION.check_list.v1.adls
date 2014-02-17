@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-EVALUATION.check_list.v1.0.0
 
 language
@@ -42,27 +42,27 @@ description
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- A health oriented check list
+	EVALUATION[id1] matches {	-- A health oriented check list
 		data matches {
-			ITEM_TREE[at0001] matches {	-- Tree
+			ITEM_TREE[id2] matches {
 				items cardinality matches {1..*; unordered} matches {
-					CLUSTER[at0004] occurrences matches {1..*} matches {	-- Question group
+					CLUSTER[id5] occurrences matches {1..*} matches {	-- Question group
 						items matches {
-							CLUSTER[at0002] occurrences matches {1..*} matches {	-- Question
+							CLUSTER[id3] occurrences matches {1..*} matches {	-- Question
 								items cardinality matches {1..2; unordered} matches {
-									ELEMENT[at0003] matches {*}	-- Answer
-									ELEMENT[at0005] occurrences matches {0..1} matches {	-- A comment on the answer
+									ELEMENT[id4] 	-- Answer
+									ELEMENT[id6] occurrences matches {0..1} matches {	-- A comment on the answer
 										value matches {
-											DV_TEXT[id0853] matches {*}
+											DV_TEXT[id8] 
 										}
 									}
 								}
 							}
 						}
 					}
-					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Summary
+					ELEMENT[id7] occurrences matches {0..1} matches {	-- Summary
 						value matches {
-							DV_TEXT[id0677] matches {*}
+							DV_TEXT[id9] 
 						}
 					}
 				}
@@ -70,64 +70,56 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"*A health oriented check list(en)">
 				description = <"*A generic archetype for recording questions and answers to allow structured recording. Actual findings are recorded in other structures.(en)">
 			>
-			["at0001"] = <
-				text = <"Baum">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"*Question(en)">
 				description = <"*The name of the cluster is the question.(en)">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"*Answer(en)">
 				description = <"*The answer(s) to the question.(en)">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"*Question group(en)">
 				description = <"*A grouping for questions and answers.(en)">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"*A comment on the answer(en)">
 				description = <"*A comment on the answer.(en)">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"*Summary(en)">
 				description = <"*Summary of questions.(en)">
 			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"A health oriented check list">
 				description = <"A generic archetype for recording questions and answers to allow structured recording. Actual findings are recorded in other structures.">
 			>
-			["at0001"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Question">
 				description = <"The name of the cluster is the question.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Answer">
 				description = <"The answer(s) to the question.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Question group">
 				description = <"A grouping for questions and answers.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"A comment on the answer">
 				description = <"A comment on the answer.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Summary">
 				description = <"Summary of questions.">
 			>

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.microscopy_colorectal_carcinoma.v1.0.0
 
 language
@@ -41,183 +41,148 @@ Available from: http://www.rcpa.edu.au//static/File/Asset%20library/public%20doc
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Microscopic findings - Colorectal cancer
+	CLUSTER[id1] matches {	-- Microscopic findings - Colorectal cancer
 		items matches {
-			CLUSTER[at0269] occurrences matches {0..1} matches {	-- Histological grading
+			CLUSTER[id270] occurrences matches {0..1} matches {	-- Histological grading
 				items matches {
-					ELEMENT[at0270] occurrences matches {0..1} matches {	-- Grade
+					ELEMENT[id271] occurrences matches {0..1} matches {	-- Grade
 						value matches {
-							DV_CODED_TEXT[id0837] matches {
-								defining_code matches {
-									[local::
-									at0272, 	-- Well differentiated
-									at0273, 	-- Moderately differentiated
-									at0341, 	-- Poorly differentiated
-									at0342, 	-- Undifferentiated
-									at0360, 	-- Low-grade
-									at0361]	-- High grade
-								}
+							DV_CODED_TEXT[id373] matches {
+								defining_code matches {[ac1]}		-- Grade
 							}
 						}
 					}
-					ELEMENT[at0271] occurrences matches {0..1} matches {	-- Comment
+					ELEMENT[id272] occurrences matches {0..1} matches {	-- Comment
 						value matches {
-							DV_TEXT[id0237] matches {*}
+							DV_TEXT[id374] 
 						}
 					}
 				}
 			}
-			CLUSTER[at0236] occurrences matches {0..1} matches {	-- Local invasion
+			CLUSTER[id237] occurrences matches {0..1} matches {	-- Local invasion
 				items matches {
-					ELEMENT[at0310] occurrences matches {0..1} matches {	-- Local invasion classification
+					ELEMENT[id311] occurrences matches {0..1} matches {	-- Local invasion classification
 						value matches {
-							DV_CODED_TEXT[id0501] matches {
-								defining_code matches {
-									[local::
-									at0311, 	-- pT0
-									at0312, 	-- pT1
-									at0313, 	-- pT2
-									at0314, 	-- pT3
-									at0315, 	-- pT4a
-									at0316, 	-- pT4b
-									at0317, 	-- pTX
-									at0343]	-- pTis
-								}
+							DV_CODED_TEXT[id375] matches {
+								defining_code matches {[ac2]}		-- Local invasion classification
 							}
 						}
 					}
-					ELEMENT[at0318] occurrences matches {0..1} matches {	-- Depth of invasion
+					ELEMENT[id319] occurrences matches {0..1} matches {	-- Depth of invasion
 						value matches {
-							DV_CODED_TEXT[id0701] matches {
-								defining_code matches {
-									[local::
-									at0319, 	-- pT3a
-									at0320, 	-- pT3b
-									at0321, 	-- pT3c
-									at0322]	-- pT3d
-								}
+							DV_CODED_TEXT[id376] matches {
+								defining_code matches {[ac3]}		-- Depth of invasion
 							}
 						}
 					}
-					ELEMENT[at0323] occurrences matches {0..1} matches {	-- Distance of invasion
+					ELEMENT[id324] occurrences matches {0..1} matches {	-- Distance of invasion
 						value matches {
-							DV_QUANTITY[id0101] matches {
-								property matches {[openehr::122]}
+							DV_QUANTITY[id377] matches {
+								property matches {[at372]}
 								magnitude matches {|>=0.0|}
-								units matches {"mm"}
 							}
 						}
 					}
 				}
 			}
-			CLUSTER[at0244] occurrences matches {0..1} matches {	-- Surgical resection margins
+			CLUSTER[id245] occurrences matches {0..1} matches {	-- Surgical resection margins
 				items matches {
-					allow_archetype CLUSTER[at0246] occurrences matches {0..*} matches {	-- Surgical resection margin
+					allow_archetype CLUSTER[id247] occurrences matches {0..*} matches {	-- Surgical resection margin
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
-			CLUSTER[at0252] occurrences matches {0..1} matches {	-- In-situ carcinoma findings
+			CLUSTER[id253] occurrences matches {0..1} matches {	-- In-situ carcinoma findings
 				items matches {
-					ELEMENT[at0251] occurrences matches {0..1} matches {	-- In-situ carcinoma
+					ELEMENT[id252] occurrences matches {0..1} matches {	-- In-situ carcinoma
 						value matches {
-							DV_CODED_TEXT[id0165] matches {
-								defining_code matches {
-									[local::
-									at0253, 	-- Present
-									at0254, 	-- Absent
-									at0255]	-- Indeterminate
-								}
+							DV_CODED_TEXT[id378] matches {
+								defining_code matches {[ac4]}		-- In-situ carcinoma
 							}
 						}
 					}
-					ELEMENT[at0256] occurrences matches {0..1} matches {	-- Description
+					ELEMENT[id257] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0166] matches {*}
+							DV_TEXT[id379] 
 						}
 					}
 				}
 			}
-			CLUSTER[at0030] occurrences matches {0..1} matches {	-- Lymph node findings
+			CLUSTER[id31] occurrences matches {0..1} matches {	-- Lymph node findings
 				items matches {
-					allow_archetype CLUSTER[at0087] occurrences matches {0..1} matches {	-- Lymph node detail
+					allow_archetype CLUSTER[id88] occurrences matches {0..1} matches {	-- Lymph node detail
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.lymph_node_metastases\.v1/}
 					}
-					ELEMENT[at0324] occurrences matches {0..1} matches {	-- Nodal involvement classification
+					ELEMENT[id325] occurrences matches {0..1} matches {	-- Nodal involvement classification
 						value matches {
-							DV_CODED_TEXT[id0317] matches {
-								defining_code matches {
-									[local::
-									at0325, 	-- pN0
-									at0326, 	-- pN1
-									at0327, 	-- pN2
-									at0344]	-- pNx
-								}
+							DV_CODED_TEXT[id380] matches {
+								defining_code matches {[ac5]}		-- Nodal involvement classification
 							}
-							DV_TEXT[id0318] matches {*}
+							DV_TEXT[id381] 
 						}
 					}
-					ELEMENT[at0276] occurrences matches {0..1} matches {	-- Distance from margin
+					ELEMENT[id277] occurrences matches {0..1} matches {	-- Distance from margin
 						value matches {
-							DV_QUANTITY[id0373] matches {
-								property matches {[openehr::122]}
+							DV_QUANTITY[id382] matches {
+								property matches {[at373]}
 								magnitude matches {|>=0.0|}
-								units matches {"mm"}
 							}
 						}
 					}
-					ELEMENT[at0348] occurrences matches {0..1} matches {	-- Comment
+					ELEMENT[id349] occurrences matches {0..1} matches {	-- Comment
 						value matches {
-							DV_TEXT[id0717] matches {*}
+							DV_TEXT[id383] 
 						}
 					}
 				}
 			}
-			ELEMENT[at0365] occurrences matches {0..1} matches {	-- Status of apical lymph node
+			ELEMENT[id366] occurrences matches {0..1} matches {	-- Status of apical lymph node
 				value matches {
-					DV_TEXT[id0437] matches {*}
+					DV_TEXT[id384] 
 				}
 			}
-			CLUSTER[at0278] occurrences matches {0..1} matches {	-- Local tissue invasion
+			CLUSTER[id279] occurrences matches {0..1} matches {	-- Local tissue invasion
 				items matches {
-					allow_archetype CLUSTER[at0277] occurrences matches {0..*} matches {	-- Venous (large vessel) invasion
+					allow_archetype CLUSTER[id278] occurrences matches {0..*} matches {	-- Venous (large vessel) invasion
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[id280] occurrences matches {0..*} matches {	-- Lymphatic (small vessel) invasion
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[id287] occurrences matches {0..*} matches {	-- Perineural invasion
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
 					}
-					allow_archetype CLUSTER[at0279] occurrences matches {0..*} matches {	-- Lymphatic (small vessel) invasion
-						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
-					}
-					allow_archetype CLUSTER[at0286] occurrences matches {0..*} matches {	-- Perineural invasion
-						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
-					}
-					CLUSTER[at0280] occurrences matches {0..1} matches {	-- Discontinuous extramural deposit findings
+					CLUSTER[id281] occurrences matches {0..1} matches {	-- Discontinuous extramural deposit findings
 						items matches {
-							ELEMENT[at0281] occurrences matches {0..1} matches {	-- Discontinuous extramural tumour deposits
+							ELEMENT[id282] occurrences matches {0..1} matches {	-- Discontinuous extramural tumour deposits
 								value matches {
-									DV_CODED_TEXT[id0102] matches {
-										defining_code matches {
-											[local::
-											at0282, 	-- Present
-											at0283, 	-- Absent
-											at0284]	-- Indeterminate
-										}
+									DV_CODED_TEXT[id385] matches {
+										defining_code matches {[ac6]}		-- Discontinuous extramural tumour deposits
 									}
 								}
 							}
-							allow_archetype CLUSTER[at0346] occurrences matches {0..1} matches {	-- Discontinuous extramural deposits
+							allow_archetype CLUSTER[id347] occurrences matches {0..1} matches {	-- Discontinuous extramural deposits
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
+								exclude
+									archetype_id/value matches {/.*/}
 							}
-							ELEMENT[at0285] occurrences matches {0..1} matches {	-- Distance from margin
+							ELEMENT[id286] occurrences matches {0..1} matches {	-- Distance from margin
 								value matches {
-									DV_QUANTITY[id0702] matches {
-										property matches {[openehr::122]}
+									DV_QUANTITY[id386] matches {
+										property matches {[at374]}
 										magnitude matches {|>=0.0|}
-										units matches {"mm"}
 									}
 								}
 							}
@@ -225,162 +190,117 @@ definition
 					}
 				}
 			}
-			CLUSTER[at0263] occurrences matches {0..1} matches {	-- Distant metastasis findings
+			CLUSTER[id264] occurrences matches {0..1} matches {	-- Distant metastasis findings
 				items matches {
-					ELEMENT[at0264] occurrences matches {0..1} matches {	-- Distant metastasis
+					ELEMENT[id265] occurrences matches {0..1} matches {	-- Distant metastasis
 						value matches {
-							DV_CODED_TEXT[id0133] matches {
-								defining_code matches {
-									[local::
-									at0362, 	-- Present
-									at0363, 	-- Absent
-									at0364]	-- Indeterminate
-								}
+							DV_CODED_TEXT[id387] matches {
+								defining_code matches {[ac7]}		-- Distant metastasis
 							}
 						}
 					}
-					allow_archetype CLUSTER[at0287] occurrences matches {0..*} matches {	-- Sites 
+					allow_archetype CLUSTER[id288] occurrences matches {0..*} matches {	-- Sites 
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location-precise\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
 					}
-					ELEMENT[at0265] occurrences matches {0..1} matches {	-- Description
+					ELEMENT[id266] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0533] matches {*}
+							DV_TEXT[id388] 
 						}
 					}
 				}
 			}
-			CLUSTER[at0366] occurrences matches {0..1} matches {	-- Adenomatous polyps
+			CLUSTER[id367] occurrences matches {0..1} matches {	-- Adenomatous polyps
 				items matches {
-					ELEMENT[at0359] occurrences matches {0..1} matches {	-- Type of polyp
+					ELEMENT[id360] occurrences matches {0..1} matches {	-- Type of polyp
 						value matches {
-							DV_TEXT[id0167] matches {*}
+							DV_TEXT[id389] 
 						}
 					}
-					ELEMENT[at0338] occurrences matches {0..1} matches {	-- Number of polyps
+					ELEMENT[id339] occurrences matches {0..1} matches {	-- Number of polyps
 						value matches {
-							DV_COUNT[id0965] matches {
+							DV_COUNT[id390] matches {
 								magnitude matches {|>=0|}
 							}
 						}
 					}
-					ELEMENT[at0367] occurrences matches {0..1} matches {	-- Polyposis syndrome
+					ELEMENT[id368] occurrences matches {0..1} matches {	-- Polyposis syndrome
 						value matches {
-							DV_CODED_TEXT[id0765] matches {
-								defining_code matches {
-									[local::
-									at0368, 	-- Present
-									at0369, 	-- Absent
-									at0370]	-- Indeterminate
-								}
+							DV_CODED_TEXT[id391] matches {
+								defining_code matches {[ac8]}		-- Polyposis syndrome
 							}
 						}
 					}
-					ELEMENT[at0371] occurrences matches {0..1} matches {	-- Comment
+					ELEMENT[id372] occurrences matches {0..1} matches {	-- Comment
 						value matches {
-							DV_TEXT[id0766] matches {*}
+							DV_TEXT[id392] 
 						}
 					}
 				}
 			}
-			CLUSTER[at0179] occurrences matches {0..1} matches {	-- Additional findings
+			CLUSTER[id180] occurrences matches {0..1} matches {	-- Additional findings
 				items matches {
-					ELEMENT[at0250] occurrences matches {0..*} matches {	-- Additional finding
+					ELEMENT[id251] occurrences matches {0..*} matches {	-- Additional finding
 						value matches {
-							DV_CODED_TEXT[id0749] matches {
-								defining_code matches {
-									[local::
-									at0293, 	-- Synchronous carcinoma
-									at0294, 	-- Ulcerative colitis
-									at0295, 	-- Ulcerative colitis with dysplasia
-									at0296, 	-- Crohn's disease
-									at0297, 	-- Crohn's disease with dysplasia
-									at0340]	-- Diverticulosis
-								}
+							DV_CODED_TEXT[id393] matches {
+								defining_code matches {[ac9]}		-- Additional finding
 							}
-							DV_TEXT[id0750] matches {*}
+							DV_TEXT[id394] 
 						}
 					}
-					ELEMENT[at0220] occurrences matches {0..1} matches {	-- Description
+					ELEMENT[id221] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0549] matches {*}
+							DV_TEXT[id395] 
 						}
 					}
 				}
 			}
-			ELEMENT[at0262] occurrences matches {0..1} matches {	-- Residual tumour status
+			ELEMENT[id263] occurrences matches {0..1} matches {	-- Residual tumour status
 				value matches {
-					DV_CODED_TEXT[id0493] matches {
-						defining_code matches {
-							[local::
-							at0298, 	-- R0
-							at0299, 	-- R1
-							at0300, 	-- R2
-							at0301]	-- RX
-						}
+					DV_CODED_TEXT[id396] matches {
+						defining_code matches {[ac10]}		-- Residual tumour status
 					}
 				}
 			}
-			CLUSTER[at0308] occurrences matches {0..1} matches {	-- Response to neoadjuvant therapy
+			CLUSTER[id309] occurrences matches {0..1} matches {	-- Response to neoadjuvant therapy
 				items matches {
-					ELEMENT[at0330] occurrences matches {0..1} matches {	-- Neoadjuvant therapy given
+					ELEMENT[id331] occurrences matches {0..1} matches {	-- Neoadjuvant therapy given
 						value matches {
-							DV_CODED_TEXT[id0341] matches {
-								defining_code matches {
-									[local::
-									at0331, 	-- Yes
-									at0332, 	-- No
-									at0333]	-- Not known
-								}
+							DV_CODED_TEXT[id397] matches {
+								defining_code matches {[ac11]}		-- Neoadjuvant therapy given
 							}
 						}
 					}
-					CLUSTER[at0347] occurrences matches {0..1} matches {	-- Grade of response
+					CLUSTER[id348] occurrences matches {0..1} matches {	-- Grade of response
 						items cardinality matches {1; unordered} matches {
-							ELEMENT[at0302] occurrences matches {0..1} matches {	-- Grade (AJCC)
+							ELEMENT[id303] occurrences matches {0..1} matches {	-- Grade (AJCC)
 								value matches {
-									DV_CODED_TEXT[id0973] matches {
-										defining_code matches {
-											[local::
-											at0349, 	-- Grade 0 - complete response
-											at0350, 	-- Grade 1 - moderate response
-											at0351, 	-- Grade 2 - minimal response
-											at0352]	-- Grade 3 - poor response
-										}
+									DV_CODED_TEXT[id398] matches {
+										defining_code matches {[ac12]}		-- Grade (AJCC)
 									}
 								}
 							}
-							ELEMENT[at0329] occurrences matches {0..1} matches {	-- Grade (CAP)
+							ELEMENT[id330] occurrences matches {0..1} matches {	-- Grade (CAP)
 								value matches {
-									DV_CODED_TEXT[id0573] matches {
-										defining_code matches {
-											[local::
-											at0354, 	-- No residual tumour
-											at0355, 	-- Marked response
-											at0356, 	-- Moderate response
-											at0357, 	-- No definite response
-											at0358]	-- Response not known
-										}
+									DV_CODED_TEXT[id399] matches {
+										defining_code matches {[ac13]}		-- Grade (CAP)
 									}
 								}
 							}
-							ELEMENT[at0334] occurrences matches {0..1} matches {	-- Grade (RCP)
+							ELEMENT[id335] occurrences matches {0..1} matches {	-- Grade (RCP)
 								value matches {
-									DV_CODED_TEXT[id0974] matches {
-										defining_code matches {
-											[local::
-											at0335, 	-- No residual tumour cells or mucous lakes only
-											at0336, 	-- Minimal residual tumour
-											at0337]	-- No marked regression
-										}
+									DV_CODED_TEXT[id400] matches {
+										defining_code matches {[ac14]}		-- Grade (RCP)
 									}
 								}
 							}
 						}
 					}
-					ELEMENT[at0309] occurrences matches {0..1} matches {	-- Comment
+					ELEMENT[id310] occurrences matches {0..1} matches {	-- Comment
 						value matches {
-							DV_TEXT[id0741] matches {*}
+							DV_TEXT[id401] 
 						}
 					}
 				}
@@ -388,432 +308,565 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Microscopic findings - Colorectal cancer">
 				description = <"Microscopic anatomical pathology findings related to colorectal cancer.">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Lymph node findings">
 				description = <"Findings related to the involvement of tumour in lymph nodes.">
 			>
-			["at0087"] = <
+			["id88"] = <
 				text = <"Lymph node detail">
 				description = <"Findings related to the involvement of tumour in lymph nodes.">
 			>
-			["at0179"] = <
+			["id180"] = <
 				text = <"Additional findings">
 				description = <"Additional histopathological findings.">
 			>
-			["at0220"] = <
+			["id221"] = <
 				text = <"Description">
 				description = <"A text description of additional findings.">
 			>
-			["at0236"] = <
+			["id237"] = <
 				text = <"Local invasion">
 				description = <"Direct invasion of local tissue by tumour.">
 			>
-			["at0244"] = <
+			["id245"] = <
 				text = <"Surgical resection margins">
 				description = <"Findings related to surgical resection margins.">
 			>
-			["at0246"] = <
+			["id247"] = <
 				text = <"Surgical resection margin">
 				description = <"Details of a single surgical resection margin.">
 			>
-			["at0250"] = <
+			["id251"] = <
 				text = <"Additional finding">
 				description = <"A single additional histopathological finding.">
 			>
-			["at0251"] = <
+			["id252"] = <
 				text = <"In-situ carcinoma">
 				description = <"Findings of in-situ carcinoma.">
 			>
-			["at0252"] = <
+			["id253"] = <
 				text = <"In-situ carcinoma findings">
 				description = <"Findings related to in-situ carcinoma.">
 			>
-			["at0253"] = <
+			["at254"] = <
 				text = <"Present">
 				description = <"In-situ carcinoma is present.">
 			>
-			["at0254"] = <
+			["at255"] = <
 				text = <"Absent">
 				description = <"In-situ carcinoma is absent.">
 			>
-			["at0255"] = <
+			["at256"] = <
 				text = <"Indeterminate">
 				description = <"Presence of in-situ carcinoma has not been determined.">
 			>
-			["at0256"] = <
+			["id257"] = <
 				text = <"Description">
 				description = <"A text description of in-situ carcinoma.">
 			>
-			["at0262"] = <
+			["id263"] = <
 				text = <"Residual tumour status">
 				description = <"Estimate of the completeness of surgical resection.">
 			>
-			["at0263"] = <
+			["id264"] = <
 				text = <"Distant metastasis findings">
 				description = <"Findings related to distant metastasis.">
 			>
-			["at0264"] = <
+			["id265"] = <
 				text = <"Distant metastasis">
 				description = <"Findings of distant metastasis.">
 			>
-			["at0265"] = <
+			["id266"] = <
 				text = <"Description">
 				description = <"A text description of distant metastases.">
 			>
-			["at0269"] = <
+			["id270"] = <
 				text = <"Histological grading">
 				description = <"Histological grading.">
 			>
-			["at0270"] = <
+			["id271"] = <
 				text = <"Grade">
 				description = <"Histological grade of the tumour.">
 			>
-			["at0271"] = <
+			["id272"] = <
 				text = <"Comment">
 				description = <"A text comment on histological grading.">
 			>
-			["at0272"] = <
+			["at273"] = <
 				text = <"Well differentiated">
 				description = <"Tumour is well differentiated.">
 			>
-			["at0273"] = <
+			["at274"] = <
 				text = <"Moderately differentiated">
 				description = <"Tumour is moderately differentiated.">
 			>
-			["at0276"] = <
+			["id277"] = <
 				text = <"Distance from margin">
 				description = <"Distance of nearest involved node to the circumferential margin.">
 			>
-			["at0277"] = <
+			["id278"] = <
 				text = <"Venous (large vessel) invasion">
 				description = <"Details of venous (large vessel) invasion by tumour.">
 			>
-			["at0278"] = <
+			["id279"] = <
 				text = <"Local tissue invasion">
 				description = <"Findings related to local tissue invasion by tumour.">
 			>
-			["at0279"] = <
+			["id280"] = <
 				text = <"Lymphatic (small vessel) invasion">
 				description = <"Details of lymphatic (small vessel)  invasion by tumour.">
 			>
-			["at0280"] = <
+			["id281"] = <
 				text = <"Discontinuous extramural deposit findings">
 				description = <"Findings related to discontinuous extramural tumour deposits.">
 			>
-			["at0281"] = <
+			["id282"] = <
 				text = <"Discontinuous extramural tumour deposits">
 				description = <"Findings of discontinuous extramural tumour deposits.">
 			>
-			["at0282"] = <
+			["at283"] = <
 				text = <"Present">
 				description = <"Discontinuous extramural tumour deposits are present.">
 			>
-			["at0283"] = <
+			["at284"] = <
 				text = <"Absent">
 				description = <"Discontinuous extramural tumour deposits are absent.">
 			>
-			["at0284"] = <
+			["at285"] = <
 				text = <"Indeterminate">
 				description = <"Presence of discontinuous extramural tumour deposits has not been determined.">
 			>
-			["at0285"] = <
+			["id286"] = <
 				text = <"Distance from margin">
 				description = <"Distance from circumferential margin to extramural deposits.">
 			>
-			["at0286"] = <
+			["id287"] = <
 				text = <"Perineural invasion">
 				description = <"Details of perineural invasion by tumour.">
 			>
-			["at0287"] = <
+			["id288"] = <
 				text = <"Sites ">
 				description = <"Details of sites of proven distant metastases.">
 			>
-			["at0293"] = <
+			["at294"] = <
 				text = <"Synchronous carcinoma">
 				description = <"Synchronous carcinoma is present.">
 			>
-			["at0294"] = <
+			["at295"] = <
 				text = <"Ulcerative colitis">
 				description = <"Ulcerative colitis is present.">
 			>
-			["at0295"] = <
+			["at296"] = <
 				text = <"Ulcerative colitis with dysplasia">
 				description = <"Ulcerative colitis with dysplasia is present.">
 			>
-			["at0296"] = <
+			["at297"] = <
 				text = <"Crohn's disease">
 				description = <"Crohn's disease is present.">
 			>
-			["at0297"] = <
+			["at298"] = <
 				text = <"Crohn's disease with dysplasia">
 				description = <"Crohn's disease with dysplasia is present.">
 			>
-			["at0298"] = <
+			["at299"] = <
 				text = <"R0">
 				description = <"No residual tumour - as per AJCC TNM classification 7th Edition.">
 			>
-			["at0299"] = <
+			["at300"] = <
 				text = <"R1">
 				description = <"R1 - as per AJCC TNM classification 7th Edition.">
 			>
-			["at0300"] = <
+			["at301"] = <
 				text = <"R2">
 				description = <"R2 - as per AJCC TNM classification 7th Edition.">
 			>
-			["at0301"] = <
+			["at302"] = <
 				text = <"RX">
 				description = <"Residual tumour cannot be assessed  - as per AJCC TNM classification 7th Edition.">
 			>
-			["at0302"] = <
+			["id303"] = <
 				text = <"Grade (AJCC)">
 				description = <"An estimate of the response to neoadjuvant therapy. (AJCC score).">
 			>
-			["at0308"] = <
+			["id309"] = <
 				text = <"Response to neoadjuvant therapy">
 				description = <"Details of the response to neoadjuvant therapy.">
 			>
-			["at0309"] = <
+			["id310"] = <
 				text = <"Comment">
 				description = <"A text comment on the response to neoadjuvant therapy.">
 			>
-			["at0310"] = <
+			["id311"] = <
 				text = <"Local invasion classification">
 				description = <"Local invasion of tumour. Scored using the pT element of the TNM classification.">
 			>
-			["at0311"] = <
+			["at312"] = <
 				text = <"pT0">
 				description = <"No evidence of primary tumour.">
 			>
-			["at0312"] = <
+			["at313"] = <
 				text = <"pT1">
 				description = <"Tumour invades submucosa.">
 			>
-			["at0313"] = <
+			["at314"] = <
 				text = <"pT2">
 				description = <"Tumour invades muscularis propria.">
 			>
-			["at0314"] = <
+			["at315"] = <
 				text = <"pT3">
 				description = <"Tumour invades through muscularis propria into subserosa, or into non-peritonealised pericolic or perirectal tissues.">
 			>
-			["at0315"] = <
+			["at316"] = <
 				text = <"pT4a">
 				description = <"Tumour directly invades other organs or structures.">
 			>
-			["at0316"] = <
+			["at317"] = <
 				text = <"pT4b">
 				description = <"Tumour perforates visceral peritoneum.">
 			>
-			["at0317"] = <
+			["at318"] = <
 				text = <"pTX">
 				description = <"Primary tumour cannot be assessed.">
 			>
-			["at0318"] = <
+			["id319"] = <
 				text = <"Depth of invasion">
 				description = <"The subdivision of pT3 that applies to the tumour.">
 			>
-			["at0319"] = <
+			["at320"] = <
 				text = <"pT3a">
 				description = <"Minimal invasion: <1 mm beyond the border of the muscularis propria.">
 			>
-			["at0320"] = <
+			["at321"] = <
 				text = <"pT3b">
 				description = <"Slight invasion: 1-5 mm beyond the border of the muscularis propria.">
 			>
-			["at0321"] = <
+			["at322"] = <
 				text = <"pT3c">
 				description = <"Moderate invasion: >5 mm and <= 15mm beyond the border of the muscularis propria.">
 			>
-			["at0322"] = <
+			["at323"] = <
 				text = <"pT3d">
 				description = <"Extensive invasion: > 15 mm beyond the border of the muscularis propria.">
 			>
-			["at0323"] = <
+			["id324"] = <
 				text = <"Distance of invasion">
 				description = <"Distance of tumour invasion beyond the muscularis propria.">
 			>
-			["at0324"] = <
+			["id325"] = <
 				text = <"Nodal involvement classification">
 				description = <"An estimate of nodal involvement using the pN element of TNM classification.">
 			>
-			["at0325"] = <
+			["at326"] = <
 				text = <"pN0">
 				description = <"No regional lymph node metastasis.">
 			>
-			["at0326"] = <
+			["at327"] = <
 				text = <"pN1">
 				description = <"Metastasis in 1-3 regional lymph nodes.">
 			>
-			["at0327"] = <
+			["at328"] = <
 				text = <"pN2">
 				description = <"Metastasis in 4 or more regional lymph nodes.">
 			>
-			["at0329"] = <
+			["id330"] = <
 				text = <"Grade (CAP)">
 				description = <"An estimate of the response to neoadjuvant therapy. (CAP)  College of American Pathologists.">
 			>
-			["at0330"] = <
+			["id331"] = <
 				text = <"Neoadjuvant therapy given">
 				description = <"Has neoadjuvant therapy been given?">
 			>
-			["at0331"] = <
+			["at332"] = <
 				text = <"Yes">
 				description = <"Neoadjuvant therapy has been given.">
 			>
-			["at0332"] = <
+			["at333"] = <
 				text = <"No">
 				description = <"Neoadjuvant therapy has not been given.">
 			>
-			["at0333"] = <
+			["at334"] = <
 				text = <"Not known">
 				description = <"It is not known if neoadjuvant therapy has been given.">
 			>
-			["at0334"] = <
+			["id335"] = <
 				text = <"Grade (RCP)">
 				description = <"An estimate of the response to neoadjuvant therapy. (RCP) Royal College of Pathologists (UK).">
 			>
-			["at0335"] = <
+			["at336"] = <
 				text = <"No residual tumour cells or mucous lakes only">
 				description = <"No residual tumour cells or mucous lakes only.">
 			>
-			["at0336"] = <
+			["at337"] = <
 				text = <"Minimal residual tumour">
 				description = <"Minimal residual tumour is present.">
 			>
-			["at0337"] = <
+			["at338"] = <
 				text = <"No marked regression">
 				description = <"Marked regression is absent.">
 			>
-			["at0338"] = <
+			["id339"] = <
 				text = <"Number of polyps">
 				description = <"Number of adenomatous polyps.">
 			>
-			["at0340"] = <
+			["at341"] = <
 				text = <"Diverticulosis">
 				description = <"Diverticulosis is present.">
 			>
-			["at0341"] = <
+			["at342"] = <
 				text = <"Poorly differentiated">
 				description = <"Tumour is poorly differentiated.">
 			>
-			["at0342"] = <
+			["at343"] = <
 				text = <"Undifferentiated">
 				description = <"Tumour is undifferentiated.">
 			>
-			["at0343"] = <
+			["at344"] = <
 				text = <"pTis">
 				description = <"Carcinoma in-situ: intraepithelial or invasion of lamina propria.">
 			>
-			["at0344"] = <
+			["at345"] = <
 				text = <"pNx">
 				description = <"Regional lymph nodes cannot be assessed.">
 			>
-			["at0346"] = <
+			["id347"] = <
 				text = <"Discontinuous extramural deposits">
 				description = <"Details of discontinuous extramural tumour deposits.">
 			>
-			["at0347"] = <
+			["id348"] = <
 				text = <"Grade of response">
 				description = <"Alternative assessment grades of response to neoadjuvant therapy.">
 			>
-			["at0348"] = <
+			["id349"] = <
 				text = <"Comment">
 				description = <"An additional text comment on lymph node findings.">
 			>
-			["at0349"] = <
+			["at350"] = <
 				text = <"Grade 0 - complete response">
 				description = <"Complete response to neoadjuvant therapy.">
 			>
-			["at0350"] = <
+			["at351"] = <
 				text = <"Grade 1 - moderate response">
 				description = <"Moderate response to neoadjuvant therapy.">
 			>
-			["at0351"] = <
+			["at352"] = <
 				text = <"Grade 2 - minimal response">
 				description = <"Minimal response to neoadjuvant therapy.">
 			>
-			["at0352"] = <
+			["at353"] = <
 				text = <"Grade 3 - poor response">
 				description = <"Poor response to neoadjuvant therapy.">
 			>
-			["at0354"] = <
+			["at355"] = <
 				text = <"No residual tumour">
 				description = <"Complete response to treatment; Grade 0.">
 			>
-			["at0355"] = <
+			["at356"] = <
 				text = <"Marked response">
 				description = <"Minimal residual cancer persists; Grade 1.">
 			>
-			["at0356"] = <
+			["at357"] = <
 				text = <"Moderate response">
 				description = <"Grade 2.">
 			>
-			["at0357"] = <
+			["at358"] = <
 				text = <"No definite response">
 				description = <"Poor or no response; Grade 3.">
 			>
-			["at0358"] = <
+			["at359"] = <
 				text = <"Response not known">
 				description = <"Response to treatment is unknown.">
 			>
-			["at0359"] = <
+			["id360"] = <
 				text = <"Type of polyp">
 				description = <"Type of adenomatous polyp">
 			>
-			["at0360"] = <
+			["at361"] = <
 				text = <"Low-grade">
 				description = <"Well or moderately differentiated">
 			>
-			["at0361"] = <
+			["at362"] = <
 				text = <"High grade">
 				description = <"Poorly differentiated or undifferentiated">
 			>
-			["at0362"] = <
+			["at363"] = <
 				text = <"Present">
 				description = <"Evidence of distant metastasis.">
 			>
-			["at0363"] = <
+			["at364"] = <
 				text = <"Absent">
 				description = <"No evidence of distant metastasis.">
 			>
-			["at0364"] = <
+			["at365"] = <
 				text = <"Indeterminate">
 				description = <"Evidence of metastasis has not been determined.">
 			>
-			["at0365"] = <
+			["id366"] = <
 				text = <"Status of apical lymph node">
 				description = <"Status of the apical lymph node.">
 			>
-			["at0366"] = <
+			["id367"] = <
 				text = <"Adenomatous polyps">
 				description = <"Findings of adenoatous polyps.">
 			>
-			["at0367"] = <
+			["id368"] = <
 				text = <"Polyposis syndrome">
 				description = <"Evidence of polyposis syndrome.">
 			>
-			["at0368"] = <
+			["at369"] = <
 				text = <"Present">
 				description = <"There is evidence of polyposis syndrome.">
 			>
-			["at0369"] = <
+			["at370"] = <
 				text = <"Absent">
 				description = <"There is no evidence of polyposis syndrome.">
 			>
-			["at0370"] = <
+			["at371"] = <
 				text = <"Indeterminate">
 				description = <"Evidence of polyposis syndrome has not been determined.">
 			>
-			["at0371"] = <
+			["id372"] = <
 				text = <"Comment">
 				description = <"Comment concerning adenomatous polyps.">
 			>
+			["ac1"] = <
+				text = <"Grade">
+				description = <"Histological grade of the tumour.">
+			>
+			["ac2"] = <
+				text = <"Local invasion classification">
+				description = <"Local invasion of tumour. Scored using the pT element of the TNM classification.">
+			>
+			["ac3"] = <
+				text = <"Depth of invasion">
+				description = <"The subdivision of pT3 that applies to the tumour.">
+			>
+			["ac4"] = <
+				text = <"In-situ carcinoma">
+				description = <"Findings of in-situ carcinoma.">
+			>
+			["ac5"] = <
+				text = <"Nodal involvement classification">
+				description = <"An estimate of nodal involvement using the pN element of TNM classification.">
+			>
+			["ac6"] = <
+				text = <"Discontinuous extramural tumour deposits">
+				description = <"Findings of discontinuous extramural tumour deposits.">
+			>
+			["ac7"] = <
+				text = <"Distant metastasis">
+				description = <"Findings of distant metastasis.">
+			>
+			["ac8"] = <
+				text = <"Polyposis syndrome">
+				description = <"Evidence of polyposis syndrome.">
+			>
+			["ac9"] = <
+				text = <"Additional finding">
+				description = <"A single additional histopathological finding.">
+			>
+			["ac10"] = <
+				text = <"Residual tumour status">
+				description = <"Estimate of the completeness of surgical resection.">
+			>
+			["ac11"] = <
+				text = <"Neoadjuvant therapy given">
+				description = <"Has neoadjuvant therapy been given?">
+			>
+			["ac12"] = <
+				text = <"Grade (AJCC)">
+				description = <"An estimate of the response to neoadjuvant therapy. (AJCC score).">
+			>
+			["ac13"] = <
+				text = <"Grade (CAP)">
+				description = <"An estimate of the response to neoadjuvant therapy. (CAP)  College of American Pathologists.">
+			>
+			["ac14"] = <
+				text = <"Grade (RCP)">
+				description = <"An estimate of the response to neoadjuvant therapy. (RCP) Royal College of Pathologists (UK).">
+			>
+			["at372"] = <
+				text = <"Length">
+				description = <"Length">
+			>
+			["at373"] = <
+				text = <"Length">
+				description = <"Length">
+			>
+			["at374"] = <
+				text = <"Length">
+				description = <"Length">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at372"] = <http://openehr.org/id/122>
+			["at373"] = <http://openehr.org/id/122>
+			["at374"] = <http://openehr.org/id/122>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at273", "at274", "at342", "at343", "at361", "at362">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at312", "at313", "at314", "at315", "at316", "at317", "at318", "at344">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at320", "at321", "at322", "at323">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at254", "at255", "at256">
+		>
+		["ac5"] = <
+			id = <"ac5">
+			members = <"at326", "at327", "at328", "at345">
+		>
+		["ac6"] = <
+			id = <"ac6">
+			members = <"at283", "at284", "at285">
+		>
+		["ac7"] = <
+			id = <"ac7">
+			members = <"at363", "at364", "at365">
+		>
+		["ac8"] = <
+			id = <"ac8">
+			members = <"at369", "at370", "at371">
+		>
+		["ac9"] = <
+			id = <"ac9">
+			members = <"at294", "at295", "at296", "at297", "at298", "at341">
+		>
+		["ac10"] = <
+			id = <"ac10">
+			members = <"at299", "at300", "at301", "at302">
+		>
+		["ac11"] = <
+			id = <"ac11">
+			members = <"at332", "at333", "at334">
+		>
+		["ac12"] = <
+			id = <"ac12">
+			members = <"at350", "at351", "at352", "at353">
+		>
+		["ac13"] = <
+			id = <"ac13">
+			members = <"at355", "at356", "at357", "at358", "at359">
+		>
+		["ac14"] = <
+			id = <"ac14">
+			members = <"at336", "at337", "at338">
 		>
 	>

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.environmental_conditions.v1.0.0
 
 language
@@ -29,37 +29,36 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Environmental conditions
+	CLUSTER[id1] matches {	-- Environmental conditions
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Ambient Temperature
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Ambient Temperature
 				value matches {
-					DV_QUANTITY[id0205] matches {
-						property matches {[openehr::127]}
+					DV_QUANTITY[id12] matches {
+						property matches {[at1]}
 						units matches {"°C", "°F"}
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Relative humidity
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Relative humidity
 				value matches {
-					DV_QUANTITY[id0605] matches {
-						property matches {[openehr::507]}
-						units matches {"%"}
+					DV_QUANTITY[id13] matches {
+						property matches {[at2]}
 						precision matches {1}
 					}
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Wind Velocity
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Wind Velocity
 				value matches {
-					DV_QUANTITY[id0005] matches {
-						property matches {[openehr::338]}
+					DV_QUANTITY[id14] matches {
+						property matches {[at3]}
 						units matches {"km/h", "m/h"}
 					}
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Wind Chill Temperature
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Wind Chill Temperature
 				value matches {
-					DV_QUANTITY[id0805] matches {
-						property matches {[openehr::127]}
+					DV_QUANTITY[id15] matches {
+						property matches {[at4]}
 						[units, precision] matches {
 							[{"°C"}, {1}],
 							[{"°F"}, {1}]
@@ -67,10 +66,10 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0010] occurrences matches {0..1} matches {	-- Wet Bulb Globe Temperature
+			ELEMENT[id11] occurrences matches {0..1} matches {	-- Wet Bulb Globe Temperature
 				value matches {
-					DV_QUANTITY[id0206] matches {
-						property matches {[openehr::127]}
+					DV_QUANTITY[id16] matches {
+						property matches {[at5]}
 						[units, precision] matches {
 							[{"°C"}, {|>=0|}],
 							[{"°F"}, {1}]
@@ -81,32 +80,61 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Environmental conditions">
 				description = <"Record environmental conditions to which the patient is exposed.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Ambient Temperature">
 				description = <"The temperature of the environment in which the patient is situated.  If this archetype is used within a state model, the assumed value is 21 degrees Celsius or 69.8 degrees Fahrenheit.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Relative humidity">
 				description = <"Humidity of the environment in which the patient is situated.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Wind Velocity">
 				description = <"Measure of wind velocity.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Wind Chill Temperature">
 				description = <"The apparent temperature felt on exposed skin, which is a function of the air temperature and wind speed - usually used in low temperature environements where the apparent temperature is lower than the measured air temperature.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Wet Bulb Globe Temperature">
 				description = <"A composite temperature used to estimate the effect of temperature, humidity, and solar radiation on humans - usually used in exposure to high temperatures.">
 			>
+			["at1"] = <
+				text = <"Temperature">
+				description = <"Temperature">
+			>
+			["at2"] = <
+				text = <"Proportion">
+				description = <"Proportion">
+			>
+			["at3"] = <
+				text = <"Velocity">
+				description = <"Velocity">
+			>
+			["at4"] = <
+				text = <"Temperature">
+				description = <"Temperature">
+			>
+			["at5"] = <
+				text = <"Temperature">
+				description = <"Temperature">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at1"] = <http://openehr.org/id/127>
+			["at2"] = <http://openehr.org/id/507>
+			["at3"] = <http://openehr.org/id/338>
+			["at4"] = <http://openehr.org/id/127>
+			["at5"] = <http://openehr.org/id/127>
 		>
 	>

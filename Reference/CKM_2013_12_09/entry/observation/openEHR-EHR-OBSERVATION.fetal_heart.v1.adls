@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.fetal_heart.v1.0.0
 
 language
@@ -35,73 +35,64 @@ Intrapartum care: management and delivery of care to women in labour: http://www
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Fetal Heart Rate
+	OBSERVATION[id1] matches {	-- Fetal Heart Rate
 		subject matches {
-			PARTY_RELATED[id0676] matches {
+			PARTY_RELATED[id22] matches {
 				relationship matches {
-					DV_CODED_TEXT[id0072] matches {
-						defining_code matches {[openehr::]}
+					DV_CODED_TEXT[id23] matches {
+						defining_code matches {[at19]}
 					}
 				}
 			}
 		}
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Heart beat present?
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Heart beat present?
 										value matches {
-											DV_BOOLEAN[id0053] matches {
+											DV_BOOLEAN[id24] matches {
 												value matches {True, False}
 											}
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Heart Rate
+									ELEMENT[id6] occurrences matches {0..1} matches {	-- Heart Rate
 										value matches {
-											DV_QUANTITY[id0453] matches {
-												property matches {[openehr::382]}
+											DV_QUANTITY[id25] matches {
+												property matches {[at20]}
 												magnitude matches {|>=0.0|}
-												units matches {"/min"}
-												precision matches {0}
 											}
 										}
 									}
-									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Comment
+									ELEMENT[id10] occurrences matches {0..1} matches {	-- Comment
 										value matches {
-											DV_TEXT[id0054] matches {*}
+											DV_TEXT[id26] 
 										}
 									}
-									ELEMENT[at0010] occurrences matches {0..1} matches {	-- Conclusion
+									ELEMENT[id11] occurrences matches {0..1} matches {	-- Conclusion
 										value matches {
-											DV_TEXT[id0853] matches {*}
+											DV_TEXT[id27] 
 										}
 									}
 								}
 							}
 						}
 						state matches {
-							ITEM_TREE[at0011] matches {	-- Tree
+							ITEM_TREE[id12] matches {
 								items matches {
-									ELEMENT[at0012] occurrences matches {0..1} matches {	-- Position of Mother
+									ELEMENT[id13] occurrences matches {0..1} matches {	-- Position of Mother
 										value matches {
-											DV_CODED_TEXT[id0973] matches {
-												defining_code matches {
-													[local::
-													at0013, 	-- Standing
-													at0014, 	-- Sitting
-													at0015, 	-- Reclining
-													at0016, 	-- Lying
-													at0017]	-- Lying with tilt to left
-												}
+											DV_CODED_TEXT[id28] matches {
+												defining_code matches {[ac1]}		-- Position of Mother
 											}
 										}
 									}
-									ELEMENT[at0019] occurrences matches {0..1} matches {	-- Maternal Confounding Factors
+									ELEMENT[id20] occurrences matches {0..1} matches {	-- Maternal Confounding Factors
 										value matches {
-											DV_TEXT[id0773] matches {*}
+											DV_TEXT[id29] 
 										}
 									}
 								}
@@ -112,91 +103,99 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0018] matches {	-- Tree
+			ITEM_TREE[id19] matches {
 				items matches {
-					allow_archetype CLUSTER[at0020] occurrences matches {0..*} matches {	-- Device
+					allow_archetype CLUSTER[id21] occurrences matches {0..*} matches {	-- Device
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Fetal Heart Rate">
 				description = <"Characteristics about the fetal heart rate.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Any unspecified event.">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Heart beat present?">
 				description = <"The fetal heart beat is detected.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Heart Rate">
 				description = <"The measured rate of the fetal heart.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Comment">
 				description = <"Additional narrative about the fetal heart rate not captured in other fields.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Conclusion">
 				description = <"Concise and clinically contextualised narrative interpretation of the fetal heart rate.">
 			>
-			["at0011"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Position of Mother">
 				description = <"The position of the mother when the fetal heart rate was measured.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Standing">
 				description = <"Mother standing at the time of fetal heart rate measurement.">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Sitting">
 				description = <"Mother sitting at the time of fetail heart rate measurement.">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Reclining">
 				description = <"Mother reclining at the time of fetal heart rate measurement.">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"Lying">
 				description = <"Lying flat at the time of fetal heart rate measurement.">
 			>
-			["at0017"] = <
+			["at18"] = <
 				text = <"Lying with tilt to left">
 				description = <"Mother lying flat with some lateral tilt towards the left.">
 			>
-			["at0018"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Maternal Confounding Factors">
 				description = <"Description of incidental maternal factors, not recorded elsewhere, that may be influencing the fetal heart rate measurement.">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"Device">
 				description = <"Details about the device used to detect the fetal heart rate. For example, Pinard's stethoscope or Doppler Ultrasound.">
 			>
+			["ac1"] = <
+				text = <"Position of Mother">
+				description = <"The position of the mother when the fetal heart rate was measured.">
+			>
+			["at19"] = <
+				text = <"foetus">
+				description = <"foetus">
+			>
+			["at20"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at19"] = <http://openehr.org/id/3>
+			["at20"] = <http://openehr.org/id/382>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at14", "at15", "at16", "at17", "at18">
 		>
 	>

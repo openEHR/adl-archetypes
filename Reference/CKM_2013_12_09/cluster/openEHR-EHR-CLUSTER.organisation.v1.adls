@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.organisation.v1.0.0
 
 language
@@ -52,35 +52,39 @@ Nicht zur Identifikation von Einrichtungen zu benutzen, die eindeutig Registern 
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Organisation
+	CLUSTER[id1] matches {	-- Organisation
 		items matches {
-			ELEMENT[at0001] matches {	-- Name of Organisation
+			ELEMENT[id2] matches {	-- Name of Organisation
 				value matches {
-					DV_TEXT[id0205] matches {*}
+					DV_TEXT[id13] 
 				}
 			}
-			ELEMENT[at0011] occurrences matches {0..1} matches {	-- Identifier
+			ELEMENT[id12] occurrences matches {0..1} matches {	-- Identifier
 				value matches {
-					DV_TEXT[id0605] matches {*}
+					DV_TEXT[id14] 
 				}
 			}
-			allow_archetype CLUSTER[at0008] occurrences matches {0..1} matches {	-- Address details
+			allow_archetype CLUSTER[id9] occurrences matches {0..1} matches {	-- Address details
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.address\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
 			}
-			allow_archetype CLUSTER[at0009] occurrences matches {0..1} matches {	-- Telecom details
+			allow_archetype CLUSTER[id10] occurrences matches {0..1} matches {	-- Telecom details
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.telecom_details\.v1/}
 			}
-			CLUSTER[at0005] occurrences matches {0..*} matches {	-- Contact Person Details
+			CLUSTER[id6] occurrences matches {0..*} matches {	-- Contact Person Details
 				items matches {
-					allow_archetype CLUSTER[at0010] occurrences matches {0..*} matches {	-- Contact person's name
+					allow_archetype CLUSTER[id11] occurrences matches {0..*} matches {	-- Contact person's name
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.person_name\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
 					}
-					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Role in organisation
+					ELEMENT[id8] occurrences matches {0..1} matches {	-- Role in organisation
 						value matches {
-							DV_TEXT[id0549] matches {*}
+							DV_TEXT[id15] 
 						}
 					}
 				}
@@ -88,72 +92,72 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Organisation">
 				description = <"Details of an organisation ">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Name of Organisation">
 				description = <"Name of the organisation">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Contact Person Details">
 				description = <"Details about contact person within organisation">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Role in organisation">
 				description = <"Contact's role in organisation">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Address details">
 				description = <"Details about Address">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Telecom details">
 				description = <"Details about telecommunications">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Contact person's name">
 				description = <"*">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Identifier">
 				description = <"Identifier of organisation">
 			>
 		>
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Einrichtung">
 				description = <"Angaben zu einer Einrichtung">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Einrichtungsname">
 				description = <"Name der Einrichtung">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Kontaktperson">
 				description = <"Angaben zur Kontaktperson innerhalb der Einrichtung">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Rolle der Kontaktperson">
 				description = <"Angaben zur Rolle der Kontaktperson innerhalb der Einrichtung">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Adressangaben">
 				description = <"Angaben zur Adresse">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Kontaktdetails">
 				description = <"Angaben zu den Kontaktdaten">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Name der Kontaktperson">
 				description = <"*">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"*New element(en)">
 				description = <"**(en)">
 			>

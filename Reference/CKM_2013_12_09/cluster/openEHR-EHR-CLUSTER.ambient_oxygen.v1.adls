@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.ambient_oxygen.v1.0.0
 
 language
@@ -53,12 +53,12 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Ambient oxygen
+	CLUSTER[id1] matches {	-- Ambient oxygen
 		items matches {
-			ELEMENT[at0051] occurrences matches {0..1} matches {	-- Oxygen flow rate
+			ELEMENT[id52] occurrences matches {0..1} matches {	-- Oxygen flow rate
 				value matches {
-					DV_QUANTITY[id0205] matches {
-						property matches {[openehr::126]}
+					DV_QUANTITY[id55] matches {
+						property matches {[at1]}
 						[magnitude, units, precision] matches {
 							[{|0.0..50.0|}, {"l/m"}, {1}],
 							[{|0.0..50000.0|}, {"ml/min"}, {1}]
@@ -66,18 +66,18 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0052] occurrences matches {0..1} matches {	-- FiO2
+			ELEMENT[id53] occurrences matches {0..1} matches {	-- FiO2
 				value matches {
-					DV_PROPORTION[id0605] matches {
+					DV_PROPORTION[id56] matches {
 						numerator matches {|0.0..1.0|; 0.21}
 						is_integral matches {False}
 						type matches {1}
 					}
 				}
 			}
-			ELEMENT[at0053] occurrences matches {0..1} matches {	-- Percent O2
+			ELEMENT[id54] occurrences matches {0..1} matches {	-- Percent O2
 				value matches {
-					DV_PROPORTION[id0005] matches {
+					DV_PROPORTION[id57] matches {
 						numerator matches {|0.0..100.0|; 21.0}
 						is_integral matches {False}
 						type matches {2}
@@ -87,60 +87,77 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"*Ambient oxygen(en)">
 				description = <"*The amount of oxygen being delivered to the subject at the time of observation.  Assumed values of 21% O2, Fi02 of 0.21 and Oxygen flow rate of zero.(en)">
 			>
-			["at0051"] = <
+			["id52"] = <
 				text = <"*Oxygen flow rate(en)">
 				description = <"*Flow rate of inspired oxygen.(en)">
 			>
-			["at0052"] = <
+			["id53"] = <
 				text = <"*FiO2(en)">
 				description = <"*Fraction of inspired oxygen.(en)">
 			>
-			["at0053"] = <
+			["id54"] = <
 				text = <"*Percent O2(en)">
 				description = <"*Percentage of inspired oxygen.(en)">
 			>
+			["at1"] = <
+				text = <"*Flow rate, volume (en)">
+				description = <"*Flow rate, volume (en)">
+			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Ambient oxygen">
 				description = <"The amount of oxygen being delivered to the subject at the time of observation.  Assumed values of 21% O2, Fi02 of 0.21 and Oxygen flow rate of zero.">
 			>
-			["at0051"] = <
+			["id52"] = <
 				text = <"Oxygen flow rate">
 				description = <"Flow rate of inspired oxygen.">
 			>
-			["at0052"] = <
+			["id53"] = <
 				text = <"FiO2">
 				description = <"Fraction of inspired oxygen.">
 			>
-			["at0053"] = <
+			["id54"] = <
 				text = <"Percent O2">
 				description = <"Percentage of inspired oxygen.">
 			>
+			["at1"] = <
+				text = <"Flow rate, volume">
+				description = <"Flow rate, volume">
+			>
 		>
 		["es-ar"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Oxígeno ambiental">
 				description = <"La cantidad de oxígeno siendo administrada al sujeto en el momento de la observación. Se asumen valores de 21% de O2, FiO2 de 0,21 y velocidad de flujo de oxígeno de cero.">
 			>
-			["at0051"] = <
+			["id52"] = <
 				text = <"Velocidad del flujo de Oxígeno">
 				description = <"Velocidad del flujo de Oxígeno inspirado.">
 			>
-			["at0052"] = <
+			["id53"] = <
 				text = <"FiO2">
 				description = <"Fracción inspiratoria de oxígeno.">
 			>
-			["at0053"] = <
+			["id54"] = <
 				text = <"Porcentaje de 02">
 				description = <"Porcentaje de oxígeno inspirado.">
 			>
+			["at1"] = <
+				text = <"*Flow rate, volume (en)">
+				description = <"*Flow rate, volume (en)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at1"] = <http://openehr.org/id/126>
 		>
 	>

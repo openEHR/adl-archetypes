@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.paced_auditory_serial_addition_test.v1.0.0
 
 language
@@ -53,127 +53,123 @@ Tombaugh TN. A comprehensive review of the Paced Auditory Serial Addition Test (
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Paced Auditory Serial Addition Test
+	OBSERVATION[id1] matches {	-- Paced Auditory Serial Addition Test
 		data matches {
-			HISTORY[at0002] matches {	-- Event Series
+			HISTORY[id3] matches {
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0064] occurrences matches {0..1} matches {	-- PASAT-3''
+					POINT_EVENT[id65] occurrences matches {0..1} matches {	-- PASAT-3''
 						data matches {
-							ITEM_TREE[at0001] matches {	-- Tree
+							ITEM_TREE[id2] matches {
 								items matches {
-									ELEMENT[at0015] occurrences matches {0..1} matches {	-- Total Correct Answers
+									ELEMENT[id16] occurrences matches {0..1} matches {	-- Total Correct Answers
 										value matches {
-											DV_COUNT[id0845] matches {
+											DV_COUNT[id72] matches {
 												magnitude matches {|0..60|}
 											}
 										}
 									}
-									ELEMENT[at0029] occurrences matches {0..1} matches {	-- First Half Total Correct Answers
+									ELEMENT[id30] occurrences matches {0..1} matches {	-- First Half Total Correct Answers
 										value matches {
-											DV_COUNT[id0846] matches {
+											DV_COUNT[id73] matches {
 												magnitude matches {|0..30|}
 											}
 										}
 									}
-									ELEMENT[at0030] occurrences matches {0..1} matches {	-- Second Half Total Correct Answers
+									ELEMENT[id31] occurrences matches {0..1} matches {	-- Second Half Total Correct Answers
 										value matches {
-											DV_COUNT[id0645] matches {
+											DV_COUNT[id74] matches {
 												magnitude matches {|0..30|}
 											}
 										}
 									}
-									ELEMENT[at0031] occurrences matches {0..1} matches {	-- Total Errors of Commission
+									ELEMENT[id32] occurrences matches {0..1} matches {	-- Total Errors of Commission
 										value matches {
-											DV_COUNT[id0045] matches {
+											DV_COUNT[id75] matches {
 												magnitude matches {|0..60|}
 											}
 										}
 									}
-									ELEMENT[at0032] occurrences matches {0..1} matches {	-- Total Errors of Omission
+									ELEMENT[id33] occurrences matches {0..1} matches {	-- Total Errors of Omission
 										value matches {
-											DV_COUNT[id0445] matches {
+											DV_COUNT[id76] matches {
 												magnitude matches {|0..60|}
 											}
 										}
 									}
-									ELEMENT[at0063] occurrences matches {0..1} matches {	-- Percentage of Correct Answers
+									ELEMENT[id64] occurrences matches {0..1} matches {	-- Percentage of Correct Answers
 										value matches {
-											DV_PROPORTION[id0046] matches {
+											DV_PROPORTION[id77] matches {
 												numerator matches {|0.0..60.0|; 0.0}
 												denominator matches {100.0; 100.0}
 												type matches {2, 3}
 											}
 										}
 									}
-									ELEMENT[at0055] occurrences matches {0..1} matches {	-- Test Not Completed?
+									ELEMENT[id56] occurrences matches {0..1} matches {	-- Test Not Completed?
 										value matches {
-											DV_BOOLEAN[id0446] matches {
+											DV_BOOLEAN[id78] matches {
 												value matches {True}
 											}
 										}
 									}
-									ELEMENT[at0049] occurrences matches {0..*} matches {	-- Reason for Non-completion
+									ELEMENT[id50] occurrences matches {0..*} matches {	-- Reason for Non-completion
 										value matches {
-											DV_TEXT[id0646] matches {*}
+											DV_TEXT[id79] 
 										}
 									}
 								}
 							}
 						}
 						state matches {
-							ITEM_TREE[at0050] matches {	-- Tree
+							ITEM_TREE[id51] matches {
 								items matches {
-									ELEMENT[at0054] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[id55] occurrences matches {0..*} matches {	-- Confounding Factors
 										value matches {
-											DV_TEXT[id0253] matches {*}
+											DV_TEXT[id80] 
 										}
 									}
 								}
 							}
 						}
 					}
-					POINT_EVENT[at0065] occurrences matches {0..1} matches {	-- PASAT-2''
+					POINT_EVENT[id66] occurrences matches {0..1} matches {	-- PASAT-2''
 						data matches {
-							use_node ITEM_TREE[id0217] /data[at0002]/events[at0064]/data[at0001]	-- /data[Event Series]/events[PASAT-3'']/data[Tree]
+							use_node ITEM_TREE[id81] /data[id3]/events[id65]/data[id2]	-- /data[id3]/events[PASAT-3'']/data[id2]
 						}
 						state matches {
-							use_node ITEM_TREE[id0413] /data[at0002]/events[at0064]/state[at0050]	-- /data[Event Series]/events[PASAT-3'']/state[Tree]
+							use_node ITEM_TREE[id82] /data[id3]/events[id65]/state[id51]	-- /data[id3]/events[PASAT-3'']/state[id51]
 						}
 					}
 				}
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0007] matches {	-- Tree
+			ITEM_TREE[id8] matches {
 				items matches {
-					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Number Sequence Used
+					ELEMENT[id13] occurrences matches {0..1} matches {	-- Number Sequence Used
 						value matches {
-							DV_CODED_TEXT[id0733] matches {
-								defining_code matches {
-									[local::
-									at0013, 	-- Form A
-									at0014]	-- Form B
-								}
+							DV_CODED_TEXT[id83] matches {
+								defining_code matches {[ac1]}		-- *Verwendete Zahlensequenz(de)
 							}
 						}
 					}
-					ELEMENT[at0068] occurrences matches {0..1} matches {	-- Practice Trial Conducted?
+					ELEMENT[id69] occurrences matches {0..1} matches {	-- Practice Trial Conducted?
 						value matches {
-							DV_BOOLEAN[id0133] matches {
+							DV_BOOLEAN[id84] matches {
 								value matches {True}
 							}
 						}
 					}
-					ELEMENT[at0069] occurrences matches {0..1} matches {	-- Additional Attempts?
+					ELEMENT[id70] occurrences matches {0..1} matches {	-- Additional Attempts?
 						value matches {
-							DV_BOOLEAN[id0533] matches {
+							DV_BOOLEAN[id85] matches {
 								value matches {True}
 							}
 						}
 					}
-					ELEMENT[at0070] occurrences matches {0..*} matches {	-- Reason for Additional Attempts
+					ELEMENT[id71] occurrences matches {0..*} matches {	-- Reason for Additional Attempts
 						value matches {
-							DV_TEXT[id0333] matches {*}
+							DV_TEXT[id86] 
 						}
 					}
 				}
@@ -181,186 +177,168 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Paced Auditory Serial Addition Test">
 				description = <"Der Paced Auditory Serial Addition Test (PASAT) misst die kognitive Verarbeitungsfähigkeit auditiver Informationen hinsichtlich Geschwindigkeit und Flexibilität, sowie die Fähigkeit zum Kopfrechnen eines Patienten. Er bildet die dritte Komponente des Multiple Sclerosis Functional Composite (MSFC), einer Serie von drei Tests zur Verlaufsdokumentation von Multipler Sklerose.">
 			>
-			["at0001"] = <
-				text = <"Baum">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0007"] = <
-				text = <"Baum">
-				description = <"@ internal @">
-			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Verwendete Zahlensequenz">
 				description = <"Angabe mit welcher Zahlenfolge der Test durchgeführt wurde.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Form A">
 				description = <"Die Zahlensequenz von Form A wurde verwendet.">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Form B">
 				description = <"Die Zahlensequenz von Form B wurde verwendet.">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Anzahl korrekter Ergebnisse">
 				description = <"Die Anzahl der korrekt addierten Antworten.">
 			>
-			["at0029"] = <
+			["id30"] = <
 				text = <"Anzahl korrekter Ergebnisse in der ersten Hälfte">
 				description = <"Anzahl der korrekt addierten Antworten in der ersten Hälfte des Tests.">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Anzahl korrekter Ergebnisse in der zweiten Hälfte">
 				description = <"Anzahl der korrekt addierten Antworten in der zweiten Hälfte des Tests.">
 			>
-			["at0031"] = <
+			["id32"] = <
 				text = <"Anzahl der Rechenfehler">
 				description = <"Die Anzahl der Fälle, in denen der Proband eine Antwort geben konnte, das Ergebnis jedoch fehlerhaft war.">
 			>
-			["at0032"] = <
+			["id33"] = <
 				text = <"Anzahl der Auslassungsfehler">
 				description = <"Die Anzahl der Fälle, in denen es dem Probanden nicht möglich war, die Berechnung auszuführen.">
 			>
-			["at0049"] = <
+			["id50"] = <
 				text = <"Grund für Nichtbeenden">
 				description = <"Wenn der Test vorzeitig abgebrochen wurde, jedwede Gründe angeben, die dazu geführt haben.">
 			>
-			["at0050"] = <
-				text = <"Baum">
-				description = <"@ internal @">
-			>
-			["at0054"] = <
+			["id55"] = <
 				text = <"Begleitumstände">
 				description = <"Angabe jedweder Umstände, welche die Leistung des Patienten beeinflusst haben könnten.">
 			>
-			["at0055"] = <
+			["id56"] = <
 				text = <"Test nicht beendet?">
 				description = <"Konnte der Test nicht beendet werden?">
 			>
-			["at0063"] = <
+			["id64"] = <
 				text = <"Prozentwert korrekter Ergebnisse">
 				description = <"Prozentsatz der korrekt addierten Antworten.">
 			>
-			["at0064"] = <
+			["id65"] = <
 				text = <"PASAT-3''">
 				description = <"PASAT bei dem die Stimuli dem Probanden alle drei Sekunden gegeben werden.">
 			>
-			["at0065"] = <
+			["id66"] = <
 				text = <"PASAT-2''">
 				description = <"PASAT bei dem die Stimuli dem Probanden alle zwei Sekunden gegeben werden (nicht einsetzen, wenn der Patient beim PASAT-3'' keine einzige korrekte Antwort geben konnte).">
 			>
-			["at0068"] = <
+			["id69"] = <
 				text = <"Übungssequenz durchgeführt?">
 				description = <"Wurde eine Übungssequenz durchgeführt?">
 			>
-			["at0069"] = <
+			["id70"] = <
 				text = <"Zusätzliche Anläufe?">
 				description = <"Wurde mehr als ein Anlauf benötigt, um den Test erfolgreich abzuschließen?">
 			>
-			["at0070"] = <
+			["id71"] = <
 				text = <"Grund für zusätzliche Anläufe">
 				description = <"Falls mehr als ein Anlauf benötigt wurde, um den Test erfolgreich abzuschließen, bitte Gründe angeben.">
 			>
+			["ac1"] = <
+				text = <"Verwendete Zahlensequenz">
+				description = <"Angabe mit welcher Zahlenfolge der Test durchgeführt wurde.">
+			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Paced Auditory Serial Addition Test">
 				description = <"The Paced Auditory Serial Addition Test (PASAT) measures the cognitive function that specifically assesses auditory information processing speed and flexibility, as well as calculation ability of a patient. It is the third component of the Multiple Sclerosis Functional Composite (MSFC), a series of three tests to document the course of Multiple Sclerosis.">
 			>
-			["at0001"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0007"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Number Sequence Used">
 				description = <"Record which sequence of numbers was used.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Form A">
 				description = <"The Form A number sequence was used.">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Form B">
 				description = <"The Form B number sequence was used.">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Total Correct Answers">
 				description = <"The number of correctly summed answers.">
 			>
-			["at0029"] = <
+			["id30"] = <
 				text = <"First Half Total Correct Answers">
 				description = <"The number of correctly summed answers in the first half of the test.">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Second Half Total Correct Answers">
 				description = <"The number of correctly summed answers in the second half of the test.">
 			>
-			["at0031"] = <
+			["id32"] = <
 				text = <"Total Errors of Commission">
 				description = <"The total number of occasions where the subject was able to give a response but the answer was incorrect.">
 			>
-			["at0032"] = <
+			["id33"] = <
 				text = <"Total Errors of Omission">
 				description = <"The total number of occasions where the subject was unable to perform the calculation.">
 			>
-			["at0049"] = <
+			["id50"] = <
 				text = <"Reason for Non-completion">
 				description = <"If the trial was terminated prematurely, record any reasons for this.">
 			>
-			["at0050"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0054"] = <
+			["id55"] = <
 				text = <"Confounding Factors">
 				description = <"Record any circumstances that may have affected the patient's perfomance.">
 			>
-			["at0055"] = <
+			["id56"] = <
 				text = <"Test Not Completed?">
 				description = <"Was the test incomplete?">
 			>
-			["at0063"] = <
+			["id64"] = <
 				text = <"Percentage of Correct Answers">
 				description = <"Percentage of correctly summed answers.">
 			>
-			["at0064"] = <
+			["id65"] = <
 				text = <"PASAT-3''">
 				description = <"PASAT where stimuli are given to the subject every three seconds.">
 			>
-			["at0065"] = <
+			["id66"] = <
 				text = <"PASAT-2''">
 				description = <"PASAT where stimuli are given to the subject every two seconds (not to be used if the subject is unable to give single correct answer on PASAT-3'').">
 			>
-			["at0068"] = <
+			["id69"] = <
 				text = <"Practice Trial Conducted?">
 				description = <"Has a practice trial been conducted?">
 			>
-			["at0069"] = <
+			["id70"] = <
 				text = <"Additional Attempts?">
 				description = <"Did it take more than one attempt to achieve one successful trial?">
 			>
-			["at0070"] = <
+			["id71"] = <
 				text = <"Reason for Additional Attempts">
 				description = <"If more than one attempted trial was needed to complete the test, please specify reasons.">
 			>
+			["ac1"] = <
+				text = <"*Verwendete Zahlensequenz(de)">
+				description = <"*Angabe mit welcher Zahlenfolge der Test durchgeführt wurde.(de)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at14", "at15">
 		>
 	>

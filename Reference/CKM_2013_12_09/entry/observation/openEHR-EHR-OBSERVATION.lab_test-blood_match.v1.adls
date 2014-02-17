@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.lab_test-blood_match.v1.0.0
 
 specialize
-	openEHR-EHR-OBSERVATION.lab_test.v1.0.0
+	openEHR-EHR-OBSERVATION.lab_test.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -35,36 +35,36 @@ IHE. IHE, Laboratory Technical Framework, Volume 3 Content [Internet]. 2008;Avai
 	>
 
 definition
-	OBSERVATION[at0000.1] matches {	-- Blood matching
-		/data[at0001]/events[at0002]/data[at0003]/items matches {
-			ELEMENT[at0078.3] occurrences matches {0..1} matches {	-- ABO
+	OBSERVATION[id1.1] matches {	-- Blood matching
+		/data[id2]/events[id3]/data[id4]/items matches {
+			ELEMENT[id79.3] occurrences matches {0..1} matches {	-- ABO
 				value matches {
-					DV_TEXT[id0.981] 
+					DV_TEXT[id0.114] 
 				}
 			}
-			ELEMENT[at0078.2] occurrences matches {0..1} matches {	-- Rhesus
+			ELEMENT[id79.2] occurrences matches {0..1} matches {	-- Rhesus
 				value matches {
-					DV_TEXT[id0.581] 
+					DV_TEXT[id0.115] 
 				}
 			}
-			ELEMENT[at0.90] occurrences matches {0..1} matches {	-- Antibodies detected
+			ELEMENT[id0.90] occurrences matches {0..1} matches {	-- Antibodies detected
 				value matches {
-					DV_BOOLEAN[id0.565] matches {
+					DV_BOOLEAN[id0.116] matches {
 						value matches {True, False}
 					}
 				}
 			}
-			before [at0057]
-			CLUSTER[at0.91] occurrences matches {0..1} matches {	-- Antibodies
+			before [id58]
+			CLUSTER[id0.91] occurrences matches {0..1} matches {	-- Antibodies
 				items matches {
-					ELEMENT[at0078.1] occurrences matches {0..1} matches {	-- Antibody
+					ELEMENT[id79.1] occurrences matches {0..1} matches {	-- Antibody
 						value matches {
-							DV_TEXT[id0.573] 
+							DV_TEXT[id0.117] 
 						}
 					}
-					ELEMENT[at0.92] occurrences matches {0..1} matches {	-- Details
+					ELEMENT[id0.92] occurrences matches {0..1} matches {	-- Details
 						value matches {
-							DV_TEXT[id0.701] 
+							DV_TEXT[id0.118] 
 						}
 					}
 				}
@@ -72,36 +72,46 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0.90"] = <
+			["id0.90"] = <
 				text = <"Antibodies detected">
 				description = <"Antibodies have been detected.">
 			>
-			["at0.91"] = <
+			["id0.91"] = <
 				text = <"Antibodies">
 				description = <"Group of findings relating to one antibody.">
 			>
-			["at0.92"] = <
+			["id0.92"] = <
 				text = <"Details">
 				description = <"Details about the antibody.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Blood matching">
 				description = <"Blood group information including ABO, Rhesus and antibodies etc.">
 			>
-			["at0078.1"] = <
+			["id79.1"] = <
 				text = <"Antibody">
 				description = <"The nature of the antibody.">
 			>
-			["at0078.2"] = <
+			["id79.2"] = <
 				text = <"Rhesus">
 				description = <"Rhesus blood group information.">
 			>
-			["at0078.3"] = <
+			["id79.3"] = <
 				text = <"ABO">
 				description = <"ABO blood group information.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at38", "at39", "at40", "at41", "at75", "at80">
 		>
 	>

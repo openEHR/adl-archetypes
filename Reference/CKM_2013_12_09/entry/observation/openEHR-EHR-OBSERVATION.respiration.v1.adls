@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.respiration.v1.0.0
 
 language
@@ -171,88 +171,67 @@ Available from: http://en.wikipedia.org/wiki/Apneustic_respirations">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Respirations
+	OBSERVATION[id1] matches {	-- Respirations
 		data matches {
-			HISTORY[at0001] matches {	-- history
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..*} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- List
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Rate
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Rate
 										value matches {
-											DV_QUANTITY[id0053] matches {
-												property matches {[openehr::382]}
+											DV_QUANTITY[id58] matches {
+												property matches {[at56]}
 												magnitude matches {|0.0..200.0|}
-												units matches {"/min"}
-												precision matches {0}
 											}
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Rhythm
+									ELEMENT[id6] occurrences matches {0..1} matches {	-- Rhythm
 										value matches {
-											DV_CODED_TEXT[id0453] matches {
-												defining_code matches {
-													[local::
-													at0006, 	-- Regular
-													at0007]	-- Irregular
-												}
+											DV_CODED_TEXT[id59] matches {
+												defining_code matches {[ac1]}		-- Rhythm
 											}
 										}
 									}
-									ELEMENT[at0016] occurrences matches {0..1} matches {	-- Depth
+									ELEMENT[id17] occurrences matches {0..1} matches {	-- Depth
 										value matches {
-											DV_CODED_TEXT[id0253] matches {
-												defining_code matches {
-													[local::
-													at0017, 	-- Normal
-													at0018, 	-- Shallow
-													at0019, 	-- Deep
-													at0025]	-- Variable
-												}
+											DV_CODED_TEXT[id60] matches {
+												defining_code matches {[ac2]}		-- Depth
 											}
 										}
 									}
-									ELEMENT[at0024] occurrences matches {0..1} matches {	-- Description
+									ELEMENT[id25] occurrences matches {0..1} matches {	-- Description
 										value matches {
-											DV_TEXT[id0853] matches {*}
+											DV_TEXT[id61] 
 										}
 									}
-									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Abnormal respiratory pattern
+									ELEMENT[id10] occurrences matches {0..1} matches {	-- Abnormal respiratory pattern
 										value matches {
-											DV_CODED_TEXT[id0054] matches {
-												defining_code matches {
-													[local::
-													at0012, 	-- Kussmaul's respiration
-													at0030, 	-- Cheyne-Stokes respiration
-													at0031, 	-- Ataxic respiration
-													at0033, 	-- Apneustic respiration
-													at0034, 	-- Cluster breathing
-													at0044, 	-- Apnoea
-													at0054]	-- Prolonged expiratory phase
-												}
+											DV_CODED_TEXT[id62] matches {
+												defining_code matches {[ac3]}		-- Abnormal respiratory pattern
 											}
-											DV_TEXT[id0055] matches {*}
+											DV_TEXT[id63] 
 										}
 									}
 								}
 							}
 						}
 						state matches {
-							ITEM_TREE[at0022] matches {	-- List
+							ITEM_TREE[id23] matches {
 								items matches {
-									allow_archetype CLUSTER[at0055] occurrences matches {0..1} matches {	-- Ambient oxygen
+									allow_archetype CLUSTER[id56] occurrences matches {0..1} matches {	-- Ambient oxygen
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.ambient_oxygen(-[a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.ambient_oxygen(-a-zA-Z0-9_]+)*\.v1/}
 									}
-									ELEMENT[at0056] occurrences matches {0..*} matches {	-- Confounding factors
+									ELEMENT[id57] occurrences matches {0..*} matches {	-- Confounding factors
 										value matches {
-											DV_TEXT[id0733] matches {*}
+											DV_TEXT[id64] 
 										}
 									}
-									allow_archetype CLUSTER[at0037] occurrences matches {0..1} matches {	-- Exertion
+									allow_archetype CLUSTER[id38] occurrences matches {0..1} matches {	-- Exertion
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-[a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
 									}
 								}
 							}
@@ -263,749 +242,796 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Respirações">
 				description = <"As características observadas da respiração espontânea como seria comumente registrada como parte de uma observação de um \"sinal vital\".">
 			>
-			["at0001"] = <
-				text = <"*history(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Qualquer evento">
 				description = <"Evento genérico">
 			>
-			["at0003"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Frequência">
 				description = <"Frequência respiratória">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Ritmo">
 				description = <"Ritmo respiratório">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Regular">
 				description = <"Respiração regular">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Irregular">
 				description = <"Respiração irregular">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Padrão respiratório anormal">
 				description = <"Padrão específico de respiração anormal. Outros padrões podem ser colocados como texto livre ou subconjunto terminológico definido no nível da especialização ou no nível do template.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Respiração de Kussmaul">
 				description = <"Respiração profunda com ou sem suspiro.">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Profundidade">
 				description = <"Pronfundidade respiratória">
 			>
-			["at0017"] = <
+			["at18"] = <
 				text = <"Normal">
 				description = <"Profundidade respiratória normal">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"Superficial">
 				description = <"Profundidade respiratória superficial">
 			>
-			["at0019"] = <
+			["at20"] = <
 				text = <"Profunda">
 				description = <"Respiração profunda">
 			>
-			["at0022"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0024"] = <
+			["id25"] = <
 				text = <"Descrição">
 				description = <"A descrição textual das respirações">
 			>
-			["at0025"] = <
+			["at26"] = <
 				text = <"Variável">
 				description = <"Profundidade respiratória variável">
 			>
-			["at0030"] = <
+			["at31"] = <
 				text = <"Respiração de Cheyne-Stokes">
 				description = <"Períodos de hiperventilação alternados com períodos de apneia.">
 			>
-			["at0031"] = <
+			["at32"] = <
 				text = <"Respiração atáxica">
 				description = <"Respiração de frequência e volume corrente variáveis">
 			>
-			["at0033"] = <
+			["at34"] = <
 				text = <"Respiração apneustica">
 				description = <"Profunda, inspiração com suspiro com uma pausa na inspiração total seguida de uma breve insuficiência na expiração.">
 			>
-			["at0034"] = <
+			["at35"] = <
 				text = <"Respiração de Biot">
 				description = <"Grupos de respirações profundas irregulares que se alternam com períodos de apneia.">
 			>
-			["at0037"] = <
+			["id38"] = <
 				text = <"Esforço">
 				description = <"Nível de esforço durante ou logo antes de ser feita a observação. Destinada apenas para registrar o esforço somente se isso pode afetar as respirações e onde normalmente não seria registrado com parte de uma observação clínica geral.">
 			>
-			["at0044"] = <
+			["at45"] = <
 				text = <"Apneia.">
 				description = <"Parada da respiração.">
 			>
-			["at0054"] = <
+			["at55"] = <
 				text = <"Expiração prolongada">
 				description = <"A fase da expiração é mais longa que o normal/usual. Associada com doenças obstrutivas das vias respiratórias tais como asma.">
 			>
-			["at0055"] = <
+			["id56"] = <
 				text = <"Oxigênio ambiente">
 				description = <"Detalhes da quantidade de oxigênio sendo administrada ao paciente no momento da observação. Se assumem valores de concentração de oxigênio de 21%, Fi02 de 0,21 e velocidade de fluxo do oxigênio de 0 l/min ou 0 ml/min.">
 			>
-			["at0056"] = <
+			["id57"] = <
 				text = <"Fatores de confundimento">
 				description = <"Comenta e registra outros fatores incidentais que podem contribuir para as respirações observadas. Por exemplo, nível de ansiedade, dor, alimentação em crianças, traqueostomia, etc.">
 			>
-		>
-		["ar-sy"] = <
-			["at0000"] = <
-				text = <"التنفس">
-				description = <"الخصائص الملحوظة - المشاهدة- للتنفس التلقائي و الذي عادة ما يتم تسجيله كجزء من فحص العلامات الحياتية">
-			>
-			["at0001"] = <
-				text = <"*history(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
-				text = <"إحدى الوقائع">
-				description = <"حدث - واقعة - جنيسة / غير محدود الملكية">
-			>
-			["at0003"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
-				text = <"السرعة - المعدَّل">
-				description = <"سرعة (معدل) التنفس">
-			>
-			["at0005"] = <
-				text = <"النَّظم">
-				description = <"نَظم التنفس">
-			>
-			["at0006"] = <
-				text = <"منتظم">
-				description = <"تنفس منتظم">
-			>
-			["at0007"] = <
-				text = <"غير منتظم">
-				description = <"تنفس غير منتظم">
-			>
-			["at0009"] = <
-				text = <"النمط التنفسي غير الطبيعي">
-				description = <"نمط تنفسي غير طبيعي معيّن. يمكن إدخال الأنماط الأخرى على هيئة نص حر أو على هيئة فرع من المصطلحات يتم تعريفها على مستوى النماذج المخصصة أو القوالب.">
-			>
-			["at0012"] = <
-				text = <"تنفس كوسماول">
-				description = <"تنفس صدري عميق بوجود أو بعدم وجود لُهاث مرئي">
-			>
-			["at0016"] = <
-				text = <"العمق">
-				description = <"عمق التنفس">
-			>
-			["at0017"] = <
-				text = <"طبيعي">
-				description = <"عمق التنفس طبيعي">
-			>
-			["at0018"] = <
-				text = <"ضحل">
-				description = <"عمق التنفس ضحل">
-			>
-			["at0019"] = <
-				text = <"عميق">
-				description = <"التنفس عميق">
-			>
-			["at0022"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0024"] = <
-				text = <"الوصف">
-				description = <"نص يصف التنفس">
-			>
-			["at0025"] = <
-				text = <"متغير">
-				description = <"عمق التنفس متغيِّر">
-			>
-			["at0030"] = <
-				text = <"تنفس شيين - ستوكس">
-				description = <"فترات من فرط التهوية متبادلة مع فترات من انقطاع النفس">
-			>
-			["at0031"] = <
-				text = <"تنفس رَنَحي - فاقد للانتظام">
-				description = <"التنفس بسرعات (معدلات) و أحجام مَدِّية مختلفة">
-			>
-			["at0033"] = <
-				text = <"تنفس بشهيق مستمر">
-				description = <"شهيق عميق مع اللُّهاث, مع توقف عند الشهيق الكلي يليه إطلاق للنفس بشكل مختصر و غير كافي">
-			>
-			["at0034"] = <
-				text = <"*Cluster breathing(en)">
-				description = <"*Clusters of irregular breaths that alternate with periods of apnoea. Also termed Biot's breathing.(en)">
-			>
-			["at0037"] = <
-				text = <"المجهود - عنقود">
-				description = <"مستوى إجهاد الشخص عند تسجيل الملاحظة أو قبل تسجيلها بقليل. يستخدم فقط لتسجيل الإجهاد حيث قد يؤثر على التنفس حيث لن يتم تسجيله بشكل طبيعي كجزء من الملاحظات السريرية العامة  ">
-			>
-			["at0044"] = <
-				text = <"*Apnoea(en)">
-				description = <"*Breathing has ceased.(en)">
-			>
-			["at0054"] = <
-				text = <"*Prolonged expiratory phase(en)">
-				description = <"*The respiratory expiratory phase is longer than normal/usual. Associated with obstructive airways disease such as asthma.(en)">
-			>
-			["at0055"] = <
-				text = <"الأكسجين المحيط - عنقود">
-				description = <"*Details of the amount of oxygen being delivered to the subject at the time of observation.  Assumed values of 21% oxygen concentration, Fi02 of 0.21 and oxygen flow rate of 0 l/min or 0 ml/min.(en)">
-			>
-			["at0056"] = <
-				text = <"العوامل المُربِكة">
-				description = <"تعليق على و تسجيل للعوامل العارضة التي قد تؤثر في ملاحظة التنفس. مثلا, مستوى القلق, الألم, الإطعام لدى الرُّضع, الفــغــر الرُّغامي">
-			>
-		>
-		["es-ar"] = <
-			["at0000"] = <
-				text = <"Respiraciones">
-				description = <"Las características observadas de la respiración espontánea, tal cual sería comúnmente registrada como parte de una evaluación de signos vitales.">
-			>
-			["at0001"] = <
-				text = <"*history(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
-				text = <"Cualquier evento">
-				description = <"Evento genérico">
-			>
-			["at0003"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
-				text = <"Frecuencia">
-				description = <"Frecuencia respiratoria.">
-			>
-			["at0005"] = <
-				text = <"Ritmo">
-				description = <"Ritmo de la respiración.">
-			>
-			["at0006"] = <
-				text = <"Regular">
-				description = <"Respiración regular.">
-			>
-			["at0007"] = <
-				text = <"Irregular">
-				description = <"Respiración irregular.">
-			>
-			["at0009"] = <
-				text = <"Patrones respiratorios anormales">
-				description = <"Patrón respiratorio anormal específico. Otros patrones pueden ser ingresados como texto libre o un subconjunto terminológico, definido a nivel de la especialización o de la plantilla.">
-			>
-			["at0012"] = <
-				text = <"Respiración de Kussmaul">
-				description = <"Respiración profunda con o sin jadeo visible.">
-			>
-			["at0016"] = <
-				text = <"Profundidad">
-				description = <"Profundidad de la respiración.">
-			>
-			["at0017"] = <
-				text = <"Normal">
-				description = <"Respiración con profundidad normal.">
-			>
-			["at0018"] = <
-				text = <"Superficial">
-				description = <"Respiración superficial.">
-			>
-			["at0019"] = <
-				text = <"Profunda">
-				description = <"Respiración profunda.">
-			>
-			["at0022"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0024"] = <
-				text = <"Descripción">
-				description = <"La descripción textual de las respiraciones.">
-			>
-			["at0025"] = <
-				text = <"Variable">
-				description = <"Respiración con profundidad variable.">
-			>
-			["at0030"] = <
-				text = <"Respiración de Cheyne-Stokes">
-				description = <"Períodos de hiperventilación alternando con períodos de apnea.">
-			>
-			["at0031"] = <
-				text = <"Respiración atáxica">
-				description = <"Respiración de frecuencia y volumen corriente variables.">
-			>
-			["at0033"] = <
-				text = <"Respiración apnéustica">
-				description = <"Respiración profunda, con jadeo inspiratorio, que tiene una pausa al completar la inspiración, seguida con una espiración breve e insuficiente.">
-			>
-			["at0034"] = <
-				text = <"Respiración de Biot">
-				description = <"Grupos de respiraciones irregulares profundas que alternan con períodos de apnea.">
-			>
-			["at0037"] = <
-				text = <"Esfuerzo">
-				description = <"Nivel de esfuerzo del sujeto justo antes o en el momento en que la observación está siendo hecha. Destinado para registrar el esfuerzo solo si puede afectar las respiraciones y donde normalmente no sería registrado como parte de una observación clínica general.">
-			>
-			["at0044"] = <
-				text = <"Apnea">
-				description = <"Cesación de la respiración.">
-			>
-			["at0054"] = <
-				text = <"Espiración prolongada">
-				description = <"La fase espiratoria respiratoria es mas larga que lo usual/normal. Asociada con enfermedades obstructivas de las vías aéreas tales como el asma.">
-			>
-			["at0055"] = <
-				text = <"Oxígeno ambiental">
-				description = <"Especificación de la cantidad de oxígeno siendo administrada al sujeto al momento de la observación. Se asumen valores de concentración de oxígeno de 21%, FiO2 de 0,21 y una velocidad de flujo de oxígeno de 0 lt/min o 0 ml/min.">
-			>
-			["at0056"] = <
-				text = <"Factores confundidores">
-				description = <"Comenta y registra otros factores incidentales que pueden contribuir a las respiraciones observadas. Por ejemplo, el nivel de ansiedad, dolor, alimentación previa en infantes, traqueostomía, etc.">
-			>
-		>
-		["de"] = <
-			["at0000"] = <
-				text = <"*Respirations(en)">
-				description = <"*The observed characteristics of spontaneous breathing as would commonly be recorded as part of a 'vital signs' examination.(en)">
-			>
-			["at0001"] = <
-				text = <"History">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
-				text = <"Any event">
-				description = <"allgemeines Ereignis">
-			>
-			["at0003"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
-				text = <"*Rate(en)">
-				description = <"*Rate of respiration.(en)">
-			>
-			["at0005"] = <
+			["ac1"] = <
 				text = <"*Rhythm(en)">
 				description = <"*Rhythm of respiration.(en)">
 			>
-			["at0006"] = <
-				text = <"*Regular(en)">
-				description = <"*Regular respiration.(en)">
-			>
-			["at0007"] = <
-				text = <"*Irregular(en)">
-				description = <"*Irregular respirations.(en)">
-			>
-			["at0009"] = <
-				text = <"*Abnormal respiratory pattern(en)">
-				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
-			>
-			["at0012"] = <
-				text = <"*Kussmaul's respiration(en)">
-				description = <"*Deep chest breathing with or without a visible gasp.(en)">
-			>
-			["at0016"] = <
+			["ac2"] = <
 				text = <"*Depth(en)">
 				description = <"*Depth of respiration.(en)">
 			>
-			["at0017"] = <
-				text = <"*Normal(en)">
-				description = <"*Normal depth of breathing.(en)">
+			["ac3"] = <
+				text = <"*Abnormal respiratory pattern(en)">
+				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
 			>
-			["at0018"] = <
-				text = <"*Shallow(en)">
-				description = <"*Shallow depth of breathing.(en)">
+			["at56"] = <
+				text = <"*Frequency (en)">
+				description = <"*Frequency (en)">
 			>
-			["at0019"] = <
-				text = <"*Deep(en)">
-				description = <"*Deep breathing.(en)">
+		>
+		["ar-sy"] = <
+			["id1"] = <
+				text = <"التنفس">
+				description = <"الخصائص الملحوظة - المشاهدة- للتنفس التلقائي و الذي عادة ما يتم تسجيله كجزء من فحص العلامات الحياتية">
 			>
-			["at0022"] = <
-				text = <"List">
-				description = <"@ internal @">
+			["id3"] = <
+				text = <"إحدى الوقائع">
+				description = <"حدث - واقعة - جنيسة / غير محدود الملكية">
 			>
-			["at0024"] = <
-				text = <"*Description(en)">
-				description = <"*A text description of respirations.(en)">
+			["id5"] = <
+				text = <"السرعة - المعدَّل">
+				description = <"سرعة (معدل) التنفس">
 			>
-			["at0025"] = <
-				text = <"*Variable(en)">
-				description = <"*Variable depth of breathing.(en)">
+			["id6"] = <
+				text = <"النَّظم">
+				description = <"نَظم التنفس">
 			>
-			["at0030"] = <
-				text = <"*Cheyne-Stokes respiration(en)">
-				description = <"*Periods of hyperventilation alternating with periods of apnoea.(en)">
+			["at7"] = <
+				text = <"منتظم">
+				description = <"تنفس منتظم">
 			>
-			["at0031"] = <
-				text = <"*Ataxic respiration(en)">
-				description = <"*Breathing of varying tidal volumes and rates.(en)">
+			["at8"] = <
+				text = <"غير منتظم">
+				description = <"تنفس غير منتظم">
 			>
-			["at0033"] = <
-				text = <"*Apneustic respiration(en)">
-				description = <"*Deep, gasping inspiration with a pause at full inspiration followed by a brief, insufficient release of breath.(en)">
+			["id10"] = <
+				text = <"النمط التنفسي غير الطبيعي">
+				description = <"نمط تنفسي غير طبيعي معيّن. يمكن إدخال الأنماط الأخرى على هيئة نص حر أو على هيئة فرع من المصطلحات يتم تعريفها على مستوى النماذج المخصصة أو القوالب.">
 			>
-			["at0034"] = <
+			["at13"] = <
+				text = <"تنفس كوسماول">
+				description = <"تنفس صدري عميق بوجود أو بعدم وجود لُهاث مرئي">
+			>
+			["id17"] = <
+				text = <"العمق">
+				description = <"عمق التنفس">
+			>
+			["at18"] = <
+				text = <"طبيعي">
+				description = <"عمق التنفس طبيعي">
+			>
+			["at19"] = <
+				text = <"ضحل">
+				description = <"عمق التنفس ضحل">
+			>
+			["at20"] = <
+				text = <"عميق">
+				description = <"التنفس عميق">
+			>
+			["id25"] = <
+				text = <"الوصف">
+				description = <"نص يصف التنفس">
+			>
+			["at26"] = <
+				text = <"متغير">
+				description = <"عمق التنفس متغيِّر">
+			>
+			["at31"] = <
+				text = <"تنفس شيين - ستوكس">
+				description = <"فترات من فرط التهوية متبادلة مع فترات من انقطاع النفس">
+			>
+			["at32"] = <
+				text = <"تنفس رَنَحي - فاقد للانتظام">
+				description = <"التنفس بسرعات (معدلات) و أحجام مَدِّية مختلفة">
+			>
+			["at34"] = <
+				text = <"تنفس بشهيق مستمر">
+				description = <"شهيق عميق مع اللُّهاث, مع توقف عند الشهيق الكلي يليه إطلاق للنفس بشكل مختصر و غير كافي">
+			>
+			["at35"] = <
 				text = <"*Cluster breathing(en)">
 				description = <"*Clusters of irregular breaths that alternate with periods of apnoea. Also termed Biot's breathing.(en)">
 			>
-			["at0037"] = <
-				text = <"*Exertion(en)">
-				description = <"*Subject's level of exertion at or just prior to the observation being made. Intended only to record exertion only as it might effect respirations and where it would not normally be recorded as part of general clinical observation.(en)">
+			["id38"] = <
+				text = <"المجهود - عنقود">
+				description = <"مستوى إجهاد الشخص عند تسجيل الملاحظة أو قبل تسجيلها بقليل. يستخدم فقط لتسجيل الإجهاد حيث قد يؤثر على التنفس حيث لن يتم تسجيله بشكل طبيعي كجزء من الملاحظات السريرية العامة  ">
 			>
-			["at0044"] = <
+			["at45"] = <
 				text = <"*Apnoea(en)">
 				description = <"*Breathing has ceased.(en)">
 			>
-			["at0054"] = <
+			["at55"] = <
 				text = <"*Prolonged expiratory phase(en)">
 				description = <"*The respiratory expiratory phase is longer than normal/usual. Associated with obstructive airways disease such as asthma.(en)">
 			>
-			["at0055"] = <
+			["id56"] = <
+				text = <"الأكسجين المحيط - عنقود">
+				description = <"*Details of the amount of oxygen being delivered to the subject at the time of observation.  Assumed values of 21% oxygen concentration, Fi02 of 0.21 and oxygen flow rate of 0 l/min or 0 ml/min.(en)">
+			>
+			["id57"] = <
+				text = <"العوامل المُربِكة">
+				description = <"تعليق على و تسجيل للعوامل العارضة التي قد تؤثر في ملاحظة التنفس. مثلا, مستوى القلق, الألم, الإطعام لدى الرُّضع, الفــغــر الرُّغامي">
+			>
+			["ac1"] = <
+				text = <"*Rhythm(en)">
+				description = <"*Rhythm of respiration.(en)">
+			>
+			["ac2"] = <
+				text = <"*Depth(en)">
+				description = <"*Depth of respiration.(en)">
+			>
+			["ac3"] = <
+				text = <"*Abnormal respiratory pattern(en)">
+				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
+			>
+			["at56"] = <
+				text = <"*Frequency (en)">
+				description = <"*Frequency (en)">
+			>
+		>
+		["es-ar"] = <
+			["id1"] = <
+				text = <"Respiraciones">
+				description = <"Las características observadas de la respiración espontánea, tal cual sería comúnmente registrada como parte de una evaluación de signos vitales.">
+			>
+			["id3"] = <
+				text = <"Cualquier evento">
+				description = <"Evento genérico">
+			>
+			["id5"] = <
+				text = <"Frecuencia">
+				description = <"Frecuencia respiratoria.">
+			>
+			["id6"] = <
+				text = <"Ritmo">
+				description = <"Ritmo de la respiración.">
+			>
+			["at7"] = <
+				text = <"Regular">
+				description = <"Respiración regular.">
+			>
+			["at8"] = <
+				text = <"Irregular">
+				description = <"Respiración irregular.">
+			>
+			["id10"] = <
+				text = <"Patrones respiratorios anormales">
+				description = <"Patrón respiratorio anormal específico. Otros patrones pueden ser ingresados como texto libre o un subconjunto terminológico, definido a nivel de la especialización o de la plantilla.">
+			>
+			["at13"] = <
+				text = <"Respiración de Kussmaul">
+				description = <"Respiración profunda con o sin jadeo visible.">
+			>
+			["id17"] = <
+				text = <"Profundidad">
+				description = <"Profundidad de la respiración.">
+			>
+			["at18"] = <
+				text = <"Normal">
+				description = <"Respiración con profundidad normal.">
+			>
+			["at19"] = <
+				text = <"Superficial">
+				description = <"Respiración superficial.">
+			>
+			["at20"] = <
+				text = <"Profunda">
+				description = <"Respiración profunda.">
+			>
+			["id25"] = <
+				text = <"Descripción">
+				description = <"La descripción textual de las respiraciones.">
+			>
+			["at26"] = <
+				text = <"Variable">
+				description = <"Respiración con profundidad variable.">
+			>
+			["at31"] = <
+				text = <"Respiración de Cheyne-Stokes">
+				description = <"Períodos de hiperventilación alternando con períodos de apnea.">
+			>
+			["at32"] = <
+				text = <"Respiración atáxica">
+				description = <"Respiración de frecuencia y volumen corriente variables.">
+			>
+			["at34"] = <
+				text = <"Respiración apnéustica">
+				description = <"Respiración profunda, con jadeo inspiratorio, que tiene una pausa al completar la inspiración, seguida con una espiración breve e insuficiente.">
+			>
+			["at35"] = <
+				text = <"Respiración de Biot">
+				description = <"Grupos de respiraciones irregulares profundas que alternan con períodos de apnea.">
+			>
+			["id38"] = <
+				text = <"Esfuerzo">
+				description = <"Nivel de esfuerzo del sujeto justo antes o en el momento en que la observación está siendo hecha. Destinado para registrar el esfuerzo solo si puede afectar las respiraciones y donde normalmente no sería registrado como parte de una observación clínica general.">
+			>
+			["at45"] = <
+				text = <"Apnea">
+				description = <"Cesación de la respiración.">
+			>
+			["at55"] = <
+				text = <"Espiración prolongada">
+				description = <"La fase espiratoria respiratoria es mas larga que lo usual/normal. Asociada con enfermedades obstructivas de las vías aéreas tales como el asma.">
+			>
+			["id56"] = <
+				text = <"Oxígeno ambiental">
+				description = <"Especificación de la cantidad de oxígeno siendo administrada al sujeto al momento de la observación. Se asumen valores de concentración de oxígeno de 21%, FiO2 de 0,21 y una velocidad de flujo de oxígeno de 0 lt/min o 0 ml/min.">
+			>
+			["id57"] = <
+				text = <"Factores confundidores">
+				description = <"Comenta y registra otros factores incidentales que pueden contribuir a las respiraciones observadas. Por ejemplo, el nivel de ansiedad, dolor, alimentación previa en infantes, traqueostomía, etc.">
+			>
+			["ac1"] = <
+				text = <"*Rhythm(en)">
+				description = <"*Rhythm of respiration.(en)">
+			>
+			["ac2"] = <
+				text = <"*Depth(en)">
+				description = <"*Depth of respiration.(en)">
+			>
+			["ac3"] = <
+				text = <"*Abnormal respiratory pattern(en)">
+				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
+			>
+			["at56"] = <
+				text = <"*Frequency (en)">
+				description = <"*Frequency (en)">
+			>
+		>
+		["de"] = <
+			["id1"] = <
+				text = <"*Respirations(en)">
+				description = <"*The observed characteristics of spontaneous breathing as would commonly be recorded as part of a 'vital signs' examination.(en)">
+			>
+			["id3"] = <
+				text = <"Any event">
+				description = <"allgemeines Ereignis">
+			>
+			["id5"] = <
+				text = <"*Rate(en)">
+				description = <"*Rate of respiration.(en)">
+			>
+			["id6"] = <
+				text = <"*Rhythm(en)">
+				description = <"*Rhythm of respiration.(en)">
+			>
+			["at7"] = <
+				text = <"*Regular(en)">
+				description = <"*Regular respiration.(en)">
+			>
+			["at8"] = <
+				text = <"*Irregular(en)">
+				description = <"*Irregular respirations.(en)">
+			>
+			["id10"] = <
+				text = <"*Abnormal respiratory pattern(en)">
+				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
+			>
+			["at13"] = <
+				text = <"*Kussmaul's respiration(en)">
+				description = <"*Deep chest breathing with or without a visible gasp.(en)">
+			>
+			["id17"] = <
+				text = <"*Depth(en)">
+				description = <"*Depth of respiration.(en)">
+			>
+			["at18"] = <
+				text = <"*Normal(en)">
+				description = <"*Normal depth of breathing.(en)">
+			>
+			["at19"] = <
+				text = <"*Shallow(en)">
+				description = <"*Shallow depth of breathing.(en)">
+			>
+			["at20"] = <
+				text = <"*Deep(en)">
+				description = <"*Deep breathing.(en)">
+			>
+			["id25"] = <
+				text = <"*Description(en)">
+				description = <"*A text description of respirations.(en)">
+			>
+			["at26"] = <
+				text = <"*Variable(en)">
+				description = <"*Variable depth of breathing.(en)">
+			>
+			["at31"] = <
+				text = <"*Cheyne-Stokes respiration(en)">
+				description = <"*Periods of hyperventilation alternating with periods of apnoea.(en)">
+			>
+			["at32"] = <
+				text = <"*Ataxic respiration(en)">
+				description = <"*Breathing of varying tidal volumes and rates.(en)">
+			>
+			["at34"] = <
+				text = <"*Apneustic respiration(en)">
+				description = <"*Deep, gasping inspiration with a pause at full inspiration followed by a brief, insufficient release of breath.(en)">
+			>
+			["at35"] = <
+				text = <"*Cluster breathing(en)">
+				description = <"*Clusters of irregular breaths that alternate with periods of apnoea. Also termed Biot's breathing.(en)">
+			>
+			["id38"] = <
+				text = <"*Exertion(en)">
+				description = <"*Subject's level of exertion at or just prior to the observation being made. Intended only to record exertion only as it might effect respirations and where it would not normally be recorded as part of general clinical observation.(en)">
+			>
+			["at45"] = <
+				text = <"*Apnoea(en)">
+				description = <"*Breathing has ceased.(en)">
+			>
+			["at55"] = <
+				text = <"*Prolonged expiratory phase(en)">
+				description = <"*The respiratory expiratory phase is longer than normal/usual. Associated with obstructive airways disease such as asthma.(en)">
+			>
+			["id56"] = <
 				text = <"*Ambient oxygen(en)">
 				description = <"*Details of the amount of oxygen being delivered to the subject at the time of observation.  Assumed values of 21% oxygen concentration, Fi02 of 0.21 and oxygen flow rate of 0 l/min or 0 ml/min.(en)">
 			>
-			["at0056"] = <
+			["id57"] = <
 				text = <"*Confounding factors(en)">
 				description = <"*Comment on and record other incidental factors that may be contributing to the respirations observation. For example, level of anxiety, pain, feeding in infants, tracheostomy.(en)">
 			>
+			["ac1"] = <
+				text = <"*Rhythm(en)">
+				description = <"*Rhythm of respiration.(en)">
+			>
+			["ac2"] = <
+				text = <"*Depth(en)">
+				description = <"*Depth of respiration.(en)">
+			>
+			["ac3"] = <
+				text = <"*Abnormal respiratory pattern(en)">
+				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
+			>
+			["at56"] = <
+				text = <"*Frequency (en)">
+				description = <"*Frequency (en)">
+			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Respirations">
 				description = <"The observed characteristics of spontaneous breathing as would commonly be recorded as part of a 'vital signs' examination.">
 			>
-			["at0001"] = <
-				text = <"history">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Generic event.">
 			>
-			["at0003"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Rate">
 				description = <"Rate of respiration.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Rhythm">
 				description = <"Rhythm of respiration.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Regular">
 				description = <"Regular respiration.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Irregular">
 				description = <"Irregular respirations.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Abnormal respiratory pattern">
 				description = <"Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Kussmaul's respiration">
 				description = <"Deep chest breathing with or without a visible gasp.">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Depth">
 				description = <"Depth of respiration.">
 			>
-			["at0017"] = <
+			["at18"] = <
 				text = <"Normal">
 				description = <"Normal depth of breathing.">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"Shallow">
 				description = <"Shallow depth of breathing.">
 			>
-			["at0019"] = <
+			["at20"] = <
 				text = <"Deep">
 				description = <"Deep breathing.">
 			>
-			["at0022"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0024"] = <
+			["id25"] = <
 				text = <"Description">
 				description = <"A text description of respirations.">
 			>
-			["at0025"] = <
+			["at26"] = <
 				text = <"Variable">
 				description = <"Variable depth of breathing.">
 			>
-			["at0030"] = <
+			["at31"] = <
 				text = <"Cheyne-Stokes respiration">
 				description = <"Periods of hyperventilation alternating with periods of apnoea.">
 			>
-			["at0031"] = <
+			["at32"] = <
 				text = <"Ataxic respiration">
 				description = <"Breathing of varying tidal volumes and rates.">
 			>
-			["at0033"] = <
+			["at34"] = <
 				text = <"Apneustic respiration">
 				description = <"Deep, gasping inspiration with a pause at full inspiration followed by a brief, insufficient release of breath.">
 			>
-			["at0034"] = <
+			["at35"] = <
 				text = <"Cluster breathing">
 				description = <"Clusters of irregular breaths that alternate with periods of apnoea. Also termed Biot's breathing.">
 			>
-			["at0037"] = <
+			["id38"] = <
 				text = <"Exertion">
 				description = <"Subject's level of exertion at or just prior to the observation being made. Intended only to record exertion only as it might effect respirations and where it would not normally be recorded as part of general clinical observation.">
 			>
-			["at0044"] = <
+			["at45"] = <
 				text = <"Apnoea">
 				description = <"Breathing has ceased.">
 			>
-			["at0054"] = <
+			["at55"] = <
 				text = <"Prolonged expiratory phase">
 				description = <"The respiratory expiratory phase is longer than normal/usual. Associated with obstructive airways disease such as asthma.">
 			>
-			["at0055"] = <
+			["id56"] = <
 				text = <"Ambient oxygen">
 				description = <"Details of the amount of oxygen being delivered to the subject at the time of observation.  Assumed values of 21% oxygen concentration, Fi02 of 0.21 and oxygen flow rate of 0 l/min or 0 ml/min.">
 			>
-			["at0056"] = <
+			["id57"] = <
 				text = <"Confounding factors">
 				description = <"Comment on and record other incidental factors that may be contributing to the respirations observation. For example, level of anxiety, pain, feeding in infants, tracheostomy.">
 			>
+			["ac1"] = <
+				text = <"Rhythm">
+				description = <"Rhythm of respiration.">
+			>
+			["ac2"] = <
+				text = <"Depth">
+				description = <"Depth of respiration.">
+			>
+			["ac3"] = <
+				text = <"Abnormal respiratory pattern">
+				description = <"Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.">
+			>
+			["at56"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
 		>
 		["fa"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"تنفس">
 				description = <" ویژگی های قابل مشاهده مربوط به تنفس خود بخود که معمولا می توان به عنوان بخشی از آزمایشات \"علایم حیاتی\" ثبت نمود.">
 			>
-			["at0001"] = <
-				text = <"*history(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"هر رویداد">
 				description = <"رویداد عمومی">
 			>
-			["at0003"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"میزان">
 				description = <"میزان تنفس.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"ریتم">
 				description = <"ریتم تنفس.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"منظم">
 				description = <"تنفس منظم.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"نامنظم">
 				description = <"تنفس نامنظم.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"الگوی غیر طبیعی تنفس">
 				description = <"الگوی غیر طبیعی تنفس خاص.سایر الگوها ممکن است به صورت متن آزاد یا زیر مجموعه واژه شناسی تعریف شده در موارد تخصصی یا در سطح الگو استفاده شوند.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"تنفس کاسمال">
 				description = <"تنفس عمیق قفسه سینه ای با یا بدون نفسهای بریده بریده. ">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"عمق">
 				description = <"عمق تنفس.">
 			>
-			["at0017"] = <
+			["at18"] = <
 				text = <"طبیعی">
 				description = <"عمق تنفس طبیعی.">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"سطحی">
 				description = <"عمق تنفس سطحی.">
 			>
-			["at0019"] = <
+			["at20"] = <
 				text = <"عمیق">
 				description = <"تنفس عمیق.">
 			>
-			["at0022"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0024"] = <
+			["id25"] = <
 				text = <"توصیف">
 				description = <"متنی که تنفسها را توصیف می کند.">
 			>
-			["at0025"] = <
+			["at26"] = <
 				text = <"متغیر">
 				description = <"عمق تنفس طبیعی.">
 			>
-			["at0030"] = <
+			["at31"] = <
 				text = <"تنفس چیین استوکس">
 				description = <"دوره های تخلیه عمیق نفس که با دوره های تنگی تنفس تغییر می کند. ">
 			>
-			["at0031"] = <
+			["at32"] = <
 				text = <"تنفس بدون قاعده">
 				description = <"تنفس متغیر از نظر حجم و میزان.">
 			>
-			["at0033"] = <
+			["at34"] = <
 				text = <"تنفس اپناستیک">
 				description = <"تنفس بریده بریده و  عمیق با توقف در تنفس کامل که با تنفس ناکافی و کوتاه دنبال می شود. ">
 			>
-			["at0034"] = <
+			["at35"] = <
 				text = <"تنفس خوشه ای ">
 				description = <"خوشه هایی از تنفس نامنظم که با دوره هایی از تنگی تنفس تغییر می کند. همچنین به عنوان تنفس بیوت شناخته می شود.">
 			>
-			["at0037"] = <
+			["id38"] = <
 				text = <"تقلا">
 				description = <"سطح تقلای فرد در یا قبل انجام مشاهدات . هدف تنها ثبت فقط تقلایی است که ممکن است تنفس را تحت تاثیر قرار دهد و جایی که به عنوان بخشی از مشاهدات عمومی بالینی ثبت شود ">
 			>
-			["at0044"] = <
+			["at45"] = <
 				text = <"تنگی تنفس">
 				description = <"تنفس متوقف شده است.">
 			>
-			["at0054"] = <
+			["at55"] = <
 				text = <"مرحله بازدم طولانی مدت">
 				description = <"مرحله بازدم طولانی مدت که اط حالت طبیعی و معمول .که با بیماری انسداد راههای تنفسی نظیر آسم همراه است. ">
 			>
-			["at0055"] = <
+			["id56"] = <
 				text = <"اکسیژن محیطی">
 				description = <"جزییات مقدار اکسیژن داده شده به فرد در زمان مشاهده به فرد داده شده است .ارزش فرض شده  غلظت 21 درصدی ااکسیژن و .....از 021 ومیان جریان اکسیژن    است      ">
 			>
-			["at0056"] = <
+			["id57"] = <
 				text = <"فاکتورهای جانبی">
 				description = <"نظر و ثبت سایر فاکتورهای اتفاقی که ممکن است در مشاهده تنفس شرکت داشته باشند .برای مثال سطح اضطراب ، تغذیه در شیر خوار و تراکئوستومی ">
 			>
+			["ac1"] = <
+				text = <"*Rhythm(en)">
+				description = <"*Rhythm of respiration.(en)">
+			>
+			["ac2"] = <
+				text = <"*Depth(en)">
+				description = <"*Depth of respiration.(en)">
+			>
+			["ac3"] = <
+				text = <"*Abnormal respiratory pattern(en)">
+				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
+			>
+			["at56"] = <
+				text = <"*Frequency (en)">
+				description = <"*Frequency (en)">
+			>
 		>
 		["nl"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Ademhaling">
 				description = <"Observaties van de spontane ademhaling, zoals deze meestal geregistreerd worden als onderdeel van de observatie van de vitale functies">
 			>
-			["at0001"] = <
-				text = <"*history(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"any event">
 				description = <"Algemene gebeurtenis">
 			>
-			["at0003"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Frequentie">
 				description = <"Ademhalingsfrequentie">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Ritme">
 				description = <"Ademhalingsritme">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Regelmatig">
 				description = <"Regelmatige ademhaling
 ">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Onregelmatig">
 				description = <"Onregelmatige ademhaling">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Afwijkend ademhalingspatroon">
 				description = <"Specifieke abnormaal ademhalingspatronen. Andere patronen kunnen worden genoteerd als vrije tekst of als terminologie deelverzameling, welke gedefinieerd wordt op specialisatie of template niveau.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Ademhaling volgens Kussmaul">
 				description = <"Zeer diepe regelmatige ademhaling ">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Diepte">
 				description = <"De diepte van de ademteugen">
 			>
-			["at0017"] = <
+			["at18"] = <
 				text = <"Normaal">
 				description = <"Normale diepte van de in- en uitademing">
 			>
-			["at0018"] = <
+			["at19"] = <
 				text = <"Oppervlakkig">
 				description = <"Oppervlakkige ademhaling">
 			>
-			["at0019"] = <
+			["at20"] = <
 				text = <"Diep">
 				description = <"Diepe ademhaling">
 			>
-			["at0022"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0024"] = <
+			["id25"] = <
 				text = <"Beschrijving">
 				description = <"Tekstuele beschrijving van de ademhaling.">
 			>
-			["at0025"] = <
+			["at26"] = <
 				text = <"Variabel">
 				description = <"Variabele diepte van de ademteugen">
 			>
-			["at0030"] = <
+			["at31"] = <
 				text = <"Ademhaling volgens Cheyne-Stokes">
 				description = <"Periodes van hyperventilatie afwisselend met periodes met apneu">
 			>
-			["at0031"] = <
+			["at32"] = <
 				text = <"Atactische ademhaling">
 				description = <"Ademhaling met variërende volumes per teug en variërende frequentie">
 			>
-			["at0033"] = <
+			["at34"] = <
 				text = <"Apneustische ademhaling">
 				description = <"Diepe, hijgende inspiratie met een pauze bij volledige inspiratie, gevolgd door een korte, onvoldoende uitademing.">
 			>
-			["at0034"] = <
+			["at35"] = <
 				text = <"Cluster ademhaling">
 				description = <"Clusters van onregelmatige ademhaling die worden afgewisseld met perioden van apneu. Ook genoemd ademhaling van Biot.">
 			>
-			["at0037"] = <
+			["id38"] = <
 				text = <"Inspanning">
 				description = <"Het niveau van inspanning door de persoon, op of net voor het moment van de observatie. Slechts bedoeld om inspanning te registreren die effect kan hebben op de ademhaling en die normaal gesproken niet zou worden geregistreerd als onderdeel van de algemene klinische observatie.">
 			>
-			["at0044"] = <
+			["at45"] = <
 				text = <"Apneu">
 				description = <"Ademhaling is gestopt.">
 			>
-			["at0054"] = <
+			["at55"] = <
 				text = <"Verlengde expiratoire fase">
 				description = <"De respiratoire expiratoire fase is langer dan normaal / gebruikelijk. Wordt geassocieerd met obstructieve ziektes van de  luchtwegen, zoals astma.">
 			>
-			["at0055"] = <
+			["id56"] = <
 				text = <"Toegevoerde zuurstof">
 				description = <"Details van de hoeveelheid zuurstof die wordt geleverd aan de persoon op het moment van waarneming. Veronderstelde waarden van 21% zuurstof, Fi02 van 0,21 en zuurstof levering van 0 l / min of 0 ml / min.">
 			>
-			["at0056"] = <
+			["id57"] = <
 				text = <"Beïnvloedende factoren">
 				description = <"Opmerking over bijkomende factoren die de ademhaling kunnen beïnvloeden. Bijvoorbeeld, het niveau van angst, pijn, voeding bij zuigelingen, tracheostomie.">
 			>
+			["ac1"] = <
+				text = <"*Rhythm(en)">
+				description = <"*Rhythm of respiration.(en)">
+			>
+			["ac2"] = <
+				text = <"*Depth(en)">
+				description = <"*Depth of respiration.(en)">
+			>
+			["ac3"] = <
+				text = <"*Abnormal respiratory pattern(en)">
+				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
+			>
+			["at56"] = <
+				text = <"*Frequency (en)">
+				description = <"*Frequency (en)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at56"] = <http://openehr.org/id/382>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at7", "at8">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at18", "at19", "at20", "at26">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at13", "at31", "at32", "at34", "at35", "at45", "at55">
 		>
 	>

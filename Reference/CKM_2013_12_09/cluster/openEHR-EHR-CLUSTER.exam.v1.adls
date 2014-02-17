@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.exam.v1.0.0
 
 language
@@ -29,75 +29,99 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Examination
+	CLUSTER[id1] matches {	-- Examination
 		items matches {
-			CLUSTER[at0004] occurrences matches {0..1} matches {	-- Normal statements
+			CLUSTER[id5] occurrences matches {0..1} matches {	-- Normal statements
 				items matches {
-					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Normal statement
+					ELEMENT[id6] occurrences matches {0..*} matches {	-- Normal statement
 						value matches {
-							DV_TEXT[id0733] matches {*}
+							DV_TEXT[id11] 
 						}
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Clinical description
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Clinical description
 				value matches {
-					DV_TEXT[id0605] matches {*}
+					DV_TEXT[id12] 
 				}
 			}
-			CLUSTER[at0008] occurrences matches {0..1} matches {	-- Findings
+			CLUSTER[id9] occurrences matches {0..1} matches {	-- Findings
 				items matches {
-					allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {	-- Detail
+					allow_archetype CLUSTER[id10] occurrences matches {0..*} matches {	-- Detail
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
-			ELEMENT[at0006] occurrences matches {0..*} matches {	-- Image
+			ELEMENT[id7] occurrences matches {0..*} matches {	-- Image
 				value matches {
-					DV_MULTIMEDIA[id0205] matches {
-						media_type matches {
-							[openEHR::
-							426, 
-							427, 
-							429]
-						}
+					DV_MULTIMEDIA[id13] matches {
+						media_type matches {[ac1]}		-- Image
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Examination">
 				description = <"Basic examination cluster for describing findings on physical examination when there is no named focus of examination.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Clinical description">
 				description = <"Textural description of the part examined.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Normal statements">
 				description = <"A group of statements about the normality of the examination.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Normal statement">
 				description = <"A specific statement of normality.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Image">
 				description = <"Drawing or image of the area examined.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Findings">
 				description = <"Clinical findings.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Detail">
 				description = <"More focused examination findings.">
 			>
+			["ac1"] = <
+				text = <"Image">
+				description = <"Drawing or image of the area examined.">
+			>
+			["at1"] = <
+				text = <"image/gif">
+				description = <"image/gif">
+			>
+			["at2"] = <
+				text = <"image/png">
+				description = <"image/png">
+			>
+			["at3"] = <
+				text = <"image/jpeg">
+				description = <"image/jpeg">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at1"] = <http://openehr.org/id/426>
+			["at2"] = <http://openehr.org/id/427>
+			["at3"] = <http://openehr.org/id/429>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at1", "at2", "at3">
 		>
 	>

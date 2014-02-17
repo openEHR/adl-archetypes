@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.urinalysis.v1.0.0
 
 language
@@ -45,156 +45,156 @@ description
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Urinalysis
+	OBSERVATION[id1] matches {	-- Urinalysis
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0050] occurrences matches {0..1} matches {	-- Glucose
+									ELEMENT[id51] occurrences matches {0..1} matches {	-- Glucose
 										value matches {
-											DV_ORDINAL[id0453] matches {
+											DV_ORDINAL[id182] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0115]}],
-													[{2}, {[local::at0116]}],
-													[{3}, {[local::at0117]}],
-													[{4}, {[local::at0118]}],
-													[{5}, {[local::at0119]}],
-													[{6}, {[local::at0120]}]
+													[{1}, {[at116]}],
+													[{2}, {[at117]}],
+													[{3}, {[at118]}],
+													[{4}, {[at119]}],
+													[{5}, {[at120]}],
+													[{6}, {[at121]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0095] occurrences matches {0..1} matches {	-- Protein
+									ELEMENT[id96] occurrences matches {0..1} matches {	-- Protein
 										value matches {
-											DV_ORDINAL[id0053] matches {
+											DV_ORDINAL[id183] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0096]}],
-													[{2}, {[local::at0097]}],
-													[{3}, {[local::at0098]}],
-													[{4}, {[local::at0099]}],
-													[{5}, {[local::at0100]}],
-													[{6}, {[local::at0101]}]
+													[{1}, {[at97]}],
+													[{2}, {[at98]}],
+													[{3}, {[at99]}],
+													[{4}, {[at100]}],
+													[{5}, {[at101]}],
+													[{6}, {[at102]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0062] occurrences matches {0..1} matches {	-- Bilirubin
+									ELEMENT[id63] occurrences matches {0..1} matches {	-- Bilirubin
 										value matches {
-											DV_ORDINAL[id0653] matches {
+											DV_ORDINAL[id184] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0121]}],
-													[{2}, {[local::at0122]}],
-													[{3}, {[local::at0123]}],
-													[{4}, {[local::at0124]}]
+													[{1}, {[at122]}],
+													[{2}, {[at123]}],
+													[{3}, {[at124]}],
+													[{4}, {[at125]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0037] occurrences matches {0..1} matches {	-- Ketones
+									ELEMENT[id38] occurrences matches {0..1} matches {	-- Ketones
 										value matches {
-											DV_ORDINAL[id0454] matches {
+											DV_ORDINAL[id185] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0109]}],
-													[{2}, {[local::at0110]}],
-													[{3}, {[local::at0111]}],
-													[{4}, {[local::at0112]}],
-													[{5}, {[local::at0113]}],
-													[{6}, {[local::at0114]}]
+													[{1}, {[at110]}],
+													[{2}, {[at111]}],
+													[{3}, {[at112]}],
+													[{4}, {[at113]}],
+													[{5}, {[at114]}],
+													[{6}, {[at115]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0151] occurrences matches {0..1} matches {	-- Specific gravity
+									ELEMENT[id152] occurrences matches {0..1} matches {	-- Specific gravity
 										value matches {
-											DV_ORDINAL[id0597] matches {
+											DV_ORDINAL[id186] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0152]}],
-													[{2}, {[local::at0153]}],
-													[{3}, {[local::at0154]}],
-													[{4}, {[local::at0155]}],
-													[{5}, {[local::at0156]}],
-													[{6}, {[local::at0157]}],
-													[{7}, {[local::at0158]}]
+													[{1}, {[at153]}],
+													[{2}, {[at154]}],
+													[{3}, {[at155]}],
+													[{4}, {[at156]}],
+													[{5}, {[at157]}],
+													[{6}, {[at158]}],
+													[{7}, {[at159]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0032] occurrences matches {0..1} matches {	-- Blood
+									ELEMENT[id33] occurrences matches {0..1} matches {	-- Blood
 										value matches {
-											DV_ORDINAL[id0455] matches {
+											DV_ORDINAL[id187] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0102]}],
-													[{2}, {[local::at0103]}],
-													[{3}, {[local::at0104]}],
-													[{4}, {[local::at0105]}],
-													[{5}, {[local::at0106]}],
-													[{6}, {[local::at0107]}],
-													[{7}, {[local::at0108]}]
+													[{1}, {[at103]}],
+													[{2}, {[at104]}],
+													[{3}, {[at105]}],
+													[{4}, {[at106]}],
+													[{5}, {[at107]}],
+													[{6}, {[at108]}],
+													[{7}, {[at109]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0126] occurrences matches {0..1} matches {	-- pH
+									ELEMENT[id127] occurrences matches {0..1} matches {	-- pH
 										value matches {
-											DV_ORDINAL[id0397] matches {
+											DV_ORDINAL[id188] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0127]}],
-													[{2}, {[local::at0128]}],
-													[{3}, {[local::at0129]}],
-													[{4}, {[local::at0130]}],
-													[{5}, {[local::at0131]}],
-													[{6}, {[local::at0132]}],
-													[{7}, {[local::at0133]}],
-													[{8}, {[local::at0134]}],
-													[{9}, {[local::at0176]}],
-													[{10}, {[local::at0177]}],
-													[{11}, {[local::at0179]}]
+													[{1}, {[at128]}],
+													[{2}, {[at129]}],
+													[{3}, {[at130]}],
+													[{4}, {[at131]}],
+													[{5}, {[at132]}],
+													[{6}, {[at133]}],
+													[{7}, {[at134]}],
+													[{8}, {[at135]}],
+													[{9}, {[at177]}],
+													[{10}, {[at178]}],
+													[{11}, {[at180]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0056] occurrences matches {0..1} matches {	-- Urobilinogen
+									ELEMENT[id57] occurrences matches {0..1} matches {	-- Urobilinogen
 										value matches {
-											DV_ORDINAL[id0853] matches {
+											DV_ORDINAL[id189] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0161]}],
-													[{2}, {[local::at0162]}],
-													[{3}, {[local::at0163]}],
-													[{4}, {[local::at0164]}],
-													[{5}, {[local::at0165]}]
+													[{1}, {[at162]}],
+													[{2}, {[at163]}],
+													[{3}, {[at164]}],
+													[{4}, {[at165]}],
+													[{5}, {[at166]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0043] occurrences matches {0..1} matches {	-- Nitrite
+									ELEMENT[id44] occurrences matches {0..1} matches {	-- Nitrite
 										value matches {
-											DV_ORDINAL[id0253] matches {
+											DV_ORDINAL[id190] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0159]}],
-													[{2}, {[local::at0160]}]
+													[{1}, {[at160]}],
+													[{2}, {[at161]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0068] occurrences matches {0..1} matches {	-- Leukocytes
+									ELEMENT[id69] occurrences matches {0..1} matches {	-- Leukocytes
 										value matches {
-											DV_ORDINAL[id0054] matches {
+											DV_ORDINAL[id191] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0135]}],
-													[{2}, {[local::at0136]}],
-													[{3}, {[local::at0137]}],
-													[{4}, {[local::at0138]}],
-													[{5}, {[local::at0139]}]
+													[{1}, {[at136]}],
+													[{2}, {[at137]}],
+													[{3}, {[at138]}],
+													[{4}, {[at139]}],
+													[{5}, {[at140]}]
 												}
 											}
 										}
 									}
-									ELEMENT[at0030] occurrences matches {0..1} matches {	-- Comments
+									ELEMENT[id31] occurrences matches {0..1} matches {	-- Comments
 										value matches {
-											DV_TEXT[id0654] matches {*}
+											DV_TEXT[id192] 
 										}
 									}
 								}
@@ -205,633 +205,731 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0079] matches {	-- Tree
+			ITEM_TREE[id80] matches {
 				items matches {
-					allow_archetype CLUSTER[at0180] occurrences matches {0..1} matches {	-- Device
+					allow_archetype CLUSTER[id181] occurrences matches {0..1} matches {	-- Device
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Urinalysis">
 				description = <"Semi-quantitative chemical analysis of a urine sample by direct observation. The color change occurring on each segment of a dipstick is read by being compared to a color chart.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"*">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Comments">
 				description = <"Any general comments on the results.">
 			>
-			["at0032"] = <
+			["id33"] = <
 				text = <"Blood">
 				description = <"Detection of blood in urine sample.">
 			>
-			["at0037"] = <
+			["id38"] = <
 				text = <"Ketones">
 				description = <"Detection of ketones in urine sample.">
 			>
-			["at0043"] = <
+			["id44"] = <
 				text = <"Nitrite">
 				description = <"Detection of nitrites in urine sample.">
 			>
-			["at0050"] = <
+			["id51"] = <
 				text = <"Glucose">
 				description = <"Detection of glucose in urine sample.">
 			>
-			["at0056"] = <
+			["id57"] = <
 				text = <"Urobilinogen">
 				description = <"Detection of urobilinogen in urine sample.">
 			>
-			["at0062"] = <
+			["id63"] = <
 				text = <"Bilirubin">
 				description = <"Detection of bilirubin in urine sample.">
 			>
-			["at0068"] = <
+			["id69"] = <
 				text = <"Leukocytes">
 				description = <"Detection of white blood cells in the urine.">
 			>
-			["at0079"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0095"] = <
+			["id96"] = <
 				text = <"Protein">
 				description = <"Detection of protein in urine sample.">
 			>
-			["at0096"] = <
+			["at97"] = <
 				text = <"Negative">
 				description = <"Negative">
 			>
-			["at0097"] = <
+			["at98"] = <
 				text = <"Trace">
 				description = <"Trace">
 			>
-			["at0098"] = <
+			["at99"] = <
 				text = <"+">
 				description = <"30mg/dl">
 			>
-			["at0099"] = <
+			["at100"] = <
 				text = <"++">
 				description = <"100mg/dl">
 			>
-			["at0100"] = <
+			["at101"] = <
 				text = <"+++">
 				description = <"300mg/dl">
 			>
-			["at0101"] = <
+			["at102"] = <
 				text = <"++++">
 				description = <"over 2000mg/dl">
 			>
-			["at0102"] = <
+			["at103"] = <
 				text = <"Negative">
 				description = <"Negative">
 			>
-			["at0103"] = <
+			["at104"] = <
 				text = <"Non-haemolysed Trace">
 				description = <"Non-haemolysed Trace">
 			>
-			["at0104"] = <
+			["at105"] = <
 				text = <"Non-haemolysed Moderate">
 				description = <"Non-haemolysed Moderate">
 			>
-			["at0105"] = <
+			["at106"] = <
 				text = <"Haemolysed Trace">
 				description = <"Haemolysed Trace">
 			>
-			["at0106"] = <
+			["at107"] = <
 				text = <"+">
 				description = <"Small">
 			>
-			["at0107"] = <
+			["at108"] = <
 				text = <"++">
 				description = <"Moderate">
 			>
-			["at0108"] = <
+			["at109"] = <
 				text = <"+++">
 				description = <"Large">
 			>
-			["at0109"] = <
+			["at110"] = <
 				text = <"Negative">
 				description = <"Negative">
 			>
-			["at0110"] = <
+			["at111"] = <
 				text = <"Trace">
 				description = <"5mg/dl">
 			>
-			["at0111"] = <
+			["at112"] = <
 				text = <"Small">
 				description = <"15mg/dl">
 			>
-			["at0112"] = <
+			["at113"] = <
 				text = <"Moderate">
 				description = <"40mg/dl">
 			>
-			["at0113"] = <
+			["at114"] = <
 				text = <"Large">
 				description = <"80mg/dl">
 			>
-			["at0114"] = <
+			["at115"] = <
 				text = <"Large+">
 				description = <"150mg/dl">
 			>
-			["at0115"] = <
+			["at116"] = <
 				text = <"Negative">
 				description = <"Negative">
 			>
-			["at0116"] = <
+			["at117"] = <
 				text = <"Trace ">
 				description = <"1/10 g/dl (100mg/dl)">
 			>
-			["at0117"] = <
+			["at118"] = <
 				text = <"+ ">
 				description = <"1/4 g/dl (250mg/dl)">
 			>
-			["at0118"] = <
+			["at119"] = <
 				text = <"++">
 				description = <"1/2 g/dl (500mg/dl)">
 			>
-			["at0119"] = <
+			["at120"] = <
 				text = <"+++">
 				description = <"1 g/dl (1000mg/dl)">
 			>
-			["at0120"] = <
+			["at121"] = <
 				text = <"++++">
 				description = <"2 g/dl or more (2000mg/dl or more)">
 			>
-			["at0121"] = <
+			["at122"] = <
 				text = <"Negative">
 				description = <"Negative.">
 			>
-			["at0122"] = <
+			["at123"] = <
 				text = <"+">
 				description = <"Small.">
 			>
-			["at0123"] = <
+			["at124"] = <
 				text = <"++">
 				description = <"Moderate.">
 			>
-			["at0124"] = <
+			["at125"] = <
 				text = <"+++">
 				description = <"Large.">
 			>
-			["at0126"] = <
+			["id127"] = <
 				text = <"pH">
 				description = <"Record pH from urinalysis (range 5.0-10.0).">
 			>
-			["at0127"] = <
+			["at128"] = <
 				text = <"5.0">
 				description = <"Ph of 5">
 			>
-			["at0128"] = <
+			["at129"] = <
 				text = <"5.5">
 				description = <"Ph of 5.5">
 			>
-			["at0129"] = <
+			["at130"] = <
 				text = <"6.0">
 				description = <"Ph of 6">
 			>
-			["at0130"] = <
+			["at131"] = <
 				text = <"6.5">
 				description = <"Ph of 6.5">
 			>
-			["at0131"] = <
+			["at132"] = <
 				text = <"7.0">
 				description = <"Ph of 7">
 			>
-			["at0132"] = <
+			["at133"] = <
 				text = <"7.5">
 				description = <"Ph of 7.5">
 			>
-			["at0133"] = <
+			["at134"] = <
 				text = <"8.0">
 				description = <"Ph of 8">
 			>
-			["at0134"] = <
+			["at135"] = <
 				text = <"8.5">
 				description = <"Ph of 8.5">
 			>
-			["at0135"] = <
+			["at136"] = <
 				text = <"Negative">
 				description = <"No leukocytes">
 			>
-			["at0136"] = <
+			["at137"] = <
 				text = <"Trace">
 				description = <"Trace of leukocytes">
 			>
-			["at0137"] = <
+			["at138"] = <
 				text = <"+">
 				description = <"Small">
 			>
-			["at0138"] = <
+			["at139"] = <
 				text = <"++">
 				description = <"Moderate">
 			>
-			["at0139"] = <
+			["at140"] = <
 				text = <"+++">
 				description = <"Large">
 			>
-			["at0151"] = <
+			["id152"] = <
 				text = <"Specific gravity">
 				description = <"Specific gravity is measuring the concentration of solutes in the urine relative to distilled water.">
 			>
-			["at0152"] = <
+			["at153"] = <
 				text = <"1.000">
 				description = <"*">
 			>
-			["at0153"] = <
+			["at154"] = <
 				text = <"1.005">
 				description = <"*">
 			>
-			["at0154"] = <
+			["at155"] = <
 				text = <"1.010">
 				description = <"*">
 			>
-			["at0155"] = <
+			["at156"] = <
 				text = <"1.015">
 				description = <"*">
 			>
-			["at0156"] = <
+			["at157"] = <
 				text = <"1.020">
 				description = <"*">
 			>
-			["at0157"] = <
+			["at158"] = <
 				text = <"1.025">
 				description = <"*">
 			>
-			["at0158"] = <
+			["at159"] = <
 				text = <"1.030">
 				description = <"*">
 			>
-			["at0159"] = <
+			["at160"] = <
 				text = <"Negative">
 				description = <"*">
 			>
-			["at0160"] = <
+			["at161"] = <
 				text = <"Positive">
 				description = <"*">
 			>
-			["at0161"] = <
+			["at162"] = <
 				text = <"0.2 mg/dL">
 				description = <"Normal (low)">
 			>
-			["at0162"] = <
+			["at163"] = <
 				text = <"1 mg/dL">
 				description = <"Normal (upper)">
 			>
-			["at0163"] = <
+			["at164"] = <
 				text = <"2 mg/dL">
 				description = <"+">
 			>
-			["at0164"] = <
+			["at165"] = <
 				text = <"4 mg/dL">
 				description = <"++">
 			>
-			["at0165"] = <
+			["at166"] = <
 				text = <"8 mg/dL">
 				description = <"+++">
 			>
-			["at0176"] = <
+			["at177"] = <
 				text = <"9.0">
 				description = <"Ph of 9.0">
 			>
-			["at0177"] = <
+			["at178"] = <
 				text = <"9.5">
 				description = <"Ph of 9.5">
 			>
-			["at0179"] = <
+			["at180"] = <
 				text = <"10.0">
 				description = <"Ph of 10.0">
 			>
-			["at0180"] = <
+			["id181"] = <
 				text = <"Device">
 				description = <"The device/test method used">
 			>
+			["ac1"] = <
+				text = <"Glucose">
+				description = <"Detection of glucose in urine sample.">
+			>
+			["ac2"] = <
+				text = <"Protein">
+				description = <"Detection of protein in urine sample.">
+			>
+			["ac3"] = <
+				text = <"Bilirubin">
+				description = <"Detection of bilirubin in urine sample.">
+			>
+			["ac4"] = <
+				text = <"Ketones">
+				description = <"Detection of ketones in urine sample.">
+			>
+			["ac5"] = <
+				text = <"Specific gravity">
+				description = <"Specific gravity is measuring the concentration of solutes in the urine relative to distilled water.">
+			>
+			["ac6"] = <
+				text = <"Blood">
+				description = <"Detection of blood in urine sample.">
+			>
+			["ac7"] = <
+				text = <"pH">
+				description = <"Record pH from urinalysis (range 5.0-10.0).">
+			>
+			["ac8"] = <
+				text = <"Urobilinogen">
+				description = <"Detection of urobilinogen in urine sample.">
+			>
+			["ac9"] = <
+				text = <"Nitrite">
+				description = <"Detection of nitrites in urine sample.">
+			>
+			["ac10"] = <
+				text = <"Leukocytes">
+				description = <"Detection of white blood cells in the urine.">
+			>
 		>
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"تحليل البول , التَّفسِرة">
 				description = <"تحليل نصف كمِّي لعينة بول عن طريق الملاحظة (المشاهدة) المباشرة. تتم مقارنة تغيُّر اللون الذي يحدث عن كل قطعة من الغميسة بمُخَطَّط الألوان.">
 			>
-			["at0001"] = <
-				text = <"*Event Series(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"إحدى الوقائع">
 				description = <"*">
 			>
-			["at0003"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"التعليقات">
 				description = <"أية تعليقات على النتائج">
 			>
-			["at0032"] = <
+			["id33"] = <
 				text = <"الدم">
 				description = <"اكتشاف الدم في عينة البول">
 			>
-			["at0037"] = <
+			["id38"] = <
 				text = <"الكيتونات">
 				description = <"اكتشاف الكيتونات في عينة البول">
 			>
-			["at0043"] = <
+			["id44"] = <
 				text = <"نِتريت">
 				description = <"اكتشاف النِّتريت في عينة البول">
 			>
-			["at0050"] = <
+			["id51"] = <
 				text = <"نتيجة اختبار سكر العنب - الغلوكوز">
 				description = <"اكتشاف سكر العنب في عينة البول">
 			>
-			["at0056"] = <
+			["id57"] = <
 				text = <"يوروبيلينوجين">
 				description = <"اكتشاف اليوروبيلينوجين في عينة الدم">
 			>
-			["at0062"] = <
+			["id63"] = <
 				text = <"بيليروبين">
 				description = <"اكتشاف البيليروبين في عينة البول">
 			>
-			["at0068"] = <
+			["id69"] = <
 				text = <"كُرَيَّة بيضاء">
 				description = <"اكتشاف خلايا الدم البيضاء في البول">
 			>
-			["at0079"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0095"] = <
+			["id96"] = <
 				text = <"نتيجة اختبار البوتينات">
 				description = <"اكتشاف البروتين في عينة البول">
 			>
-			["at0096"] = <
+			["at97"] = <
 				text = <"سلبي">
 				description = <"سلبي">
 			>
-			["at0097"] = <
+			["at98"] = <
 				text = <"أثر زهيد">
 				description = <"أثر يقتفي">
 			>
-			["at0098"] = <
+			["at99"] = <
 				text = <"+">
 				description = <"30 مجم لكل ديسي ليتر">
 			>
-			["at0099"] = <
+			["at100"] = <
 				text = <"++">
 				description = <"100 مجم لكل ديسي ليتر">
 			>
-			["at0100"] = <
+			["at101"] = <
 				text = <"+++">
 				description = <"300 مجم لكل ديسي ليتر">
 			>
-			["at0101"] = <
+			["at102"] = <
 				text = <"++++">
 				description = <"أكثر من 2000 مجم لكل ديسي ليتر">
 			>
-			["at0102"] = <
+			["at103"] = <
 				text = <"سلبي">
 				description = <"سلبي">
 			>
-			["at0103"] = <
+			["at104"] = <
 				text = <"أثر زهيد ليس فيه حل (انحلال) للدم">
 				description = <"أثر زهيد ليس فيه حل (انحلال) للدم">
 			>
-			["at0104"] = <
+			["at105"] = <
 				text = <"متوسط ليس فيه حل (انحلال) للدم">
 				description = <"متوسط ليس فيه حل (انحلال) للدم">
 			>
-			["at0105"] = <
+			["at106"] = <
 				text = <"أثر زهيد منحل">
 				description = <"أثر زهيد منحل">
 			>
-			["at0106"] = <
+			["at107"] = <
 				text = <"+">
 				description = <"صغير">
 			>
-			["at0107"] = <
+			["at108"] = <
 				text = <"++">
 				description = <"متوسط">
 			>
-			["at0108"] = <
+			["at109"] = <
 				text = <"+++">
 				description = <"كبير">
 			>
-			["at0109"] = <
+			["at110"] = <
 				text = <"سلبي">
 				description = <"سلبي">
 			>
-			["at0110"] = <
+			["at111"] = <
 				text = <"أثر زهيد">
 				description = <"5 مجم لكل ديسي ليتر">
 			>
-			["at0111"] = <
+			["at112"] = <
 				text = <"صغير">
 				description = <"15 مجم لكل ديسي ليتر">
 			>
-			["at0112"] = <
+			["at113"] = <
 				text = <"متوسط">
 				description = <"40 مجم لكل ديسي ليتر">
 			>
-			["at0113"] = <
+			["at114"] = <
 				text = <"كبير">
 				description = <"80 مجم لكل ديسي ليتر ">
 			>
-			["at0114"] = <
+			["at115"] = <
 				text = <"كبير +">
 				description = <"150 مجم لكل ديسي ليتر">
 			>
-			["at0115"] = <
+			["at116"] = <
 				text = <"سلبي">
 				description = <"سلبي">
 			>
-			["at0116"] = <
+			["at117"] = <
 				text = <"أثر زهيد">
 				description = <"م1/10 مجم لكل ديسي ليتر - 100 مجم لكل ديسي ليتر">
 			>
-			["at0117"] = <
+			["at118"] = <
 				text = <"+">
 				description = <"م1/4 جم لكل ديسي ليتر - 250 مجم لكل ديسي ليتر">
 			>
-			["at0118"] = <
+			["at119"] = <
 				text = <"++">
 				description = <"م1/2 جم لكل ديسي ليتر - 500 مجم لكل ديسي ليتر">
 			>
-			["at0119"] = <
+			["at120"] = <
 				text = <"+++">
 				description = <"م1 جم لكل ديسي ليتر - 100 مجم لكل ديسي ليتر">
 			>
-			["at0120"] = <
+			["at121"] = <
 				text = <"++++">
 				description = <"م2 جم لكل ديسي ليتر أو أكثر 2000 مجم لكل ديسي ليتر">
 			>
-			["at0121"] = <
+			["at122"] = <
 				text = <"سلبي">
 				description = <"سلبي">
 			>
-			["at0122"] = <
+			["at123"] = <
 				text = <"+">
 				description = <"صغير">
 			>
-			["at0123"] = <
+			["at124"] = <
 				text = <"++">
 				description = <"متوسط">
 			>
-			["at0124"] = <
+			["at125"] = <
 				text = <"+++">
 				description = <"كبير">
 			>
-			["at0126"] = <
+			["id127"] = <
 				text = <"الرقم الهيدروجيني">
 				description = <"تسجيل الرقم الهيدروجيني من تحليل البول (مجال من 5.0 - 8.5">
 			>
-			["at0127"] = <
+			["at128"] = <
 				text = <"5.0">
 				description = <"الرقم الهيدروجيني 5">
 			>
-			["at0128"] = <
+			["at129"] = <
 				text = <"5.5">
 				description = <"الرقم الهيدروجيني 5.5">
 			>
-			["at0129"] = <
+			["at130"] = <
 				text = <"6.0">
 				description = <"الرقم الهيدروجيني 6">
 			>
-			["at0130"] = <
+			["at131"] = <
 				text = <"6.5">
 				description = <"الرقم الهيدروجيني 6.5">
 			>
-			["at0131"] = <
+			["at132"] = <
 				text = <"7.0">
 				description = <"الرقم الهيدروجيني 7">
 			>
-			["at0132"] = <
+			["at133"] = <
 				text = <"7.5">
 				description = <"الرقم الهيدروجيني 7.5">
 			>
-			["at0133"] = <
+			["at134"] = <
 				text = <"8.0">
 				description = <"الرقم الهيدروجيني 8">
 			>
-			["at0134"] = <
+			["at135"] = <
 				text = <"8.5">
 				description = <"الرقم الهيدروجيني 8.5">
 			>
-			["at0135"] = <
+			["at136"] = <
 				text = <"سلبي">
 				description = <"لا توجد كرات دم بيضاء">
 			>
-			["at0136"] = <
+			["at137"] = <
 				text = <"أثر زهيد">
 				description = <"أثر زهيد لكرات الدم البيضاء">
 			>
-			["at0137"] = <
+			["at138"] = <
 				text = <"+">
 				description = <"صغير">
 			>
-			["at0138"] = <
+			["at139"] = <
 				text = <"++">
 				description = <"متوسط">
 			>
-			["at0139"] = <
+			["at140"] = <
 				text = <"+++">
 				description = <"كبير">
 			>
-			["at0151"] = <
+			["id152"] = <
 				text = <"الثقل النوعي">
 				description = <"الثقل النوعي هو قياس الذائبات (المُذابات) في البول نسبة إلى الماء المقطر">
 			>
-			["at0152"] = <
+			["at153"] = <
 				text = <"1.000">
 				description = <"*">
 			>
-			["at0153"] = <
+			["at154"] = <
 				text = <"1.005">
 				description = <"*">
 			>
-			["at0154"] = <
+			["at155"] = <
 				text = <"1.010">
 				description = <"*">
 			>
-			["at0155"] = <
+			["at156"] = <
 				text = <"1.015">
 				description = <"*">
 			>
-			["at0156"] = <
+			["at157"] = <
 				text = <"1.0202">
 				description = <"*">
 			>
-			["at0157"] = <
+			["at158"] = <
 				text = <"1.025">
 				description = <"*">
 			>
-			["at0158"] = <
+			["at159"] = <
 				text = <"1.030">
 				description = <"*">
 			>
-			["at0159"] = <
+			["at160"] = <
 				text = <"سلبي">
 				description = <"*">
 			>
-			["at0160"] = <
+			["at161"] = <
 				text = <"إيجابي">
 				description = <"*">
 			>
-			["at0161"] = <
+			["at162"] = <
 				text = <"0.2 مجم لكل ديسي ليتر">
 				description = <"طبيعي - منخفض">
 			>
-			["at0162"] = <
+			["at163"] = <
 				text = <"1 مجم لكل ديسي ليتر">
 				description = <"طبيعي - مرتفع">
 			>
-			["at0163"] = <
+			["at164"] = <
 				text = <"2 مجم لكل ديسي ليتر">
 				description = <"+">
 			>
-			["at0164"] = <
+			["at165"] = <
 				text = <"4 مجم لكل ديسي ليتر">
 				description = <"++">
 			>
-			["at0165"] = <
+			["at166"] = <
 				text = <"8 مجم لكل ديسي ليتر">
 				description = <"+++">
 			>
-			["at0176"] = <
+			["at177"] = <
 				text = <"9.0">
 				description = <"الرقم الهيدروجيني 9.0">
 			>
-			["at0177"] = <
+			["at178"] = <
 				text = <"9.5">
 				description = <"الرقم الهيدروجيني 9.5">
 			>
-			["at0179"] = <
+			["at180"] = <
 				text = <"10.0">
 				description = <"الرقم الهيدروجيني 10.0">
 			>
-			["at0180"] = <
+			["id181"] = <
 				text = <"الجهيزة">
 				description = <"الجهيزة/طريقة الاختبار المستخدمة.">
+			>
+			["ac1"] = <
+				text = <"*Glucose(en)">
+				description = <"*Detection of glucose in urine sample.(en)">
+			>
+			["ac2"] = <
+				text = <"*Protein(en)">
+				description = <"*Detection of protein in urine sample.(en)">
+			>
+			["ac3"] = <
+				text = <"*Bilirubin(en)">
+				description = <"*Detection of bilirubin in urine sample.(en)">
+			>
+			["ac4"] = <
+				text = <"*Ketones(en)">
+				description = <"*Detection of ketones in urine sample.(en)">
+			>
+			["ac5"] = <
+				text = <"*Specific gravity(en)">
+				description = <"*Specific gravity is measuring the concentration of solutes in the urine relative to distilled water.(en)">
+			>
+			["ac6"] = <
+				text = <"*Blood(en)">
+				description = <"*Detection of blood in urine sample.(en)">
+			>
+			["ac7"] = <
+				text = <"*pH(en)">
+				description = <"*Record pH from urinalysis (range 5.0-10.0).(en)">
+			>
+			["ac8"] = <
+				text = <"*Urobilinogen(en)">
+				description = <"*Detection of urobilinogen in urine sample.(en)">
+			>
+			["ac9"] = <
+				text = <"*Nitrite(en)">
+				description = <"*Detection of nitrites in urine sample.(en)">
+			>
+			["ac10"] = <
+				text = <"*Leukocytes(en)">
+				description = <"*Detection of white blood cells in the urine.(en)">
 			>
 		>
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at116", "at117", "at118", "at119", "at120", "at121">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at97", "at98", "at99", "at100", "at101", "at102">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at122", "at123", "at124", "at125">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at110", "at111", "at112", "at113", "at114", "at115">
+		>
+		["ac5"] = <
+			id = <"ac5">
+			members = <"at153", "at154", "at155", "at156", "at157", "at158", "at159">
+		>
+		["ac6"] = <
+			id = <"ac6">
+			members = <"at103", "at104", "at105", "at106", "at107", "at108", "at109">
+		>
+		["ac7"] = <
+			id = <"ac7">
+			members = <"at128", "at129", "at130", "at131", "at132", "at133", "at134", "at135", "at177", "at178", "at180">
+		>
+		["ac8"] = <
+			id = <"ac8">
+			members = <"at162", "at163", "at164", "at165", "at166">
+		>
+		["ac9"] = <
+			id = <"ac9">
+			members = <"at160", "at161">
+		>
+		["ac10"] = <
+			id = <"ac10">
+			members = <"at136", "at137", "at138", "at139", "at140">
 		>
 	>

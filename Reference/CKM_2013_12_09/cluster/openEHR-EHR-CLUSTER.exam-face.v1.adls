@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.exam-face.v1.0.0
 
 specialize
-	openEHR-EHR-CLUSTER.exam.v1.0.0
+	openEHR-EHR-CLUSTER.exam.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -31,21 +31,31 @@ description
 	>
 
 definition
-	CLUSTER[at0000.1] matches {	-- Examination of the face
-		/items[at0008]/items matches {
-			allow_archetype CLUSTER[at0009] occurrences matches {0..1} matches {
+	CLUSTER[id1.1] matches {	-- Examination of the face
+		/items[id9]/items matches {
+			allow_archetype CLUSTER[id10] occurrences matches {0..1} matches {
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic\.v1|openEHR-EHR-CLUSTER\.exam-mouth\.v1|openEHR-EHR-CLUSTER\.exam-nose\.v1|openEHR-EHR-CLUSTER\.cranial_nerves\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic\.v1|openEHR-EHR-CLUSTER\.exam-mouth\.v1|openEHR-EHR-CLUSTER\.exam-nose\.v1|openEHR-EHR-CLUSTER\.cranial_nerves\.v1|openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Examination of the face">
 				description = <"Examination cluster for describing findings on physical examination of the face.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at1", "at2", "at3">
 		>
 	>

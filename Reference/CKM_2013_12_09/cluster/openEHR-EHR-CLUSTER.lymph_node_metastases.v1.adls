@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.lymph_node_metastases.v1.0.0
 
 language
@@ -29,135 +29,108 @@ Use as a component archetype in the context of a suite of archetypes that make u
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Tumour- Lymph node metastases
+	CLUSTER[id1] matches {	-- Tumour- Lymph node metastases
 		items matches {
-			ELEMENT[at0041] occurrences matches {0..1} matches {	-- Lymph node site name
+			ELEMENT[id42] occurrences matches {0..1} matches {	-- Lymph node site name
 				value matches {
-					DV_TEXT[id0805] matches {*}
+					DV_TEXT[id54] 
 				}
 			}
-			allow_archetype CLUSTER[at0010] occurrences matches {0..1} matches {	-- Lymph node site location     
+			allow_archetype CLUSTER[id11] occurrences matches {0..1} matches {	-- Lymph node site location     
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location-precise\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
 			}
-			ELEMENT[at0044] occurrences matches {0..1} matches {	-- Tissue available
+			ELEMENT[id45] occurrences matches {0..1} matches {	-- Tissue available
 				value matches {
-					DV_CODED_TEXT[id0005] matches {
-						defining_code matches {
-							[local::
-							at0049, 	-- Present
-							at0050]	-- Absent
-						}
+					DV_CODED_TEXT[id55] matches {
+						defining_code matches {[ac1]}		-- Tissue available
 					}
 				}
 			}
-			ELEMENT[at0025] occurrences matches {0..1} matches {	-- Tumour involvement
+			ELEMENT[id26] occurrences matches {0..1} matches {	-- Tumour involvement
 				value matches {
-					DV_CODED_TEXT[id0605] matches {
-						defining_code matches {
-							[local::
-							at0042, 	-- Present
-							at0026, 	-- Present - left side nodes only
-							at0027, 	-- Present - right side nodes only
-							at0028, 	-- Present - bilateral nodes
-							at0029, 	-- Absent
-							at0030, 	-- Equivocal
-							at0031]	-- Indeterminate
-						}
+					DV_CODED_TEXT[id56] matches {
+						defining_code matches {[ac2]}		-- Tumour involvement
 					}
 				}
 			}
-			ELEMENT[at0011] occurrences matches {0..1} matches {	-- Nature of involvement
+			ELEMENT[id12] occurrences matches {0..1} matches {	-- Nature of involvement
 				value matches {
-					DV_CODED_TEXT[id0606] matches {
-						defining_code matches {
-							[local::
-							at0012, 	-- Focal
-							at0013, 	-- Diffuse
-							at0024, 	-- Complete
-							at0033]	-- Indeterminate
-						}
+					DV_CODED_TEXT[id57] matches {
+						defining_code matches {[ac3]}		-- Nature of involvement
 					}
 				}
 			}
-			ELEMENT[at0046] occurrences matches {0..1} matches {	-- Route of involvement
+			ELEMENT[id47] occurrences matches {0..1} matches {	-- Route of involvement
 				value matches {
-					DV_CODED_TEXT[id0806] matches {
-						defining_code matches {
-							[local::
-							at0047, 	-- Direct spread
-							at0048]	-- Metastasis
-						}
+					DV_CODED_TEXT[id58] matches {
+						defining_code matches {[ac4]}		-- Route of involvement
 					}
 				}
 			}
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Number of nodes examined
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Number of nodes examined
 				value matches {
-					DV_COUNT[id0205] matches {
+					DV_COUNT[id59] matches {
 						magnitude matches {|>=0|}
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Number of nodes with tumour
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Number of nodes with tumour
 				value matches {
-					DV_COUNT[id0607] matches {
+					DV_COUNT[id60] matches {
 						magnitude matches {|>=0|}
 					}
 				}
 			}
-			ELEMENT[at0009] occurrences matches {0..1} matches {	-- Extent of tumour
+			ELEMENT[id10] occurrences matches {0..1} matches {	-- Extent of tumour
 				value matches {
-					DV_QUANTITY[id0405] matches {
-						property matches {[openehr::122]}
+					DV_QUANTITY[id61] matches {
+						property matches {[at52]}
 						magnitude matches {|>=0.0|}
-						units matches {"mm"}
 					}
 				}
 			}
-			CLUSTER[at0039] occurrences matches {0..1} matches {	-- Extra-nodal extension
+			CLUSTER[id40] occurrences matches {0..1} matches {	-- Extra-nodal extension
 				items matches {
-					ELEMENT[at0034] occurrences matches {0..1} matches {	-- Extra-capsular extension
+					ELEMENT[id35] occurrences matches {0..1} matches {	-- Extra-capsular extension
 						value matches {
-							DV_CODED_TEXT[id0053] matches {
-								defining_code matches {
-									[local::
-									at0035, 	-- Present
-									at0036, 	-- Absent
-									at0037, 	-- Equivocal
-									at0038]	-- Indeterminate
-								}
+							DV_CODED_TEXT[id62] matches {
+								defining_code matches {[ac5]}		-- Extra-capsular extension
 							}
 						}
 					}
-					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Extent of extranodal tumour
+					ELEMENT[id15] occurrences matches {0..1} matches {	-- Extent of extranodal tumour
 						value matches {
-							DV_QUANTITY[id0253] matches {
-								property matches {[openehr::122]}
+							DV_QUANTITY[id63] matches {
+								property matches {[at53]}
 								magnitude matches {|>=0.0|}
-								units matches {"mm"}
 							}
 						}
 					}
 				}
 			}
-			ELEMENT[at0040] occurrences matches {0..1} matches {	-- Description
+			ELEMENT[id41] occurrences matches {0..1} matches {	-- Description
 				value matches {
-					DV_TEXT[id0406] matches {*}
+					DV_TEXT[id64] 
 				}
 			}
-			ELEMENT[at0051] occurrences matches {0..1} matches {	-- Marker dye uptake
+			ELEMENT[id52] occurrences matches {0..1} matches {	-- Marker dye uptake
 				value matches {
-					DV_TEXT[id0206] matches {*}
+					DV_TEXT[id65] 
 				}
 			}
-			allow_archetype CLUSTER[at0045] occurrences matches {0..*} matches {	-- Lymph node details
+			allow_archetype CLUSTER[id46] occurrences matches {0..*} matches {	-- Lymph node details
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.lymph_node_metastases\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
 			}
-			ELEMENT[at0052] occurrences matches {0..1} matches {	-- Radioactivity count
+			ELEMENT[id53] occurrences matches {0..1} matches {	-- Radioactivity count
 				value matches {
-					DV_QUANTITY[id0608] matches {
-						property matches {[openehr::382]}
+					DV_QUANTITY[id66] matches {
+						property matches {[at54]}
 						[magnitude, units, precision] matches {
 							[{|>=0.0|}, {"/s"}, {0}],
 							[{|>=0.0|}, {"/min"}, {0}]
@@ -168,152 +141,213 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Tumour- Lymph node metastases">
 				description = <"To record findings of tumour metastases in lymph nodes.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Number of nodes examined">
 				description = <"Number of nodes examined.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Number of nodes with tumour">
 				description = <"Number of nodes which show tumour involvement.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Extent of tumour">
 				description = <"Extent of tumour expressed as a maximum length. Applies only to an individual node.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Lymph node site location     ">
 				description = <"The anatomical location of the lymph node or site being reported.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Nature of involvement">
 				description = <"Nature or grade of the tumour, if present.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Focal">
 				description = <"The tumour is of a focal nature.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Diffuse">
 				description = <"The tumour is of a diffuse nature.">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Extent of extranodal tumour">
 				description = <"Extent of extranodal tumour expressed as a maximum length.">
 			>
-			["at0024"] = <
+			["at25"] = <
 				text = <"Complete">
 				description = <"The node is completely invaded by tumour.">
 			>
-			["at0025"] = <
+			["id26"] = <
 				text = <"Tumour involvement">
 				description = <"Findings of lymph node involvement with tumour.">
 			>
-			["at0026"] = <
+			["at27"] = <
 				text = <"Present - left side nodes only">
 				description = <"Tumour is present in left sided nodes only.">
 			>
-			["at0027"] = <
+			["at28"] = <
 				text = <"Present - right side nodes only">
 				description = <"Tumour is present in right side nodes only.">
 			>
-			["at0028"] = <
+			["at29"] = <
 				text = <"Present - bilateral nodes">
 				description = <"Tumour is present in nodes on both sides.">
 			>
-			["at0029"] = <
+			["at30"] = <
 				text = <"Absent">
 				description = <"Tumour is absent from the lymph node site.">
 			>
-			["at0030"] = <
+			["at31"] = <
 				text = <"Equivocal">
 				description = <"Lymph node involvement by tumour is equivocal.">
 			>
-			["at0031"] = <
+			["at32"] = <
 				text = <"Indeterminate">
 				description = <"Llymph node involvement by tumour has not been determined.">
 			>
-			["at0033"] = <
+			["at34"] = <
 				text = <"Indeterminate">
 				description = <"The nature of tumour has not been determnined.">
 			>
-			["at0034"] = <
+			["id35"] = <
 				text = <"Extra-capsular extension">
 				description = <"Findings of extension of tumour beyond a node capsule.">
 			>
-			["at0035"] = <
+			["at36"] = <
 				text = <"Present">
 				description = <"Extra-capsular involvement by tumour is present.">
 			>
-			["at0036"] = <
+			["at37"] = <
 				text = <"Absent">
 				description = <"Extra-capsular involvement by tumour is absent.">
 			>
-			["at0037"] = <
+			["at38"] = <
 				text = <"Equivocal">
 				description = <"Extra-capsular involvement by tumour is equivocal.">
 			>
-			["at0038"] = <
+			["at39"] = <
 				text = <"Indeterminate">
 				description = <"Extra-capsular involvement by tumour has not been determined.">
 			>
-			["at0039"] = <
+			["id40"] = <
 				text = <"Extra-nodal extension">
 				description = <"Findings related to extension of tumour external to the nodal capsule.">
 			>
-			["at0040"] = <
+			["id41"] = <
 				text = <"Description">
 				description = <"A text description of lymph node involvement by tumour.">
 			>
-			["at0041"] = <
+			["id42"] = <
 				text = <"Lymph node site name">
 				description = <"The name for the lymph node site being reported. May be a general location e.g. 'Axillary nodes', a relative site e.g. 'Sentinel nodes' or a individual node.">
 			>
-			["at0042"] = <
+			["at43"] = <
 				text = <"Present">
 				description = <"Lymph node involvement with tumour is present.">
 			>
-			["at0044"] = <
+			["id45"] = <
 				text = <"Tissue available">
 				description = <"Has the appropriate lymph node tissue been made available for examination?">
 			>
-			["at0045"] = <
+			["id46"] = <
 				text = <"Lymph node details">
 				description = <"Further details of lymph node metastasis at this site e.g individual nodes or further levels">
 			>
-			["at0046"] = <
+			["id47"] = <
 				text = <"Route of involvement">
 				description = <"The route by which the tumour became involved in lymph node tissue.">
 			>
-			["at0047"] = <
+			["at48"] = <
 				text = <"Direct spread">
 				description = <"The tumour involved the lymph node by direct spread.">
 			>
-			["at0048"] = <
+			["at49"] = <
 				text = <"Metastasis">
 				description = <"The tumour involved the lymph node by metastasis.">
 			>
-			["at0049"] = <
+			["at50"] = <
 				text = <"Present">
 				description = <"Lymph node tissue is present.">
 			>
-			["at0050"] = <
+			["at51"] = <
 				text = <"Absent">
 				description = <"Lymph node tissue is absent.">
 			>
-			["at0051"] = <
+			["id52"] = <
 				text = <"Marker dye uptake">
 				description = <"Findings of whether marker dye has been taken up by the lymph node or lymph node group.">
 			>
-			["at0052"] = <
+			["id53"] = <
 				text = <"Radioactivity count">
 				description = <"Radioactivity count measured after use of radiocolloid. ">
 			>
+			["ac1"] = <
+				text = <"Tissue available">
+				description = <"Has the appropriate lymph node tissue been made available for examination?">
+			>
+			["ac2"] = <
+				text = <"Tumour involvement">
+				description = <"Findings of lymph node involvement with tumour.">
+			>
+			["ac3"] = <
+				text = <"Nature of involvement">
+				description = <"Nature or grade of the tumour, if present.">
+			>
+			["ac4"] = <
+				text = <"Route of involvement">
+				description = <"The route by which the tumour became involved in lymph node tissue.">
+			>
+			["ac5"] = <
+				text = <"Extra-capsular extension">
+				description = <"Findings of extension of tumour beyond a node capsule.">
+			>
+			["at52"] = <
+				text = <"Length">
+				description = <"Length">
+			>
+			["at53"] = <
+				text = <"Length">
+				description = <"Length">
+			>
+			["at54"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at52"] = <http://openehr.org/id/122>
+			["at53"] = <http://openehr.org/id/122>
+			["at54"] = <http://openehr.org/id/382>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at50", "at51">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at43", "at27", "at28", "at29", "at30", "at31", "at32">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at13", "at14", "at25", "at34">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at48", "at49">
+		>
+		["ac5"] = <
+			id = <"ac5">
+			members = <"at36", "at37", "at38", "at39">
 		>
 	>

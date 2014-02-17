@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-DEMOGRAPHIC-CLUSTER.registration_other_data.v1.0.0
 
 language
@@ -42,73 +42,67 @@ description
 	lifecycle_state = <"initial">
 
 definition
-	CLUSTER[at0000] matches {	-- Outros detalhes do registro profissional
+	CLUSTER[id1] matches {	-- Outros detalhes do registro profissional
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Estado
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Estado
 				value matches {
-					DV_CODED_TEXT[id0205] matches {
-						defining_code matches {[ac0001]}		-- Códigos de estados
+					DV_CODED_TEXT[id4] matches {
+						defining_code matches {[ac2]}		-- Códigos de estados
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {1} matches {	-- País
+			ELEMENT[id3] occurrences matches {1} matches {	-- País
 				value matches {
-					DV_CODED_TEXT[id0605] matches {
-						defining_code matches {[ac0002]}		-- Códigos de países
+					DV_CODED_TEXT[id5] matches {
+						defining_code matches {[ac3]}		-- Códigos de países
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["pt-br"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Outros detalhes do registro profissional">
 				description = <"Outros detalhes do registro profissional">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Estado">
 				description = <"O Estado onde se localiza o conselho que registrou o profissional">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"País">
 				description = <"O código internacional do país no qual o órgão profissional está registrado">
 			>
-		>
-		["en"] = <
-			["at0000"] = <
-				text = <"Other provider registration data">
-				description = <"Other provider registration data">
-			>
-			["at0001"] = <
-				text = <"State">
-				description = <"The State of location of the registering body">
-			>
-			["at0002"] = <
-				text = <"Country">
-				description = <"The international code for the country within which the professional was registered">
-			>
-		>
-	>
-	constraint_definitions = <
-		["pt-br"] = <
-			["ac0001"] = <
+			["ac2"] = <
 				text = <"Códigos de estados">
 				description = <"códigos válidos para estados">
 			>
-			["ac0002"] = <
+			["ac3"] = <
 				text = <"Códigos de países">
 				description = <"códigos válidos para países">
 			>
 		>
 		["en"] = <
-			["ac0001"] = <
+			["id1"] = <
+				text = <"Other provider registration data">
+				description = <"Other provider registration data">
+			>
+			["id2"] = <
+				text = <"State">
+				description = <"The State of location of the registering body">
+			>
+			["id3"] = <
+				text = <"Country">
+				description = <"The international code for the country within which the professional was registered">
+			>
+			["ac2"] = <
 				text = <"State codes">
 				description = <"valid codes for state/territory/province">
 			>
-			["ac0002"] = <
+			["ac3"] = <
 				text = <"Country codes">
 				description = <"valid codes for countries">
 			>

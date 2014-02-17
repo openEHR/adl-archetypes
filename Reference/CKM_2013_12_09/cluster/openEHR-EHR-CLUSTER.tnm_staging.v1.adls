@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.tnm_staging.v1.0.0
 
 language
@@ -34,112 +34,93 @@ Greene FL, Page DL, Fleming ID. et al, eds, for the American Joint Committee on 
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Tumour - TNM Cancer staging
+	CLUSTER[id1] matches {	-- Tumour - TNM Cancer staging
 		items matches {
-			CLUSTER[at0002] occurrences matches {0..1} matches {	-- Clinical (cTNM)
+			CLUSTER[id3] occurrences matches {0..1} matches {	-- Clinical (cTNM)
 				items matches {
-					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Primary tumour (T)
+					ELEMENT[id4] occurrences matches {0..1} matches {	-- Primary tumour (T)
 						value matches {
-							DV_TEXT[id0093] matches {*}
+							DV_TEXT[id37] 
 						}
 					}
-					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Regional lymph nodes (N)
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Regional lymph nodes (N)
 						value matches {
-							DV_TEXT[id0493] matches {*}
+							DV_TEXT[id38] 
 						}
 					}
-					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Distant metastasis (M)
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Distant metastasis (M)
 						value matches {
-							DV_TEXT[id0893] matches {*}
+							DV_TEXT[id39] 
 						}
 					}
-					ELEMENT[at0025] occurrences matches {0..1} matches {	-- Residual tumour (R)
+					ELEMENT[id26] occurrences matches {0..1} matches {	-- Residual tumour (R)
 						value matches {
-							DV_CODED_TEXT[id0693] matches {
-								defining_code matches {
-									[local::
-									at0026, 	-- RX
-									at0027, 	-- RO
-									at0028, 	-- R1
-									at0029]	-- R2
-								}
+							DV_CODED_TEXT[id40] matches {
+								defining_code matches {[ac1]}		-- Residual tumour (R)
 							}
 						}
 					}
-					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Clinical staging
+					ELEMENT[id11] occurrences matches {0..1} matches {	-- Clinical staging
 						value matches {
-							DV_TEXT[id0293] matches {*}
+							DV_TEXT[id41] 
 						}
 					}
-					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Clinical stage grouping
+					ELEMENT[id15] occurrences matches {0..1} matches {	-- Clinical stage grouping
 						value matches {
-							DV_TEXT[id0894] matches {*}
+							DV_TEXT[id42] 
 						}
 					}
-					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Comment
+					ELEMENT[id13] occurrences matches {0..1} matches {	-- Comment
 						value matches {
-							DV_TEXT[id0094] matches {*}
+							DV_TEXT[id43] 
 						}
 					}
 				}
 			}
-			CLUSTER[at0006] occurrences matches {0..1} matches {	-- Pathological (pTNM)
+			CLUSTER[id7] occurrences matches {0..1} matches {	-- Pathological (pTNM)
 				items matches {
-					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Primary tumour (pT)
+					ELEMENT[id8] occurrences matches {0..1} matches {	-- Primary tumour (pT)
 						value matches {
-							DV_TEXT[id0373] matches {*}
+							DV_TEXT[id44] 
 						}
 					}
-					ELEMENT[at0008] occurrences matches {0..1} matches {	-- Regional lymph node (pN)
+					ELEMENT[id9] occurrences matches {0..1} matches {	-- Regional lymph node (pN)
 						value matches {
-							DV_TEXT[id0773] matches {*}
+							DV_TEXT[id45] 
 						}
 					}
-					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Distant metastasis (pM)
+					ELEMENT[id10] occurrences matches {0..1} matches {	-- Distant metastasis (pM)
 						value matches {
-							DV_TEXT[id0173] matches {*}
+							DV_TEXT[id46] 
 						}
 					}
-					ELEMENT[at0030] occurrences matches {0..1} matches {	-- Residual tumour (pR)
+					ELEMENT[id31] occurrences matches {0..1} matches {	-- Residual tumour (pR)
 						value matches {
-							DV_CODED_TEXT[id0774] matches {
-								defining_code matches {
-									[local::
-									at0031, 	-- RX
-									at0032, 	-- RO
-									at0033, 	-- R1
-									at0034]	-- R2
-								}
+							DV_CODED_TEXT[id47] matches {
+								defining_code matches {[ac2]}		-- Residual tumour (pR)
 							}
 						}
 					}
-					ELEMENT[at0035] occurrences matches {0..1} matches {	-- Histopathological grading (G)
+					ELEMENT[id36] occurrences matches {0..1} matches {	-- Histopathological grading (G)
 						value matches {
-							DV_CODED_TEXT[id0775] matches {
-								defining_code matches {
-									[local::
-									at0038, 	-- GX
-									at0039, 	-- G1
-									at0040, 	-- G2
-									at0041, 	-- G3
-									at0042]	-- G4
-								}
+							DV_CODED_TEXT[id48] matches {
+								defining_code matches {[ac3]}		-- Histopathological grading (G)
 							}
 						}
 					}
-					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Pathological staging
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Pathological staging
 						value matches {
-							DV_TEXT[id0374] matches {*}
+							DV_TEXT[id49] 
 						}
 					}
-					ELEMENT[at0015] occurrences matches {0..1} matches {	-- Pathological stage grouping
+					ELEMENT[id16] occurrences matches {0..1} matches {	-- Pathological stage grouping
 						value matches {
-							DV_TEXT[id0973] matches {*}
+							DV_TEXT[id50] 
 						}
 					}
-					ELEMENT[at0013] occurrences matches {0..1} matches {	-- Comment
+					ELEMENT[id14] occurrences matches {0..1} matches {	-- Comment
 						value matches {
-							DV_TEXT[id0174] matches {*}
+							DV_TEXT[id51] 
 						}
 					}
 				}
@@ -147,132 +128,158 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Tumour - TNM Cancer staging">
 				description = <"A framework for the classification and grading of malignancies using the TNM classification system.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Clinical (cTNM)">
 				description = <"Clinical TNM pre-treatment classification based on physical examination, imaging and biopsies.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Primary tumour (T)">
 				description = <"Clincal assessment of the primary tumour.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Regional lymph nodes (N)">
 				description = <"Clinical assessment of the regional lymph nodes.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Distant metastasis (M)">
 				description = <"Clinical assessment of distant metastasis.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Pathological (pTNM)">
 				description = <"Pathological staging. Based on the clinical staging, results of procedures and pathological/histo-pathological assessment.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Primary tumour (pT)">
 				description = <"Pathological assessment of the primary tumour.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Regional lymph node (pN)">
 				description = <"Pathological assessment of the regional lymph nodes.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Distant metastasis (pM)">
 				description = <"Pathological assessment of distant metastases.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Clinical staging">
 				description = <"The overall Clinical staging derived from each T, N and M component e.g T1aM0NX. May include additional TNM descriptors.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Pathological staging">
 				description = <"The overall Pathological staging derived from each pT, pN and pM component. May include additional TNM descriptors.">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Comment">
 				description = <"A text comment on the Clinical staging.">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Comment">
 				description = <"A text comment on the Pathological staging.">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Clinical stage grouping">
 				description = <"The TNM Clinical stage grouping.">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Pathological stage grouping">
 				description = <"The TNM Pathological stage grouping.">
 			>
-			["at0025"] = <
+			["id26"] = <
 				text = <"Residual tumour (R)">
 				description = <"Clinical assessment of post-treatment residual tumour.">
 			>
-			["at0026"] = <
+			["at27"] = <
 				text = <"RX">
 				description = <"Presence of residual tumour cannot be assessed.">
 			>
-			["at0027"] = <
+			["at28"] = <
 				text = <"RO">
 				description = <"No residual tumour.">
 			>
-			["at0028"] = <
+			["at29"] = <
 				text = <"R1">
 				description = <"Microscopic residual tumour.">
 			>
-			["at0029"] = <
+			["at30"] = <
 				text = <"R2">
 				description = <"Macroscopic residual tumour.">
 			>
-			["at0030"] = <
+			["id31"] = <
 				text = <"Residual tumour (pR)">
 				description = <"Pathological assessment of post-treatment residual tumour.">
 			>
-			["at0031"] = <
+			["at32"] = <
 				text = <"RX">
 				description = <"Presence of residual tumour cannot be assessed. ">
 			>
-			["at0032"] = <
+			["at33"] = <
 				text = <"RO">
 				description = <"No residual tumour.">
 			>
-			["at0033"] = <
+			["at34"] = <
 				text = <"R1">
 				description = <"Microscopic residual tumour.">
 			>
-			["at0034"] = <
+			["at35"] = <
 				text = <"R2">
 				description = <"Macroscopic residual tumour.">
 			>
-			["at0035"] = <
+			["id36"] = <
 				text = <"Histopathological grading (G)">
 				description = <"TNM histopathological grading classification. ">
 			>
-			["at0038"] = <
+			["at39"] = <
 				text = <"GX">
 				description = <"Grade of differentiation cannot be assessed.">
 			>
-			["at0039"] = <
+			["at40"] = <
 				text = <"G1">
 				description = <"Well differentiated.">
 			>
-			["at0040"] = <
+			["at41"] = <
 				text = <"G2">
 				description = <"Moderately differentiated.">
 			>
-			["at0041"] = <
+			["at42"] = <
 				text = <"G3">
 				description = <"Poorly differentiated.">
 			>
-			["at0042"] = <
+			["at43"] = <
 				text = <"G4">
 				description = <"Undifferentiated">
 			>
+			["ac1"] = <
+				text = <"Residual tumour (R)">
+				description = <"Clinical assessment of post-treatment residual tumour.">
+			>
+			["ac2"] = <
+				text = <"Residual tumour (pR)">
+				description = <"Pathological assessment of post-treatment residual tumour.">
+			>
+			["ac3"] = <
+				text = <"Histopathological grading (G)">
+				description = <"TNM histopathological grading classification. ">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at27", "at28", "at29", "at30">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at32", "at33", "at34", "at35">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at39", "at40", "at41", "at42", "at43">
 		>
 	>

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.blood_match.v1.0.0
 
 language
@@ -71,48 +71,48 @@ description
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Blood matching
+	OBSERVATION[id1] matches {	-- Blood matching
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					POINT_EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items cardinality matches {1..*; unordered} matches {
-									ELEMENT[at0004] matches {	-- ABO
+									ELEMENT[id5] matches {	-- ABO
 										value matches {
-											DV_TEXT[id0053] matches {*}
+											DV_TEXT[id14] 
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Rhesus
+									ELEMENT[id6] occurrences matches {0..1} matches {	-- Rhesus
 										value matches {
-											DV_TEXT[id0453] matches {*}
+											DV_TEXT[id15] 
 										}
 									}
-									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Antibodies detected
+									ELEMENT[id10] occurrences matches {0..1} matches {	-- Antibodies detected
 										value matches {
-											DV_BOOLEAN[id0054] matches {
+											DV_BOOLEAN[id16] matches {
 												value matches {True, False}
 											}
 										}
 									}
-									CLUSTER[at0008] occurrences matches {0..*} matches {	-- Antibodies
+									CLUSTER[id9] occurrences matches {0..*} matches {	-- Antibodies
 										items matches {
-											ELEMENT[at0006] occurrences matches {0..1} matches {	-- Antibody
+											ELEMENT[id7] occurrences matches {0..1} matches {	-- Antibody
 												value matches {
-													DV_TEXT[id0301] matches {*}
+													DV_TEXT[id17] 
 												}
 											}
-											ELEMENT[at0007] occurrences matches {0..1} matches {	-- Details
+											ELEMENT[id8] occurrences matches {0..1} matches {	-- Details
 												value matches {
-													DV_TEXT[id0701] matches {*}
+													DV_TEXT[id18] 
 												}
 											}
 										}
 									}
-									ELEMENT[at0010] occurrences matches {0..1} matches {	-- Overall comment
+									ELEMENT[id11] occurrences matches {0..1} matches {	-- Overall comment
 										value matches {
-											DV_TEXT[id0853] matches {*}
+											DV_TEXT[id19] 
 										}
 									}
 								}
@@ -123,11 +123,11 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_LIST[at0011] matches {	-- List
+			ITEM_LIST[id12] matches {
 				items matches {
-					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Method
+					ELEMENT[id13] occurrences matches {0..1} matches {	-- Method
 						value matches {
-							DV_TEXT[id0565] matches {*}
+							DV_TEXT[id20] 
 						}
 					}
 				}
@@ -135,220 +135,172 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Blutgruppe">
 				description = <"Informationen zur Blutgruppe, einschließlich AB0, Rhesus, Antikörper, usw.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Generic event">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"AB0">
 				description = <"Informationen zur AB0 Blutgruppe.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Rhesus">
 				description = <"Informationen zur Rhesus Blutgruppe.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Antikörper">
 				description = <"Die Art der Antikörper.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Einzelheiten">
 				description = <"Einzelheiten zu den Antikörpern.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Antikörper">
 				description = <"Bestimmung oder Befund eines Antikörpers.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Antikörper ermittelt">
 				description = <"Antikörper wurden ermittelt.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Allgemeine Bemerkung">
 				description = <"Bemerkung zum gesamten Befund.">
 			>
-			["at0011"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Methode">
 				description = <"Die Methode des Matching/Zuordnung.">
 			>
 		>
 		["ru"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Кровь соответствия">
 				description = <"Информация о группе крови по ABO, резус-факторе и антителах.">
 			>
-			["at0001"] = <
-				text = <"Серия событий">
-				description = <"Внутренний элемент.">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Любое событие">
 				description = <"Создать событие.">
 			>
-			["at0003"] = <
-				text = <"Дерево">
-				description = <"Внутренний элемент.">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"ABO">
 				description = <"Группа крови по ABO.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Резус">
 				description = <"Резус крови.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Антитела">
 				description = <"Природа антител.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Подробности">
 				description = <"Подробности об антителах.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Антитела">
 				description = <"Отнесение обнаруженных антител к группе.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Антитела обнаружены">
 				description = <"Антитела были обнаружены.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Комментарии">
 				description = <"Комментарии ко всему исследованию.">
 			>
-			["at0011"] = <
-				text = <"Список">
-				description = <"Внутренний элемент.">
-			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Метод">
 				description = <"Метод определения.">
 			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Blood matching">
 				description = <"Blood group information including ABO, Rhesus and antibodies etc.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Generic event">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"ABO">
 				description = <"ABO blood group information.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Rhesus">
 				description = <"Rhesus blood group information.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Antibody">
 				description = <"The nature of the antibody.">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Details">
 				description = <"Details about the antibody.">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Antibodies">
 				description = <"Grouping of findings relating to one antibody.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Antibodies detected">
 				description = <"Antibodies have been detected.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Overall comment">
 				description = <"Comment on the findings overall.">
 			>
-			["at0011"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Method">
 				description = <"The method of matching.">
 			>
 		>
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"توافق الدم">
 				description = <"معلومات حول مجموعة الدم بما في ذلك مجموعات أ , ب , أ ب, و , و عامل ريسس و الأجسام المضادة, إلى آخره">
 			>
-			["at0001"] = <
-				text = <"*Event Series(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"إحدى الوقائع">
 				description = <"واقعة جنيسة - غير محدودة الملكية">
 			>
-			["at0003"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"المجموعات أ ب و">
 				description = <"معلومات حول مجموعة الدم أ ب أب و">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"عامل ريسس">
 				description = <"معلومات حول عامل ريسس">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"الجسم المضاد">
 				description = <"طبيعة الجسم المضاد">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"التفاصيل">
 				description = <"تفاصيل حول الجسم المضاد">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"الأجسام المضادة">
 				description = <"مجموعة من الموجودات المتعلقة بجسم مضاد واحد">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"الأجسام المضادة التي تم اكتشافها">
 				description = <"الأجسام المضادة التي تم اكتشافها">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"تعليق إجمالي">
 				description = <"تعليق إجمالي حول الموجودات">
 			>
-			["at0011"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"الطريقة">
 				description = <"طريقة اختبار التوافق">
 			>

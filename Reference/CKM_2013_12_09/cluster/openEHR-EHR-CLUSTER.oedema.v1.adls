@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.oedema.v1.0.0
 
 language
@@ -60,174 +60,192 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Oedema
+	CLUSTER[id1] matches {	-- Oedema
 		items matches {
-			CLUSTER[at0010] occurrences matches {0..1} matches {	-- Character
+			CLUSTER[id11] occurrences matches {0..1} matches {	-- Character
 				items matches {
-					ELEMENT[at0001] occurrences matches {0..1} matches {	-- Description
+					ELEMENT[id2] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0805] matches {*}
+							DV_TEXT[id14] 
 						}
 					}
-					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Pitting
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Pitting
 						value matches {
-							DV_BOOLEAN[id0205] matches {
+							DV_BOOLEAN[id15] matches {
 								value matches {True, False}
 							}
 						}
 					}
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Extent
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Extent
 				value matches {
-					DV_TEXT[id0806] matches {*}
+					DV_TEXT[id16] 
 				}
 			}
-			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Degree
+			ELEMENT[id7] occurrences matches {0..1} matches {	-- Degree
 				value matches {
-					DV_ORDINAL[id0206] matches {
+					DV_ORDINAL[id17] matches {
 						[value, symbol] matches {
-							[{1}, {[local::at0007]}],
-							[{2}, {[local::at0008]}],
-							[{3}, {[local::at0009]}]
+							[{1}, {[at8]}],
+							[{2}, {[at9]}],
+							[{3}, {[at10]}]
 						}
 					}
 				}
 			}
-			ELEMENT[at0012] occurrences matches {0..1} matches {	-- Comments
+			ELEMENT[id13] occurrences matches {0..1} matches {	-- Comments
 				value matches {
-					DV_TEXT[id0005] matches {*}
+					DV_TEXT[id18] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Oedema">
 				description = <"Record details about oedema.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Description">
 				description = <"Description of character of the oedema.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Extent">
 				description = <"Describe the extent and/or borders of the oedema.">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Degree">
 				description = <"The degree of oedema.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Mild +">
 				description = <"Mild oedema.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Moderate ++">
 				description = <"Moderate oedema.">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"Severe +++">
 				description = <"Severe oedema.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Character">
 				description = <"Describe the character of the oedema.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Pitting">
 				description = <"Does the oedema pit from finger pressure?">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Comments">
 				description = <"Addtional comments about the oedema.">
 			>
+			["ac1"] = <
+				text = <"Degree">
+				description = <"The degree of oedema.">
+			>
 		>
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"الوذمة">
 				description = <"لتسجيل التفاصيل حول الوذمة">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"الوصف">
 				description = <"وصف خاصية/صفة الوذمة">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"المدى">
 				description = <"وصف مدى و/أو حواف الوذمة">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"الدرجة">
 				description = <"*">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"+">
 				description = <"طفيف">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"++">
 				description = <"متوسط">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"+++">
 				description = <"*">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"الصفة/الخاصية">
 				description = <"لوصف خاصية/صفة الوذمة.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"الانطباع">
 				description = <"هل للوذمة انطباع من الضغط بالإصبع">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"تعليقات">
 				description = <"*">
 			>
+			["ac1"] = <
+				text = <"*Degree(en)">
+				description = <"*The degree of oedema.(en)">
+			>
 		>
 		["ru"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Отек">
 				description = <"Для описания отека">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Описание">
 				description = <"Описание характера отека">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Границы">
 				description = <"Описание распространенности отека">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Выраженность">
 				description = <"Описание выраженности отека">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"+">
 				description = <"Незначительно">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"++">
 				description = <"Выраженный">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"+++">
 				description = <"*">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Характер отека">
 				description = <"Описание характера отека">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Продавливание">
 				description = <"Остаётся ли след после пальпации">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Примечание">
 				description = <"*">
 			>
+			["ac1"] = <
+				text = <"*Degree(en)">
+				description = <"*The degree of oedema.(en)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at8", "at9", "at10">
 		>
 	>

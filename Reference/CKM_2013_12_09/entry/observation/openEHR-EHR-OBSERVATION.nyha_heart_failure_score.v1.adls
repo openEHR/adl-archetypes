@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.nyha_heart_failure_score.v1.0.0
 
 language
@@ -28,51 +28,45 @@ description
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- NYHA Heart failure classification
+	OBSERVATION[id1] matches {	-- NYHA Heart failure classification
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Heart failure classification
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Heart failure classification
 										value matches {
-											DV_ORDINAL[id0053] matches {
+											DV_ORDINAL[id13] matches {
 												[value, symbol] matches {
-													[{1}, {[local::at0005]}],
-													[{2}, {[local::at0006]}],
-													[{3}, {[local::at0007]}],
-													[{4}, {[local::at0008]}]
+													[{1}, {[at6]}],
+													[{2}, {[at7]}],
+													[{3}, {[at8]}],
+													[{4}, {[at9]}]
 												}
 											}
 										}
 										null_flavour matches {
-											DV_CODED_TEXT[id0586] matches {
-												defining_code matches {
-													[openehr::
-													253, 
-													271, 
-													272, 
-													273]
-												}
+											DV_CODED_TEXT[id14] matches {
+												defining_code matches {[ac1]}		-- Heart failure classification
 											}
 										}
 									}
-									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Comment
+									ELEMENT[id10] occurrences matches {0..1} matches {	-- Comment
 										value matches {
-											DV_TEXT[id0054] matches {*}
+											DV_TEXT[id15] 
 										}
 									}
 								}
 							}
 						}
 						state matches {
-							ITEM_TREE[at0010] matches {	-- Tree
+							ITEM_TREE[id11] matches {
 								items matches {
-									ELEMENT[at0011] occurrences matches {0..*} matches {	-- Confounding factors
+									ELEMENT[id12] occurrences matches {0..*} matches {	-- Confounding factors
 										value matches {
-											DV_TEXT[id0557] matches {*}
+											DV_TEXT[id16] 
 										}
 									}
 								}
@@ -84,66 +78,94 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"NYHA Heart failure classification">
 				description = <"A classification of heart failure related symptoms defined by the New York Heart Association.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Any event.">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Heart failure classification">
 				description = <"The functional classification of heart failure based on patient symptoms.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Class I">
 				description = <"No limitation of physical activity. Ordinary physical activity does not cause undue fatigue, palpitation, or dyspnoea.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Class II">
 				description = <"Slight limitation of physical activity. Comfortable at rest, but ordinary physical activity results in fatigue, palpitation, or dyspnoea.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Class III">
 				description = <"Marked limitation of physical activity. Comfortable at rest, but less than ordinary activity results in fatigue, palpitation, or dyspnoea.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Class IV">
 				description = <"Unable to carry on any physical activity without discomfort. Symptoms at rest. If any physical activity is undertaken, discomfort is increased.">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Comment">
 				description = <"Additional comment about the NYHA heart failure classification result.">
 			>
-			["at0010"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Confounding factors">
 				description = <"Record any issues or factors that may impact on the classification of heart failure symptoms.">
+			>
+			["ac1"] = <
+				text = <"Heart failure classification">
+				description = <"The functional classification of heart failure based on patient symptoms.">
+			>
+			["at10"] = <
+				text = <"unknown">
+				description = <"unknown">
+			>
+			["at11"] = <
+				text = <"no information">
+				description = <"no information">
+			>
+			["at12"] = <
+				text = <"masked">
+				description = <"masked">
+			>
+			["at13"] = <
+				text = <"not applicable">
+				description = <"not applicable">
+			>
+			["ac2"] = <
+				text = <"Heart failure classification">
+				description = <"The functional classification of heart failure based on patient symptoms.">
 			>
 		>
 	>
 	term_bindings = <
 		["Snomed"] = <
-			["at0000"] = <[Snomed::420816009]>
-			["at0004"] = <[Snomed(1107Intl)::420816009]>
-			["at0005"] = <[Snomed::420300004]>
-			["at0006"] = <[Snomed::421704003]>
-			["at0007"] = <[Snomed::420913000]>
-			["at0008"] = <[Snomed::421704003]>
+			["id1"] = <http://Snomed.org/id/420816009>
+			["id5"] = <http://Snomed.org/id/420816009>
+			["at6"] = <http://Snomed.org/id/420300004>
+			["at7"] = <http://Snomed.org/id/421704003>
+			["at8"] = <http://Snomed.org/id/420913000>
+			["at9"] = <http://Snomed.org/id/421704003>
+		>
+		["openehr"] = <
+			["at10"] = <http://openehr.org/id/253>
+			["at11"] = <http://openehr.org/id/271>
+			["at12"] = <http://openehr.org/id/272>
+			["at13"] = <http://openehr.org/id/273>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at10", "at11", "at12", "at13">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at6", "at7", "at8", "at9">
 		>
 	>

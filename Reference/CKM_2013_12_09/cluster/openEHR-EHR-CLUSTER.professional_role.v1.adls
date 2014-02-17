@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.professional_role.v1.0.0
 
 language
@@ -46,44 +46,46 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Professional role
+	CLUSTER[id1] matches {	-- Professional role
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Unstructured role
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Unstructured role
 				value matches {
-					DV_TEXT[id0205] matches {*}
+					DV_TEXT[id5] 
 				}
 			}
-			allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {	-- Structured role
+			allow_archetype CLUSTER[id4] occurrences matches {0..*} matches {	-- Structured role
+				include
+					archetype_id/value matches {/.*/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Professional role">
 				description = <"Role of a professional in care of an individual.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Unstructured role">
 				description = <"Unstructured description of the role.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Structured role">
 				description = <"The role in structured format (to be expanded as RBACS standards are developed.">
 			>
 		>
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Rolle">
 				description = <"Rolle eines Heilberuflers bei der Betreuung einer Person">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Unstrukturierte Rolle">
 				description = <"Unstrukturierte Beschreibung der Rolle">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Strukturierte Rolle">
 				description = <"Rolle in vordefiniertem Format (zu Erweitern sobald RBACS Standards entwickelt sind).">
 			>

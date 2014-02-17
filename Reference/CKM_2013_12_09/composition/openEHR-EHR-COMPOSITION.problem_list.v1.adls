@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-COMPOSITION.problem_list.v1.0.0
 
 language
@@ -68,76 +68,89 @@ In order for this list to be accurate and safe to use as the basis for decision 
 	>
 
 definition
-	COMPOSITION[at0000] matches {	-- Problem List
+	COMPOSITION[id1] matches {	-- Problem List
 		category matches {
-			DV_CODED_TEXT[id0577] matches {
-				defining_code matches {[openehr::431]}
+			DV_CODED_TEXT[id7] matches {
+				defining_code matches {[at1]}
 			}
 		}
 		content cardinality matches {1..*; unordered} matches {
-			allow_archetype EVALUATION[at0002] occurrences matches {0..*} matches {	-- Problems or Diagnoses
+			allow_archetype EVALUATION[id3] occurrences matches {0..*} matches {	-- Problems or Diagnoses
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.problem_diagnosis(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.problem_diagnosis(-a-zA-Z0-9_]+)*\.v1/}
 			}
-			allow_archetype ACTION[at0003] occurrences matches {0..*} matches {	-- Procedures
+			allow_archetype ACTION[id4] occurrences matches {0..*} matches {	-- Procedures
 				include
-					archetype_id/value matches {/openEHR-EHR-ACTION\.procedure(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-ACTION\.procedure(-a-zA-Z0-9_]+)*\.v1/}
 			}
-			allow_archetype EVALUATION[at0004] occurrences matches {0..*} matches {	-- Exclusion Statements
+			allow_archetype EVALUATION[id5] occurrences matches {0..*} matches {	-- Exclusion Statements
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-problem_diagnosis(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-procedure(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-problem_diagnosis(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-procedure(-a-zA-Z0-9_]+)*\.v1/}
 			}
-			allow_archetype EVALUATION[at0005] occurrences matches {0..*} matches {	-- Absent Information
+			allow_archetype EVALUATION[id6] occurrences matches {0..*} matches {	-- Absent Information
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.absence(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.absence(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Problem List">
 				description = <"A persistent and managed list of diagnoses identified or problems experienced by the subject, or procedures performed, that may influence clinical decision-making and care provision.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Problems or Diagnoses">
 				description = <"Details about identified problems or diagnoses.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Procedures">
 				description = <"Details about identified procedures that have been performed.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Exclusion Statements">
 				description = <"Positive statement about the known exclusion of known problems or diagnoses and procedures performed.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Absent Information">
 				description = <"Positive statement that no information is available about identification of problems or diagnoses, nor procedures performed.">
 			>
+			["at1"] = <
+				text = <"persistent">
+				description = <"persistent">
+			>
 		>
 		["ko"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"문제 목록">
 				description = <"확인된 진단이나 환자가 겪는 문제 또는 임상의사결정과 환자진료에 영향을 줄 수 있는 이전에 시행된 처치에 대한 영구적으로 관리되는 목록">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"문제 또는 진단">
 				description = <"확인된 문제 또는 진단에 대한 상세사항">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"처치">
 				description = <"시행된 적이 있는 확인된 처치에 대한 상세사항">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"배제 진술문">
 				description = <"알려진 문제 또는 진단과 시행된 처치가 없다는 진술문 ">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"정보 부재">
 				description = <"문제나 진단 또는 시행된 처치를 확인하는데 있어서 이용가능한 정보가 없다는 진술문.">
 			>
+			["at1"] = <
+				text = <"*persistent (en)">
+				description = <"*persistent (en)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at1"] = <http://openehr.org/id/431>
 		>
 	>

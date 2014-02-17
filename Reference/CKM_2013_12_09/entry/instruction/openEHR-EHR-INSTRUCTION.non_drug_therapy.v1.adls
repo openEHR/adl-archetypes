@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-INSTRUCTION.non_drug_therapy.v1.0.0
 
 language
@@ -41,11 +41,11 @@ description
 	>
 
 definition
-	INSTRUCTION[at0000] matches {	-- Non-drug therapy
+	INSTRUCTION[id1] matches {	-- Non-drug therapy
 		activities matches {
-			ACTIVITY[at0001] occurrences matches {0..1} matches {	-- new activity
+			ACTIVITY[id2] occurrences matches {0..1} matches {	-- new activity
 				description matches {
-					allow_archetype ITEM_TREE[id0990] occurrences matches {0..1} matches {
+					allow_archetype ITEM_TREE[id3] occurrences matches {0..1} matches {
 						include
 							archetype_id/value matches {/openEHR-EHR-ITEM_TREE\.gas_administration\.v1/}
 					}
@@ -54,24 +54,24 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["de"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"nicht-medikamentöse Therapie">
 				description = <"Zur Verschreibung nicht-medikamentöser Therapien">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"neue Handlung">
 				description = <"*">
 			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Non-drug therapy">
 				description = <"For orders of non-drug therapy">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"new activity">
 				description = <"*">
 			>

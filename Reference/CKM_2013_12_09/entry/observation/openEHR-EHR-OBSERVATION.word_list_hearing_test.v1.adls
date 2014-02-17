@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.word_list_hearing_test.v1.0.0
 
 language
@@ -41,89 +41,70 @@ description
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Word List Hearing Test
+	OBSERVATION[id1] matches {	-- Word List Hearing Test
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0014] occurrences matches {0..1} matches {	-- Test
+									ELEMENT[id15] occurrences matches {0..1} matches {	-- Test
 										value matches {
-											DV_CODED_TEXT[id0453] matches {
-												defining_code matches {
-													[local::
-													at0015, 	-- Manchester Junior Word List
-													at0016]	-- AB Word List
-												}
+											DV_CODED_TEXT[id20] matches {
+												defining_code matches {[ac1]}		-- Test
 											}
 										}
 									}
-									CLUSTER[at0011] occurrences matches {0..1} matches {	-- Result
+									CLUSTER[id12] occurrences matches {0..1} matches {	-- Result
 										items matches {
-											ELEMENT[at0012] occurrences matches {0..1} matches {	-- Success rate
+											ELEMENT[id13] occurrences matches {0..1} matches {	-- Success rate
 												value matches {
-													DV_QUANTITY[id0917] matches {
-														property matches {[openehr::507]}
+													DV_QUANTITY[id21] matches {
+														property matches {[at18]}
 														units matches {"%"}
 													}
 												}
 											}
-											ELEMENT[at0013] occurrences matches {0..1} matches {	-- Audible Sound level
+											ELEMENT[id14] occurrences matches {0..1} matches {	-- Audible Sound level
 												value matches {
-													DV_QUANTITY[id0317] matches {
-														property matches {[openehr::123]}
+													DV_QUANTITY[id22] matches {
+														property matches {[at19]}
 														units matches {"dB"}
 													}
 												}
 											}
-											ELEMENT[at0017] occurrences matches {0..1} matches {	-- New element
+											ELEMENT[id18] occurrences matches {0..1} matches {	-- New element
 												value matches {
-													DV_MULTIMEDIA[id0918] matches {
-														media_type matches {
-															[openEHR::
-															425, 
-															426, 
-															427, 
-															428, 
-															429]
-														}
+													DV_MULTIMEDIA[id23] matches {
+														media_type matches {[ac2]}		-- New element
 													}
 												}
 											}
 										}
 									}
-									ELEMENT[at0018] occurrences matches {0..1} matches {	-- Comment
+									ELEMENT[id19] occurrences matches {0..1} matches {	-- Comment
 										value matches {
-											DV_TEXT[id0053] matches {*}
+											DV_TEXT[id24] 
 										}
 									}
 								}
 							}
 						}
 						state matches {
-							ITEM_LIST[at0004] matches {	-- List
+							ITEM_LIST[id5] matches {
 								items matches {
-									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Occlusion
+									ELEMENT[id6] occurrences matches {0..1} matches {	-- Occlusion
 										value matches {
-											DV_CODED_TEXT[id0085] matches {
-												defining_code matches {
-													[local::
-													at0006, 	-- Occluded
-													at0007]	-- Not occluded
-												}
+											DV_CODED_TEXT[id25] matches {
+												defining_code matches {[ac3]}		-- Occlusion
 											}
 										}
 									}
-									ELEMENT[at0008] occurrences matches {0..1} matches {	-- Lip reading
+									ELEMENT[id9] occurrences matches {0..1} matches {	-- Lip reading
 										value matches {
-											DV_CODED_TEXT[id0285] matches {
-												defining_code matches {
-													[local::
-													at0009, 	-- With Lip reading
-													at0010]	-- Without lip reading
-												}
+											DV_CODED_TEXT[id26] matches {
+												defining_code matches {[ac4]}		-- Lip reading
 											}
 										}
 									}
@@ -136,162 +117,255 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Word List Hearing Test">
 				description = <"Recording the results of either the AB Word or the Manchester Junior Short List tests">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"*">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Occlusion">
 				description = <"*">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Occluded">
 				description = <"*">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Not occluded">
 				description = <"*">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Lip reading">
 				description = <"Is the person using lip-reading when performing the test">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"With Lip reading">
 				description = <"*">
 			>
-			["at0010"] = <
+			["at11"] = <
 				text = <"Without lip reading">
 				description = <"*">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Result">
 				description = <"*">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Success rate">
 				description = <"The percentage success rate for the test performed">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Audible Sound level">
 				description = <"The audible sound level in dB">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Test">
 				description = <"Identify the test performed">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Manchester Junior Word List">
 				description = <"*">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"AB Word List">
 				description = <"*">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"New element">
 				description = <"Image of test result">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Comment">
 				description = <"Comment on test ">
 			>
+			["ac1"] = <
+				text = <"Test">
+				description = <"Identify the test performed">
+			>
+			["ac2"] = <
+				text = <"New element">
+				description = <"Image of test result">
+			>
+			["ac3"] = <
+				text = <"Occlusion">
+				description = <"*">
+			>
+			["ac4"] = <
+				text = <"Lip reading">
+				description = <"Is the person using lip-reading when performing the test">
+			>
+			["at18"] = <
+				text = <"Proportion">
+				description = <"Proportion">
+			>
+			["at19"] = <
+				text = <"Loudness">
+				description = <"Loudness">
+			>
+			["at20"] = <
+				text = <"image/cgm">
+				description = <"image/cgm">
+			>
+			["at21"] = <
+				text = <"image/gif">
+				description = <"image/gif">
+			>
+			["at22"] = <
+				text = <"image/png">
+				description = <"image/png">
+			>
+			["at23"] = <
+				text = <"image/tiff">
+				description = <"image/tiff">
+			>
+			["at24"] = <
+				text = <"image/jpeg">
+				description = <"image/jpeg">
+			>
 		>
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"اختبار سماع قائمة الكلمات">
 				description = <"تسجيل نتائج إختبار (AB Word) أو (Manchester Junior Short List)">
 			>
-			["at0001"] = <
-				text = <"*Event Series(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"إحدى الوقائع">
 				description = <"*">
 			>
-			["at0003"] = <
-				text = <"*Tree(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0004"] = <
-				text = <"*List(en)">
-				description = <"*@ internal @(en)">
-			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"إطباق">
 				description = <"*">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"مُطبَقَة">
 				description = <"*">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"غير مُطبَقَة">
 				description = <"*">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"قراءة الشفاه">
 				description = <"هل يستخدم الشخص قراءة الشفاه عند إنجازه / إجرائه للاختبار">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"بقراءة الشفاه">
 				description = <"*">
 			>
-			["at0010"] = <
+			["at11"] = <
 				text = <"بدون قراءة الشفاه">
 				description = <"*">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"النتيجة">
 				description = <"*">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"معدل النجاح">
 				description = <"النسبة المئوية لمعدل النجاح للاختبار الذي يتم إنجازه / إجراؤه">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"مستوى الصوت المسموع">
 				description = <"مستوى الصوت المسموع (ديسي بِل)">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"اختبار">
 				description = <"تعيين هوية (استعراف) الاختبار الذي يتم إنجازه / إجراؤه">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"*Manchester Junior Word List(en)">
 				description = <"**(en)">
 			>
-			["at0016"] = <
+			["at17"] = <
 				text = <"*AB Word List(en)">
 				description = <"**(en)">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"عنصر جديد">
 				description = <"صورة نتيجة الاختبار">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"تعليق">
 				description = <"تعليق على الاختبار">
 			>
+			["ac1"] = <
+				text = <"*Test(en)">
+				description = <"*Identify the test performed(en)">
+			>
+			["ac2"] = <
+				text = <"*New element(en)">
+				description = <"*Image of test result(en)">
+			>
+			["ac3"] = <
+				text = <"*Occlusion(en)">
+				description = <"**(en)">
+			>
+			["ac4"] = <
+				text = <"*Lip reading(en)">
+				description = <"*Is the person using lip-reading when performing the test(en)">
+			>
+			["at18"] = <
+				text = <"*Proportion (en)">
+				description = <"*Proportion (en)">
+			>
+			["at19"] = <
+				text = <"*Loudness (en)">
+				description = <"*Loudness (en)">
+			>
+			["at20"] = <
+				text = <"*image/cgm (en)">
+				description = <"*image/cgm (en)">
+			>
+			["at21"] = <
+				text = <"*image/gif (en)">
+				description = <"*image/gif (en)">
+			>
+			["at22"] = <
+				text = <"*image/png (en)">
+				description = <"*image/png (en)">
+			>
+			["at23"] = <
+				text = <"*image/tiff (en)">
+				description = <"*image/tiff (en)">
+			>
+			["at24"] = <
+				text = <"*image/jpeg (en)">
+				description = <"*image/jpeg (en)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at18"] = <http://openehr.org/id/507>
+			["at19"] = <http://openehr.org/id/123>
+			["at20"] = <http://openehr.org/id/425>
+			["at21"] = <http://openehr.org/id/426>
+			["at22"] = <http://openehr.org/id/427>
+			["at23"] = <http://openehr.org/id/428>
+			["at24"] = <http://openehr.org/id/429>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at16", "at17">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at20", "at21", "at22", "at23", "at24">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at7", "at8">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at10", "at11">
 		>
 	>

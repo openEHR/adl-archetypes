@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.tumour_invasion.v1.0.0
 
 language
@@ -29,123 +29,132 @@ Use as a component archetype in the context of a suite of archetypes that make u
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Tumour - direct invasion
+	CLUSTER[id1] matches {	-- Tumour - direct invasion
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Tissue name
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Tissue name
 				value matches {
-					DV_TEXT[id0205] matches {*}
+					DV_TEXT[id14] 
 				}
 			}
-			allow_archetype CLUSTER[at0002] occurrences matches {0..1} matches {	-- Location  
+			allow_archetype CLUSTER[id3] occurrences matches {0..1} matches {	-- Location  
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location-precise\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Direct invasion
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Direct invasion
 				value matches {
-					DV_CODED_TEXT[id0005] matches {
-						defining_code matches {
-							[local::
-							at0004, 	-- Present
-							at0013, 	-- Present - focal
-							at0014, 	-- Present - diffuse/extensive
-							at0015, 	-- Suspicious
-							at0005, 	-- Absent
-							at0006]	-- Indeterminate
-						}
+					DV_CODED_TEXT[id15] matches {
+						defining_code matches {[ac1]}		-- Direct invasion
 					}
 				}
 			}
-			ELEMENT[at0007] occurrences matches {0..1} matches {	-- Nature of involvement
+			ELEMENT[id8] occurrences matches {0..1} matches {	-- Nature of involvement
 				value matches {
-					DV_CODED_TEXT[id0605] matches {
-						defining_code matches {
-							[local::
-							at0008, 	-- Focal
-							at0009, 	-- Extensive
-							at0010]	-- Indeterminate
-						}
+					DV_CODED_TEXT[id16] matches {
+						defining_code matches {[ac2]}		-- Nature of involvement
 					}
-					DV_TEXT[id0606] matches {*}
+					DV_TEXT[id17] 
 				}
 			}
-			allow_archetype CLUSTER[at0011] occurrences matches {0..1} matches {	-- Resection margin  
+			allow_archetype CLUSTER[id12] occurrences matches {0..1} matches {	-- Resection margin  
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v1/}
+				exclude
+					archetype_id/value matches {/.*/}
 			}
-			ELEMENT[at0012] occurrences matches {0..1} matches {	-- Description
+			ELEMENT[id13] occurrences matches {0..1} matches {	-- Description
 				value matches {
-					DV_TEXT[id0006] matches {*}
+					DV_TEXT[id18] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Tumour - direct invasion">
 				description = <"To records details of the direct invasion of local tissues or structures by tumour.">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Tissue name">
 				description = <"The name of the local tissue or structure being examined for evidence of local invasion by tumour.">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Location  ">
 				description = <"The location of the tissue being examined for evidence of direct invasion by tumour.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Direct invasion">
 				description = <"Finding of direct invasion by tumour of local tissue.">
 			>
-			["at0004"] = <
+			["at5"] = <
 				text = <"Present">
 				description = <"There is evidence of local invasion by tumour">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Absent">
 				description = <"There is no evidence of local invasion by tumour">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Indeterminate">
 				description = <"Evidence of local invasion by tumour has not been determined">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Nature of involvement">
 				description = <"The nature of involvement of tumour in local tissue.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Focal">
 				description = <"Focal direct invasion of the tissue by tumour.">
 			>
-			["at0009"] = <
+			["at10"] = <
 				text = <"Extensive">
 				description = <"Extensive direct invasion of the tissue by tumour.">
 			>
-			["at0010"] = <
+			["at11"] = <
 				text = <"Indeterminate">
 				description = <"The nature of direct invasion by tumour has not been determined">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Resection margin  ">
 				description = <"Details of the local tissue surgical resection margin.">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Description">
 				description = <"A text description of direct tumour invasion of local tissue.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Present - focal">
 				description = <"There is evidence of focal direct invasion of the tissue by tumour">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Present - diffuse/extensive">
 				description = <"There is evidence of diffuse or extensive direct invasion of the tissue by tumour">
 			>
-			["at0015"] = <
+			["at16"] = <
 				text = <"Suspicious">
 				description = <"There is suspicion of direct invasion of the tissue by tumour">
 			>
+			["ac1"] = <
+				text = <"Direct invasion">
+				description = <"Finding of direct invasion by tumour of local tissue.">
+			>
+			["ac2"] = <
+				text = <"Nature of involvement">
+				description = <"The nature of involvement of tumour in local tissue.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at5", "at14", "at15", "at16", "at6", "at7">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at9", "at10", "at11">
 		>
 	>

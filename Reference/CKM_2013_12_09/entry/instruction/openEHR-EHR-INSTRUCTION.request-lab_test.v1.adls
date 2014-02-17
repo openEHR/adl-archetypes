@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-INSTRUCTION.request-lab_test.v1.0.0
 
 specialize
-	openEHR-EHR-INSTRUCTION.request.v1.0.0
+	openEHR-EHR-INSTRUCTION.request.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -49,51 +49,67 @@ If there are more specific details about the test and/or specimen include this i
 	>
 
 definition
-	INSTRUCTION[at0000.1] matches {	-- Laboratory Test request
-		/activities[at0001]/description[at0009]/items matches {
-			allow_archetype CLUSTER[at0.145] occurrences matches {0..*} matches {	-- Specimen details
+	INSTRUCTION[id1.1] matches {	-- Laboratory Test request
+		/activities[id2]/description[id10]/items matches {
+			allow_archetype CLUSTER[id0.145] occurrences matches {0..*} matches {	-- Specimen details
+				include
+					archetype_id/value matches {/.*/}
 			}
-			ELEMENT[at0040.1] 	-- DateTime test preferred
-			ELEMENT[at0144.1] 	-- Latest DateTime test required
+			ELEMENT[id41.1] 	-- DateTime test preferred
+			ELEMENT[id145.1] 	-- Latest DateTime test required
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0.145"] = <
+			["id0.145"] = <
 				text = <"Specimen details">
 				description = <"Structured detail defining the specimen.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Laboratory Test request">
 				description = <"Generic request for a laboratory request.">
 			>
-			["at0040.1"] = <
+			["id41.1"] = <
 				text = <"DateTime test preferred">
 				description = <"The preferred date and time by which the service should be performed or completed.">
 			>
-			["at0144.1"] = <
+			["id145.1"] = <
 				text = <"Latest DateTime test required">
 				description = <"The latest date that is acceptable for the service to be completed.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
 		>
 		["ar-sy"] = <
-			["at0.145"] = <
+			["id0.145"] = <
 				text = <"تفاصيل العينة">
 				description = <"تفاصيل مُرَكَّبة لتعريف العينة.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"طلب إجراء تحليل معملي">
 				description = <"طلب جنيس (غير محدود الملكية) لطلب تحليل معملي.">
 			>
-			["at0040.1"] = <
+			["id41.1"] = <
 				text = <"تاريخ و توقيت الخدمة المطلوبة">
 				description = <"التاريخ و التوقيت الذي ينبغي إجراء أو إتمام الخدمة فيه">
 			>
-			["at0144.1"] = <
+			["id145.1"] = <
 				text = <"آخر تاريخ لاتزال الخدمة مطلوبة في أثناءه">
 				description = <"آخر تاريخ لا يزال فيه مقبولا أن يتم إكمال/إتمام الخدمة.">
 			>
+			["ac0.1"] = <
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at137", "at138", "at139">
 		>
 	>

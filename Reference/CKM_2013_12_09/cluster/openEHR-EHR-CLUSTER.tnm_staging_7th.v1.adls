@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.tnm_staging_7th.v1.0.0
 
 language
@@ -29,135 +29,138 @@ description
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Tumour - TNM Cancer staging 7th Edition
+	CLUSTER[id1] matches {	-- Tumour - TNM Cancer staging 7th Edition
 		items matches {
-			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Primary tumour (T)
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Primary tumour (T)
 				value matches {
-					DV_TEXT[id0005] matches {*}
+					DV_TEXT[id55] 
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Regional lymph nodes (N)
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Regional lymph nodes (N)
 				value matches {
-					DV_TEXT[id0405] matches {*}
+					DV_TEXT[id56] 
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Distant metastasis (M)
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Distant metastasis (M)
 				value matches {
-					DV_TEXT[id0805] matches {*}
+					DV_TEXT[id57] 
 				}
 			}
-			ELEMENT[at0025] occurrences matches {0..1} matches {	-- Residual tumour (R)
+			ELEMENT[id26] occurrences matches {0..1} matches {	-- Residual tumour (R)
 				value matches {
-					DV_TEXT[id0605] matches {*}
+					DV_TEXT[id58] 
 				}
 			}
-			ELEMENT[at0046] occurrences matches {0..1} matches {	-- Histopathological grading (G)
+			ELEMENT[id47] occurrences matches {0..1} matches {	-- Histopathological grading (G)
 				value matches {
-					DV_CODED_TEXT[id0806] matches {
-						defining_code matches {
-							[local::
-							at0047, 	-- GX
-							at0048, 	-- G1
-							at0049, 	-- G2
-							at0050, 	-- G3
-							at0051]	-- G4
-						}
+					DV_CODED_TEXT[id59] matches {
+						defining_code matches {[ac1]}		-- Histopathological grading (G)
 					}
 				}
 			}
-			ELEMENT[at0010] occurrences matches {0..1} matches {	-- Overall staging
+			ELEMENT[id11] occurrences matches {0..1} matches {	-- Overall staging
 				value matches {
-					DV_TEXT[id0205] matches {*}
+					DV_TEXT[id60] 
 				}
 			}
-			CLUSTER[at0052] occurrences matches {0..1} matches {	-- Descriptors
+			CLUSTER[id53] occurrences matches {0..1} matches {	-- Descriptors
 				items matches {
-					ELEMENT[at0053] occurrences matches {0..*} matches {	-- Descriptor
+					ELEMENT[id54] occurrences matches {0..*} matches {	-- Descriptor
 						value matches {
-							DV_TEXT[id0813] matches {*}
+							DV_TEXT[id61] 
 						}
 					}
 				}
 			}
-			ELEMENT[at0014] occurrences matches {0..1} matches {	-- Stage grouping
+			ELEMENT[id15] occurrences matches {0..1} matches {	-- Stage grouping
 				value matches {
-					DV_TEXT[id0807] matches {*}
+					DV_TEXT[id62] 
 				}
 			}
-			ELEMENT[at0012] occurrences matches {0..1} matches {	-- Comment
+			ELEMENT[id13] occurrences matches {0..1} matches {	-- Comment
 				value matches {
-					DV_TEXT[id0006] matches {*}
+					DV_TEXT[id63] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Tumour - TNM Cancer staging 7th Edition">
 				description = <"A framework for the classification and grading of malignancies using the TNM classification system 7th Edition.">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Primary tumour (T)">
 				description = <"Assessment of the primary tumour.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Regional lymph nodes (N)">
 				description = <"Assessment of the regional lymph nodes.">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Distant metastasis (M)">
 				description = <"Assessment of distant metastasis.">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Overall staging">
 				description = <"The overall staging derived from each T, N and M component e.g T1aM0NX. May include additional TNM descriptors.">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Comment">
 				description = <"A text comment on the staging.">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Stage grouping">
 				description = <"The TNM Stage grouping.">
 			>
-			["at0025"] = <
+			["id26"] = <
 				text = <"Residual tumour (R)">
 				description = <"Assessment of post-treatment residual tumour.">
 			>
-			["at0046"] = <
+			["id47"] = <
 				text = <"Histopathological grading (G)">
 				description = <"TNM histopathological grading classification. ">
 			>
-			["at0047"] = <
+			["at48"] = <
 				text = <"GX">
 				description = <"Grade of differentiation cannot be assessed.">
 			>
-			["at0048"] = <
+			["at49"] = <
 				text = <"G1">
 				description = <"Well differentiated.">
 			>
-			["at0049"] = <
+			["at50"] = <
 				text = <"G2">
 				description = <"Moderately differentiated.">
 			>
-			["at0050"] = <
+			["at51"] = <
 				text = <"G3">
 				description = <"Poorly differentiated.">
 			>
-			["at0051"] = <
+			["at52"] = <
 				text = <"G4">
 				description = <"Undifferentiated.">
 			>
-			["at0052"] = <
+			["id53"] = <
 				text = <"Descriptors">
 				description = <"Additional tumour specific TNM descriptors.">
 			>
-			["at0053"] = <
+			["id54"] = <
 				text = <"Descriptor">
 				description = <"Additional tumour specific TNM descriptor.">
 			>
+			["ac1"] = <
+				text = <"Histopathological grading (G)">
+				description = <"TNM histopathological grading classification. ">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at48", "at49", "at50", "at51", "at52">
 		>
 	>

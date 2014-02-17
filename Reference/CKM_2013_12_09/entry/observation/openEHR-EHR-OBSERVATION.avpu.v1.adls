@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.avpu.v1.0.0
 
 language
@@ -31,24 +31,18 @@ http://en.wikipedia.org/wiki/AVPU">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- AVPU
+	OBSERVATION[id1] matches {	-- AVPU
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {	-- Tree
+							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- AVPU Observation
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- AVPU Observation
 										value matches {
-											DV_CODED_TEXT[id0053] matches {
-												defining_code matches {
-													[local::
-													at0005, 	-- Alert
-													at0006, 	-- Voice
-													at0007, 	-- Pain
-													at0008]	-- Unresponsive
-												}
+											DV_CODED_TEXT[id6] matches {
+												defining_code matches {[ac1]}		-- AVPU Observation
 											}
 										}
 									}
@@ -61,44 +55,46 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"AVPU">
 				description = <"Simple scale used as part of an assessment to measure and record a patient's responsiveness, indicating their level of consciousness. AVPU is an acronym for 'Alert', 'Voice', 'Pain', 'Unresponsive'.">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Any event">
 				description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
 			>
-			["at0003"] = <
-				text = <"Tree">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"AVPU Observation">
 				description = <"The observation of the patient's responsiveness.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Alert">
 				description = <"The patient is fully awake and alert.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Voice">
 				description = <"The patient responds in any way to a voice stimulus.">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Pain">
 				description = <"The patient responds in any way to a pain stimulus.">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Unresponsive">
 				description = <"The patient does not respond in any way to voice or pain stimuli.">
 			>
+			["ac1"] = <
+				text = <"AVPU Observation">
+				description = <"The observation of the patient's responsiveness.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at6", "at7", "at8", "at9">
 		>
 	>

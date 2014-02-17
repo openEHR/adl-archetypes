@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-CLUSTER.balance.v1.0.0
 
 language
@@ -46,232 +46,264 @@ Designed to be used within any clinically appropriate ENTRY or CLUSTER archetype
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Examination Findings - Balance
+	CLUSTER[id1] matches {	-- Examination Findings - Balance
 		items matches {
-			ELEMENT[at0032] occurrences matches {0..1} matches {	-- Description
+			ELEMENT[id33] occurrences matches {0..1} matches {	-- Description
 				value matches {
-					DV_TEXT[id0805] matches {*}
+					DV_TEXT[id34] 
 				}
 			}
-			CLUSTER[at0020] occurrences matches {0..2} matches {	-- Test Result
+			CLUSTER[id21] occurrences matches {0..2} matches {	-- Test Result
 				items matches {
-					ELEMENT[at0021] occurrences matches {0..1} matches {	-- Test Name
+					ELEMENT[id22] occurrences matches {0..1} matches {	-- Test Name
 						value matches {
-							DV_CODED_TEXT[id0149] matches {
-								defining_code matches {
-									[local::
-									at0023, 	-- Rhomberg's test
-									at0029]	-- Heel-toe walking
-								}
+							DV_CODED_TEXT[id35] matches {
+								defining_code matches {[ac1]}		-- Test Name
 							}
 						}
 					}
-					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Eyes Open/closed
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Eyes Open/closed
 						value matches {
-							DV_CODED_TEXT[id0549] matches {
-								defining_code matches {
-									[local::
-									at0005, 	-- Eyes open
-									at0006]	-- Eyes closed
-								}
+							DV_CODED_TEXT[id36] matches {
+								defining_code matches {[ac2]}		-- Eyes Open/closed
 							}
 						}
 					}
-					ELEMENT[at0028] occurrences matches {0..1} matches {	-- Loss of Balance
+					ELEMENT[id29] occurrences matches {0..1} matches {	-- Loss of Balance
 						value matches {
-							DV_CODED_TEXT[id0949] matches {
-								defining_code matches {
-									[local::
-									at0033, 	-- No loss of balance
-									at0034, 	-- Partial loss of balance
-									at0035]	-- Full loss of balance
-								}
+							DV_CODED_TEXT[id37] matches {
+								defining_code matches {[ac3]}		-- Loss of Balance
 							}
 						}
 					}
-					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Affected Side
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Affected Side
 						value matches {
-							DV_CODED_TEXT[id0749] matches {
-								defining_code matches {
-									[local::
-									at0012, 	-- Fall towards right
-									at0013, 	-- Fall towards left
-									at0014]	-- Both sides
-								}
+							DV_CODED_TEXT[id38] matches {
+								defining_code matches {[ac4]}		-- Affected Side
 							}
 						}
 					}
-					ELEMENT[at0024] occurrences matches {0..1} matches {	-- Description
+					ELEMENT[id25] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0349] matches {*}
+							DV_TEXT[id39] 
 						}
 					}
 				}
 			}
-			ELEMENT[at0017] occurrences matches {0..1} matches {	-- Interpretation
+			ELEMENT[id18] occurrences matches {0..1} matches {	-- Interpretation
 				value matches {
-					DV_TEXT[id0005] matches {*}
+					DV_TEXT[id40] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["ar-sy"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"التوازن">
 				description = <"فحص التوازن">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"العينان مفتوحتان/مغلقتان">
 				description = <"تسجيل ما إذا كانت العينان مفتوحتان أو مغلقتان في أثناء أداء/إجراء الاختبار">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"العينان مفتوحتان">
 				description = <"العينان مفتوحتان">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"العينان مغلقتان">
 				description = <"العينان مغلقتان">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"الجانب المتأثر">
 				description = <"تعريف الجانب الذي به موجودات غير طبيعية">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"يسقط تجاه الجانب الأيمن">
 				description = <"سقوط الشخص تجاه الجانب الأيمن">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"يسقط تجاه الجانب الأيسر">
 				description = <"سقوط الشخص تجاه الجانب الأيسر">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"كلا الجانبين">
 				description = <"تأثير مُعَمَّم يستبب في فقد التوازن في كِليْ الجانبين أو جانب واحد">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"الموجودات السريرية">
 				description = <"موجودة سريرية">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"موجودات الاختبار المحدد">
 				description = <"الموجودات المتعلقة باختبارات محددة">
 			>
-			["at0021"] = <
+			["id22"] = <
 				text = <"اسم الاختبار">
 				description = <"اسم الاختبار">
 			>
-			["at0023"] = <
+			["at24"] = <
 				text = <"اختبار رومبيرغ">
 				description = <"اختبار توازن">
 			>
-			["at0024"] = <
+			["id25"] = <
 				text = <"الوصف">
 				description = <"الوصف التفصيلي لناتج اختبار التوازن">
 			>
-			["at0028"] = <
+			["id29"] = <
 				text = <"فقد التوازن">
 				description = <"موجودات فقد التوازن">
 			>
-			["at0029"] = <
+			["at30"] = <
 				text = <"سير العقِب - إصبع القدم">
 				description = <"السير مع وجود عقب القدم القائدة أمام أصبع القدم الخلفية">
 			>
-			["at0032"] = <
+			["id33"] = <
 				text = <"*New element(en)">
 				description = <"**(en)">
 			>
-			["at0033"] = <
+			["at34"] = <
 				text = <"*No loss of balance(en)">
 				description = <"*The subject did not lose their balance.(en)">
 			>
-			["at0034"] = <
+			["at35"] = <
 				text = <"*Partial loss of balance(en)">
 				description = <"*The subject lost their balance but did not fall over completely.(en)">
 			>
-			["at0035"] = <
+			["at36"] = <
 				text = <"*Full loss of balance(en)">
 				description = <"*The subject lost their balance completely.(en)">
 			>
+			["ac1"] = <
+				text = <"*Test Name(en)">
+				description = <"*Name of a specific test of subject's balance.(en)">
+			>
+			["ac2"] = <
+				text = <"*Eyes Open/closed(en)">
+				description = <"*Record of eyes being open or closed during performance of test.(en)">
+			>
+			["ac3"] = <
+				text = <"*Loss of Balance(en)">
+				description = <"*Finding of the extent of loss of balance.(en)">
+			>
+			["ac4"] = <
+				text = <"*Affected Side(en)">
+				description = <"*Identification of side of abnormal finding.(en)">
+			>
 		>
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Examination Findings - Balance">
 				description = <"Findings observed during the physical examination of balance.">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Eyes Open/closed">
 				description = <"Record of eyes being open or closed during performance of test.">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Eyes open">
 				description = <"Both eyes are open.">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Eyes closed">
 				description = <"Both eyes are closed.">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Affected Side">
 				description = <"Identification of side of abnormal finding.">
 			>
-			["at0012"] = <
+			["at13"] = <
 				text = <"Fall towards right">
 				description = <"Falling to the person's right side.">
 			>
-			["at0013"] = <
+			["at14"] = <
 				text = <"Fall towards left">
 				description = <"Falling to the person's left side.">
 			>
-			["at0014"] = <
+			["at15"] = <
 				text = <"Both sides">
 				description = <"Generalised effect causing loss of balance to both, or either, side.">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Interpretation">
 				description = <"Single word, phrase or brief description represents the clinical meaning and significance of the balance findings.">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"Test Result">
 				description = <"Findings relating to specific tests.">
 			>
-			["at0021"] = <
+			["id22"] = <
 				text = <"Test Name">
 				description = <"Name of a specific test of subject's balance.">
 			>
-			["at0023"] = <
+			["at24"] = <
 				text = <"Rhomberg's test">
 				description = <"The Rhomberg balance test was performed.">
 			>
-			["at0024"] = <
+			["id25"] = <
 				text = <"Description">
 				description = <"Detailed description of outcome of balance test.">
 			>
-			["at0028"] = <
+			["id29"] = <
 				text = <"Loss of Balance">
 				description = <"Finding of the extent of loss of balance.">
 			>
-			["at0029"] = <
+			["at30"] = <
 				text = <"Heel-toe walking">
 				description = <"Walking with the heel of the leading foot in front of the toe of the trailing foot.">
 			>
-			["at0032"] = <
+			["id33"] = <
 				text = <"Description">
 				description = <"Narrative description of the overall findings observed during a physical examination of balance.">
 			>
-			["at0033"] = <
+			["at34"] = <
 				text = <"No loss of balance">
 				description = <"The subject did not lose their balance.">
 			>
-			["at0034"] = <
+			["at35"] = <
 				text = <"Partial loss of balance">
 				description = <"The subject temporarily lost their balance but recovered it and did not fall over.">
 			>
-			["at0035"] = <
+			["at36"] = <
 				text = <"Full loss of balance">
 				description = <"The subject lost their balance completely.">
 			>
+			["ac1"] = <
+				text = <"Test Name">
+				description = <"Name of a specific test of subject's balance.">
+			>
+			["ac2"] = <
+				text = <"Eyes Open/closed">
+				description = <"Record of eyes being open or closed during performance of test.">
+			>
+			["ac3"] = <
+				text = <"Loss of Balance">
+				description = <"Finding of the extent of loss of balance.">
+			>
+			["ac4"] = <
+				text = <"Affected Side">
+				description = <"Identification of side of abnormal finding.">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at24", "at30">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at6", "at7">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at34", "at35", "at36">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at13", "at14", "at15">
 		>
 	>

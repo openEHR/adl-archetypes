@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-INSTRUCTION.request-referral.v1.0.0
 
 specialize
-	openEHR-EHR-INSTRUCTION.request.v1.0.0
+	openEHR-EHR-INSTRUCTION.request.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -32,20 +32,22 @@ description
 	>
 
 definition
-	INSTRUCTION[at0000.1] matches {	-- Referral request
-		/protocol[at0008]/items matches {
-			allow_archetype CLUSTER[at0.5] occurrences matches {0..*} matches {	-- Contacts
+	INSTRUCTION[id1.1] matches {	-- Referral request
+		/protocol[id9]/items matches {
+			allow_archetype CLUSTER[id0.5] occurrences matches {0..*} matches {	-- Contacts
+				include
+					archetype_id/value matches {/.*/}
 			}
-			CLUSTER[at0.2] occurrences matches {0..1} matches {	-- Duration
+			CLUSTER[id0.2] occurrences matches {0..1} matches {	-- Duration
 				items matches {
-					ELEMENT[at0.3] occurrences matches {0..1} matches {	-- Duration
+					ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Duration
 						value matches {
-							DV_DURATION[id0.493] 
+							DV_DURATION[id0.213] 
 						}
 					}
-					ELEMENT[at0.4] occurrences matches {0..1} matches {	-- Indefinite
+					ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Indefinite
 						value matches {
-							DV_BOOLEAN[id0.894] matches {
+							DV_BOOLEAN[id0.214] matches {
 								value matches {True}
 							}
 						}
@@ -55,28 +57,38 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0.2"] = <
+			["id0.2"] = <
 				text = <"Duration">
 				description = <"Length of time the referral is valid.">
 			>
-			["at0.3"] = <
+			["id0.3"] = <
 				text = <"Duration">
 				description = <"Duration for which the referral is valid.">
 			>
-			["at0.4"] = <
+			["id0.4"] = <
 				text = <"Indefinite">
 				description = <"If true, referral is for an indefinite period of time.">
 			>
-			["at0.5"] = <
+			["id0.5"] = <
 				text = <"Contacts">
 				description = <"A list of people or organisations who are relevant to this referral, including next of kin.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Referral request">
 				description = <"Request for provision of a specified service by another healthcare provider or organisation.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at137", "at138", "at139">
 		>
 	>

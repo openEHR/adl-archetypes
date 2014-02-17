@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.pregnancy_test.v1.0.0
 
 language
@@ -25,24 +25,18 @@ description
 	other_contributors = <"Heather Leslie", ...>
 
 definition
-	OBSERVATION[at0000] matches {	-- Pregnancy test
+	OBSERVATION[id1] matches {	-- Pregnancy test
 		data matches {
-			HISTORY[at0001] matches {	-- Event Series
+			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Time
+					POINT_EVENT[id3] occurrences matches {0..1} matches {	-- Time
 						data matches {
-							ITEM_SINGLE[at0003] matches {	-- Single
+							ITEM_SINGLE[id4] matches {
 								item matches {
-									ELEMENT[at0004] matches {	-- Result
+									ELEMENT[id5] matches {	-- Result
 										value matches {
-											DV_CODED_TEXT[id0549] matches {
-												defining_code matches {
-													[local::
-													at0005, 	-- Negative
-													at0006, 	-- Inconclusive
-													at0007, 	-- Weakly positive
-													at0008]	-- Strongly positive
-												}
+											DV_CODED_TEXT[id12] matches {
+												defining_code matches {[ac1]}		-- Result
 											}
 										}
 									}
@@ -54,11 +48,11 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_LIST[at0009] matches {	-- List
+			ITEM_LIST[id10] matches {
 				items matches {
-					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Product
+					ELEMENT[id11] occurrences matches {0..1} matches {	-- Product
 						value matches {
-							DV_TEXT[id0773] matches {*}
+							DV_TEXT[id13] 
 						}
 					}
 				}
@@ -66,52 +60,50 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Pregnancy test">
 				description = <"Result of test using a commercial product to test for early pregnancy">
 			>
-			["at0001"] = <
-				text = <"Event Series">
-				description = <"@ internal @">
-			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Time">
 				description = <"Time of test">
 			>
-			["at0003"] = <
-				text = <"Single">
-				description = <"@ internal @">
-			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Result">
 				description = <"The result of the pregnancy test">
 			>
-			["at0005"] = <
+			["at6"] = <
 				text = <"Negative">
 				description = <"The result does not show any sign of pregnancy">
 			>
-			["at0006"] = <
+			["at7"] = <
 				text = <"Inconclusive">
 				description = <"The result is inconclusive">
 			>
-			["at0007"] = <
+			["at8"] = <
 				text = <"Weakly positive">
 				description = <"The result is positive but the change is not strong">
 			>
-			["at0008"] = <
+			["at9"] = <
 				text = <"Strongly positive">
 				description = <"The resulting change is very obvious">
 			>
-			["at0009"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Product">
 				description = <"The product used for the test">
 			>
+			["ac1"] = <
+				text = <"Result">
+				description = <"The result of the pregnancy test">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at6", "at7", "at8", "at9">
 		>
 	>

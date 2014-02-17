@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.5; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.bodily_output-urination.v1.0.0
 
 specialize
-	openEHR-EHR-OBSERVATION.bodily_output.v1.0.0
+	openEHR-EHR-OBSERVATION.bodily_output.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -34,25 +34,25 @@ Supercedes OBSERVATION.urine_output.v1 ">
 	>
 
 definition
-	OBSERVATION[at0000.1] matches {	-- Urination
-		/data[at0001]/events[at0002]/data[at0003]/items matches {
-			allow_archetype CLUSTER[at0016.1] matches {	-- Urine detail
+	OBSERVATION[id1.1] matches {	-- Urination
+		/data[id2]/events[id3]/data[id4]/items matches {
+			allow_archetype CLUSTER[id17.1] matches {	-- Urine detail
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-a-zA-Z0-9_]+)*\.v1/}
 			}
-			CLUSTER[at0032] matches {
+			CLUSTER[id33] matches {
 				items matches {
-					ELEMENT[at0033.1] 	-- Passed urine
-					ELEMENT[at0034.1] 	-- Datetime urine last passed
-					ELEMENT[at0036.1] 	-- Period elapsed since urine last passed
-					ELEMENT[at0037.1] 	-- Difficulty passing urine
+					ELEMENT[id34.1] 	-- Passed urine
+					ELEMENT[id35.1] 	-- Datetime urine last passed
+					ELEMENT[id37.1] 	-- Period elapsed since urine last passed
+					ELEMENT[id38.1] 	-- Difficulty passing urine
 				}
 			}
-			CLUSTER[at0.40] occurrences matches {0..1} matches {	-- Continence
+			CLUSTER[id0.40] occurrences matches {0..1} matches {	-- Continence
 				items matches {
-					ELEMENT[at0.41] occurrences matches {0..1} matches {	-- Description
+					ELEMENT[id0.41] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0.565] 
+							DV_TEXT[id0.62] 
 						}
 					}
 				}
@@ -60,40 +60,50 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0.40"] = <
+			["id0.40"] = <
 				text = <"Continence">
 				description = <"Findings related to continence.">
 			>
-			["at0.41"] = <
+			["id0.41"] = <
 				text = <"Description">
 				description = <"Description of continence issues.">
 			>
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Urination">
 				description = <"Recording of findings and measurement (or estimation) of urination.">
 			>
-			["at0016.1"] = <
+			["id17.1"] = <
 				text = <"Urine detail">
 				description = <"Details of the fluid or substance observed being observed.">
 			>
-			["at0033.1"] = <
+			["id34.1"] = <
 				text = <"Passed urine">
 				description = <"Has the subject passed urine?">
 			>
-			["at0034.1"] = <
+			["id35.1"] = <
 				text = <"Datetime urine last passed">
 				description = <"The data and/or time that urine was last passed.">
 			>
-			["at0036.1"] = <
+			["id37.1"] = <
 				text = <"Period elapsed since urine last passed">
 				description = <"The period elapsed since urine was last passed.">
 			>
-			["at0037.1"] = <
+			["id38.1"] = <
 				text = <"Difficulty passing urine">
 				description = <"Description of  any difficulty passing urine.">
 			>
+			["ac0.1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at19", "at20", "at21">
 		>
 	>
