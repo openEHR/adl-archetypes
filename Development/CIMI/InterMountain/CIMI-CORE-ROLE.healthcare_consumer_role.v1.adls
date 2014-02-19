@@ -18,42 +18,42 @@ description
 definition
 	ROLE[at0000.1.1.1] matches { -- Healthcare consumer role
 		details matches {
-			ELEMENT[at0...1] occurrences matches {1} matches { -- Role type
+			ELEMENT[at0.0.0.1] occurrences matches {1} matches { -- Role type
 				value matches {
 					CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0...2] occurrences matches {0..1} matches { -- Importance
+			ELEMENT[at0.0.0.2] occurrences matches {0..1} matches { -- Importance
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0...3] occurrences matches {0..1} matches { -- Paper record location
+			ELEMENT[at0.0.0.3] occurrences matches {0..1} matches { -- Paper record location
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0...4] occurrences matches {0..1} matches { -- Organ donor type
+			ELEMENT[at0.0.0.4] occurrences matches {0..1} matches { -- Organ donor type
 				value matches {
 					CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0...5] occurrences matches {0..1} matches { -- Diet
+			ELEMENT[at0.0.0.5] occurrences matches {0..1} matches { -- Diet
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0...6] occurrences matches {0..1} matches { -- Importance
+			ELEMENT[at0.0.0.6] occurrences matches {0..1} matches { -- Importance
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0...7] occurrences matches {0..1} matches { -- Importance
+			ELEMENT[at0.0.0.7] occurrences matches {0..1} matches { -- Importance
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0...8] occurrences matches {0..1} matches { -- Importance
+			ELEMENT[at0.0.0.8] occurrences matches {0..1} matches { -- Importance
 				value matches {
 					TEXT matches {*}
 				}
@@ -72,35 +72,35 @@ ontology
 				text = <"Healthcare consumer role">
 				description = <"Healthcare consumer role">
 			>
-			["at0...1"] = <
+			["at0.0.0.1"] = <
 				text = <"Role type">
 				description = <"Role type">
 			>
-			["at0...2"] = <
+			["at0.0.0.2"] = <
 				text = <"Importance">
 				description = <"Importance">
 			>
-			["at0...3"] = <
+			["at0.0.0.3"] = <
 				text = <"Paper record location">
 				description = <"Paper record location">
 			>
-			["at0...4"] = <
+			["at0.0.0.4"] = <
 				text = <"Organ donor type">
 				description = <"Organ donor type">
 			>
-			["at0...5"] = <
+			["at0.0.0.5"] = <
 				text = <"Diet">
 				description = <"Diet">
 			>
-			["at0...6"] = <
+			["at0.0.0.6"] = <
 				text = <"Importance">
 				description = <"Importance">
 			>
-			["at0...7"] = <
+			["at0.0.0.7"] = <
 				text = <"Importance">
 				description = <"Importance">
 			>
-			["at0...8"] = <
+			["at0.0.0.8"] = <
 				text = <"Importance">
 				description = <"Importance">
 			>
@@ -110,14 +110,14 @@ ontology
 		["SNOMED-CT"] = <
 			items = <
 				["at0000.1.1.1"] = <[SNOMED-CT::138875005]>
-				["at0...1"] = <[SNOMED-CT::138875005]>
-				["at0...2"] = <[SNOMED-CT::138875005]>
-				["at0...3"] = <[SNOMED-CT::138875005]>
-				["at0...4"] = <[SNOMED-CT::138875005]>
-				["at0...5"] = <[SNOMED-CT::138875005]>
-				["at0...6"] = <[SNOMED-CT::138875005]>
-				["at0...7"] = <[SNOMED-CT::138875005]>
-				["at0...8"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.1"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.2"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.3"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.4"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.5"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.6"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.7"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.8"] = <[SNOMED-CT::138875005]>
 			>
 		>
 	>

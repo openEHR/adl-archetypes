@@ -18,27 +18,27 @@ description
 definition
 	PARTY_RELATIONSHIP[at0000.1.1] matches { -- Employer
 		details matches {
-			ELEMENT[at0..1] occurrences matches {0..1} matches { -- Role
+			ELEMENT[at0.0.1] occurrences matches {0..1} matches { -- Role
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..2] occurrences matches {0..1} matches { -- Rank
+			ELEMENT[at0.0.2] occurrences matches {0..1} matches { -- Rank
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..3] occurrences matches {0..1} matches { -- Occupation
+			ELEMENT[at0.0.3] occurrences matches {0..1} matches { -- Occupation
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..4] occurrences matches {0..1} matches { -- Salary type
+			ELEMENT[at0.0.4] occurrences matches {0..1} matches { -- Salary type
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..5] occurrences matches {0..1} matches { -- Salary quantity
+			ELEMENT[at0.0.5] occurrences matches {0..1} matches { -- Salary quantity
 				value matches {
 					QUANTITY matches {*}
 				}
@@ -53,23 +53,23 @@ ontology
 				text = <"Employer">
 				description = <"Employer">
 			>
-			["at0..1"] = <
+			["at0.0.1"] = <
 				text = <"Role">
 				description = <"Role">
 			>
-			["at0..2"] = <
+			["at0.0.2"] = <
 				text = <"Rank">
 				description = <"Rank">
 			>
-			["at0..3"] = <
+			["at0.0.3"] = <
 				text = <"Occupation">
 				description = <"Occupation">
 			>
-			["at0..4"] = <
+			["at0.0.4"] = <
 				text = <"Salary type">
 				description = <"Salary type">
 			>
-			["at0..5"] = <
+			["at0.0.5"] = <
 				text = <"Salary quantity">
 				description = <"Salary quantity">
 			>
@@ -79,10 +79,10 @@ ontology
 		["SNOMED-CT"] = <
 			items = <
 				["at0000.1.1"] = <[SNOMED-CT::138875005]>
-				["at0..1"] = <[SNOMED-CT::138875005]>
-				["at0..2"] = <[SNOMED-CT::138875005]>
-				["at0..3"] = <[SNOMED-CT::138875005]>
-				["at0..4"] = <[SNOMED-CT::138875005]>
+				["at0.0.1"] = <[SNOMED-CT::138875005]>
+				["at0.0.2"] = <[SNOMED-CT::138875005]>
+				["at0.0.3"] = <[SNOMED-CT::138875005]>
+				["at0.0.4"] = <[SNOMED-CT::138875005]>
 			>
 		>
 	>

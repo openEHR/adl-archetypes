@@ -1,5 +1,5 @@
-archetype (adl_version=1.5; generated)
-	CIMI-CORE-CLUSTER.reference_range.v1
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.reference_range.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,47 +8,48 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			>
+			purpose = <"???">
+		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[at0000] matches { -- Reference Range
+	CLUSTER[id1] matches {	-- Reference Range
 		item matches {
-			ELEMENT[at0001] occurrences matches {0..*} matches { -- Reference criteria
+			ELEMENT[id2] occurrences matches {0..*} matches {	-- Reference criteria
 				value matches {
-					TEXT matches {*}
+					TEXT[id5] 
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches { -- Reference value
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Reference value
 				value matches {
-					DATA_VALUE matches {*}
+					DATA_VALUE[id6] 
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches { -- Narrative
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Narrative
 				value matches {
-					TEXT matches {*}
+					TEXT[id7] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Reference Range">
 				description = <"Reference Range">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Reference criteria">
 				description = <"Reference criteria">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Reference value">
 				description = <"Reference value">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Narrative">
 				description = <"Narrative">
 			>
@@ -56,9 +57,7 @@ ontology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-				["at0001"] = <[SNOMED-CT::138875005]>
-				["at0002"] = <[SNOMED-CT::138875005]>
-			>
+			["id2"] = <http://snomedct.info/id/138875005>
+			["id3"] = <http://snomedct.info/id/138875005>
 		>
 	>

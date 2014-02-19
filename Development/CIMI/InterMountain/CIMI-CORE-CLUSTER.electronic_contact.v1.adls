@@ -1,5 +1,5 @@
-archetype (adl_version=1.5; generated)
-	CIMI-CORE-CLUSTER.electronic_contact.v1
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.electronic_contact.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,92 +8,93 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			>
+			purpose = <"???">
+		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[at0000] matches { -- Electronic contact
+	CLUSTER[id1] matches {	-- Electronic contact
 		item matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches { -- Value
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Value
 				value matches {
-					TEXT matches {*}
+					TEXT[id10] 
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches { -- Protocol
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Protocol
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id11] 
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches { -- Status
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Status
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id12] 
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..1} matches { -- Medium
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Medium
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id13] 
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches { -- Use
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Use
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id14] 
 				}
 			}
-			ELEMENT[at0006] occurrences matches {0..1} matches { -- Preferred timing
+			ELEMENT[id7] occurrences matches {0..1} matches {	-- Preferred timing
 				value matches {
-					TEXT matches {*}
+					TEXT[id15] 
 				}
 			}
-			ELEMENT[at0007] occurrences matches {0..1} matches { -- Datetime range
+			ELEMENT[id8] occurrences matches {0..1} matches {	-- Datetime range
 				value matches {
-					INTERVAL_VALUE<DATE_TIME> matches {*}
+					INTERVAL_VALUE<DATE_TIME>[id16] 
 				}
 			}
-			ELEMENT[at0008] occurrences matches {0..1} matches { -- Preference indicator
+			ELEMENT[id9] occurrences matches {0..1} matches {	-- Preference indicator
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id17] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Electronic contact">
 				description = <"Electronic contact">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Protocol">
 				description = <"Protocol">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Status">
 				description = <"Status">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Medium">
 				description = <"Medium">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Use">
 				description = <"Use">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Preferred timing">
 				description = <"Preferred timing">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Datetime range">
 				description = <"Datetime range">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Preference indicator">
 				description = <"Preference indicator">
 			>
@@ -101,16 +102,14 @@ ontology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-				["at0000"] = <[SNOMED-CT::138875005]>
-				["at0001"] = <[SNOMED-CT::138875005]>
-				["at0002"] = <[SNOMED-CT::138875005]>
-				["at0003"] = <[SNOMED-CT::138875005]>
-				["at0004"] = <[SNOMED-CT::138875005]>
-				["at0005"] = <[SNOMED-CT::138875005]>
-				["at0006"] = <[SNOMED-CT::138875005]>
-				["at0007"] = <[SNOMED-CT::138875005]>
-				["at0008"] = <[SNOMED-CT::138875005]>
-			>
+			["id1"] = <http://snomedct.info/id/138875005>
+			["id2"] = <http://snomedct.info/id/138875005>
+			["id3"] = <http://snomedct.info/id/138875005>
+			["id4"] = <http://snomedct.info/id/138875005>
+			["id5"] = <http://snomedct.info/id/138875005>
+			["id6"] = <http://snomedct.info/id/138875005>
+			["id7"] = <http://snomedct.info/id/138875005>
+			["id8"] = <http://snomedct.info/id/138875005>
+			["id9"] = <http://snomedct.info/id/138875005>
 		>
 	>

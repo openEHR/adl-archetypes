@@ -18,12 +18,12 @@ description
 definition
 	CLUSTER[at0000.1.1] matches { -- Carbon dioxide partial pressure adjusted to patients actual temperature
 		/item matches {
-			ELEMENT[at0..1] occurrences matches {1} matches { -- Name
+			ELEMENT[at0.0.1] occurrences matches {1} matches { -- Name
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..2] occurrences matches {0..1} matches { -- Result value
+			ELEMENT[at0.0.2] occurrences matches {0..1} matches { -- Result value
 				value matches {
 					DATA_VALUE matches {*}
 				}
@@ -38,11 +38,11 @@ ontology
 				text = <"Carbon dioxide partial pressure adjusted to patients actual temperature">
 				description = <"Carbon dioxide partial pressure adjusted to patients actual temperature">
 			>
-			["at0..1"] = <
+			["at0.0.1"] = <
 				text = <"Name">
 				description = <"Name">
 			>
-			["at0..2"] = <
+			["at0.0.2"] = <
 				text = <"Result value">
 				description = <"Result value">
 			>
@@ -51,8 +51,8 @@ ontology
 	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
-				["at0..1"] = <[SNOMED-CT::138875005]>
-				["at0..2"] = <[SNOMED-CT::138875005]>
+				["at0.0.1"] = <[SNOMED-CT::138875005]>
+				["at0.0.2"] = <[SNOMED-CT::138875005]>
 			>
 		>
 	>

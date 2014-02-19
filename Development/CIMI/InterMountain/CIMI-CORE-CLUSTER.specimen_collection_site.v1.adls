@@ -18,7 +18,7 @@ description
 definition
 	CLUSTER[at0000.1.1] matches { -- Specimen Collection Site
 		/item matches {
-			ELEMENT[at0..1] occurrences matches {0..1} matches { -- Body side
+			ELEMENT[at0.0.1] occurrences matches {0..1} matches { -- Body side
 				value matches {
 					TEXT matches {*}
 				}
@@ -33,7 +33,7 @@ ontology
 				text = <"Specimen Collection Site">
 				description = <"Specimen Collection Site">
 			>
-			["at0..1"] = <
+			["at0.0.1"] = <
 				text = <"Body side">
 				description = <"Body side">
 			>
@@ -43,7 +43,7 @@ ontology
 		["SNOMED-CT"] = <
 			items = <
 				["at0000.1.1"] = <[SNOMED-CT::123037004]>
-				["at0..1"] = <[SNOMED-CT::182353008]>
+				["at0.0.1"] = <[SNOMED-CT::182353008]>
 			>
 		>
 	>

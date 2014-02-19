@@ -1,5 +1,5 @@
-archetype (adl_version=1.5; generated)
-	CIMI-CORE-ENTRY.clinical_entry.v2
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ENTRY.clinical_entry.v2.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,33 +8,34 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			>
+			purpose = <"???">
+		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	ENTRY[at0000] matches { -- Clinical Entry
+	ENTRY[id1] matches {	-- Clinical Entry
 		participation matches {
-			PARTICIPATION[at0001] occurrences matches {0..1} -- Subject of care
-			PARTICIPATION[at0002] occurrences matches {0..1} -- Information subject
+			PARTICIPATION[id2] occurrences matches {0..1} 	-- Subject of care
+			PARTICIPATION[id3] occurrences matches {0..1} 	-- Information subject
 		}
 		data matches {
-			use_archetype CLUSTER [CIMI-CORE-CLUSTER.action.v1] -- Action
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.action.v1] 
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Clinical Entry">
 				description = <"Clinical Entry">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Subject of care">
 				description = <"Subject of care">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Information subject">
 				description = <"Information subject">
 			>
@@ -42,10 +43,8 @@ ontology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-				["at0000"] = <[SNOMED-CT::404684003]>
-				["at0001"] = <[SNOMED-CT::125676002]>
-				["at0002"] = <[SNOMED-CT::125676002]>
-			>
+			["id1"] = <http://snomedct.info/id/404684003>
+			["id2"] = <http://snomedct.info/id/125676002>
+			["id3"] = <http://snomedct.info/id/125676002>
 		>
 	>

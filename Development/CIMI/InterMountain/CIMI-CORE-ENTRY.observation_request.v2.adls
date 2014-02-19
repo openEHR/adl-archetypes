@@ -22,7 +22,7 @@ definition
 			use_archetype CLUSTER [CIMI-CORE-CLUSTER.observable.v1] -- Requested observable
 		}
 		link matches {
-			LINK[at0...1] occurrences matches {0..*} -- Requested observation link
+			LINK[at0.0.0.1] occurrences matches {0..*} -- Requested observation link
 		}
 	}
 
@@ -33,7 +33,7 @@ ontology
 				text = <"Observation Request">
 				description = <"Observation Request">
 			>
-			["at0...1"] = <
+			["at0.0.0.1"] = <
 				text = <"Requested observation link">
 				description = <"Requested observation link">
 			>

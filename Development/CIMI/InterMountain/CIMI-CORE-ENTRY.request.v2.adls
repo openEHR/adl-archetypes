@@ -19,10 +19,10 @@ definition
 	ENTRY[at0000.1.1] matches { -- Request
 		data matches {
 			use_archetype CLUSTER [CIMI-CORE-CLUSTER.request_action.v1] -- Request action
-			ITEM[at0..1] occurrences matches {0..*} -- Requested item
+			ITEM[at0.0.1] occurrences matches {0..*} -- Requested item
 		}
 		link matches {
-			LINK[at0..2] occurrences matches {0..*} -- Requested item link
+			LINK[at0.0.2] occurrences matches {0..*} -- Requested item link
 		}
 	}
 
@@ -33,11 +33,11 @@ ontology
 				text = <"Request">
 				description = <"Request">
 			>
-			["at0..1"] = <
+			["at0.0.1"] = <
 				text = <"Requested item">
 				description = <"Requested item">
 			>
-			["at0..2"] = <
+			["at0.0.2"] = <
 				text = <"Requested item link">
 				description = <"Requested item link">
 			>
@@ -47,8 +47,8 @@ ontology
 		["SNOMED-CT"] = <
 			items = <
 				["at0000.1.1"] = <[SNOMED-CT::308539001]>
-				["at0..1"] = <[SNOMED-CT::138875005]>
-				["at0..2"] = <[SNOMED-CT::138875005]>
+				["at0.0.1"] = <[SNOMED-CT::138875005]>
+				["at0.0.2"] = <[SNOMED-CT::138875005]>
 			>
 		>
 	>

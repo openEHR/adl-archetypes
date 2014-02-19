@@ -18,17 +18,17 @@ description
 definition
 	CLUSTER[at0000.1.1] matches { -- Laboratory Test Request Action
 		/item matches {
-			ELEMENT[at0..1] occurrences matches {0..1} matches { -- Requester request identifier
+			ELEMENT[at0.0.1] occurrences matches {0..1} matches { -- Requester request identifier
 				value matches {
 					IDENTIFIER matches {*}
 				}
 			}
-			ELEMENT[at0..2] occurrences matches {0..1} matches { -- Receiver request identifier
+			ELEMENT[at0.0.2] occurrences matches {0..1} matches { -- Receiver request identifier
 				value matches {
 					IDENTIFIER matches {*}
 				}
 			}
-			ELEMENT[at0..3] occurrences matches {1} matches { -- Action type
+			ELEMENT[at0.0.3] occurrences matches {1} matches { -- Action type
 				value matches {
 					CODED_TEXT matches {*}
 				}
@@ -43,15 +43,15 @@ ontology
 				text = <"Laboratory Test Request Action">
 				description = <"Laboratory Test Request Action">
 			>
-			["at0..1"] = <
+			["at0.0.1"] = <
 				text = <"Requester request identifier">
 				description = <"Requester request identifier">
 			>
-			["at0..2"] = <
+			["at0.0.2"] = <
 				text = <"Receiver request identifier">
 				description = <"Receiver request identifier">
 			>
-			["at0..3"] = <
+			["at0.0.3"] = <
 				text = <"Action type">
 				description = <"Action type">
 			>
@@ -60,9 +60,9 @@ ontology
 	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
-				["at0..1"] = <[SNOMED-CT::129264002]>
-				["at0..2"] = <[SNOMED-CT::138875005]>
-				["at0..3"] = <[SNOMED-CT::138875005]>
+				["at0.0.1"] = <[SNOMED-CT::129264002]>
+				["at0.0.2"] = <[SNOMED-CT::138875005]>
+				["at0.0.3"] = <[SNOMED-CT::138875005]>
 			>
 		>
 	>

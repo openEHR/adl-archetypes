@@ -1,5 +1,5 @@
-archetype (adl_version=1.5; generated)
-	CIMI-CORE-CLUSTER.finding.v1
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.finding.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,84 +8,85 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			>
+			purpose = <"???">
+		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[at0000] matches { -- Finding
+	CLUSTER[id1] matches {	-- Finding
 		item matches {
-			ELEMENT[at0001] occurrences matches {0..*} matches { -- Identifier
+			ELEMENT[id2] occurrences matches {0..*} matches {	-- Identifier
 				value matches {
-					IDENTIFIER matches {*}
+					IDENTIFIER[id9] 
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches { -- Name
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Name
 				value matches {
-					TEXT matches {*}
+					TEXT[id10] 
 				}
 			}
-			ITEM[at0003] occurrences matches {0..*} -- Finding
-			ELEMENT[at0004] occurrences matches {0..1} matches { -- Status
+			ITEM[id4] occurrences matches {0..*} 	-- Finding
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Status
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id11] 
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches { -- Interpretation category
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Interpretation category
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id12] 
 				}
 			}
-			ELEMENT[at0006] occurrences matches {0..1} matches { -- Sequence
+			ELEMENT[id7] occurrences matches {0..1} matches {	-- Sequence
 				value matches {
-					COUNT matches {*}
+					COUNT[id13] 
 				}
 			}
-			ELEMENT[at0007] occurrences matches {0..*} matches { -- Comment
+			ELEMENT[id8] occurrences matches {0..*} matches {	-- Comment
 				value matches {
-					TEXT matches {*}
+					TEXT[id14] 
 				}
 			}
-			use_archetype CLUSTER [CIMI-CORE-CLUSTER.observe_action.v1] -- Observe action
-			use_archetype CLUSTER [CIMI-CORE-CLUSTER.interpret_action.v1] -- Interpret action
-			use_archetype CLUSTER [CIMI-CORE-CLUSTER.approve_action.v1] -- Approve action
-			use_archetype CLUSTER [CIMI-CORE-CLUSTER.report_action.v1] -- Report action
-			use_archetype CLUSTER [CIMI-CORE-CLUSTER.cancel_action.v1] -- Cancel action
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.observe_action.v1] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.interpret_action.v1] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.approve_action.v1] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.report_action.v1] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.cancel_action.v1] 
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Finding">
 				description = <"Finding">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Identifier">
 				description = <"Identifier">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Name">
 				description = <"Name">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Finding">
 				description = <"Finding">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Status">
 				description = <"Status">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Interpretation category">
 				description = <"Interpretation category">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Sequence">
 				description = <"Sequence">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Comment">
 				description = <"Comment">
 			>
@@ -93,15 +94,13 @@ ontology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-				["at0000"] = <[SNOMED-CT::404684003]>
-				["at0001"] = <[SNOMED-CT::423901009]>
-				["at0002"] = <[SNOMED-CT::363787002]>
-				["at0003"] = <[SNOMED-CT::404684003]>
-				["at0004"] = <[SNOMED-CT::138875005]>
-				["at0005"] = <[SNOMED-CT::442499005]>
-				["at0006"] = <[SNOMED-CT::138875005]>
-				["at0007"] = <[SNOMED-CT::138875005]>
-			>
+			["id1"] = <http://snomedct.info/id/404684003>
+			["id2"] = <http://snomedct.info/id/423901009>
+			["id3"] = <http://snomedct.info/id/363787002>
+			["id4"] = <http://snomedct.info/id/404684003>
+			["id5"] = <http://snomedct.info/id/138875005>
+			["id6"] = <http://snomedct.info/id/442499005>
+			["id7"] = <http://snomedct.info/id/138875005>
+			["id8"] = <http://snomedct.info/id/138875005>
 		>
 	>

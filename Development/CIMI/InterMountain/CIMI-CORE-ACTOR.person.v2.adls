@@ -18,23 +18,23 @@ description
 definition
 	ACTOR[at0000.1.1] matches { -- Person
 		/details matches {
-			CLUSTER[at0..1] occurrences matches {0..*} matches { -- Identifier
+			CLUSTER[at0.0.1] occurrences matches {0..*} matches { -- Identifier
 			item matches {
-				ELEMENT[at0..2] occurrences matches {0..1} matches { -- Use
+				ELEMENT[at0.0.2] occurrences matches {0..1} matches { -- Use
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..3] occurrences matches {0..1} matches { -- Datetime range
+				ELEMENT[at0.0.3] occurrences matches {0..1} matches { -- Datetime range
 					value matches {
 						INTERVAL_VALUE<DATE> matches {*}
 					}
 				}
 			}}
 			use_archetype CLUSTER [CIMI-CORE-CLUSTER.person_name.v1] -- Name
-			CLUSTER[at0..4] occurrences matches {0..1} matches { -- Contact person
+			CLUSTER[at0.0.4] occurrences matches {0..1} matches { -- Contact person
 			item matches {
-				ELEMENT[at0..5] occurrences matches {0..1} matches { -- Type
+				ELEMENT[at0.0.5] occurrences matches {0..1} matches { -- Type
 					value matches {
 						TEXT matches {*}
 					}
@@ -42,383 +42,383 @@ definition
 				use_archetype CLUSTER [CIMI-CORE-CLUSTER.person_name.v1] -- Name
 				use_archetype CLUSTER [CIMI-CORE-CLUSTER.electronic_contact.v1] -- Contact
 			}}
-			ELEMENT[at0..6] occurrences matches {0..1} matches { -- Administrative gender
+			ELEMENT[at0.0.6] occurrences matches {0..1} matches { -- Administrative gender
 				value matches {
 					CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..7] occurrences matches {0..1} matches { -- Mothers identifier
+			ELEMENT[at0.0.7] occurrences matches {0..1} matches { -- Mothers identifier
 				value matches {
 					IDENTIFIER matches {*}
 				}
 			}
-			ELEMENT[at0..8] occurrences matches {0..1} matches { -- Mothers family name
+			ELEMENT[at0.0.8] occurrences matches {0..1} matches { -- Mothers family name
 				value matches {
 					PLAIN_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..9] occurrences matches {0..1} matches { -- Fathers name
+			ELEMENT[at0.0.9] occurrences matches {0..1} matches { -- Fathers name
 				value matches {
 					PLAIN_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..10] occurrences matches {0..1} matches { -- Spouse name
+			ELEMENT[at0.0.10] occurrences matches {0..1} matches { -- Spouse name
 				value matches {
 					PLAIN_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..11] occurrences matches {0..1} matches { -- Marital status
+			ELEMENT[at0.0.11] occurrences matches {0..1} matches { -- Marital status
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..12] occurrences matches {0..*} matches { -- Race
+			ELEMENT[at0.0.12] occurrences matches {0..*} matches { -- Race
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..13] occurrences matches {0..*} matches { -- Ethnicity
+			ELEMENT[at0.0.13] occurrences matches {0..*} matches { -- Ethnicity
 				value matches {
 					TEXT matches {*}
 				}
 			}
-				ELEMENT[at0..14] occurrences matches {1} matches { -- Value
+				ELEMENT[at0.0.14] occurrences matches {1} matches { -- Value
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..15] occurrences matches {0..1} matches { -- Date range
+				ELEMENT[at0.0.15] occurrences matches {0..1} matches { -- Date range
 					value matches {
 						INTERVAL_VALUE<DATE> matches {*}
 					}
 				}
-			CLUSTER[at0..16] occurrences matches {0..*} matches { -- Citizenship
+			CLUSTER[at0.0.16] occurrences matches {0..*} matches { -- Citizenship
 			item matches {
-				ELEMENT[at0..17] occurrences matches {1} matches { -- Value
+				ELEMENT[at0.0.17] occurrences matches {1} matches { -- Value
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..18] occurrences matches {0..1} matches { -- Date range
+				ELEMENT[at0.0.18] occurrences matches {0..1} matches { -- Date range
 					value matches {
 						INTERVAL_VALUE<DATE> matches {*}
 					}
 				}
 			}}
-			CLUSTER[at0..19] occurrences matches {0..*} matches { -- Residency
+			CLUSTER[at0.0.19] occurrences matches {0..*} matches { -- Residency
 			item matches {
-				ELEMENT[at0..20] occurrences matches {1} matches { -- Value
+				ELEMENT[at0.0.20] occurrences matches {1} matches { -- Value
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..21] occurrences matches {0..1} matches { -- Datetime range
+				ELEMENT[at0.0.21] occurrences matches {0..1} matches { -- Datetime range
 					value matches {
 						INTERVAL_VALUE<DATE> matches {*}
 					}
 				}
 			}}
-			ELEMENT[at0..22] occurrences matches {0..1} matches { -- Religion
+			ELEMENT[at0.0.22] occurrences matches {0..1} matches { -- Religion
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..23] occurrences matches {0..1} matches { -- Organ donor type
+			ELEMENT[at0.0.23] occurrences matches {0..1} matches { -- Organ donor type
 				value matches {
 					CODED_TEXT matches {*}
 				}
 			}
-			CLUSTER[at0..24] occurrences matches {0..1} matches { -- Birth data
+			CLUSTER[at0.0.24] occurrences matches {0..1} matches { -- Birth data
 			item matches {
-				CLUSTER[at0..25] occurrences matches {0..1} matches { -- Birth datetime
+				CLUSTER[at0.0.25] occurrences matches {0..1} matches { -- Birth datetime
 				item matches {
-					ELEMENT[at0..26] occurrences matches {1} matches { -- Value
+					ELEMENT[at0.0.26] occurrences matches {1} matches { -- Value
 						value matches {
 							DATE_TIME matches {*}
 						}
 					}
-					ELEMENT[at0..27] occurrences matches {0..*} matches { -- Accuracy
+					ELEMENT[at0.0.27] occurrences matches {0..*} matches { -- Accuracy
 						value matches {
 							CODED_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0..28] occurrences matches {0..1} matches { -- Followup required
+					ELEMENT[at0.0.28] occurrences matches {0..1} matches { -- Followup required
 						value matches {
 							CODED_TEXT matches {*}
 						}
 					}
 				}}
-				CLUSTER[at0..29] occurrences matches {0..1} matches { -- Age
+				CLUSTER[at0.0.29] occurrences matches {0..1} matches { -- Age
 				item matches {
-					ELEMENT[at0..30] occurrences matches {1} matches { -- Value**
+					ELEMENT[at0.0.30] occurrences matches {1} matches { -- Value**
 						value matches {
 							DURATION matches {*}
 						}
 					}
-					ELEMENT[at0..31] occurrences matches {0..*} matches { -- Accuracy
+					ELEMENT[at0.0.31] occurrences matches {0..*} matches { -- Accuracy
 						value matches {
 							CODED_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0..32] occurrences matches {0..1} matches { -- Age group**
+					ELEMENT[at0.0.32] occurrences matches {0..1} matches { -- Age group**
 						value matches {
 							CODED_TEXT matches {*}
 						}
 					}
 				}}
 				use_archetype CLUSTER [CIMI-CORE-CLUSTER.address.v2] -- Birth address
-				ELEMENT[at0..33] occurrences matches {0..1} matches { -- Multiple birth indicator
+				ELEMENT[at0.0.33] occurrences matches {0..1} matches { -- Multiple birth indicator
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..34] occurrences matches {0..1} matches { -- Birth plurality
+				ELEMENT[at0.0.34] occurrences matches {0..1} matches { -- Birth plurality
 					value matches {
 						COUNT matches {*}
 					}
 				}
-				ELEMENT[at0..35] occurrences matches {0..1} matches { -- Birth order
+				ELEMENT[at0.0.35] occurrences matches {0..1} matches { -- Birth order
 					value matches {
 						COUNT matches {*}
 					}
 				}
-				ELEMENT[at0..36] occurrences matches {0..1} matches { -- Birth certificate number
+				ELEMENT[at0.0.36] occurrences matches {0..1} matches { -- Birth certificate number
 					value matches {
 						PLAIN_TEXT matches {*}
 					}
 				}
 			}}
-			CLUSTER[at0..37] occurrences matches {0..1} matches { -- Death data
+			CLUSTER[at0.0.37] occurrences matches {0..1} matches { -- Death data
 			item matches {
-				ELEMENT[at0..38] occurrences matches {0..1} matches { -- Deceased indicator
+				ELEMENT[at0.0.38] occurrences matches {0..1} matches { -- Deceased indicator
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
-				CLUSTER[at0..39] occurrences matches {0..1} matches { -- Death datetime
+				CLUSTER[at0.0.39] occurrences matches {0..1} matches { -- Death datetime
 				item matches {
-					ELEMENT[at0..40] occurrences matches {1} matches { -- Value
+					ELEMENT[at0.0.40] occurrences matches {1} matches { -- Value
 						value matches {
 							DATE_TIME matches {*}
 						}
 					}
-					ELEMENT[at0..41] occurrences matches {0..1} matches { -- Accuracy
+					ELEMENT[at0.0.41] occurrences matches {0..1} matches { -- Accuracy
 						value matches {
 							CODED_TEXT matches {*}
 						}
 					}
 				}}
-				ELEMENT[at0..42] occurrences matches {0..1} matches { -- Age at death**
+				ELEMENT[at0.0.42] occurrences matches {0..1} matches { -- Age at death**
 					value matches {
 						DURATION matches {*}
 					}
 				}
-				ELEMENT[at0..43] occurrences matches {0..1} matches { -- Death information provider
+				ELEMENT[at0.0.43] occurrences matches {0..1} matches { -- Death information provider
 					value matches {
 						IDENTIFIER matches {*}
 					}
 				}
-				ELEMENT[at0..44] occurrences matches {0..1} matches { -- Death notification source
+				ELEMENT[at0.0.44] occurrences matches {0..1} matches { -- Death notification source
 					value matches {
 						TEXT matches {*}
 					}
 				}
 				use_archetype CLUSTER [CIMI-CORE-CLUSTER.address.v2] -- Death address
-				ELEMENT[at0..45] occurrences matches {0..1} matches { -- Death certificate number
+				ELEMENT[at0.0.45] occurrences matches {0..1} matches { -- Death certificate number
 					value matches {
 						PLAIN_TEXT matches {*}
 					}
 				}
 			}}
-			CLUSTER[at0..46] occurrences matches {0..*} matches { -- Biometric data
+			CLUSTER[at0.0.46] occurrences matches {0..*} matches { -- Biometric data
 			item matches {
-				ELEMENT[at0..47] occurrences matches {0..1} matches { -- Biometric type
+				ELEMENT[at0.0.47] occurrences matches {0..1} matches { -- Biometric type
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..48] occurrences matches {0..1} matches { -- Biometric data template
+				ELEMENT[at0.0.48] occurrences matches {0..1} matches { -- Biometric data template
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..49] occurrences matches {0..1} matches { -- Biometric quality
+				ELEMENT[at0.0.49] occurrences matches {0..1} matches { -- Biometric quality
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..50] occurrences matches {0..1} matches { -- Biometric creating authority
+				ELEMENT[at0.0.50] occurrences matches {0..1} matches { -- Biometric creating authority
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..51] occurrences matches {0..*} matches { -- Location of biometric identifier
+				ELEMENT[at0.0.51] occurrences matches {0..*} matches { -- Location of biometric identifier
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..52] occurrences matches {0..1} matches { -- Biometric schema
+				ELEMENT[at0.0.52] occurrences matches {0..1} matches { -- Biometric schema
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..53] occurrences matches {0..1} matches { -- Biometric device identification
+				ELEMENT[at0.0.53] occurrences matches {0..1} matches { -- Biometric device identification
 					value matches {
 						IDENTIFIER matches {*}
 					}
 				}
-				ELEMENT[at0..54] occurrences matches {0..1} matches { -- Biometric version
+				ELEMENT[at0.0.54] occurrences matches {0..1} matches { -- Biometric version
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..55] occurrences matches {0..1} matches { -- Biometric creation date
+				ELEMENT[at0.0.55] occurrences matches {0..1} matches { -- Biometric creation date
 					value matches {
 						DATE matches {*}
 					}
 				}
 			}}
-			CLUSTER[at0..56] occurrences matches {0..*} matches { -- Language
+			CLUSTER[at0.0.56] occurrences matches {0..*} matches { -- Language
 			item matches {
-				ELEMENT[at0..57] occurrences matches {1} matches { -- Value
+				ELEMENT[at0.0.57] occurrences matches {1} matches { -- Value
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..58] occurrences matches {0..1} matches { -- Mode
+				ELEMENT[at0.0.58] occurrences matches {0..1} matches { -- Mode
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..59] occurrences matches {0..1} matches { -- Proficiency
+				ELEMENT[at0.0.59] occurrences matches {0..1} matches { -- Proficiency
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..60] occurrences matches {0..1} matches { -- Translator required
+				ELEMENT[at0.0.60] occurrences matches {0..1} matches { -- Translator required
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..61] occurrences matches {0..1} matches { -- Preference indicator
+				ELEMENT[at0.0.61] occurrences matches {0..1} matches { -- Preference indicator
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
 			}}
-			ELEMENT[at0..62] occurrences matches {0..1} matches { -- Translator required
+			ELEMENT[at0.0.62] occurrences matches {0..1} matches { -- Translator required
 				value matches {
 					CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..63] occurrences matches {0..1} matches { -- Education level
+			ELEMENT[at0.0.63] occurrences matches {0..1} matches { -- Education level
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..64] occurrences matches {0..*} matches { -- Qualification
+			ELEMENT[at0.0.64] occurrences matches {0..*} matches { -- Qualification
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..65] occurrences matches {0..*} matches { -- Disability
+			ELEMENT[at0.0.65] occurrences matches {0..*} matches { -- Disability
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			CLUSTER[at0..66] occurrences matches {0..*} matches { -- Occupation
+			CLUSTER[at0.0.66] occurrences matches {0..*} matches { -- Occupation
 			item matches {
-				ELEMENT[at0..67] occurrences matches {1} matches { -- Value
+				ELEMENT[at0.0.67] occurrences matches {1} matches { -- Value
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..68] occurrences matches {0..*} matches { -- Qualifier
+				ELEMENT[at0.0.68] occurrences matches {0..*} matches { -- Qualifier
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..69] occurrences matches {0..1} matches { -- Years
+				ELEMENT[at0.0.69] occurrences matches {0..1} matches { -- Years
 					value matches {
 						DURATION matches {*}
 					}
 				}
 			}}
-			CLUSTER[at0..70] occurrences matches {0..*} matches { -- Industry
+			CLUSTER[at0.0.70] occurrences matches {0..*} matches { -- Industry
 			item matches {
-				ELEMENT[at0..71] occurrences matches {1} matches { -- Value
+				ELEMENT[at0.0.71] occurrences matches {1} matches { -- Value
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..72] occurrences matches {0..*} matches { -- Qualifier
+				ELEMENT[at0.0.72] occurrences matches {0..*} matches { -- Qualifier
 					value matches {
 						TEXT matches {*}
 					}
 				}
 			}}
-			ELEMENT[at0..73] occurrences matches {0..1} matches { -- Student category
+			ELEMENT[at0.0.73] occurrences matches {0..1} matches { -- Student category
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			CLUSTER[at0..74] occurrences matches {0..*} matches { -- Advance directive
+			CLUSTER[at0.0.74] occurrences matches {0..*} matches { -- Advance directive
 			item matches {
-				ELEMENT[at0..75] occurrences matches {0..1} matches { -- Category
+				ELEMENT[at0.0.75] occurrences matches {0..1} matches { -- Category
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..76] occurrences matches {0..1} matches { -- Comments
+				ELEMENT[at0.0.76] occurrences matches {0..1} matches { -- Comments
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..77] occurrences matches {0..1} matches { -- Datetime range
+				ELEMENT[at0.0.77] occurrences matches {0..1} matches { -- Datetime range
 					value matches {
 						INTERVAL_VALUE<DATE> matches {*}
 					}
 				}
-				ELEMENT[at0..78] occurrences matches {0..1} matches { -- Image
+				ELEMENT[at0.0.78] occurrences matches {0..1} matches { -- Image
 					value matches {
 						MULTIMEDIA matches {*}
 					}
 				}
-				ELEMENT[at0..79] occurrences matches {0..1} matches { -- Paper location
+				ELEMENT[at0.0.79] occurrences matches {0..1} matches { -- Paper location
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..80] occurrences matches {0..1} matches { -- Status
+				ELEMENT[at0.0.80] occurrences matches {0..1} matches { -- Status
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
 			}}
-			CLUSTER[at0..81] occurrences matches {0..*} matches { -- Entitlement
+			CLUSTER[at0.0.81] occurrences matches {0..*} matches { -- Entitlement
 			item matches {
-				ELEMENT[at0..82] occurrences matches {0..1} matches { -- Number
+				ELEMENT[at0.0.82] occurrences matches {0..1} matches { -- Number
 					value matches {
 						IDENTIFIER matches {*}
 					}
 				}
-				ELEMENT[at0..83] occurrences matches {0..1} matches { -- Type
+				ELEMENT[at0.0.83] occurrences matches {0..1} matches { -- Type
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..84] occurrences matches {0..1} matches { -- Datetime range
+				ELEMENT[at0.0.84] occurrences matches {0..1} matches { -- Datetime range
 					value matches {
 						INTERVAL_VALUE<DATE> matches {*}
 					}
 				}
 			}}
-			ELEMENT[at0..85] occurrences matches {0..*} matches { -- Identification comment
+			ELEMENT[at0.0.85] occurrences matches {0..*} matches { -- Identification comment
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..86] occurrences matches {0..1} matches { -- Description
+			ELEMENT[at0.0.86] occurrences matches {0..1} matches { -- Description
 				value matches {
 					PLAIN_TEXT matches {*}
 				}
@@ -428,9 +428,9 @@ definition
 			use_archetype PARTY_RELATIONSHIP [CIMI-CORE-PARTY_RELATIONSHIP.healthcare_provider_relationship.v1] -- Healthcare provider
 		}
 		link matches {
-			LINK[at0..87] occurrences matches {0..*} -- Related observations
-			LINK[at0..88] occurrences matches {0..1} -- Birth certificate
-			LINK[at0..89] occurrences matches {0..1} -- Death certificate
+			LINK[at0.0.87] occurrences matches {0..*} -- Related observations
+			LINK[at0.0.88] occurrences matches {0..1} -- Birth certificate
+			LINK[at0.0.89] occurrences matches {0..1} -- Death certificate
 		}
 	}
 
@@ -441,359 +441,359 @@ ontology
 				text = <"Person">
 				description = <"Person">
 			>
-			["at0..1"] = <
+			["at0.0.1"] = <
 				text = <"Identifier">
 				description = <"Identifier">
 			>
-			["at0..2"] = <
+			["at0.0.2"] = <
 				text = <"Use">
 				description = <"Use">
 			>
-			["at0..3"] = <
+			["at0.0.3"] = <
 				text = <"Datetime range">
 				description = <"Datetime range">
 			>
-			["at0..4"] = <
+			["at0.0.4"] = <
 				text = <"Contact person">
 				description = <"Contact person">
 			>
-			["at0..5"] = <
+			["at0.0.5"] = <
 				text = <"Type">
 				description = <"Type">
 			>
-			["at0..6"] = <
+			["at0.0.6"] = <
 				text = <"Administrative gender">
 				description = <"Administrative gender">
 			>
-			["at0..7"] = <
+			["at0.0.7"] = <
 				text = <"Mothers identifier">
 				description = <"Mothers identifier">
 			>
-			["at0..8"] = <
+			["at0.0.8"] = <
 				text = <"Mothers family name">
 				description = <"Mothers family name">
 			>
-			["at0..9"] = <
+			["at0.0.9"] = <
 				text = <"Fathers name">
 				description = <"Fathers name">
 			>
-			["at0..10"] = <
+			["at0.0.10"] = <
 				text = <"Spouse name">
 				description = <"Spouse name">
 			>
-			["at0..11"] = <
+			["at0.0.11"] = <
 				text = <"Marital status">
 				description = <"Marital status">
 			>
-			["at0..12"] = <
+			["at0.0.12"] = <
 				text = <"Race">
 				description = <"Race">
 			>
-			["at0..13"] = <
+			["at0.0.13"] = <
 				text = <"Ethnicity">
 				description = <"Ethnicity">
 			>
-			["at0..14"] = <
+			["at0.0.14"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0..15"] = <
+			["at0.0.15"] = <
 				text = <"Date range">
 				description = <"Date range">
 			>
-			["at0..16"] = <
+			["at0.0.16"] = <
 				text = <"Citizenship">
 				description = <"Citizenship">
 			>
-			["at0..17"] = <
+			["at0.0.17"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0..18"] = <
+			["at0.0.18"] = <
 				text = <"Date range">
 				description = <"Date range">
 			>
-			["at0..19"] = <
+			["at0.0.19"] = <
 				text = <"Residency">
 				description = <"Residency">
 			>
-			["at0..20"] = <
+			["at0.0.20"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0..21"] = <
+			["at0.0.21"] = <
 				text = <"Datetime range">
 				description = <"Datetime range">
 			>
-			["at0..22"] = <
+			["at0.0.22"] = <
 				text = <"Religion">
 				description = <"Religion">
 			>
-			["at0..23"] = <
+			["at0.0.23"] = <
 				text = <"Organ donor type">
 				description = <"Organ donor type">
 			>
-			["at0..24"] = <
+			["at0.0.24"] = <
 				text = <"Birth data">
 				description = <"Birth data">
 			>
-			["at0..25"] = <
+			["at0.0.25"] = <
 				text = <"Birth datetime">
 				description = <"Birth datetime">
 			>
-			["at0..26"] = <
+			["at0.0.26"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0..27"] = <
+			["at0.0.27"] = <
 				text = <"Accuracy">
 				description = <"Accuracy">
 			>
-			["at0..28"] = <
+			["at0.0.28"] = <
 				text = <"Followup required">
 				description = <"Followup required">
 			>
-			["at0..29"] = <
+			["at0.0.29"] = <
 				text = <"Age">
 				description = <"Age">
 			>
-			["at0..30"] = <
+			["at0.0.30"] = <
 				text = <"Value**">
 				description = <"Value**">
 			>
-			["at0..31"] = <
+			["at0.0.31"] = <
 				text = <"Accuracy">
 				description = <"Accuracy">
 			>
-			["at0..32"] = <
+			["at0.0.32"] = <
 				text = <"Age group**">
 				description = <"Age group**">
 			>
-			["at0..33"] = <
+			["at0.0.33"] = <
 				text = <"Multiple birth indicator">
 				description = <"Multiple birth indicator">
 			>
-			["at0..34"] = <
+			["at0.0.34"] = <
 				text = <"Birth plurality">
 				description = <"Birth plurality">
 			>
-			["at0..35"] = <
+			["at0.0.35"] = <
 				text = <"Birth order">
 				description = <"Birth order">
 			>
-			["at0..36"] = <
+			["at0.0.36"] = <
 				text = <"Birth certificate number">
 				description = <"Birth certificate number">
 			>
-			["at0..37"] = <
+			["at0.0.37"] = <
 				text = <"Death data">
 				description = <"Death data">
 			>
-			["at0..38"] = <
+			["at0.0.38"] = <
 				text = <"Deceased indicator">
 				description = <"Deceased indicator">
 			>
-			["at0..39"] = <
+			["at0.0.39"] = <
 				text = <"Death datetime">
 				description = <"Death datetime">
 			>
-			["at0..40"] = <
+			["at0.0.40"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0..41"] = <
+			["at0.0.41"] = <
 				text = <"Accuracy">
 				description = <"Accuracy">
 			>
-			["at0..42"] = <
+			["at0.0.42"] = <
 				text = <"Age at death**">
 				description = <"Age at death**">
 			>
-			["at0..43"] = <
+			["at0.0.43"] = <
 				text = <"Death information provider">
 				description = <"Death information provider">
 			>
-			["at0..44"] = <
+			["at0.0.44"] = <
 				text = <"Death notification source">
 				description = <"Death notification source">
 			>
-			["at0..45"] = <
+			["at0.0.45"] = <
 				text = <"Death certificate number">
 				description = <"Death certificate number">
 			>
-			["at0..46"] = <
+			["at0.0.46"] = <
 				text = <"Biometric data">
 				description = <"Biometric data">
 			>
-			["at0..47"] = <
+			["at0.0.47"] = <
 				text = <"Biometric type">
 				description = <"Biometric type">
 			>
-			["at0..48"] = <
+			["at0.0.48"] = <
 				text = <"Biometric data template">
 				description = <"Biometric data template">
 			>
-			["at0..49"] = <
+			["at0.0.49"] = <
 				text = <"Biometric quality">
 				description = <"Biometric quality">
 			>
-			["at0..50"] = <
+			["at0.0.50"] = <
 				text = <"Biometric creating authority">
 				description = <"Biometric creating authority">
 			>
-			["at0..51"] = <
+			["at0.0.51"] = <
 				text = <"Location of biometric identifier">
 				description = <"Location of biometric identifier">
 			>
-			["at0..52"] = <
+			["at0.0.52"] = <
 				text = <"Biometric schema">
 				description = <"Biometric schema">
 			>
-			["at0..53"] = <
+			["at0.0.53"] = <
 				text = <"Biometric device identification">
 				description = <"Biometric device identification">
 			>
-			["at0..54"] = <
+			["at0.0.54"] = <
 				text = <"Biometric version">
 				description = <"Biometric version">
 			>
-			["at0..55"] = <
+			["at0.0.55"] = <
 				text = <"Biometric creation date">
 				description = <"Biometric creation date">
 			>
-			["at0..56"] = <
+			["at0.0.56"] = <
 				text = <"Language">
 				description = <"Language">
 			>
-			["at0..57"] = <
+			["at0.0.57"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0..58"] = <
+			["at0.0.58"] = <
 				text = <"Mode">
 				description = <"Mode">
 			>
-			["at0..59"] = <
+			["at0.0.59"] = <
 				text = <"Proficiency">
 				description = <"Proficiency">
 			>
-			["at0..60"] = <
+			["at0.0.60"] = <
 				text = <"Translator required">
 				description = <"Translator required">
 			>
-			["at0..61"] = <
+			["at0.0.61"] = <
 				text = <"Preference indicator">
 				description = <"Preference indicator">
 			>
-			["at0..62"] = <
+			["at0.0.62"] = <
 				text = <"Translator required">
 				description = <"Translator required">
 			>
-			["at0..63"] = <
+			["at0.0.63"] = <
 				text = <"Education level">
 				description = <"Education level">
 			>
-			["at0..64"] = <
+			["at0.0.64"] = <
 				text = <"Qualification">
 				description = <"Qualification">
 			>
-			["at0..65"] = <
+			["at0.0.65"] = <
 				text = <"Disability">
 				description = <"Disability">
 			>
-			["at0..66"] = <
+			["at0.0.66"] = <
 				text = <"Occupation">
 				description = <"Occupation">
 			>
-			["at0..67"] = <
+			["at0.0.67"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0..68"] = <
+			["at0.0.68"] = <
 				text = <"Qualifier">
 				description = <"Qualifier">
 			>
-			["at0..69"] = <
+			["at0.0.69"] = <
 				text = <"Years">
 				description = <"Years">
 			>
-			["at0..70"] = <
+			["at0.0.70"] = <
 				text = <"Industry">
 				description = <"Industry">
 			>
-			["at0..71"] = <
+			["at0.0.71"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0..72"] = <
+			["at0.0.72"] = <
 				text = <"Qualifier">
 				description = <"Qualifier">
 			>
-			["at0..73"] = <
+			["at0.0.73"] = <
 				text = <"Student category">
 				description = <"Student category">
 			>
-			["at0..74"] = <
+			["at0.0.74"] = <
 				text = <"Advance directive">
 				description = <"Advance directive">
 			>
-			["at0..75"] = <
+			["at0.0.75"] = <
 				text = <"Category">
 				description = <"Category">
 			>
-			["at0..76"] = <
+			["at0.0.76"] = <
 				text = <"Comments">
 				description = <"Comments">
 			>
-			["at0..77"] = <
+			["at0.0.77"] = <
 				text = <"Datetime range">
 				description = <"Datetime range">
 			>
-			["at0..78"] = <
+			["at0.0.78"] = <
 				text = <"Image">
 				description = <"Image">
 			>
-			["at0..79"] = <
+			["at0.0.79"] = <
 				text = <"Paper location">
 				description = <"Paper location">
 			>
-			["at0..80"] = <
+			["at0.0.80"] = <
 				text = <"Status">
 				description = <"Status">
 			>
-			["at0..81"] = <
+			["at0.0.81"] = <
 				text = <"Entitlement">
 				description = <"Entitlement">
 			>
-			["at0..82"] = <
+			["at0.0.82"] = <
 				text = <"Number">
 				description = <"Number">
 			>
-			["at0..83"] = <
+			["at0.0.83"] = <
 				text = <"Type">
 				description = <"Type">
 			>
-			["at0..84"] = <
+			["at0.0.84"] = <
 				text = <"Datetime range">
 				description = <"Datetime range">
 			>
-			["at0..85"] = <
+			["at0.0.85"] = <
 				text = <"Identification comment">
 				description = <"Identification comment">
 			>
-			["at0..86"] = <
+			["at0.0.86"] = <
 				text = <"Description">
 				description = <"Description">
 			>
-			["at0..87"] = <
+			["at0.0.87"] = <
 				text = <"Related observations">
 				description = <"Related observations">
 			>
-			["at0..88"] = <
+			["at0.0.88"] = <
 				text = <"Birth certificate">
 				description = <"Birth certificate">
 			>
-			["at0..89"] = <
+			["at0.0.89"] = <
 				text = <"Death certificate">
 				description = <"Death certificate">
 			>
@@ -802,95 +802,95 @@ ontology
 	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
-				["at0..1"] = <[SNOMED-CT::138875005]>
-				["at0..2"] = <[SNOMED-CT::138875005]>
-				["at0..3"] = <[SNOMED-CT::138875005]>
-				["at0..4"] = <[SNOMED-CT::138875005]>
-				["at0..5"] = <[SNOMED-CT::138875005]>
-				["at0..6"] = <[SNOMED-CT::138875005]>
-				["at0..7"] = <[SNOMED-CT::138875005]>
-				["at0..8"] = <[SNOMED-CT::138875005]>
-				["at0..9"] = <[SNOMED-CT::138875005]>
-				["at0..10"] = <[SNOMED-CT::138875005]>
-				["at0..11"] = <[SNOMED-CT::138875005]>
-				["at0..12"] = <[SNOMED-CT::138875005]>
-				["at0..13"] = <[SNOMED-CT::138875005]>
-				["at0..14"] = <[SNOMED-CT::138875005]>
-				["at0..15"] = <[SNOMED-CT::138875005]>
-				["at0..16"] = <[SNOMED-CT::138875005]>
-				["at0..17"] = <[SNOMED-CT::138875005]>
-				["at0..18"] = <[SNOMED-CT::138875005]>
-				["at0..19"] = <[SNOMED-CT::138875005]>
-				["at0..20"] = <[SNOMED-CT::138875005]>
-				["at0..21"] = <[SNOMED-CT::138875005]>
-				["at0..22"] = <[SNOMED-CT::138875005]>
-				["at0..23"] = <[SNOMED-CT::138875005]>
-				["at0..24"] = <[SNOMED-CT::138875005]>
-				["at0..25"] = <[SNOMED-CT::138875005]>
-				["at0..26"] = <[SNOMED-CT::138875005]>
-				["at0..27"] = <[SNOMED-CT::138875005]>
-				["at0..28"] = <[SNOMED-CT::138875005]>
-				["at0..29"] = <[SNOMED-CT::138875005]>
-				["at0..30"] = <[SNOMED-CT::138875005]>
-				["at0..31"] = <[SNOMED-CT::138875005]>
-				["at0..32"] = <[SNOMED-CT::138875005]>
-				["at0..33"] = <[SNOMED-CT::138875005]>
-				["at0..34"] = <[SNOMED-CT::138875005]>
-				["at0..35"] = <[SNOMED-CT::138875005]>
-				["at0..36"] = <[SNOMED-CT::138875005]>
-				["at0..37"] = <[SNOMED-CT::138875005]>
-				["at0..38"] = <[SNOMED-CT::138875005]>
-				["at0..39"] = <[SNOMED-CT::138875005]>
-				["at0..40"] = <[SNOMED-CT::138875005]>
-				["at0..41"] = <[SNOMED-CT::138875005]>
-				["at0..42"] = <[SNOMED-CT::138875005]>
-				["at0..43"] = <[SNOMED-CT::138875005]>
-				["at0..44"] = <[SNOMED-CT::138875005]>
-				["at0..45"] = <[SNOMED-CT::138875005]>
-				["at0..46"] = <[SNOMED-CT::138875005]>
-				["at0..47"] = <[SNOMED-CT::138875005]>
-				["at0..48"] = <[SNOMED-CT::138875005]>
-				["at0..49"] = <[SNOMED-CT::138875005]>
-				["at0..50"] = <[SNOMED-CT::138875005]>
-				["at0..51"] = <[SNOMED-CT::138875005]>
-				["at0..52"] = <[SNOMED-CT::138875005]>
-				["at0..53"] = <[SNOMED-CT::138875005]>
-				["at0..54"] = <[SNOMED-CT::138875005]>
-				["at0..55"] = <[SNOMED-CT::138875005]>
-				["at0..56"] = <[SNOMED-CT::138875005]>
-				["at0..57"] = <[SNOMED-CT::138875005]>
-				["at0..58"] = <[SNOMED-CT::138875005]>
-				["at0..59"] = <[SNOMED-CT::138875005]>
-				["at0..60"] = <[SNOMED-CT::138875005]>
-				["at0..61"] = <[SNOMED-CT::138875005]>
-				["at0..62"] = <[SNOMED-CT::138875005]>
-				["at0..63"] = <[SNOMED-CT::138875005]>
-				["at0..64"] = <[SNOMED-CT::138875005]>
-				["at0..65"] = <[SNOMED-CT::138875005]>
-				["at0..66"] = <[SNOMED-CT::138875005]>
-				["at0..67"] = <[SNOMED-CT::138875005]>
-				["at0..68"] = <[SNOMED-CT::138875005]>
-				["at0..69"] = <[SNOMED-CT::138875005]>
-				["at0..70"] = <[SNOMED-CT::138875005]>
-				["at0..71"] = <[SNOMED-CT::138875005]>
-				["at0..72"] = <[SNOMED-CT::138875005]>
-				["at0..73"] = <[SNOMED-CT::138875005]>
-				["at0..74"] = <[SNOMED-CT::138875005]>
-				["at0..75"] = <[SNOMED-CT::138875005]>
-				["at0..76"] = <[SNOMED-CT::138875005]>
-				["at0..77"] = <[SNOMED-CT::138875005]>
-				["at0..78"] = <[SNOMED-CT::138875005]>
-				["at0..79"] = <[SNOMED-CT::138875005]>
-				["at0..80"] = <[SNOMED-CT::138875005]>
-				["at0..81"] = <[SNOMED-CT::138875005]>
-				["at0..82"] = <[SNOMED-CT::138875005]>
-				["at0..83"] = <[SNOMED-CT::138875005]>
-				["at0..84"] = <[SNOMED-CT::138875005]>
-				["at0..85"] = <[SNOMED-CT::138875005]>
-				["at0..86"] = <[SNOMED-CT::138875005]>
-				["at0..87"] = <[SNOMED-CT::138875005]>
-				["at0..88"] = <[SNOMED-CT::138875005]>
-				["at0..89"] = <[SNOMED-CT::138875005]>
+				["at0.0.1"] = <[SNOMED-CT::138875005]>
+				["at0.0.2"] = <[SNOMED-CT::138875005]>
+				["at0.0.3"] = <[SNOMED-CT::138875005]>
+				["at0.0.4"] = <[SNOMED-CT::138875005]>
+				["at0.0.5"] = <[SNOMED-CT::138875005]>
+				["at0.0.6"] = <[SNOMED-CT::138875005]>
+				["at0.0.7"] = <[SNOMED-CT::138875005]>
+				["at0.0.8"] = <[SNOMED-CT::138875005]>
+				["at0.0.9"] = <[SNOMED-CT::138875005]>
+				["at0.0.10"] = <[SNOMED-CT::138875005]>
+				["at0.0.11"] = <[SNOMED-CT::138875005]>
+				["at0.0.12"] = <[SNOMED-CT::138875005]>
+				["at0.0.13"] = <[SNOMED-CT::138875005]>
+				["at0.0.14"] = <[SNOMED-CT::138875005]>
+				["at0.0.15"] = <[SNOMED-CT::138875005]>
+				["at0.0.16"] = <[SNOMED-CT::138875005]>
+				["at0.0.17"] = <[SNOMED-CT::138875005]>
+				["at0.0.18"] = <[SNOMED-CT::138875005]>
+				["at0.0.19"] = <[SNOMED-CT::138875005]>
+				["at0.0.20"] = <[SNOMED-CT::138875005]>
+				["at0.0.21"] = <[SNOMED-CT::138875005]>
+				["at0.0.22"] = <[SNOMED-CT::138875005]>
+				["at0.0.23"] = <[SNOMED-CT::138875005]>
+				["at0.0.24"] = <[SNOMED-CT::138875005]>
+				["at0.0.25"] = <[SNOMED-CT::138875005]>
+				["at0.0.26"] = <[SNOMED-CT::138875005]>
+				["at0.0.27"] = <[SNOMED-CT::138875005]>
+				["at0.0.28"] = <[SNOMED-CT::138875005]>
+				["at0.0.29"] = <[SNOMED-CT::138875005]>
+				["at0.0.30"] = <[SNOMED-CT::138875005]>
+				["at0.0.31"] = <[SNOMED-CT::138875005]>
+				["at0.0.32"] = <[SNOMED-CT::138875005]>
+				["at0.0.33"] = <[SNOMED-CT::138875005]>
+				["at0.0.34"] = <[SNOMED-CT::138875005]>
+				["at0.0.35"] = <[SNOMED-CT::138875005]>
+				["at0.0.36"] = <[SNOMED-CT::138875005]>
+				["at0.0.37"] = <[SNOMED-CT::138875005]>
+				["at0.0.38"] = <[SNOMED-CT::138875005]>
+				["at0.0.39"] = <[SNOMED-CT::138875005]>
+				["at0.0.40"] = <[SNOMED-CT::138875005]>
+				["at0.0.41"] = <[SNOMED-CT::138875005]>
+				["at0.0.42"] = <[SNOMED-CT::138875005]>
+				["at0.0.43"] = <[SNOMED-CT::138875005]>
+				["at0.0.44"] = <[SNOMED-CT::138875005]>
+				["at0.0.45"] = <[SNOMED-CT::138875005]>
+				["at0.0.46"] = <[SNOMED-CT::138875005]>
+				["at0.0.47"] = <[SNOMED-CT::138875005]>
+				["at0.0.48"] = <[SNOMED-CT::138875005]>
+				["at0.0.49"] = <[SNOMED-CT::138875005]>
+				["at0.0.50"] = <[SNOMED-CT::138875005]>
+				["at0.0.51"] = <[SNOMED-CT::138875005]>
+				["at0.0.52"] = <[SNOMED-CT::138875005]>
+				["at0.0.53"] = <[SNOMED-CT::138875005]>
+				["at0.0.54"] = <[SNOMED-CT::138875005]>
+				["at0.0.55"] = <[SNOMED-CT::138875005]>
+				["at0.0.56"] = <[SNOMED-CT::138875005]>
+				["at0.0.57"] = <[SNOMED-CT::138875005]>
+				["at0.0.58"] = <[SNOMED-CT::138875005]>
+				["at0.0.59"] = <[SNOMED-CT::138875005]>
+				["at0.0.60"] = <[SNOMED-CT::138875005]>
+				["at0.0.61"] = <[SNOMED-CT::138875005]>
+				["at0.0.62"] = <[SNOMED-CT::138875005]>
+				["at0.0.63"] = <[SNOMED-CT::138875005]>
+				["at0.0.64"] = <[SNOMED-CT::138875005]>
+				["at0.0.65"] = <[SNOMED-CT::138875005]>
+				["at0.0.66"] = <[SNOMED-CT::138875005]>
+				["at0.0.67"] = <[SNOMED-CT::138875005]>
+				["at0.0.68"] = <[SNOMED-CT::138875005]>
+				["at0.0.69"] = <[SNOMED-CT::138875005]>
+				["at0.0.70"] = <[SNOMED-CT::138875005]>
+				["at0.0.71"] = <[SNOMED-CT::138875005]>
+				["at0.0.72"] = <[SNOMED-CT::138875005]>
+				["at0.0.73"] = <[SNOMED-CT::138875005]>
+				["at0.0.74"] = <[SNOMED-CT::138875005]>
+				["at0.0.75"] = <[SNOMED-CT::138875005]>
+				["at0.0.76"] = <[SNOMED-CT::138875005]>
+				["at0.0.77"] = <[SNOMED-CT::138875005]>
+				["at0.0.78"] = <[SNOMED-CT::138875005]>
+				["at0.0.79"] = <[SNOMED-CT::138875005]>
+				["at0.0.80"] = <[SNOMED-CT::138875005]>
+				["at0.0.81"] = <[SNOMED-CT::138875005]>
+				["at0.0.82"] = <[SNOMED-CT::138875005]>
+				["at0.0.83"] = <[SNOMED-CT::138875005]>
+				["at0.0.84"] = <[SNOMED-CT::138875005]>
+				["at0.0.85"] = <[SNOMED-CT::138875005]>
+				["at0.0.86"] = <[SNOMED-CT::138875005]>
+				["at0.0.87"] = <[SNOMED-CT::138875005]>
+				["at0.0.88"] = <[SNOMED-CT::138875005]>
+				["at0.0.89"] = <[SNOMED-CT::138875005]>
 			>
 		>
 	>

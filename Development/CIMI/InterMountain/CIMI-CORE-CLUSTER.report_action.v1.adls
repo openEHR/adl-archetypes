@@ -1,5 +1,5 @@
-archetype (adl_version=1.5; generated)
-	CIMI-CORE-CLUSTER.report_action.v1
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.report_action.v1.0.0
 
 specialize
 	CIMI-CORE-CLUSTER.action.v1
@@ -11,91 +11,92 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			>
+			purpose = <"???">
+		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[at0000.1] matches { -- Report Action
+	CLUSTER[id1.1] matches {	-- Report Action
 		/item matches {
-			ELEMENT[at0.1] occurrences matches {1} matches { -- Action type
+			ELEMENT[id0.1] occurrences matches {1} matches {	-- Action type
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id0.33] 
 				}
 			}
-			ELEMENT[at0.2] occurrences matches {0..1} matches { -- Report datetime
+			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Report datetime
 				value matches {
-					DATE_TIME matches {*}
+					DATE_TIME[id0.34] 
 				}
 			}
-			ELEMENT[at0.3] occurrences matches {0..1} matches { -- Report datetime range
+			ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Report datetime range
 				value matches {
-					INTERVAL_VALUE<DATE_TIME> matches {*}
+					INTERVAL_VALUE<DATE_TIME>[id0.35] 
 				}
 			}
-			ELEMENT[at0.4] occurrences matches {0..1} matches { -- Report duration
+			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Report duration
 				value matches {
-					DURATION matches {*}
+					DURATION[id0.36] 
 				}
 			}
-			ELEMENT[at0.5] occurrences matches {0..1} matches { -- Report timing offset
+			ELEMENT[id0.5] occurrences matches {0..1} matches {	-- Report timing offset
 				value matches {
-					DURATION matches {*}
+					DURATION[id0.37] 
 				}
 			}
-			ELEMENT[at0.6] occurrences matches {0..1} matches { -- Report timing offset origin
+			ELEMENT[id0.6] occurrences matches {0..1} matches {	-- Report timing offset origin
 				value matches {
-					DATE_TIME matches {*}
+					DATE_TIME[id0.38] 
 				}
 			}
 		}
 		participation matches {
-			PARTICIPATION[at0.7] occurrences matches {0..*} -- Reporter
-			PARTICIPATION[at0.8] occurrences matches {0..1} -- Locationof subject
-			PARTICIPATION[at0.9] occurrences matches {0..1} -- Locationof reporter
+			PARTICIPATION[id0.7] occurrences matches {0..*} 	-- Reporter
+			PARTICIPATION[id0.8] occurrences matches {0..1} 	-- Locationof subject
+			PARTICIPATION[id0.9] occurrences matches {0..1} 	-- Locationof reporter
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Report Action">
 				description = <"Report Action">
 			>
-			["at0.1"] = <
+			["id0.1"] = <
 				text = <"Action type">
 				description = <"Action type">
 			>
-			["at0.2"] = <
+			["id0.2"] = <
 				text = <"Report datetime">
 				description = <"Report datetime">
 			>
-			["at0.3"] = <
+			["id0.3"] = <
 				text = <"Report datetime range">
 				description = <"Report datetime range">
 			>
-			["at0.4"] = <
+			["id0.4"] = <
 				text = <"Report duration">
 				description = <"Report duration">
 			>
-			["at0.5"] = <
+			["id0.5"] = <
 				text = <"Report timing offset">
 				description = <"Report timing offset">
 			>
-			["at0.6"] = <
+			["id0.6"] = <
 				text = <"Report timing offset origin">
 				description = <"Report timing offset origin">
 			>
-			["at0.7"] = <
+			["id0.7"] = <
 				text = <"Reporter">
 				description = <"Reporter">
 			>
-			["at0.8"] = <
+			["id0.8"] = <
 				text = <"Locationof subject">
 				description = <"Locationof subject">
 			>
-			["at0.9"] = <
+			["id0.9"] = <
 				text = <"Locationof reporter">
 				description = <"Locationof reporter">
 			>
@@ -103,17 +104,15 @@ ontology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-				["at0000.1"] = <[SNOMED-CT::308561006]>
-				["at0.1"] = <[SNOMED-CT::308561006]>
-				["at0.2"] = <[SNOMED-CT::399651003]>
-				["at0.3"] = <[SNOMED-CT::399651003]>
-				["at0.4"] = <[SNOMED-CT::364713004]>
-				["at0.5"] = <[SNOMED-CT::364713004]>
-				["at0.6"] = <[SNOMED-CT::364713004]>
-				["at0.7"] = <[SNOMED-CT::48176007]>
-				["at0.8"] = <[SNOMED-CT::308916002]>
-				["at0.9"] = <[SNOMED-CT::308916002]>
-			>
+			["id1.1"] = <http://snomedct.info/id/308561006>
+			["id0.1"] = <http://snomedct.info/id/308561006>
+			["id0.2"] = <http://snomedct.info/id/399651003>
+			["id0.3"] = <http://snomedct.info/id/399651003>
+			["id0.4"] = <http://snomedct.info/id/364713004>
+			["id0.5"] = <http://snomedct.info/id/364713004>
+			["id0.6"] = <http://snomedct.info/id/364713004>
+			["id0.7"] = <http://snomedct.info/id/48176007>
+			["id0.8"] = <http://snomedct.info/id/308916002>
+			["id0.9"] = <http://snomedct.info/id/308916002>
 		>
 	>

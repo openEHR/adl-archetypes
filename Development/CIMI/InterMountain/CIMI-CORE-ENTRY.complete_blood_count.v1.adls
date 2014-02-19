@@ -19,7 +19,7 @@ definition
 	ENTRY[at0000.1.1.1] matches { -- Complete Blood Count
 		data matches {
 			use_archetype CLUSTER [CIMI-CORE-CLUSTER.complete_blood_count_observable.v1] -- Test observable
-			CLUSTER[at0...1] occurrences matches {0..1} matches { -- Test results
+			CLUSTER[at0.0.0.1] occurrences matches {0..1} matches { -- Test results
 			item matches {
 				use_archetype CLUSTER [CIMI-CORE-CLUSTER.complete_blood_count_automated_result_group.v1] -- Complete blood count by automated count
 			}}
@@ -33,7 +33,7 @@ ontology
 				text = <"Complete Blood Count">
 				description = <"Complete Blood Count">
 			>
-			["at0...1"] = <
+			["at0.0.0.1"] = <
 				text = <"Test results REF<CIMI-CORE-CLUSTER.complete_blood_count_result_group>">
 				description = <"Test results REF<CIMI-CORE-CLUSTER.complete_blood_count_result_group>">
 			>

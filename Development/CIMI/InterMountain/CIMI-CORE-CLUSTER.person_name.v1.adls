@@ -18,70 +18,70 @@ description
 definition
 	CLUSTER[at0000.1.1] matches { -- Person name
 		item matches {
-			ELEMENT[at0..1] occurrences matches {0..1} matches { -- Value
+			ELEMENT[at0.0.1] occurrences matches {0..1} matches { -- Value
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..2] occurrences matches {0..1} matches { -- Identifier
+			ELEMENT[at0.0.2] occurrences matches {0..1} matches { -- Identifier
 				value matches {
 					IDENTIFIER matches {*}
 				}
 			}
-			CLUSTER[at0..3] occurrences matches {0..*} matches {-- Part
+			CLUSTER[at0.0.3] occurrences matches {0..*} matches {-- Part
 			item matches {
-				ELEMENT[at0..4] occurrences matches {0..1} matches { -- Part number
+				ELEMENT[at0.0.4] occurrences matches {0..1} matches { -- Part number
 					value matches {
 						COUNT matches {*}
 					}
 				}
-				ELEMENT[at0..5] occurrences matches {0..1} matches { -- Value
+				ELEMENT[at0.0.5] occurrences matches {0..1} matches { -- Value
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..6] occurrences matches {0..1} matches { -- Type
+				ELEMENT[at0.0.6] occurrences matches {0..1} matches { -- Type
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
 			}
 			}
-			CLUSTER[at0..7] occurrences matches {0..*} matches { -- Use
+			CLUSTER[at0.0.7] occurrences matches {0..*} matches { -- Use
 			item matches {
-				ELEMENT[at0..8] occurrences matches {1} matches { -- Value
+				ELEMENT[at0.0.8] occurrences matches {1} matches { -- Value
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..9] occurrences matches {0..1} matches { -- Datetime range
+				ELEMENT[at0.0.9] occurrences matches {0..1} matches { -- Datetime range
 					value matches {
 						DATE_TIME matches {*}
 					}
 				}
-				ELEMENT[at0..10] occurrences matches {0..1} matches { -- Identifier
+				ELEMENT[at0.0.10] occurrences matches {0..1} matches { -- Identifier
 					value matches {
 						IDENTIFIER matches {*}
 					}
 				}
 			}
 			}
-			ELEMENT[at0..11] occurrences matches {0..1} matches { -- Datetime range
+			ELEMENT[at0.0.11] occurrences matches {0..1} matches { -- Datetime range
 				value matches {
 					INTERVAL_VALUE<DATE> matches {*}
 				}
 			}
-			ELEMENT[at0..12] occurrences matches {0..1} matches { -- Usage conditions
+			ELEMENT[at0.0.12] occurrences matches {0..1} matches { -- Usage conditions
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..13] occurrences matches {0..1} matches { -- Status
+			ELEMENT[at0.0.13] occurrences matches {0..1} matches { -- Status
 				value matches {
 					CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..14] occurrences matches {0..1} matches { -- Preferred flag
+			ELEMENT[at0.0.14] occurrences matches {0..1} matches { -- Preferred flag
 				value matches {
 					CODED_TEXT matches {*}
 				}
@@ -96,59 +96,59 @@ ontology
 				text = <"Person name">
 				description = <"Person name">
 			>
-			["at0..1"] = <
+			["at0.0.1"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0..2"] = <
+			["at0.0.2"] = <
 				text = <"Identifier">
 				description = <"Identifier">
 			>
-			["at0..3"] = <
+			["at0.0.3"] = <
 				text = <"Part">
 				description = <"Part">
 			>
-			["at0..4"] = <
+			["at0.0.4"] = <
 				text = <"Part number">
 				description = <"Part number">
 			>
-			["at0..5"] = <
+			["at0.0.5"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0..6"] = <
+			["at0.0.6"] = <
 				text = <"Type">
 				description = <"Type">
 			>
-			["at0..7"] = <
+			["at0.0.7"] = <
 				text = <"Use">
 				description = <"Use">
 			>
-			["at0..8"] = <
+			["at0.0.8"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0..9"] = <
+			["at0.0.9"] = <
 				text = <"Datetime range">
 				description = <"Datetime range">
 			>
-			["at0..10"] = <
+			["at0.0.10"] = <
 				text = <"Identifier">
 				description = <"Identifier">
 			>
-			["at0..11"] = <
+			["at0.0.11"] = <
 				text = <"Datetime range">
 				description = <"Datetime range">
 			>
-			["at0..12"] = <
+			["at0.0.12"] = <
 				text = <"Usage conditions">
 				description = <"Usage conditions">
 			>
-			["at0..13"] = <
+			["at0.0.13"] = <
 				text = <"Status">
 				description = <"Status">
 			>
-			["at0..14"] = <
+			["at0.0.14"] = <
 				text = <"Preferred flag">
 				description = <"Preferred flag">
 			>
@@ -158,20 +158,20 @@ ontology
 		["SNOMED-CT"] = <
 			items = <
 				["at0000.1.1"] = <[SNOMED-CT::138875005]>
-				["at0..1"] = <[SNOMED-CT::138875005]>
-				["at0..2"] = <[SNOMED-CT::138875005]>
-				["at0..3"] = <[SNOMED-CT::138875005]>
-				["at0..4"] = <[SNOMED-CT::138875005]>
-				["at0..5"] = <[SNOMED-CT::138875005]>
-				["at0..6"] = <[SNOMED-CT::138875005]>
-				["at0..7"] = <[SNOMED-CT::138875005]>
-				["at0..8"] = <[SNOMED-CT::138875005]>
-				["at0..9"] = <[SNOMED-CT::138875005]>
-				["at0..10"] = <[SNOMED-CT::138875005]>
-				["at0..11"] = <[SNOMED-CT::138875005]>
-				["at0..12"] = <[SNOMED-CT::138875005]>
-				["at0..13"] = <[SNOMED-CT::138875005]>
-				["at0..14"] = <[SNOMED-CT::138875005]>
+				["at0.0.1"] = <[SNOMED-CT::138875005]>
+				["at0.0.2"] = <[SNOMED-CT::138875005]>
+				["at0.0.3"] = <[SNOMED-CT::138875005]>
+				["at0.0.4"] = <[SNOMED-CT::138875005]>
+				["at0.0.5"] = <[SNOMED-CT::138875005]>
+				["at0.0.6"] = <[SNOMED-CT::138875005]>
+				["at0.0.7"] = <[SNOMED-CT::138875005]>
+				["at0.0.8"] = <[SNOMED-CT::138875005]>
+				["at0.0.9"] = <[SNOMED-CT::138875005]>
+				["at0.0.10"] = <[SNOMED-CT::138875005]>
+				["at0.0.11"] = <[SNOMED-CT::138875005]>
+				["at0.0.12"] = <[SNOMED-CT::138875005]>
+				["at0.0.13"] = <[SNOMED-CT::138875005]>
+				["at0.0.14"] = <[SNOMED-CT::138875005]>
 			>
 		>
 	>

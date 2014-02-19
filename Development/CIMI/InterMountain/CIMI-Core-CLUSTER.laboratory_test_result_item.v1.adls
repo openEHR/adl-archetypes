@@ -18,12 +18,12 @@ description
 definition
 	CLUSTER[at0000.1.1] matches { -- Laboratory Test Result Item
 		item matches {
-			ELEMENT[at0..1] occurrences matches {0..1} matches { -- Result value
+			ELEMENT[at0.0.1] occurrences matches {0..1} matches { -- Result value
 				value matches {
 					DATA_VALUE matches {*}
 				}
 			}
-			ELEMENT[at0..2] occurrences matches {0..1} matches { -- Poct indicator
+			ELEMENT[at0.0.2] occurrences matches {0..1} matches { -- Poct indicator
 				value matches {
 					CODED_TEXT matches {*}
 				}
@@ -39,11 +39,11 @@ ontology
 				text = <"Laboratory Test Result Item">
 				description = <"Laboratory Test Result Item">
 			>
-			["at0..1"] = <
+			["at0.0.1"] = <
 				text = <"Result value">
 				description = <"Result value">
 			>
-			["at0..2"] = <
+			["at0.0.2"] = <
 				text = <"Poct indicator">
 				description = <"Poct indicator">
 			>

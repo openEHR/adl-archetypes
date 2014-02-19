@@ -1,5 +1,5 @@
-archetype (adl_version=1.5; generated)
-	CIMI-CORE-CLUSTER.location.v1
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.location.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,199 +8,200 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			>
+			purpose = <"???">
+		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[at0000] matches { -- Location
+	CLUSTER[id1] matches {	-- Location
 		item matches {
-			ELEMENT[at0001] occurrences matches {0..*} matches { -- Identifier
+			ELEMENT[id2] occurrences matches {0..*} matches {	-- Identifier
 				value matches {
-					IDENTIFIER matches {*}
+					IDENTIFIER[id24] 
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches { -- Description
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Description
 				value matches {
-					PLAIN_TEXT matches {*}
+					PLAIN_TEXT[id25] 
 				}
 			}
-			CLUSTER[at0003] occurrences matches {0..*} matches { -- Location Name
-			item matches {
-				ELEMENT[at0004] occurrences matches {1} matches { -- Value
-					value matches {
-						PLAIN_TEXT matches {*}
+			CLUSTER[id4] occurrences matches {0..*} matches {	-- Location Name
+				item matches {
+					ELEMENT[id5] occurrences matches {1} matches {	-- Value
+						value matches {
+							PLAIN_TEXT[id26] 
+						}
+					}
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Use
+						value matches {
+							CODED_TEXT[id27] 
+						}
+					}
+					ELEMENT[id7] occurrences matches {0..1} matches {	-- Datetime range
+						value matches {
+							INTERVAL_VALUE<DATE_TIME>[id28] 
+						}
 					}
 				}
-				ELEMENT[at0005] occurrences matches {0..1} matches { -- Use
-					value matches {
-						CODED_TEXT matches {*}
-					}
-				}
-				ELEMENT[at0006] occurrences matches {0..1} matches { -- Datetime range
-					value matches {
-						INTERVAL_VALUE<DATE_TIME> matches {*}
-					}
-				}
 			}
-			}
-			ELEMENT[at0007] occurrences matches {0..1} matches { -- Type
+			ELEMENT[id8] occurrences matches {0..1} matches {	-- Type
 				value matches {
-					TEXT matches {*}
+					TEXT[id29] 
 				}
 			}
-			ELEMENT[at0008] occurrences matches {0..1} matches { -- Condition
+			ELEMENT[id9] occurrences matches {0..1} matches {	-- Condition
 				value matches {
-					TEXT matches {*}
+					TEXT[id30] 
 				}
 			}
-			use_archetype CLUSTER [CIMI-CORE-CLUSTER.address.v2] -- Address
-			use_archetype CLUSTER [CIMI-CORE-CLUSTER.electronic_contact.v1] -- Contact
-			ELEMENT[at0009] occurrences matches {0..1} matches { -- Datetime range
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.address.v2] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.electronic_contact.v1] 
+			ELEMENT[id10] occurrences matches {0..1} matches {	-- Datetime range
 				value matches {
-					INTERVAL_VALUE<DATE_TIME> matches {*}
+					INTERVAL_VALUE<DATE_TIME>[id31] 
 				}
 			}
-			ELEMENT[at0010] occurrences matches {0..1} matches { -- Status
+			ELEMENT[id11] occurrences matches {0..1} matches {	-- Status
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id32] 
 				}
 			}
-			ELEMENT[at0011] occurrences matches {0..1} matches { -- Mobile indicator
+			ELEMENT[id12] occurrences matches {0..1} matches {	-- Mobile indicator
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id33] 
 				}
 			}
-			ELEMENT[at0012] occurrences matches {0..1} matches { -- Directions
+			ELEMENT[id13] occurrences matches {0..1} matches {	-- Directions
 				value matches {
-					TEXT matches {*}
+					TEXT[id34] 
 				}
 			}
-			ELEMENT[at0013] occurrences matches {0..1} matches { -- Position
+			ELEMENT[id14] occurrences matches {0..1} matches {	-- Position
 				value matches {
-					TEXT matches {*}
+					TEXT[id35] 
 				}
 			}
-			ELEMENT[at0014] occurrences matches {0..1} matches { -- Gps location
+			ELEMENT[id15] occurrences matches {0..1} matches {	-- Gps location
 				value matches {
-					TEXT matches {*}
+					TEXT[id36] 
 				}
 			}
-			ELEMENT[at0015] occurrences matches {0..1} matches { -- Point of care
+			ELEMENT[id16] occurrences matches {0..1} matches {	-- Point of care
 				value matches {
-					TEXT matches {*}
+					TEXT[id37] 
 				}
 			}
-			ELEMENT[at0019] occurrences matches {0..1} matches { -- Room
+			ELEMENT[id20] occurrences matches {0..1} matches {	-- Room
 				value matches {
-					TEXT matches {*}
+					TEXT[id38] 
 				}
 			}
-			ELEMENT[at0020] occurrences matches {0..1} matches { -- Bed
+			ELEMENT[id21] occurrences matches {0..1} matches {	-- Bed
 				value matches {
-					TEXT matches {*}
+					TEXT[id39] 
 				}
 			}
-			ELEMENT[at0021] occurrences matches {0..1} matches { -- Floor
+			ELEMENT[id22] occurrences matches {0..1} matches {	-- Floor
 				value matches {
-					TEXT matches {*}
+					TEXT[id40] 
 				}
 			}
-			ELEMENT[at0022] occurrences matches {0..1} matches { -- Building
+			ELEMENT[id23] occurrences matches {0..1} matches {	-- Building
 				value matches {
-					TEXT matches {*}
+					TEXT[id41] 
 				}
 			}
 		}
 		participation matches {
-			PARTICIPATION[at0016] occurrences matches {0..1} -- Organisation
+			PARTICIPATION[id17] occurrences matches {0..1} 	-- Organisation
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Location">
 				description = <"Location">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Identifier">
 				description = <"Identifier">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Description">
 				description = <"Description">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Location Name">
 				description = <"Location Name">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Use">
 				description = <"Use">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Datetime range">
 				description = <"Datetime range">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Type">
 				description = <"Type">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Condition">
 				description = <"Condition">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Datetime range">
 				description = <"Datetime range">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Status">
 				description = <"Status">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Mobile indicator">
 				description = <"Mobile indicator">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Directions">
 				description = <"Directions">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Position">
 				description = <"Position">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Gps location">
 				description = <"Gps location">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Point of care">
 				description = <"Point of care">
 			>
-			["at0019"] = <
+			["id20"] = <
 				text = <"Room">
 				description = <"Room">
 			>
-			["at0020"] = <
+			["id21"] = <
 				text = <"Bed">
 				description = <"Bed">
 			>
-			["at0021"] = <
+			["id22"] = <
 				text = <"Floor">
 				description = <"Floor">
 			>
-			["at0022"] = <
+			["id23"] = <
 				text = <"Building">
 				description = <"Building">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Organisation">
 				description = <"Organisation">
 			>
@@ -208,28 +209,26 @@ ontology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-				["at0000"] = <[SNOMED-CT::129264002]>
-				["at0001"] = <[SNOMED-CT::138875005]>
-				["at0002"] = <[SNOMED-CT::138875005]>
-				["at0003"] = <[SNOMED-CT::138875005]>
-				["at0004"] = <[SNOMED-CT::129264002]>
-				["at0005"] = <[SNOMED-CT::129264002]>
-				["at0006"] = <[SNOMED-CT::364713004]>
-				["at0007"] = <[SNOMED-CT::138875005]>
-				["at0008"] = <[SNOMED-CT::138875005]>
-				["at0009"] = <[SNOMED-CT::138875005]>
-				["at0010"] = <[SNOMED-CT::138875005]>
-				["at0011"] = <[SNOMED-CT::138875005]>
-				["at0012"] = <[SNOMED-CT::138875005]>
-				["at0013"] = <[SNOMED-CT::138875005]>
-				["at0014"] = <[SNOMED-CT::138875005]>
-				["at0015"] = <[SNOMED-CT::138875005]>
-				["at0019"] = <[SNOMED-CT::138875005]>
-				["at0020"] = <[SNOMED-CT::138875005]>
-				["at0021"] = <[SNOMED-CT::138875005]>
-				["at0022"] = <[SNOMED-CT::138875005]>
-				["at0016"] = <[SNOMED-CT::138875005]>
-			>
+			["id1"] = <http://snomedct.info/id/129264002>
+			["id2"] = <http://snomedct.info/id/138875005>
+			["id3"] = <http://snomedct.info/id/138875005>
+			["id4"] = <http://snomedct.info/id/138875005>
+			["id5"] = <http://snomedct.info/id/129264002>
+			["id6"] = <http://snomedct.info/id/129264002>
+			["id7"] = <http://snomedct.info/id/364713004>
+			["id8"] = <http://snomedct.info/id/138875005>
+			["id9"] = <http://snomedct.info/id/138875005>
+			["id10"] = <http://snomedct.info/id/138875005>
+			["id11"] = <http://snomedct.info/id/138875005>
+			["id12"] = <http://snomedct.info/id/138875005>
+			["id13"] = <http://snomedct.info/id/138875005>
+			["id14"] = <http://snomedct.info/id/138875005>
+			["id15"] = <http://snomedct.info/id/138875005>
+			["id16"] = <http://snomedct.info/id/138875005>
+			["id20"] = <http://snomedct.info/id/138875005>
+			["id21"] = <http://snomedct.info/id/138875005>
+			["id22"] = <http://snomedct.info/id/138875005>
+			["id23"] = <http://snomedct.info/id/138875005>
+			["id17"] = <http://snomedct.info/id/138875005>
 		>
 	>

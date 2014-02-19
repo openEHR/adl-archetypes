@@ -1,5 +1,5 @@
-archetype (adl_version=1.5; generated)
-	CIMI-CORE-CLUSTER.anatomical_location.v2
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.anatomical_location.v2.0.0
 
 specialize
 	CIMI-CORE-CLUSTER.material_entity.v1
@@ -11,29 +11,30 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			>
+			purpose = <"???">
+		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[at0000.1] matches { -- Anatomical Location
+	CLUSTER[id1.1] matches {	-- Anatomical Location
 		/item matches {
-			ELEMENT[at0.1] occurrences matches {0..1} matches { -- Body side
+			ELEMENT[id0.1] occurrences matches {0..1} matches {	-- Body side
 				value matches {
-					TEXT matches {*}
+					TEXT[id0.8] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Anatomical Location">
 				description = <"Anatomical Location">
 			>
-			["at0.1"] = <
+			["id0.1"] = <
 				text = <"Body side">
 				description = <"Body side">
 			>
@@ -41,9 +42,7 @@ ontology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-				["at0000.1"] = <[SNOMED-CT::123037004]>
-				["at0.1"] = <[SNOMED-CT::182353008]>
-			>
+			["id1.1"] = <http://snomedct.info/id/123037004>
+			["id0.1"] = <http://snomedct.info/id/182353008>
 		>
 	>

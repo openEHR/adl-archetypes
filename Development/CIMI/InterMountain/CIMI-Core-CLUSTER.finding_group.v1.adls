@@ -1,5 +1,5 @@
-archetype (adl_version=1.5; generated)
-	CIMI-CORE-CLUSTER.finding_group.v1
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.finding_group.v1.0.0
 
 specialize
 	CIMI-CORE-CLUSTER.finding.v1
@@ -11,21 +11,22 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			>
+			purpose = <"???">
+		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[at0000.1] matches { -- Finding Group
+	CLUSTER[id1.1] matches {	-- Finding Group
 		/item matches {
-			use_archetype CLUSTER [CIMI-CORE-CLUSTER.finding_item.v1] -- Finding Item
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.finding_item.v1] 
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Finding Group">
 				description = <"Finding Group">
 			>
@@ -33,8 +34,6 @@ ontology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-				["at0000.1"] = <[SNOMED-CT::404684003]>
-			>
+			["id1.1"] = <http://snomedct.info/id/404684003>
 		>
 	>

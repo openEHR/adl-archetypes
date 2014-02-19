@@ -19,45 +19,45 @@ definition
 	ACTOR[at0000.1.1] matches { -- Organisation
 		/details matches {
 			use_archetype CLUSTER [CIMI-CORE-CLUSTER.organization_name.v1] -- Name
-			ELEMENT[at0..1] occurrences matches {0..1} matches { -- Department/ unit
+			ELEMENT[at0.0.1] occurrences matches {0..1} matches { -- Department/ unit
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..2] occurrences matches {0..1} matches { -- Industry
+			ELEMENT[at0.0.2] occurrences matches {0..1} matches { -- Industry
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..3] occurrences matches {0..1} matches { -- Status
+			ELEMENT[at0.0.3] occurrences matches {0..1} matches { -- Status
 				value matches {
 					CODED_TEXT matches {*}
 				}
 			}
-			CLUSTER[at0..4] occurrences matches {0..*} matches { -- Accreditation
+			CLUSTER[at0.0.4] occurrences matches {0..*} matches { -- Accreditation
 			item matches {
-				ELEMENT[at0..5] occurrences matches {0..1} matches { -- Identifier
+				ELEMENT[at0.0.5] occurrences matches {0..1} matches { -- Identifier
 					value matches {
 						IDENTIFIER matches {*}
 					}
 				}
-				ELEMENT[at0..6] occurrences matches {0..1} matches { -- Type
+				ELEMENT[at0.0.6] occurrences matches {0..1} matches { -- Type
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0..7] occurrences matches {0..1} matches { -- Date range
+				ELEMENT[at0.0.7] occurrences matches {0..1} matches { -- Date range
 					value matches {
 						INTERVAL_VALUE<DATE> matches {*}
 					}
 				}
 			}}
-			ELEMENT[at0..8] occurrences matches {0..1} matches { -- Date range
+			ELEMENT[at0.0.8] occurrences matches {0..1} matches { -- Date range
 				value matches {
 					INTERVAL_VALUE<DATE> matches {*}
 				}
 			}
-			ELEMENT[at0..9] occurrences matches {1} matches { -- Organisation type
+			ELEMENT[at0.0.9] occurrences matches {1} matches { -- Organisation type
 				value matches {
 					CODED_TEXT matches {*}
 				}
@@ -75,39 +75,39 @@ ontology
 				text = <"Organisation">
 				description = <"Organisation">
 			>
-			["at0..1"] = <
+			["at0.0.1"] = <
 				text = <"Department/ unit">
 				description = <"Department/ unit">
 			>
-			["at0..2"] = <
+			["at0.0.2"] = <
 				text = <"Industry">
 				description = <"Industry">
 			>
-			["at0..3"] = <
+			["at0.0.3"] = <
 				text = <"Status">
 				description = <"Status">
 			>
-			["at0..4"] = <
+			["at0.0.4"] = <
 				text = <"Accreditation">
 				description = <"Accreditation">
 			>
-			["at0..5"] = <
+			["at0.0.5"] = <
 				text = <"Identifier">
 				description = <"Identifier">
 			>
-			["at0..6"] = <
+			["at0.0.6"] = <
 				text = <"Type">
 				description = <"Type">
 			>
-			["at0..7"] = <
+			["at0.0.7"] = <
 				text = <"Date range">
 				description = <"Date range">
 			>
-			["at0..8"] = <
+			["at0.0.8"] = <
 				text = <"Date range">
 				description = <"Date range">
 			>
-			["at0..9"] = <
+			["at0.0.9"] = <
 				text = <"Organisation type">
 				description = <"Organisation type">
 			>
@@ -117,15 +117,15 @@ ontology
 		["SNOMED-CT"] = <
 			items = <
 				["at0000.1.1"] = <[SNOMED-CT::138875005]>
-				["at0..1"] = <[SNOMED-CT::138875005]>
-				["at0..2"] = <[SNOMED-CT::138875005]>
-				["at0..3"] = <[SNOMED-CT::138875005]>
-				["at0..4"] = <[SNOMED-CT::138875005]>
-				["at0..5"] = <[SNOMED-CT::138875005]>
-				["at0..6"] = <[SNOMED-CT::138875005]>
-				["at0..7"] = <[SNOMED-CT::138875005]>
-				["at0..8"] = <[SNOMED-CT::138875005]>
-				["at0..9"] = <[SNOMED-CT::138875005]>
+				["at0.0.1"] = <[SNOMED-CT::138875005]>
+				["at0.0.2"] = <[SNOMED-CT::138875005]>
+				["at0.0.3"] = <[SNOMED-CT::138875005]>
+				["at0.0.4"] = <[SNOMED-CT::138875005]>
+				["at0.0.5"] = <[SNOMED-CT::138875005]>
+				["at0.0.6"] = <[SNOMED-CT::138875005]>
+				["at0.0.7"] = <[SNOMED-CT::138875005]>
+				["at0.0.8"] = <[SNOMED-CT::138875005]>
+				["at0.0.9"] = <[SNOMED-CT::138875005]>
 			>
 		>
 	>

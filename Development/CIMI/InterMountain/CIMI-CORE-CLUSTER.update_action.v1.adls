@@ -1,5 +1,5 @@
-archetype (adl_version=1.5; generated)
-	CIMI-CORE-CLUSTER.update_action.v1
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.update_action.v1.0.0
 
 specialize
 	CIMI-CORE-CLUSTER.action.v1
@@ -11,91 +11,92 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			>
+			purpose = <"???">
+		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[at0000.1] matches { -- Update Action
+	CLUSTER[id1.1] matches {	-- Update Action
 		/item matches {
-			ELEMENT[at0.1] occurrences matches {1} matches { -- Action type
+			ELEMENT[id0.1] occurrences matches {1} matches {	-- Action type
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id0.45] 
 				}
 			}
-			ELEMENT[at0.2] occurrences matches {0..1} matches { -- Update datetime
+			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Update datetime
 				value matches {
-					DATE_TIME matches {*}
+					DATE_TIME[id0.46] 
 				}
 			}
-			ELEMENT[at0.3] occurrences matches {0..1} matches { -- Update datetime range
+			ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Update datetime range
 				value matches {
-					INTERVAL_VALUE<DATE_TIME> matches {*}
+					INTERVAL_VALUE<DATE_TIME>[id0.47] 
 				}
 			}
-			ELEMENT[at0.4] occurrences matches {0..1} matches { -- Update duration
+			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Update duration
 				value matches {
-					DURATION matches {*}
+					DURATION[id0.48] 
 				}
 			}
-			ELEMENT[at0.5] occurrences matches {0..1} matches { -- Update timing offset
+			ELEMENT[id0.5] occurrences matches {0..1} matches {	-- Update timing offset
 				value matches {
-					DURATION matches {*}
+					DURATION[id0.49] 
 				}
 			}
-			ELEMENT[at0.6] occurrences matches {0..1} matches { -- Update timing offset origin
+			ELEMENT[id0.6] occurrences matches {0..1} matches {	-- Update timing offset origin
 				value matches {
-					DATE_TIME matches {*}
+					DATE_TIME[id0.50] 
 				}
 			}
 		}
 		participation matches {
-			PARTICIPATION[at0.7] occurrences matches {0..*} -- Updater
-			PARTICIPATION[at0.8] occurrences matches {0..1} -- Locationof subject
-			PARTICIPATION[at0.9] occurrences matches {0..1} -- Locationof updater
+			PARTICIPATION[id0.7] occurrences matches {0..*} 	-- Updater
+			PARTICIPATION[id0.8] occurrences matches {0..1} 	-- Locationof subject
+			PARTICIPATION[id0.9] occurrences matches {0..1} 	-- Locationof updater
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000.1"] = <
+			["id1.1"] = <
 				text = <"Update Action">
 				description = <"Update Action">
 			>
-			["at0.1"] = <
+			["id0.1"] = <
 				text = <"Action type">
 				description = <"Action type">
 			>
-			["at0.2"] = <
+			["id0.2"] = <
 				text = <"Update datetime">
 				description = <"Update datetime">
 			>
-			["at0.3"] = <
+			["id0.3"] = <
 				text = <"Update datetime range">
 				description = <"Update datetime range">
 			>
-			["at0.4"] = <
+			["id0.4"] = <
 				text = <"Update duration">
 				description = <"Update duration">
 			>
-			["at0.5"] = <
+			["id0.5"] = <
 				text = <"Update timing offset">
 				description = <"Update timing offset">
 			>
-			["at0.6"] = <
+			["id0.6"] = <
 				text = <"Update timing offset origin">
 				description = <"Update timing offset origin">
 			>
-			["at0.7"] = <
+			["id0.7"] = <
 				text = <"Updater">
 				description = <"Updater">
 			>
-			["at0.8"] = <
+			["id0.8"] = <
 				text = <"Locationof subject">
 				description = <"Locationof subject">
 			>
-			["at0.9"] = <
+			["id0.9"] = <
 				text = <"Locationof updater">
 				description = <"Locationof updater">
 			>
@@ -103,12 +104,10 @@ ontology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-				["at0.1"] = <[SNOMED-CT::364713004]>
-				["at0.2"] = <[SNOMED-CT::364713004]>
-				["at0.3"] = <[SNOMED-CT::48176007]>
-				["at0.4"] = <[SNOMED-CT::308916002]>
-				["at0.5"] = <[SNOMED-CT::308916002]>
-			>
+			["id0.1"] = <http://snomedct.info/id/364713004>
+			["id0.2"] = <http://snomedct.info/id/364713004>
+			["id0.3"] = <http://snomedct.info/id/48176007>
+			["id0.4"] = <http://snomedct.info/id/308916002>
+			["id0.5"] = <http://snomedct.info/id/308916002>
 		>
 	>

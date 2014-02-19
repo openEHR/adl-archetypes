@@ -19,7 +19,7 @@ definition
 	ENTRY[at0000.1.1.1] matches { -- Gas and Carbon Monoxide Panel
 		/data matches {
 			use_archetype CLUSTER [CIMI-CORE-CLUSTER.gas_and_carbon_monoxide_observable.v1] -- Test observable
-			CLUSTER[at0...1] occurrences matches {0..1} matches { -- Test results
+			CLUSTER[at0.0.0.1] occurrences matches {0..1} matches { -- Test results
 			item matches {
 				use_archetype CLUSTER [CIMI-CORE-CLUSTER.ph_of_blood.v1] -- pH of blood
 				use_archetype CLUSTER [CIMI-CORE-CLUSTER.ph_of_blood_adjusted_to_patient_temperature.v1] -- pH of blood adjusted to patients actual temperature
@@ -37,7 +37,7 @@ ontology
 				text = <"Gas and Carbon Monoxide Panel">
 				description = <"Gas and Carbon Monoxide Panel">
 			>
-			["at0...1"] = <
+			["at0.0.0.1"] = <
 				text = <"Test results REF<CIMI-CORE-CLUSTER.gas_and_carbon_monoxide_result_group>">
 				description = <"Test results REF<CIMI-CORE-CLUSTER.gas_and_carbon_monoxide_result_group>">
 			>

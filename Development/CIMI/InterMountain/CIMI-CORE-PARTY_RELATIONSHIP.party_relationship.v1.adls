@@ -1,6 +1,5 @@
-archetype (adl_version=1.5; generated)
-	CIMI-CORE-PARTY_RELATIONSHIP.party_relationship.v1
-
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-PARTY_RELATIONSHIP.party_relationship.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -9,17 +8,18 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			>
+			purpose = <"???">
+		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	PARTY_RELATIONSHIP[at0000] -- Relationship
+	PARTY_RELATIONSHIP[id1] 	-- Relationship
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Relationship">
 				description = <"Relationship">
 			>
@@ -27,7 +27,5 @@ ontology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-			>
 		>
 	>

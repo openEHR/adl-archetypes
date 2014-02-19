@@ -18,12 +18,12 @@ description
 definition
 	ENTRY[at0000.1.1] matches { -- Laboratory Report Header
 		/data matches {
-			ELEMENT[at0..1] occurrences matches {0..1} matches { -- Report Type
+			ELEMENT[at0.0.1] occurrences matches {0..1} matches { -- Report Type
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..2] occurrences matches {0..*} matches { -- Diagnosis
+			ELEMENT[at0.0.2] occurrences matches {0..*} matches { -- Diagnosis
 				value matches {
 					TEXT matches {*}
 				}
@@ -38,11 +38,11 @@ ontology
 				text = <"Laboratory Report Header">
 				description = <"Laboratory Report Header">
 			>
-			["at0..1"] = <
+			["at0.0.1"] = <
 				text = <"Report Type">
 				description = <"Report Type">
 			>
-			["at0..2"] = <
+			["at0.0.2"] = <
 				text = <"Diagnosis">
 				description = <"Diagnosis">
 			>
@@ -51,8 +51,8 @@ ontology
 	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
-				["at0..1"] = <[SNOMED-CT::364712009]>
-				["at0..2"] = <[SNOMED-CT::138875005]>
+				["at0.0.1"] = <[SNOMED-CT::364712009]>
+				["at0.0.2"] = <[SNOMED-CT::138875005]>
 			>
 		>
 	>

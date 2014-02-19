@@ -1,5 +1,5 @@
-archetype (adl_version=1.5; generated)
-	CIMI-CORE-CLUSTER.party_name.v1
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.party_name.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,29 +8,30 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			>
+			purpose = <"???">
+		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[at0000] matches { -- Party name
+	CLUSTER[id1] matches {	-- Party name
 		item matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches { -- Value
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Value
 				value matches {
-					TEXT matches {*}
+					TEXT[id3] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Party name">
 				description = <"Party name">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"Value">
 				description = <"Value">
 			>
@@ -38,9 +39,7 @@ ontology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-				["at0000"] = <[SNOMED-CT::138875005]>
-				["at0001"] = <[SNOMED-CT::138875005]>
-			>
+			["id1"] = <http://snomedct.info/id/138875005>
+			["id2"] = <http://snomedct.info/id/138875005>
 		>
 	>

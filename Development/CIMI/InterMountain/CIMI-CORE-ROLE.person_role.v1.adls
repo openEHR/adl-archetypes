@@ -18,22 +18,22 @@ description
 definition
 	ROLE[at0000.1.1] matches { -- Person role
 		details matches {
-			ELEMENT[at0..1] occurrences matches {1} matches { -- Role type
+			ELEMENT[at0.0.1] occurrences matches {1} matches { -- Role type
 				value matches {
 					CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..2] occurrences matches {0..*} matches { -- Preferred written communication format
+			ELEMENT[at0.0.2] occurrences matches {0..*} matches { -- Preferred written communication format
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..3] occurrences matches {0..*} matches { -- Preferred contact method
+			ELEMENT[at0.0.3] occurrences matches {0..*} matches { -- Preferred contact method
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0..4] occurrences matches {0..1} matches { -- Preferred contact time
+			ELEMENT[at0.0.4] occurrences matches {0..1} matches { -- Preferred contact time
 				value matches {
 					INTERVAL_VALUE<DATE_TIME> matches {*}
 				}
@@ -48,19 +48,19 @@ ontology
 				text = <"Person role">
 				description = <"Person role">
 			>
-			["at0..1"] = <
+			["at0.0.1"] = <
 				text = <"Role type">
 				description = <"Role type">
 			>
-			["at0..2"] = <
+			["at0.0.2"] = <
 				text = <"Preferred written communication format">
 				description = <"Preferred written communication format">
 			>
-			["at0..3"] = <
+			["at0.0.3"] = <
 				text = <"Preferred contact method">
 				description = <"Preferred contact method">
 			>
-			["at0..4"] = <
+			["at0.0.4"] = <
 				text = <"Preferred contact time">
 				description = <"Preferred contact time">
 			>
@@ -70,10 +70,10 @@ ontology
 		["SNOMED-CT"] = <
 			items = <
 				["at0000.1.1"] = <[SNOMED-CT::138875005]>
-				["at0..1"] = <[SNOMED-CT::138875005]>
-				["at0..2"] = <[SNOMED-CT::138875005]>
-				["at0..3"] = <[SNOMED-CT::138875005]>
-				["at0..4"] = <[SNOMED-CT::138875005]>
+				["at0.0.1"] = <[SNOMED-CT::138875005]>
+				["at0.0.2"] = <[SNOMED-CT::138875005]>
+				["at0.0.3"] = <[SNOMED-CT::138875005]>
+				["at0.0.4"] = <[SNOMED-CT::138875005]>
 			>
 		>
 	>

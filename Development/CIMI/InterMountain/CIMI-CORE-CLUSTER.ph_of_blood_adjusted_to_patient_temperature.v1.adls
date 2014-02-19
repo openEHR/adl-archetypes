@@ -1,5 +1,5 @@
-archetype (adl_version=1.5; generated)
-	CIMI-CORE-CLUSTER.ph_of_blood_adjusted_to_patient_temperature.v1
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.ph_of_blood_adjusted_to_patient_temperature.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,38 +8,39 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			>
+			purpose = <"???">
+		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[at0000] matches { -- pH of blood adjusted to patients actual temperature
+	CLUSTER[id1] matches {	-- pH of blood adjusted to patients actual temperature
 		item matches {
-			ELEMENT[at0003] occurrences matches {1} matches { -- Name
+			ELEMENT[id4] occurrences matches {1} matches {	-- Name
 				value matches {
-					TEXT matches {*}
+					TEXT[id6] 
 				}
 			}
-			ELEMENT[at0004] occurrences matches {1} matches { -- Result value
+			ELEMENT[id5] occurrences matches {1} matches {	-- Result value
 				value matches {
-					DATA_VALUE matches {*}
+					DATA_VALUE[id7] 
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"pH of blood adjusted to patients actual temperature">
 				description = <"pH of blood adjusted to patients actual temperature">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Name">
 				description = <"Name">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Result value">
 				description = <"Result value">
 			>
@@ -47,9 +48,7 @@ ontology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-				["at0003"] = <[SNOMED-CT::138875005]>
-				["at0004"] = <[SNOMED-CT::138875005]>
-			>
+			["id4"] = <http://snomedct.info/id/138875005>
+			["id5"] = <http://snomedct.info/id/138875005>
 		>
 	>

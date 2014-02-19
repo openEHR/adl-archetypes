@@ -18,8 +18,8 @@ description
 definition
 	ENTRY[at0000.1.1] matches { -- Patient Encounter Summary
 		participation matches {
-			PARTICIPATION[at0..1] occurrences matches {0..1} -- Subject of care
-			PARTICIPATION[at0..2] occurrences matches {0..1} -- Information subject
+			PARTICIPATION[at0.0.1] occurrences matches {0..1} -- Subject of care
+			PARTICIPATION[at0.0.2] occurrences matches {0..1} -- Information subject
 		}
 	}
 
@@ -30,11 +30,11 @@ ontology
 				text = <"Patient Encounter Summary">
 				description = <"Patient Encounter Summary">
 			>
-			["at0..1"] = <
+			["at0.0.1"] = <
 				text = <"Subject of care">
 				description = <"Subject of care">
 			>
-			["at0..2"] = <
+			["at0.0.2"] = <
 				text = <"Information subject">
 				description = <"Information subject">
 			>
@@ -44,8 +44,8 @@ ontology
 		["SNOMED-CT"] = <
 			items = <
 				["at0000.1.1"] = <[SNOMED-CT::308335008]>
-				["at0..1"] = <[SNOMED-CT::125676002]>
-				["at0..2"] = <[SNOMED-CT::125676002]>
+				["at0.0.1"] = <[SNOMED-CT::125676002]>
+				["at0.0.2"] = <[SNOMED-CT::125676002]>
 			>
 		>
 	>

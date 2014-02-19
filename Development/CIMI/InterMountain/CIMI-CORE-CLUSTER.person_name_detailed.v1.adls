@@ -18,105 +18,105 @@ description
 definition
 	CLUSTER[at0000.1.1.1] matches { -- Person name detailed
 		item matches {
-			ELEMENT[at0...1] occurrences matches {0..1} matches { -- Value
+			ELEMENT[at0.0.0.1] occurrences matches {0..1} matches { -- Value
 				value matches {
 					TEXT matches {*}
 				}
 			}
-			ELEMENT[at0...2] occurrences matches {0..1} matches { -- Identifier
+			ELEMENT[at0.0.0.2] occurrences matches {0..1} matches { -- Identifier
 				value matches {
 					IDENTIFIER matches {*}
 				}
 			}
-			CLUSTER[at0...3] occurrences matches {0..*} matches { -- Title
+			CLUSTER[at0.0.0.3] occurrences matches {0..*} matches { -- Title
 			item matches {
-				ELEMENT[at0...4] occurrences matches {0..1} matches { -- Part number
+				ELEMENT[at0.0.0.4] occurrences matches {0..1} matches { -- Part number
 					value matches {
 						COUNT matches {*}
 					}
 				}
-				ELEMENT[at0...5] occurrences matches {0..1} matches { -- Value
+				ELEMENT[at0.0.0.5] occurrences matches {0..1} matches { -- Value
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0...6] occurrences matches {0..1} matches { -- Type
+				ELEMENT[at0.0.0.6] occurrences matches {0..1} matches { -- Type
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
 			}
 			}
-			CLUSTER[at0...7] occurrences matches {0..*} matches { -- Given name
+			CLUSTER[at0.0.0.7] occurrences matches {0..*} matches { -- Given name
 			item matches {
-				ELEMENT[at0...8] occurrences matches {0..1} matches { -- Part number
+				ELEMENT[at0.0.0.8] occurrences matches {0..1} matches { -- Part number
 					value matches {
 						COUNT matches {*}
 					}
 				}
-				ELEMENT[at0...9] occurrences matches {0..1} matches { -- Value
+				ELEMENT[at0.0.0.9] occurrences matches {0..1} matches { -- Value
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0...10] occurrences matches {0..1} matches { -- Type
+				ELEMENT[at0.0.0.10] occurrences matches {0..1} matches { -- Type
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
 			}
 			}
-			CLUSTER[at0...11] occurrences matches {0..*} matches { -- Middle name
+			CLUSTER[at0.0.0.11] occurrences matches {0..*} matches { -- Middle name
 			item matches {
-				ELEMENT[at0...12] occurrences matches {0..1} matches { -- Part number
+				ELEMENT[at0.0.0.12] occurrences matches {0..1} matches { -- Part number
 					value matches {
 						COUNT matches {*}
 					}
 				}
-				ELEMENT[at0...13] occurrences matches {0..1} matches { -- Value
+				ELEMENT[at0.0.0.13] occurrences matches {0..1} matches { -- Value
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0...14] occurrences matches {0..1} matches { -- Type
+				ELEMENT[at0.0.0.14] occurrences matches {0..1} matches { -- Type
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
 			}
 			}
-			CLUSTER[at0...15] occurrences matches {0..*} matches { -- Family name
+			CLUSTER[at0.0.0.15] occurrences matches {0..*} matches { -- Family name
 			item matches {
-				ELEMENT[at0...16] occurrences matches {0..1} matches { -- Part number
+				ELEMENT[at0.0.0.16] occurrences matches {0..1} matches { -- Part number
 					value matches {
 						COUNT matches {*}
 					}
 				}
-				ELEMENT[at0...17] occurrences matches {0..1} matches { -- Value
+				ELEMENT[at0.0.0.17] occurrences matches {0..1} matches { -- Value
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0...18] occurrences matches {0..1} matches { -- Type
+				ELEMENT[at0.0.0.18] occurrences matches {0..1} matches { -- Type
 					value matches {
 						CODED_TEXT matches {*}
 					}
 				}
 			}
 			}
-			CLUSTER[at0...19] occurrences matches {0..*} matches { -- Suffix
+			CLUSTER[at0.0.0.19] occurrences matches {0..*} matches { -- Suffix
 			item matches {
-				ELEMENT[at0...20] occurrences matches {0..1} matches { -- Part number
+				ELEMENT[at0.0.0.20] occurrences matches {0..1} matches { -- Part number
 					value matches {
 						COUNT matches {*}
 					}
 				}
-				ELEMENT[at0...21] occurrences matches {0..1} matches { -- Value
+				ELEMENT[at0.0.0.21] occurrences matches {0..1} matches { -- Value
 					value matches {
 						TEXT matches {*}
 					}
 				}
-				ELEMENT[at0...22] occurrences matches {0..1} matches { -- Type
+				ELEMENT[at0.0.0.22] occurrences matches {0..1} matches { -- Type
 					value matches {
 						CODED_TEXT matches {*}
 					}
@@ -133,91 +133,91 @@ ontology
 				text = <"Person name detailed">
 				description = <"Person name detailed">
 			>
-			["at0...1"] = <
+			["at0.0.0.1"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0...2"] = <
+			["at0.0.0.2"] = <
 				text = <"Identifier">
 				description = <"Identifier">
 			>
-			["at0...3"] = <
+			["at0.0.0.3"] = <
 				text = <"Title">
 				description = <"Title">
 			>
-			["at0...4"] = <
+			["at0.0.0.4"] = <
 				text = <"Part number">
 				description = <"Part number">
 			>
-			["at0...5"] = <
+			["at0.0.0.5"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0...6"] = <
+			["at0.0.0.6"] = <
 				text = <"Type">
 				description = <"Type">
 			>
-			["at0...7"] = <
+			["at0.0.0.7"] = <
 				text = <"Given name">
 				description = <"Given name">
 			>
-			["at0...8"] = <
+			["at0.0.0.8"] = <
 				text = <"Part number">
 				description = <"Part number">
 			>
-			["at0...9"] = <
+			["at0.0.0.9"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0...10"] = <
+			["at0.0.0.10"] = <
 				text = <"Type">
 				description = <"Type">
 			>
-			["at0...11"] = <
+			["at0.0.0.11"] = <
 				text = <"Middle name">
 				description = <"Middle name">
 			>
-			["at0...12"] = <
+			["at0.0.0.12"] = <
 				text = <"Part number">
 				description = <"Part number">
 			>
-			["at0...13"] = <
+			["at0.0.0.13"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0...14"] = <
+			["at0.0.0.14"] = <
 				text = <"Type">
 				description = <"Type">
 			>
-			["at0...15"] = <
+			["at0.0.0.15"] = <
 				text = <"Family name">
 				description = <"Family name">
 			>
-			["at0...16"] = <
+			["at0.0.0.16"] = <
 				text = <"Part number">
 				description = <"Part number">
 			>
-			["at0...17"] = <
+			["at0.0.0.17"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0...18"] = <
+			["at0.0.0.18"] = <
 				text = <"Type">
 				description = <"Type">
 			>
-			["at0...19"] = <
+			["at0.0.0.19"] = <
 				text = <"Suffix">
 				description = <"Suffix">
 			>
-			["at0...20"] = <
+			["at0.0.0.20"] = <
 				text = <"Part number">
 				description = <"Part number">
 			>
-			["at0...21"] = <
+			["at0.0.0.21"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0...22"] = <
+			["at0.0.0.22"] = <
 				text = <"Type">
 				description = <"Type">
 			>
@@ -227,28 +227,28 @@ ontology
 		["SNOMED-CT"] = <
 			items = <
 				["at0000.1.1.1"] = <[SNOMED-CT::138875005]>
-				["at0...1"] = <[SNOMED-CT::138875005]>
-				["at0...2"] = <[SNOMED-CT::138875005]>
-				["at0...3"] = <[SNOMED-CT::138875005]>
-				["at0...4"] = <[SNOMED-CT::138875005]>
-				["at0...5"] = <[SNOMED-CT::138875005]>
-				["at0...6"] = <[SNOMED-CT::138875005]>
-				["at0...7"] = <[SNOMED-CT::138875005]>
-				["at0...8"] = <[SNOMED-CT::138875005]>
-				["at0...9"] = <[SNOMED-CT::138875005]>
-				["at0...10"] = <[SNOMED-CT::138875005]>
-				["at0...11"] = <[SNOMED-CT::138875005]>
-				["at0...12"] = <[SNOMED-CT::138875005]>
-				["at0...13"] = <[SNOMED-CT::138875005]>
-				["at0...14"] = <[SNOMED-CT::138875005]>
-				["at0...15"] = <[SNOMED-CT::138875005]>
-				["at0...16"] = <[SNOMED-CT::138875005]>
-				["at0...17"] = <[SNOMED-CT::138875005]>
-				["at0...18"] = <[SNOMED-CT::138875005]>
-				["at0...19"] = <[SNOMED-CT::138875005]>
-				["at0...20"] = <[SNOMED-CT::138875005]>
-				["at0...21"] = <[SNOMED-CT::138875005]>
-				["at0...22"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.1"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.2"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.3"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.4"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.5"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.6"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.7"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.8"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.9"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.10"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.11"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.12"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.13"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.14"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.15"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.16"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.17"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.18"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.19"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.20"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.21"] = <[SNOMED-CT::138875005]>
+				["at0.0.0.22"] = <[SNOMED-CT::138875005]>
 			>
 		>
 	>

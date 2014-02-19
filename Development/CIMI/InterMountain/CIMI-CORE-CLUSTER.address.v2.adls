@@ -1,5 +1,5 @@
-archetype (adl_version=1.5; generated)
-	CIMI-CORE-CLUSTER.address.v2
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.address.v2.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,179 +8,180 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			>
+			purpose = <"???">
+		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[at0000] matches { -- Address
+	CLUSTER[id1] matches {	-- Address
 		item matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches { -- No fixed address indicator
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- No fixed address indicator
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id20] 
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches { -- Value
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Value
 				value matches {
-					PLAIN_TEXT matches {*}
+					PLAIN_TEXT[id21] 
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches { -- Status
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Status
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id22] 
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..*} matches { -- Use
+			ELEMENT[id5] occurrences matches {0..*} matches {	-- Use
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id23] 
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches { -- Preference indicator
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Preference indicator
 				value matches {
-					CODED_TEXT matches {*}
+					CODED_TEXT[id24] 
 				}
 			}
-			ELEMENT[at0006] occurrences matches {0..1} matches { -- Datetime range
+			ELEMENT[id7] occurrences matches {0..1} matches {	-- Datetime range
 				value matches {
-					INTERVAL_VALUE<DATE_TIME> matches {*}
+					INTERVAL_VALUE<DATE_TIME>[id25] 
 				}
 			}
-			CLUSTER[at0007] occurrences matches {0..*} matches { -- Address part
-			item matches {
-				ELEMENT[at0008] occurrences matches {0..1} matches { -- Part number
-					value matches {
-						COUNT matches {*}
-					}
-				}
-				ELEMENT[at0009] occurrences matches {0..1} matches { -- Value
-					value matches {
-						TEXT matches {*}
-					}
-				}
-				ELEMENT[at0010] occurrences matches {0..1} matches { -- Type
-					value matches {
-						CODED_TEXT matches {*}
-					}
-				}
-			}
-			}
-			CLUSTER[at0011] occurrences matches {0..*} matches { -- Address line
-			item matches {
-				ELEMENT[at0012] occurrences matches {0..1} matches { -- Line number
-					value matches {
-						COUNT matches {*}
-					}
-				}
-				ELEMENT[at0013] occurrences matches {0..1} matches { -- Value
-					value matches {
-						PLAIN_TEXT matches {*}
-					}
-				}
-				ELEMENT[at0014] occurrences matches {0..1} matches { -- Type
-					value matches {
-						CODED_TEXT matches {*}
-					}
-				}
-				CLUSTER[at0015] occurrences matches {0..*} matches { -- Address part
+			CLUSTER[id8] occurrences matches {0..*} matches {	-- Address part
 				item matches {
-					ELEMENT[at0016] occurrences matches {0..1} matches { -- Part number
+					ELEMENT[id9] occurrences matches {0..1} matches {	-- Part number
 						value matches {
-							COUNT matches {*}
+							COUNT[id26] 
 						}
 					}
-					ELEMENT[at0017] occurrences matches {0..1} matches { -- Value
+					ELEMENT[id10] occurrences matches {0..1} matches {	-- Value
 						value matches {
-							TEXT matches {*}
+							TEXT[id27] 
 						}
 					}
-					ELEMENT[at0018] occurrences matches {0..1} matches { -- Type
+					ELEMENT[id11] occurrences matches {0..1} matches {	-- Type
 						value matches {
-							CODED_TEXT matches {*}
+							CODED_TEXT[id28] 
 						}
 					}
-				}
 				}
 			}
+			CLUSTER[id12] occurrences matches {0..*} matches {	-- Address line
+				item matches {
+					ELEMENT[id13] occurrences matches {0..1} matches {	-- Line number
+						value matches {
+							COUNT[id29] 
+						}
+					}
+					ELEMENT[id14] occurrences matches {0..1} matches {	-- Value
+						value matches {
+							PLAIN_TEXT[id30] 
+						}
+					}
+					ELEMENT[id15] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id31] 
+						}
+					}
+					CLUSTER[id16] occurrences matches {0..*} matches {	-- Address part
+						item matches {
+							ELEMENT[id17] occurrences matches {0..1} matches {	-- Part number
+								value matches {
+									COUNT[id32] 
+								}
+							}
+							ELEMENT[id18] occurrences matches {0..1} matches {	-- Value
+								value matches {
+									TEXT[id33] 
+								}
+							}
+							ELEMENT[id19] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									CODED_TEXT[id34] 
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["at0000"] = <
+			["id1"] = <
 				text = <"Address">
 				description = <"Address">
 			>
-			["at0001"] = <
+			["id2"] = <
 				text = <"No fixed address indicator">
 				description = <"No fixed address indicator">
 			>
-			["at0002"] = <
+			["id3"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0003"] = <
+			["id4"] = <
 				text = <"Status">
 				description = <"Status">
 			>
-			["at0004"] = <
+			["id5"] = <
 				text = <"Use">
 				description = <"Use">
 			>
-			["at0005"] = <
+			["id6"] = <
 				text = <"Preference indicator">
 				description = <"Preference indicator">
 			>
-			["at0006"] = <
+			["id7"] = <
 				text = <"Datetime range">
 				description = <"Datetime range">
 			>
-			["at0007"] = <
+			["id8"] = <
 				text = <"Address part">
 				description = <"Address part">
 			>
-			["at0008"] = <
+			["id9"] = <
 				text = <"Part number">
 				description = <"Part number">
 			>
-			["at0009"] = <
+			["id10"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0010"] = <
+			["id11"] = <
 				text = <"Type">
 				description = <"Type">
 			>
-			["at0011"] = <
+			["id12"] = <
 				text = <"Address line">
 				description = <"Address line">
 			>
-			["at0012"] = <
+			["id13"] = <
 				text = <"Line number">
 				description = <"Line number">
 			>
-			["at0013"] = <
+			["id14"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0014"] = <
+			["id15"] = <
 				text = <"Type">
 				description = <"Type">
 			>
-			["at0015"] = <
+			["id16"] = <
 				text = <"Address part">
 				description = <"Address part">
 			>
-			["at0016"] = <
+			["id17"] = <
 				text = <"Part number">
 				description = <"Part number">
 			>
-			["at0017"] = <
+			["id18"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["at0018"] = <
+			["id19"] = <
 				text = <"Type">
 				description = <"Type">
 			>
@@ -188,26 +189,24 @@ ontology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			items = <
-				["at0000"] = <[SNOMED-CT::397635003]>
-				["at0001"] = <[SNOMED-CT::138875005]>
-				["at0002"] = <[SNOMED-CT::138875005]>
-				["at0003"] = <[SNOMED-CT::138875005]>
-				["at0004"] = <[SNOMED-CT::138875005]>
-				["at0005"] = <[SNOMED-CT::138875005]>
-				["at0006"] = <[SNOMED-CT::138875005]>
-				["at0007"] = <[SNOMED-CT::138875005]>
-				["at0008"] = <[SNOMED-CT::138875005]>
-				["at0009"] = <[SNOMED-CT::138875005]>
-				["at0010"] = <[SNOMED-CT::138875005]>
-				["at0011"] = <[SNOMED-CT::138875005]>
-				["at0012"] = <[SNOMED-CT::138875005]>
-				["at0013"] = <[SNOMED-CT::138875005]>
-				["at0014"] = <[SNOMED-CT::138875005]>
-				["at0015"] = <[SNOMED-CT::138875005]>
-				["at0016"] = <[SNOMED-CT::48176007]>
-				["at0017"] = <[SNOMED-CT::129264002]>
-				["at0018"] = <[SNOMED-CT::48176007]>
-			>
+			["id1"] = <http://snomedct.info/id/397635003>
+			["id2"] = <http://snomedct.info/id/138875005>
+			["id3"] = <http://snomedct.info/id/138875005>
+			["id4"] = <http://snomedct.info/id/138875005>
+			["id5"] = <http://snomedct.info/id/138875005>
+			["id6"] = <http://snomedct.info/id/138875005>
+			["id7"] = <http://snomedct.info/id/138875005>
+			["id8"] = <http://snomedct.info/id/138875005>
+			["id9"] = <http://snomedct.info/id/138875005>
+			["id10"] = <http://snomedct.info/id/138875005>
+			["id11"] = <http://snomedct.info/id/138875005>
+			["id12"] = <http://snomedct.info/id/138875005>
+			["id13"] = <http://snomedct.info/id/138875005>
+			["id14"] = <http://snomedct.info/id/138875005>
+			["id15"] = <http://snomedct.info/id/138875005>
+			["id16"] = <http://snomedct.info/id/138875005>
+			["id17"] = <http://snomedct.info/id/48176007>
+			["id18"] = <http://snomedct.info/id/129264002>
+			["id19"] = <http://snomedct.info/id/48176007>
 		>
 	>
