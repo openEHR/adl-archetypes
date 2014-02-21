@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1; generated)
-	CIMI-CORE-ROLE.role.v1.0.0
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-ROLE.role.v1
 
 specialize
 	CIMI-CORE-PARTY.party.v1
@@ -11,57 +11,56 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"???">
-		>
+			>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"initial">
 
 definition
-	ROLE[id1.1] matches {	-- Role
+	ROLE[at0000.1] matches { -- Role
 		details matches {
-			ELEMENT[id0.1] occurrences matches {1} matches {	-- Role type
+			ELEMENT[at0.1] occurrences matches {1} matches { -- Role type
 				value matches {
-					CODED_TEXT[id0.5] 
+					CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Datetime range
+			ELEMENT[at0.2] occurrences matches {0..1} matches { -- Datetime range
 				value matches {
-					INTERVAL_VALUE<DATE>[id0.6] 
+					INTERVAL_VALUE<DATE> matches {*}
 				}
 			}
-			ELEMENT[id0.3] occurrences matches {0..*} matches {	-- Confidentialty level
+			ELEMENT[at0.3] occurrences matches {0..*} matches { -- Confidentialty level
 				value matches {
-					CODED_TEXT[id0.7] 
+					CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Status
+			ELEMENT[at0.4] occurrences matches {0..1} matches { -- Status
 				value matches {
-					CODED_TEXT[id0.8] 
+					CODED_TEXT matches {*}
 				}
 			}
 		}
 	}
 
-terminology
+ontology
 	term_definitions = <
 		["en"] = <
-			["id1.1"] = <
+			["at0000.1"] = <
 				text = <"Role">
 				description = <"Role">
 			>
-			["id0.1"] = <
+			["at0.1"] = <
 				text = <"Role type">
 				description = <"Role type">
 			>
-			["id0.2"] = <
+			["at0.2"] = <
 				text = <"Datetime range">
 				description = <"Datetime range">
 			>
-			["id0.3"] = <
+			["at0.3"] = <
 				text = <"Confidentialty level">
 				description = <"Confidentialty level">
 			>
-			["id0.4"] = <
+			["at0.4"] = <
 				text = <"Status">
 				description = <"Status">
 			>
@@ -69,10 +68,12 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id1.1"] = <http://snomedct.info/id/138875005>
-			["id0.1"] = <http://snomedct.info/id/138875005>
-			["id0.2"] = <http://snomedct.info/id/138875005>
-			["id0.3"] = <http://snomedct.info/id/138875005>
-			["id0.4"] = <http://snomedct.info/id/138875005>
+			items = <
+				["at0000.1"] = <[SNOMED-CT::138875005]>
+				["at0.1"] = <[SNOMED-CT::138875005]>
+				["at0.2"] = <[SNOMED-CT::138875005]>
+				["at0.3"] = <[SNOMED-CT::138875005]>
+				["at0.4"] = <[SNOMED-CT::138875005]>
+			>
 		>
 	>

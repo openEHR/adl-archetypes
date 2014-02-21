@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1; generated)
-	CIMI-CORE-CLUSTER.observe_action.v1.0.0
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.observe_action.v1
 
 specialize
 	CIMI-CORE-CLUSTER.action.v1
@@ -11,92 +11,91 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"???">
-		>
+			>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"initial">
 
 definition
-	CLUSTER[id1.1] matches {	-- Observe Action
+	CLUSTER[at0000.1] matches { -- Observe Action
 		/item matches {
-			ELEMENT[id0.1] occurrences matches {1} matches {	-- Action type
+			ELEMENT[at0.1] occurrences matches {1} matches { -- Action type
 				value matches {
-					CODED_TEXT[id0.15] 
+					CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Observation datetime
+			ELEMENT[at0.2] occurrences matches {0..1} matches { -- Observation datetime
 				value matches {
-					DATE_TIME[id0.16] 
+					DATE_TIME matches {*}
 				}
 			}
-			ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Observation datetime range
+			ELEMENT[at0.3] occurrences matches {0..1} matches { -- Observation datetime range
 				value matches {
-					INTERVAL_VALUE<DATE_TIME>[id0.17] 
+					INTERVAL_VALUE<DATE_TIME> matches {*}
 				}
 			}
-			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Observation duration
+			ELEMENT[at0.4] occurrences matches {0..1} matches { -- Observation duration
 				value matches {
-					DURATION[id0.18] 
+					DURATION matches {*}
 				}
 			}
-			ELEMENT[id0.5] occurrences matches {0..1} matches {	-- Observation timing offset
+			ELEMENT[at0.5] occurrences matches {0..1} matches { -- Observation timing offset
 				value matches {
-					DURATION[id0.19] 
+					DURATION matches {*}
 				}
 			}
-			ELEMENT[id0.6] occurrences matches {0..1} matches {	-- Observation timing offset origin
+			ELEMENT[at0.6] occurrences matches {0..1} matches { -- Observation timing offset origin
 				value matches {
-					DATE_TIME[id0.20] 
+					DATE_TIME matches {*}
 				}
 			}
 		}
 		participation matches {
-			PARTICIPATION[id0.7] occurrences matches {0..*} 	-- Observer
-			PARTICIPATION[id0.8] occurrences matches {0..1} 	-- Locationof subject
-			PARTICIPATION[id0.9] occurrences matches {0..1} 	-- Locationof observer
+			PARTICIPATION[at0.7] occurrences matches {0..*} -- Observer
+			PARTICIPATION[at0.8] occurrences matches {0..1} -- Locationof subject
+			PARTICIPATION[at0.9] occurrences matches {0..1} -- Locationof observer
 		}
 	}
 
-terminology
+ontology
 	term_definitions = <
 		["en"] = <
-			["id1.1"] = <
+			["at0000.1"] = <
 				text = <"Observe Action">
 				description = <"Observe Action">
 			>
-			["id0.1"] = <
+			["at0.1"] = <
 				text = <"Action type">
 				description = <"Action type">
 			>
-			["id0.2"] = <
+			["at0.2"] = <
 				text = <"Observation datetime">
 				description = <"Observation datetime">
 			>
-			["id0.3"] = <
+			["at0.3"] = <
 				text = <"Observation datetime range">
 				description = <"Observation datetime range">
 			>
-			["id0.4"] = <
+			["at0.4"] = <
 				text = <"Observation duration">
 				description = <"Observation duration">
 			>
-			["id0.5"] = <
+			["at0.5"] = <
 				text = <"Observation timing offset">
 				description = <"Observation timing offset">
 			>
-			["id0.6"] = <
+			["at0.6"] = <
 				text = <"Observation timing offset origin">
 				description = <"Observation timing offset origin">
 			>
-			["id0.7"] = <
+			["at0.7"] = <
 				text = <"Observer">
 				description = <"Observer">
 			>
-			["id0.8"] = <
+			["at0.8"] = <
 				text = <"Locationof subject">
 				description = <"Locationof subject">
 			>
-			["id0.9"] = <
+			["at0.9"] = <
 				text = <"Locationof observer">
 				description = <"Locationof observer">
 			>
@@ -104,13 +103,15 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id0.1"] = <http://snomedct.info/id/129264002>
-			["id0.2"] = <http://snomedct.info/id/129268004>
-			["id0.3"] = <http://snomedct.info/id/252129004>
-			["id0.4"] = <http://snomedct.info/id/252131008>
-			["id0.5"] = <http://snomedct.info/id/442371002>
-			["id0.6"] = <http://snomedct.info/id/125676002>
-			["id0.7"] = <http://snomedct.info/id/308916002>
-			["id0.8"] = <http://snomedct.info/id/308916002>
+			items = <
+				["at0.1"] = <[SNOMED-CT::129264002]>
+				["at0.2"] = <[SNOMED-CT::129268004]>
+				["at0.3"] = <[SNOMED-CT::252129004]>
+				["at0.4"] = <[SNOMED-CT::252131008]>
+				["at0.5"] = <[SNOMED-CT::442371002]>
+				["at0.6"] = <[SNOMED-CT::125676002]>
+				["at0.7"] = <[SNOMED-CT::308916002]>
+				["at0.8"] = <[SNOMED-CT::308916002]>
+			>
 		>
 	>

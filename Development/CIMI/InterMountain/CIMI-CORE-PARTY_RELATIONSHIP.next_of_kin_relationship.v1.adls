@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1; generated)
-	CIMI-CORE-PARTY_RELATIONSHIP.next_of_kin_relationship.v1.0.0
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-PARTY_RELATIONSHIP.next_of_kin_relationship.v1
 
 specialize
 	CIMI-CORE-PARTY_RELATIONSHIP.party_relationship.v1
@@ -11,57 +11,56 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"???">
-		>
+			>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"initial">
 
 definition
-	PARTY_RELATIONSHIP[id1.1] matches {	-- Next of kin
+	PARTY_RELATIONSHIP[at0000.1] matches { -- Next of kin
 		details matches {
-			ELEMENT[id0.1] occurrences matches {0..1} matches {	-- Datetime range
+			ELEMENT[at0.1] occurrences matches {0..1} matches { -- Datetime range
 				value matches {
-					INTERVAL_VALUE<DATE_TIME>[id0.13] 
+					INTERVAL_VALUE<DATE_TIME> matches {*}
 				}
 			}
-			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Status
+			ELEMENT[at0.2] occurrences matches {0..1} matches { -- Status
 				value matches {
-					CODED_TEXT[id0.14] 
+					CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[id0.3] occurrences matches {0..*} matches {	-- Identifier
+			ELEMENT[at0.3] occurrences matches {0..*} matches { -- Identifier
 				value matches {
-					IDENTIFIER[id0.15] 
+					IDENTIFIER matches {*}
 				}
 			}
-			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Priority
+			ELEMENT[at0.4] occurrences matches {0..1} matches { -- Priority
 				value matches {
-					COUNT[id0.16] 
+					COUNT matches {*}
 				}
 			}
 		}
 	}
 
-terminology
+ontology
 	term_definitions = <
 		["en"] = <
-			["id1.1"] = <
+			["at0000.1"] = <
 				text = <"Next of kin">
 				description = <"Next of kin">
 			>
-			["id0.1"] = <
+			["at0.1"] = <
 				text = <"Datetime range">
 				description = <"Datetime range">
 			>
-			["id0.2"] = <
+			["at0.2"] = <
 				text = <"Status">
 				description = <"Status">
 			>
-			["id0.3"] = <
+			["at0.3"] = <
 				text = <"Identifier">
 				description = <"Identifier">
 			>
-			["id0.4"] = <
+			["at0.4"] = <
 				text = <"Priority">
 				description = <"Priority">
 			>
@@ -69,9 +68,11 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id0.1"] = <http://snomedct.info/id/138875005>
-			["id0.2"] = <http://snomedct.info/id/138875005>
-			["id0.3"] = <http://snomedct.info/id/138875005>
-			["id0.4"] = <http://snomedct.info/id/138875005>
+			items = <
+				["at0.1"] = <[SNOMED-CT::138875005]>
+				["at0.2"] = <[SNOMED-CT::138875005]>
+				["at0.3"] = <[SNOMED-CT::138875005]>
+				["at0.4"] = <[SNOMED-CT::138875005]>
+			>
 		>
 	>

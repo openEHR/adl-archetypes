@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1; generated)
-	CIMI-CORE-PARTY.party.v1.0.0
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-PARTY.party.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,53 +8,51 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"???">
-		>
+			>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"initial">
 
 definition
-	PARTY[id1] matches {	-- Party
+	PARTY[at0000] matches { -- Party
 		details matches {
-			CLUSTER[id2] occurrences matches {0..*} matches {	-- Identifier
-				item matches {
-					ELEMENT[id3] occurrences matches {1} matches {	-- Value
-						value matches {
-							IDENTIFIER[id5] 
-						}
+			CLUSTER[at0001] occurrences matches {0..*} matches {  -- Identifier
+			item matches {
+				ELEMENT[at0002] occurrences matches {1} matches { -- Value
+					value matches {
+						IDENTIFIER matches {*}
 					}
 				}
-			}
-			use_archetype CLUSTER[CIMI-CORE-CLUSTER.party_name.v1] 
-			use_archetype CLUSTER[CIMI-CORE-CLUSTER.address.v2] 
-			use_archetype CLUSTER[CIMI-CORE-CLUSTER.electronic_contact.v1] 
-			ELEMENT[id4] occurrences matches {1} matches {	-- Party type
+			}}
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.party_name.v1] -- Name
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.address.v2] -- Address
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.electronic_contact.v1] -- Contact
+			ELEMENT[at0003] occurrences matches {1} matches { -- Party type
 				value matches {
-					CODED_TEXT[id6] 
+					CODED_TEXT matches {*}
 				}
 			}
 		}
 		relationship matches {
-			use_archetype PARTY_RELATIONSHIP[CIMI-CORE-PARTY_RELATIONSHIP.party_relationship.v1] 
+			use_archetype PARTY_RELATIONSHIP [CIMI-CORE-PARTY_RELATIONSHIP.party_relationship.v1] -- Relationship
 		}
 	}
 
-terminology
+ontology
 	term_definitions = <
 		["en"] = <
-			["id1"] = <
+			["at0000"] = <
 				text = <"Party">
 				description = <"Party">
 			>
-			["id2"] = <
+			["at0001"] = <
 				text = <"Identifier">
 				description = <"Identifier">
 			>
-			["id3"] = <
+			["at0002"] = <
 				text = <"Value">
 				description = <"Value">
 			>
-			["id4"] = <
+			["at0003"] = <
 				text = <"Party type">
 				description = <"Party type">
 			>
@@ -62,9 +60,11 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id1"] = <http://snomedct.info/id/138875005>
-			["id2"] = <http://snomedct.info/id/138875005>
-			["id3"] = <http://snomedct.info/id/138875005>
-			["id4"] = <http://snomedct.info/id/138875005>
+			items = <
+				["at0000"] = <[SNOMED-CT::138875005]>
+				["at0001"] = <[SNOMED-CT::138875005]>
+				["at0002"] = <[SNOMED-CT::138875005]>
+				["at0003"] = <[SNOMED-CT::138875005]>
+			>
 		>
 	>

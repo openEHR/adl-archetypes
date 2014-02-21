@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1; generated)
-	CIMI-CORE-CLUSTER.verify_birthdate_action.v1.0.0
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.verify_birthdate_action.v1
 
 specialize
 	CIMI-CORE-CLUSTER.action.v1
@@ -11,92 +11,91 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"???">
-		>
+			>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"initial">
 
 definition
-	CLUSTER[id1.1] matches {	-- Verify birthdate action
+	CLUSTER[at0000.1] matches { -- Verify birthdate action
 		/item matches {
-			ELEMENT[id0.1] occurrences matches {1} matches {	-- Action type
+			ELEMENT[at0.1] occurrences matches {1} matches { -- Action type
 				value matches {
-					CODED_TEXT[id0.40] 
+					CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Verify birthdate datetime
+			ELEMENT[at0.2] occurrences matches {0..1} matches { -- Verify birthdate datetime
 				value matches {
-					DATE_TIME[id0.41] 
+					DATE_TIME matches {*}
 				}
 			}
-			ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Verify birthdate datetime range
+			ELEMENT[at0.3] occurrences matches {0..1} matches { -- Verify birthdate datetime range
 				value matches {
-					INTERVAL_VALUE<DATE_TIME>[id0.42] 
+					INTERVAL_VALUE<DATE_TIME> matches {*}
 				}
 			}
-			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Verify birthdate duration
+			ELEMENT[at0.4] occurrences matches {0..1} matches { -- Verify birthdate duration
 				value matches {
-					DURATION[id0.43] 
+					DURATION matches {*}
 				}
 			}
-			ELEMENT[id0.5] occurrences matches {0..1} matches {	-- Verify birthdate timing offset
+			ELEMENT[at0.5] occurrences matches {0..1} matches { -- Verify birthdate timing offset
 				value matches {
-					DURATION[id0.44] 
+					DURATION matches {*}
 				}
 			}
-			ELEMENT[id0.6] occurrences matches {0..1} matches {	-- Verify birthdate timing offset origin
+			ELEMENT[at0.6] occurrences matches {0..1} matches { -- Verify birthdate timing offset origin
 				value matches {
-					DATE_TIME[id0.45] 
+					DATE_TIME matches {*}
 				}
 			}
 		}
 		participation matches {
-			PARTICIPATION[id0.7] occurrences matches {0..*} 	-- Verifier
-			PARTICIPATION[id0.8] occurrences matches {0..1} 	-- Locationof subject
-			PARTICIPATION[id0.9] occurrences matches {0..1} 	-- Locationof verifier
+			PARTICIPATION[at0.7] occurrences matches {0..*} -- Verifier
+			PARTICIPATION[at0.8] occurrences matches {0..1} -- Locationof subject
+			PARTICIPATION[at0.9] occurrences matches {0..1} -- Locationof verifier
 		}
 	}
 
-terminology
+ontology
 	term_definitions = <
 		["en"] = <
-			["id1.1"] = <
+			["at0000.1"] = <
 				text = <"Verify birthdate action">
 				description = <"Verify birthdate action">
 			>
-			["id0.1"] = <
+			["at0.1"] = <
 				text = <"Action type">
 				description = <"Action type">
 			>
-			["id0.2"] = <
+			["at0.2"] = <
 				text = <"Verify birthdate datetime">
 				description = <"Verify birthdate datetime">
 			>
-			["id0.3"] = <
+			["at0.3"] = <
 				text = <"Verify birthdate datetime range">
 				description = <"Verify birthdate datetime range">
 			>
-			["id0.4"] = <
+			["at0.4"] = <
 				text = <"Verify birthdate duration">
 				description = <"Verify birthdate duration">
 			>
-			["id0.5"] = <
+			["at0.5"] = <
 				text = <"Verify birthdate timing offset">
 				description = <"Verify birthdate timing offset">
 			>
-			["id0.6"] = <
+			["at0.6"] = <
 				text = <"Verify birthdate timing offset origin">
 				description = <"Verify birthdate timing offset origin">
 			>
-			["id0.7"] = <
+			["at0.7"] = <
 				text = <"Verifier">
 				description = <"Verifier">
 			>
-			["id0.8"] = <
+			["at0.8"] = <
 				text = <"Locationof subject">
 				description = <"Locationof subject">
 			>
-			["id0.9"] = <
+			["at0.9"] = <
 				text = <"Locationof verifier">
 				description = <"Locationof verifier">
 			>
@@ -104,10 +103,12 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id0.1"] = <http://snomedct.info/id/364713004>
-			["id0.2"] = <http://snomedct.info/id/364713004>
-			["id0.3"] = <http://snomedct.info/id/48176007>
-			["id0.4"] = <http://snomedct.info/id/308916002>
-			["id0.5"] = <http://snomedct.info/id/308916002>
+			items = <
+				["at0.1"] = <[SNOMED-CT::364713004]>
+				["at0.2"] = <[SNOMED-CT::364713004]>
+				["at0.3"] = <[SNOMED-CT::48176007]>
+				["at0.4"] = <[SNOMED-CT::308916002]>
+				["at0.5"] = <[SNOMED-CT::308916002]>
+			>
 		>
 	>

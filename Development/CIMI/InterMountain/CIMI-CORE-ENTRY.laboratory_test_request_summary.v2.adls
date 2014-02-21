@@ -22,7 +22,7 @@ definition
 			use_archetype CLUSTER [CIMI-CORE-CLUSTER.laboratory_test_observable.v1] -- Test requested
 		}
 		link matches {
-			LINK[at0.0.0..1] occurrences matches {0..*} -- Requested laboratory test link
+			LINK[at0.0.0.0.1] occurrences matches {0..*} -- Requested laboratory test link
 		}
 	}
 
@@ -33,7 +33,7 @@ ontology
 				text = <"Laboratory Test Request Summary">
 				description = <"Laboratory Test Request Summary">
 			>
-			["at0.0.0..1"] = <
+			["at0.0.0.0.1"] = <
 				text = <"Requested laboratory test link">
 				description = <"Requested laboratory test link">
 			>
@@ -43,7 +43,7 @@ ontology
 		["SNOMED-CT"] = <
 			items = <
 				["at0000.1.1.1.1"] = <[SNOMED-CT::394838008]>
-				["at0.0.0..1"] = <[SNOMED-CT::364712009]>
+				["at0.0.0.0.1"] = <[SNOMED-CT::364712009]>
 			>
 		>
 	>

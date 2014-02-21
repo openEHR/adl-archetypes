@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1; generated)
-	CIMI-CORE-CLUSTER.hemoglobin_in_blood.v1.0.0
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.hemoglobin_in_blood.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,39 +8,38 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"???">
-		>
+			>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"initial">
 
 definition
-	CLUSTER[id1] matches {	-- Hemoglobin in blood
+	CLUSTER[at0000] matches { -- Hemoglobin in blood
 		item matches {
-			ELEMENT[id4] occurrences matches {1} matches {	-- Name
+			ELEMENT[at0003] occurrences matches {1} matches { -- Name
 				value matches {
-					TEXT[id6] 
+					TEXT matches {*}
 				}
 			}
-			ELEMENT[id5] occurrences matches {1} matches {	-- Result value
+			ELEMENT[at0004] occurrences matches {1} matches { -- Result value
 				value matches {
-					QUANTITY[id7] 
+					QUANTITY matches {*}
 				}
 			}
 		}
 	}
 
-terminology
+ontology
 	term_definitions = <
 		["en"] = <
-			["id1"] = <
+			["at0000"] = <
 				text = <"Hemoglobin in blood">
 				description = <"Hemoglobin in blood">
 			>
-			["id4"] = <
+			["at0003"] = <
 				text = <"Name">
 				description = <"Name">
 			>
-			["id5"] = <
+			["at0004"] = <
 				text = <"Result value">
 				description = <"Result value">
 			>
@@ -48,7 +47,9 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id4"] = <http://snomedct.info/id/138875005>
-			["id5"] = <http://snomedct.info/id/138875005>
+			items = <
+				["at0003"] = <[SNOMED-CT::138875005]>
+				["at0004"] = <[SNOMED-CT::138875005]>
+			>
 		>
 	>

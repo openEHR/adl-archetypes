@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1; generated)
-	CIMI-CORE-CLUSTER.finding_item.v1.0.0
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.finding_item.v1
 
 specialize
 	CIMI-CORE-CLUSTER.finding.v1
@@ -11,76 +11,75 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"???">
-		>
+			>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"initial">
 
 definition
-	CLUSTER[id1.1] matches {	-- Finding Item
+	CLUSTER[at0000.1] matches { -- Finding Item
 		/item matches {
-			ELEMENT[id0.1] occurrences matches {0..1} matches {	-- Finding value
+			ELEMENT[at0.1] occurrences matches {0..1} matches { -- Finding value
 				value matches {
-					DATA_VALUE[id0.2] 	-- Normal range
+					DATA_VALUE matches {*}
 				}
 			}
-			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Normal range
+			ELEMENT[at0.2] occurrences matches {0..1} matches { -- Normal range
 				value matches {
-					INTERVAL_VALUE<DATE_TIME>[id0.3] 	-- Delta flag
+					INTERVAL_VALUE<DATE_TIME> matches {*}
 				}
 			}
-			use_archetype CLUSTER[CIMI-CORE-CLUSTER.reference_range.v1] 
-			ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Delta flag
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.reference_range.v1] -- Reference range
+			ELEMENT[at0.3] occurrences matches {0..1} matches { -- Delta flag
 				value matches {
-					CODED_TEXT[id0.4] 	-- Signal flag
+					CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Signal flag
+			ELEMENT[at0.4] occurrences matches {0..1} matches { -- Signal flag
 				value matches {
-					CODED_TEXT[id0.5] 	-- Confidence
+					CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[id0.5] occurrences matches {0..1} matches {	-- Confidence
+			ELEMENT[at0.5] occurrences matches {0..1} matches { -- Confidence
 				value matches {
-					TEXT[id0.6] 	-- Method
+					TEXT matches {*}
 				}
 			}
-			ELEMENT[id0.6] occurrences matches {0..*} matches {	-- Method
+			ELEMENT[at0.6] occurrences matches {0..*} matches { -- Method
 				value matches {
-					TEXT[id0.7] 
+					TEXT matches {*}
 				}
 			}
 		}
 	}
 
-terminology
+ontology
 	term_definitions = <
 		["en"] = <
-			["id1.1"] = <
+			["at0000.1"] = <
 				text = <"Finding Item">
 				description = <"Finding Item">
 			>
-			["id0.1"] = <
+			["at0.1"] = <
 				text = <"Finding value">
 				description = <"Finding value">
 			>
-			["id0.2"] = <
+			["at0.2"] = <
 				text = <"Normal range">
 				description = <"Normal range">
 			>
-			["id0.3"] = <
+			["at0.3"] = <
 				text = <"Delta flag">
 				description = <"Delta flag">
 			>
-			["id0.4"] = <
+			["at0.4"] = <
 				text = <"Signal flag">
 				description = <"Signal flag">
 			>
-			["id0.5"] = <
+			["at0.5"] = <
 				text = <"Confidence">
 				description = <"Confidence">
 			>
-			["id0.6"] = <
+			["at0.6"] = <
 				text = <"Method">
 				description = <"Method">
 			>
@@ -88,12 +87,14 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id1.1"] = <http://snomedct.info/id/404684003>
-			["id0.1"] = <http://snomedct.info/id/404684003>
-			["id0.2"] = <http://snomedct.info/id/138875005>
-			["id0.3"] = <http://snomedct.info/id/288533004>
-			["id0.4"] = <http://snomedct.info/id/288533004>
-			["id0.5"] = <http://snomedct.info/id/138875005>
-			["id0.6"] = <http://snomedct.info/id/138875005>
+			items = <
+				["at0000.1"] = <[SNOMED-CT::404684003]>
+				["at0.1"] = <[SNOMED-CT::404684003]>
+				["at0.2"] = <[SNOMED-CT::138875005]>
+				["at0.3"] = <[SNOMED-CT::288533004]>
+				["at0.4"] = <[SNOMED-CT::288533004]>
+				["at0.5"] = <[SNOMED-CT::138875005]>
+				["at0.6"] = <[SNOMED-CT::138875005]>
+			>
 		>
 	>

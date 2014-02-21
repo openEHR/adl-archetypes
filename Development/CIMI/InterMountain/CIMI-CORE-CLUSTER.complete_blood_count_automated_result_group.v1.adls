@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1; generated)
-	CIMI-CORE-CLUSTER.complete_blood_count_automated_result_group.v1.0.0
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.complete_blood_count_automated_result_group.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,35 +8,34 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"???">
-		>
+			>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"initial">
 
 definition
-	CLUSTER[id1] matches {	-- Complete blood count by automated count
+	CLUSTER[at0000] matches { -- Complete blood count by automated count
 		item matches {
-			ELEMENT[id4] occurrences matches {1} matches {	-- Name
+			ELEMENT[at0003] occurrences matches {1} matches { -- Name
 				value matches {
-					TEXT[id5] 
+					TEXT matches {*}
 				}
 			}
-			use_archetype CLUSTER[CIMI-CORE-CLUSTER.leukocytes_in_blood_automated.v1] 
-			use_archetype CLUSTER[CIMI-CORE-CLUSTER.erythrocytes_in_blood_automated.v1] 
-			use_archetype CLUSTER[CIMI-CORE-CLUSTER.hemoglobin_in_blood.v1] 
-			use_archetype CLUSTER[CIMI-CORE-CLUSTER.hematocrit_of_blood_automated.v1] 
-			use_archetype CLUSTER[CIMI-CORE-CLUSTER.erythrocyte_mean_corpuscular_volume_automated.v1] 
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.leukocytes_in_blood_automated.v1] -- Leukocytes in blood by automated count
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.erythrocytes_in_blood_automated.v1] -- Erythrocytes in blood by automated count
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.hemoglobin_in_blood.v1] -- Hemoglobin in blood
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.hematocrit_of_blood_automated.v1] -- Hematocrit of blood by automated count
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.erythrocyte_mean_corpuscular_volume_automated.v1] -- Erythrocyte mean corpuscular volume by automated count
 		}
 	}
 
-terminology
+ontology
 	term_definitions = <
 		["en"] = <
-			["id1"] = <
+			["at0000"] = <
 				text = <"Complete blood count by automated count">
 				description = <"Complete blood count by automated count">
 			>
-			["id4"] = <
+			["at0003"] = <
 				text = <"Name">
 				description = <"Name">
 			>
@@ -44,5 +43,7 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
+			items = <
+			>
 		>
 	>

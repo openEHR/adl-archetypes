@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1; generated)
-	CIMI-CORE-CLUSTER.material_entity.v1.0.0
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.material_entity.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,48 +8,47 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"???">
-		>
+			>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"initial">
 
 definition
-	CLUSTER[id1] matches {	-- Material Entity
+	CLUSTER[at0000] matches { -- Material Entity
 		item matches {
-			ELEMENT[id2] occurrences matches {0..*} matches {	-- Identifier
+			ELEMENT[at0001] occurrences matches {0..*} matches { -- Identifier
 				value matches {
-					IDENTIFIER[id5] 
+					IDENTIFIER matches {*}
 				}
 			}
-			ELEMENT[id3] occurrences matches {0..1} matches {	-- Name
+			ELEMENT[at0002] occurrences matches {0..1} matches { -- Name
 				value matches {
-					TEXT[id6] 
+					TEXT matches {*}
 				}
 			}
-			ELEMENT[id4] occurrences matches {0..*} matches {	-- Description
+			ELEMENT[at0003] occurrences matches {0..*} matches { -- Description
 				value matches {
-					TEXT[id7] 
+					TEXT matches {*}
 				}
 			}
 		}
 	}
 
-terminology
+ontology
 	term_definitions = <
 		["en"] = <
-			["id1"] = <
+			["at0000"] = <
 				text = <"Material Entity">
 				description = <"Material Entity">
 			>
-			["id2"] = <
+			["at0001"] = <
 				text = <"Identifier">
 				description = <"Identifier">
 			>
-			["id3"] = <
+			["at0002"] = <
 				text = <"Name">
 				description = <"Name">
 			>
-			["id4"] = <
+			["at0003"] = <
 				text = <"Description">
 				description = <"Description">
 			>
@@ -57,9 +56,11 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id1"] = <http://snomedct.info/id/123037004>
-			["id2"] = <http://snomedct.info/id/423901009>
-			["id3"] = <http://snomedct.info/id/123037004>
-			["id4"] = <http://snomedct.info/id/123037004>
+			items = <
+				["at0000"] = <[SNOMED-CT::123037004]>
+				["at0001"] = <[SNOMED-CT::423901009]>
+				["at0002"] = <[SNOMED-CT::123037004]>
+				["at0003"] = <[SNOMED-CT::123037004]>
+			>
 		>
 	>

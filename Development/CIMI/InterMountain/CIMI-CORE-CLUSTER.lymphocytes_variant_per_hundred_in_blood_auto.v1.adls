@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1; generated)
-	CIMI-CORE-CLUSTER.lymphocytes_variant_per_hundred_in_blood_auto.v1.0.0
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-CLUSTER.lymphocytes_variant_per_hundred_in_blood_auto.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -8,39 +8,38 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"???">
-		>
+			>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"initial">
 
 definition
-	CLUSTER[id1] matches {	-- Lymphocytes variant per hundred leukocytes in blood by automated count
+	CLUSTER[at0000] matches { -- Lymphocytes variant per hundred leukocytes in blood by automated count
 		item matches {
-			ELEMENT[id3] occurrences matches {1} matches {	-- Name
+			ELEMENT[at0002] occurrences matches {1} matches { -- Name
 				value matches {
-					TEXT[id5] 
+					TEXT matches {*}
 				}
 			}
-			ELEMENT[id4] occurrences matches {1} matches {	-- Result value
+			ELEMENT[at0003] occurrences matches {1} matches { -- Result value
 				value matches {
-					QUANTITY[id6] 
+					QUANTITY matches {*}
 				}
 			}
 		}
 	}
 
-terminology
+ontology
 	term_definitions = <
 		["en"] = <
-			["id1"] = <
+			["at0000"] = <
 				text = <"Lymphocytes variant per hundred leukocytes in blood by automated count">
 				description = <"Lymphocytes variant per hundred leukocytes in blood by automated count">
 			>
-			["id3"] = <
+			["at0002"] = <
 				text = <"Name">
 				description = <"Name">
 			>
-			["id4"] = <
+			["at0003"] = <
 				text = <"Result value">
 				description = <"Result value">
 			>
@@ -48,7 +47,9 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id3"] = <http://snomedct.info/id/138875005>
-			["id4"] = <http://snomedct.info/id/138875005>
+			items = <
+				["at0002"] = <[SNOMED-CT::138875005]>
+				["at0003"] = <[SNOMED-CT::138875005]>
+			>
 		>
 	>

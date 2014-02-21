@@ -18,7 +18,7 @@ description
 definition
 	ENTRY[at0000.1.1.1.1]  -- Complete Blood Count With Auto Differential
 		data matches {
-			CLUSTER[at0.0.0..1] occurrences matches {0..1} matches { -- Test results
+			CLUSTER[at0.0.0.0.1] occurrences matches {0..1} matches { -- Test results
 			item matches {
 				use_archetype CLUSTER [CIMI-CORE-CLUSTER.auto_differential_panel_blood_result_group.v1] -- Auto differential panel blood
 				use_archetype CLUSTER [CIMI-CORE-CLUSTER.laboratory_test_result_group.v1] -- Result subgroup
@@ -34,7 +34,7 @@ ontology
 				text = <"Complete Blood Count With Auto Differential">
 				description = <"Complete Blood Count With Auto Differential">
 			>
-			["at0.0.0..1"] = <
+			["at0.0.0.0.1"] = <
 				text = <"Test results REF<CIMI-CORE-CLUSTER.complete_blood_count_auto_diff_result_group>">
 				description = <"Test results REF<CIMI-CORE-CLUSTER.complete_blood_count_auto_diff_result_group>">
 			>
