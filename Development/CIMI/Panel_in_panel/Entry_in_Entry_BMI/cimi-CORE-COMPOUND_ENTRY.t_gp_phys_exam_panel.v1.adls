@@ -2,7 +2,7 @@ template (adl_version=1.5.1)
 	CIMI-Core-COMPOUND_ENTRY.t_gp_phys_exam_panel.v1.0.0
 
 specialize
-	CIMI-Core-COMPOUND_ENTRY.gp_panel.v1.0.0
+	CIMI-Core-COMPOUND_ENTRY.gp_panel.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -24,13 +24,13 @@ description
 	lifecycle_state = <"unmanaged">
 
 definition
-	COMPOUND_ENTRY[id1.1] matches {	-- Templated panel
+	COMPOUND_ENTRY[id1.1] matches {	-- Bedside  panel
 		/parts[id2]/parts matches {
-			use_archetype INDIVISIBLE_ENTRY[id3, CIMI-Core-INDIVISIBLE_ENTRY.body_weight.v1.0.108]  occurrences matches {1}
+			use_archetype INDIVISIBLE_ENTRY[id3, CIMI-Core-INDIVISIBLE_ENTRY.body_weight.v1.0.108] occurrences matches {1} 
 			allow_archetype INDIVISIBLE_ENTRY[id3.1] closed 	-- Closed slot
 		}
 		/parts matches {
-			use_archetype INDIVISIBLE_ENTRY[id4, CIMI-Core-INDIVISIBLE_ENTRY.heart_rate.v0.7.1]  occurrences matches {1}
+			use_archetype INDIVISIBLE_ENTRY[id4, CIMI-Core-INDIVISIBLE_ENTRY.heart_rate.v0.7.1] occurrences matches {1} 
 			allow_archetype INDIVISIBLE_ENTRY[id4.1] closed 	-- Closed slot
 		}
 	}

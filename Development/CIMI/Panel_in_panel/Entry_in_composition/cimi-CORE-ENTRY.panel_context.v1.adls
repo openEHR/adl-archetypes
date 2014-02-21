@@ -1,0 +1,85 @@
+archetype (adl_version=1.5.1)
+	CIMI-Core-ENTRY.panel_context.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"CIMI">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"10/02/2014">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"CIMI Compund Entry that has slots for 'atomic' Entries">
+			copyright = <"© 2014 CIMI">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ENTRY[id1] matches {	-- Panel context
+		data matches {
+			ELEMENT[id2] matches {	-- Requester order id
+				value matches {
+					TEXT[id3] 
+				}
+			}
+			ELEMENT[id4] matches {	-- Panel status
+				value matches {[ac1]}		-- Panel statuses
+			}
+			ELEMENT[id6] matches {	-- Abnormal interpretation
+				value matches {
+					TEXT[id7] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Panel context">
+				description = <"Panel context">
+			>
+			["id2"] = <
+				text = <"Requester order id">
+				description = <"Requester order id">
+			>
+			["id4"] = <
+				text = <"Panel status">
+				description = <"Panel status">
+			>
+			["id6"] = <
+				text = <"Abnormal interpretation">
+				description = <"Abnormal interpretation">
+			>
+			["ac1"] = <
+				text = <"Panel statuses">
+				description = <"Panel statuses">
+			>
+			["at1"] = <
+				text = <"Complete">
+				description = <"Panel complete">
+			>
+			["at2"] = <
+				text = <"Interim">
+				description = <"Panel in interim state">
+			>
+		>
+	>
+	term_bindings = <
+		["snomedct"] = <
+			["id1"] = <http://snomedct.info/id/413139004>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at1", "at2">
+		>
+	>

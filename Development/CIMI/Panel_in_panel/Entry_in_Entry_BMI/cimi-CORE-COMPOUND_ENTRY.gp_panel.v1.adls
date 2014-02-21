@@ -21,17 +21,17 @@ description
 	lifecycle_state = <"unmanaged">
 
 definition
-	COMPOUND_ENTRY[id1] matches {	-- Multi-level panel
-                data matches {
-                        ELEMENT[id5] matches {
-                                 value matches {
-                                          TEXT[id6]
-                                 }
-                        }
-                        ELEMENT[id7] matches {
-                                 value matches {[ac1]}
-                        }
-                }
+	COMPOUND_ENTRY[id1] matches {	-- Bedside panel
+		data matches {
+			ELEMENT[id5] matches {	-- Panel order info
+				value matches {
+					TEXT[id6] 
+				}
+			}
+			ELEMENT[id7] matches {	-- Panel status
+				value matches {[ac1]}		-- Panel statuses
+			}
+		}
 		parts matches {
 			COMPOUND_ENTRY[id2] matches {	-- Physical Exam
 				parts matches {
@@ -94,9 +94,9 @@ terminology
 			["id1"] = <http://SCT.org/id/413139004>
 		>
 	>
-        value_sets = <
-                ["ac1"] = <
-                            id = <"ac1">
-                            members = <"at1", "at2">
-                >
-        >
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at1", "at2">
+		>
+	>

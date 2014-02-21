@@ -26,8 +26,8 @@ definition
 			ELEMENT[id2] occurrences matches {1} matches {	-- BodyHeight
 				value matches {
 					QUANTITY[id16] matches {
-						value  matches {|0.1..2.5|} 
-                                                units matches {[at1]}
+						value matches {|0.1..2.5|}
+						units matches {[at1]}
 					}
 				}
 			}

@@ -1,0 +1,91 @@
+archetype (adl_version=1.5.1)
+	CIMI-Core-COMPOSITION.lab_result_panel.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"CIMI">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"10/02/2014">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"CIMI Compund Entry that has slots for 'atomic' Entries">
+			copyright = <"© 2014 CIMI">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	COMPOSITION[id1] matches {	-- Multi-level panel
+		participation matches {
+			PARTICIPATION[id2] matches {	-- Panel Subject
+				function matches {[at1]}
+			}
+		}
+		content matches {
+			SECTION[id4] matches {	-- Panel context
+				item matches {
+					use_archetype ENTRY[CIMI-Core-ENTRY.panel_context.v1.0.0] occurrences matches {1} 
+				}
+			}
+			SECTION[id5] matches {	-- Level 1 Panel items
+				item matches {
+					allow_archetype ENTRY[id6] occurrences matches {0..*} matches {	-- Level 1 Panel item
+						include
+							archetype_id/value matches {/CIMI-Core-ENTRY\..*\.v1.*/}
+					}
+					SECTION[id7] matches {	-- Level 2 Panel items
+						item matches {
+							allow_archetype ENTRY[id8] occurrences matches {0..*} matches {	-- Level 2 Panel item
+								include
+									archetype_id/value matches {/CIMI-Core-ENTRY\..*\.v1.*/}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Multi-level panel">
+				description = <"Multi-level panel">
+			>
+			["id2"] = <
+				text = <"Panel Subject">
+				description = <"Subject of panel">
+			>
+			["id4"] = <
+				text = <"Panel context">
+				description = <"Panel context">
+			>
+			["id5"] = <
+				text = <"Level 1 Panel items">
+				description = <"Level 1 Panel items">
+			>
+			["id6"] = <
+				text = <"Level 1 Panel item">
+				description = <"Level 1 Panel item">
+			>
+			["id7"] = <
+				text = <"Level 2 Panel items">
+				description = <"Level 2 Panel items">
+			>
+			["id8"] = <
+				text = <"Level 2 Panel item">
+				description = <"Level 2 Panel item">
+			>
+			["at1"] = <
+				text = <"Subject">
+				description = <"Subject">
+			>
+		>
+	>

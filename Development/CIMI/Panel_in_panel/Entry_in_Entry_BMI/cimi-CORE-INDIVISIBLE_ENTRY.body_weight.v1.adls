@@ -26,8 +26,8 @@ definition
 			ELEMENT[id2] occurrences matches {1} matches {	-- BodyWeight
 				value matches {
 					QUANTITY[id13] matches {
-						value matches {|1.0..250.0|} 
-                                                units matches {[at1]}
+						value matches {|1.0..250.0|}
+						units matches {[at1]}
 					}
 				}
 			}
@@ -78,7 +78,7 @@ terminology
 			["at8"] = <
 				text = <"Diaper">
 				description = <"Person only wears a diaper during the weighing.">
-                        >
+			>
 			["at9"] = <
 				text = <"LightlyDressedOrUnderwear">
 				description = <"Person has taken of the upper layer of clothing on behalf of the weighing.">

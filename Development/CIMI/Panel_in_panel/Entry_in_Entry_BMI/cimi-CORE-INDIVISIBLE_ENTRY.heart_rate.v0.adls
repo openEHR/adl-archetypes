@@ -15,7 +15,7 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Typical 'atomic' Entry - body weight">
-			copyright = <"© 2014 CIMI">
+			copyright = <"Â© 2014 CIMI">
 		>
 	>
 	lifecycle_state = <"unmanaged">
