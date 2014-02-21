@@ -53,14 +53,14 @@ definition
 									ELEMENT[id14] occurrences matches {0..1} matches {	-- Image
 										value matches {
 											DV_MULTIMEDIA[id18] matches {
-												media_type matches {[ac1]}		-- Image
+												media_type matches {[ac1]}		-- Image (synthesised)
 											}
 										}
 									}
 									ELEMENT[id6] occurrences matches {0..1} matches {	-- Interpretation
 										value matches {
 											DV_CODED_TEXT[id19] matches {
-												defining_code matches {[ac2]}		-- Interpretation
+												defining_code matches {[ac2]}		-- Interpretation (synthesised)
 											}
 										}
 									}
@@ -133,12 +133,12 @@ terminology
 				description = <"Digital image of the test reaction.">
 			>
 			["ac1"] = <
-				text = <"Image">
-				description = <"Digital image of the test reaction.">
+				text = <"Image (synthesised)">
+				description = <"Digital image of the test reaction. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Interpretation">
-				description = <"Clinical interpretation of the induration response.">
+				text = <"Interpretation (synthesised)">
+				description = <"Clinical interpretation of the induration response. (synthesised)">
 			>
 			["at12"] = <
 				text = <"Length">

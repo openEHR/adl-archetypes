@@ -34,7 +34,7 @@ definition
 									ELEMENT[id5] occurrences matches {0..1} matches {	-- Test
 										value matches {
 											DV_CODED_TEXT[id48] matches {
-												defining_code matches {[ac1]}		-- Test
+												defining_code matches {[ac1]}		-- Test (synthesised)
 											}
 										}
 									}
@@ -43,7 +43,7 @@ definition
 											ELEMENT[id28] occurrences matches {0..1} matches {	-- Normal statement
 												value matches {
 													DV_CODED_TEXT[id49] matches {
-														defining_code matches {[ac2]}		-- Normal statement
+														defining_code matches {[ac2]}		-- Normal statement (synthesised)
 													}
 												}
 											}
@@ -54,21 +54,21 @@ definition
 											ELEMENT[id41] occurrences matches {0..1} matches {	-- Screening Outcome
 												value matches {
 													DV_CODED_TEXT[id50] matches {
-														defining_code matches {[ac3]}		-- Screening Outcome
+														defining_code matches {[ac3]}		-- Screening Outcome (synthesised)
 													}
 												}
 											}
 											ELEMENT[id8] occurrences matches {0..1} matches {	-- Side
 												value matches {
 													DV_CODED_TEXT[id51] matches {
-														defining_code matches {[ac4]}		-- Side
+														defining_code matches {[ac4]}		-- Side (synthesised)
 													}
 												}
 											}
 											ELEMENT[id16] occurrences matches {0..1} matches {	-- Intensity of stimulus
 												value matches {
 													DV_CODED_TEXT[id52] matches {
-														defining_code matches {[ac5]}		-- Intensity of stimulus
+														defining_code matches {[ac5]}		-- Intensity of stimulus (synthesised)
 													}
 													DV_COUNT[id53] 
 												}
@@ -79,7 +79,7 @@ definition
 									ELEMENT[id13] occurrences matches {0..1} matches {	-- Image of result
 										value matches {
 											DV_MULTIMEDIA[id54] matches {
-												media_type matches {[ac6]}		-- Image of result
+												media_type matches {[ac6]}		-- Image of result (synthesised)
 											}
 										}
 									}
@@ -97,14 +97,14 @@ definition
 									ELEMENT[id26] occurrences matches {0..1} matches {	-- Stimulus presentation
 										value matches {
 											DV_CODED_TEXT[id56] matches {
-												defining_code matches {[ac7]}		-- Stimulus presentation
+												defining_code matches {[ac7]}		-- Stimulus presentation (synthesised)
 											}
 										}
 									}
 									ELEMENT[id33] occurrences matches {0..1} matches {	-- Masking
 										value matches {
 											DV_CODED_TEXT[id57] matches {
-												defining_code matches {[ac8]}		-- Masking
+												defining_code matches {[ac8]}		-- Masking (synthesised)
 											}
 										}
 									}
@@ -134,7 +134,7 @@ definition
 					ELEMENT[id37] occurrences matches {0..1} matches {	-- Stimulus
 						value matches {
 							DV_CODED_TEXT[id60] matches {
-								defining_code matches {[ac9]}		-- Stimulus
+								defining_code matches {[ac9]}		-- Stimulus (synthesised)
 							}
 						}
 					}
@@ -331,40 +331,40 @@ terminology
 				description = <"The right ear test is normal">
 			>
 			["ac1"] = <
-				text = <"Test">
-				description = <"Identify test performed">
+				text = <"Test (synthesised)">
+				description = <"Identify test performed (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Normal statement">
-				description = <"Normal statement about Audiogram results">
+				text = <"Normal statement (synthesised)">
+				description = <"Normal statement about Audiogram results (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Screening Outcome">
-				description = <"Response to screening">
+				text = <"Screening Outcome (synthesised)">
+				description = <"Response to screening (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Side">
-				description = <"Identify ear being tested">
+				text = <"Side (synthesised)">
+				description = <"Identify ear being tested (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Intensity of stimulus">
-				description = <"Intensity of Stimulus">
+				text = <"Intensity of stimulus (synthesised)">
+				description = <"Intensity of Stimulus (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Image of result">
-				description = <"Image of OAE">
+				text = <"Image of result (synthesised)">
+				description = <"Image of OAE (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Stimulus presentation">
-				description = <"*">
+				text = <"Stimulus presentation (synthesised)">
+				description = <"* (synthesised)">
 			>
 			["ac8"] = <
-				text = <"Masking">
-				description = <"Was masking used during the test">
+				text = <"Masking (synthesised)">
+				description = <"Was masking used during the test (synthesised)">
 			>
 			["ac9"] = <
-				text = <"Stimulus">
-				description = <"Identify stimulus">
+				text = <"Stimulus (synthesised)">
+				description = <"Identify stimulus (synthesised)">
 			>
 			["at51"] = <
 				text = <"Frequency">

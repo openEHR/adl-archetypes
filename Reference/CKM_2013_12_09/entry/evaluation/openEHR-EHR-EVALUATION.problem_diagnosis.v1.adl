@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4)
 	openEHR-EHR-EVALUATION.problem_diagnosis.v1
 
 concept
@@ -136,9 +136,7 @@ definition
 					}
 					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Severity
 						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {[local::]}
-							}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Date of Onset

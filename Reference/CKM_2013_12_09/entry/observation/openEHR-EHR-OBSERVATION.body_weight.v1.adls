@@ -232,7 +232,7 @@ definition
 									ELEMENT[id10] occurrences matches {0..1} matches {	-- State of Dress
 										value matches {
 											DV_CODED_TEXT[id29] matches {
-												defining_code matches {[ac1; at12]}		-- State of Dress
+												defining_code matches {[ac1; at12]}		-- State of Dress (synthesised)
 											}
 										}
 									}
@@ -308,8 +308,8 @@ terminology
 				description = <"Registreer eventuele problemen of factoren die van invloed kunnen zijn op de meting van het lichaamsgewicht bijvoorbeeld timing in de menstruele cyclus, timing van de recente stoelgang of het noteren van een amputatie.">
 			>
 			["ac1"] = <
-				text = <"*State of Dress(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing.(en)">
+				text = <"*State of Dress (synthesised)(en)">
+				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
 			>
 			["at19"] = <
 				text = <"*Mass (en)">
@@ -362,8 +362,8 @@ terminology
 				description = <"Record any issues or factors that may impact on the measurement of body weight eg timing in menstrual cycle, timing of recent bowel motion or noting of amputation.">
 			>
 			["ac1"] = <
-				text = <"State of Dress">
-				description = <"Description of the state of dress of the person at the time of weighing.">
+				text = <"State of Dress (synthesised)">
+				description = <"Description of the state of dress of the person at the time of weighing. (synthesised)">
 			>
 			["at19"] = <
 				text = <"Mass">
@@ -416,8 +416,8 @@ terminology
 				description = <"Zur Dokumentation von Faktoren, die einen Einfluss auf die Messung des Körpergewichts haben können, z.B. Zeitpunkt in der Menstruationsperiode, Zeitpunkt des letzten Stuhlgangs, durchgeführte Amputationen.">
 			>
 			["ac1"] = <
-				text = <"*State of Dress(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing.(en)">
+				text = <"*State of Dress (synthesised)(en)">
+				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
 			>
 			["at19"] = <
 				text = <"*Mass (en)">
@@ -470,8 +470,8 @@ terminology
 				description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição de peso corporal, por exemplo, no momento do ciclo menstrual, o ciclo intestinal ou anotando amputação.">
 			>
 			["ac1"] = <
-				text = <"*State of Dress(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing.(en)">
+				text = <"*State of Dress (synthesised)(en)">
+				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
 			>
 			["at19"] = <
 				text = <"*Mass (en)">
@@ -524,8 +524,8 @@ terminology
 				description = <"Фиксация любых фактов, могущих повлиять на результат взвешивания: фаза менструального цикла, давность опорожнения кишечника, сведения об ампутации и др.">
 			>
 			["ac1"] = <
-				text = <"*State of Dress(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing.(en)">
+				text = <"*State of Dress (synthesised)(en)">
+				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
 			>
 			["at19"] = <
 				text = <"*Mass (en)">
@@ -578,8 +578,8 @@ terminology
 				description = <"ثبت هر گونه مساله یا فاکتوری که ممکن است روی اندازه گیری وزن در زمان اندازه گیری تاثیر داشته باشه به عنوان مثال در زمان عادت ماهیانه ،دفع مدفوع، یا ثبت قطع عضو">
 			>
 			["ac1"] = <
-				text = <"*State of Dress(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing.(en)">
+				text = <"*State of Dress (synthesised)(en)">
+				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
 			>
 			["at19"] = <
 				text = <"*Mass (en)">
@@ -632,8 +632,8 @@ terminology
 				description = <"لتسجيل أي قضايا أو عوامل قد تؤثر في قياس وزن الجسم, مثل الوقت من الدورة الشهرية, آخر مرة لإفراغ الأمعاء أو ملاحظة وجود بتر في أحد الأعضاء">
 			>
 			["ac1"] = <
-				text = <"*State of Dress(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing.(en)">
+				text = <"*State of Dress (synthesised)(en)">
+				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
 			>
 			["at19"] = <
 				text = <"*Mass (en)">
@@ -686,8 +686,8 @@ terminology
 				description = <"Registrar cualquier consideración que pueda influir en la medida del peso ej: amputaciones, momento del ciclo menstrual, etc. (en)">
 			>
 			["ac1"] = <
-				text = <"*State of Dress(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing.(en)">
+				text = <"*State of Dress (synthesised)(en)">
+				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
 			>
 			["at19"] = <
 				text = <"*Mass (en)">

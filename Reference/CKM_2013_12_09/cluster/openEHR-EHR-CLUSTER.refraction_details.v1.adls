@@ -48,7 +48,7 @@ definition
 			ELEMENT[id6] occurrences matches {0..1} matches {	-- Power of Cylinder
 				value matches {
 					DV_QUANTITY[id19] matches {
-						property matches {[at16]}
+						property matches {[at15]}
 						magnitude matches {|-100.0..100.0|}
 					}
 				}
@@ -56,7 +56,7 @@ definition
 			ELEMENT[id7] occurrences matches {0..1} matches {	-- Axis of Cylinder
 				value matches {
 					DV_QUANTITY[id20] matches {
-						property matches {[at17]}
+						property matches {[at16]}
 						magnitude matches {|0.0..180.0|}
 					}
 				}
@@ -64,7 +64,7 @@ definition
 			ELEMENT[id8] occurrences matches {0..1} matches {	-- Prism Strength
 				value matches {
 					DV_QUANTITY[id21] matches {
-						property matches {[at18]}
+						property matches {[at15]}
 						units matches {"dioptre"}
 					}
 				}
@@ -72,10 +72,10 @@ definition
 			ELEMENT[id9] occurrences matches {0..1} matches {	-- Prism Base Direction
 				value matches {
 					DV_CODED_TEXT[id22] matches {
-						defining_code matches {[ac1]}		-- Prism Base Direction
+						defining_code matches {[ac1]}		-- Prism Base Direction (synthesised)
 					}
 					DV_QUANTITY[id23] matches {
-						property matches {[at19]}
+						property matches {[at16]}
 						magnitude matches {|0.0..360.0|}
 					}
 				}
@@ -83,7 +83,7 @@ definition
 			ELEMENT[id15] occurrences matches {0..1} matches {	-- Reading Addition Power
 				value matches {
 					DV_QUANTITY[id24] matches {
-						property matches {[at20]}
+						property matches {[at15]}
 						precision matches {2}
 					}
 				}
@@ -91,7 +91,7 @@ definition
 			ELEMENT[id16] occurrences matches {0..1} matches {	-- Intermediate Distance Power
 				value matches {
 					DV_QUANTITY[id25] matches {
-						property matches {[at21]}
+						property matches {[at15]}
 						precision matches {2}
 					}
 				}
@@ -99,7 +99,7 @@ definition
 			ELEMENT[id17] occurrences matches {0..1} matches {	-- Interpupillary Distance
 				value matches {
 					DV_QUANTITY[id26] matches {
-						property matches {[at22]}
+						property matches {[at17]}
 						magnitude matches {|0.0..500.0|}
 					}
 				}
@@ -167,38 +167,18 @@ terminology
 				description = <"The distance between the center of the pupils of the two eyes.">
 			>
 			["ac1"] = <
-				text = <"Prism Base Direction">
-				description = <"Prism base direction expressed as a numeric angle or as coded text.">
+				text = <"Prism Base Direction (synthesised)">
+				description = <"Prism base direction expressed as a numeric angle or as coded text. (synthesised)">
 			>
 			["at15"] = <
 				text = <"Refractive power">
 				description = <"Refractive power">
 			>
 			["at16"] = <
-				text = <"Refractive power">
-				description = <"Refractive power">
+				text = <"Angle, plane">
+				description = <"Angle, plane">
 			>
 			["at17"] = <
-				text = <"Angle, plane">
-				description = <"Angle, plane">
-			>
-			["at18"] = <
-				text = <"Refractive power">
-				description = <"Refractive power">
-			>
-			["at19"] = <
-				text = <"Angle, plane">
-				description = <"Angle, plane">
-			>
-			["at20"] = <
-				text = <"Refractive power">
-				description = <"Refractive power">
-			>
-			["at21"] = <
-				text = <"Refractive power">
-				description = <"Refractive power">
-			>
-			["at22"] = <
 				text = <"Length">
 				description = <"Length">
 			>
@@ -217,13 +197,8 @@ terminology
 		>
 		["openehr"] = <
 			["at15"] = <http://openehr.org/id/685>
-			["at16"] = <http://openehr.org/id/685>
-			["at17"] = <http://openehr.org/id/497>
-			["at18"] = <http://openehr.org/id/685>
-			["at19"] = <http://openehr.org/id/497>
-			["at20"] = <http://openehr.org/id/685>
-			["at21"] = <http://openehr.org/id/685>
-			["at22"] = <http://openehr.org/id/122>
+			["at16"] = <http://openehr.org/id/497>
+			["at17"] = <http://openehr.org/id/122>
 		>
 	>
 	value_sets = <

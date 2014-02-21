@@ -45,7 +45,7 @@ definition
 			ELEMENT[id80] occurrences matches {0..1} matches {	-- Tumour cell size
 				value matches {
 					DV_CODED_TEXT[id140] matches {
-						defining_code matches {[ac1]}		-- Tumour cell size
+						defining_code matches {[ac1]}		-- Tumour cell size (synthesised)
 					}
 				}
 			}
@@ -61,7 +61,7 @@ definition
 							ELEMENT[id82] occurrences matches {0..*} matches {	-- Generic features
 								value matches {
 									DV_CODED_TEXT[id142] matches {
-										defining_code matches {[ac2]}		-- Generic features
+										defining_code matches {[ac2]}		-- Generic features (synthesised)
 									}
 									DV_TEXT[id143] 
 								}
@@ -69,7 +69,7 @@ definition
 							ELEMENT[id83] occurrences matches {0..*} matches {	-- Specific features
 								value matches {
 									DV_CODED_TEXT[id144] matches {
-										defining_code matches {[ac3]}		-- Specific features
+										defining_code matches {[ac3]}		-- Specific features (synthesised)
 									}
 									DV_TEXT[id145] 
 								}
@@ -81,7 +81,7 @@ definition
 			ELEMENT[id138] occurrences matches {0..1} matches {	-- Grade (follicular lymphoma)
 				value matches {
 					DV_CODED_TEXT[id146] matches {
-						defining_code matches {[ac4]}		-- Grade (follicular lymphoma)
+						defining_code matches {[ac4]}		-- Grade (follicular lymphoma) (synthesised)
 					}
 				}
 			}
@@ -90,7 +90,7 @@ definition
 					ELEMENT[id77] occurrences matches {0..*} matches {	-- Host cell reaction
 						value matches {
 							DV_CODED_TEXT[id147] matches {
-								defining_code matches {[ac5]}		-- Host cell reaction
+								defining_code matches {[ac5]}		-- Host cell reaction (synthesised)
 							}
 							DV_TEXT[id148] 
 						}
@@ -98,7 +98,7 @@ definition
 					ELEMENT[id78] occurrences matches {0..*} matches {	-- Host tissue reaction
 						value matches {
 							DV_CODED_TEXT[id149] matches {
-								defining_code matches {[ac6]}		-- Host tissue reaction
+								defining_code matches {[ac6]}		-- Host tissue reaction (synthesised)
 							}
 							DV_TEXT[id150] 
 						}
@@ -356,28 +356,28 @@ terminology
 				description = <"Follicular lymphoma Grade 3b.">
 			>
 			["ac1"] = <
-				text = <"Tumour cell size">
-				description = <"Estimates of tumour cell size.">
+				text = <"Tumour cell size (synthesised)">
+				description = <"Estimates of tumour cell size. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Generic features">
-				description = <"Finding of generic cytomorphology features.">
+				text = <"Generic features (synthesised)">
+				description = <"Finding of generic cytomorphology features. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Specific features">
-				description = <"Finding of specific cytomorphology features.">
+				text = <"Specific features (synthesised)">
+				description = <"Finding of specific cytomorphology features. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Grade (follicular lymphoma)">
-				description = <"Histological grade - follicular lymphoma only.">
+				text = <"Grade (follicular lymphoma) (synthesised)">
+				description = <"Histological grade - follicular lymphoma only. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Host cell reaction">
-				description = <"Finding of a host cell reaction to tumour.">
+				text = <"Host cell reaction (synthesised)">
+				description = <"Finding of a host cell reaction to tumour. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Host tissue reaction">
-				description = <"Finding of host tissue reactions to tumour.">
+				text = <"Host tissue reaction (synthesised)">
+				description = <"Finding of host tissue reactions to tumour. (synthesised)">
 			>
 		>
 	>

@@ -35,28 +35,28 @@ Not to be used for other editions of TNM classification.">
 definition
 	CLUSTER[id1.1] matches {	-- Tumour - Lung cancer TNM staging 7th Edition
 		/items[id4]/value matches {
-			DV_CODED_TEXT[id0.82] matches {
-				defining_code matches {[ac0.1]}		-- (added by post-parse processor)
+			DV_CODED_TEXT[id55.2] matches {
+				defining_code matches {[ac0.1]}		-- Primary tumour (T) (synthesised)
 			}
 		}
 		/items[id5]/value matches {
-			DV_CODED_TEXT[id0.83] matches {
-				defining_code matches {[ac0.2]}		-- (added by post-parse processor)
+			DV_CODED_TEXT[id56.2] matches {
+				defining_code matches {[ac0.2]}		-- Regional lymph nodes (N) (synthesised)
 			}
 		}
 		/items[id6]/value matches {
-			DV_CODED_TEXT[id0.84] matches {
-				defining_code matches {[ac0.3]}		-- (added by post-parse processor)
+			DV_CODED_TEXT[id57.2] matches {
+				defining_code matches {[ac0.3]}		-- Distant metastasis (M) (synthesised)
 			}
 		}
 		/items[id26]/value matches {
-			DV_CODED_TEXT[id0.85] matches {
-				defining_code matches {[ac0.4]}		-- (added by post-parse processor)
+			DV_CODED_TEXT[id58.2] matches {
+				defining_code matches {[ac0.4]}		-- Residual tumour (R) (synthesised)
 			}
 		}
 		/items[id15]/value matches {
-			DV_CODED_TEXT[id0.89] matches {
-				defining_code matches {[ac0.6]}		-- (added by post-parse processor)
+			DV_CODED_TEXT[id62.2] matches {
+				defining_code matches {[ac0.6]}		-- Stage grouping (synthesised)
 			}
 		}
 	}
@@ -205,28 +205,24 @@ terminology
 				description = <"TNM Staging classification for lung cancer (Seventh edition).">
 			>
 			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Primary tumour (T) (synthesised)">
+				description = <"Assessment of the primary tumour. (synthesised)">
 			>
 			["ac0.2"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Regional lymph nodes (N) (synthesised)">
+				description = <"Assessment of the regional lymph nodes. (synthesised)">
 			>
 			["ac0.3"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Distant metastasis (M) (synthesised)">
+				description = <"Assessment of distant metastasis. (synthesised)">
 			>
 			["ac0.4"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-			["ac0.5"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Residual tumour (R) (synthesised)">
+				description = <"Assessment of post-treatment residual tumour. (synthesised)">
 			>
 			["ac0.6"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Stage grouping (synthesised)">
+				description = <"The TNM Stage grouping. (synthesised)">
 			>
 		>
 	>
@@ -246,10 +242,6 @@ terminology
 		["ac0.4"] = <
 			id = <"ac0.4">
 			members = <"at0.73", "at0.74", "at0.75", "at0.76", "at0.77">
-		>
-		["ac0.5"] = <
-			id = <"ac0.5">
-			members = <"at48", "at49", "at50", "at51", "at52">
 		>
 		["ac0.6"] = <
 			id = <"ac0.6">

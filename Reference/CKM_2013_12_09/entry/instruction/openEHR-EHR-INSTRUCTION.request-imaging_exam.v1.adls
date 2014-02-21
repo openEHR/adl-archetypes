@@ -46,6 +46,14 @@ definition
 				}
 			}
 		}
+		protocol matches {
+			ITEM_TREE[id9] matches {
+				items matches {
+					ELEMENT[id11] 
+					ELEMENT[id12] 
+				}
+			}
+		}
 	}
 
 terminology
@@ -63,15 +71,5 @@ terminology
 				text = <"Description of examination">
 				description = <"A detailed narrative description of the examination requested.">
 			>
-			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-		>
-	>
-	value_sets = <
-		["ac0.1"] = <
-			id = <"ac0.1">
-			members = <"at137", "at138", "at139">
 		>
 	>

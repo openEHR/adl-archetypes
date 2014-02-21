@@ -36,7 +36,7 @@ definition
 									ELEMENT[id5] matches {	-- Result
 										value matches {
 											DV_CODED_TEXT[id12] matches {
-												defining_code matches {[ac1]}		-- Result
+												defining_code matches {[ac1]}		-- Result (synthesised)
 											}
 										}
 									}
@@ -96,8 +96,8 @@ terminology
 				description = <"The product used for the test">
 			>
 			["ac1"] = <
-				text = <"Result">
-				description = <"The result of the pregnancy test">
+				text = <"Result (synthesised)">
+				description = <"The result of the pregnancy test (synthesised)">
 			>
 		>
 	>

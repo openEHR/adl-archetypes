@@ -53,7 +53,7 @@ definition
 									ELEMENT[id5] occurrences matches {0..1} matches {	-- Side
 										value matches {
 											DV_CODED_TEXT[id27] matches {
-												defining_code matches {[ac1]}		-- Side
+												defining_code matches {[ac1]}		-- Side (synthesised)
 											}
 										}
 									}
@@ -66,7 +66,7 @@ definition
 														units matches {"Hz", "kHz"}
 													}
 													DV_CODED_TEXT[id29] matches {
-														defining_code matches {[ac2]}		-- Frequency
+														defining_code matches {[ac2]}		-- Frequency (synthesised)
 													}
 												}
 											}
@@ -81,14 +81,14 @@ definition
 											ELEMENT[id20] occurrences matches {0..1} matches {	-- Response
 												value matches {
 													DV_CODED_TEXT[id31] matches {
-														defining_code matches {[ac3]}		-- Response
+														defining_code matches {[ac3]}		-- Response (synthesised)
 													}
 												}
 											}
 											ELEMENT[id25] occurrences matches {0..1} matches {	-- Image
 												value matches {
 													DV_MULTIMEDIA[id32] matches {
-														media_type matches {[ac4]}		-- Image
+														media_type matches {[ac4]}		-- Image (synthesised)
 													}
 												}
 											}
@@ -189,20 +189,20 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"Side">
-				description = <"Side being tested">
+				text = <"Side (synthesised)">
+				description = <"Side being tested (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Frequency">
-				description = <"Record frequency of Warble tone stimulus presented">
+				text = <"Frequency (synthesised)">
+				description = <"Record frequency of Warble tone stimulus presented (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Response">
-				description = <"Consistent response of infant to stimulus">
+				text = <"Response (synthesised)">
+				description = <"Consistent response of infant to stimulus (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Image">
-				description = <"Image of test result">
+				text = <"Image (synthesised)">
+				description = <"Image of test result (synthesised)">
 			>
 			["at31"] = <
 				text = <"Frequency">
@@ -307,20 +307,20 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"*Side(en)">
-				description = <"*Side being tested(en)">
+				text = <"*Side (synthesised)(en)">
+				description = <"*Side being tested (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Frequency(en)">
-				description = <"*Record frequency of Warble tone stimulus presented(en)">
+				text = <"*Frequency (synthesised)(en)">
+				description = <"*Record frequency of Warble tone stimulus presented (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Response(en)">
-				description = <"*Consistent response of infant to stimulus(en)">
+				text = <"*Response (synthesised)(en)">
+				description = <"*Consistent response of infant to stimulus (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Image(en)">
-				description = <"*Image of test result(en)">
+				text = <"*Image (synthesised)(en)">
+				description = <"*Image of test result (synthesised)(en)">
 			>
 			["at31"] = <
 				text = <"*Frequency (en)">

@@ -47,15 +47,5 @@ terminology
 				text = <"Examination of the face">
 				description = <"Examination cluster for describing findings on physical examination of the face.">
 			>
-			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-		>
-	>
-	value_sets = <
-		["ac0.1"] = <
-			id = <"ac0.1">
-			members = <"at1", "at2", "at3">
 		>
 	>

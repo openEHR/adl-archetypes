@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4)
 	openEHR-EHR-OBSERVATION.intravascular_pressure-jvp.v1
 specialise
 	openEHR-EHR-OBSERVATION.intravascular_pressure.v1
@@ -70,7 +70,6 @@ definition
 												list = <
 													["1"] = <
 														units = <"cm[H20]">
-														magnitude = <|<=0.0|>
 													>
 												>
 											>

@@ -63,7 +63,7 @@ definition
 			ELEMENT[id332] occurrences matches {0..1} matches {	-- Distance of tumour to nearest cut-end
 				value matches {
 					DV_QUANTITY[id357] matches {
-						property matches {[at355]}
+						property matches {[at354]}
 						magnitude matches {|>=0.0|}
 					}
 				}
@@ -71,7 +71,7 @@ definition
 			ELEMENT[id333] occurrences matches {0..1} matches {	-- Distance of tumour to circumferential margin
 				value matches {
 					DV_QUANTITY[id358] matches {
-						property matches {[at356]}
+						property matches {[at354]}
 						magnitude matches {|>=0.0|}
 					}
 				}
@@ -79,7 +79,7 @@ definition
 			ELEMENT[id354] occurrences matches {0..1} matches {	-- Distance of tumour from dentate line
 				value matches {
 					DV_QUANTITY[id359] matches {
-						property matches {[at357]}
+						property matches {[at354]}
 						magnitude matches {|>=0.0|}
 					}
 				}
@@ -96,14 +96,14 @@ definition
 					ELEMENT[id335] occurrences matches {0..1} matches {	-- Tumour perforation
 						value matches {
 							DV_CODED_TEXT[id361] matches {
-								defining_code matches {[ac1]}		-- Tumour perforation
+								defining_code matches {[ac1]}		-- Tumour perforation (synthesised)
 							}
 						}
 					}
 					ELEMENT[id351] occurrences matches {0..1} matches {	-- Perforation location
 						value matches {
 							DV_CODED_TEXT[id362] matches {
-								defining_code matches {[ac2]}		-- Perforation location
+								defining_code matches {[ac2]}		-- Perforation location (synthesised)
 							}
 						}
 					}
@@ -119,14 +119,14 @@ definition
 					ELEMENT[id337] occurrences matches {0..1} matches {	-- Relationship to anterior peritoneal reflection
 						value matches {
 							DV_CODED_TEXT[id364] matches {
-								defining_code matches {[ac3]}		-- Relationship to anterior peritoneal reflection
+								defining_code matches {[ac3]}		-- Relationship to anterior peritoneal reflection (synthesised)
 							}
 						}
 					}
 					ELEMENT[id338] occurrences matches {0..1} matches {	-- Intactness of the mesorectum
 						value matches {
 							DV_CODED_TEXT[id365] matches {
-								defining_code matches {[ac4]}		-- Intactness of the mesorectum
+								defining_code matches {[ac4]}		-- Intactness of the mesorectum (synthesised)
 							}
 						}
 					}
@@ -243,34 +243,22 @@ terminology
 				description = <"Furrher text comment on the perforation.">
 			>
 			["ac1"] = <
-				text = <"Tumour perforation">
-				description = <"Finding of tumour perforation.">
+				text = <"Tumour perforation (synthesised)">
+				description = <"Finding of tumour perforation. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Perforation location">
-				description = <"The location of a perforation, if present.">
+				text = <"Perforation location (synthesised)">
+				description = <"The location of a perforation, if present. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Relationship to anterior peritoneal reflection">
-				description = <"The relationship of rectal tumour to the anterior peritoneal reflection.">
+				text = <"Relationship to anterior peritoneal reflection (synthesised)">
+				description = <"The relationship of rectal tumour to the anterior peritoneal reflection. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Intactness of the mesorectum">
-				description = <"An assessment of the intactness of the mesorectum.">
+				text = <"Intactness of the mesorectum (synthesised)">
+				description = <"An assessment of the intactness of the mesorectum. (synthesised)">
 			>
 			["at354"] = <
-				text = <"Length">
-				description = <"Length">
-			>
-			["at355"] = <
-				text = <"Length">
-				description = <"Length">
-			>
-			["at356"] = <
-				text = <"Length">
-				description = <"Length">
-			>
-			["at357"] = <
 				text = <"Length">
 				description = <"Length">
 			>
@@ -279,9 +267,6 @@ terminology
 	term_bindings = <
 		["openehr"] = <
 			["at354"] = <http://openehr.org/id/122>
-			["at355"] = <http://openehr.org/id/122>
-			["at356"] = <http://openehr.org/id/122>
-			["at357"] = <http://openehr.org/id/122>
 		>
 	>
 	value_sets = <

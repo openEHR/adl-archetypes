@@ -45,7 +45,7 @@ definition
 									ELEMENT[id6] occurrences matches {0..1} matches {	-- Audio or Video Record
 										value matches {
 											DV_MULTIMEDIA[id10] matches {
-												media_type matches {[ac1]}		-- Audio or Video Record
+												media_type matches {[ac1]}		-- Audio or Video Record (synthesised)
 											}
 										}
 									}
@@ -101,8 +101,8 @@ terminology
 				description = <"The author of the chat or instigator of the recording.">
 			>
 			["ac1"] = <
-				text = <"Audio or Video Record">
-				description = <"The audio or video conversation between two or more healthcare providers.">
+				text = <"Audio or Video Record (synthesised)">
+				description = <"The audio or video conversation between two or more healthcare providers. (synthesised)">
 			>
 			["at1"] = <
 				text = <"actual">

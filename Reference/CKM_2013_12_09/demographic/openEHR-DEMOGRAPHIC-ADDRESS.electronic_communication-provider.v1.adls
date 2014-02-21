@@ -54,12 +54,12 @@ definition
 			after [id8]
 			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Communication privacy
 				value matches {
-					DV_BOOLEAN[id0.26] 
+					DV_BOOLEAN[id0.4] 
 				}
 			}
 			ELEMENT[id0.3] matches {	-- Healthcare Provider Identifier
 				value matches {
-					DV_TEXT[id0.27] 
+					DV_TEXT[id0.5] 
 				}
 			}
 		}
@@ -80,18 +80,6 @@ terminology
 				text = <"Healthcare provider electronic address">
 				description = <"The address of a healthcare provider electronic communication medium.">
 			>
-			["ac0.1"] = <
-				text = <"*(added by post-parse processor)(pt-br)">
-				description = <"*(added by post-parse processor)(pt-br)">
-			>
-			["ac0.2"] = <
-				text = <"*(added by post-parse processor)(pt-br)">
-				description = <"*(added by post-parse processor)(pt-br)">
-			>
-			["ac0.3"] = <
-				text = <"*(added by post-parse processor)(pt-br)">
-				description = <"*(added by post-parse processor)(pt-br)">
-			>
 		>
 		["pt-br"] = <
 			["id0.2"] = <
@@ -106,31 +94,5 @@ terminology
 				text = <"Meio de Comunicação eletrônica de um prestador de assistência à saúde">
 				description = <"Meio de comunicação eletrônica de um prestador de assistência à saúde.">
 			>
-			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-			["ac0.2"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-			["ac0.3"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-		>
-	>
-	value_sets = <
-		["ac0.1"] = <
-			id = <"ac0.1">
-			members = <"at21", "at22", "at23", "at24", "at25", "at26">
-		>
-		["ac0.2"] = <
-			id = <"ac0.2">
-			members = <"at31", "at32", "at33", "at34">
-		>
-		["ac0.3"] = <
-			id = <"ac0.3">
-			members = <"at41", "at42", "at43", "at44", "at45">
 		>
 	>

@@ -36,8 +36,8 @@ definition
 			after [id10]
 			ELEMENT[id0.24] occurrences matches {0..1} matches {	-- Position
 				value matches {
-					DV_CODED_TEXT[id0.121] matches {
-						defining_code matches {[ac0.1]}		-- (added by post-parse processor)
+					DV_CODED_TEXT[id0.32] matches {
+						defining_code matches {[ac0.1]}		-- Position (synthesised)
 					}
 				}
 			}
@@ -45,7 +45,7 @@ definition
 				items matches {
 					ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Fundal height
 						value matches {
-							DV_QUANTITY[id0.122] matches {
+							DV_QUANTITY[id0.33] matches {
 								property matches {[at0.28]}
 								magnitude matches {|0.0..100.0|}
 							}
@@ -57,15 +57,15 @@ definition
 					}
 					ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Weeks of gestation
 						value matches {
-							DV_DURATION[id0.123] matches {
+							DV_DURATION[id0.34] matches {
 								value matches {PW}
 							}
 						}
 					}
 					ELEMENT[id0.20] occurrences matches {0..1} matches {	-- Relative to anatomical markers
 						value matches {
-							DV_CODED_TEXT[id0.124] matches {
-								defining_code matches {[ac0.2]}		-- (added by post-parse processor)
+							DV_CODED_TEXT[id0.35] matches {
+								defining_code matches {[ac0.2]}		-- Relative to anatomical markers (synthesised)
 							}
 						}
 					}
@@ -73,7 +73,7 @@ definition
 			}
 			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Assessment of liquor volume
 				value matches {
-					DV_ORDINAL[id0.125] matches {
+					DV_ORDINAL[id0.36] matches {
 						[value, symbol] matches {
 							[{-3}, {[at0.5]}],
 							[{-2}, {[at0.6]}],
@@ -88,7 +88,7 @@ definition
 			}
 			ELEMENT[id0.12] occurrences matches {0..1} matches {	-- Number of fetuses
 				value matches {
-					DV_COUNT[id0.126] matches {
+					DV_COUNT[id0.37] matches {
 						magnitude matches {|>=0|}
 					}
 				}
@@ -204,24 +204,16 @@ terminology
 				description = <"Clinical findings.">
 			>
 			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Position (synthesised)">
+				description = <"Position of uterus. (synthesised)">
 			>
 			["ac0.2"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-			["ac0.3"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Relative to anatomical markers (synthesised)">
+				description = <"Relative size of uterus related to anatomy of person. (synthesised)">
 			>
 			["at0.28"] = <
 				text = <"Length">
 				description = <"Length">
-			>
-			["ac0.4"] = <
-				text = <"Assessment of liquor volume">
-				description = <"The relative amount of liquor present in the uterus.">
 			>
 		>
 	>
@@ -238,13 +230,5 @@ terminology
 		["ac0.2"] = <
 			id = <"ac0.2">
 			members = <"at0.21", "at0.22", "at0.23">
-		>
-		["ac0.3"] = <
-			id = <"ac0.3">
-			members = <"at1", "at2", "at3">
-		>
-		["ac0.4"] = <
-			id = <"ac0.4">
-			members = <"at0.5", "at0.6", "at0.7", "at0.8", "at0.9", "at0.10", "at0.11">
 		>
 	>

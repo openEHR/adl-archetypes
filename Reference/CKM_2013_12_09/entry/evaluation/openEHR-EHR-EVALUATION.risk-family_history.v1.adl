@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4)
 	openEHR-EHR-EVALUATION.risk-family_history.v1
 specialise
 	openEHR-EHR-EVALUATION.risk.v1
@@ -159,7 +159,7 @@ definition
 						}
 					}
 					CLUSTER[at0.14] occurrences matches {0..*} matches {	-- Affected ratio
-						items cardinality matches {0..4; ordered} matches {
+						items cardinality matches {1..4; ordered} matches {
 							ELEMENT[at0.15] occurrences matches {0..1} matches {	-- Degree
 								value matches {
 									DV_CODED_TEXT matches {

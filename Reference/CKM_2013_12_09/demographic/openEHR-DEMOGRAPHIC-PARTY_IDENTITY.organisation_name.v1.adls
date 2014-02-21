@@ -50,7 +50,7 @@ definition
 		name matches {
 			DV_TEXT[id13] 
 			DV_CODED_TEXT[id14] matches {
-				defining_code matches {[ac1]}		-- Nome da organização
+				defining_code matches {[ac1]}		-- Nome da organização (synthesised)
 			}
 		}
 		details matches {
@@ -123,8 +123,8 @@ terminology
 				description = <"Usado quando o tipo de nome da organização for desconhecido.">
 			>
 			["ac1"] = <
-				text = <"Nome da organização">
-				description = <"Nome da organização.">
+				text = <"Nome da organização (synthesised)">
+				description = <"Nome da organização. (synthesised)">
 			>
 		>
 		["en"] = <
@@ -177,8 +177,8 @@ terminology
 				description = <"Used when the organisation name type is unknown.">
 			>
 			["ac1"] = <
-				text = <"*Nome da organização(pt-br)">
-				description = <"*Nome da organização.(pt-br)">
+				text = <"*Nome da organização (synthesised)(pt-br)">
+				description = <"*Nome da organização. (synthesised)(pt-br)">
 			>
 		>
 	>

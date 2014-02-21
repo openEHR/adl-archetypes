@@ -29,7 +29,7 @@ definition
 			ELEMENT[id2] occurrences matches {0..1} matches {	-- Readiness to change
 				value matches {
 					DV_CODED_TEXT[id13] matches {
-						defining_code matches {[ac1]}		-- Readiness to change
+						defining_code matches {[ac1]}		-- Readiness to change (synthesised)
 					}
 				}
 			}
@@ -156,8 +156,8 @@ terminology
 				description = <"These are users who changed over 6 months ago.">
 			>
 			["ac1"] = <
-				text = <"Readiness to change">
-				description = <"Record person's inclination to change current status.">
+				text = <"Readiness to change (synthesised)">
+				description = <"Record person's inclination to change current status. (synthesised)">
 			>
 		>
 	>

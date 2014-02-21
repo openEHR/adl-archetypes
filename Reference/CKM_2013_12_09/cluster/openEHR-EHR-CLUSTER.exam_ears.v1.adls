@@ -55,7 +55,7 @@ definition
 			ELEMENT[id6] occurrences matches {0..1} matches {	-- Multimedia Representation
 				value matches {
 					DV_MULTIMEDIA[id9] matches {
-						media_type matches {[ac1]}		-- Multimedia Representation
+						media_type matches {[ac1]}		-- Multimedia Representation (synthesised)
 					}
 				}
 			}
@@ -86,8 +86,8 @@ terminology
 				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the ears.">
 			>
 			["ac1"] = <
-				text = <"Multimedia Representation">
-				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the ears.">
+				text = <"Multimedia Representation (synthesised)">
+				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the ears. (synthesised)">
 			>
 			["at1"] = <
 				text = <"image/cgm">

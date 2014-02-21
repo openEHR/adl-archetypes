@@ -106,7 +106,7 @@ definition
 					ELEMENT[id13] occurrences matches {0..*} matches {	-- Unilateral Assistive Device
 						value matches {
 							DV_CODED_TEXT[id28] matches {
-								defining_code matches {[ac1]}		-- *Unilaterale Gehhilfe(de)
+								defining_code matches {[ac1]}		-- *Unilaterale Gehhilfe (synthesised)(de)
 							}
 							DV_TEXT[id29] 
 						}
@@ -114,7 +114,7 @@ definition
 					ELEMENT[id21] occurrences matches {0..*} matches {	-- Bilateral Assistive Device
 						value matches {
 							DV_CODED_TEXT[id30] matches {
-								defining_code matches {[ac2]}		-- *Bilaterale Gehhilfen(de)
+								defining_code matches {[ac2]}		-- *Bilaterale Gehhilfen (synthesised)(de)
 							}
 							DV_TEXT[id31] 
 						}
@@ -200,12 +200,12 @@ terminology
 				description = <"Angabe, welche unterstützenden Hilfsmittel verwendet wurden.">
 			>
 			["ac1"] = <
-				text = <"Unilaterale Gehhilfe">
-				description = <"Angabe, welches unterstützende Hilfsmittel verwendet wurde.">
+				text = <"Unilaterale Gehhilfe (synthesised)">
+				description = <"Angabe, welches unterstützende Hilfsmittel verwendet wurde. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Bilaterale Gehhilfen">
-				description = <"Angabe, welche unterstützenden Hilfsmittel verwendet wurden.">
+				text = <"Bilaterale Gehhilfen (synthesised)">
+				description = <"Angabe, welche unterstützenden Hilfsmittel verwendet wurden. (synthesised)">
 			>
 		>
 		["en"] = <
@@ -270,12 +270,12 @@ terminology
 				description = <"Record which bilateral assistive devices were used.">
 			>
 			["ac1"] = <
-				text = <"*Unilaterale Gehhilfe(de)">
-				description = <"*Angabe, welches unterstützende Hilfsmittel verwendet wurde.(de)">
+				text = <"*Unilaterale Gehhilfe (synthesised)(de)">
+				description = <"*Angabe, welches unterstützende Hilfsmittel verwendet wurde. (synthesised)(de)">
 			>
 			["ac2"] = <
-				text = <"*Bilaterale Gehhilfen(de)">
-				description = <"*Angabe, welche unterstützenden Hilfsmittel verwendet wurden.(de)">
+				text = <"*Bilaterale Gehhilfen (synthesised)(de)">
+				description = <"*Angabe, welche unterstützenden Hilfsmittel verwendet wurden. (synthesised)(de)">
 			>
 		>
 	>

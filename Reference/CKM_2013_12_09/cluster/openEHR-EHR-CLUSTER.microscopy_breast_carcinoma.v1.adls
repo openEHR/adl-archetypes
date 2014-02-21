@@ -164,7 +164,7 @@ definition
 					ELEMENT[id62] occurrences matches {0..1} matches {	-- Lobular neoplasia
 						value matches {
 							DV_CODED_TEXT[id190] matches {
-								defining_code matches {[ac1]}		-- Lobular neoplasia
+								defining_code matches {[ac1]}		-- Lobular neoplasia (synthesised)
 							}
 							DV_TEXT[id191] 
 						}
@@ -172,7 +172,7 @@ definition
 					ELEMENT[id56] occurrences matches {0..1} matches {	-- Atypical lobular hyperplasia
 						value matches {
 							DV_CODED_TEXT[id192] matches {
-								defining_code matches {[ac2]}		-- Atypical lobular hyperplasia
+								defining_code matches {[ac2]}		-- Atypical lobular hyperplasia (synthesised)
 							}
 							DV_TEXT[id193] 
 						}
@@ -180,7 +180,7 @@ definition
 					ELEMENT[id59] occurrences matches {0..1} matches {	-- Lobular carcinoma-in-situ
 						value matches {
 							DV_CODED_TEXT[id194] matches {
-								defining_code matches {[ac3]}		-- Lobular carcinoma-in-situ
+								defining_code matches {[ac3]}		-- Lobular carcinoma-in-situ (synthesised)
 							}
 							DV_TEXT[id195] 
 						}
@@ -197,7 +197,7 @@ definition
 					ELEMENT[id64] occurrences matches {0..1} matches {	-- Paget's disease of nipple
 						value matches {
 							DV_CODED_TEXT[id197] matches {
-								defining_code matches {[ac4]}		-- Paget's disease of nipple
+								defining_code matches {[ac4]}		-- Paget's disease of nipple (synthesised)
 							}
 						}
 					}
@@ -208,7 +208,7 @@ definition
 					ELEMENT[id26] occurrences matches {0..1} matches {	-- Microcalcification
 						value matches {
 							DV_CODED_TEXT[id198] matches {
-								defining_code matches {[ac5]}		-- Microcalcification
+								defining_code matches {[ac5]}		-- Microcalcification (synthesised)
 							}
 						}
 					}
@@ -224,7 +224,7 @@ definition
 					ELEMENT[id155] occurrences matches {0..1} matches {	-- Calcification
 						value matches {
 							DV_CODED_TEXT[id200] matches {
-								defining_code matches {[ac6]}		-- Calcification
+								defining_code matches {[ac6]}		-- Calcification (synthesised)
 							}
 						}
 					}
@@ -233,7 +233,7 @@ definition
 							ELEMENT[id76] occurrences matches {0..1} matches {	-- Necrosis
 								value matches {
 									DV_CODED_TEXT[id201] matches {
-										defining_code matches {[ac7]}		-- Necrosis
+										defining_code matches {[ac7]}		-- Necrosis (synthesised)
 									}
 								}
 							}
@@ -271,7 +271,7 @@ definition
 							ELEMENT[id131] occurrences matches {0..1} matches {	-- Dominant pattern
 								value matches {
 									DV_CODED_TEXT[id205] matches {
-										defining_code matches {[ac8]}		-- Dominant pattern
+										defining_code matches {[ac8]}		-- Dominant pattern (synthesised)
 									}
 									DV_TEXT[id206] 
 								}
@@ -292,7 +292,7 @@ definition
 							ELEMENT[id97] occurrences matches {0..1} matches {	-- ER result
 								value matches {
 									DV_CODED_TEXT[id208] matches {
-										defining_code matches {[ac9]}		-- ER result
+										defining_code matches {[ac9]}		-- ER result (synthesised)
 									}
 								}
 							}
@@ -304,7 +304,7 @@ definition
 							ELEMENT[id102] occurrences matches {0..1} matches {	-- Predominant staining intensity
 								value matches {
 									DV_CODED_TEXT[id210] matches {
-										defining_code matches {[ac10]}		-- Predominant staining intensity
+										defining_code matches {[ac10]}		-- Predominant staining intensity (synthesised)
 									}
 								}
 							}
@@ -315,7 +315,7 @@ definition
 							ELEMENT[id139] occurrences matches {0..1} matches {	-- PR result
 								value matches {
 									DV_CODED_TEXT[id211] matches {
-										defining_code matches {[ac11]}		-- PR result
+										defining_code matches {[ac11]}		-- PR result (synthesised)
 									}
 								}
 							}
@@ -327,7 +327,7 @@ definition
 							ELEMENT[id164] occurrences matches {0..1} matches {	-- Predominant staining intensity
 								value matches {
 									DV_CODED_TEXT[id213] matches {
-										defining_code matches {[ac12]}		-- Predominant staining intensity
+										defining_code matches {[ac12]}		-- Predominant staining intensity (synthesised)
 									}
 								}
 							}
@@ -347,7 +347,7 @@ definition
 									ELEMENT[id143] occurrences matches {0..1} matches {	-- Immunohistochemistry result
 										value matches {
 											DV_CODED_TEXT[id215] matches {
-												defining_code matches {[ac13]}		-- Immunohistochemistry result
+												defining_code matches {[ac13]}		-- Immunohistochemistry result (synthesised)
 											}
 										}
 									}
@@ -358,7 +358,7 @@ definition
 									ELEMENT[id109] occurrences matches {0..1} matches {	-- ISH result
 										value matches {
 											DV_CODED_TEXT[id216] matches {
-												defining_code matches {[ac14]}		-- ISH result
+												defining_code matches {[ac14]}		-- ISH result (synthesised)
 											}
 										}
 									}
@@ -394,7 +394,7 @@ definition
 					ELEMENT[id182] occurrences matches {0..*} matches {	-- Non-neoplastic change
 						value matches {
 							DV_CODED_TEXT[id218] matches {
-								defining_code matches {[ac15]}		-- Non-neoplastic change
+								defining_code matches {[ac15]}		-- Non-neoplastic change (synthesised)
 							}
 						}
 					}
@@ -956,64 +956,64 @@ terminology
 				description = <"Presence of non-neoplastic changes has not been determined.">
 			>
 			["ac1"] = <
-				text = <"Lobular neoplasia">
-				description = <"Finding of lobular neoplasia.">
+				text = <"Lobular neoplasia (synthesised)">
+				description = <"Finding of lobular neoplasia. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Atypical lobular hyperplasia">
-				description = <"Finding of atypical lobular hyperplasia.">
+				text = <"Atypical lobular hyperplasia (synthesised)">
+				description = <"Finding of atypical lobular hyperplasia. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Lobular carcinoma-in-situ">
-				description = <"Finding of lobular carcinoma-in-situ.">
+				text = <"Lobular carcinoma-in-situ (synthesised)">
+				description = <"Finding of lobular carcinoma-in-situ. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Paget's disease of nipple">
-				description = <"Finding of Paget's disease of the nipple.">
+				text = <"Paget's disease of nipple (synthesised)">
+				description = <"Finding of Paget's disease of the nipple. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Microcalcification">
-				description = <"Findings of microcalcification.">
+				text = <"Microcalcification (synthesised)">
+				description = <"Findings of microcalcification. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Calcification">
-				description = <"Finding of calcification in DCIS tissue.">
+				text = <"Calcification (synthesised)">
+				description = <"Finding of calcification in DCIS tissue. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Necrosis">
-				description = <"Findings of tumour necrosis.">
+				text = <"Necrosis (synthesised)">
+				description = <"Findings of tumour necrosis. (synthesised)">
 			>
 			["ac8"] = <
-				text = <"Dominant pattern">
-				description = <"Findingof the dominant DCIS architectural pattern.">
+				text = <"Dominant pattern (synthesised)">
+				description = <"Findingof the dominant DCIS architectural pattern. (synthesised)">
 			>
 			["ac9"] = <
-				text = <"ER result">
-				description = <"Oestrogen Receptor assay result.">
+				text = <"ER result (synthesised)">
+				description = <"Oestrogen Receptor assay result. (synthesised)">
 			>
 			["ac10"] = <
-				text = <"Predominant staining intensity">
-				description = <"Predominant intensity of staining.">
+				text = <"Predominant staining intensity (synthesised)">
+				description = <"Predominant intensity of staining. (synthesised)">
 			>
 			["ac11"] = <
-				text = <"PR result">
-				description = <"Progesterone Receptor assay result.">
+				text = <"PR result (synthesised)">
+				description = <"Progesterone Receptor assay result. (synthesised)">
 			>
 			["ac12"] = <
-				text = <"Predominant staining intensity">
-				description = <"Predominant intensity of staining.">
+				text = <"Predominant staining intensity (synthesised)">
+				description = <"Predominant intensity of staining. (synthesised)">
 			>
 			["ac13"] = <
-				text = <"Immunohistochemistry result">
-				description = <"HER2 Immunohistochemistry result.">
+				text = <"Immunohistochemistry result (synthesised)">
+				description = <"HER2 Immunohistochemistry result. (synthesised)">
 			>
 			["ac14"] = <
-				text = <"ISH result">
-				description = <"HER2 In situ hybridisation (ISH) result.">
+				text = <"ISH result (synthesised)">
+				description = <"HER2 In situ hybridisation (ISH) result. (synthesised)">
 			>
 			["ac15"] = <
-				text = <"Non-neoplastic change">
-				description = <"Finding of non-neoplastic change.">
+				text = <"Non-neoplastic change (synthesised)">
+				description = <"Finding of non-neoplastic change. (synthesised)">
 			>
 			["ac16"] = <
 				text = <"Mitotic frequency score">

@@ -190,14 +190,14 @@ definition
 									ELEMENT[id6] occurrences matches {0..1} matches {	-- Rhythm
 										value matches {
 											DV_CODED_TEXT[id59] matches {
-												defining_code matches {[ac1]}		-- Rhythm
+												defining_code matches {[ac1]}		-- Rhythm (synthesised)
 											}
 										}
 									}
 									ELEMENT[id17] occurrences matches {0..1} matches {	-- Depth
 										value matches {
 											DV_CODED_TEXT[id60] matches {
-												defining_code matches {[ac2]}		-- Depth
+												defining_code matches {[ac2]}		-- Depth (synthesised)
 											}
 										}
 									}
@@ -209,7 +209,7 @@ definition
 									ELEMENT[id10] occurrences matches {0..1} matches {	-- Abnormal respiratory pattern
 										value matches {
 											DV_CODED_TEXT[id62] matches {
-												defining_code matches {[ac3]}		-- Abnormal respiratory pattern
+												defining_code matches {[ac3]}		-- Abnormal respiratory pattern (synthesised)
 											}
 											DV_TEXT[id63] 
 										}
@@ -338,16 +338,16 @@ terminology
 				description = <"Comenta e registra outros fatores incidentais que podem contribuir para as respirações observadas. Por exemplo, nível de ansiedade, dor, alimentação em crianças, traqueostomia, etc.">
 			>
 			["ac1"] = <
-				text = <"*Rhythm(en)">
-				description = <"*Rhythm of respiration.(en)">
+				text = <"*Rhythm (synthesised)(en)">
+				description = <"*Rhythm of respiration. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Depth(en)">
-				description = <"*Depth of respiration.(en)">
+				text = <"*Depth (synthesised)(en)">
+				description = <"*Depth of respiration. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Abnormal respiratory pattern(en)">
-				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
+				text = <"*Abnormal respiratory pattern (synthesised)(en)">
+				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level. (synthesised)(en)">
 			>
 			["at56"] = <
 				text = <"*Frequency (en)">
@@ -448,16 +448,16 @@ terminology
 				description = <"تعليق على و تسجيل للعوامل العارضة التي قد تؤثر في ملاحظة التنفس. مثلا, مستوى القلق, الألم, الإطعام لدى الرُّضع, الفــغــر الرُّغامي">
 			>
 			["ac1"] = <
-				text = <"*Rhythm(en)">
-				description = <"*Rhythm of respiration.(en)">
+				text = <"*Rhythm (synthesised)(en)">
+				description = <"*Rhythm of respiration. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Depth(en)">
-				description = <"*Depth of respiration.(en)">
+				text = <"*Depth (synthesised)(en)">
+				description = <"*Depth of respiration. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Abnormal respiratory pattern(en)">
-				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
+				text = <"*Abnormal respiratory pattern (synthesised)(en)">
+				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level. (synthesised)(en)">
 			>
 			["at56"] = <
 				text = <"*Frequency (en)">
@@ -558,16 +558,16 @@ terminology
 				description = <"Comenta y registra otros factores incidentales que pueden contribuir a las respiraciones observadas. Por ejemplo, el nivel de ansiedad, dolor, alimentación previa en infantes, traqueostomía, etc.">
 			>
 			["ac1"] = <
-				text = <"*Rhythm(en)">
-				description = <"*Rhythm of respiration.(en)">
+				text = <"*Rhythm (synthesised)(en)">
+				description = <"*Rhythm of respiration. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Depth(en)">
-				description = <"*Depth of respiration.(en)">
+				text = <"*Depth (synthesised)(en)">
+				description = <"*Depth of respiration. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Abnormal respiratory pattern(en)">
-				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
+				text = <"*Abnormal respiratory pattern (synthesised)(en)">
+				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level. (synthesised)(en)">
 			>
 			["at56"] = <
 				text = <"*Frequency (en)">
@@ -668,16 +668,16 @@ terminology
 				description = <"*Comment on and record other incidental factors that may be contributing to the respirations observation. For example, level of anxiety, pain, feeding in infants, tracheostomy.(en)">
 			>
 			["ac1"] = <
-				text = <"*Rhythm(en)">
-				description = <"*Rhythm of respiration.(en)">
+				text = <"*Rhythm (synthesised)(en)">
+				description = <"*Rhythm of respiration. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Depth(en)">
-				description = <"*Depth of respiration.(en)">
+				text = <"*Depth (synthesised)(en)">
+				description = <"*Depth of respiration. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Abnormal respiratory pattern(en)">
-				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
+				text = <"*Abnormal respiratory pattern (synthesised)(en)">
+				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level. (synthesised)(en)">
 			>
 			["at56"] = <
 				text = <"*Frequency (en)">
@@ -778,16 +778,16 @@ terminology
 				description = <"Comment on and record other incidental factors that may be contributing to the respirations observation. For example, level of anxiety, pain, feeding in infants, tracheostomy.">
 			>
 			["ac1"] = <
-				text = <"Rhythm">
-				description = <"Rhythm of respiration.">
+				text = <"Rhythm (synthesised)">
+				description = <"Rhythm of respiration. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Depth">
-				description = <"Depth of respiration.">
+				text = <"Depth (synthesised)">
+				description = <"Depth of respiration. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Abnormal respiratory pattern">
-				description = <"Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.">
+				text = <"Abnormal respiratory pattern (synthesised)">
+				description = <"Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level. (synthesised)">
 			>
 			["at56"] = <
 				text = <"Frequency">
@@ -888,16 +888,16 @@ terminology
 				description = <"نظر و ثبت سایر فاکتورهای اتفاقی که ممکن است در مشاهده تنفس شرکت داشته باشند .برای مثال سطح اضطراب ، تغذیه در شیر خوار و تراکئوستومی ">
 			>
 			["ac1"] = <
-				text = <"*Rhythm(en)">
-				description = <"*Rhythm of respiration.(en)">
+				text = <"*Rhythm (synthesised)(en)">
+				description = <"*Rhythm of respiration. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Depth(en)">
-				description = <"*Depth of respiration.(en)">
+				text = <"*Depth (synthesised)(en)">
+				description = <"*Depth of respiration. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Abnormal respiratory pattern(en)">
-				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
+				text = <"*Abnormal respiratory pattern (synthesised)(en)">
+				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level. (synthesised)(en)">
 			>
 			["at56"] = <
 				text = <"*Frequency (en)">
@@ -999,16 +999,16 @@ terminology
 				description = <"Opmerking over bijkomende factoren die de ademhaling kunnen beïnvloeden. Bijvoorbeeld, het niveau van angst, pijn, voeding bij zuigelingen, tracheostomie.">
 			>
 			["ac1"] = <
-				text = <"*Rhythm(en)">
-				description = <"*Rhythm of respiration.(en)">
+				text = <"*Rhythm (synthesised)(en)">
+				description = <"*Rhythm of respiration. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Depth(en)">
-				description = <"*Depth of respiration.(en)">
+				text = <"*Depth (synthesised)(en)">
+				description = <"*Depth of respiration. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Abnormal respiratory pattern(en)">
-				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level.(en)">
+				text = <"*Abnormal respiratory pattern (synthesised)(en)">
+				description = <"*Specific abnormal respiratory pattern. Other patterns may be entered as free text or terminology subset defined at specialisation or template level. (synthesised)(en)">
 			>
 			["at56"] = <
 				text = <"*Frequency (en)">

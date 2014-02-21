@@ -50,7 +50,7 @@ definition
 		name matches {
 			DV_TEXT[id24] 
 			DV_CODED_TEXT[id25] matches {
-				defining_code matches {[ac1]}		-- Nome da pessoa
+				defining_code matches {[ac1]}		-- Nome da pessoa (synthesised)
 			}
 		}
 		details matches {
@@ -109,7 +109,7 @@ definition
 						value matches {
 							DV_TEXT[id35] 
 							DV_CODED_TEXT[id36] matches {
-								defining_code matches {[ac2]}		-- Indicador de acurácia/segurança
+								defining_code matches {[ac2]}		-- Indicador de acurácia/segurança (synthesised)
 							}
 						}
 					}
@@ -231,12 +231,12 @@ terminology
 				description = <"Indica que o nome da pessoa não foi determinado.">
 			>
 			["ac1"] = <
-				text = <"Nome da pessoa">
-				description = <"Estrutura do nome de uma pessoa.">
+				text = <"Nome da pessoa (synthesised)">
+				description = <"Estrutura do nome de uma pessoa. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Indicador de acurácia/segurança">
-				description = <"Um indicador das condições específicas ou regras que devem ser aplicadas ao nome de uma pessoa.">
+				text = <"Indicador de acurácia/segurança (synthesised)">
+				description = <"Um indicador das condições específicas ou regras que devem ser aplicadas ao nome de uma pessoa. (synthesised)">
 			>
 		>
 		["en"] = <
@@ -345,12 +345,12 @@ terminology
 				description = <"A temporary name issued where the subject's name has not been determined.">
 			>
 			["ac1"] = <
-				text = <"*Nome da pessoa(pt-br)">
-				description = <"*Estrutura do nome de uma pessoa.(pt-br)">
+				text = <"*Nome da pessoa (synthesised)(pt-br)">
+				description = <"*Estrutura do nome de uma pessoa. (synthesised)(pt-br)">
 			>
 			["ac2"] = <
-				text = <"*Indicador de acurácia/segurança(pt-br)">
-				description = <"*Um indicador das condições específicas ou regras que devem ser aplicadas ao nome de uma pessoa.(pt-br)">
+				text = <"*Indicador de acurácia/segurança (synthesised)(pt-br)">
+				description = <"*Um indicador das condições específicas ou regras que devem ser aplicadas ao nome de uma pessoa. (synthesised)(pt-br)">
 			>
 		>
 	>

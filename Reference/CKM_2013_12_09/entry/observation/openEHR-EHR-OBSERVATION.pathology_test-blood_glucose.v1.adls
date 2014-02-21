@@ -65,10 +65,14 @@ Laboratory Technical Framework, Volume 3: Content, Revision 3.0 [Internet]. USA:
 
 definition
 	OBSERVATION[id1.1] matches {	-- Blood Glucose Test Result
-		/data[id2]/events[id3]/data[id4]/items[id96]/items[id97]/items[id79.1]/value matches {
-			DV_QUANTITY[id0.137] matches {
-				property matches {[at0.18]}
-				units matches {"mg/dl", "mmol/l"}
+		/data[id2]/events[id3]/data[id4]/items[id96]/items[id97]/items matches {
+			ELEMENT[id79.1] matches {	-- Glucose Result
+				value matches {
+					DV_QUANTITY[id0.16] matches {
+						property matches {[at0.18]}
+						units matches {"mg/dl", "mmol/l"}
+					}
+				}
 			}
 		}
 		/data[id2]/events[id3]/state matches {
@@ -76,21 +80,21 @@ definition
 				items matches {
 					ELEMENT[id0.9] occurrences matches {0..1} matches {	-- Fasting State
 						value matches {
-							DV_BOOLEAN[id0.145] matches {
+							DV_BOOLEAN[id0.17] matches {
 								value matches {True}
 							}
 						}
 					}
 					ELEMENT[id0.11] occurrences matches {0..1} matches {	-- Duration of Fasting
 						value matches {
-							DV_DURATION[id0.146] matches {
+							DV_DURATION[id0.18] matches {
 								value matches {PTHM/|>=PT0S|}
 							}
 						}
 					}
 					ELEMENT[id0.13] occurrences matches {0..1} matches {	-- Glucose Load
 						value matches {
-							DV_QUANTITY[id0.147] matches {
+							DV_QUANTITY[id0.19] matches {
 								property matches {[at0.19]}
 								[units, precision] matches {
 									[{"mg"}, {|>=0|}],
@@ -101,7 +105,7 @@ definition
 					}
 					ELEMENT[id0.14] occurrences matches {0..1} matches {	-- Insulin Load
 						value matches {
-							DV_QUANTITY[id0.148] matches {
+							DV_QUANTITY[id0.20] matches {
 								property matches {[at0.20]}
 								precision matches {0}
 							}
@@ -111,74 +115,83 @@ definition
 			}
 		}
 		/data[id2]/events matches {
+			EVENT[id3] matches {
+				data matches {
+					ITEM_TREE[id4] matches {
+						items matches {
+							ELEMENT[id6] 
+						}
+					}
+				}
+			}
 			POINT_EVENT[id0.2] occurrences matches {0..1} matches {	-- Baseline Measurement
 				offset matches {
-					DV_DURATION[id0.149] matches {
+					DV_DURATION[id0.21] matches {
 						value matches {PT0S}
 					}
 				}
 				data matches {
-					use_node ITEM_TREE[id0.150] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
+					use_node ITEM_TREE[id0.22] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
 				}
 				state matches {
-					use_node ITEM_TREE[id0.151] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
+					use_node ITEM_TREE[id0.23] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
 				}
 			}
 			POINT_EVENT[id0.3] occurrences matches {0..1} matches {	-- 1 Hour Measurement
 				offset matches {
-					DV_DURATION[id0.152] matches {
+					DV_DURATION[id0.24] matches {
 						value matches {PT1H}
 					}
 				}
 				data matches {
-					use_node ITEM_TREE[id0.153] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
+					use_node ITEM_TREE[id0.25] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
 				}
 				state matches {
-					use_node ITEM_TREE[id0.154] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
+					use_node ITEM_TREE[id0.26] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
 				}
 			}
 			POINT_EVENT[id0.5] occurrences matches {0..1} matches {	-- 2 Hour Measurement
 				offset matches {
-					DV_DURATION[id0.155] matches {
+					DV_DURATION[id0.27] matches {
 						value matches {PT2H}
 					}
 				}
 				data matches {
-					use_node ITEM_TREE[id0.156] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
+					use_node ITEM_TREE[id0.28] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
 				}
 				state matches {
-					use_node ITEM_TREE[id0.157] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
+					use_node ITEM_TREE[id0.29] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
 				}
 			}
 			POINT_EVENT[id0.6] occurrences matches {0..1} matches {	-- Pre-prandial Measurement
 				data matches {
-					use_node ITEM_TREE[id0.158] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
+					use_node ITEM_TREE[id0.30] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
 				}
 				state matches {
-					use_node ITEM_TREE[id0.159] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
+					use_node ITEM_TREE[id0.31] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
 				}
 			}
 			POINT_EVENT[id0.7] occurrences matches {0..1} matches {	-- Post-prandial Measurement
 				data matches {
-					use_node ITEM_TREE[id0.160] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
+					use_node ITEM_TREE[id0.32] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[id3]/data[id4]
 				}
 				state matches {
-					use_node ITEM_TREE[id0.161] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
+					use_node ITEM_TREE[id0.33] /data[id2]/events[id3]/state[id0.8]	-- /data[id2]/events[id3]/state[id0.8]
 				}
 			}
 		}
 		/protocol[id5]/items matches {
 			ELEMENT[id0.12] occurrences matches {0..1} matches {	-- Point of Care Device Used
 				value matches {
-					DV_BOOLEAN[id0.162] matches {
+					DV_BOOLEAN[id0.34] matches {
 						value matches {True}
 					}
 				}
 			}
 			ELEMENT[id0.15] occurrences matches {0..1} matches {	-- Route of Administration
 				value matches {
-					DV_CODED_TEXT[id0.163] matches {
-						defining_code matches {[ac0.4]}		-- (added by post-parse processor)
+					DV_CODED_TEXT[id0.35] matches {
+						defining_code matches {[ac0.4]}		-- Route of Administration (synthesised)
 					}
 				}
 			}
@@ -257,21 +270,9 @@ terminology
 				text = <"Glucose Result">
 				description = <"Actual value of the glucose test result.">
 			>
-			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-			["ac0.2"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-			["ac0.3"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
 			["ac0.4"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Route of Administration (synthesised)">
+				description = <"Route that the glucose was administered. (synthesised)">
 			>
 			["at0.18"] = <
 				text = <"Concentration">
@@ -351,21 +352,9 @@ terminology
 				text = <"*Glucose Result">
 				description = <"*Actual value of the glucose test result.">
 			>
-			["ac0.1"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
-			>
-			["ac0.2"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
-			>
-			["ac0.3"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
-			>
 			["ac0.4"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
+				text = <"*Route of Administration (synthesised)(en)">
+				description = <"*Route that the glucose was administered. (synthesised)(en)">
 			>
 			["at0.18"] = <
 				text = <"*Concentration (en)">
@@ -389,18 +378,6 @@ terminology
 		>
 	>
 	value_sets = <
-		["ac0.2"] = <
-			id = <"ac0.2">
-			members = <"at108", "at38", "at39", "at41", "at75">
-		>
-		["ac0.1"] = <
-			id = <"ac0.1">
-			members = <"at108", "at38", "at39", "at41", "at75">
-		>
-		["ac0.3"] = <
-			id = <"ac0.3">
-			members = <"at109", "at110", "at111", "at112", "at113", "at114", "at115", "at116">
-		>
 		["ac0.4"] = <
 			id = <"ac0.4">
 			members = <"at0.16", "at0.17">

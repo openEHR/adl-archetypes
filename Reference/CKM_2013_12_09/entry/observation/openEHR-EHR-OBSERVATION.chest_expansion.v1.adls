@@ -96,7 +96,7 @@ definition
 									ELEMENT[id7] occurrences matches {0..1} matches {	-- Respiratory phase
 										value matches {
 											DV_CODED_TEXT[id14] matches {
-												defining_code matches {[ac1; at10]}		-- Respiratory phase
+												defining_code matches {[ac1; at10]}		-- Respiratory phase (synthesised)
 											}
 										}
 									}
@@ -158,8 +158,8 @@ terminology
 				description = <"der Umfang des Brustkorbes">
 			>
 			["ac1"] = <
-				text = <"*Respiratory phase(en)">
-				description = <"*The phase of respiration during which the measurement is taken(en)">
+				text = <"*Respiratory phase (synthesised)(en)">
+				description = <"*The phase of respiration during which the measurement is taken (synthesised)(en)">
 			>
 			["at11"] = <
 				text = <"*Length (en)">
@@ -204,8 +204,8 @@ terminology
 				description = <"The circumference of the chest">
 			>
 			["ac1"] = <
-				text = <"Respiratory phase">
-				description = <"The phase of respiration during which the measurement is taken">
+				text = <"Respiratory phase (synthesised)">
+				description = <"The phase of respiration during which the measurement is taken (synthesised)">
 			>
 			["at11"] = <
 				text = <"Length">
@@ -250,8 +250,8 @@ terminology
 				description = <"محيط الصدر">
 			>
 			["ac1"] = <
-				text = <"*Respiratory phase(en)">
-				description = <"*The phase of respiration during which the measurement is taken(en)">
+				text = <"*Respiratory phase (synthesised)(en)">
+				description = <"*The phase of respiration during which the measurement is taken (synthesised)(en)">
 			>
 			["at11"] = <
 				text = <"*Length (en)">
@@ -296,8 +296,8 @@ terminology
 				description = <"La circunferencia del tórax.">
 			>
 			["ac1"] = <
-				text = <"*Respiratory phase(en)">
-				description = <"*The phase of respiration during which the measurement is taken(en)">
+				text = <"*Respiratory phase (synthesised)(en)">
+				description = <"*The phase of respiration during which the measurement is taken (synthesised)(en)">
 			>
 			["at11"] = <
 				text = <"*Length (en)">

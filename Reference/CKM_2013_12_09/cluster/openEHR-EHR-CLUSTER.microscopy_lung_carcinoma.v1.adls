@@ -92,14 +92,14 @@ definition
 					ELEMENT[id282] occurrences matches {0..1} matches {	-- Nature of involvement
 						value matches {
 							DV_CODED_TEXT[id292] matches {
-								defining_code matches {[ac1]}		-- Nature of involvement
+								defining_code matches {[ac1]}		-- Nature of involvement (synthesised)
 							}
 						}
 					}
 					ELEMENT[id286] occurrences matches {0..1} matches {	-- Extent of invasion
 						value matches {
 							DV_CODED_TEXT[id293] matches {
-								defining_code matches {[ac2]}		-- Extent of invasion
+								defining_code matches {[ac2]}		-- Extent of invasion (synthesised)
 							}
 						}
 					}
@@ -116,7 +116,7 @@ definition
 					ELEMENT[id278] occurrences matches {0..1} matches {	-- Nature of involvement
 						value matches {
 							DV_CODED_TEXT[id294] matches {
-								defining_code matches {[ac3]}		-- Nature of involvement
+								defining_code matches {[ac3]}		-- Nature of involvement (synthesised)
 							}
 							DV_TEXT[id295] 
 						}
@@ -136,7 +136,7 @@ definition
 					ELEMENT[id252] occurrences matches {0..1} matches {	-- In-situ carcinoma
 						value matches {
 							DV_CODED_TEXT[id296] matches {
-								defining_code matches {[ac4]}		-- In-situ carcinoma
+								defining_code matches {[ac4]}		-- In-situ carcinoma (synthesised)
 							}
 						}
 					}
@@ -162,7 +162,7 @@ definition
 					ELEMENT[id251] occurrences matches {0..*} matches {	-- Additional finding
 						value matches {
 							DV_CODED_TEXT[id298] matches {
-								defining_code matches {[ac5]}		-- Additional finding
+								defining_code matches {[ac5]}		-- Additional finding (synthesised)
 							}
 							DV_TEXT[id299] 
 						}
@@ -345,24 +345,24 @@ terminology
 				description = <"Details of other resection margin.">
 			>
 			["ac1"] = <
-				text = <"Nature of involvement">
-				description = <"If the bronchial margin is involved by tumour, the nature of that involvement.">
+				text = <"Nature of involvement (synthesised)">
+				description = <"If the bronchial margin is involved by tumour, the nature of that involvement. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Extent of invasion">
-				description = <"If the tumour is invasive, the extent of invasion at the bronchial resection margin.">
+				text = <"Extent of invasion (synthesised)">
+				description = <"If the tumour is invasive, the extent of invasion at the bronchial resection margin. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Nature of involvement">
-				description = <"If the vascular margin is involved by tumour, the nature of that involvement.">
+				text = <"Nature of involvement (synthesised)">
+				description = <"If the vascular margin is involved by tumour, the nature of that involvement. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"In-situ carcinoma">
-				description = <"Finding of in-situ carcinoma.">
+				text = <"In-situ carcinoma (synthesised)">
+				description = <"Finding of in-situ carcinoma. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Additional finding">
-				description = <"Findings of an additional histopathological finding.">
+				text = <"Additional finding (synthesised)">
+				description = <"Findings of an additional histopathological finding. (synthesised)">
 			>
 		>
 	>

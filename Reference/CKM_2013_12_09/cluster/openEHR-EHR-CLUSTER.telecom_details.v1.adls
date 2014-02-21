@@ -52,7 +52,7 @@ definition
 			ELEMENT[id11] occurrences matches {0..*} matches {	-- Mode
 				value matches {
 					DV_CODED_TEXT[id21] matches {
-						defining_code matches {[ac1]}		-- Mode
+						defining_code matches {[ac1]}		-- Mode (synthesised)
 					}
 				}
 			}
@@ -61,7 +61,7 @@ definition
 					ELEMENT[id5] matches {	-- Telecoms type
 						value matches {
 							DV_CODED_TEXT[id22] matches {
-								defining_code matches {[ac2]}		-- Telecoms type
+								defining_code matches {[ac2]}		-- Telecoms type (synthesised)
 							}
 						}
 					}
@@ -180,12 +180,12 @@ terminology
 				description = <"Telephone extension number.  ENV13606-4:2000 7.11.18.">
 			>
 			["ac1"] = <
-				text = <"Mode">
-				description = <"A qualifier for a telecom contact, describing its context e.g. 'Work', 'Home'.   ENV 13606 - 4:2000 7.11.19.">
+				text = <"Mode (synthesised)">
+				description = <"A qualifier for a telecom contact, describing its context e.g. 'Work', 'Home'.   ENV 13606 - 4:2000 7.11.19. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Telecoms type">
-				description = <"Telecom mechanism e.g. telephone, facsimile, pager etc.  ENV 13606-4:2000 7.11.19.">
+				text = <"Telecoms type (synthesised)">
+				description = <"Telecom mechanism e.g. telephone, facsimile, pager etc.  ENV 13606-4:2000 7.11.19. (synthesised)">
 			>
 		>
 		["de"] = <
@@ -262,12 +262,12 @@ terminology
 				description = <"Durchwahl. ENV13606-4:2000 7.11.18">
 			>
 			["ac1"] = <
-				text = <"*Mode(en)">
-				description = <"*A qualifier for a telecom contact, describing its context e.g. 'Work', 'Home'.   ENV 13606 - 4:2000 7.11.19.(en)">
+				text = <"*Mode (synthesised)(en)">
+				description = <"*A qualifier for a telecom contact, describing its context e.g. 'Work', 'Home'.   ENV 13606 - 4:2000 7.11.19. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Telecoms type(en)">
-				description = <"*Telecom mechanism e.g. telephone, facsimile, pager etc.  ENV 13606-4:2000 7.11.19.(en)">
+				text = <"*Telecoms type (synthesised)(en)">
+				description = <"*Telecom mechanism e.g. telephone, facsimile, pager etc.  ENV 13606-4:2000 7.11.19. (synthesised)(en)">
 			>
 		>
 	>

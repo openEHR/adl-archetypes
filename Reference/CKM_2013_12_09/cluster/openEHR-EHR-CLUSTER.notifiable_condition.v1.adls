@@ -38,7 +38,7 @@ definition
 			ELEMENT[id3] occurrences matches {0..1} matches {	-- Status
 				value matches {
 					DV_CODED_TEXT[id10] matches {
-						defining_code matches {[ac1]}		-- Status
+						defining_code matches {[ac1]}		-- Status (synthesised)
 					}
 				}
 			}
@@ -97,9 +97,9 @@ A status of aborted means the patient was associated with the notifiable conditi
 				description = <"A link to the original record identifying the notifiable condition.">
 			>
 			["ac1"] = <
-				text = <"Status">
+				text = <"Status (synthesised)">
 				description = <"A status of completed means the patient has been associated with the given notifiable condition.
-A status of aborted means the patient was associated with the notifiable condition in error.">
+A status of aborted means the patient was associated with the notifiable condition in error. (synthesised)">
 			>
 		>
 	>

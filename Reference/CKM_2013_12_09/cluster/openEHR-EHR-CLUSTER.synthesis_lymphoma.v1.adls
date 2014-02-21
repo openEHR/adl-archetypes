@@ -41,7 +41,7 @@ definition
 			ELEMENT[id3] occurrences matches {0..1} matches {	-- Clonality
 				value matches {
 					DV_CODED_TEXT[id11] matches {
-						defining_code matches {[ac1]}		-- Clonality
+						defining_code matches {[ac1]}		-- Clonality (synthesised)
 					}
 					DV_TEXT[id12] 
 				}
@@ -90,8 +90,8 @@ terminology
 				description = <"Cancer staging.">
 			>
 			["ac1"] = <
-				text = <"Clonality">
-				description = <"*">
+				text = <"Clonality (synthesised)">
+				description = <"* (synthesised)">
 			>
 		>
 	>

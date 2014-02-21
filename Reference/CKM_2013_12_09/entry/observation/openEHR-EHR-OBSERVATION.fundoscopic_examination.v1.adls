@@ -60,7 +60,7 @@ definition
 									ELEMENT[id5] occurrences matches {0..1} matches {	-- Side
 										value matches {
 											DV_CODED_TEXT[id32] matches {
-												defining_code matches {[ac1]}		-- Side
+												defining_code matches {[ac1]}		-- Side (synthesised)
 											}
 										}
 									}
@@ -134,7 +134,7 @@ definition
 													ELEMENT[id16] occurrences matches {0..1} matches {	-- Ease of Visualisation
 														value matches {
 															DV_CODED_TEXT[id44] matches {
-																defining_code matches {[ac2]}		-- Ease of Visualisation
+																defining_code matches {[ac2]}		-- Ease of Visualisation (synthesised)
 															}
 														}
 													}
@@ -173,7 +173,7 @@ definition
 					ELEMENT[id30] occurrences matches {0..1} matches {	-- Method
 						value matches {
 							DV_CODED_TEXT[id47] matches {
-								defining_code matches {[ac3]}		-- Method
+								defining_code matches {[ac3]}		-- Method (synthesised)
 							}
 						}
 					}
@@ -298,16 +298,16 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"Side">
-				description = <"*">
+				text = <"Side (synthesised)">
+				description = <"* (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Ease of Visualisation">
-				description = <"Description of ease to visualise all the sturctures during fundoscopy">
+				text = <"Ease of Visualisation (synthesised)">
+				description = <"Description of ease to visualise all the sturctures during fundoscopy (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Method">
-				description = <"*">
+				text = <"Method (synthesised)">
+				description = <"* (synthesised)">
 			>
 		>
 		["pt-br"] = <
@@ -424,16 +424,16 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"*Side(en)">
-				description = <"**(en)">
+				text = <"*Side (synthesised)(en)">
+				description = <"** (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Ease of Visualisation(en)">
-				description = <"*Description of ease to visualise all the sturctures during fundoscopy(en)">
+				text = <"*Ease of Visualisation (synthesised)(en)">
+				description = <"*Description of ease to visualise all the sturctures during fundoscopy (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Method(en)">
-				description = <"**(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"** (synthesised)(en)">
 			>
 		>
 	>

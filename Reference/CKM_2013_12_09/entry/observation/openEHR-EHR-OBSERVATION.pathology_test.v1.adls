@@ -91,7 +91,7 @@ definition
 									ELEMENT[id74] matches {	-- Overall Test Result Status
 										value matches {
 											DV_CODED_TEXT[id114] matches {
-												defining_code matches {[ac1]}		-- Overall Test Result Status
+												defining_code matches {[ac1]}		-- Overall Test Result Status (synthesised)
 											}
 										}
 									}
@@ -129,7 +129,7 @@ definition
 													ELEMENT[id109] occurrences matches {0..1} matches {	-- Result Value Status
 														value matches {
 															DV_CODED_TEXT[id121] matches {
-																defining_code matches {[ac2]}		-- Result Value Status
+																defining_code matches {[ac2]}		-- Result Value Status (synthesised)
 															}
 														}
 													}
@@ -154,7 +154,7 @@ definition
 									ELEMENT[id11] occurrences matches {0..*} matches {	-- Test Result Representation
 										value matches {
 											DV_MULTIMEDIA[id124] matches {
-												media_type matches {[ac3]}		-- Test Result Representation
+												media_type matches {[ac3]}		-- Test Result Representation (synthesised)
 											}
 										}
 									}
@@ -354,16 +354,16 @@ terminology
 				description = <"Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
 			>
 			["ac1"] = <
-				text = <"Overall Test Result Status">
-				description = <"The publication status of the entire pathology test result.">
+				text = <"Overall Test Result Status (synthesised)">
+				description = <"The publication status of the entire pathology test result. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Result Value Status">
-				description = <"The status of the result value.">
+				text = <"Result Value Status (synthesised)">
+				description = <"The status of the result value. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Test Result Representation">
-				description = <"Rich text representation of the entire result as issued by the diagnostic service.">
+				text = <"Test Result Representation (synthesised)">
+				description = <"Rich text representation of the entire result as issued by the diagnostic service. (synthesised)">
 			>
 			["at109"] = <
 				text = <"text/html">
@@ -533,16 +533,16 @@ terminology
 				description = <"*Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
 			>
 			["ac1"] = <
-				text = <"*Overall Test Result Status(en)">
-				description = <"*The publication status of the entire pathology test result.(en)">
+				text = <"*Overall Test Result Status (synthesised)(en)">
+				description = <"*The publication status of the entire pathology test result. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Result Value Status(en)">
-				description = <"*The status of the result value.(en)">
+				text = <"*Result Value Status (synthesised)(en)">
+				description = <"*The status of the result value. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Test Result Representation(en)">
-				description = <"*Rich text representation of the entire result as issued by the diagnostic service.(en)">
+				text = <"*Test Result Representation (synthesised)(en)">
+				description = <"*Rich text representation of the entire result as issued by the diagnostic service. (synthesised)(en)">
 			>
 			["at109"] = <
 				text = <"*text/html (en)">

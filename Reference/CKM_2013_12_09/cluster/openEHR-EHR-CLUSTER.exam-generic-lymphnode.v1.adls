@@ -38,7 +38,7 @@ definition
 		/items[id9.0.1]/items matches {
 			ELEMENT[id0.0.15] occurrences matches {0..1} matches {	-- Description
 				value matches {
-					DV_TEXT[id0.0.78] 
+					DV_TEXT[id0.0.16] 
 				}
 			}
 			before [id0.11]
@@ -48,12 +48,12 @@ definition
 						items matches {
 							ELEMENT[id0.0.11] occurrences matches {0..1} matches {	-- Node name
 								value matches {
-									DV_TEXT[id0.0.79] 
+									DV_TEXT[id0.0.17] 
 								}
 							}
 							ELEMENT[id0.0.13] occurrences matches {0..1} matches {	-- Description
 								value matches {
-									DV_TEXT[id0.0.80] 
+									DV_TEXT[id0.0.18] 
 								}
 							}
 						}
@@ -98,15 +98,5 @@ terminology
 				text = <"Findings">
 				description = <"Clinical findings.">
 			>
-			["ac0.0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-		>
-	>
-	value_sets = <
-		["ac0.0.1"] = <
-			id = <"ac0.0.1">
-			members = <"at1", "at2", "at3">
 		>
 	>

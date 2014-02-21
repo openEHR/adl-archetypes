@@ -55,7 +55,7 @@ definition
 			ELEMENT[id3] occurrences matches {0..1} matches {	-- Fonte da notificação
 				value matches {
 					DV_CODED_TEXT[id6] matches {
-						defining_code matches {[ac1]}		-- Fonte da notificação
+						defining_code matches {[ac1]}		-- Fonte da notificação (synthesised)
 					}
 				}
 			}
@@ -106,8 +106,8 @@ terminology
 				description = <"Indica que a fonte de notificação deste óbito é desconhecida">
 			>
 			["ac1"] = <
-				text = <"Fonte da notificação">
-				description = <"Um código que informa sobre a fonte de notificação do óbito. Este campo fornece uma indicação da confiabilidade da informação">
+				text = <"Fonte da notificação (synthesised)">
+				description = <"Um código que informa sobre a fonte de notificação do óbito. Este campo fornece uma indicação da confiabilidade da informação (synthesised)">
 			>
 		>
 		["en"] = <
@@ -148,8 +148,8 @@ terminology
 				description = <"Indicate that the notification source is unknown">
 			>
 			["ac1"] = <
-				text = <"*Fonte da notificação(pt-br)">
-				description = <"*Um código que informa sobre a fonte de notificação do óbito. Este campo fornece uma indicação da confiabilidade da informação(pt-br)">
+				text = <"*Fonte da notificação (synthesised)(pt-br)">
+				description = <"*Um código que informa sobre a fonte de notificação do óbito. Este campo fornece uma indicação da confiabilidade da informação (synthesised)(pt-br)">
 			>
 		>
 	>

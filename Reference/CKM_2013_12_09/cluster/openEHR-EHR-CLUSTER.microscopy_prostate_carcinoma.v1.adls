@@ -57,7 +57,7 @@ definition
 									ELEMENT[id159] occurrences matches {0..1} matches {	-- Qualitative estimation 
 										value matches {
 											DV_CODED_TEXT[id277] matches {
-												defining_code matches {[ac1]}		-- Qualitative estimation 
+												defining_code matches {[ac1]}		-- Qualitative estimation  (synthesised)
 											}
 										}
 									}
@@ -114,7 +114,7 @@ definition
 							ELEMENT[id163] occurrences matches {0..1} matches {	-- Tumour found incidentally at histopathology
 								value matches {
 									DV_CODED_TEXT[id283] matches {
-										defining_code matches {[ac2]}		-- Tumour found incidentally at histopathology
+										defining_code matches {[ac2]}		-- Tumour found incidentally at histopathology (synthesised)
 									}
 								}
 							}
@@ -198,14 +198,14 @@ definition
 							ELEMENT[id239] occurrences matches {0..1} matches {	-- Relation to prostatic capsule
 								value matches {
 									DV_CODED_TEXT[id289] matches {
-										defining_code matches {[ac3]}		-- Relation to prostatic capsule
+										defining_code matches {[ac3]}		-- Relation to prostatic capsule (synthesised)
 									}
 								}
 							}
 							ELEMENT[id250] occurrences matches {0..1} matches {	-- Benign glands
 								value matches {
 									DV_CODED_TEXT[id290] matches {
-										defining_code matches {[ac4]}		-- Benign glands
+										defining_code matches {[ac4]}		-- Benign glands (synthesised)
 									}
 								}
 							}
@@ -218,7 +218,7 @@ definition
 					ELEMENT[id173] occurrences matches {0..1} matches {	-- Seminal vesicle involvement
 						value matches {
 							DV_CODED_TEXT[id291] matches {
-								defining_code matches {[ac5]}		-- Seminal vesicle involvement
+								defining_code matches {[ac5]}		-- Seminal vesicle involvement (synthesised)
 							}
 						}
 					}
@@ -242,7 +242,7 @@ definition
 			ELEMENT[id270] occurrences matches {0..1} matches {	-- Bladder neck involvement
 				value matches {
 					DV_CODED_TEXT[id293] matches {
-						defining_code matches {[ac6]}		-- Bladder neck involvement
+						defining_code matches {[ac6]}		-- Bladder neck involvement (synthesised)
 					}
 				}
 			}
@@ -251,7 +251,7 @@ definition
 					ELEMENT[id275] occurrences matches {0..*} matches {	-- Tumour zone
 						value matches {
 							DV_CODED_TEXT[id294] matches {
-								defining_code matches {[ac7]}		-- Tumour zone
+								defining_code matches {[ac7]}		-- Tumour zone (synthesised)
 							}
 						}
 					}
@@ -262,7 +262,7 @@ definition
 					ELEMENT[id179] occurrences matches {0..*} matches {	-- Addtional finding
 						value matches {
 							DV_CODED_TEXT[id295] matches {
-								defining_code matches {[ac8]}		-- Addtional finding
+								defining_code matches {[ac8]}		-- Addtional finding (synthesised)
 							}
 							DV_TEXT[id296] 
 						}
@@ -613,36 +613,36 @@ terminology
 				description = <"Transition zone is involved by tumour.">
 			>
 			["ac1"] = <
-				text = <"Qualitative estimation ">
-				description = <"Qualitative estimate of the amount of primary prostate tumour.">
+				text = <"Qualitative estimation  (synthesised)">
+				description = <"Qualitative estimate of the amount of primary prostate tumour. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Tumour found incidentally at histopathology">
-				description = <"Where tumour has been found incidentally on histopathological examination, the extent of tumour found. This is used as part of the cTNM classification of prostate cancer.">
+				text = <"Tumour found incidentally at histopathology (synthesised)">
+				description = <"Where tumour has been found incidentally on histopathological examination, the extent of tumour found. This is used as part of the cTNM classification of prostate cancer. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Relation to prostatic capsule">
-				description = <"Findings of the relation of the resection margin to the prostatic capsule.">
+				text = <"Relation to prostatic capsule (synthesised)">
+				description = <"Findings of the relation of the resection margin to the prostatic capsule. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Benign glands">
-				description = <"Finding of benign glands at the surgical margin">
+				text = <"Benign glands (synthesised)">
+				description = <"Finding of benign glands at the surgical margin (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Seminal vesicle involvement">
-				description = <"Findings of tumour involvement in seminal vesicles.">
+				text = <"Seminal vesicle involvement (synthesised)">
+				description = <"Findings of tumour involvement in seminal vesicles. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Bladder neck involvement">
-				description = <"Finding of involvement by tumour of the bladder neck.">
+				text = <"Bladder neck involvement (synthesised)">
+				description = <"Finding of involvement by tumour of the bladder neck. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Tumour zone">
-				description = <"Finding of zone(s) involved by tumour.">
+				text = <"Tumour zone (synthesised)">
+				description = <"Finding of zone(s) involved by tumour. (synthesised)">
 			>
 			["ac8"] = <
-				text = <"Addtional finding">
-				description = <"Additional histological finding related to prostate cancer.">
+				text = <"Addtional finding (synthesised)">
+				description = <"Additional histological finding related to prostate cancer. (synthesised)">
 			>
 			["ac9"] = <
 				text = <"Primary Gleason grade">

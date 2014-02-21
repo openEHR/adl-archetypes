@@ -230,7 +230,7 @@ definition
 									ELEMENT[id15] occurrences matches {0..1} matches {	-- Position
 										value matches {
 											DV_CODED_TEXT[id23] matches {
-												defining_code matches {[ac1; at17]}		-- Position
+												defining_code matches {[ac1; at17]}		-- Position (synthesised)
 											}
 										}
 									}
@@ -298,8 +298,8 @@ terminology
 				description = <"De lengte is liggend gemeten, volledig uitgestrekt, plat bekken, benen gestrekt en voeten gebogen.">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*Position of individual when measured.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*Position of individual when measured. (synthesised)(en)">
 			>
 			["at22"] = <
 				text = <"*Length (en)">
@@ -344,8 +344,8 @@ terminology
 				description = <"Length is measured in a fully extended, recumbent position with the pelvis flat, legs extended and feet flexed.">
 			>
 			["ac1"] = <
-				text = <"Position">
-				description = <"Position of individual when measured.">
+				text = <"Position (synthesised)">
+				description = <"Position of individual when measured. (synthesised)">
 			>
 			["at22"] = <
 				text = <"Length">
@@ -390,8 +390,8 @@ terminology
 				description = <"Länge wird in einer voll ausgestreckten, liegenden Position gemessen. Hierbei wird das Becken flach gehalten, die Beine ausgestreckt und die Füße gebeugt.">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*Position of individual when measured.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*Position of individual when measured. (synthesised)(en)">
 			>
 			["at22"] = <
 				text = <"*Length (en)">
@@ -437,8 +437,8 @@ A altura é medida com o indivíduo na posição de pé e comprimento do corpo n
 				description = <"O comprimento é medido em uma posição totalmente estendida, deitada com a pelve plana, pernas estendidas e os pés flexionados.">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*Position of individual when measured.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*Position of individual when measured. (synthesised)(en)">
 			>
 			["at22"] = <
 				text = <"*Length (en)">
@@ -483,8 +483,8 @@ A altura é medida com o indivíduo na posição de pé e comprimento do corpo n
 				description = <"  طول در حالت کاملا کشیده و طاقباز با لگن صاف، ساق های کشیده و پاهای جمع شده از مچ پا اندازه گیری می شود">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*Position of individual when measured.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*Position of individual when measured. (synthesised)(en)">
 			>
 			["at22"] = <
 				text = <"*Length (en)">
@@ -529,8 +529,8 @@ A altura é medida com o indivíduo na posição de pé e comprimento do corpo n
 				description = <"يتم قياس الطول في وضع مستلقٍ متمدد بشكل تام مع استواء الحوض, و الأرجل ممتدة و الأقدام مرتخية.">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*Position of individual when measured.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*Position of individual when measured. (synthesised)(en)">
 			>
 			["at22"] = <
 				text = <"*Length (en)">
@@ -575,8 +575,8 @@ A altura é medida com o indivíduo na posição de pé e comprimento do corpo n
 				description = <"La longitud corporal es medida en una posición recostada y completamente extendida, con la pelvis plana, las piernas extendidas y los pies flexionados.">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*Position of individual when measured.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*Position of individual when measured. (synthesised)(en)">
 			>
 			["at22"] = <
 				text = <"*Length (en)">

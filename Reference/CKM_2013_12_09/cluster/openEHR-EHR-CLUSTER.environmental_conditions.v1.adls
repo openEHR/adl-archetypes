@@ -58,7 +58,7 @@ definition
 			ELEMENT[id6] occurrences matches {0..1} matches {	-- Wind Chill Temperature
 				value matches {
 					DV_QUANTITY[id15] matches {
-						property matches {[at4]}
+						property matches {[at1]}
 						[units, precision] matches {
 							[{"°C"}, {1}],
 							[{"°F"}, {1}]
@@ -69,7 +69,7 @@ definition
 			ELEMENT[id11] occurrences matches {0..1} matches {	-- Wet Bulb Globe Temperature
 				value matches {
 					DV_QUANTITY[id16] matches {
-						property matches {[at5]}
+						property matches {[at1]}
 						[units, precision] matches {
 							[{"°C"}, {|>=0|}],
 							[{"°F"}, {1}]
@@ -119,14 +119,6 @@ terminology
 				text = <"Velocity">
 				description = <"Velocity">
 			>
-			["at4"] = <
-				text = <"Temperature">
-				description = <"Temperature">
-			>
-			["at5"] = <
-				text = <"Temperature">
-				description = <"Temperature">
-			>
 		>
 	>
 	term_bindings = <
@@ -134,7 +126,5 @@ terminology
 			["at1"] = <http://openehr.org/id/127>
 			["at2"] = <http://openehr.org/id/507>
 			["at3"] = <http://openehr.org/id/338>
-			["at4"] = <http://openehr.org/id/127>
-			["at5"] = <http://openehr.org/id/127>
 		>
 	>

@@ -200,7 +200,7 @@ definition
 					ELEMENT[id7] occurrences matches {0..1} matches {	-- Method
 						value matches {
 							DV_CODED_TEXT[id14] matches {
-								defining_code matches {[ac1]}		-- Method
+								defining_code matches {[ac1]}		-- Method (synthesised)
 							}
 						}
 					}
@@ -255,8 +255,8 @@ terminology
 				description = <"Comentário sobre a medição, por exemplo, IMC observando que as medidas utilizadas foram ajustadas para peso / altura.">
 			>
 			["ac1"] = <
-				text = <"*Method(en)">
-				description = <"*The method of entering the Body Mass Index.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*The method of entering the Body Mass Index. (synthesised)(en)">
 			>
 			["at10"] = <
 				text = <"*Mass per area (en)">
@@ -297,8 +297,8 @@ terminology
 				description = <"Comentario sobre la medición del Índice de Masa Corporal ej: informando que la medición registrada fue peso/altura ajustado. ">
 			>
 			["ac1"] = <
-				text = <"*Method(en)">
-				description = <"*The method of entering the Body Mass Index.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*The method of entering the Body Mass Index. (synthesised)(en)">
 			>
 			["at10"] = <
 				text = <"*Mass per area (en)">
@@ -340,8 +340,8 @@ terminology
 				description = <"نظر در مورد اندازه گیری شاخص توده بدن به عنوان مثال ذکر اینکه در اندازه گیری های انجام شده از وزن و یا قد معادل استفاده شده است ">
 			>
 			["ac1"] = <
-				text = <"*Method(en)">
-				description = <"*The method of entering the Body Mass Index.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*The method of entering the Body Mass Index. (synthesised)(en)">
 			>
 			["at10"] = <
 				text = <"*Mass per area (en)">
@@ -382,8 +382,8 @@ terminology
 				description = <"Comment about the Body Mass Index measurement eg noting that the measurements used were adjusted weight/height.">
 			>
 			["ac1"] = <
-				text = <"Method">
-				description = <"The method of entering the Body Mass Index.">
+				text = <"Method (synthesised)">
+				description = <"The method of entering the Body Mass Index. (synthesised)">
 			>
 			["at10"] = <
 				text = <"Mass per area">
@@ -424,8 +424,8 @@ terminology
 				description = <"تعليق حول قياس معامل كتلة الجسم مثل ملاحظة أن القياسات المستخدمة هي قياسات مصححة للوزن و الطول">
 			>
 			["ac1"] = <
-				text = <"*Method(en)">
-				description = <"*The method of entering the Body Mass Index.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*The method of entering the Body Mass Index. (synthesised)(en)">
 			>
 			["at10"] = <
 				text = <"*Mass per area (en)">
@@ -466,8 +466,8 @@ terminology
 				description = <"Opmerking over de Body Mass Index meting, b.v. dat de metingen die gebruikt werden voor de berekening, aangepaste lengte/gewicht zijn.">
 			>
 			["ac1"] = <
-				text = <"*Method(en)">
-				description = <"*The method of entering the Body Mass Index.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*The method of entering the Body Mass Index. (synthesised)(en)">
 			>
 			["at10"] = <
 				text = <"*Mass per area (en)">

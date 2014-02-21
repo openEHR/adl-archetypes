@@ -38,7 +38,7 @@ definition
 					ELEMENT[id4] occurrences matches {0..1} matches {	-- Result
 						value matches {
 							DV_CODED_TEXT[id9] matches {
-								defining_code matches {[ac1]}		-- Result
+								defining_code matches {[ac1]}		-- Result (synthesised)
 							}
 						}
 					}
@@ -84,8 +84,8 @@ terminology
 				description = <"A comment or text description of the patient's sense of smell">
 			>
 			["ac1"] = <
-				text = <"Result">
-				description = <"Was the odour correctly identified?">
+				text = <"Result (synthesised)">
+				description = <"Was the odour correctly identified? (synthesised)">
 			>
 		>
 	>

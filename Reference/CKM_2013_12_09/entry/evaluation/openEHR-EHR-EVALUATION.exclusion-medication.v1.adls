@@ -47,10 +47,10 @@ definition
 			}
 		}
 		/data[id2]/items[id4.1]/value matches {
-			before [id10]
-			DV_CODED_TEXT[id0.24] matches {
+			DV_CODED_TEXT[id10.3] matches {
 				defining_code matches {[ac0.1]}		-- Medications
 			}
+			DV_TEXT[id10] 
 		}
 	}
 

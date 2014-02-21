@@ -32,7 +32,12 @@ description
 	>
 
 definition
-	CLUSTER[id1.1] 	-- Tumour - Breast Cancer TNM staging 7th Edition
+	CLUSTER[id1.1] matches {	-- Tumour - Breast Cancer TNM staging 7th Edition
+		items matches {
+			ELEMENT[id4] 
+			ELEMENT[id5] 
+		}
+	}
 
 terminology
 	term_definitions = <
@@ -41,15 +46,5 @@ terminology
 				text = <"Tumour - Breast Cancer TNM staging 7th Edition">
 				description = <"For the classification and grading of breast cancer using the TNM classification 7th Edition.">
 			>
-			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-		>
-	>
-	value_sets = <
-		["ac0.1"] = <
-			id = <"ac0.1">
-			members = <"at48", "at49", "at50", "at51", "at52">
 		>
 	>

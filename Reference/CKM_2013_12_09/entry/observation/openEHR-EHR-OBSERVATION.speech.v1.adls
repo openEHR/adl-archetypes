@@ -37,7 +37,7 @@ definition
 									ELEMENT[id5] occurrences matches {0..1} matches {	-- Clarity of speech
 										value matches {
 											DV_CODED_TEXT[id6] matches {
-												defining_code matches {[ac1]}		-- Clarity of speech
+												defining_code matches {[ac1]}		-- Clarity of speech (synthesised)
 											}
 										}
 									}
@@ -82,8 +82,8 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"Clarity of speech">
-				description = <"*">
+				text = <"Clarity of speech (synthesised)">
+				description = <"* (synthesised)">
 			>
 		>
 	>

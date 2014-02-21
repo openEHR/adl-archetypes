@@ -53,8 +53,8 @@ definition
 			after [id7]
 			ELEMENT[id0.2] occurrences matches {1..*} matches {	-- Uso da identificação
 				value matches {
-					DV_TEXT[id0.28] 
-					DV_CODED_TEXT[id0.29] matches {
+					DV_TEXT[id0.35] 
+					DV_CODED_TEXT[id0.36] matches {
 						defining_code matches {[ac1.1]}		-- Código de uso do identificador.
 					}
 				}
@@ -63,27 +63,27 @@ definition
 				items cardinality matches {3..*; ordered} matches {
 					ELEMENT[id0.30] occurrences matches {0..1} matches {	-- Não é duplicata de
 						value matches {
-							DV_TEXT[id0.30] 	-- Não é duplicata de
+							DV_TEXT[id0.37] 
 						}
 					}
 					ELEMENT[id0.31] occurrences matches {0..1} matches {	-- Duplicata de
 						value matches {
-							DV_TEXT[id0.31] 	-- Duplicata de
+							DV_TEXT[id0.38] 
 						}
 					}
 					ELEMENT[id0.32] occurrences matches {1..*} matches {	-- Confirmado pela organização
 						value matches {
-							DV_TEXT[id0.32] 	-- Confirmado pela organização
+							DV_TEXT[id0.39] 
 						}
 					}
 					ELEMENT[id0.33] occurrences matches {1..*} matches {	-- Data da confirmação
 						value matches {
-							DV_DATE[id0.33] 	-- Data da confirmação
+							DV_DATE[id0.40] 
 						}
 					}
 					ELEMENT[id0.34] occurrences matches {1..*} matches {	-- Identificador desativado
 						value matches {
-							DV_TEXT[id0.34] 	-- Identificador desativado
+							DV_TEXT[id0.41] 
 						}
 					}
 				}
@@ -130,10 +130,6 @@ terminology
 				text = <"Identifier usage code">
 				description = <"Valid codes for usage of identifiers.">
 			>
-			["ac0.1"] = <
-				text = <"*(added by post-parse processor)(pt-br)">
-				description = <"*(added by post-parse processor)(pt-br)">
-			>
 		>
 		["pt-br"] = <
 			["id1.1"] = <
@@ -172,15 +168,5 @@ terminology
 				text = <"Código de uso do identificador.">
 				description = <"códigos válidos para os usos de identificadores.">
 			>
-			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-		>
-	>
-	value_sets = <
-		["ac0.1"] = <
-			id = <"ac0.1">
-			members = <"at11", "at12", "at13", "at14">
 		>
 	>

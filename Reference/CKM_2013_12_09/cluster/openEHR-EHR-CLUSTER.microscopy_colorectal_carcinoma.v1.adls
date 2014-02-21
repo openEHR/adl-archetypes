@@ -48,7 +48,7 @@ definition
 					ELEMENT[id271] occurrences matches {0..1} matches {	-- Grade
 						value matches {
 							DV_CODED_TEXT[id373] matches {
-								defining_code matches {[ac1]}		-- Grade
+								defining_code matches {[ac1]}		-- Grade (synthesised)
 							}
 						}
 					}
@@ -64,14 +64,14 @@ definition
 					ELEMENT[id311] occurrences matches {0..1} matches {	-- Local invasion classification
 						value matches {
 							DV_CODED_TEXT[id375] matches {
-								defining_code matches {[ac2]}		-- Local invasion classification
+								defining_code matches {[ac2]}		-- Local invasion classification (synthesised)
 							}
 						}
 					}
 					ELEMENT[id319] occurrences matches {0..1} matches {	-- Depth of invasion
 						value matches {
 							DV_CODED_TEXT[id376] matches {
-								defining_code matches {[ac3]}		-- Depth of invasion
+								defining_code matches {[ac3]}		-- Depth of invasion (synthesised)
 							}
 						}
 					}
@@ -100,7 +100,7 @@ definition
 					ELEMENT[id252] occurrences matches {0..1} matches {	-- In-situ carcinoma
 						value matches {
 							DV_CODED_TEXT[id378] matches {
-								defining_code matches {[ac4]}		-- In-situ carcinoma
+								defining_code matches {[ac4]}		-- In-situ carcinoma (synthesised)
 							}
 						}
 					}
@@ -120,7 +120,7 @@ definition
 					ELEMENT[id325] occurrences matches {0..1} matches {	-- Nodal involvement classification
 						value matches {
 							DV_CODED_TEXT[id380] matches {
-								defining_code matches {[ac5]}		-- Nodal involvement classification
+								defining_code matches {[ac5]}		-- Nodal involvement classification (synthesised)
 							}
 							DV_TEXT[id381] 
 						}
@@ -128,7 +128,7 @@ definition
 					ELEMENT[id277] occurrences matches {0..1} matches {	-- Distance from margin
 						value matches {
 							DV_QUANTITY[id382] matches {
-								property matches {[at373]}
+								property matches {[at372]}
 								magnitude matches {|>=0.0|}
 							}
 						}
@@ -168,7 +168,7 @@ definition
 							ELEMENT[id282] occurrences matches {0..1} matches {	-- Discontinuous extramural tumour deposits
 								value matches {
 									DV_CODED_TEXT[id385] matches {
-										defining_code matches {[ac6]}		-- Discontinuous extramural tumour deposits
+										defining_code matches {[ac6]}		-- Discontinuous extramural tumour deposits (synthesised)
 									}
 								}
 							}
@@ -181,7 +181,7 @@ definition
 							ELEMENT[id286] occurrences matches {0..1} matches {	-- Distance from margin
 								value matches {
 									DV_QUANTITY[id386] matches {
-										property matches {[at374]}
+										property matches {[at372]}
 										magnitude matches {|>=0.0|}
 									}
 								}
@@ -195,7 +195,7 @@ definition
 					ELEMENT[id265] occurrences matches {0..1} matches {	-- Distant metastasis
 						value matches {
 							DV_CODED_TEXT[id387] matches {
-								defining_code matches {[ac7]}		-- Distant metastasis
+								defining_code matches {[ac7]}		-- Distant metastasis (synthesised)
 							}
 						}
 					}
@@ -229,7 +229,7 @@ definition
 					ELEMENT[id368] occurrences matches {0..1} matches {	-- Polyposis syndrome
 						value matches {
 							DV_CODED_TEXT[id391] matches {
-								defining_code matches {[ac8]}		-- Polyposis syndrome
+								defining_code matches {[ac8]}		-- Polyposis syndrome (synthesised)
 							}
 						}
 					}
@@ -245,7 +245,7 @@ definition
 					ELEMENT[id251] occurrences matches {0..*} matches {	-- Additional finding
 						value matches {
 							DV_CODED_TEXT[id393] matches {
-								defining_code matches {[ac9]}		-- Additional finding
+								defining_code matches {[ac9]}		-- Additional finding (synthesised)
 							}
 							DV_TEXT[id394] 
 						}
@@ -260,7 +260,7 @@ definition
 			ELEMENT[id263] occurrences matches {0..1} matches {	-- Residual tumour status
 				value matches {
 					DV_CODED_TEXT[id396] matches {
-						defining_code matches {[ac10]}		-- Residual tumour status
+						defining_code matches {[ac10]}		-- Residual tumour status (synthesised)
 					}
 				}
 			}
@@ -269,7 +269,7 @@ definition
 					ELEMENT[id331] occurrences matches {0..1} matches {	-- Neoadjuvant therapy given
 						value matches {
 							DV_CODED_TEXT[id397] matches {
-								defining_code matches {[ac11]}		-- Neoadjuvant therapy given
+								defining_code matches {[ac11]}		-- Neoadjuvant therapy given (synthesised)
 							}
 						}
 					}
@@ -278,21 +278,21 @@ definition
 							ELEMENT[id303] occurrences matches {0..1} matches {	-- Grade (AJCC)
 								value matches {
 									DV_CODED_TEXT[id398] matches {
-										defining_code matches {[ac12]}		-- Grade (AJCC)
+										defining_code matches {[ac12]}		-- Grade (AJCC) (synthesised)
 									}
 								}
 							}
 							ELEMENT[id330] occurrences matches {0..1} matches {	-- Grade (CAP)
 								value matches {
 									DV_CODED_TEXT[id399] matches {
-										defining_code matches {[ac13]}		-- Grade (CAP)
+										defining_code matches {[ac13]}		-- Grade (CAP) (synthesised)
 									}
 								}
 							}
 							ELEMENT[id335] occurrences matches {0..1} matches {	-- Grade (RCP)
 								value matches {
 									DV_CODED_TEXT[id400] matches {
-										defining_code matches {[ac14]}		-- Grade (RCP)
+										defining_code matches {[ac14]}		-- Grade (RCP) (synthesised)
 									}
 								}
 							}
@@ -736,70 +736,62 @@ terminology
 				description = <"Comment concerning adenomatous polyps.">
 			>
 			["ac1"] = <
-				text = <"Grade">
-				description = <"Histological grade of the tumour.">
+				text = <"Grade (synthesised)">
+				description = <"Histological grade of the tumour. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Local invasion classification">
-				description = <"Local invasion of tumour. Scored using the pT element of the TNM classification.">
+				text = <"Local invasion classification (synthesised)">
+				description = <"Local invasion of tumour. Scored using the pT element of the TNM classification. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Depth of invasion">
-				description = <"The subdivision of pT3 that applies to the tumour.">
+				text = <"Depth of invasion (synthesised)">
+				description = <"The subdivision of pT3 that applies to the tumour. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"In-situ carcinoma">
-				description = <"Findings of in-situ carcinoma.">
+				text = <"In-situ carcinoma (synthesised)">
+				description = <"Findings of in-situ carcinoma. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Nodal involvement classification">
-				description = <"An estimate of nodal involvement using the pN element of TNM classification.">
+				text = <"Nodal involvement classification (synthesised)">
+				description = <"An estimate of nodal involvement using the pN element of TNM classification. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Discontinuous extramural tumour deposits">
-				description = <"Findings of discontinuous extramural tumour deposits.">
+				text = <"Discontinuous extramural tumour deposits (synthesised)">
+				description = <"Findings of discontinuous extramural tumour deposits. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Distant metastasis">
-				description = <"Findings of distant metastasis.">
+				text = <"Distant metastasis (synthesised)">
+				description = <"Findings of distant metastasis. (synthesised)">
 			>
 			["ac8"] = <
-				text = <"Polyposis syndrome">
-				description = <"Evidence of polyposis syndrome.">
+				text = <"Polyposis syndrome (synthesised)">
+				description = <"Evidence of polyposis syndrome. (synthesised)">
 			>
 			["ac9"] = <
-				text = <"Additional finding">
-				description = <"A single additional histopathological finding.">
+				text = <"Additional finding (synthesised)">
+				description = <"A single additional histopathological finding. (synthesised)">
 			>
 			["ac10"] = <
-				text = <"Residual tumour status">
-				description = <"Estimate of the completeness of surgical resection.">
+				text = <"Residual tumour status (synthesised)">
+				description = <"Estimate of the completeness of surgical resection. (synthesised)">
 			>
 			["ac11"] = <
-				text = <"Neoadjuvant therapy given">
-				description = <"Has neoadjuvant therapy been given?">
+				text = <"Neoadjuvant therapy given (synthesised)">
+				description = <"Has neoadjuvant therapy been given? (synthesised)">
 			>
 			["ac12"] = <
-				text = <"Grade (AJCC)">
-				description = <"An estimate of the response to neoadjuvant therapy. (AJCC score).">
+				text = <"Grade (AJCC) (synthesised)">
+				description = <"An estimate of the response to neoadjuvant therapy. (AJCC score). (synthesised)">
 			>
 			["ac13"] = <
-				text = <"Grade (CAP)">
-				description = <"An estimate of the response to neoadjuvant therapy. (CAP)  College of American Pathologists.">
+				text = <"Grade (CAP) (synthesised)">
+				description = <"An estimate of the response to neoadjuvant therapy. (CAP)  College of American Pathologists. (synthesised)">
 			>
 			["ac14"] = <
-				text = <"Grade (RCP)">
-				description = <"An estimate of the response to neoadjuvant therapy. (RCP) Royal College of Pathologists (UK).">
+				text = <"Grade (RCP) (synthesised)">
+				description = <"An estimate of the response to neoadjuvant therapy. (RCP) Royal College of Pathologists (UK). (synthesised)">
 			>
 			["at372"] = <
-				text = <"Length">
-				description = <"Length">
-			>
-			["at373"] = <
-				text = <"Length">
-				description = <"Length">
-			>
-			["at374"] = <
 				text = <"Length">
 				description = <"Length">
 			>
@@ -808,11 +800,13 @@ terminology
 	term_bindings = <
 		["openehr"] = <
 			["at372"] = <http://openehr.org/id/122>
-			["at373"] = <http://openehr.org/id/122>
-			["at374"] = <http://openehr.org/id/122>
 		>
 	>
 	value_sets = <
+		["ac9"] = <
+			id = <"ac9">
+			members = <"at294", "at295", "at296", "at297", "at298", "at341">
+		>
 		["ac1"] = <
 			id = <"ac1">
 			members = <"at273", "at274", "at342", "at343", "at361", "at362">
@@ -844,10 +838,6 @@ terminology
 		["ac8"] = <
 			id = <"ac8">
 			members = <"at369", "at370", "at371">
-		>
-		["ac9"] = <
-			id = <"ac9">
-			members = <"at294", "at295", "at296", "at297", "at298", "at341">
 		>
 		["ac10"] = <
 			id = <"ac10">

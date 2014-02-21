@@ -53,28 +53,28 @@ definition
 			ELEMENT[id30] occurrences matches {0..1} matches {	-- Certainty
 				value matches {
 					DV_CODED_TEXT[id62] matches {
-						defining_code matches {[ac1]}		-- Certainty
+						defining_code matches {[ac1]}		-- Certainty (synthesised)
 					}
 				}
 			}
 			ELEMENT[id25] occurrences matches {0..1} matches {	-- Impact
 				value matches {
 					DV_CODED_TEXT[id63] matches {
-						defining_code matches {[ac2]}		-- Impact
+						defining_code matches {[ac2]}		-- Impact (synthesised)
 					}
 				}
 			}
 			ELEMENT[id52] occurrences matches {0..1} matches {	-- Category
 				value matches {
 					DV_CODED_TEXT[id64] matches {
-						defining_code matches {[ac3]}		-- Category
+						defining_code matches {[ac3]}		-- Category (synthesised)
 					}
 				}
 			}
 			ELEMENT[id4] occurrences matches {0..1} matches {	-- Active status
 				value matches {
 					DV_CODED_TEXT[id65] matches {
-						defining_code matches {[ac4]}		-- Active status
+						defining_code matches {[ac4]}		-- Active status (synthesised)
 					}
 				}
 			}
@@ -86,21 +86,21 @@ definition
 			ELEMENT[id5] occurrences matches {0..1} matches {	-- Evolution
 				value matches {
 					DV_CODED_TEXT[id67] matches {
-						defining_code matches {[ac5]}		-- Evolution
+						defining_code matches {[ac5]}		-- Evolution (synthesised)
 					}
 				}
 			}
 			ELEMENT[id61] occurrences matches {0..1} matches {	-- Temporal context
 				value matches {
 					DV_CODED_TEXT[id68] matches {
-						defining_code matches {[ac6]}		-- Temporal context
+						defining_code matches {[ac6]}		-- Temporal context (synthesised)
 					}
 				}
 			}
 			ELEMENT[id2] occurrences matches {0..1} matches {	-- Episodicity
 				value matches {
 					DV_CODED_TEXT[id69] matches {
-						defining_code matches {[ac7]}		-- Episodicity
+						defining_code matches {[ac7]}		-- Episodicity (synthesised)
 					}
 				}
 			}
@@ -285,32 +285,32 @@ terminology
 				description = <"An issue which ocurred at present.">
 			>
 			["ac1"] = <
-				text = <"Certainty">
-				description = <"The level of confidence in the identification of the problem or diagnosis.">
+				text = <"Certainty (synthesised)">
+				description = <"The level of confidence in the identification of the problem or diagnosis. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Impact">
-				description = <"Description of the impact of the problem or diagnosis on the patient as a whole. Unlike 'severity' this can be used to compare the clinical impact of different problems.">
+				text = <"Impact (synthesised)">
+				description = <"Description of the impact of the problem or diagnosis on the patient as a whole. Unlike 'severity' this can be used to compare the clinical impact of different problems. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Category">
-				description = <"Cateories of problem/ diagnosis/issue.">
+				text = <"Category (synthesised)">
+				description = <"Cateories of problem/ diagnosis/issue. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Active status">
-				description = <"The degree to which the problem is active and relevant within the current clinical context.">
+				text = <"Active status (synthesised)">
+				description = <"The degree to which the problem is active and relevant within the current clinical context. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Evolution">
-				description = <"Records temporal/evidential progress towards identification of the problem or diagnosis, recognising that precise identification may take time to evolve as increasing amounts of evidence become available.">
+				text = <"Evolution (synthesised)">
+				description = <"Records temporal/evidential progress towards identification of the problem or diagnosis, recognising that precise identification may take time to evolve as increasing amounts of evidence become available. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Temporal context">
-				description = <"Temporal context indicator aligned with SNOMEDCT.">
+				text = <"Temporal context (synthesised)">
+				description = <"Temporal context indicator aligned with SNOMEDCT. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Episodicity">
-				description = <"Episodicity is used within a primary care context to distinguish between ongoing and new episodes of a problem or diagnosis, primarily for public health or quality assessment purposes.">
+				text = <"Episodicity (synthesised)">
+				description = <"Episodicity is used within a primary care context to distinguish between ongoing and new episodes of a problem or diagnosis, primarily for public health or quality assessment purposes. (synthesised)">
 			>
 		>
 		["sl"] = <
@@ -475,32 +475,32 @@ terminology
 				description = <"*An issue which ocurred at present.(en)">
 			>
 			["ac1"] = <
-				text = <"*Certainty(en)">
-				description = <"*The level of confidence in the identification of the problem or diagnosis.(en)">
+				text = <"*Certainty (synthesised)(en)">
+				description = <"*The level of confidence in the identification of the problem or diagnosis. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Impact(en)">
-				description = <"*Description of the impact of the problem or diagnosis on the patient as a whole. Unlike 'severity' this can be used to compare the clinical impact of different problems.(en)">
+				text = <"*Impact (synthesised)(en)">
+				description = <"*Description of the impact of the problem or diagnosis on the patient as a whole. Unlike 'severity' this can be used to compare the clinical impact of different problems. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Category(en)">
-				description = <"*Cateories of problem/ diagnosis/issue.(en)">
+				text = <"*Category (synthesised)(en)">
+				description = <"*Cateories of problem/ diagnosis/issue. (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Active status(en)">
-				description = <"*The degree to which the problem is active and relevant within the current clinical context.(en)">
+				text = <"*Active status (synthesised)(en)">
+				description = <"*The degree to which the problem is active and relevant within the current clinical context. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Evolution(en)">
-				description = <"*Records temporal/evidential progress towards identification of the problem or diagnosis, recognising that precise identification may take time to evolve as increasing amounts of evidence become available.(en)">
+				text = <"*Evolution (synthesised)(en)">
+				description = <"*Records temporal/evidential progress towards identification of the problem or diagnosis, recognising that precise identification may take time to evolve as increasing amounts of evidence become available. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Temporal context(en)">
-				description = <"*Temporal context indicator aligned with SNOMEDCT.(en)">
+				text = <"*Temporal context (synthesised)(en)">
+				description = <"*Temporal context indicator aligned with SNOMEDCT. (synthesised)(en)">
 			>
 			["ac7"] = <
-				text = <"*Episodicity(en)">
-				description = <"*Episodicity is used within a primary care context to distinguish between ongoing and new episodes of a problem or diagnosis, primarily for public health or quality assessment purposes.(en)">
+				text = <"*Episodicity (synthesised)(en)">
+				description = <"*Episodicity is used within a primary care context to distinguish between ongoing and new episodes of a problem or diagnosis, primarily for public health or quality assessment purposes. (synthesised)(en)">
 			>
 		>
 	>

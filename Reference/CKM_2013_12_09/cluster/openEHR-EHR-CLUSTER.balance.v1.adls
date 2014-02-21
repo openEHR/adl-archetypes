@@ -58,28 +58,28 @@ definition
 					ELEMENT[id22] occurrences matches {0..1} matches {	-- Test Name
 						value matches {
 							DV_CODED_TEXT[id35] matches {
-								defining_code matches {[ac1]}		-- Test Name
+								defining_code matches {[ac1]}		-- Test Name (synthesised)
 							}
 						}
 					}
 					ELEMENT[id5] occurrences matches {0..1} matches {	-- Eyes Open/closed
 						value matches {
 							DV_CODED_TEXT[id36] matches {
-								defining_code matches {[ac2]}		-- Eyes Open/closed
+								defining_code matches {[ac2]}		-- Eyes Open/closed (synthesised)
 							}
 						}
 					}
 					ELEMENT[id29] occurrences matches {0..1} matches {	-- Loss of Balance
 						value matches {
 							DV_CODED_TEXT[id37] matches {
-								defining_code matches {[ac3]}		-- Loss of Balance
+								defining_code matches {[ac3]}		-- Loss of Balance (synthesised)
 							}
 						}
 					}
 					ELEMENT[id12] occurrences matches {0..1} matches {	-- Affected Side
 						value matches {
 							DV_CODED_TEXT[id38] matches {
-								defining_code matches {[ac4]}		-- Affected Side
+								defining_code matches {[ac4]}		-- Affected Side (synthesised)
 							}
 						}
 					}
@@ -178,20 +178,20 @@ terminology
 				description = <"*The subject lost their balance completely.(en)">
 			>
 			["ac1"] = <
-				text = <"*Test Name(en)">
-				description = <"*Name of a specific test of subject's balance.(en)">
+				text = <"*Test Name (synthesised)(en)">
+				description = <"*Name of a specific test of subject's balance. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Eyes Open/closed(en)">
-				description = <"*Record of eyes being open or closed during performance of test.(en)">
+				text = <"*Eyes Open/closed (synthesised)(en)">
+				description = <"*Record of eyes being open or closed during performance of test. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Loss of Balance(en)">
-				description = <"*Finding of the extent of loss of balance.(en)">
+				text = <"*Loss of Balance (synthesised)(en)">
+				description = <"*Finding of the extent of loss of balance. (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Affected Side(en)">
-				description = <"*Identification of side of abnormal finding.(en)">
+				text = <"*Affected Side (synthesised)(en)">
+				description = <"*Identification of side of abnormal finding. (synthesised)(en)">
 			>
 		>
 		["en"] = <
@@ -272,20 +272,20 @@ terminology
 				description = <"The subject lost their balance completely.">
 			>
 			["ac1"] = <
-				text = <"Test Name">
-				description = <"Name of a specific test of subject's balance.">
+				text = <"Test Name (synthesised)">
+				description = <"Name of a specific test of subject's balance. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Eyes Open/closed">
-				description = <"Record of eyes being open or closed during performance of test.">
+				text = <"Eyes Open/closed (synthesised)">
+				description = <"Record of eyes being open or closed during performance of test. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Loss of Balance">
-				description = <"Finding of the extent of loss of balance.">
+				text = <"Loss of Balance (synthesised)">
+				description = <"Finding of the extent of loss of balance. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Affected Side">
-				description = <"Identification of side of abnormal finding.">
+				text = <"Affected Side (synthesised)">
+				description = <"Identification of side of abnormal finding. (synthesised)">
 			>
 		>
 	>

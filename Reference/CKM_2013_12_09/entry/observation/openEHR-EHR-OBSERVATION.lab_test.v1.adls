@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.lab_test.v1.0.0
 
 language
@@ -63,18 +63,18 @@ definition
 								items matches {
 									ELEMENT[id6] occurrences matches {0..1} matches {	-- Test name
 										value matches {
-											DV_TEXT[id92] 
+											DV_TEXT[id91] 
 										}
 									}
 									ELEMENT[id78] occurrences matches {0..1} matches {	-- Diagnostic service
 										value matches {
-											DV_TEXT[id93] 
+											DV_TEXT[id92] 
 										}
 									}
 									ELEMENT[id74] occurrences matches {0..1} matches {	-- Test status
 										value matches {
-											DV_CODED_TEXT[id94] matches {
-												defining_code matches {[ac1]}		-- Test status
+											DV_CODED_TEXT[id93] matches {
+												defining_code matches {[ac1]}		-- Test status (synthesised)
 											}
 										}
 									}
@@ -84,7 +84,7 @@ definition
 										exclude
 											archetype_id/value matches {/.*/}
 									}
-									ELEMENT[id79] occurrences matches {0..*} 	-- Result
+									ITEM[id79] occurrences matches {0..*} 	-- Result
 									allow_archetype CLUSTER[id90] occurrences matches {0..*} matches {	-- Per-result annotation
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.lab_result_annotation(-a-zA-Z0-9_]+)*\.v1/}
@@ -93,12 +93,12 @@ definition
 									}
 									ELEMENT[id58] occurrences matches {0..1} matches {	-- Overall interpretation
 										value matches {
-											DV_TEXT[id95] 
+											DV_TEXT[id94] 
 										}
 									}
 									ELEMENT[id11] occurrences matches {0..*} matches {	-- Multimedia representation
 										value matches {
-											DV_MULTIMEDIA[id96] 
+											DV_MULTIMEDIA[id95] 
 										}
 									}
 								}
@@ -111,34 +111,34 @@ definition
 		protocol matches {
 			ITEM_TREE[id5] matches {
 				items matches {
-					ELEMENT[id63] occurrences matches {0..1} matches {	-- Requestor order identifier
-						value matches {
-							DV_TEXT[id97] 
-						}
-					}
-					allow_archetype CLUSTER[id91] occurrences matches {0..*} matches {	-- Requestor
-						include
-							archetype_id/value matches {/.*/}
-					}
-					ELEMENT[id64] occurrences matches {0..1} matches {	-- Receiver order Identifier
-						value matches {
-							DV_TEXT[id98] 
-						}
-					}
-					allow_archetype CLUSTER[id18] occurrences matches {0..*} matches {	-- Receiving laboratory
-						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v1/}
-						exclude
-							archetype_id/value matches {/.*/}
-					}
-					ELEMENT[id69] occurrences matches {0..1} matches {	-- Laboratory test result identifier
-						value matches {
-							DV_TEXT[id99] 
+					CLUSTER[id14] occurrences matches {0..1} matches {	-- Test identification
+						items matches {
+							ELEMENT[id63] occurrences matches {0..1} matches {	-- Requestor order identifier
+								value matches {
+									DV_TEXT[id96] 
+								}
+							}
+							ELEMENT[id64] occurrences matches {0..1} matches {	-- Receiver order Identifier
+								value matches {
+									DV_TEXT[id97] 
+								}
+							}
+							ELEMENT[id69] occurrences matches {0..1} matches {	-- Laboratory test result identifier
+								value matches {
+									DV_TEXT[id98] 
+								}
+							}
+							allow_archetype CLUSTER[id18] occurrences matches {0..*} matches {	-- Receiving laboratory
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v1/}
+								exclude
+									archetype_id/value matches {/.*/}
+							}
 						}
 					}
 					ELEMENT[id76] occurrences matches {0..1} matches {	-- Datetime result issued
 						value matches {
-							DV_DATE_TIME[id100] 
+							DV_DATE_TIME[id99] 
 						}
 					}
 				}
@@ -165,6 +165,10 @@ This archetype also acts as the parent for specialisations appropriate for more 
 			["id11"] = <
 				text = <"Multimedia representation">
 				description = <"Representations of the whole test in mutlimedia e.g image, audio, video.">
+			>
+			["id14"] = <
+				text = <"Test identification">
+				description = <"Unique identifiers used in delivery of the care process.">
 			>
 			["id18"] = <
 				text = <"Receiving laboratory">
@@ -234,13 +238,13 @@ This archetype also acts as the parent for specialisations appropriate for more 
 				text = <"Per-result annotation">
 				description = <"Slot to allow an annotation to be added to a particular test result at run-time.">
 			>
-			["id91"] = <
+			["at91"] = <
 				text = <"Requestor">
 				description = <"Details of the clinician or organisation requesting the laboratory test.">
 			>
 			["ac1"] = <
-				text = <"Test status">
-				description = <"The status of the lab test as a whole.">
+				text = <"Test status (synthesised)">
+				description = <"The status of the lab test as a whole. (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -260,6 +264,10 @@ This archetype also acts as the parent for specialisations appropriate for more 
 			["id11"] = <
 				text = <"تمثيل الوسائط المتعددة">
 				description = <"تمثيلات الاختبار الكلي عن طريق الوسائط المتعددة مثل: الصورة, الصوت, و الفيديو">
+			>
+			["id14"] = <
+				text = <"*Test identification (en)">
+				description = <"*Unique identifiers used in delivery of the care process. (en)">
 			>
 			["id18"] = <
 				text = <"المعمل المستقبل لطلب الاختبار">
@@ -329,13 +337,13 @@ This archetype also acts as the parent for specialisations appropriate for more 
 				text = <"ملاحظات ما قبل الاختبار">
 				description = <"شرفة تسمح بإضافة ملاحظات حول نتيجة اختبار معين في أثناء إجرائه">
 			>
-			["id91"] = <
+			["at91"] = <
 				text = <"الطالب">
 				description = <"تفاصيل حول الطبيب السريري أو المؤسسة التي تطلب الاختبار المعملي.">
 			>
 			["ac1"] = <
-				text = <"*Test status(en)">
-				description = <"*The status of the lab test as a whole.(en)">
+				text = <"*Test status (synthesised)(en)">
+				description = <"*The status of the lab test as a whole. (synthesised)(en)">
 			>
 		>
 	>

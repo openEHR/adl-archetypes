@@ -49,7 +49,7 @@ definition
 										}
 										null_flavour matches {
 											DV_CODED_TEXT[id14] matches {
-												defining_code matches {[ac1]}		-- Heart failure classification
+												defining_code matches {[ac1]}		-- Heart failure classification (synthesised)
 											}
 										}
 									}
@@ -118,8 +118,8 @@ terminology
 				description = <"Record any issues or factors that may impact on the classification of heart failure symptoms.">
 			>
 			["ac1"] = <
-				text = <"Heart failure classification">
-				description = <"The functional classification of heart failure based on patient symptoms.">
+				text = <"Heart failure classification (synthesised)">
+				description = <"The functional classification of heart failure based on patient symptoms. (synthesised)">
 			>
 			["at10"] = <
 				text = <"unknown">

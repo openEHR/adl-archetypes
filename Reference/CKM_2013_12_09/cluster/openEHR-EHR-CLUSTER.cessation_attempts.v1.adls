@@ -71,7 +71,7 @@ definition
 					ELEMENT[id11] occurrences matches {0..1} matches {	-- Outcome
 						value matches {
 							DV_CODED_TEXT[id18] matches {
-								defining_code matches {[ac1]}		-- Outcome
+								defining_code matches {[ac1]}		-- Outcome (synthesised)
 							}
 						}
 					}
@@ -136,8 +136,8 @@ terminology
 				description = <"Outcome was not successful; Use/consumption continued.">
 			>
 			["ac1"] = <
-				text = <"Outcome">
-				description = <"Outcome of attempt.">
+				text = <"Outcome (synthesised)">
+				description = <"Outcome of attempt. (synthesised)">
 			>
 		>
 	>

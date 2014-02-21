@@ -52,7 +52,7 @@ definition
 					ELEMENT[id7] matches {	-- Address Type
 						value matches {
 							DV_CODED_TEXT[id17] matches {
-								defining_code matches {[ac1]}		-- Address Type
+								defining_code matches {[ac1]}		-- Address Type (synthesised)
 							}
 						}
 					}
@@ -163,8 +163,8 @@ terminology
 				description = <"The period during which the associated address is applicable to the person / organisation.  ENV 13606 - 4:2000 7.11.11.  This describes the actual period.">
 			>
 			["ac1"] = <
-				text = <"Address Type">
-				description = <"The type of address.">
+				text = <"Address Type (synthesised)">
+				description = <"The type of address. (synthesised)">
 			>
 		>
 		["de"] = <
@@ -229,8 +229,8 @@ terminology
 				description = <"Der Zeitraum in dem die Adresse gültig ist.  ENV 13606 - 4:2000 7.11.11.">
 			>
 			["ac1"] = <
-				text = <"*Address Type(en)">
-				description = <"*The type of address.(en)">
+				text = <"*Address Type (synthesised)(en)">
+				description = <"*The type of address. (synthesised)(en)">
 			>
 		>
 	>

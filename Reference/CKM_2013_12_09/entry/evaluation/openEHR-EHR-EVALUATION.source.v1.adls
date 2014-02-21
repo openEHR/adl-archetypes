@@ -49,7 +49,7 @@ definition
 					ELEMENT[id5] occurrences matches {0..1} matches {	-- Quality
 						value matches {
 							DV_CODED_TEXT[id11] matches {
-								defining_code matches {[ac1]}		-- Quality
+								defining_code matches {[ac1]}		-- Quality (synthesised)
 							}
 						}
 					}
@@ -95,8 +95,8 @@ terminology
 				description = <"Narrative about the source information not captured in other data fields.">
 			>
 			["ac1"] = <
-				text = <"Quality">
-				description = <"Assessment regarding 'fitness for use' of the original information.">
+				text = <"Quality (synthesised)">
+				description = <"Assessment regarding 'fitness for use' of the original information. (synthesised)">
 			>
 		>
 	>

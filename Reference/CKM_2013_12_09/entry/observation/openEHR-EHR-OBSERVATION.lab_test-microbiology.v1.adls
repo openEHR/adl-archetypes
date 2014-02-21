@@ -39,24 +39,25 @@ Specific tests will gnerally require further specialisation or templating constr
 definition
 	OBSERVATION[id1.1] matches {	-- Microbiolology
 		/data[id2]/events[id3]/data[id4]/items matches {
+			ELEMENT[id6] 
 			after [id66]
 			CLUSTER[id0.25] occurrences matches {0..*} matches {	-- Macroscopic findings
 				items matches {
 					ELEMENT[id0.14] occurrences matches {0..1} matches {	-- Colony count
 						value matches {
-							DV_COUNT[id0.248] matches {
+							DV_COUNT[id0.39] matches {
 								magnitude matches {|>=0|}
 							}
 						}
 					}
 					ELEMENT[id79.3] occurrences matches {0..*} matches {	-- Macroscopic result
 						value matches {
-							DV_TEXT[id0.249] 
+							DV_TEXT[id0.40] 
 						}
 					}
 					ELEMENT[id0.15] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0.250] 
+							DV_TEXT[id0.41] 
 						}
 					}
 				}
@@ -65,24 +66,24 @@ definition
 				items matches {
 					ELEMENT[id0.18] occurrences matches {0..1} matches {	-- Field count
 						value matches {
-							DV_COUNT[id0.251] matches {
+							DV_COUNT[id0.42] matches {
 								magnitude matches {|>=0|}
 							}
 						}
 					}
 					ELEMENT[id79.6] occurrences matches {0..*} matches {	-- Gram smear result
 						value matches {
-							DV_TEXT[id0.252] 
+							DV_TEXT[id0.43] 
 						}
 					}
 					ELEMENT[id79.4] occurrences matches {0..*} matches {	-- Microscopic result
 						value matches {
-							DV_TEXT[id0.253] 
+							DV_TEXT[id0.44] 
 						}
 					}
 					ELEMENT[id0.17] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0.254] 
+							DV_TEXT[id0.45] 
 						}
 					}
 				}
@@ -95,7 +96,7 @@ definition
 					}
 					ELEMENT[id0.36] occurrences matches {0..1} matches {	-- Red cell count
 						value matches {
-							DV_QUANTITY[id0.255] matches {
+							DV_QUANTITY[id0.46] matches {
 								property matches {[at0.14]}
 								magnitude matches {|>=0.0|}
 							}
@@ -103,15 +104,15 @@ definition
 					}
 					ELEMENT[id0.37] occurrences matches {0..1} matches {	-- White cell count
 						value matches {
-							DV_QUANTITY[id0.256] matches {
-								property matches {[at0.15]}
+							DV_QUANTITY[id0.47] matches {
+								property matches {[at0.14]}
 								magnitude matches {|>=0.0|}
 							}
 						}
 					}
 					ELEMENT[id0.38] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0.257] 
+							DV_TEXT[id0.48] 
 						}
 					}
 				}
@@ -120,78 +121,78 @@ definition
 				items matches {
 					ELEMENT[id0.24] occurrences matches {0..*} matches {	-- Culture method
 						value matches {
-							DV_TEXT[id0.258] 
+							DV_TEXT[id0.49] 
 						}
 					}
 					ELEMENT[id0.32] occurrences matches {0..1} matches {	-- Growth duration
 						value matches {
-							DV_TEXT[id0.259] 
+							DV_TEXT[id0.50] 
 						}
 					}
 					ELEMENT[id79.7] occurrences matches {0..*} matches {	-- Beta lactamase
 						value matches {
-							DV_TEXT[id0.260] 
+							DV_TEXT[id0.51] 
 						}
 					}
 					ELEMENT[id79.8] occurrences matches {0..*} matches {	-- Culture result
 						value matches {
-							DV_TEXT[id0.261] 
+							DV_TEXT[id0.52] 
 						}
 					}
 					ELEMENT[id0.33] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0.262] 
+							DV_TEXT[id0.53] 
 						}
 					}
 					CLUSTER[id0.20] occurrences matches {0..*} matches {	-- Microbial findings
 						items matches {
 							ELEMENT[id79.1] occurrences matches {0..1} matches {	-- Organism
 								value matches {
-									DV_TEXT[id0.263] 
+									DV_TEXT[id0.54] 
 								}
 							}
 							ELEMENT[id79.9] occurrences matches {0..1} matches {	-- Biotype
 								value matches {
-									DV_TEXT[id0.264] 
+									DV_TEXT[id0.55] 
 								}
 							}
 							ELEMENT[id79.10] occurrences matches {0..*} 	-- Microbial result
 							ELEMENT[id0.21] occurrences matches {0..1} matches {	-- Description
 								value matches {
-									DV_TEXT[id0.265] 
+									DV_TEXT[id0.56] 
 								}
 							}
 							CLUSTER[id0.7] occurrences matches {0..*} matches {	-- Therapeutic sensitivities
 								items matches {
 									ELEMENT[id0.30] occurrences matches {0..1} matches {	-- Agent
 										value matches {
-											DV_TEXT[id0.266] 
+											DV_TEXT[id0.57] 
 										}
 									}
 									ELEMENT[id0.8] occurrences matches {0..1} matches {	-- Sensitivity
 										value matches {
-											DV_CODED_TEXT[id0.267] matches {
-												defining_code matches {[ac0.2]}		-- (added by post-parse processor)
+											DV_CODED_TEXT[id0.58] matches {
+												defining_code matches {[ac0.2]}		-- Sensitivity (synthesised)
 											}
 										}
 									}
 									ELEMENT[id0.10] occurrences matches {0..1} matches {	-- Quantified sensitivity
 										value matches {
-											DV_QUANTITY[id0.268] matches {
-												property matches {[at0.16]}
+											DV_QUANTITY[id0.59] matches {
+												property matches {[at0.14]}
 											}
 										}
 									}
 									ELEMENT[id0.9] occurrences matches {0..1} matches {	-- Method of sensitivity
 										value matches {
-											DV_TEXT[id0.269] 
+											DV_TEXT[id0.60] 
 										}
 									}
 								}
 							}
 							ELEMENT[id0.29] occurrences matches {0..1} matches {	-- Antimicrobial advice
 								value matches {
-									DV_TEXT[id0.270] 
+									DV_TEXT[id0.61] 
 								}
 							}
 						}
@@ -353,23 +354,11 @@ terminology
 				text = <"Biotype">
 				description = <"The organism biotype.">
 			>
-			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
 			["ac0.2"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Sensitivity (synthesised)">
+				description = <"Coded sensitivity (synthesised)">
 			>
 			["at0.14"] = <
-				text = <"Concentration">
-				description = <"Concentration">
-			>
-			["at0.15"] = <
-				text = <"Concentration">
-				description = <"Concentration">
-			>
-			["at0.16"] = <
 				text = <"Concentration">
 				description = <"Concentration">
 			>
@@ -378,17 +367,11 @@ terminology
 	term_bindings = <
 		["openehr"] = <
 			["at0.14"] = <http://openehr.org/id/119>
-			["at0.15"] = <http://openehr.org/id/119>
-			["at0.16"] = <http://openehr.org/id/119>
 		>
 	>
 	value_sets = <
 		["ac0.2"] = <
 			id = <"ac0.2">
 			members = <"at0.11", "at0.12", "at0.13">
-		>
-		["ac0.1"] = <
-			id = <"ac0.1">
-			members = <"at38", "at39", "at40", "at41", "at75", "at80">
 		>
 	>

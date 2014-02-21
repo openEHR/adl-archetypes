@@ -57,7 +57,7 @@ definition
 			ELEMENT[id3] occurrences matches {0..1} matches {	-- Length
 				value matches {
 					DV_QUANTITY[id9] matches {
-						property matches {[at2]}
+						property matches {[at1]}
 						units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
 					}
 				}
@@ -65,7 +65,7 @@ definition
 			ELEMENT[id4] occurrences matches {0..1} matches {	-- Breadth
 				value matches {
 					DV_QUANTITY[id10] matches {
-						property matches {[at3]}
+						property matches {[at1]}
 						units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
 					}
 				}
@@ -73,7 +73,7 @@ definition
 			ELEMENT[id5] occurrences matches {0..1} matches {	-- Depth
 				value matches {
 					DV_QUANTITY[id11] matches {
-						property matches {[at4]}
+						property matches {[at1]}
 						units matches {"µm", "mm", "cm", "m", "in", "ft"}
 					}
 				}
@@ -81,7 +81,7 @@ definition
 			ELEMENT[id6] occurrences matches {0..1} matches {	-- Area
 				value matches {
 					DV_QUANTITY[id12] matches {
-						property matches {[at5]}
+						property matches {[at2]}
 						units matches {"mm2", "cm2", "% body", "% head, neck", "% lower limb", "% trunk", "% upper limb", "m2", "in2", "ft2"}
 					}
 				}
@@ -89,7 +89,7 @@ definition
 			ELEMENT[id7] occurrences matches {0..1} matches {	-- Volume
 				value matches {
 					DV_QUANTITY[id13] matches {
-						property matches {[at6]}
+						property matches {[at3]}
 						units matches {"mm3", "ml", "in3", "cc", "ft3"}
 					}
 				}
@@ -133,22 +133,10 @@ terminology
 				description = <"*Length (en)">
 			>
 			["at2"] = <
-				text = <"*Length (en)">
-				description = <"*Length (en)">
-			>
-			["at3"] = <
-				text = <"*Length (en)">
-				description = <"*Length (en)">
-			>
-			["at4"] = <
-				text = <"*Length (en)">
-				description = <"*Length (en)">
-			>
-			["at5"] = <
 				text = <"*Area (en)">
 				description = <"*Area (en)">
 			>
-			["at6"] = <
+			["at3"] = <
 				text = <"*Volume (en)">
 				description = <"*Volume (en)">
 			>
@@ -187,22 +175,10 @@ terminology
 				description = <"Length">
 			>
 			["at2"] = <
-				text = <"Length">
-				description = <"Length">
-			>
-			["at3"] = <
-				text = <"Length">
-				description = <"Length">
-			>
-			["at4"] = <
-				text = <"Length">
-				description = <"Length">
-			>
-			["at5"] = <
 				text = <"Area">
 				description = <"Area">
 			>
-			["at6"] = <
+			["at3"] = <
 				text = <"Volume">
 				description = <"Volume">
 			>
@@ -211,10 +187,7 @@ terminology
 	term_bindings = <
 		["openehr"] = <
 			["at1"] = <http://openehr.org/id/122>
-			["at2"] = <http://openehr.org/id/122>
-			["at3"] = <http://openehr.org/id/122>
-			["at4"] = <http://openehr.org/id/122>
-			["at5"] = <http://openehr.org/id/335>
-			["at6"] = <http://openehr.org/id/129>
+			["at2"] = <http://openehr.org/id/335>
+			["at3"] = <http://openehr.org/id/129>
 		>
 	>

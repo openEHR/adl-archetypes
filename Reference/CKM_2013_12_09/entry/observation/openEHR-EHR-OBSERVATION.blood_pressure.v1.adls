@@ -238,7 +238,7 @@ definition
 									ELEMENT[id6] occurrences matches {0..1} matches {	-- Diastolic
 										value matches {
 											DV_QUANTITY[id1055] matches {
-												property matches {[at1056]}
+												property matches {[at1055]}
 												magnitude matches {|0.0..<1000.0|}
 											}
 										}
@@ -246,7 +246,7 @@ definition
 									ELEMENT[id1007] occurrences matches {0..1} matches {	-- Mean Arterial Pressure
 										value matches {
 											DV_QUANTITY[id1056] matches {
-												property matches {[at1057]}
+												property matches {[at1055]}
 												magnitude matches {|0.0..<1000.0|}
 											}
 										}
@@ -254,7 +254,7 @@ definition
 									ELEMENT[id1008] occurrences matches {0..1} matches {	-- Pulse Pressure
 										value matches {
 											DV_QUANTITY[id1057] matches {
-												property matches {[at1058]}
+												property matches {[at1055]}
 												magnitude matches {|0.0..<1000.0|}
 											}
 										}
@@ -273,7 +273,7 @@ definition
 									ELEMENT[id9] occurrences matches {0..1} matches {	-- Position
 										value matches {
 											DV_CODED_TEXT[id1059] matches {
-												defining_code matches {[ac1; at1002]}		-- Position
+												defining_code matches {[ac1; at1002]}		-- Position (synthesised)
 											}
 										}
 									}
@@ -289,14 +289,14 @@ definition
 									ELEMENT[id1044] occurrences matches {0..1} matches {	-- Sleep status
 										value matches {
 											DV_CODED_TEXT[id1061] matches {
-												defining_code matches {[ac2; at1045]}		-- Sleep status
+												defining_code matches {[ac2; at1045]}		-- Sleep status (synthesised)
 											}
 										}
 									}
 									ELEMENT[id1006] occurrences matches {0..1} matches {	-- Tilt
 										value matches {
 											DV_QUANTITY[id1062] matches {
-												property matches {[at1059]}
+												property matches {[at1056]}
 												magnitude matches {|-90.0..90.0|}
 											}
 										}
@@ -308,7 +308,7 @@ definition
 					INTERVAL_EVENT[id1043] occurrences matches {0..1} matches {	-- 24 hour average 
 						math_function matches {
 							DV_CODED_TEXT[id1063] matches {
-								defining_code matches {[at1060]}
+								defining_code matches {[at1057]}
 							}
 						}
 						width matches {
@@ -332,7 +332,7 @@ definition
 					ELEMENT[id14] occurrences matches {0..1} matches {	-- Cuff size
 						value matches {
 							DV_CODED_TEXT[id1067] matches {
-								defining_code matches {[ac3]}		-- Cuff size
+								defining_code matches {[ac3]}		-- Cuff size (synthesised)
 							}
 						}
 					}
@@ -341,7 +341,7 @@ definition
 							ELEMENT[id15] occurrences matches {0..1} matches {	-- Location of measurement
 								value matches {
 									DV_CODED_TEXT[id1068] matches {
-										defining_code matches {[ac4]}		-- Location of measurement
+										defining_code matches {[ac4]}		-- Location of measurement (synthesised)
 									}
 								}
 							}
@@ -355,7 +355,7 @@ definition
 					ELEMENT[id1036] occurrences matches {0..1} matches {	-- Method
 						value matches {
 							DV_CODED_TEXT[id1070] matches {
-								defining_code matches {[ac5]}		-- Method
+								defining_code matches {[ac5]}		-- Method (synthesised)
 							}
 						}
 					}
@@ -367,7 +367,7 @@ definition
 					ELEMENT[id1011] occurrences matches {0..1} matches {	-- Diastolic endpoint
 						value matches {
 							DV_CODED_TEXT[id1072] matches {
-								defining_code matches {[ac6]}		-- Diastolic endpoint
+								defining_code matches {[ac6]}		-- Diastolic endpoint (synthesised)
 							}
 						}
 					}
@@ -600,50 +600,38 @@ terminology
 				description = <"Invasive measurement via transducer access line within an artery. Location of the transducer can be recorded in 'Specific Location' data element, if required.">
 			>
 			["ac1"] = <
-				text = <"Position">
-				description = <"The position of the subject at the time of measurement.">
+				text = <"Position (synthesised)">
+				description = <"The position of the subject at the time of measurement. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Sleep status">
-				description = <"Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. ">
+				text = <"Sleep status (synthesised)">
+				description = <"Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Cuff size">
-				description = <"The size of the cuff used for blood pressure measurement.  ">
+				text = <"Cuff size (synthesised)">
+				description = <"The size of the cuff used for blood pressure measurement.   (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Location of measurement">
-				description = <"Common body sites where blood pressure is recorded.">
+				text = <"Location of measurement (synthesised)">
+				description = <"Common body sites where blood pressure is recorded. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Method">
-				description = <"Method of measurement of blood pressure.">
+				text = <"Method (synthesised)">
+				description = <"Method of measurement of blood pressure. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Diastolic endpoint">
-				description = <"Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.">
+				text = <"Diastolic endpoint (synthesised)">
+				description = <"Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)">
 			>
 			["at1055"] = <
 				text = <"Pressure">
 				description = <"Pressure">
 			>
 			["at1056"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
-			["at1057"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
-			["at1058"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
-			["at1059"] = <
 				text = <"Angle, plane">
 				description = <"Angle, plane">
 			>
-			["at1060"] = <
+			["at1057"] = <
 				text = <"mean">
 				description = <"mean">
 			>
@@ -866,50 +854,38 @@ terminology
 				description = <"動脈内のトランスデューサーに接続されたラインから侵襲的に測定する方法。動脈の部位は必要であれば「特別な部位」エレメントに記録される">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*The position of the subject at the time of measurement.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Sleep status(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. (en)">
+				text = <"*Sleep status (synthesised)(en)">
+				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Cuff size(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.  (en)">
+				text = <"*Cuff size (synthesised)(en)">
+				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Location of measurement(en)">
-				description = <"*Common body sites where blood pressure is recorded.(en)">
+				text = <"*Location of measurement (synthesised)(en)">
+				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Method(en)">
-				description = <"*Method of measurement of blood pressure.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Diastolic endpoint(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
+				text = <"*Diastolic endpoint (synthesised)(en)">
+				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
 			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
 			>
 			["at1056"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1057"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1058"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1059"] = <
 				text = <"*Angle, plane (en)">
 				description = <"*Angle, plane (en)">
 			>
-			["at1060"] = <
+			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
 			>
@@ -1132,50 +1108,38 @@ terminology
 				description = <"Invasive Messung über einen arteriellen Drucksensor. Die genaue Stelle des Drucksensors kann, falls benötigt, als 'Spezifische Stelle' genauer identifiziert werden.">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*The position of the subject at the time of measurement.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Sleep status(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. (en)">
+				text = <"*Sleep status (synthesised)(en)">
+				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Cuff size(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.  (en)">
+				text = <"*Cuff size (synthesised)(en)">
+				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Location of measurement(en)">
-				description = <"*Common body sites where blood pressure is recorded.(en)">
+				text = <"*Location of measurement (synthesised)(en)">
+				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Method(en)">
-				description = <"*Method of measurement of blood pressure.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Diastolic endpoint(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
+				text = <"*Diastolic endpoint (synthesised)(en)">
+				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
 			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
 			>
 			["at1056"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1057"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1058"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1059"] = <
 				text = <"*Angle, plane (en)">
 				description = <"*Angle, plane (en)">
 			>
-			["at1060"] = <
+			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
 			>
@@ -1398,50 +1362,38 @@ terminology
 				description = <"*Invasive measurement via transducer access line within an artery. Location of the transducer can be recorded in 'Specific Location' data element, if required.(en)">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*The position of the subject at the time of measurement.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Sleep status(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. (en)">
+				text = <"*Sleep status (synthesised)(en)">
+				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Cuff size(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.  (en)">
+				text = <"*Cuff size (synthesised)(en)">
+				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Location of measurement(en)">
-				description = <"*Common body sites where blood pressure is recorded.(en)">
+				text = <"*Location of measurement (synthesised)(en)">
+				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Method(en)">
-				description = <"*Method of measurement of blood pressure.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Diastolic endpoint(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
+				text = <"*Diastolic endpoint (synthesised)(en)">
+				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
 			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
 			>
 			["at1056"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1057"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1058"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1059"] = <
 				text = <"*Angle, plane (en)">
 				description = <"*Angle, plane (en)">
 			>
-			["at1060"] = <
+			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
 			>
@@ -1664,50 +1616,38 @@ terminology
 				description = <"Invasieve meting via lijn met transducer in een arterie. Locatie van de transducer kan, zo nodig, opgeslagen worden in 'specifieke locatie' data element.">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*The position of the subject at the time of measurement.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Sleep status(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. (en)">
+				text = <"*Sleep status (synthesised)(en)">
+				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Cuff size(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.  (en)">
+				text = <"*Cuff size (synthesised)(en)">
+				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Location of measurement(en)">
-				description = <"*Common body sites where blood pressure is recorded.(en)">
+				text = <"*Location of measurement (synthesised)(en)">
+				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Method(en)">
-				description = <"*Method of measurement of blood pressure.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Diastolic endpoint(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
+				text = <"*Diastolic endpoint (synthesised)(en)">
+				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
 			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
 			>
 			["at1056"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1057"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1058"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1059"] = <
 				text = <"*Angle, plane (en)">
 				description = <"*Angle, plane (en)">
 			>
-			["at1060"] = <
+			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
 			>
@@ -1931,50 +1871,38 @@ terminology
 				description = <"Инвазивное измерение с помощью датчика линии доступа в артерию. Расположение датчика могут быть записаны в элемент данных \"Точное месторасположение\", в случае необходимости.">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*The position of the subject at the time of measurement.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Sleep status(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. (en)">
+				text = <"*Sleep status (synthesised)(en)">
+				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Cuff size(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.  (en)">
+				text = <"*Cuff size (synthesised)(en)">
+				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Location of measurement(en)">
-				description = <"*Common body sites where blood pressure is recorded.(en)">
+				text = <"*Location of measurement (synthesised)(en)">
+				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Method(en)">
-				description = <"*Method of measurement of blood pressure.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Diastolic endpoint(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
+				text = <"*Diastolic endpoint (synthesised)(en)">
+				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
 			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
 			>
 			["at1056"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1057"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1058"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1059"] = <
 				text = <"*Angle, plane (en)">
 				description = <"*Angle, plane (en)">
 			>
-			["at1060"] = <
+			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
 			>
@@ -2198,50 +2126,38 @@ terminology
 				description = <"*Invasive measurement via transducer access line within an artery. Location of the transducer can be recorded in 'Specific Location' data element, if required.(en)">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*The position of the subject at the time of measurement.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Sleep status(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. (en)">
+				text = <"*Sleep status (synthesised)(en)">
+				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Cuff size(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.  (en)">
+				text = <"*Cuff size (synthesised)(en)">
+				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Location of measurement(en)">
-				description = <"*Common body sites where blood pressure is recorded.(en)">
+				text = <"*Location of measurement (synthesised)(en)">
+				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Method(en)">
-				description = <"*Method of measurement of blood pressure.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Diastolic endpoint(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
+				text = <"*Diastolic endpoint (synthesised)(en)">
+				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
 			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
 			>
 			["at1056"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1057"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1058"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1059"] = <
 				text = <"*Angle, plane (en)">
 				description = <"*Angle, plane (en)">
 			>
-			["at1060"] = <
+			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
 			>
@@ -2469,50 +2385,38 @@ terminology
 يمكن تسجيل الترجام كنوع بيانات (موضع معيَّن), حسب الحاجة.">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*The position of the subject at the time of measurement.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Sleep status(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. (en)">
+				text = <"*Sleep status (synthesised)(en)">
+				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Cuff size(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.  (en)">
+				text = <"*Cuff size (synthesised)(en)">
+				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Location of measurement(en)">
-				description = <"*Common body sites where blood pressure is recorded.(en)">
+				text = <"*Location of measurement (synthesised)(en)">
+				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Method(en)">
-				description = <"*Method of measurement of blood pressure.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Diastolic endpoint(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
+				text = <"*Diastolic endpoint (synthesised)(en)">
+				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
 			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
 			>
 			["at1056"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1057"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1058"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1059"] = <
 				text = <"*Angle, plane (en)">
 				description = <"*Angle, plane (en)">
 			>
-			["at1060"] = <
+			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
 			>
@@ -2735,50 +2639,38 @@ terminology
 				description = <"Medición invasiva mediante una vía de acceso transductor, dentro de la arteria.  La localización del transductor puede ser registrado en el data elemento: 'Localización específica' si se requiere. ">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*The position of the subject at the time of measurement.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Sleep status(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. (en)">
+				text = <"*Sleep status (synthesised)(en)">
+				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Cuff size(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.  (en)">
+				text = <"*Cuff size (synthesised)(en)">
+				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Location of measurement(en)">
-				description = <"*Common body sites where blood pressure is recorded.(en)">
+				text = <"*Location of measurement (synthesised)(en)">
+				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Method(en)">
-				description = <"*Method of measurement of blood pressure.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Diastolic endpoint(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
+				text = <"*Diastolic endpoint (synthesised)(en)">
+				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
 			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
 			>
 			["at1056"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1057"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1058"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1059"] = <
 				text = <"*Angle, plane (en)">
 				description = <"*Angle, plane (en)">
 			>
-			["at1060"] = <
+			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
 			>
@@ -3001,50 +2893,38 @@ terminology
 				description = <"Medida invasiva da pressão em uma artéria acessada  por um cateter . Local do transductor pode ser registrado no elemento de dado  'Local Específico', se requerido.">
 			>
 			["ac1"] = <
-				text = <"*Position(en)">
-				description = <"*The position of the subject at the time of measurement.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Sleep status(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. (en)">
+				text = <"*Sleep status (synthesised)(en)">
+				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Cuff size(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.  (en)">
+				text = <"*Cuff size (synthesised)(en)">
+				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Location of measurement(en)">
-				description = <"*Common body sites where blood pressure is recorded.(en)">
+				text = <"*Location of measurement (synthesised)(en)">
+				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Method(en)">
-				description = <"*Method of measurement of blood pressure.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Diastolic endpoint(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
+				text = <"*Diastolic endpoint (synthesised)(en)">
+				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
 			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
 			>
 			["at1056"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1057"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1058"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at1059"] = <
 				text = <"*Angle, plane (en)">
 				description = <"*Angle, plane (en)">
 			>
-			["at1060"] = <
+			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
 			>
@@ -3059,14 +2939,15 @@ terminology
 		>
 		["openehr"] = <
 			["at1055"] = <http://openehr.org/id/125>
-			["at1056"] = <http://openehr.org/id/125>
-			["at1057"] = <http://openehr.org/id/125>
-			["at1058"] = <http://openehr.org/id/125>
-			["at1059"] = <http://openehr.org/id/497>
-			["at1060"] = <http://openehr.org/id/146>
+			["at1056"] = <http://openehr.org/id/497>
+			["at1057"] = <http://openehr.org/id/146>
 		>
 	>
 	value_sets = <
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at16", "at17", "at18", "at1009", "at1010", "at1019", "at1020">
+		>
 		["ac1"] = <
 			id = <"ac1">
 			members = <"at1001", "at1002", "at1003", "at1004", "at1015">
@@ -3074,10 +2955,6 @@ terminology
 		["ac2"] = <
 			id = <"ac2">
 			members = <"at1045", "at1046">
-		>
-		["ac3"] = <
-			id = <"ac3">
-			members = <"at16", "at17", "at18", "at1009", "at1010", "at1019", "at1020">
 		>
 		["ac4"] = <
 			id = <"ac4">

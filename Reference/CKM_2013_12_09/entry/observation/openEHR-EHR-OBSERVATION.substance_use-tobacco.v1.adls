@@ -36,25 +36,32 @@ A typical use would be to record usage in an tobacco usage diary.">
 definition
 	OBSERVATION[id1.1] matches {	-- Tobacco Use
 		/data[id2]/events[id3]/data[id4]/items[id5]/value matches {
-			DV_CODED_TEXT[id0.44] matches {
+			DV_CODED_TEXT[id20.3] matches {
 				defining_code matches {[at0.2]}
 			}
 		}
 		/data[id2]/events[id3]/data[id4]/items[id11]/items[id12]/value matches {
-			DV_CODED_TEXT[id0.45] matches {
-				defining_code matches {[ac0.1]}		-- (added by post-parse processor)
+			DV_CODED_TEXT[id21.3] matches {
+				defining_code matches {[ac0.1]}		-- Form (synthesised)
 			}
 		}
-		/data[id2]/events[id3]/data[id4]/items[id11]/items[id13.1]/value matches {
-			DV_QUANTITY[id0.48] matches {
-				property matches {[at0.7]}
-				units matches {"/h", "/d", "/wk"}
+		/data[id2]/events[id3]/data[id4]/items[id11]/items matches {
+			ELEMENT[id13] 
+			ELEMENT[id13.1] matches {	-- Number smoked
+				value matches {
+					DV_QUANTITY[id0.1] matches {
+						property matches {[at0.7]}
+						units matches {"/h", "/d", "/wk"}
+					}
+				}
 			}
-		}
-		/data[id2]/events[id3]/data[id4]/items[id11]/items[id13.2]/value matches {
-			DV_QUANTITY[id0.49] matches {
-				property matches {[at0.8]}
-				units matches {"gm/d", "gm/wk"}
+			ELEMENT[id13.2] matches {	-- Grams of tobacco
+				value matches {
+					DV_QUANTITY[id0.2] matches {
+						property matches {[at0.8]}
+						units matches {"gm/d", "gm/wk"}
+					}
+				}
 			}
 		}
 	}
@@ -95,12 +102,8 @@ terminology
 				description = <"Weight of tobacco consumed eg in a pipe">
 			>
 			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-			["ac0.2"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Form (synthesised)">
+				description = <"Form of tobacco used (synthesised)">
 			>
 			["at0.7"] = <
 				text = <"Frequency">
@@ -122,9 +125,5 @@ terminology
 		["ac0.1"] = <
 			id = <"ac0.1">
 			members = <"at0.3", "at0.4", "at0.5", "at0.6">
-		>
-		["ac0.2"] = <
-			id = <"ac0.2">
-			members = <"at7", "at8", "at9", "at10">
 		>
 	>

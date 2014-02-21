@@ -152,7 +152,7 @@ definition
 					ELEMENT[id43] occurrences matches {0..*} matches {	-- Specimen received issues
 						value matches {
 							DV_CODED_TEXT[id97] matches {
-								defining_code matches {[ac1]}		-- Specimen received issues
+								defining_code matches {[ac1]}		-- Specimen received issues (synthesised)
 							}
 							DV_TEXT[id98] 
 						}
@@ -160,7 +160,7 @@ definition
 					ELEMENT[id45] occurrences matches {0..*} matches {	-- Laboratory handling issues
 						value matches {
 							DV_CODED_TEXT[id99] matches {
-								defining_code matches {[ac2]}		-- Laboratory handling issues
+								defining_code matches {[ac2]}		-- Laboratory handling issues (synthesised)
 							}
 							DV_TEXT[id100] 
 						}
@@ -168,7 +168,7 @@ definition
 					ELEMENT[id42] occurrences matches {0..1} matches {	-- Adequacy for testing
 						value matches {
 							DV_CODED_TEXT[id101] matches {
-								defining_code matches {[ac3]}		-- Adequacy for testing
+								defining_code matches {[ac3]}		-- Adequacy for testing (synthesised)
 							}
 							DV_TEXT[id102] 
 						}
@@ -399,16 +399,16 @@ healthcare provider, but may be collected directly by the patient or carer at ho
 				description = <"The total number of containers holding this specimen.">
 			>
 			["ac1"] = <
-				text = <"Specimen received issues">
-				description = <"Specific issue with a received specimen.">
+				text = <"Specimen received issues (synthesised)">
+				description = <"Specific issue with a received specimen. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Laboratory handling issues">
-				description = <"Issue arising with handling or processing of the specimen within the laboratory.">
+				text = <"Laboratory handling issues (synthesised)">
+				description = <"Issue arising with handling or processing of the specimen within the laboratory. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Adequacy for testing">
-				description = <"Is the specimen adequate for testing?">
+				text = <"Adequacy for testing (synthesised)">
+				description = <"Is the specimen adequate for testing? (synthesised)">
 			>
 			["at66"] = <
 				text = <"Length">

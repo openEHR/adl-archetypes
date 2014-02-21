@@ -79,7 +79,7 @@ definition
 											ELEMENT[id10] matches {	-- Test Ear
 												value matches {
 													DV_CODED_TEXT[id56] matches {
-														defining_code matches {[ac1]}		-- Test Ear
+														defining_code matches {[ac1]}		-- Test Ear (synthesised)
 													}
 												}
 											}
@@ -119,7 +119,7 @@ definition
 													ELEMENT[id30] occurrences matches {0..1} matches {	-- Tympanometric Width
 														value matches {
 															DV_QUANTITY[id60] matches {
-																property matches {[at54]}
+																property matches {[at51]}
 																magnitude matches {|0.0..400.0|}
 															}
 														}
@@ -127,7 +127,7 @@ definition
 													ELEMENT[id31] occurrences matches {0..1} matches {	-- Tympanometric Gradient
 														value matches {
 															DV_QUANTITY[id61] matches {
-																property matches {[at55]}
+																property matches {[at52]}
 																units matches {"mmho"}
 															}
 														}
@@ -149,7 +149,7 @@ definition
 											ELEMENT[id5] occurrences matches {0..1} matches {	-- Tympanogram Type
 												value matches {
 													DV_CODED_TEXT[id64] matches {
-														defining_code matches {[ac2]}		-- Tympanogram Type
+														defining_code matches {[ac2]}		-- Tympanogram Type (synthesised)
 													}
 												}
 											}
@@ -168,7 +168,7 @@ definition
 									ELEMENT[id21] occurrences matches {0..*} matches {	-- Test Result Image
 										value matches {
 											DV_MULTIMEDIA[id67] matches {
-												media_type matches {[ac3]}		-- Test Result Image
+												media_type matches {[ac3]}		-- Test Result Image (synthesised)
 											}
 										}
 									}
@@ -205,7 +205,7 @@ definition
 					ELEMENT[id43] occurrences matches {0..1} matches {	-- Probe Tone Frequency
 						value matches {
 							DV_QUANTITY[id72] matches {
-								property matches {[at56]}
+								property matches {[at54]}
 								units matches {"Hz"}
 							}
 						}
@@ -213,14 +213,14 @@ definition
 					ELEMENT[id44] occurrences matches {0..1} matches {	-- Direction of Pressure Change
 						value matches {
 							DV_CODED_TEXT[id73] matches {
-								defining_code matches {[ac4]}		-- Direction of Pressure Change
+								defining_code matches {[ac4]}		-- Direction of Pressure Change (synthesised)
 							}
 						}
 					}
 					ELEMENT[id47] occurrences matches {0..1} matches {	-- Rate of Pressure Change
 						value matches {
 							DV_QUANTITY[id74] matches {
-								property matches {[at57]}
+								property matches {[at55]}
 								units matches {"ml/s"}
 							}
 						}
@@ -228,7 +228,7 @@ definition
 					ELEMENT[id48] occurrences matches {0..1} matches {	-- Admittance Measurement
 						value matches {
 							DV_CODED_TEXT[id75] matches {
-								defining_code matches {[ac5]}		-- Admittance Measurement
+								defining_code matches {[ac5]}		-- Admittance Measurement (synthesised)
 							}
 						}
 					}
@@ -237,7 +237,7 @@ definition
 							ELEMENT[id52] occurrences matches {0..1} matches {	-- Start Pressure
 								value matches {
 									DV_QUANTITY[id76] matches {
-										property matches {[at58]}
+										property matches {[at51]}
 										units matches {"daPa", "mm[H20]"}
 									}
 								}
@@ -245,7 +245,7 @@ definition
 							ELEMENT[id53] occurrences matches {0..1} matches {	-- Stop Pressure
 								value matches {
 									DV_QUANTITY[id77] matches {
-										property matches {[at59]}
+										property matches {[at51]}
 										units matches {"daPa", "mm[H20]"}
 									}
 								}
@@ -259,7 +259,7 @@ definition
 					ELEMENT[id42] occurrences matches {0..*} matches {	-- Pre-test Calibration Cavity Size
 						value matches {
 							DV_QUANTITY[id78] matches {
-								property matches {[at60]}
+								property matches {[at53]}
 								magnitude matches {|0.5..5.0|}
 							}
 						}
@@ -450,24 +450,24 @@ terminology
 				description = <"*Additional narrative about the protocol for the tympanogram not captured in other fields.(en)">
 			>
 			["ac1"] = <
-				text = <"*Test Ear(en)">
-				description = <"*Identification of the ear being tested.(en)">
+				text = <"*Test Ear (synthesised)(en)">
+				description = <"*Identification of the ear being tested. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Tympanogram Type(en)">
-				description = <"*Description of the the shape of the tympanogram plot using Jerger categories.(en)">
+				text = <"*Tympanogram Type (synthesised)(en)">
+				description = <"*Description of the the shape of the tympanogram plot using Jerger categories. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Test Result Image(en)">
-				description = <"*Digital representation of the entire result.(en)">
+				text = <"*Test Result Image (synthesised)(en)">
+				description = <"*Digital representation of the entire result. (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Direction of Pressure Change(en)">
-				description = <"*The dirction of change of pressure administered via the ear canal.(en)">
+				text = <"*Direction of Pressure Change (synthesised)(en)">
+				description = <"*The dirction of change of pressure administered via the ear canal. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Admittance Measurement(en)">
-				description = <"*Method of acoustic admittance measurement used in the test.(en)">
+				text = <"*Admittance Measurement (synthesised)(en)">
+				description = <"*Method of acoustic admittance measurement used in the test. (synthesised)(en)">
 			>
 			["at51"] = <
 				text = <"*Pressure (en)">
@@ -482,50 +482,30 @@ terminology
 				description = <"*Volume (en)">
 			>
 			["at54"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at55"] = <
-				text = <"*Electrical conductance (en)">
-				description = <"*Electrical conductance (en)">
-			>
-			["at56"] = <
 				text = <"*Frequency (en)">
 				description = <"*Frequency (en)">
 			>
-			["at57"] = <
+			["at55"] = <
 				text = <"*Flow rate, volume (en)">
 				description = <"*Flow rate, volume (en)">
 			>
-			["at58"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at59"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at60"] = <
-				text = <"*Volume (en)">
-				description = <"*Volume (en)">
-			>
-			["at61"] = <
+			["at56"] = <
 				text = <"*image/cgm (en)">
 				description = <"*image/cgm (en)">
 			>
-			["at62"] = <
+			["at57"] = <
 				text = <"*image/gif (en)">
 				description = <"*image/gif (en)">
 			>
-			["at63"] = <
+			["at58"] = <
 				text = <"*image/png (en)">
 				description = <"*image/png (en)">
 			>
-			["at64"] = <
+			["at59"] = <
 				text = <"*image/tiff (en)">
 				description = <"*image/tiff (en)">
 			>
-			["at65"] = <
+			["at60"] = <
 				text = <"*image/jpeg (en)">
 				description = <"*image/jpeg (en)">
 			>
@@ -704,24 +684,24 @@ terminology
 				description = <"Additional narrative about the protocol for the tympanogram not captured in other fields.">
 			>
 			["ac1"] = <
-				text = <"Test Ear">
-				description = <"Identification of the ear being tested.">
+				text = <"Test Ear (synthesised)">
+				description = <"Identification of the ear being tested. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Tympanogram Type">
-				description = <"Description of the the shape of the tympanogram plot using Jerger categories.">
+				text = <"Tympanogram Type (synthesised)">
+				description = <"Description of the the shape of the tympanogram plot using Jerger categories. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Test Result Image">
-				description = <"Digital representation of the entire result.">
+				text = <"Test Result Image (synthesised)">
+				description = <"Digital representation of the entire result. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Direction of Pressure Change">
-				description = <"The dirction of change of pressure administered via the ear canal.">
+				text = <"Direction of Pressure Change (synthesised)">
+				description = <"The dirction of change of pressure administered via the ear canal. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Admittance Measurement">
-				description = <"Method of acoustic admittance measurement used in the test.">
+				text = <"Admittance Measurement (synthesised)">
+				description = <"Method of acoustic admittance measurement used in the test. (synthesised)">
 			>
 			["at51"] = <
 				text = <"Pressure">
@@ -736,50 +716,30 @@ terminology
 				description = <"Volume">
 			>
 			["at54"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
-			["at55"] = <
-				text = <"Electrical conductance">
-				description = <"Electrical conductance">
-			>
-			["at56"] = <
 				text = <"Frequency">
 				description = <"Frequency">
 			>
-			["at57"] = <
+			["at55"] = <
 				text = <"Flow rate, volume">
 				description = <"Flow rate, volume">
 			>
-			["at58"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
-			["at59"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
-			["at60"] = <
-				text = <"Volume">
-				description = <"Volume">
-			>
-			["at61"] = <
+			["at56"] = <
 				text = <"image/cgm">
 				description = <"image/cgm">
 			>
-			["at62"] = <
+			["at57"] = <
 				text = <"image/gif">
 				description = <"image/gif">
 			>
-			["at63"] = <
+			["at58"] = <
 				text = <"image/png">
 				description = <"image/png">
 			>
-			["at64"] = <
+			["at59"] = <
 				text = <"image/tiff">
 				description = <"image/tiff">
 			>
-			["at65"] = <
+			["at60"] = <
 				text = <"image/jpeg">
 				description = <"image/jpeg">
 			>
@@ -790,18 +750,13 @@ terminology
 			["at51"] = <http://openehr.org/id/125>
 			["at52"] = <http://openehr.org/id/502>
 			["at53"] = <http://openehr.org/id/129>
-			["at54"] = <http://openehr.org/id/125>
-			["at55"] = <http://openehr.org/id/502>
-			["at56"] = <http://openehr.org/id/382>
-			["at57"] = <http://openehr.org/id/126>
-			["at58"] = <http://openehr.org/id/125>
-			["at59"] = <http://openehr.org/id/125>
-			["at60"] = <http://openehr.org/id/129>
-			["at61"] = <http://openehr.org/id/425>
-			["at62"] = <http://openehr.org/id/426>
-			["at63"] = <http://openehr.org/id/427>
-			["at64"] = <http://openehr.org/id/428>
-			["at65"] = <http://openehr.org/id/429>
+			["at54"] = <http://openehr.org/id/382>
+			["at55"] = <http://openehr.org/id/126>
+			["at56"] = <http://openehr.org/id/425>
+			["at57"] = <http://openehr.org/id/426>
+			["at58"] = <http://openehr.org/id/427>
+			["at59"] = <http://openehr.org/id/428>
+			["at60"] = <http://openehr.org/id/429>
 		>
 	>
 	value_sets = <
@@ -815,7 +770,7 @@ terminology
 		>
 		["ac3"] = <
 			id = <"ac3">
-			members = <"at61", "at62", "at63", "at64", "at65">
+			members = <"at56", "at57", "at58", "at59", "at60">
 		>
 		["ac4"] = <
 			id = <"ac4">

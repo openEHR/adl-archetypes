@@ -63,14 +63,14 @@ definition
 					ELEMENT[id26] occurrences matches {0..1} matches {	-- Amount
 						value matches {
 							DV_CODED_TEXT[id90] matches {
-								defining_code matches {[ac1]}		-- Amount
+								defining_code matches {[ac1]}		-- Amount (synthesised)
 							}
 						}
 					}
 					ELEMENT[id9] occurrences matches {0..1} matches {	-- Change in amount
 						value matches {
 							DV_CODED_TEXT[id91] matches {
-								defining_code matches {[ac2]}		-- Change in amount
+								defining_code matches {[ac2]}		-- Change in amount (synthesised)
 							}
 						}
 					}
@@ -128,7 +128,7 @@ definition
 			ELEMENT[id82] occurrences matches {0..1} matches {	-- Age
 				value matches {
 					DV_CODED_TEXT[id99] matches {
-						defining_code matches {[ac3]}		-- Age
+						defining_code matches {[ac3]}		-- Age (synthesised)
 					}
 				}
 			}
@@ -137,21 +137,21 @@ definition
 					ELEMENT[id15] occurrences matches {0..1} matches {	-- Turbidity
 						value matches {
 							DV_CODED_TEXT[id100] matches {
-								defining_code matches {[ac4]}		-- Turbidity
+								defining_code matches {[ac4]}		-- Turbidity (synthesised)
 							}
 						}
 					}
 					ELEMENT[id21] occurrences matches {0..1} matches {	-- Consistency
 						value matches {
 							DV_CODED_TEXT[id101] matches {
-								defining_code matches {[ac5]}		-- Consistency
+								defining_code matches {[ac5]}		-- Consistency (synthesised)
 							}
 						}
 					}
 					ELEMENT[id38] occurrences matches {0..1} matches {	-- Sediment
 						value matches {
 							DV_CODED_TEXT[id102] matches {
-								defining_code matches {[ac6]}		-- Sediment
+								defining_code matches {[ac6]}		-- Sediment (synthesised)
 							}
 						}
 					}
@@ -162,7 +162,7 @@ definition
 					ELEMENT[id75] occurrences matches {0..1} matches {	-- Consistency
 						value matches {
 							DV_CODED_TEXT[id103] matches {
-								defining_code matches {[ac7]}		-- Consistency
+								defining_code matches {[ac7]}		-- Consistency (synthesised)
 							}
 						}
 					}
@@ -405,32 +405,32 @@ terminology
 				description = <"Details of a contained substance.">
 			>
 			["ac1"] = <
-				text = <"Amount">
-				description = <"The amount of substance as a category.">
+				text = <"Amount (synthesised)">
+				description = <"The amount of substance as a category. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Change in amount">
-				description = <"Statement about the change in volume of the fluid or secretion.">
+				text = <"Change in amount (synthesised)">
+				description = <"Statement about the change in volume of the fluid or secretion. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Age">
-				description = <"Estimated age of the bodily substance.">
+				text = <"Age (synthesised)">
+				description = <"Estimated age of the bodily substance. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Turbidity">
-				description = <"The degree of solid material suspended in the fluid.">
+				text = <"Turbidity (synthesised)">
+				description = <"The degree of solid material suspended in the fluid. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Consistency">
-				description = <"The consistency of the fluid.">
+				text = <"Consistency (synthesised)">
+				description = <"The consistency of the fluid. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Sediment">
-				description = <"The amount of sediment in the fluid.">
+				text = <"Sediment (synthesised)">
+				description = <"The amount of sediment in the fluid. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Consistency">
-				description = <"Findings realted to the consistency of the substance.">
+				text = <"Consistency (synthesised)">
+				description = <"Findings realted to the consistency of the substance. (synthesised)">
 			>
 			["at84"] = <
 				text = <"Volume">

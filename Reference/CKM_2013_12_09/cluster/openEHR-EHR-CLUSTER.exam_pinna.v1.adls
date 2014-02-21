@@ -55,7 +55,7 @@ definition
 			ELEMENT[id7] occurrences matches {0..1} matches {	-- Symmetry?
 				value matches {
 					DV_CODED_TEXT[id24] matches {
-						defining_code matches {[ac1]}		-- Symmetry?
+						defining_code matches {[ac1]}		-- Symmetry? (synthesised)
 					}
 				}
 			}
@@ -64,7 +64,7 @@ definition
 					ELEMENT[id11] occurrences matches {0..1} matches {	-- Pinna Examined
 						value matches {
 							DV_CODED_TEXT[id25] matches {
-								defining_code matches {[ac2]}		-- Pinna Examined
+								defining_code matches {[ac2]}		-- Pinna Examined (synthesised)
 							}
 						}
 					}
@@ -126,7 +126,7 @@ definition
 					ELEMENT[id6] occurrences matches {0..1} matches {	-- Image Representation
 						value matches {
 							DV_MULTIMEDIA[id33] matches {
-								media_type matches {[ac3]}		-- Image Representation
+								media_type matches {[ac3]}		-- Image Representation (synthesised)
 							}
 						}
 					}
@@ -228,16 +228,16 @@ terminology
 				description = <"Structured details of related physical examination findings for the identified pinna structure.">
 			>
 			["ac1"] = <
-				text = <"Symmetry?">
-				description = <"Description of the symmetry of the ears in comparison to one another.">
+				text = <"Symmetry? (synthesised)">
+				description = <"Description of the symmetry of the ears in comparison to one another. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Pinna Examined">
-				description = <"Identification of the pinna examined.">
+				text = <"Pinna Examined (synthesised)">
+				description = <"Identification of the pinna examined. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Image Representation">
-				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the body system or anatomical structure.">
+				text = <"Image Representation (synthesised)">
+				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the body system or anatomical structure. (synthesised)">
 			>
 			["at14"] = <
 				text = <"image/cgm">

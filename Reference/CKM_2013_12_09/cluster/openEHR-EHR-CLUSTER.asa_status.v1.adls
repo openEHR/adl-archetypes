@@ -37,7 +37,7 @@ definition
 			ELEMENT[id2] occurrences matches {0..1} matches {	-- ASA patient status
 				value matches {
 					DV_CODED_TEXT[id16] matches {
-						defining_code matches {[ac1]}		-- ASA patient status
+						defining_code matches {[ac1]}		-- ASA patient status (synthesised)
 					}
 				}
 			}
@@ -109,8 +109,8 @@ terminology
 				description = <"Narrative comment about the ASA patient status assessment.">
 			>
 			["ac1"] = <
-				text = <"ASA patient status">
-				description = <"Assessed pre-operative status of a patient.">
+				text = <"ASA patient status (synthesised)">
+				description = <"Assessed pre-operative status of a patient. (synthesised)">
 			>
 		>
 	>

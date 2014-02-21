@@ -45,14 +45,14 @@ definition
 			ELEMENT[id4] occurrences matches {0..1} matches {	-- Direct invasion
 				value matches {
 					DV_CODED_TEXT[id15] matches {
-						defining_code matches {[ac1]}		-- Direct invasion
+						defining_code matches {[ac1]}		-- Direct invasion (synthesised)
 					}
 				}
 			}
 			ELEMENT[id8] occurrences matches {0..1} matches {	-- Nature of involvement
 				value matches {
 					DV_CODED_TEXT[id16] matches {
-						defining_code matches {[ac2]}		-- Nature of involvement
+						defining_code matches {[ac2]}		-- Nature of involvement (synthesised)
 					}
 					DV_TEXT[id17] 
 				}
@@ -139,12 +139,12 @@ terminology
 				description = <"There is suspicion of direct invasion of the tissue by tumour">
 			>
 			["ac1"] = <
-				text = <"Direct invasion">
-				description = <"Finding of direct invasion by tumour of local tissue.">
+				text = <"Direct invasion (synthesised)">
+				description = <"Finding of direct invasion by tumour of local tissue. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Nature of involvement">
-				description = <"The nature of involvement of tumour in local tissue.">
+				text = <"Nature of involvement (synthesised)">
+				description = <"The nature of involvement of tumour in local tissue. (synthesised)">
 			>
 		>
 	>

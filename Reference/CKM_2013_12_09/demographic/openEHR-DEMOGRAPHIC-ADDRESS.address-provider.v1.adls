@@ -54,12 +54,12 @@ definition
 			after [id12]
 			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Communication privacy
 				value matches {
-					DV_BOOLEAN[id0.83] 
+					DV_BOOLEAN[id0.4] 
 				}
 			}
 			ELEMENT[id0.3] occurrences matches {0..*} matches {	-- Healthcare provider identifier
 				value matches {
-					DV_TEXT[id0.84] 
+					DV_TEXT[id0.5] 
 				}
 			}
 		}
@@ -80,10 +80,6 @@ terminology
 				text = <"Healthcare provider address">
 				description = <"Healthcare provider address, based on ISO standards.">
 			>
-			["ac0.1"] = <
-				text = <"*(added by post-parse processor)(pt-br)">
-				description = <"*(added by post-parse processor)(pt-br)">
-			>
 		>
 		["pt-br"] = <
 			["id0.2"] = <
@@ -98,15 +94,5 @@ terminology
 				text = <"Endereço de um Prestador de Assistência à Saúde">
 				description = <"Endereço Postal de um Prestador de Assistência à Saúde.">
 			>
-			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-		>
-	>
-	value_sets = <
-		["ac0.1"] = <
-			id = <"ac0.1">
-			members = <"at462", "at463", "at464", "at465", "at466", "at467">
 		>
 	>

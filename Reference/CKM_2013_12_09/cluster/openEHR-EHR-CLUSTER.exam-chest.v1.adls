@@ -35,8 +35,8 @@ definition
 		/items[id9]/items matches {
 			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Trachea
 				value matches {
-					DV_CODED_TEXT[id0.27] matches {	-- Lymph nodes
-						defining_code matches {[ac0.1]}		-- (added by post-parse processor)
+					DV_CODED_TEXT[id0.39] matches {
+						defining_code matches {[ac0.1]}		-- Trachea (synthesised)
 					}
 				}
 			}
@@ -44,7 +44,7 @@ definition
 				items matches {
 					ELEMENT[id0.31] occurrences matches {0..1} matches {	-- Visible
 						value matches {
-							DV_BOOLEAN[id0.28] matches {	-- Shape
+							DV_BOOLEAN[id0.40] matches {
 								value matches {True, False}
 							}
 						}
@@ -53,14 +53,14 @@ definition
 						items matches {
 							ELEMENT[id0.33] occurrences matches {0..1} matches {	-- Palpable
 								value matches {
-									DV_BOOLEAN[id0.29] matches {
+									DV_BOOLEAN[id0.41] matches {
 										value matches {True, False}
 									}
 								}
 							}
 							ELEMENT[id0.34] occurrences matches {0..1} matches {	-- Maximal location
 								value matches {
-									DV_TEXT[id0.30] 
+									DV_TEXT[id0.42] 
 								}
 							}
 						}
@@ -71,19 +71,19 @@ definition
 				items matches {
 					ELEMENT[id0.19] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0.31] 	-- Visible
+							DV_TEXT[id0.43] 
 						}
 					}
 					ELEMENT[id0.9] occurrences matches {0..1} matches {	-- Type
 						value matches {
-							DV_CODED_TEXT[id0.32] matches {	-- Palpation
-								defining_code matches {[ac0.2]}		-- (added by post-parse processor)
+							DV_CODED_TEXT[id0.44] matches {
+								defining_code matches {[ac0.2]}		-- Type (synthesised)
 							}
 						}
 					}
 					ELEMENT[id0.12] occurrences matches {0..1} matches {	-- Effort
 						value matches {
-							DV_ORDINAL[id0.33] matches {	-- Palpable
+							DV_ORDINAL[id0.45] matches {
 								[value, symbol] matches {
 									[{5}, {[at0.13]}],
 									[{6}, {[at0.14]}],
@@ -97,8 +97,8 @@ definition
 						items matches {
 							ELEMENT[id0.18] occurrences matches {0..*} matches {	-- Sign
 								value matches {
-									DV_CODED_TEXT[id0.34] matches {	-- Maximal location
-										defining_code matches {[ac0.3]}		-- (added by post-parse processor)
+									DV_CODED_TEXT[id0.46] matches {
+										defining_code matches {[ac0.3]}		-- Sign (synthesised)
 									}
 								}
 							}
@@ -106,7 +106,7 @@ definition
 					}
 					ELEMENT[id0.26] occurrences matches {0..1} matches {	-- Paradoxical movement (flail chest)
 						value matches {
-							DV_BOOLEAN[id0.35] matches {	-- Apex beat
+							DV_BOOLEAN[id0.47] matches {
 								value matches {True, False}
 							}
 						}
@@ -117,12 +117,12 @@ definition
 				items matches {
 					ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0.36] 
+							DV_TEXT[id0.48] 
 						}
 					}
 					ELEMENT[id0.28] occurrences matches {0..1} matches {	-- Shape
 						value matches {
-							DV_TEXT[id0.37] 	-- Chest wall detail
+							DV_TEXT[id0.49] 
 						}
 					}
 					allow_archetype CLUSTER[id0.37] occurrences matches {0..1} matches {	-- Chest wall detail
@@ -287,24 +287,16 @@ terminology
 				description = <"For recording findings on physical examination of the chest wall and lungs.">
 			>
 			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Trachea (synthesised)">
+				description = <"The position of the trachea. (synthesised)">
 			>
 			["ac0.2"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Type (synthesised)">
+				description = <"Type of breathing. (synthesised)">
 			>
 			["ac0.3"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-			["ac0.4"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-			["ac0.5"] = <
-				text = <"Palpable">
-				description = <"Apex beat is palpable.">
+				text = <"Sign (synthesised)">
+				description = <"Use of accessory respiratory muscles. (synthesised)">
 			>
 		>
 	>
@@ -320,13 +312,5 @@ terminology
 		["ac0.3"] = <
 			id = <"ac0.3">
 			members = <"at0.25", "at0.20", "at0.24", "at0.23", "at0.21", "at0.22">
-		>
-		["ac0.4"] = <
-			id = <"ac0.4">
-			members = <"at1", "at2", "at3">
-		>
-		["ac0.5"] = <
-			id = <"ac0.5">
-			members = <"at0.13", "at0.14", "at0.15", "at0.16">
 		>
 	>

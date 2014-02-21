@@ -62,7 +62,7 @@ definition
 									ELEMENT[id6] occurrences matches {0..1} matches {	-- Hip circumference
 										value matches {
 											DV_QUANTITY[id9] matches {
-												property matches {[at2]}
+												property matches {[at1]}
 												magnitude matches {|>=0.0|}
 											}
 										}
@@ -110,10 +110,6 @@ terminology
 				text = <"Length">
 				description = <"Length">
 			>
-			["at2"] = <
-				text = <"Length">
-				description = <"Length">
-			>
 		>
 		["ar-sy"] = <
 			["id1"] = <
@@ -140,15 +136,10 @@ terminology
 				text = <"*Length (en)">
 				description = <"*Length (en)">
 			>
-			["at2"] = <
-				text = <"*Length (en)">
-				description = <"*Length (en)">
-			>
 		>
 	>
 	term_bindings = <
 		["openehr"] = <
 			["at1"] = <http://openehr.org/id/122>
-			["at2"] = <http://openehr.org/id/122>
 		>
 	>

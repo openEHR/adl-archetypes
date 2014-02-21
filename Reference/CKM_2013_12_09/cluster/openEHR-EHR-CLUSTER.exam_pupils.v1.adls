@@ -70,7 +70,7 @@ definition
 			ELEMENT[id72] occurrences matches {0..1} matches {	-- Symmetry
 				value matches {
 					DV_CODED_TEXT[id80] matches {
-						defining_code matches {[ac1]}		-- Symmetry
+						defining_code matches {[ac1]}		-- Symmetry (synthesised)
 					}
 				}
 			}
@@ -79,14 +79,14 @@ definition
 					ELEMENT[id16] matches {	-- Pupil Examined
 						value matches {
 							DV_CODED_TEXT[id81] matches {
-								defining_code matches {[ac2]}		-- Pupil Examined
+								defining_code matches {[ac2]}		-- Pupil Examined (synthesised)
 							}
 						}
 					}
 					ELEMENT[id6] occurrences matches {0..1} matches {	-- Shape
 						value matches {
 							DV_CODED_TEXT[id82] matches {
-								defining_code matches {[ac3]}		-- Shape
+								defining_code matches {[ac3]}		-- Shape (synthesised)
 							}
 						}
 					}
@@ -101,35 +101,35 @@ definition
 					ELEMENT[id21] occurrences matches {0..1} matches {	-- Estimated Size
 						value matches {
 							DV_CODED_TEXT[id84] matches {
-								defining_code matches {[ac4]}		-- Estimated Size
+								defining_code matches {[ac4]}		-- Estimated Size (synthesised)
 							}
 						}
 					}
 					ELEMENT[id4] occurrences matches {0..1} matches {	-- Direct Light Reflex
 						value matches {
 							DV_CODED_TEXT[id85] matches {
-								defining_code matches {[ac5]}		-- Direct Light Reflex
+								defining_code matches {[ac5]}		-- Direct Light Reflex (synthesised)
 							}
 						}
 					}
 					ELEMENT[id5] occurrences matches {0..1} matches {	-- Consensual Light Reflex
 						value matches {
 							DV_CODED_TEXT[id86] matches {
-								defining_code matches {[ac6]}		-- Consensual Light Reflex
+								defining_code matches {[ac6]}		-- Consensual Light Reflex (synthesised)
 							}
 						}
 					}
 					ELEMENT[id7] occurrences matches {0..1} matches {	-- Accommodation Reflex
 						value matches {
 							DV_CODED_TEXT[id87] matches {
-								defining_code matches {[ac7]}		-- Accommodation Reflex
+								defining_code matches {[ac7]}		-- Accommodation Reflex (synthesised)
 							}
 						}
 					}
 					ELEMENT[id54] occurrences matches {0..1} matches {	-- Relative Afferent Pupillary Defect
 						value matches {
 							DV_CODED_TEXT[id88] matches {
-								defining_code matches {[ac8]}		-- Relative Afferent Pupillary Defect
+								defining_code matches {[ac8]}		-- Relative Afferent Pupillary Defect (synthesised)
 							}
 						}
 					}
@@ -141,7 +141,7 @@ definition
 					ELEMENT[id71] occurrences matches {0..*} matches {	-- Image
 						value matches {
 							DV_MULTIMEDIA[id90] matches {
-								media_type matches {[ac9]}		-- Image
+								media_type matches {[ac9]}		-- Image (synthesised)
 							}
 						}
 					}
@@ -155,7 +155,7 @@ definition
 			ELEMENT[id78] occurrences matches {0..*} matches {	-- Image
 				value matches {
 					DV_MULTIMEDIA[id92] matches {
-						media_type matches {[ac10]}		-- Image
+						media_type matches {[ac10]}		-- Image (synthesised)
 					}
 				}
 			}
@@ -375,44 +375,44 @@ terminology
 				description = <"Multimedia image taken during examination of both pupils.">
 			>
 			["ac1"] = <
-				text = <"Symmetry">
-				description = <"An estimate of the equality of the size and shape of the pupils.">
+				text = <"Symmetry (synthesised)">
+				description = <"An estimate of the equality of the size and shape of the pupils. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Pupil Examined">
-				description = <"Identification of the pupil under examination.">
+				text = <"Pupil Examined (synthesised)">
+				description = <"Identification of the pupil under examination. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Shape">
-				description = <"The shape of the pupil.">
+				text = <"Shape (synthesised)">
+				description = <"The shape of the pupil. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Estimated Size">
-				description = <"A text description of the estimated pupil size.">
+				text = <"Estimated Size (synthesised)">
+				description = <"A text description of the estimated pupil size. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Direct Light Reflex">
-				description = <"Pupil constricts with light shone into that eye.">
+				text = <"Direct Light Reflex (synthesised)">
+				description = <"Pupil constricts with light shone into that eye. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Consensual Light Reflex">
-				description = <"Findings of the consensual pupillary light reflex.">
+				text = <"Consensual Light Reflex (synthesised)">
+				description = <"Findings of the consensual pupillary light reflex. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Accommodation Reflex">
-				description = <"Findings of the pupillary accommodation reflex.">
+				text = <"Accommodation Reflex (synthesised)">
+				description = <"Findings of the pupillary accommodation reflex. (synthesised)">
 			>
 			["ac8"] = <
-				text = <"Relative Afferent Pupillary Defect">
-				description = <"Findings of the relative afferent pupillary defect.">
+				text = <"Relative Afferent Pupillary Defect (synthesised)">
+				description = <"Findings of the relative afferent pupillary defect. (synthesised)">
 			>
 			["ac9"] = <
-				text = <"Image">
-				description = <"Multimedia image taken during examination of the identified pupil.">
+				text = <"Image (synthesised)">
+				description = <"Multimedia image taken during examination of the identified pupil. (synthesised)">
 			>
 			["ac10"] = <
-				text = <"Image">
-				description = <"Multimedia image taken during examination of both pupils.">
+				text = <"Image (synthesised)">
+				description = <"Multimedia image taken during examination of both pupils. (synthesised)">
 			>
 			["at75"] = <
 				text = <"Length">
@@ -769,44 +769,44 @@ terminology
 				description = <"**(en)">
 			>
 			["ac1"] = <
-				text = <"*Symmetry(en)">
-				description = <"*An estimate of the equality of the size and shape of the pupils.(en)">
+				text = <"*Symmetry (synthesised)(en)">
+				description = <"*An estimate of the equality of the size and shape of the pupils. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Pupil Examined(en)">
-				description = <"*Identification of the pupil under examination.(en)">
+				text = <"*Pupil Examined (synthesised)(en)">
+				description = <"*Identification of the pupil under examination. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Shape(en)">
-				description = <"*The shape of the pupil.(en)">
+				text = <"*Shape (synthesised)(en)">
+				description = <"*The shape of the pupil. (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Estimated Size(en)">
-				description = <"*A text description of the estimated pupil size.(en)">
+				text = <"*Estimated Size (synthesised)(en)">
+				description = <"*A text description of the estimated pupil size. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Direct Light Reflex(en)">
-				description = <"*Pupil constricts with light shone into that eye.(en)">
+				text = <"*Direct Light Reflex (synthesised)(en)">
+				description = <"*Pupil constricts with light shone into that eye. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Consensual Light Reflex(en)">
-				description = <"*Findings of the consensual pupillary light reflex.(en)">
+				text = <"*Consensual Light Reflex (synthesised)(en)">
+				description = <"*Findings of the consensual pupillary light reflex. (synthesised)(en)">
 			>
 			["ac7"] = <
-				text = <"*Accommodation Reflex(en)">
-				description = <"*Findings of the pupillary accommodation reflex.(en)">
+				text = <"*Accommodation Reflex (synthesised)(en)">
+				description = <"*Findings of the pupillary accommodation reflex. (synthesised)(en)">
 			>
 			["ac8"] = <
-				text = <"*Relative Afferent Pupillary Defect(en)">
-				description = <"*Findings of the relative afferent pupillary defect.(en)">
+				text = <"*Relative Afferent Pupillary Defect (synthesised)(en)">
+				description = <"*Findings of the relative afferent pupillary defect. (synthesised)(en)">
 			>
 			["ac9"] = <
-				text = <"*Image(en)">
-				description = <"*Multimedia image taken during examination of the identified pupil.(en)">
+				text = <"*Image (synthesised)(en)">
+				description = <"*Multimedia image taken during examination of the identified pupil. (synthesised)(en)">
 			>
 			["ac10"] = <
-				text = <"*Image(en)">
-				description = <"*Multimedia image taken during examination of both pupils.(en)">
+				text = <"*Image (synthesised)(en)">
+				description = <"*Multimedia image taken during examination of both pupils. (synthesised)(en)">
 			>
 			["at75"] = <
 				text = <"*Length (en)">

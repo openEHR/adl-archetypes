@@ -55,7 +55,7 @@ definition
 			ELEMENT[id3] occurrences matches {1} matches {	-- Área geografica
 				value matches {
 					DV_CODED_TEXT[id27] matches {
-						defining_code matches {[ac2]}		-- Área geografica
+						defining_code matches {[ac2]}		-- Área geografica (synthesised)
 					}
 				}
 			}
@@ -179,8 +179,8 @@ terminology
 				description = <"Valid codes for usage of identifiers">
 			>
 			["ac2"] = <
-				text = <"*Área geografica(pt-br)">
-				description = <"*Indica a área geográfica onde o documento é utilizado(pt-br)">
+				text = <"*Área geografica (synthesised)(pt-br)">
+				description = <"*Indica a área geográfica onde o documento é utilizado (synthesised)(pt-br)">
 			>
 		>
 		["pt-br"] = <
@@ -253,8 +253,8 @@ terminology
 				description = <"códigos válidos para os usos de identificadores">
 			>
 			["ac2"] = <
-				text = <"Área geografica">
-				description = <"Indica a área geográfica onde o documento é utilizado">
+				text = <"Área geografica (synthesised)">
+				description = <"Indica a área geográfica onde o documento é utilizado (synthesised)">
 			>
 		>
 	>

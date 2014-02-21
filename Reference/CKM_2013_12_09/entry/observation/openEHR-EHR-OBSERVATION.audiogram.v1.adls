@@ -65,7 +65,7 @@ definition
 											ELEMENT[id8] matches {	-- Test Ear
 												value matches {
 													DV_CODED_TEXT[id154] matches {
-														defining_code matches {[ac1]}		-- Test Ear
+														defining_code matches {[ac1]}		-- Test Ear (synthesised)
 													}
 												}
 											}
@@ -107,7 +107,7 @@ definition
 											ELEMENT[id52] occurrences matches {0..1} matches {	-- Screening Assessment
 												value matches {
 													DV_CODED_TEXT[id159] matches {
-														defining_code matches {[ac2]}		-- Screening Assessment
+														defining_code matches {[ac2]}		-- Screening Assessment (synthesised)
 													}
 												}
 											}
@@ -116,7 +116,7 @@ definition
 													ELEMENT[id57] occurrences matches {0..1} matches {	-- Pure Tone Average
 														value matches {
 															DV_QUANTITY[id160] matches {
-																property matches {[at137]}
+																property matches {[at136]}
 																magnitude matches {|-10.0..120.0|}
 															}
 														}
@@ -124,7 +124,7 @@ definition
 													ELEMENT[id66] occurrences matches {0..1} matches {	-- Type of Loss
 														value matches {
 															DV_CODED_TEXT[id161] matches {
-																defining_code matches {[ac3]}		-- Type of Loss
+																defining_code matches {[ac3]}		-- Type of Loss (synthesised)
 															}
 														}
 													}
@@ -149,14 +149,14 @@ definition
 									ELEMENT[id72] occurrences matches {0..1} matches {	-- Symmetry of Loss
 										value matches {
 											DV_CODED_TEXT[id164] matches {
-												defining_code matches {[ac4]}		-- Symmetry of Loss
+												defining_code matches {[ac4]}		-- Symmetry of Loss (synthesised)
 											}
 										}
 									}
 									ELEMENT[id132] occurrences matches {0..1} matches {	-- Laterality of Loss
 										value matches {
 											DV_CODED_TEXT[id165] matches {
-												defining_code matches {[ac5]}		-- Laterality of Loss
+												defining_code matches {[ac5]}		-- Laterality of Loss (synthesised)
 											}
 										}
 									}
@@ -168,7 +168,7 @@ definition
 									ELEMENT[id27] occurrences matches {0..1} matches {	-- Test Result Image
 										value matches {
 											DV_MULTIMEDIA[id167] matches {
-												media_type matches {[ac6]}		-- Test Result Image
+												media_type matches {[ac6]}		-- Test Result Image (synthesised)
 											}
 										}
 									}
@@ -186,14 +186,14 @@ definition
 									ELEMENT[id29] occurrences matches {0..1} matches {	-- Aided
 										value matches {
 											DV_CODED_TEXT[id169] matches {
-												defining_code matches {[ac7]}		-- Aided
+												defining_code matches {[ac7]}		-- Aided (synthesised)
 											}
 										}
 									}
 									ELEMENT[id75] occurrences matches {0..1} matches {	-- Pre-test Conditions
 										value matches {
 											DV_CODED_TEXT[id170] matches {
-												defining_code matches {[ac8]}		-- Pre-test Conditions
+												defining_code matches {[ac8]}		-- Pre-test Conditions (synthesised)
 											}
 										}
 									}
@@ -210,7 +210,7 @@ definition
 					ELEMENT[id15] occurrences matches {0..1} matches {	-- Masking
 						value matches {
 							DV_CODED_TEXT[id171] matches {
-								defining_code matches {[ac9]}		-- Masking
+								defining_code matches {[ac9]}		-- Masking (synthesised)
 							}
 						}
 					}
@@ -219,14 +219,14 @@ definition
 							ELEMENT[id110] occurrences matches {0..1} matches {	-- Air Conduction
 								value matches {
 									DV_CODED_TEXT[id172] matches {
-										defining_code matches {[ac10]}		-- Air Conduction
+										defining_code matches {[ac10]}		-- Air Conduction (synthesised)
 									}
 								}
 							}
 							ELEMENT[id114] occurrences matches {0..1} matches {	-- Bone Conduction
 								value matches {
 									DV_CODED_TEXT[id173] matches {
-										defining_code matches {[ac11]}		-- Bone Conduction
+										defining_code matches {[ac11]}		-- Bone Conduction (synthesised)
 									}
 								}
 							}
@@ -235,14 +235,14 @@ definition
 					ELEMENT[id76] occurrences matches {0..1} matches {	-- Test Environment
 						value matches {
 							DV_CODED_TEXT[id174] matches {
-								defining_code matches {[ac12]}		-- Test Environment
+								defining_code matches {[ac12]}		-- Test Environment (synthesised)
 							}
 						}
 					}
 					ELEMENT[id35] occurrences matches {0..1} matches {	-- Test Stimulus
 						value matches {
 							DV_CODED_TEXT[id175] matches {
-								defining_code matches {[ac13]}		-- Test Stimulus
+								defining_code matches {[ac13]}		-- Test Stimulus (synthesised)
 							}
 						}
 					}
@@ -251,7 +251,7 @@ definition
 							ELEMENT[id87] occurrences matches {0..1} matches {	-- Onset Ramp
 								value matches {
 									DV_QUANTITY[id176] matches {
-										property matches {[at138]}
+										property matches {[at137]}
 										units matches {"millisec"}
 									}
 								}
@@ -259,7 +259,7 @@ definition
 							ELEMENT[id88] occurrences matches {0..1} matches {	-- Offset Ramp
 								value matches {
 									DV_QUANTITY[id177] matches {
-										property matches {[at139]}
+										property matches {[at137]}
 										units matches {"millisec"}
 									}
 								}
@@ -267,7 +267,7 @@ definition
 							ELEMENT[id89] occurrences matches {0..1} matches {	-- Total Duration
 								value matches {
 									DV_QUANTITY[id178] matches {
-										property matches {[at140]}
+										property matches {[at137]}
 										units matches {"millisec"}
 									}
 								}
@@ -279,21 +279,21 @@ definition
 							ELEMENT[id128] occurrences matches {0..1} matches {	-- Threshold Definition
 								value matches {
 									DV_CODED_TEXT[id179] matches {
-										defining_code matches {[ac14]}		-- Threshold Definition
+										defining_code matches {[ac14]}		-- Threshold Definition (synthesised)
 									}
 								}
 							}
 							ELEMENT[id95] occurrences matches {0..1} matches {	-- Step Size
 								value matches {
 									DV_CODED_TEXT[id180] matches {
-										defining_code matches {[ac15]}		-- Step Size
+										defining_code matches {[ac15]}		-- Step Size (synthesised)
 									}
 								}
 							}
 							ELEMENT[id100] occurrences matches {0..1} matches {	-- Direction
 								value matches {
 									DV_CODED_TEXT[id181] matches {
-										defining_code matches {[ac16]}		-- Direction
+										defining_code matches {[ac16]}		-- Direction (synthesised)
 									}
 								}
 							}
@@ -320,14 +320,14 @@ definition
 					ELEMENT[id90] occurrences matches {0..1} matches {	-- Calibration Reference dB
 						value matches {
 							DV_CODED_TEXT[id184] matches {
-								defining_code matches {[ac17]}		-- Calibration Reference dB
+								defining_code matches {[ac17]}		-- Calibration Reference dB (synthesised)
 							}
 						}
 					}
 					ELEMENT[id62] occurrences matches {0..1} matches {	-- Criteria for Pure Tone Average
 						value matches {
 							DV_CODED_TEXT[id151] matches {	-- Coded term
-								defining_code matches {[ac18]}		-- Coded term
+								defining_code matches {[ac18]}		-- Coded term (synthesised)
 							}
 							DV_TEXT[id152] 	-- Free text term
 						}
@@ -337,14 +337,14 @@ definition
 							ELEMENT[id104] occurrences matches {0..1} matches {	-- Stimulus Type
 								value matches {
 									DV_CODED_TEXT[id185] matches {
-										defining_code matches {[ac19]}		-- Stimulus Type
+										defining_code matches {[ac19]}		-- Stimulus Type (synthesised)
 									}
 								}
 							}
 							ELEMENT[id107] occurrences matches {0..1} matches {	-- Stimulus Level
 								value matches {
 									DV_QUANTITY[id186] matches {
-										property matches {[at141]}
+										property matches {[at136]}
 										magnitude matches {|-10.0..120.0|}
 									}
 								}
@@ -352,7 +352,7 @@ definition
 							ELEMENT[id108] occurrences matches {0..1} matches {	-- Stimulus Frequency
 								value matches {
 									DV_QUANTITY[id187] matches {
-										property matches {[at142]}
+										property matches {[at135]}
 										[magnitude, units, precision] matches {
 											[{|0.125..16.0|}, {"kHz"}, {3}],
 											[{|125.0..16000.0|}, {"Hz"}, {0}]
@@ -772,80 +772,80 @@ terminology
 				description = <"Free text term">
 			>
 			["ac1"] = <
-				text = <"Test Ear">
-				description = <"Identification of the ear being tested.">
+				text = <"Test Ear (synthesised)">
+				description = <"Identification of the ear being tested. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Screening Assessment">
-				description = <"Interpretation of a series of audiometric measurements, for purposes of screening assessment.">
+				text = <"Screening Assessment (synthesised)">
+				description = <"Interpretation of a series of audiometric measurements, for purposes of screening assessment. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Type of Loss">
-				description = <"Identified type of hearing loss for the test ear, based on all measurements.">
+				text = <"Type of Loss (synthesised)">
+				description = <"Identified type of hearing loss for the test ear, based on all measurements. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Symmetry of Loss">
-				description = <"An interpretation about the symmetry of hearing loss, based on all hearing acuity measurements for both ears.">
+				text = <"Symmetry of Loss (synthesised)">
+				description = <"An interpretation about the symmetry of hearing loss, based on all hearing acuity measurements for both ears. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Laterality of Loss">
-				description = <"An interpretation about the laterality of hearing loss, based on all hearing acuity measurements for both ears.">
+				text = <"Laterality of Loss (synthesised)">
+				description = <"An interpretation about the laterality of hearing loss, based on all hearing acuity measurements for both ears. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Test Result Image">
-				description = <"Digital representation of the entire result.">
+				text = <"Test Result Image (synthesised)">
+				description = <"Digital representation of the entire result. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Aided">
-				description = <"The test has been conducted with the patient using a form of auditory assistance, such as a hearing aid or cochlear implant.">
+				text = <"Aided (synthesised)">
+				description = <"The test has been conducted with the patient using a form of auditory assistance, such as a hearing aid or cochlear implant. (synthesised)">
 			>
 			["ac8"] = <
-				text = <"Pre-test Conditions">
-				description = <"Identification of whether the subject was exposed to a quiet environment for a specified period prior to testing.">
+				text = <"Pre-test Conditions (synthesised)">
+				description = <"Identification of whether the subject was exposed to a quiet environment for a specified period prior to testing. (synthesised)">
 			>
 			["ac9"] = <
-				text = <"Masking">
-				description = <"Presentation of a frequency masking stimulus to the non-test ear to more accurately determine hearing thresholds in the test ear.">
+				text = <"Masking (synthesised)">
+				description = <"Presentation of a frequency masking stimulus to the non-test ear to more accurately determine hearing thresholds in the test ear. (synthesised)">
 			>
 			["ac10"] = <
-				text = <"Air Conduction">
-				description = <"The indirect transmission of the test stimulus to the inner ear through the atmosphere, via the auditory canal and middle ear structures.">
+				text = <"Air Conduction (synthesised)">
+				description = <"The indirect transmission of the test stimulus to the inner ear through the atmosphere, via the auditory canal and middle ear structures. (synthesised)">
 			>
 			["ac11"] = <
-				text = <"Bone Conduction">
-				description = <"The direct transmission of the test stimulus to the inner ear via the cranial bones.">
+				text = <"Bone Conduction (synthesised)">
+				description = <"The direct transmission of the test stimulus to the inner ear via the cranial bones. (synthesised)">
 			>
 			["ac12"] = <
-				text = <"Test Environment">
-				description = <"The space and conditions in which the audiometric test is administered.">
+				text = <"Test Environment (synthesised)">
+				description = <"The space and conditions in which the audiometric test is administered. (synthesised)">
 			>
 			["ac13"] = <
-				text = <"Test Stimulus">
-				description = <"Identification of the frequency-specific stimulus used in measuring the hearing threshold.">
+				text = <"Test Stimulus (synthesised)">
+				description = <"Identification of the frequency-specific stimulus used in measuring the hearing threshold. (synthesised)">
 			>
 			["ac14"] = <
-				text = <"Threshold Definition">
-				description = <"Definition of the threshold level used in the test.">
+				text = <"Threshold Definition (synthesised)">
+				description = <"Definition of the threshold level used in the test. (synthesised)">
 			>
 			["ac15"] = <
-				text = <"Step Size">
-				description = <"The step size (in decibels) of the change in the stimulus intensity.">
+				text = <"Step Size (synthesised)">
+				description = <"The step size (in decibels) of the change in the stimulus intensity. (synthesised)">
 			>
 			["ac16"] = <
-				text = <"Direction">
-				description = <"The direction of change in the stimulus intensity.">
+				text = <"Direction (synthesised)">
+				description = <"The direction of change in the stimulus intensity. (synthesised)">
 			>
 			["ac17"] = <
-				text = <"Calibration Reference dB">
-				description = <"Scale used for acoustic calibration check.">
+				text = <"Calibration Reference dB (synthesised)">
+				description = <"Scale used for acoustic calibration check. (synthesised)">
 			>
 			["ac18"] = <
-				text = <"Coded term">
-				description = <"Coded term">
+				text = <"Coded term (synthesised)">
+				description = <"Coded term (synthesised)">
 			>
 			["ac19"] = <
-				text = <"Stimulus Type">
-				description = <"Type of stimulus used.">
+				text = <"Stimulus Type (synthesised)">
+				description = <"Type of stimulus used. (synthesised)">
 			>
 			["at135"] = <
 				text = <"Frequency">
@@ -856,46 +856,26 @@ terminology
 				description = <"Loudness">
 			>
 			["at137"] = <
-				text = <"Loudness">
-				description = <"Loudness">
+				text = <"Time">
+				description = <"Time">
 			>
 			["at138"] = <
-				text = <"Time">
-				description = <"Time">
-			>
-			["at139"] = <
-				text = <"Time">
-				description = <"Time">
-			>
-			["at140"] = <
-				text = <"Time">
-				description = <"Time">
-			>
-			["at141"] = <
-				text = <"Loudness">
-				description = <"Loudness">
-			>
-			["at142"] = <
-				text = <"Frequency">
-				description = <"Frequency">
-			>
-			["at143"] = <
 				text = <"image/cgm">
 				description = <"image/cgm">
 			>
-			["at144"] = <
+			["at139"] = <
 				text = <"image/gif">
 				description = <"image/gif">
 			>
-			["at145"] = <
+			["at140"] = <
 				text = <"image/png">
 				description = <"image/png">
 			>
-			["at146"] = <
+			["at141"] = <
 				text = <"image/tiff">
 				description = <"image/tiff">
 			>
-			["at147"] = <
+			["at142"] = <
 				text = <"image/jpeg">
 				description = <"image/jpeg">
 			>
@@ -905,35 +885,22 @@ terminology
 		["openehr"] = <
 			["at135"] = <http://openehr.org/id/382>
 			["at136"] = <http://openehr.org/id/123>
-			["at137"] = <http://openehr.org/id/123>
-			["at138"] = <http://openehr.org/id/128>
-			["at139"] = <http://openehr.org/id/128>
-			["at140"] = <http://openehr.org/id/128>
-			["at141"] = <http://openehr.org/id/123>
-			["at142"] = <http://openehr.org/id/382>
-			["at143"] = <http://openehr.org/id/425>
-			["at144"] = <http://openehr.org/id/426>
-			["at145"] = <http://openehr.org/id/427>
-			["at146"] = <http://openehr.org/id/428>
-			["at147"] = <http://openehr.org/id/429>
+			["at137"] = <http://openehr.org/id/128>
+			["at138"] = <http://openehr.org/id/425>
+			["at139"] = <http://openehr.org/id/426>
+			["at140"] = <http://openehr.org/id/427>
+			["at141"] = <http://openehr.org/id/428>
+			["at142"] = <http://openehr.org/id/429>
 		>
 	>
 	value_sets = <
-		["ac7"] = <
-			id = <"ac7">
-			members = <"at30", "at31">
+		["ac12"] = <
+			id = <"ac12">
+			members = <"at77", "at78", "at79", "at80">
 		>
-		["ac15"] = <
-			id = <"ac15">
-			members = <"at96", "at97", "at98", "at99">
-		>
-		["ac17"] = <
-			id = <"ac17">
-			members = <"at91", "at92", "at93">
-		>
-		["ac19"] = <
-			id = <"ac19">
-			members = <"at105", "at106">
+		["ac16"] = <
+			id = <"ac16">
+			members = <"at101", "at102">
 		>
 		["ac1"] = <
 			id = <"ac1">
@@ -957,7 +924,11 @@ terminology
 		>
 		["ac6"] = <
 			id = <"ac6">
-			members = <"at143", "at144", "at145", "at146", "at147">
+			members = <"at138", "at139", "at140", "at141", "at142">
+		>
+		["ac7"] = <
+			id = <"ac7">
+			members = <"at30", "at31">
 		>
 		["ac8"] = <
 			id = <"ac8">
@@ -975,10 +946,6 @@ terminology
 			id = <"ac11">
 			members = <"at115", "at116">
 		>
-		["ac12"] = <
-			id = <"ac12">
-			members = <"at77", "at78", "at79", "at80">
-		>
 		["ac13"] = <
 			id = <"ac13">
 			members = <"at36", "at37", "at81", "at82">
@@ -987,12 +954,20 @@ terminology
 			id = <"ac14">
 			members = <"at129", "at130", "at131">
 		>
-		["ac16"] = <
-			id = <"ac16">
-			members = <"at101", "at102">
+		["ac15"] = <
+			id = <"ac15">
+			members = <"at96", "at97", "at98", "at99">
+		>
+		["ac17"] = <
+			id = <"ac17">
+			members = <"at91", "at92", "at93">
 		>
 		["ac18"] = <
 			id = <"ac18">
 			members = <"at63", "at64">
+		>
+		["ac19"] = <
+			id = <"ac19">
+			members = <"at105", "at106">
 		>
 	>

@@ -52,7 +52,7 @@ definition
 				items matches {
 					ELEMENT[id0.39] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_TEXT[id0.52] 
+							DV_TEXT[id0.40] 
 						}
 					}
 				}
@@ -95,15 +95,5 @@ terminology
 				text = <"Difficulty moving bowels">
 				description = <"Description of  any difficulty voiding bowels.">
 			>
-			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-		>
-	>
-	value_sets = <
-		["ac0.1"] = <
-			id = <"ac0.1">
-			members = <"at19", "at20", "at21">
 		>
 	>

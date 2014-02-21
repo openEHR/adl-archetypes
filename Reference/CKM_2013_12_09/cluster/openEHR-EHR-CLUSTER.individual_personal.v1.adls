@@ -68,7 +68,7 @@ definition
 			ELEMENT[id18] occurrences matches {0..1} matches {	-- Sex
 				value matches {
 					DV_CODED_TEXT[id23] matches {
-						defining_code matches {[ac1]}		-- Sex
+						defining_code matches {[ac1]}		-- Sex (synthesised)
 					}
 				}
 			}
@@ -154,8 +154,8 @@ terminology
 				description = <"Sex of individual is not able to be determined.">
 			>
 			["ac1"] = <
-				text = <"Sex">
-				description = <"Biological sex of the individual.">
+				text = <"Sex (synthesised)">
+				description = <"Biological sex of the individual. (synthesised)">
 			>
 		>
 		["de"] = <
@@ -212,8 +212,8 @@ terminology
 				description = <"**(en)">
 			>
 			["ac1"] = <
-				text = <"*Sex(en)">
-				description = <"*Biological sex of the individual.(en)">
+				text = <"*Sex (synthesised)(en)">
+				description = <"*Biological sex of the individual. (synthesised)(en)">
 			>
 		>
 	>

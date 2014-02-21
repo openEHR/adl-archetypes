@@ -229,7 +229,7 @@ definition
 									ELEMENT[id31] occurrences matches {0..1} matches {	-- Body exposure
 										value matches {
 											DV_CODED_TEXT[id62] matches {
-												defining_code matches {[ac1; at34]}		-- Body exposure
+												defining_code matches {[ac1; at34]}		-- Body exposure (synthesised)
 											}
 										}
 									}
@@ -263,7 +263,7 @@ definition
 					ELEMENT[id22] occurrences matches {0..1} matches {	-- Site of measurement
 						value matches {
 							DV_CODED_TEXT[id64] matches {
-								defining_code matches {[ac2]}		-- Site of measurement
+								defining_code matches {[ac2]}		-- Site of measurement (synthesised)
 							}
 						}
 					}
@@ -384,12 +384,12 @@ terminology
 				description = <"Details about the device use to measure body temperature.">
 			>
 			["ac1"] = <
-				text = <"Body exposure">
-				description = <"The thermal situation of the person who is having the temperature taken.">
+				text = <"Body exposure (synthesised)">
+				description = <"The thermal situation of the person who is having the temperature taken. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Site of measurement">
-				description = <"The anatomical site of measurement of the temperature.">
+				text = <"Site of measurement (synthesised)">
+				description = <"The anatomical site of measurement of the temperature. (synthesised)">
 			>
 			["at57"] = <
 				text = <"Temperature">
@@ -502,12 +502,12 @@ terminology
 				description = <"Details über das Gerät, das zur Temperaturmessung benutzt wurde.">
 			>
 			["ac1"] = <
-				text = <"*Body exposure(en)">
-				description = <"*The thermal situation of the person who is having the temperature taken.(en)">
+				text = <"*Body exposure (synthesised)(en)">
+				description = <"*The thermal situation of the person who is having the temperature taken. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Site of measurement(en)">
-				description = <"*The anatomical site of measurement of the temperature.(en)">
+				text = <"*Site of measurement (synthesised)(en)">
+				description = <"*The anatomical site of measurement of the temperature. (synthesised)(en)">
 			>
 			["at57"] = <
 				text = <"*Temperature (en)">
@@ -620,12 +620,12 @@ terminology
 				description = <"Detalhes sobre o dispositivo utilizado para medir a temperatura corporal.">
 			>
 			["ac1"] = <
-				text = <"*Body exposure(en)">
-				description = <"*The thermal situation of the person who is having the temperature taken.(en)">
+				text = <"*Body exposure (synthesised)(en)">
+				description = <"*The thermal situation of the person who is having the temperature taken. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Site of measurement(en)">
-				description = <"*The anatomical site of measurement of the temperature.(en)">
+				text = <"*Site of measurement (synthesised)(en)">
+				description = <"*The anatomical site of measurement of the temperature. (synthesised)(en)">
 			>
 			["at57"] = <
 				text = <"*Temperature (en)">
@@ -738,12 +738,12 @@ terminology
 				description = <"Информация об устройстве, используемом для измерения температуры тела.">
 			>
 			["ac1"] = <
-				text = <"*Body exposure(en)">
-				description = <"*The thermal situation of the person who is having the temperature taken.(en)">
+				text = <"*Body exposure (synthesised)(en)">
+				description = <"*The thermal situation of the person who is having the temperature taken. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Site of measurement(en)">
-				description = <"*The anatomical site of measurement of the temperature.(en)">
+				text = <"*Site of measurement (synthesised)(en)">
+				description = <"*The anatomical site of measurement of the temperature. (synthesised)(en)">
 			>
 			["at57"] = <
 				text = <"*Temperature (en)">
@@ -856,12 +856,12 @@ terminology
 				description = <"Detalles sobre el dispositivo usado para medir la temperatura corporal.">
 			>
 			["ac1"] = <
-				text = <"*Body exposure(en)">
-				description = <"*The thermal situation of the person who is having the temperature taken.(en)">
+				text = <"*Body exposure (synthesised)(en)">
+				description = <"*The thermal situation of the person who is having the temperature taken. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Site of measurement(en)">
-				description = <"*The anatomical site of measurement of the temperature.(en)">
+				text = <"*Site of measurement (synthesised)(en)">
+				description = <"*The anatomical site of measurement of the temperature. (synthesised)(en)">
 			>
 			["at57"] = <
 				text = <"*Temperature (en)">
@@ -974,12 +974,12 @@ terminology
 				description = <"Detaljer om måleinstrument som ble brukt til å måle temperaturen">
 			>
 			["ac1"] = <
-				text = <"*Body exposure(en)">
-				description = <"*The thermal situation of the person who is having the temperature taken.(en)">
+				text = <"*Body exposure (synthesised)(en)">
+				description = <"*The thermal situation of the person who is having the temperature taken. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Site of measurement(en)">
-				description = <"*The anatomical site of measurement of the temperature.(en)">
+				text = <"*Site of measurement (synthesised)(en)">
+				description = <"*The anatomical site of measurement of the temperature. (synthesised)(en)">
 			>
 			["at57"] = <
 				text = <"*Temperature (en)">
@@ -1092,12 +1092,12 @@ terminology
 				description = <"تفاصيل حول الجهيزة المستخدمة لقياس درجة حرارة الجسم">
 			>
 			["ac1"] = <
-				text = <"*Body exposure(en)">
-				description = <"*The thermal situation of the person who is having the temperature taken.(en)">
+				text = <"*Body exposure (synthesised)(en)">
+				description = <"*The thermal situation of the person who is having the temperature taken. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Site of measurement(en)">
-				description = <"*The anatomical site of measurement of the temperature.(en)">
+				text = <"*Site of measurement (synthesised)(en)">
+				description = <"*The anatomical site of measurement of the temperature. (synthesised)(en)">
 			>
 			["at57"] = <
 				text = <"*Temperature (en)">
@@ -1211,12 +1211,12 @@ terminology
 				description = <"جزییاتی در موردتجهیزات استفاده شده در اندازه گیری دمای بدن">
 			>
 			["ac1"] = <
-				text = <"*Body exposure(en)">
-				description = <"*The thermal situation of the person who is having the temperature taken.(en)">
+				text = <"*Body exposure (synthesised)(en)">
+				description = <"*The thermal situation of the person who is having the temperature taken. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Site of measurement(en)">
-				description = <"*The anatomical site of measurement of the temperature.(en)">
+				text = <"*Site of measurement (synthesised)(en)">
+				description = <"*The anatomical site of measurement of the temperature. (synthesised)(en)">
 			>
 			["at57"] = <
 				text = <"*Temperature (en)">
@@ -1329,12 +1329,12 @@ terminology
 				description = <"Detalles sobre el dispositivo usado para medir la temperatura corporal.">
 			>
 			["ac1"] = <
-				text = <"*Body exposure(en)">
-				description = <"*The thermal situation of the person who is having the temperature taken.(en)">
+				text = <"*Body exposure (synthesised)(en)">
+				description = <"*The thermal situation of the person who is having the temperature taken. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Site of measurement(en)">
-				description = <"*The anatomical site of measurement of the temperature.(en)">
+				text = <"*Site of measurement (synthesised)(en)">
+				description = <"*The anatomical site of measurement of the temperature. (synthesised)(en)">
 			>
 			["at57"] = <
 				text = <"*Temperature (en)">

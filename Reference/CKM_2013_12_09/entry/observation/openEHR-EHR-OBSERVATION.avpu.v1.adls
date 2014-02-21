@@ -42,7 +42,7 @@ definition
 									ELEMENT[id5] occurrences matches {0..1} matches {	-- AVPU Observation
 										value matches {
 											DV_CODED_TEXT[id6] matches {
-												defining_code matches {[ac1]}		-- AVPU Observation
+												defining_code matches {[ac1]}		-- AVPU Observation (synthesised)
 											}
 										}
 									}
@@ -87,8 +87,8 @@ terminology
 				description = <"The patient does not respond in any way to voice or pain stimuli.">
 			>
 			["ac1"] = <
-				text = <"AVPU Observation">
-				description = <"The observation of the patient's responsiveness.">
+				text = <"AVPU Observation (synthesised)">
+				description = <"The observation of the patient's responsiveness. (synthesised)">
 			>
 		>
 	>

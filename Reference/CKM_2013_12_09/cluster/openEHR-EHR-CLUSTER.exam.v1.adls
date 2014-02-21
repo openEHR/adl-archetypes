@@ -56,7 +56,7 @@ definition
 			ELEMENT[id7] occurrences matches {0..*} matches {	-- Image
 				value matches {
 					DV_MULTIMEDIA[id13] matches {
-						media_type matches {[ac1]}		-- Image
+						media_type matches {[ac1]}		-- Image (synthesised)
 					}
 				}
 			}
@@ -95,8 +95,8 @@ terminology
 				description = <"More focused examination findings.">
 			>
 			["ac1"] = <
-				text = <"Image">
-				description = <"Drawing or image of the area examined.">
+				text = <"Image (synthesised)">
+				description = <"Drawing or image of the area examined. (synthesised)">
 			>
 			["at1"] = <
 				text = <"image/gif">

@@ -51,7 +51,7 @@ definition
 		/data[id2]/items[id5]/items[id3]/items matches {
 			ELEMENT[id4] occurrences matches {1..*} matches {
 				value matches {
-					DV_TEXT[id0.10] 
+					DV_TEXT[id0.1] 
 				}
 			}
 		}

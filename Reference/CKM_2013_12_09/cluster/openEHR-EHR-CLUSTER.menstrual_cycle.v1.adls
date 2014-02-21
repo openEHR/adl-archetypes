@@ -59,7 +59,7 @@ definition
 							ELEMENT[id24] occurrences matches {0..1} matches {	-- Relative duration of cycle
 								value matches {
 									DV_CODED_TEXT[id68] matches {
-										defining_code matches {[ac1]}		-- Relative duration of cycle
+										defining_code matches {[ac1]}		-- Relative duration of cycle (synthesised)
 									}
 								}
 							}
@@ -90,7 +90,7 @@ definition
 									ELEMENT[id36] occurrences matches {0..1} matches {	-- Relative Description
 										value matches {
 											DV_CODED_TEXT[id71] matches {
-												defining_code matches {[ac2]}		-- Relative Description
+												defining_code matches {[ac2]}		-- Relative Description (synthesised)
 											}
 										}
 									}
@@ -118,7 +118,7 @@ definition
 											ELEMENT[id18] occurrences matches {0..1} matches {	-- Duration of menstruation
 												value matches {
 													DV_QUANTITY[id75] matches {
-														property matches {[at58]}
+														property matches {[at57]}
 														[magnitude, units, precision] matches {
 															[{|>=0.0|}, {"d"}, {0}],
 															[{|>=0.0|}, {"wk"}, {0}]
@@ -129,7 +129,7 @@ definition
 											ELEMENT[id33] occurrences matches {0..1} matches {	-- Relative duration of menstruation
 												value matches {
 													DV_CODED_TEXT[id76] matches {
-														defining_code matches {[ac3]}		-- Relative duration of menstruation
+														defining_code matches {[ac3]}		-- Relative duration of menstruation (synthesised)
 													}
 												}
 											}
@@ -140,7 +140,7 @@ definition
 											ELEMENT[id48] occurrences matches {0..*} matches {	-- Type of Sanitary product
 												value matches {
 													DV_CODED_TEXT[id77] matches {
-														defining_code matches {[ac4]}		-- Type of Sanitary product
+														defining_code matches {[ac4]}		-- Type of Sanitary product (synthesised)
 													}
 												}
 											}
@@ -342,26 +342,22 @@ terminology
 				description = <"Number of days since onset of last period.">
 			>
 			["ac1"] = <
-				text = <"Relative duration of cycle">
-				description = <"Description of the relative duration of menstrual cycle.">
+				text = <"Relative duration of cycle (synthesised)">
+				description = <"Description of the relative duration of menstrual cycle. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Relative Description">
-				description = <"Relative description of menstrual blood flow.">
+				text = <"Relative Description (synthesised)">
+				description = <"Relative description of menstrual blood flow. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Relative duration of menstruation">
-				description = <"Relative duration of menstruation.">
+				text = <"Relative duration of menstruation (synthesised)">
+				description = <"Relative duration of menstruation. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Type of Sanitary product">
-				description = <"Type of sanitary product used.">
+				text = <"Type of Sanitary product (synthesised)">
+				description = <"Type of sanitary product used. (synthesised)">
 			>
 			["at57"] = <
-				text = <"Time">
-				description = <"Time">
-			>
-			["at58"] = <
 				text = <"Time">
 				description = <"Time">
 			>
@@ -370,17 +366,16 @@ terminology
 	term_bindings = <
 		["openehr"] = <
 			["at57"] = <http://openehr.org/id/128>
-			["at58"] = <http://openehr.org/id/128>
 		>
 	>
 	value_sets = <
-		["ac1"] = <
-			id = <"ac1">
-			members = <"at25", "at27", "at28", "at29", "at30">
-		>
 		["ac2"] = <
 			id = <"ac2">
 			members = <"at38", "at39", "at40", "at41", "at42", "at43">
+		>
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at25", "at27", "at28", "at29", "at30">
 		>
 		["ac3"] = <
 			id = <"ac3">

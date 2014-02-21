@@ -50,7 +50,7 @@ definition
 		name matches {
 			DV_TEXT[id14] 
 			DV_CODED_TEXT[id15] matches {
-				defining_code matches {[ac1]}		-- *Meio de Comunicação eletrônica(pt-br)
+				defining_code matches {[ac1]}		-- *Meio de Comunicação eletrônica (synthesised)(pt-br)
 			}
 		}
 		details matches {
@@ -60,7 +60,7 @@ definition
 						value matches {
 							DV_TEXT[id16] 
 							DV_CODED_TEXT[id17] matches {
-								defining_code matches {[ac2]}		-- *Forma de utilização(pt-br)
+								defining_code matches {[ac2]}		-- *Forma de utilização (synthesised)(pt-br)
 							}
 						}
 					}
@@ -68,7 +68,7 @@ definition
 						value matches {
 							DV_TEXT[id18] 
 							DV_CODED_TEXT[id19] matches {
-								defining_code matches {[ac3]}		-- *Horário de Utilização(pt-br)
+								defining_code matches {[ac3]}		-- *Horário de Utilização (synthesised)(pt-br)
 							}
 						}
 					}
@@ -175,16 +175,16 @@ terminology
 				description = <"Indica que este meio de comunicação deve ser utilizado durante a noite.">
 			>
 			["ac1"] = <
-				text = <"Meio de Comunicação eletrônica">
-				description = <"Meio de comunicação eletrônica.">
+				text = <"Meio de Comunicação eletrônica (synthesised)">
+				description = <"Meio de comunicação eletrônica. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Forma de utilização">
-				description = <"Um código que representa a forma de uso que uma pessoa/organização faz deste meio de comunicação.">
+				text = <"Forma de utilização (synthesised)">
+				description = <"Um código que representa a forma de uso que uma pessoa/organização faz deste meio de comunicação. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Horário de Utilização">
-				description = <"Uma indicação das preferências de horário de uso para este tipo de contato.">
+				text = <"Horário de Utilização (synthesised)">
+				description = <"Uma indicação das preferências de horário de uso para este tipo de contato. (synthesised)">
 			>
 		>
 		["en"] = <
@@ -277,16 +277,16 @@ terminology
 				description = <"The medium should be used during the evening or at night.">
 			>
 			["ac1"] = <
-				text = <"*Meio de Comunicação eletrônica(pt-br)">
-				description = <"*Meio de comunicação eletrônica.(pt-br)">
+				text = <"*Meio de Comunicação eletrônica (synthesised)(pt-br)">
+				description = <"*Meio de comunicação eletrônica. (synthesised)(pt-br)">
 			>
 			["ac2"] = <
-				text = <"*Forma de utilização(pt-br)">
-				description = <"*Um código que representa a forma de uso que uma pessoa/organização faz deste meio de comunicação.(pt-br)">
+				text = <"*Forma de utilização (synthesised)(pt-br)">
+				description = <"*Um código que representa a forma de uso que uma pessoa/organização faz deste meio de comunicação. (synthesised)(pt-br)">
 			>
 			["ac3"] = <
-				text = <"*Horário de Utilização(pt-br)">
-				description = <"*Uma indicação das preferências de horário de uso para este tipo de contato.(pt-br)">
+				text = <"*Horário de Utilização (synthesised)(pt-br)">
+				description = <"*Uma indicação das preferências de horário de uso para este tipo de contato. (synthesised)(pt-br)">
 			>
 		>
 	>

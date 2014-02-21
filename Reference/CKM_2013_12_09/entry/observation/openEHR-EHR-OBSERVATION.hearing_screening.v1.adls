@@ -64,7 +64,7 @@ definition
 											ELEMENT[id8] matches {	-- Test Ear
 												value matches {
 													DV_CODED_TEXT[id143] matches {
-														defining_code matches {[ac1]}		-- Test Ear
+														defining_code matches {[ac1]}		-- Test Ear (synthesised)
 													}
 												}
 											}
@@ -92,7 +92,7 @@ definition
 													ELEMENT[id138] occurrences matches {0..1} matches {	-- Response
 														value matches {
 															DV_CODED_TEXT[id146] matches {
-																defining_code matches {[ac2]}		-- Response
+																defining_code matches {[ac2]}		-- Response (synthesised)
 															}
 														}
 													}
@@ -115,14 +115,14 @@ definition
 									ELEMENT[id52] occurrences matches {0..1} matches {	-- Screening Outcome
 										value matches {
 											DV_CODED_TEXT[id149] matches {
-												defining_code matches {[ac3]}		-- Screening Outcome
+												defining_code matches {[ac3]}		-- Screening Outcome (synthesised)
 											}
 										}
 									}
 									ELEMENT[id27] occurrences matches {0..1} matches {	-- Test Result Image
 										value matches {
 											DV_MULTIMEDIA[id150] matches {
-												media_type matches {[ac4]}		-- Test Result Image
+												media_type matches {[ac4]}		-- Test Result Image (synthesised)
 											}
 										}
 									}
@@ -140,7 +140,7 @@ definition
 									ELEMENT[id29] occurrences matches {0..1} matches {	-- Sleep Status
 										value matches {
 											DV_CODED_TEXT[id152] matches {
-												defining_code matches {[ac5; at30]}		-- Sleep Status
+												defining_code matches {[ac5; at30]}		-- Sleep Status (synthesised)
 											}
 										}
 									}
@@ -162,14 +162,14 @@ definition
 					ELEMENT[id76] occurrences matches {0..1} matches {	-- Test Environment
 						value matches {
 							DV_CODED_TEXT[id154] matches {
-								defining_code matches {[ac6]}		-- Test Environment
+								defining_code matches {[ac6]}		-- Test Environment (synthesised)
 							}
 						}
 					}
 					ELEMENT[id35] occurrences matches {0..1} matches {	-- Test Stimulus
 						value matches {
 							DV_CODED_TEXT[id155] matches {
-								defining_code matches {[ac7]}		-- Test Stimulus
+								defining_code matches {[ac7]}		-- Test Stimulus (synthesised)
 							}
 						}
 					}
@@ -189,7 +189,7 @@ definition
 					ELEMENT[id90] occurrences matches {0..1} matches {	-- Calibration Reference dB
 						value matches {
 							DV_CODED_TEXT[id157] matches {
-								defining_code matches {[ac8]}		-- Calibration Reference dB
+								defining_code matches {[ac8]}		-- Calibration Reference dB (synthesised)
 							}
 						}
 					}
@@ -198,7 +198,7 @@ definition
 							ELEMENT[id108] occurrences matches {0..1} matches {	-- Screening Frequency
 								value matches {
 									DV_QUANTITY[id158] matches {
-										property matches {[at143]}
+										property matches {[at141]}
 										[magnitude, units, precision] matches {
 											[{|0.125..16.0|}, {"kHz"}, {3}],
 											[{|125.0..16000.0|}, {"Hz"}, {0}]
@@ -209,7 +209,7 @@ definition
 							ELEMENT[id107] occurrences matches {0..1} matches {	-- Screening Level
 								value matches {
 									DV_QUANTITY[id159] matches {
-										property matches {[at144]}
+										property matches {[at142]}
 										magnitude matches {|-10.0..120.0|}
 									}
 								}
@@ -414,36 +414,36 @@ terminology
 				description = <"Description of incidental factors that may be contributing to the screening result.">
 			>
 			["ac1"] = <
-				text = <"Test Ear">
-				description = <"Identification of the ear to which the test stimulus is being presented.">
+				text = <"Test Ear (synthesised)">
+				description = <"Identification of the ear to which the test stimulus is being presented. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Response">
-				description = <"The response of the test subject as a consequence of presentation of the frequency/intensity pair.">
+				text = <"Response (synthesised)">
+				description = <"The response of the test subject as a consequence of presentation of the frequency/intensity pair. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Screening Outcome">
-				description = <"Overall result of screening.">
+				text = <"Screening Outcome (synthesised)">
+				description = <"Overall result of screening. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Test Result Image">
-				description = <"Digital representation of the entire result.">
+				text = <"Test Result Image (synthesised)">
+				description = <"Digital representation of the entire result. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Sleep Status">
-				description = <"The status of the subject during testing.">
+				text = <"Sleep Status (synthesised)">
+				description = <"The status of the subject during testing. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Test Environment">
-				description = <"The space and conditions in which the screening test is administered.">
+				text = <"Test Environment (synthesised)">
+				description = <"The space and conditions in which the screening test is administered. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Test Stimulus">
-				description = <"Identification of the frequency-specific stimulus used in screening.">
+				text = <"Test Stimulus (synthesised)">
+				description = <"Identification of the frequency-specific stimulus used in screening. (synthesised)">
 			>
 			["ac8"] = <
-				text = <"Calibration Reference dB">
-				description = <"Scale used for acoustic calibration check.">
+				text = <"Calibration Reference dB (synthesised)">
+				description = <"Scale used for acoustic calibration check. (synthesised)">
 			>
 			["at141"] = <
 				text = <"Frequency">
@@ -454,30 +454,22 @@ terminology
 				description = <"Loudness">
 			>
 			["at143"] = <
-				text = <"Frequency">
-				description = <"Frequency">
-			>
-			["at144"] = <
-				text = <"Loudness">
-				description = <"Loudness">
-			>
-			["at145"] = <
 				text = <"image/cgm">
 				description = <"image/cgm">
 			>
-			["at146"] = <
+			["at144"] = <
 				text = <"image/gif">
 				description = <"image/gif">
 			>
-			["at147"] = <
+			["at145"] = <
 				text = <"image/png">
 				description = <"image/png">
 			>
-			["at148"] = <
+			["at146"] = <
 				text = <"image/tiff">
 				description = <"image/tiff">
 			>
-			["at149"] = <
+			["at147"] = <
 				text = <"image/jpeg">
 				description = <"image/jpeg">
 			>
@@ -487,13 +479,11 @@ terminology
 		["openehr"] = <
 			["at141"] = <http://openehr.org/id/382>
 			["at142"] = <http://openehr.org/id/123>
-			["at143"] = <http://openehr.org/id/382>
-			["at144"] = <http://openehr.org/id/123>
-			["at145"] = <http://openehr.org/id/425>
-			["at146"] = <http://openehr.org/id/426>
-			["at147"] = <http://openehr.org/id/427>
-			["at148"] = <http://openehr.org/id/428>
-			["at149"] = <http://openehr.org/id/429>
+			["at143"] = <http://openehr.org/id/425>
+			["at144"] = <http://openehr.org/id/426>
+			["at145"] = <http://openehr.org/id/427>
+			["at146"] = <http://openehr.org/id/428>
+			["at147"] = <http://openehr.org/id/429>
 		>
 	>
 	value_sets = <
@@ -511,7 +501,7 @@ terminology
 		>
 		["ac4"] = <
 			id = <"ac4">
-			members = <"at145", "at146", "at147", "at148", "at149">
+			members = <"at143", "at144", "at145", "at146", "at147">
 		>
 		["ac5"] = <
 			id = <"ac5">

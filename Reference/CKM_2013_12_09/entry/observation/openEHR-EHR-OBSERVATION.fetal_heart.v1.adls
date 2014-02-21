@@ -86,7 +86,7 @@ definition
 									ELEMENT[id13] occurrences matches {0..1} matches {	-- Position of Mother
 										value matches {
 											DV_CODED_TEXT[id28] matches {
-												defining_code matches {[ac1]}		-- Position of Mother
+												defining_code matches {[ac1]}		-- Position of Mother (synthesised)
 											}
 										}
 									}
@@ -174,8 +174,8 @@ terminology
 				description = <"Details about the device used to detect the fetal heart rate. For example, Pinard's stethoscope or Doppler Ultrasound.">
 			>
 			["ac1"] = <
-				text = <"Position of Mother">
-				description = <"The position of the mother when the fetal heart rate was measured.">
+				text = <"Position of Mother (synthesised)">
+				description = <"The position of the mother when the fetal heart rate was measured. (synthesised)">
 			>
 			["at19"] = <
 				text = <"foetus">

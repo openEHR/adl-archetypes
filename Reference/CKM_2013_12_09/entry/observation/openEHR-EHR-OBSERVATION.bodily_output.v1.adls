@@ -105,7 +105,7 @@ definition
 					ELEMENT[id32] occurrences matches {0..1} matches {	-- Measurement precision
 						value matches {
 							DV_CODED_TEXT[id47] matches {
-								defining_code matches {[ac1]}		-- Measurement precision
+								defining_code matches {[ac1]}		-- Measurement precision (synthesised)
 							}
 						}
 					}
@@ -194,8 +194,8 @@ terminology
 				description = <"Description of  any difficulty voiding.">
 			>
 			["ac1"] = <
-				text = <"Measurement precision">
-				description = <"Records the level of precision of the fluid output observation.">
+				text = <"Measurement precision (synthesised)">
+				description = <"Records the level of precision of the fluid output observation. (synthesised)">
 			>
 			["at22"] = <
 				text = <"total">

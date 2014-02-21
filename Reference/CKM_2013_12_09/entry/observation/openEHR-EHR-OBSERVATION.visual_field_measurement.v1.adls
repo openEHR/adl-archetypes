@@ -62,14 +62,14 @@ definition
 											ELEMENT[id9] occurrences matches {0..1} matches {	-- Eye
 												value matches {
 													DV_CODED_TEXT[id42] matches {
-														defining_code matches {[ac1]}		-- Eye
+														defining_code matches {[ac1]}		-- Eye (synthesised)
 													}
 												}
 											}
 											ELEMENT[id28] occurrences matches {0..1} matches {	-- Glaucoma Hemifield Test (GHT)
 												value matches {
 													DV_CODED_TEXT[id43] matches {
-														defining_code matches {[ac2]}		-- Glaucoma Hemifield Test (GHT)
+														defining_code matches {[ac2]}		-- Glaucoma Hemifield Test (GHT) (synthesised)
 													}
 												}
 											}
@@ -101,7 +101,7 @@ definition
 											ELEMENT[id36] occurrences matches {0..1} matches {	-- Pattern Standard deviation
 												value matches {
 													DV_QUANTITY[id47] matches {
-														property matches {[at43]}
+														property matches {[at42]}
 														magnitude matches {|0.0..25.0|}
 													}
 												}
@@ -122,7 +122,7 @@ definition
 											ELEMENT[id7] occurrences matches {0..1} matches {	-- Image
 												value matches {
 													DV_MULTIMEDIA[id50] matches {
-														media_type matches {[ac3]}		-- Image
+														media_type matches {[ac3]}		-- Image (synthesised)
 													}
 												}
 											}
@@ -166,7 +166,7 @@ definition
 					ELEMENT[id12] occurrences matches {0..1} matches {	-- Perimetry Method
 						value matches {
 							DV_CODED_TEXT[id54] matches {
-								defining_code matches {[ac4]}		-- Perimetry Method
+								defining_code matches {[ac4]}		-- Perimetry Method (synthesised)
 							}
 						}
 					}
@@ -315,46 +315,42 @@ terminology
 				description = <"FASTPAC automated standard perimetry was used to measure the visual fields.">
 			>
 			["ac1"] = <
-				text = <"Eye">
-				description = <"The eye which is being examined.">
+				text = <"Eye (synthesised)">
+				description = <"The eye which is being examined. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Glaucoma Hemifield Test (GHT)">
-				description = <"A coded intepretation of the Glaucoma Hemifield Test (GHT).">
+				text = <"Glaucoma Hemifield Test (GHT) (synthesised)">
+				description = <"A coded intepretation of the Glaucoma Hemifield Test (GHT). (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Image">
-				description = <"A multimedia representaion of the visual field test.">
+				text = <"Image (synthesised)">
+				description = <"A multimedia representaion of the visual field test. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Perimetry Method">
-				description = <"The method used to record the perimetry result.">
+				text = <"Perimetry Method (synthesised)">
+				description = <"The method used to record the perimetry result. (synthesised)">
 			>
 			["at42"] = <
 				text = <"Loudness">
 				description = <"Loudness">
 			>
 			["at43"] = <
-				text = <"Loudness">
-				description = <"Loudness">
-			>
-			["at44"] = <
 				text = <"image/cgm">
 				description = <"image/cgm">
 			>
-			["at45"] = <
+			["at44"] = <
 				text = <"image/gif">
 				description = <"image/gif">
 			>
-			["at46"] = <
+			["at45"] = <
 				text = <"image/png">
 				description = <"image/png">
 			>
-			["at47"] = <
+			["at46"] = <
 				text = <"image/tiff">
 				description = <"image/tiff">
 			>
-			["at48"] = <
+			["at47"] = <
 				text = <"image/jpeg">
 				description = <"image/jpeg">
 			>
@@ -372,12 +368,11 @@ terminology
 		>
 		["openehr"] = <
 			["at42"] = <http://openehr.org/id/123>
-			["at43"] = <http://openehr.org/id/123>
-			["at44"] = <http://openehr.org/id/425>
-			["at45"] = <http://openehr.org/id/426>
-			["at46"] = <http://openehr.org/id/427>
-			["at47"] = <http://openehr.org/id/428>
-			["at48"] = <http://openehr.org/id/429>
+			["at43"] = <http://openehr.org/id/425>
+			["at44"] = <http://openehr.org/id/426>
+			["at45"] = <http://openehr.org/id/427>
+			["at46"] = <http://openehr.org/id/428>
+			["at47"] = <http://openehr.org/id/429>
 		>
 	>
 	value_sets = <
@@ -391,7 +386,7 @@ terminology
 		>
 		["ac3"] = <
 			id = <"ac3">
-			members = <"at44", "at45", "at46", "at47", "at48">
+			members = <"at43", "at44", "at45", "at46", "at47">
 		>
 		["ac4"] = <
 			id = <"ac4">

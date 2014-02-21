@@ -45,28 +45,28 @@ definition
 			ELEMENT[id45] occurrences matches {0..1} matches {	-- Tissue available
 				value matches {
 					DV_CODED_TEXT[id55] matches {
-						defining_code matches {[ac1]}		-- Tissue available
+						defining_code matches {[ac1]}		-- Tissue available (synthesised)
 					}
 				}
 			}
 			ELEMENT[id26] occurrences matches {0..1} matches {	-- Tumour involvement
 				value matches {
 					DV_CODED_TEXT[id56] matches {
-						defining_code matches {[ac2]}		-- Tumour involvement
+						defining_code matches {[ac2]}		-- Tumour involvement (synthesised)
 					}
 				}
 			}
 			ELEMENT[id12] occurrences matches {0..1} matches {	-- Nature of involvement
 				value matches {
 					DV_CODED_TEXT[id57] matches {
-						defining_code matches {[ac3]}		-- Nature of involvement
+						defining_code matches {[ac3]}		-- Nature of involvement (synthesised)
 					}
 				}
 			}
 			ELEMENT[id47] occurrences matches {0..1} matches {	-- Route of involvement
 				value matches {
 					DV_CODED_TEXT[id58] matches {
-						defining_code matches {[ac4]}		-- Route of involvement
+						defining_code matches {[ac4]}		-- Route of involvement (synthesised)
 					}
 				}
 			}
@@ -97,14 +97,14 @@ definition
 					ELEMENT[id35] occurrences matches {0..1} matches {	-- Extra-capsular extension
 						value matches {
 							DV_CODED_TEXT[id62] matches {
-								defining_code matches {[ac5]}		-- Extra-capsular extension
+								defining_code matches {[ac5]}		-- Extra-capsular extension (synthesised)
 							}
 						}
 					}
 					ELEMENT[id15] occurrences matches {0..1} matches {	-- Extent of extranodal tumour
 						value matches {
 							DV_QUANTITY[id63] matches {
-								property matches {[at53]}
+								property matches {[at52]}
 								magnitude matches {|>=0.0|}
 							}
 						}
@@ -130,7 +130,7 @@ definition
 			ELEMENT[id53] occurrences matches {0..1} matches {	-- Radioactivity count
 				value matches {
 					DV_QUANTITY[id66] matches {
-						property matches {[at54]}
+						property matches {[at53]}
 						[magnitude, units, precision] matches {
 							[{|>=0.0|}, {"/s"}, {0}],
 							[{|>=0.0|}, {"/min"}, {0}]
@@ -289,34 +289,30 @@ terminology
 				description = <"Radioactivity count measured after use of radiocolloid. ">
 			>
 			["ac1"] = <
-				text = <"Tissue available">
-				description = <"Has the appropriate lymph node tissue been made available for examination?">
+				text = <"Tissue available (synthesised)">
+				description = <"Has the appropriate lymph node tissue been made available for examination? (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Tumour involvement">
-				description = <"Findings of lymph node involvement with tumour.">
+				text = <"Tumour involvement (synthesised)">
+				description = <"Findings of lymph node involvement with tumour. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Nature of involvement">
-				description = <"Nature or grade of the tumour, if present.">
+				text = <"Nature of involvement (synthesised)">
+				description = <"Nature or grade of the tumour, if present. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Route of involvement">
-				description = <"The route by which the tumour became involved in lymph node tissue.">
+				text = <"Route of involvement (synthesised)">
+				description = <"The route by which the tumour became involved in lymph node tissue. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Extra-capsular extension">
-				description = <"Findings of extension of tumour beyond a node capsule.">
+				text = <"Extra-capsular extension (synthesised)">
+				description = <"Findings of extension of tumour beyond a node capsule. (synthesised)">
 			>
 			["at52"] = <
 				text = <"Length">
 				description = <"Length">
 			>
 			["at53"] = <
-				text = <"Length">
-				description = <"Length">
-			>
-			["at54"] = <
 				text = <"Frequency">
 				description = <"Frequency">
 			>
@@ -325,8 +321,7 @@ terminology
 	term_bindings = <
 		["openehr"] = <
 			["at52"] = <http://openehr.org/id/122>
-			["at53"] = <http://openehr.org/id/122>
-			["at54"] = <http://openehr.org/id/382>
+			["at53"] = <http://openehr.org/id/382>
 		>
 	>
 	value_sets = <

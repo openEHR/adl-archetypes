@@ -46,7 +46,7 @@ definition
 			ELEMENT[id98] occurrences matches {0..1} matches {	-- Ear Examined
 				value matches {
 					DV_CODED_TEXT[id175] matches {
-						defining_code matches {[ac1]}		-- Ear Examined
+						defining_code matches {[ac1]}		-- Ear Examined (synthesised)
 					}
 				}
 			}
@@ -58,21 +58,21 @@ definition
 			ELEMENT[id107] occurrences matches {0..1} matches {	-- Consistency of Wax
 				value matches {
 					DV_CODED_TEXT[id177] matches {
-						defining_code matches {[ac2]}		-- Consistency of Wax
+						defining_code matches {[ac2]}		-- Consistency of Wax (synthesised)
 					}
 				}
 			}
 			ELEMENT[id110] occurrences matches {0..1} matches {	-- State of Wax
 				value matches {
 					DV_CODED_TEXT[id178] matches {
-						defining_code matches {[ac3]}		-- State of Wax
+						defining_code matches {[ac3]}		-- State of Wax (synthesised)
 					}
 				}
 			}
 			ELEMENT[id3] occurrences matches {0..1} matches {	-- View of Tympanic Membrane
 				value matches {
 					DV_CODED_TEXT[id179] matches {
-						defining_code matches {[ac4]}		-- View of Tympanic Membrane
+						defining_code matches {[ac4]}		-- View of Tympanic Membrane (synthesised)
 					}
 				}
 			}
@@ -84,42 +84,42 @@ definition
 			ELEMENT[id140] occurrences matches {0..1} matches {	-- Tenderness of Canal
 				value matches {
 					DV_CODED_TEXT[id181] matches {
-						defining_code matches {[ac5]}		-- Tenderness of Canal
+						defining_code matches {[ac5]}		-- Tenderness of Canal (synthesised)
 					}
 				}
 			}
 			ELEMENT[id133] occurrences matches {0..1} matches {	-- Oedema of Canal
 				value matches {
 					DV_CODED_TEXT[id182] matches {
-						defining_code matches {[ac6]}		-- Oedema of Canal
+						defining_code matches {[ac6]}		-- Oedema of Canal (synthesised)
 					}
 				}
 			}
 			ELEMENT[id125] occurrences matches {0..1} matches {	-- Erythema of Canal
 				value matches {
 					DV_CODED_TEXT[id183] matches {
-						defining_code matches {[ac7]}		-- Erythema of Canal
+						defining_code matches {[ac7]}		-- Erythema of Canal (synthesised)
 					}
 				}
 			}
 			ELEMENT[id144] occurrences matches {0..1} matches {	-- Offensive Odour
 				value matches {
 					DV_CODED_TEXT[id184] matches {
-						defining_code matches {[ac8]}		-- Offensive Odour
+						defining_code matches {[ac8]}		-- Offensive Odour (synthesised)
 					}
 				}
 			}
 			ELEMENT[id158] occurrences matches {0..1} matches {	-- Discharge Type
 				value matches {
 					DV_CODED_TEXT[id185] matches {
-						defining_code matches {[ac9]}		-- Discharge Type
+						defining_code matches {[ac9]}		-- Discharge Type (synthesised)
 					}
 				}
 			}
 			ELEMENT[id152] occurrences matches {0..1} matches {	-- Discharge Amount
 				value matches {
 					DV_CODED_TEXT[id186] matches {
-						defining_code matches {[ac10]}		-- Discharge Amount
+						defining_code matches {[ac10]}		-- Discharge Amount (synthesised)
 					}
 				}
 			}
@@ -131,7 +131,7 @@ definition
 			ELEMENT[id167] occurrences matches {0..1} matches {	-- Ventilation Tube Position
 				value matches {
 					DV_CODED_TEXT[id188] matches {
-						defining_code matches {[ac11]}		-- Ventilation Tube Position
+						defining_code matches {[ac11]}		-- Ventilation Tube Position (synthesised)
 					}
 				}
 			}
@@ -140,28 +140,28 @@ definition
 					ELEMENT[id113] occurrences matches {0..1} matches {	-- Polyps
 						value matches {
 							DV_CODED_TEXT[id189] matches {
-								defining_code matches {[ac12]}		-- Polyps
+								defining_code matches {[ac12]}		-- Polyps (synthesised)
 							}
 						}
 					}
 					ELEMENT[id148] occurrences matches {0..1} matches {	-- Fungal Spores
 						value matches {
 							DV_CODED_TEXT[id190] matches {
-								defining_code matches {[ac13]}		-- Fungal Spores
+								defining_code matches {[ac13]}		-- Fungal Spores (synthesised)
 							}
 						}
 					}
 					ELEMENT[id160] occurrences matches {0..1} matches {	-- Foreign Body
 						value matches {
 							DV_CODED_TEXT[id191] matches {
-								defining_code matches {[ac14]}		-- Foreign Body
+								defining_code matches {[ac14]}		-- Foreign Body (synthesised)
 							}
 						}
 					}
 					ELEMENT[id164] occurrences matches {0..1} matches {	-- Location of Foreign Body
 						value matches {
 							DV_CODED_TEXT[id192] matches {
-								defining_code matches {[ac15]}		-- Location of Foreign Body
+								defining_code matches {[ac15]}		-- Location of Foreign Body (synthesised)
 							}
 						}
 					}
@@ -172,33 +172,33 @@ definition
 					ELEMENT[id8] occurrences matches {0..1} matches {	-- Membrane Intact?
 						value matches {
 							DV_CODED_TEXT[id193] matches {
-								defining_code matches {[ac16]}		-- Membrane Intact?
+								defining_code matches {[ac16]}		-- Membrane Intact? (synthesised)
 							}
 						}
 						null_flavour matches {
 							DV_CODED_TEXT[id194] matches {
-								defining_code matches {[ac17]}		-- Membrane Intact?
+								defining_code matches {[ac17]}		-- Membrane Intact? (synthesised)
 							}
 						}
 					}
 					ELEMENT[id19] occurrences matches {0..1} matches {	-- Appearance
 						value matches {
 							DV_CODED_TEXT[id195] matches {
-								defining_code matches {[ac18]}		-- Appearance
+								defining_code matches {[ac18]}		-- Appearance (synthesised)
 							}
 						}
 					}
 					ELEMENT[id12] occurrences matches {0..1} matches {	-- Normal Light Reflex
 						value matches {
 							DV_CODED_TEXT[id196] matches {
-								defining_code matches {[ac19]}		-- Normal Light Reflex
+								defining_code matches {[ac19]}		-- Normal Light Reflex (synthesised)
 							}
 						}
 					}
 					ELEMENT[id23] occurrences matches {0..*} matches {	-- Surface Features
 						value matches {
 							DV_CODED_TEXT[id197] matches {
-								defining_code matches {[ac20]}		-- Surface Features
+								defining_code matches {[ac20]}		-- Surface Features (synthesised)
 							}
 						}
 					}
@@ -249,7 +249,7 @@ definition
 					ELEMENT[id36] occurrences matches {0..1} matches {	-- Position of Tympanic Membrane
 						value matches {
 							DV_CODED_TEXT[id206] matches {
-								defining_code matches {[ac21]}		-- Position of Tympanic Membrane
+								defining_code matches {[ac21]}		-- Position of Tympanic Membrane (synthesised)
 							}
 						}
 					}
@@ -265,7 +265,7 @@ definition
 					ELEMENT[id49] occurrences matches {0..1} matches {	-- Fluid Level Presence
 						value matches {
 							DV_CODED_TEXT[id208] matches {
-								defining_code matches {[ac22]}		-- Fluid Level Presence
+								defining_code matches {[ac22]}		-- Fluid Level Presence (synthesised)
 							}
 						}
 					}
@@ -277,7 +277,7 @@ definition
 					ELEMENT[id53] occurrences matches {0..1} matches {	-- Mobility
 						value matches {
 							DV_CODED_TEXT[id210] matches {
-								defining_code matches {[ac23]}		-- Mobility
+								defining_code matches {[ac23]}		-- Mobility (synthesised)
 							}
 						}
 					}
@@ -286,7 +286,7 @@ definition
 							ELEMENT[id66] occurrences matches {0..1} matches {	-- Estimation of Size
 								value matches {
 									DV_CODED_TEXT[id211] matches {
-										defining_code matches {[ac24]}		-- Estimation of Size
+										defining_code matches {[ac24]}		-- Estimation of Size (synthesised)
 									}
 								}
 							}
@@ -297,21 +297,21 @@ definition
 							ELEMENT[id75] occurrences matches {0..1} matches {	-- Region
 								value matches {
 									DV_CODED_TEXT[id212] matches {
-										defining_code matches {[ac25]}		-- Region
+										defining_code matches {[ac25]}		-- Region (synthesised)
 									}
 								}
 							}
 							ELEMENT[id72] occurrences matches {0..1} matches {	-- Marginal?
 								value matches {
 									DV_CODED_TEXT[id213] matches {
-										defining_code matches {[ac26]}		-- Marginal?
+										defining_code matches {[ac26]}		-- Marginal? (synthesised)
 									}
 								}
 							}
 							ELEMENT[id77] occurrences matches {0..1} matches {	-- Anterior?
 								value matches {
 									DV_CODED_TEXT[id214] matches {
-										defining_code matches {[ac27]}		-- Anterior?
+										defining_code matches {[ac27]}		-- Anterior? (synthesised)
 									}
 								}
 							}
@@ -327,7 +327,7 @@ definition
 			ELEMENT[id173] occurrences matches {0..*} matches {	-- Image
 				value matches {
 					DV_MULTIMEDIA[id216] matches {
-						media_type matches {[ac28]}		-- Image
+						media_type matches {[ac28]}		-- Image (synthesised)
 					}
 				}
 			}
@@ -833,116 +833,116 @@ terminology
 				description = <"It is not possible to tell if the tympanic membrane is intact or perforated.">
 			>
 			["ac1"] = <
-				text = <"Ear Examined">
-				description = <"Identification of the ear under examination.">
+				text = <"Ear Examined (synthesised)">
+				description = <"Identification of the ear under examination. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Consistency of Wax">
-				description = <"Description of the type of wax in the external auditory canal.">
+				text = <"Consistency of Wax (synthesised)">
+				description = <"Description of the type of wax in the external auditory canal. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"State of Wax">
-				description = <"Description of the state of the wax observed in the external auditory canal.">
+				text = <"State of Wax (synthesised)">
+				description = <"Description of the state of the wax observed in the external auditory canal. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"View of Tympanic Membrane">
-				description = <"View of the tympanic membrane.">
+				text = <"View of Tympanic Membrane (synthesised)">
+				description = <"View of the tympanic membrane. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Tenderness of Canal">
-				description = <"Presence of tenderness in the external auditory canal.">
+				text = <"Tenderness of Canal (synthesised)">
+				description = <"Presence of tenderness in the external auditory canal. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Oedema of Canal">
-				description = <"Presence of oedema in the external auditory canal.">
+				text = <"Oedema of Canal (synthesised)">
+				description = <"Presence of oedema in the external auditory canal. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Erythema of Canal">
-				description = <"Presence of erythema or redness in the external auditory canal.">
+				text = <"Erythema of Canal (synthesised)">
+				description = <"Presence of erythema or redness in the external auditory canal. (synthesised)">
 			>
 			["ac8"] = <
-				text = <"Offensive Odour">
-				description = <"Presence of any offensive odour originating from the external auditory canal.">
+				text = <"Offensive Odour (synthesised)">
+				description = <"Presence of any offensive odour originating from the external auditory canal. (synthesised)">
 			>
 			["ac9"] = <
-				text = <"Discharge Type">
-				description = <"Type of discharge observed in the external auditory canal or at the tympanic membrane perforation.">
+				text = <"Discharge Type (synthesised)">
+				description = <"Type of discharge observed in the external auditory canal or at the tympanic membrane perforation. (synthesised)">
 			>
 			["ac10"] = <
-				text = <"Discharge Amount">
-				description = <"Amount of discharge observed in the external auditory canal or at the tympanic membrane perforation.">
+				text = <"Discharge Amount (synthesised)">
+				description = <"Amount of discharge observed in the external auditory canal or at the tympanic membrane perforation. (synthesised)">
 			>
 			["ac11"] = <
-				text = <"Ventilation Tube Position">
-				description = <"Observed position of the ventilation tube (or grommet) in the tympanic membrane or the auditory canal.">
+				text = <"Ventilation Tube Position (synthesised)">
+				description = <"Observed position of the ventilation tube (or grommet) in the tympanic membrane or the auditory canal. (synthesised)">
 			>
 			["ac12"] = <
-				text = <"Polyps">
-				description = <"Presence of polyp/polyps in the external auditory canal.">
+				text = <"Polyps (synthesised)">
+				description = <"Presence of polyp/polyps in the external auditory canal. (synthesised)">
 			>
 			["ac13"] = <
-				text = <"Fungal Spores">
-				description = <"Presence of fungal spores in the external auditory canal.">
+				text = <"Fungal Spores (synthesised)">
+				description = <"Presence of fungal spores in the external auditory canal. (synthesised)">
 			>
 			["ac14"] = <
-				text = <"Foreign Body">
-				description = <"Presence of a foreign body in the external auditory canal.">
+				text = <"Foreign Body (synthesised)">
+				description = <"Presence of a foreign body in the external auditory canal. (synthesised)">
 			>
 			["ac15"] = <
-				text = <"Location of Foreign Body">
-				description = <"Location of the foreign body within the external auditory canal.">
+				text = <"Location of Foreign Body (synthesised)">
+				description = <"Location of the foreign body within the external auditory canal. (synthesised)">
 			>
 			["ac16"] = <
-				text = <"Membrane Intact?">
-				description = <"Is the tympanic membrane intact?">
+				text = <"Membrane Intact? (synthesised)">
+				description = <"Is the tympanic membrane intact? (synthesised)">
 			>
 			["ac17"] = <
-				text = <"Membrane Intact?">
-				description = <"Is the tympanic membrane intact?">
+				text = <"Membrane Intact? (synthesised)">
+				description = <"Is the tympanic membrane intact? (synthesised)">
 			>
 			["ac18"] = <
-				text = <"Appearance">
-				description = <"Category describing the appearance of the tympanic membrane.">
+				text = <"Appearance (synthesised)">
+				description = <"Category describing the appearance of the tympanic membrane. (synthesised)">
 			>
 			["ac19"] = <
-				text = <"Normal Light Reflex">
-				description = <"Presence of a normal light reflex noted.">
+				text = <"Normal Light Reflex (synthesised)">
+				description = <"Presence of a normal light reflex noted. (synthesised)">
 			>
 			["ac20"] = <
-				text = <"Surface Features">
-				description = <"Features observed on the surface of the tympanic membrane.">
+				text = <"Surface Features (synthesised)">
+				description = <"Features observed on the surface of the tympanic membrane. (synthesised)">
 			>
 			["ac21"] = <
-				text = <"Position of Tympanic Membrane">
-				description = <"Description of the position of the tympanic membrane.">
+				text = <"Position of Tympanic Membrane (synthesised)">
+				description = <"Description of the position of the tympanic membrane. (synthesised)">
 			>
 			["ac22"] = <
-				text = <"Fluid Level Presence">
-				description = <"Presence of a fluid level behind the tympanic membrane.">
+				text = <"Fluid Level Presence (synthesised)">
+				description = <"Presence of a fluid level behind the tympanic membrane. (synthesised)">
 			>
 			["ac23"] = <
-				text = <"Mobility">
-				description = <"Description of mobility of the tympanic membrane, usually as determined by pneumatic otoscopy.">
+				text = <"Mobility (synthesised)">
+				description = <"Description of mobility of the tympanic membrane, usually as determined by pneumatic otoscopy. (synthesised)">
 			>
 			["ac24"] = <
-				text = <"Estimation of Size">
-				description = <"Estimation of the size of the tympanic membrane perforation, based on anatomical landmarks.">
+				text = <"Estimation of Size (synthesised)">
+				description = <"Estimation of the size of the tympanic membrane perforation, based on anatomical landmarks. (synthesised)">
 			>
 			["ac25"] = <
-				text = <"Region">
-				description = <"Description of the region of the tympanic membrane perforation.">
+				text = <"Region (synthesised)">
+				description = <"Description of the region of the tympanic membrane perforation. (synthesised)">
 			>
 			["ac26"] = <
-				text = <"Marginal?">
-				description = <"Location of the tympanic membrane perforation.">
+				text = <"Marginal? (synthesised)">
+				description = <"Location of the tympanic membrane perforation. (synthesised)">
 			>
 			["ac27"] = <
-				text = <"Anterior?">
-				description = <"Is an anterior perforation present?">
+				text = <"Anterior? (synthesised)">
+				description = <"Is an anterior perforation present? (synthesised)">
 			>
 			["ac28"] = <
-				text = <"Image">
-				description = <"Multimedia image taken during the physical examination of the external auditory canal and tympanic membrane.">
+				text = <"Image (synthesised)">
+				description = <"Multimedia image taken during the physical examination of the external auditory canal and tympanic membrane. (synthesised)">
 			>
 			["at184"] = <
 				text = <"unknown">

@@ -97,7 +97,7 @@ definition
 						value matches {
 							DV_TEXT[id59] 
 							DV_CODED_TEXT[id60] matches {
-								defining_code matches {[ac10]}		-- sexo
+								defining_code matches {[ac10]}		-- sexo (synthesised)
 							}
 						}
 					}
@@ -123,7 +123,7 @@ definition
 						value matches {
 							DV_TEXT[id63] 
 							DV_CODED_TEXT[id64] matches {
-								defining_code matches {[ac11]}		-- Fonte da notificação
+								defining_code matches {[ac11]}		-- Fonte da notificação (synthesised)
 							}
 						}
 					}
@@ -162,7 +162,7 @@ definition
 						value matches {
 							DV_TEXT[id70] 
 							DV_CODED_TEXT[id71] matches {
-								defining_code matches {[ac12]}		-- Tipo
+								defining_code matches {[ac12]}		-- Tipo (synthesised)
 							}
 						}
 					}
@@ -210,7 +210,7 @@ definition
 				value matches {
 					DV_TEXT[id80] 
 					DV_CODED_TEXT[id81] matches {
-						defining_code matches {[ac13]}		-- Gênero
+						defining_code matches {[ac13]}		-- Gênero (synthesised)
 					}
 				}
 			}
@@ -519,20 +519,20 @@ terminology
 				description = <"código válido para a localização do identificador biométrico">
 			>
 			["ac10"] = <
-				text = <"sexo">
-				description = <"sexo da pessoa">
+				text = <"sexo (synthesised)">
+				description = <"sexo da pessoa (synthesised)">
 			>
 			["ac11"] = <
-				text = <"Fonte da notificação">
-				description = <"Um código que informa sobre a fonte de notificação do óbito. Este campo fornece uma indicação da confiabilidade da informação">
+				text = <"Fonte da notificação (synthesised)">
+				description = <"Um código que informa sobre a fonte de notificação do óbito. Este campo fornece uma indicação da confiabilidade da informação (synthesised)">
 			>
 			["ac12"] = <
-				text = <"Tipo">
-				description = <"Tipo do identificador biométrico">
+				text = <"Tipo (synthesised)">
+				description = <"Tipo do identificador biométrico (synthesised)">
 			>
 			["ac13"] = <
-				text = <"Gênero">
-				description = <"O gênero da pessoa">
+				text = <"Gênero (synthesised)">
+				description = <"O gênero da pessoa (synthesised)">
 			>
 		>
 		["en"] = <
@@ -805,20 +805,20 @@ terminology
 				description = <"Valid codes for the biometric localization">
 			>
 			["ac10"] = <
-				text = <"*sexo(pt-br)">
-				description = <"*sexo da pessoa(pt-br)">
+				text = <"*sexo (synthesised)(pt-br)">
+				description = <"*sexo da pessoa (synthesised)(pt-br)">
 			>
 			["ac11"] = <
-				text = <"*Fonte da notificação(pt-br)">
-				description = <"*Um código que informa sobre a fonte de notificação do óbito. Este campo fornece uma indicação da confiabilidade da informação(pt-br)">
+				text = <"*Fonte da notificação (synthesised)(pt-br)">
+				description = <"*Um código que informa sobre a fonte de notificação do óbito. Este campo fornece uma indicação da confiabilidade da informação (synthesised)(pt-br)">
 			>
 			["ac12"] = <
-				text = <"*Tipo(pt-br)">
-				description = <"*Tipo do identificador biométrico(pt-br)">
+				text = <"*Tipo (synthesised)(pt-br)">
+				description = <"*Tipo do identificador biométrico (synthesised)(pt-br)">
 			>
 			["ac13"] = <
-				text = <"*Gênero(pt-br)">
-				description = <"*O gênero da pessoa(pt-br)">
+				text = <"*Gênero (synthesised)(pt-br)">
+				description = <"*O gênero da pessoa (synthesised)(pt-br)">
 			>
 		>
 	>

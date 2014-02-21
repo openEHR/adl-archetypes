@@ -34,20 +34,24 @@ description
 definition
 	INSTRUCTION[id1.1] matches {	-- Referral request
 		/protocol[id9]/items matches {
+			ELEMENT[id11] 
+			ELEMENT[id12] 
+			after [id129]
 			allow_archetype CLUSTER[id0.5] occurrences matches {0..*} matches {	-- Contacts
 				include
 					archetype_id/value matches {/.*/}
 			}
+			before [id113]
 			CLUSTER[id0.2] occurrences matches {0..1} matches {	-- Duration
 				items matches {
 					ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Duration
 						value matches {
-							DV_DURATION[id0.213] 
+							DV_DURATION[id0.6] 
 						}
 					}
 					ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Indefinite
 						value matches {
-							DV_BOOLEAN[id0.214] matches {
+							DV_BOOLEAN[id0.7] matches {
 								value matches {True}
 							}
 						}
@@ -80,15 +84,5 @@ terminology
 				text = <"Referral request">
 				description = <"Request for provision of a specified service by another healthcare provider or organisation.">
 			>
-			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-		>
-	>
-	value_sets = <
-		["ac0.1"] = <
-			id = <"ac0.1">
-			members = <"at137", "at138", "at139">
 		>
 	>

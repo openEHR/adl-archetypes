@@ -118,7 +118,7 @@ definition
 					ELEMENT[id10] occurrences matches {0..1} matches {	-- Method of catchment
 						value matches {
 							DV_CODED_TEXT[id26] matches {
-								defining_code matches {[ac1]}		-- Method of catchment
+								defining_code matches {[ac1]}		-- Method of catchment (synthesised)
 							}
 						}
 					}
@@ -183,8 +183,8 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"Method of catchment">
-				description = <"The method of quantifying urine">
+				text = <"Method of catchment (synthesised)">
+				description = <"The method of quantifying urine (synthesised)">
 			>
 			["at14"] = <
 				text = <"Volume">
@@ -259,8 +259,8 @@ terminology
 				description = <"**(en)">
 			>
 			["ac1"] = <
-				text = <"*Method of catchment(en)">
-				description = <"*The method of quantifying urine(en)">
+				text = <"*Method of catchment (synthesised)(en)">
+				description = <"*The method of quantifying urine (synthesised)(en)">
 			>
 			["at14"] = <
 				text = <"*Volume (en)">

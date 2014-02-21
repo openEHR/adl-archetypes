@@ -29,8 +29,8 @@ description
 definition
 	OBSERVATION[id1.1] matches {	-- Carer observation about hearing of subject
 		/data[id2]/events[id3]/data[id4]/items[id5]/value matches {
-			DV_CODED_TEXT[id0.20] matches {
-				defining_code matches {[ac0.1]}		-- (added by post-parse processor)
+			DV_CODED_TEXT[id16.1] matches {
+				defining_code matches {[ac0.1]}		-- Stimulus (synthesised)
 			}
 		}
 	}
@@ -63,8 +63,8 @@ terminology
 				description = <"Third party observier/carer's observation of subject's hearing">
 			>
 			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Stimulus (synthesised)">
+				description = <"Stimulus triggering the response being observed (synthesised)">
 			>
 		>
 	>

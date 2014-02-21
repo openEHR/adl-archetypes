@@ -42,7 +42,7 @@ definition
 			ELEMENT[id4] occurrences matches {0..1} matches {	-- Status
 				value matches {
 					DV_CODED_TEXT[id10] matches {
-						defining_code matches {[ac1]}		-- Status
+						defining_code matches {[ac1]}		-- Status (synthesised)
 					}
 				}
 			}
@@ -87,9 +87,9 @@ A status of aborted means the patient was associated with the outbreak in error.
 				description = <"Text or coded description of the outbreak identified e.g. Salmonella.">
 			>
 			["ac1"] = <
-				text = <"Status">
+				text = <"Status (synthesised)">
 				description = <"The status of the outbreak association with the subject.  A status of completed means the patient has been associated with the outbreak. 
-A status of aborted means the patient was associated with the outbreak in error.">
+A status of aborted means the patient was associated with the outbreak in error. (synthesised)">
 			>
 		>
 	>

@@ -58,7 +58,7 @@ definition
 			ELEMENT[id6] occurrences matches {0..1} matches {	-- Image Representation
 				value matches {
 					DV_MULTIMEDIA[id10] matches {
-						media_type matches {[ac1]}		-- Image Representation
+						media_type matches {[ac1]}		-- Image Representation (synthesised)
 					}
 				}
 			}
@@ -93,8 +93,8 @@ terminology
 				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the body system or anatomical structure.">
 			>
 			["ac1"] = <
-				text = <"Image Representation">
-				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the body system or anatomical structure.">
+				text = <"Image Representation (synthesised)">
+				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the body system or anatomical structure. (synthesised)">
 			>
 			["at1"] = <
 				text = <"image/cgm">

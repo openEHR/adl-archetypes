@@ -50,7 +50,7 @@ definition
 			ELEMENT[id2] occurrences matches {0..*} matches {	-- sexo
 				value matches {
 					DV_CODED_TEXT[id5] matches {
-						defining_code matches {[ac1]}		-- sexo
+						defining_code matches {[ac1]}		-- sexo (synthesised)
 					}
 				}
 			}
@@ -103,8 +103,8 @@ terminology
 				description = <"Não é para ser usado em formulários de coleta primária. É primariamente usado em coleções administrativas, ao transferir conjuntos de dados onde o item não foi coletado">
 			>
 			["ac1"] = <
-				text = <"sexo">
-				description = <"sexo da pessoa">
+				text = <"sexo (synthesised)">
+				description = <"sexo da pessoa (synthesised)">
 			>
 		>
 		["en"] = <
@@ -141,8 +141,8 @@ terminology
 				description = <"is not to be used on primary collection forms. It is primarily for use in administrative collections when transferring data from data sets where the item has not been collected.">
 			>
 			["ac1"] = <
-				text = <"*sexo(pt-br)">
-				description = <"*sexo da pessoa(pt-br)">
+				text = <"*sexo (synthesised)(pt-br)">
+				description = <"*sexo da pessoa (synthesised)(pt-br)">
 			>
 		>
 	>

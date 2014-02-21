@@ -54,7 +54,7 @@ definition
 			ELEMENT[id47] occurrences matches {0..1} matches {	-- Histopathological grading (G)
 				value matches {
 					DV_CODED_TEXT[id59] matches {
-						defining_code matches {[ac1]}		-- Histopathological grading (G)
+						defining_code matches {[ac1]}		-- Histopathological grading (G) (synthesised)
 					}
 				}
 			}
@@ -153,8 +153,8 @@ terminology
 				description = <"Additional tumour specific TNM descriptor.">
 			>
 			["ac1"] = <
-				text = <"Histopathological grading (G)">
-				description = <"TNM histopathological grading classification. ">
+				text = <"Histopathological grading (G) (synthesised)">
+				description = <"TNM histopathological grading classification.  (synthesised)">
 			>
 		>
 	>

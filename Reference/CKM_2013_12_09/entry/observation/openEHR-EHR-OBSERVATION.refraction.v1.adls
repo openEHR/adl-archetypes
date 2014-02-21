@@ -63,7 +63,7 @@ definition
 											ELEMENT[id56] occurrences matches {0..1} matches {	-- Absent Result
 												value matches {
 													DV_CODED_TEXT[id142] matches {
-														defining_code matches {[ac1]}		-- Absent Result
+														defining_code matches {[ac1]}		-- Absent Result (synthesised)
 													}
 													DV_TEXT[id143] 
 												}
@@ -103,7 +103,7 @@ definition
 									ELEMENT[id43] occurrences matches {0..*} matches {	-- Refractive Correction
 										value matches {
 											DV_CODED_TEXT[id148] matches {
-												defining_code matches {[ac2]}		-- Refractive Correction
+												defining_code matches {[ac2]}		-- Refractive Correction (synthesised)
 											}
 										}
 									}
@@ -206,12 +206,12 @@ terminology
 				description = <"Details of refraction for a single eye.">
 			>
 			["ac1"] = <
-				text = <"Absent Result">
-				description = <"Details of a test result which could not be recorded.">
+				text = <"Absent Result (synthesised)">
+				description = <"Details of a test result which could not be recorded. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Refractive Correction">
-				description = <"The specific type(s) of refractive correction applied.">
+				text = <"Refractive Correction (synthesised)">
+				description = <"The specific type(s) of refractive correction applied. (synthesised)">
 			>
 		>
 	>

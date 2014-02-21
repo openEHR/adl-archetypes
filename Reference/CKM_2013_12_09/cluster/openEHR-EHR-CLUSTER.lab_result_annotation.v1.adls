@@ -60,7 +60,7 @@ definition
 			ELEMENT[id5] occurrences matches {0..1} matches {	-- Result status
 				value matches {
 					DV_CODED_TEXT[id23] matches {
-						defining_code matches {[ac1]}		-- Result status
+						defining_code matches {[ac1]}		-- Result status (synthesised)
 					}
 				}
 			}
@@ -163,8 +163,8 @@ investigation.">
 				description = <"If the result was originally reported in  a separate lab test entry, link to that entry.">
 			>
 			["ac1"] = <
-				text = <"Result status">
-				description = <"The status of an individual lab result.">
+				text = <"Result status (synthesised)">
+				description = <"The status of an individual lab result. (synthesised)">
 			>
 		>
 	>

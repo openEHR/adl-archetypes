@@ -33,9 +33,13 @@ description
 
 definition
 	CLUSTER[id1.1] matches {	-- Tumour - TNM staging Lymphoma  7th Edition
+		items matches {
+			ELEMENT[id4] 
+			ELEMENT[id5] 
+		}
 		/items[id15]/value matches {
-			DV_CODED_TEXT[id0.98] matches {
-				defining_code matches {[ac0.2]}		-- (added by post-parse processor)
+			DV_CODED_TEXT[id62.3] matches {
+				defining_code matches {[ac0.2]}		-- Stage grouping (synthesised)
 			}
 		}
 	}
@@ -63,13 +67,9 @@ terminology
 				text = <"Tumour - TNM staging Lymphoma  7th Edition">
 				description = <"For the classification and grading of prostate cancer using the TNM classification 7th Edition.">
 			>
-			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
 			["ac0.2"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Stage grouping (synthesised)">
+				description = <"The TNM Stage grouping. (synthesised)">
 			>
 		>
 	>
@@ -77,9 +77,5 @@ terminology
 		["ac0.2"] = <
 			id = <"ac0.2">
 			members = <"at0.52", "at0.53", "at0.54", "at0.55">
-		>
-		["ac0.1"] = <
-			id = <"ac0.1">
-			members = <"at48", "at49", "at50", "at51", "at52">
 		>
 	>

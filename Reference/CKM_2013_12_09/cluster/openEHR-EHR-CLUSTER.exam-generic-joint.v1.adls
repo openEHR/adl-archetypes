@@ -65,15 +65,5 @@ terminology
 				text = <"Joint findings">
 				description = <"Clinical findings for a single joint.">
 			>
-			["ac0.0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-		>
-	>
-	value_sets = <
-		["ac0.0.1"] = <
-			id = <"ac0.0.1">
-			members = <"at1", "at2", "at3">
 		>
 	>

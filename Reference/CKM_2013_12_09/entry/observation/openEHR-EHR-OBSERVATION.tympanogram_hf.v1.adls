@@ -90,7 +90,7 @@ definition
 											ELEMENT[id10] matches {	-- Test Ear
 												value matches {
 													DV_CODED_TEXT[id87] matches {
-														defining_code matches {[ac1]}		-- Test Ear
+														defining_code matches {[ac1]}		-- Test Ear (synthesised)
 													}
 												}
 											}
@@ -118,7 +118,7 @@ definition
 													ELEMENT[id75] occurrences matches {0..1} matches {	-- Y+200
 														value matches {
 															DV_QUANTITY[id90] matches {
-																property matches {[at83]}
+																property matches {[at82]}
 																units matches {"mmho"}
 															}
 														}
@@ -126,7 +126,7 @@ definition
 													ELEMENT[id19] occurrences matches {0..1} matches {	-- Ear Canal Volume
 														value matches {
 															DV_QUANTITY[id91] matches {
-																property matches {[at84]}
+																property matches {[at83]}
 																[magnitude, units, precision] matches {
 																	[{|0.0..5.0|}, {"cc"}, {1}],
 																	[{|0.0..5.0|}, {"ml"}, {1}]
@@ -137,7 +137,7 @@ definition
 													ELEMENT[id76] occurrences matches {0..1} matches {	-- Ear Baseline Value
 														value matches {
 															DV_QUANTITY[id92] matches {
-																property matches {[at85]}
+																property matches {[at83]}
 																units matches {"ml", "cc"}
 															}
 														}
@@ -145,7 +145,7 @@ definition
 													ELEMENT[id77] occurrences matches {0..1} matches {	-- Resonant Frequency
 														value matches {
 															DV_QUANTITY[id93] matches {
-																property matches {[at86]}
+																property matches {[at84]}
 																[magnitude, units, precision] matches {
 																	[{|200.0..2000.0|}, {"Hz"}, {0}],
 																	[{|0.2..2.0|}, {"kHz"}, {1}]
@@ -156,7 +156,7 @@ definition
 													ELEMENT[id78] occurrences matches {0..1} matches {	-- F45 Degree
 														value matches {
 															DV_QUANTITY[id94] matches {
-																property matches {[at87]}
+																property matches {[at84]}
 																units matches {"Hz", "kHz"}
 															}
 														}
@@ -164,7 +164,7 @@ definition
 													ELEMENT[id30] occurrences matches {0..1} matches {	-- Tympanometric Width
 														value matches {
 															DV_QUANTITY[id95] matches {
-																property matches {[at88]}
+																property matches {[at81]}
 																magnitude matches {|0.0..400.0|}
 															}
 														}
@@ -172,7 +172,7 @@ definition
 													ELEMENT[id31] occurrences matches {0..1} matches {	-- Tympanometric Gradient
 														value matches {
 															DV_QUANTITY[id96] matches {
-																property matches {[at89]}
+																property matches {[at82]}
 																units matches {"mmho"}
 															}
 															DV_PROPORTION[id97] matches {
@@ -199,14 +199,14 @@ definition
 											ELEMENT[id5] occurrences matches {0..1} matches {	-- Tympanogram Type
 												value matches {
 													DV_CODED_TEXT[id100] matches {
-														defining_code matches {[ac2]}		-- Tympanogram Type
+														defining_code matches {[ac2]}		-- Tympanogram Type (synthesised)
 													}
 												}
 											}
 											ELEMENT[id67] occurrences matches {0..1} matches {	-- Vanhuyse Classification Type
 												value matches {
 													DV_CODED_TEXT[id101] matches {
-														defining_code matches {[ac3]}		-- Vanhuyse Classification Type
+														defining_code matches {[ac3]}		-- Vanhuyse Classification Type (synthesised)
 													}
 												}
 											}
@@ -225,7 +225,7 @@ definition
 									ELEMENT[id21] occurrences matches {0..*} matches {	-- Test Result Image
 										value matches {
 											DV_MULTIMEDIA[id104] matches {
-												media_type matches {[ac4]}		-- Test Result Image
+												media_type matches {[ac4]}		-- Test Result Image (synthesised)
 											}
 										}
 									}
@@ -264,7 +264,7 @@ definition
 							ELEMENT[id81] occurrences matches {0..1} matches {	-- Probe Tone Frequency
 								value matches {
 									DV_QUANTITY[id109] matches {
-										property matches {[at90]}
+										property matches {[at84]}
 										[magnitude, units, precision] matches {
 											[{|200.0..2000.0|}, {"Hz"}, {0}],
 											[{|0.2..2.0|}, {"kHz"}, {1}]
@@ -275,7 +275,7 @@ definition
 							ELEMENT[id47] occurrences matches {0..1} matches {	-- Rate of Pressure Change
 								value matches {
 									DV_QUANTITY[id110] matches {
-										property matches {[at91]}
+										property matches {[at85]}
 										units matches {"daPa/s"}
 									}
 								}
@@ -283,7 +283,7 @@ definition
 							ELEMENT[id52] occurrences matches {0..1} matches {	-- Start Pressure
 								value matches {
 									DV_QUANTITY[id111] matches {
-										property matches {[at92]}
+										property matches {[at81]}
 										magnitude matches {|-600.0..400.0|}
 									}
 								}
@@ -291,7 +291,7 @@ definition
 							ELEMENT[id53] occurrences matches {0..1} matches {	-- Stop Pressure
 								value matches {
 									DV_QUANTITY[id112] matches {
-										property matches {[at93]}
+										property matches {[at81]}
 										magnitude matches {|-600.0..400.0|}
 									}
 								}
@@ -303,7 +303,7 @@ definition
 							ELEMENT[id82] occurrences matches {0..1} matches {	-- Pressure
 								value matches {
 									DV_QUANTITY[id113] matches {
-										property matches {[at94]}
+										property matches {[at81]}
 										[magnitude, units, precision] matches {
 											[{|-600.0..400.0|}, {"daPa"}, {0}],
 											[{|-600.0..400.0|}, {"mm[H20]"}, {|>=0|}]
@@ -314,7 +314,7 @@ definition
 							ELEMENT[id86] occurrences matches {0..1} matches {	-- Rate of Frequency Change
 								value matches {
 									DV_QUANTITY[id114] matches {
-										property matches {[at95]}
+										property matches {[at86]}
 										units matches {"Hz/s"}
 									}
 								}
@@ -322,7 +322,7 @@ definition
 							ELEMENT[id84] occurrences matches {0..1} matches {	-- Start Frequency
 								value matches {
 									DV_QUANTITY[id115] matches {
-										property matches {[at96]}
+										property matches {[at84]}
 										[magnitude, units, precision] matches {
 											[{|200.0..2000.0|}, {"Hz"}, {0}],
 											[{|0.2..2.0|}, {"kHz"}, {1}]
@@ -333,7 +333,7 @@ definition
 							ELEMENT[id85] occurrences matches {0..1} matches {	-- Stop Frequency
 								value matches {
 									DV_QUANTITY[id116] matches {
-										property matches {[at97]}
+										property matches {[at84]}
 										[magnitude, units, precision] matches {
 											[{|200.0..2000.0|}, {"Hz"}, {0}],
 											[{|0.2..2.0|}, {"kHz"}, {1}]
@@ -557,20 +557,20 @@ terminology
 				description = <"*The rate of change of the probe tone frequency used in tympanometry.(en)">
 			>
 			["ac1"] = <
-				text = <"*Test Ear(en)">
-				description = <"*Identification of the ear being tested.(en)">
+				text = <"*Test Ear (synthesised)(en)">
+				description = <"*Identification of the ear being tested. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Tympanogram Type(en)">
-				description = <"*Classification of the the shape of the tympanogram curve.(en)">
+				text = <"*Tympanogram Type (synthesised)(en)">
+				description = <"*Classification of the the shape of the tympanogram curve. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Vanhuyse Classification Type(en)">
-				description = <"*Classification of tympanogram type based on Vanhuyse classification system.(en)">
+				text = <"*Vanhuyse Classification Type (synthesised)(en)">
+				description = <"*Classification of tympanogram type based on Vanhuyse classification system. (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Test Result Image(en)">
-				description = <"*Digital representation of the entire result.(en)">
+				text = <"*Test Result Image (synthesised)(en)">
+				description = <"*Digital representation of the entire result. (synthesised)(en)">
 			>
 			["at81"] = <
 				text = <"*Pressure (en)">
@@ -581,82 +581,38 @@ terminology
 				description = <"*Electrical conductance (en)">
 			>
 			["at83"] = <
-				text = <"*Electrical conductance (en)">
-				description = <"*Electrical conductance (en)">
+				text = <"*Volume (en)">
+				description = <"*Volume (en)">
 			>
 			["at84"] = <
-				text = <"*Volume (en)">
-				description = <"*Volume (en)">
+				text = <"*Frequency (en)">
+				description = <"*Frequency (en)">
 			>
 			["at85"] = <
-				text = <"*Volume (en)">
-				description = <"*Volume (en)">
-			>
-			["at86"] = <
-				text = <"*Frequency (en)">
-				description = <"*Frequency (en)">
-			>
-			["at87"] = <
-				text = <"*Frequency (en)">
-				description = <"*Frequency (en)">
-			>
-			["at88"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at89"] = <
-				text = <"*Electrical conductance (en)">
-				description = <"*Electrical conductance (en)">
-			>
-			["at90"] = <
-				text = <"*Frequency (en)">
-				description = <"*Frequency (en)">
-			>
-			["at91"] = <
 				text = <"*Rate of Change - Pressure (en)">
 				description = <"*Rate of Change - Pressure (en)">
 			>
-			["at92"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at93"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at94"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at95"] = <
+			["at86"] = <
 				text = <"*Rate of Change - Frequency (en)">
 				description = <"*Rate of Change - Frequency (en)">
 			>
-			["at96"] = <
-				text = <"*Frequency (en)">
-				description = <"*Frequency (en)">
-			>
-			["at97"] = <
-				text = <"*Frequency (en)">
-				description = <"*Frequency (en)">
-			>
-			["at98"] = <
+			["at87"] = <
 				text = <"*image/cgm (en)">
 				description = <"*image/cgm (en)">
 			>
-			["at99"] = <
+			["at88"] = <
 				text = <"*image/gif (en)">
 				description = <"*image/gif (en)">
 			>
-			["at100"] = <
+			["at89"] = <
 				text = <"*image/png (en)">
 				description = <"*image/png (en)">
 			>
-			["at101"] = <
+			["at90"] = <
 				text = <"*image/tiff (en)">
 				description = <"*image/tiff (en)">
 			>
-			["at102"] = <
+			["at91"] = <
 				text = <"*image/jpeg (en)">
 				description = <"*image/jpeg (en)">
 			>
@@ -859,20 +815,20 @@ terminology
 				description = <"The rate of change of the probe tone frequency used in tympanometry.">
 			>
 			["ac1"] = <
-				text = <"Test Ear">
-				description = <"Identification of the ear being tested.">
+				text = <"Test Ear (synthesised)">
+				description = <"Identification of the ear being tested. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Tympanogram Type">
-				description = <"Classification of the the shape of the tympanogram curve.">
+				text = <"Tympanogram Type (synthesised)">
+				description = <"Classification of the the shape of the tympanogram curve. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Vanhuyse Classification Type">
-				description = <"Classification of tympanogram type based on Vanhuyse classification system.">
+				text = <"Vanhuyse Classification Type (synthesised)">
+				description = <"Classification of tympanogram type based on Vanhuyse classification system. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Test Result Image">
-				description = <"Digital representation of the entire result.">
+				text = <"Test Result Image (synthesised)">
+				description = <"Digital representation of the entire result. (synthesised)">
 			>
 			["at81"] = <
 				text = <"Pressure">
@@ -883,82 +839,38 @@ terminology
 				description = <"Electrical conductance">
 			>
 			["at83"] = <
-				text = <"Electrical conductance">
-				description = <"Electrical conductance">
+				text = <"Volume">
+				description = <"Volume">
 			>
 			["at84"] = <
-				text = <"Volume">
-				description = <"Volume">
+				text = <"Frequency">
+				description = <"Frequency">
 			>
 			["at85"] = <
-				text = <"Volume">
-				description = <"Volume">
-			>
-			["at86"] = <
-				text = <"Frequency">
-				description = <"Frequency">
-			>
-			["at87"] = <
-				text = <"Frequency">
-				description = <"Frequency">
-			>
-			["at88"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
-			["at89"] = <
-				text = <"Electrical conductance">
-				description = <"Electrical conductance">
-			>
-			["at90"] = <
-				text = <"Frequency">
-				description = <"Frequency">
-			>
-			["at91"] = <
 				text = <"Rate of Change - Pressure">
 				description = <"Rate of Change - Pressure">
 			>
-			["at92"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
-			["at93"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
-			["at94"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
-			["at95"] = <
+			["at86"] = <
 				text = <"Rate of Change - Frequency">
 				description = <"Rate of Change - Frequency">
 			>
-			["at96"] = <
-				text = <"Frequency">
-				description = <"Frequency">
-			>
-			["at97"] = <
-				text = <"Frequency">
-				description = <"Frequency">
-			>
-			["at98"] = <
+			["at87"] = <
 				text = <"image/cgm">
 				description = <"image/cgm">
 			>
-			["at99"] = <
+			["at88"] = <
 				text = <"image/gif">
 				description = <"image/gif">
 			>
-			["at100"] = <
+			["at89"] = <
 				text = <"image/png">
 				description = <"image/png">
 			>
-			["at101"] = <
+			["at90"] = <
 				text = <"image/tiff">
 				description = <"image/tiff">
 			>
-			["at102"] = <
+			["at91"] = <
 				text = <"image/jpeg">
 				description = <"image/jpeg">
 			>
@@ -968,26 +880,15 @@ terminology
 		["openehr"] = <
 			["at81"] = <http://openehr.org/id/125>
 			["at82"] = <http://openehr.org/id/502>
-			["at83"] = <http://openehr.org/id/502>
-			["at84"] = <http://openehr.org/id/129>
-			["at85"] = <http://openehr.org/id/129>
-			["at86"] = <http://openehr.org/id/382>
-			["at87"] = <http://openehr.org/id/382>
-			["at88"] = <http://openehr.org/id/125>
-			["at89"] = <http://openehr.org/id/502>
-			["at90"] = <http://openehr.org/id/382>
-			["at91"] = <http://openehr.org/id/708>
-			["at92"] = <http://openehr.org/id/125>
-			["at93"] = <http://openehr.org/id/125>
-			["at94"] = <http://openehr.org/id/125>
-			["at95"] = <http://openehr.org/id/754>
-			["at96"] = <http://openehr.org/id/382>
-			["at97"] = <http://openehr.org/id/382>
-			["at98"] = <http://openehr.org/id/425>
-			["at99"] = <http://openehr.org/id/426>
-			["at100"] = <http://openehr.org/id/427>
-			["at101"] = <http://openehr.org/id/428>
-			["at102"] = <http://openehr.org/id/429>
+			["at83"] = <http://openehr.org/id/129>
+			["at84"] = <http://openehr.org/id/382>
+			["at85"] = <http://openehr.org/id/708>
+			["at86"] = <http://openehr.org/id/754>
+			["at87"] = <http://openehr.org/id/425>
+			["at88"] = <http://openehr.org/id/426>
+			["at89"] = <http://openehr.org/id/427>
+			["at90"] = <http://openehr.org/id/428>
+			["at91"] = <http://openehr.org/id/429>
 		>
 	>
 	value_sets = <
@@ -1005,6 +906,6 @@ terminology
 		>
 		["ac4"] = <
 			id = <"ac4">
-			members = <"at98", "at99", "at100", "at101", "at102">
+			members = <"at87", "at88", "at89", "at90", "at91">
 		>
 	>

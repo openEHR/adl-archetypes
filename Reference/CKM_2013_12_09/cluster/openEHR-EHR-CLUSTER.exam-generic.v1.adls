@@ -36,7 +36,7 @@ definition
 			before [id5]
 			ELEMENT[id0.9] matches {	-- Name of object
 				value matches {
-					DV_TEXT[id0.67] 
+					DV_TEXT[id0.12] 
 				}
 			}
 		}
@@ -64,15 +64,5 @@ terminology
 				text = <"Examination of a named body part">
 				description = <"Generic examination cluster for describing a finding on physical examination.">
 			>
-			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-		>
-	>
-	value_sets = <
-		["ac0.1"] = <
-			id = <"ac0.1">
-			members = <"at1", "at2", "at3">
 		>
 	>

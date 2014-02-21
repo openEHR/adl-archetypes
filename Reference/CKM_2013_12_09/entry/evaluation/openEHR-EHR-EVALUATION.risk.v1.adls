@@ -53,7 +53,7 @@ definition
 					ELEMENT[id4] occurrences matches {0..1} matches {	-- Significance of risk
 						value matches {
 							DV_CODED_TEXT[id14] matches {
-								defining_code matches {[ac1]}		-- Significance of risk
+								defining_code matches {[ac1]}		-- Significance of risk (synthesised)
 							}
 						}
 					}
@@ -118,8 +118,8 @@ terminology
 				description = <"Die Berechnung des Risikos">
 			>
 			["ac1"] = <
-				text = <"*Significance of risk(en)">
-				description = <"*The likelihood that this person will develop this condition or suffer in this way in the future(en)">
+				text = <"*Significance of risk (synthesised)(en)">
+				description = <"*The likelihood that this person will develop this condition or suffer in this way in the future (synthesised)(en)">
 			>
 		>
 		["en"] = <
@@ -160,8 +160,8 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"Significance of risk">
-				description = <"The likelihood that this person will develop this condition or suffer in this way in the future">
+				text = <"Significance of risk (synthesised)">
+				description = <"The likelihood that this person will develop this condition or suffer in this way in the future (synthesised)">
 			>
 		>
 	>

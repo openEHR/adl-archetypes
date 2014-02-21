@@ -76,7 +76,7 @@ definition
 					ELEMENT[id3] occurrences matches {0..1} matches {	-- Usage Status
 						value matches {
 							DV_CODED_TEXT[id18] matches {
-								defining_code matches {[ac1]}		-- Usage Status
+								defining_code matches {[ac1]}		-- Usage Status (synthesised)
 							}
 						}
 					}
@@ -196,8 +196,8 @@ terminology
 				description = <"Person has never used the substance.">
 			>
 			["ac1"] = <
-				text = <"Usage Status">
-				description = <"Overview of usage of the substance.">
+				text = <"Usage Status (synthesised)">
+				description = <"Overview of usage of the substance. (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -266,8 +266,8 @@ terminology
 				description = <"الشخص لم يستخدم المادة أبداً">
 			>
 			["ac1"] = <
-				text = <"*Usage Status(en)">
-				description = <"*Overview of usage of the substance.(en)">
+				text = <"*Usage Status (synthesised)(en)">
+				description = <"*Overview of usage of the substance. (synthesised)(en)">
 			>
 		>
 		["es-ar"] = <
@@ -336,8 +336,8 @@ terminology
 				description = <"Persona que nunca usó la sustancia.">
 			>
 			["ac1"] = <
-				text = <"*Usage Status(en)">
-				description = <"*Overview of usage of the substance.(en)">
+				text = <"*Usage Status (synthesised)(en)">
+				description = <"*Overview of usage of the substance. (synthesised)(en)">
 			>
 		>
 	>

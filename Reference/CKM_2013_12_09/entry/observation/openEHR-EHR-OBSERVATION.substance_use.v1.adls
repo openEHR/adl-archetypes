@@ -59,7 +59,7 @@ definition
 											ELEMENT[id6] occurrences matches {0..1} matches {	-- Frequency
 												value matches {
 													DV_CODED_TEXT[id23] matches {
-														defining_code matches {[ac1]}		-- Frequency
+														defining_code matches {[ac1]}		-- Frequency (synthesised)
 													}
 												}
 											}
@@ -153,8 +153,8 @@ terminology
 				description = <"Method of use or consumption of the substance">
 			>
 			["ac1"] = <
-				text = <"Frequency">
-				description = <"Frequency of use of substance">
+				text = <"Frequency (synthesised)">
+				description = <"Frequency of use of substance (synthesised)">
 			>
 		>
 	>

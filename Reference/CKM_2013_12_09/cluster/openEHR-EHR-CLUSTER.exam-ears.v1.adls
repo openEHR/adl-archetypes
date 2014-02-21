@@ -38,8 +38,8 @@ definition
 				items matches {
 					ELEMENT[id0.16] occurrences matches {0..1} matches {	-- Side
 						value matches {
-							DV_CODED_TEXT[id0.41] matches {
-								defining_code matches {[ac0.2]}		-- (added by post-parse processor)
+							DV_CODED_TEXT[id0.79] matches {
+								defining_code matches {[ac0.2]}		-- Side (synthesised)
 							}
 						}
 					}
@@ -63,12 +63,12 @@ definition
 						items matches {
 							ELEMENT[id0.24] occurrences matches {0..1} matches {	-- Whisper test
 								value matches {
-									DV_TEXT[id0.42] 
+									DV_TEXT[id0.80] 
 								}
 							}
 							ELEMENT[id0.68] occurrences matches {0..1} matches {	-- Rinne Test
 								value matches {
-									DV_ORDINAL[id0.43] matches {
+									DV_ORDINAL[id0.81] matches {
 										[value, symbol] matches {
 											[{0}, {[at0.69]}],
 											[{1}, {[at0.70]}]
@@ -84,8 +84,8 @@ definition
 					}
 					ELEMENT[id7] occurrences matches {0..*} matches {
 						value matches {
-							DV_MULTIMEDIA[id0.44] matches {
-								media_type matches {[ac0.3]}		-- (added by post-parse processor)
+							DV_MULTIMEDIA[id0.82] matches {
+								media_type matches {[ac0.3]}		-- Image (synthesised)
 							}
 						}
 					}
@@ -95,8 +95,8 @@ definition
 		/items[id5]/items matches {
 			ELEMENT[id6] occurrences matches {0..1} matches {
 				value matches {
-					DV_CODED_TEXT[id0.39] matches {
-						defining_code matches {[ac0.1]}		-- (added by post-parse processor)
+					DV_CODED_TEXT[id11.1] matches {
+						defining_code matches {[ac0.1]}		-- Normal statement (synthesised)
 					}
 				}
 			}
@@ -106,7 +106,7 @@ definition
 				items matches {
 					ELEMENT[id0.71] occurrences matches {0..1} matches {	-- Weber Test
 						value matches {
-							DV_ORDINAL[id0.45] matches {
+							DV_ORDINAL[id0.83] matches {
 								[value, symbol] matches {
 									[{0}, {[at0.72]}],
 									[{1}, {[at0.73]}],
@@ -224,24 +224,16 @@ terminology
 				description = <"Clinical findings related to both ears.">
 			>
 			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Normal statement (synthesised)">
+				description = <"A specific statement of normality. (synthesised)">
 			>
 			["ac0.2"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Side (synthesised)">
+				description = <"Left or Right ear examined? (synthesised)">
 			>
 			["ac0.3"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-			["ac0.4"] = <
-				text = <"Rinne Test">
-				description = <"A test to compare bone and air conduction of sound.">
-			>
-			["ac0.5"] = <
-				text = <"Weber Test">
-				description = <"A test to distinguish conductive and sensoineural hearing loss.">
+				text = <"Image (synthesised)">
+				description = <"Drawing or image of the area examined. (synthesised)">
 			>
 		>
 	>
@@ -257,13 +249,5 @@ terminology
 		["ac0.3"] = <
 			id = <"ac0.3">
 			members = <"at1", "at2", "at3">
-		>
-		["ac0.4"] = <
-			id = <"ac0.4">
-			members = <"at0.69", "at0.70">
-		>
-		["ac0.5"] = <
-			id = <"ac0.5">
-			members = <"at0.72", "at0.73", "at0.74">
 		>
 	>

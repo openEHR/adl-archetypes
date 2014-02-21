@@ -113,14 +113,14 @@ definition
 									ELEMENT[id1006] occurrences matches {0..1} matches {	-- Pulse Presence
 										value matches {
 											DV_CODED_TEXT[id1039] matches {
-												defining_code matches {[ac1]}		-- Pulse Presence
+												defining_code matches {[ac1]}		-- Pulse Presence (synthesised)
 											}
 										}
 									}
 									ELEMENT[id5] occurrences matches {0..1} matches {	-- Rate
 										name matches {
 											DV_CODED_TEXT[id1040] matches {
-												defining_code matches {[ac2]}		-- Rate
+												defining_code matches {[ac2]}		-- Rate (synthesised)
 											}
 										}
 										value matches {
@@ -133,7 +133,7 @@ definition
 									ELEMENT[id6] occurrences matches {0..1} matches {	-- Regularity
 										value matches {
 											DV_CODED_TEXT[id1042] matches {
-												defining_code matches {[ac3]}		-- Regularity
+												defining_code matches {[ac3]}		-- Regularity (synthesised)
 											}
 										}
 									}
@@ -161,7 +161,7 @@ definition
 									ELEMENT[id14] occurrences matches {0..1} matches {	-- Position
 										value matches {
 											DV_CODED_TEXT[id1046] matches {
-												defining_code matches {[ac4; at1002]}		-- Position
+												defining_code matches {[ac4; at1002]}		-- Position (synthesised)
 											}
 										}
 									}
@@ -200,14 +200,14 @@ definition
 					ELEMENT[id1020] occurrences matches {0..1} matches {	-- Method
 						value matches {
 							DV_CODED_TEXT[id1051] matches {
-								defining_code matches {[ac5]}		-- Method
+								defining_code matches {[ac5]}		-- Method (synthesised)
 							}
 						}
 					}
 					ELEMENT[id1038] occurrences matches {0..1} matches {	-- Findings Location
 						value matches {
 							DV_CODED_TEXT[id1052] matches {
-								defining_code matches {[ac6]}		-- Findings Location
+								defining_code matches {[ac6]}		-- Findings Location (synthesised)
 							}
 						}
 					}
@@ -374,28 +374,28 @@ terminology
 				description = <"*The right femoral artery.(en)">
 			>
 			["ac1"] = <
-				text = <"*Pulse Presence(en)">
-				description = <"*Identification of a pulse or heart beat.(en)">
+				text = <"*Pulse Presence (synthesised)(en)">
+				description = <"*Identification of a pulse or heart beat. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Rate(en)">
-				description = <"*The rate, measured in beats per minute.(en)">
+				text = <"*Rate (synthesised)(en)">
+				description = <"*The rate, measured in beats per minute. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Regularity(en)">
-				description = <"*The observed regularity of the pulse or heart beat.(en)">
+				text = <"*Regularity (synthesised)(en)">
+				description = <"*The observed regularity of the pulse or heart beat. (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Position(en)">
-				description = <"*The body position of the subject during the observation.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*The body position of the subject during the observation. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Method(en)">
-				description = <"*Method used to the pulse observe the pulse or heart beat.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*Method used to the pulse observe the pulse or heart beat. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Findings Location(en)">
-				description = <"*Body site where the pulse or heart beat findings were observed.(en)">
+				text = <"*Findings Location (synthesised)(en)">
+				description = <"*Body site where the pulse or heart beat findings were observed. (synthesised)(en)">
 			>
 			["at1046"] = <
 				text = <"*Frequency (en)">
@@ -556,28 +556,28 @@ terminology
 				description = <"The right femoral artery.">
 			>
 			["ac1"] = <
-				text = <"Pulse Presence">
-				description = <"Identification of a pulse or heart beat.">
+				text = <"Pulse Presence (synthesised)">
+				description = <"Identification of a pulse or heart beat. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Rate">
-				description = <"The rate, measured in beats per minute.">
+				text = <"Rate (synthesised)">
+				description = <"The rate, measured in beats per minute. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Regularity">
-				description = <"The observed regularity of the pulse or heart beat.">
+				text = <"Regularity (synthesised)">
+				description = <"The observed regularity of the pulse or heart beat. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Position">
-				description = <"The body position of the subject during the observation.">
+				text = <"Position (synthesised)">
+				description = <"The body position of the subject during the observation. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Method">
-				description = <"Method used to the pulse observe the pulse or heart beat.">
+				text = <"Method (synthesised)">
+				description = <"Method used to the pulse observe the pulse or heart beat. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Findings Location">
-				description = <"Body site where the pulse or heart beat findings were observed.">
+				text = <"Findings Location (synthesised)">
+				description = <"Body site where the pulse or heart beat findings were observed. (synthesised)">
 			>
 			["at1046"] = <
 				text = <"Frequency">
@@ -738,28 +738,28 @@ terminology
 				description = <"*The right femoral artery.(en)">
 			>
 			["ac1"] = <
-				text = <"*Pulse Presence(en)">
-				description = <"*Identification of a pulse or heart beat.(en)">
+				text = <"*Pulse Presence (synthesised)(en)">
+				description = <"*Identification of a pulse or heart beat. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Rate(en)">
-				description = <"*The rate, measured in beats per minute.(en)">
+				text = <"*Rate (synthesised)(en)">
+				description = <"*The rate, measured in beats per minute. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Regularity(en)">
-				description = <"*The observed regularity of the pulse or heart beat.(en)">
+				text = <"*Regularity (synthesised)(en)">
+				description = <"*The observed regularity of the pulse or heart beat. (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Position(en)">
-				description = <"*The body position of the subject during the observation.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*The body position of the subject during the observation. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Method(en)">
-				description = <"*Method used to the pulse observe the pulse or heart beat.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*Method used to the pulse observe the pulse or heart beat. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Findings Location(en)">
-				description = <"*Body site where the pulse or heart beat findings were observed.(en)">
+				text = <"*Findings Location (synthesised)(en)">
+				description = <"*Body site where the pulse or heart beat findings were observed. (synthesised)(en)">
 			>
 			["at1046"] = <
 				text = <"*Frequency (en)">
@@ -920,28 +920,28 @@ terminology
 				description = <"*The right femoral artery.(en)">
 			>
 			["ac1"] = <
-				text = <"*Pulse Presence(en)">
-				description = <"*Identification of a pulse or heart beat.(en)">
+				text = <"*Pulse Presence (synthesised)(en)">
+				description = <"*Identification of a pulse or heart beat. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Rate(en)">
-				description = <"*The rate, measured in beats per minute.(en)">
+				text = <"*Rate (synthesised)(en)">
+				description = <"*The rate, measured in beats per minute. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Regularity(en)">
-				description = <"*The observed regularity of the pulse or heart beat.(en)">
+				text = <"*Regularity (synthesised)(en)">
+				description = <"*The observed regularity of the pulse or heart beat. (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Position(en)">
-				description = <"*The body position of the subject during the observation.(en)">
+				text = <"*Position (synthesised)(en)">
+				description = <"*The body position of the subject during the observation. (synthesised)(en)">
 			>
 			["ac5"] = <
-				text = <"*Method(en)">
-				description = <"*Method used to the pulse observe the pulse or heart beat.(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*Method used to the pulse observe the pulse or heart beat. (synthesised)(en)">
 			>
 			["ac6"] = <
-				text = <"*Findings Location(en)">
-				description = <"*Body site where the pulse or heart beat findings were observed.(en)">
+				text = <"*Findings Location (synthesised)(en)">
+				description = <"*Body site where the pulse or heart beat findings were observed. (synthesised)(en)">
 			>
 			["at1046"] = <
 				text = <"*Frequency (en)">

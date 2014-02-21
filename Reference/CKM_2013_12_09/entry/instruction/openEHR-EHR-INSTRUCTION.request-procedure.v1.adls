@@ -35,18 +35,20 @@ definition
 	INSTRUCTION[id1.1] matches {	-- Procedure request
 		/activities[id2]/action_archetype_id matches {/openEHR-EHR-ACTION\\.procedure\\.v1/}
 		/activities[id2]/description[id10]/items matches {
+			before [id136]
 			ELEMENT[id0.146] occurrences matches {0..1} matches {	-- Type of procedure
 				value matches {
-					DV_TEXT[id0.186] 
+					DV_TEXT[id0.147] 
 				}
 			}
 			allow_archetype CLUSTER[id133] occurrences matches {0..1} matches {
 				include
 					archetype_id/value matches {/.*/}
 			}
+			before [id66]
 			ELEMENT[id0.145] occurrences matches {0..1} matches {	-- Objective
 				value matches {
-					DV_TEXT[id0.190] 
+					DV_TEXT[id0.148] 
 				}
 			}
 			allow_archetype CLUSTER[id117] occurrences matches {0..1} matches {
@@ -55,10 +57,12 @@ definition
 			}
 		}
 		/protocol[id9]/items matches {
+			ELEMENT[id11] 
 			allow_archetype CLUSTER[id142] occurrences matches {0..1} matches {
 				include
 					archetype_id/value matches {/.*/}
 			}
+			ELEMENT[id12] 
 			allow_archetype CLUSTER[id143] occurrences matches {0..1} matches {
 				include
 					archetype_id/value matches {/.*/}
@@ -81,15 +85,5 @@ terminology
 				text = <"Procedure request">
 				description = <"Request for a procedure to be performed.">
 			>
-			["ac0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-		>
-	>
-	value_sets = <
-		["ac0.1"] = <
-			id = <"ac0.1">
-			members = <"at137", "at138", "at139">
 		>
 	>

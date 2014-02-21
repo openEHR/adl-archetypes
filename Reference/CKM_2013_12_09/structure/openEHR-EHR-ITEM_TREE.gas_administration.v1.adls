@@ -55,7 +55,7 @@ definition
 			ELEMENT[id4] occurrences matches {0..1} matches {	-- Means of delivery
 				value matches {
 					DV_CODED_TEXT[id18] matches {
-						defining_code matches {[ac1]}		-- Means of delivery
+						defining_code matches {[ac1]}		-- Means of delivery (synthesised)
 					}
 				}
 			}
@@ -91,7 +91,7 @@ definition
 			ELEMENT[id11] occurrences matches {0..1} matches {	-- Atmospheric pressure
 				value matches {
 					DV_QUANTITY[id22] matches {
-						property matches {[at15]}
+						property matches {[at14]}
 						[magnitude, units, precision] matches {
 							[{|>=0.0|}, {"atm"}, {1}],
 							[{|>=0.3|}, {"bar"}, {1}]
@@ -178,18 +178,14 @@ terminology
 				description = <"Verabreichung vom Patienten selbst, wenn erforderlich">
 			>
 			["ac1"] = <
-				text = <"*Means of delivery(en)">
-				description = <"*The means of delivery(en)">
+				text = <"*Means of delivery (synthesised)(en)">
+				description = <"*The means of delivery (synthesised)(en)">
 			>
 			["at13"] = <
 				text = <"*Flow rate, volume (en)">
 				description = <"*Flow rate, volume (en)">
 			>
 			["at14"] = <
-				text = <"*Pressure (en)">
-				description = <"*Pressure (en)">
-			>
-			["at15"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
 			>
@@ -256,8 +252,8 @@ terminology
 				description = <"Is the administration by the patient as required">
 			>
 			["ac1"] = <
-				text = <"Means of delivery">
-				description = <"The means of delivery">
+				text = <"Means of delivery (synthesised)">
+				description = <"The means of delivery (synthesised)">
 			>
 			["at13"] = <
 				text = <"Flow rate, volume">
@@ -267,17 +263,12 @@ terminology
 				text = <"Pressure">
 				description = <"Pressure">
 			>
-			["at15"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
 		>
 	>
 	term_bindings = <
 		["openehr"] = <
 			["at13"] = <http://openehr.org/id/126>
 			["at14"] = <http://openehr.org/id/125>
-			["at15"] = <http://openehr.org/id/125>
 		>
 	>
 	value_sets = <

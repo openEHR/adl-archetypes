@@ -162,7 +162,7 @@ definition
 			ELEMENT[id4] occurrences matches {0..1} matches {	-- Variation
 				value matches {
 					DV_CODED_TEXT[id164] matches {
-						defining_code matches {[ac1]}		-- Variation
+						defining_code matches {[ac1]}		-- Variation (synthesised)
 					}
 				}
 			}
@@ -212,7 +212,7 @@ definition
 					ELEMENT[id9] occurrences matches {0..1} matches {	-- Onset Type
 						value matches {
 							DV_CODED_TEXT[id170] matches {
-								defining_code matches {[ac2]}		-- Onset Type
+								defining_code matches {[ac2]}		-- Onset Type (synthesised)
 							}
 						}
 					}
@@ -229,14 +229,14 @@ definition
 					ELEMENT[id38] occurrences matches {0..1} matches {	-- Progression
 						value matches {
 							DV_CODED_TEXT[id173] matches {
-								defining_code matches {[ac3]}		-- Progression
+								defining_code matches {[ac3]}		-- Progression (synthesised)
 							}
 						}
 					}
 					ELEMENT[id12] occurrences matches {0..1} matches {	-- Cessation
 						value matches {
 							DV_CODED_TEXT[id174] matches {
-								defining_code matches {[ac4]}		-- Cessation
+								defining_code matches {[ac4]}		-- Cessation (synthesised)
 							}
 						}
 					}
@@ -560,20 +560,20 @@ terminology
 				description = <"*The site on the body where the symptom was located.(en)">
 			>
 			["ac1"] = <
-				text = <"*Variation(en)">
-				description = <"*The variation of the symptom.(en)">
+				text = <"*Variation (synthesised)(en)">
+				description = <"*The variation of the symptom. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Onset Type(en)">
-				description = <"*The nature of the onset of the symptom.(en)">
+				text = <"*Onset Type (synthesised)(en)">
+				description = <"*The nature of the onset of the symptom. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Progression(en)">
-				description = <"*The progress of the symptom relative to the past.(en)">
+				text = <"*Progression (synthesised)(en)">
+				description = <"*The progress of the symptom relative to the past. (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Cessation(en)">
-				description = <"*The nature of the cessation of the symptom.(en)">
+				text = <"*Cessation (synthesised)(en)">
+				description = <"*The nature of the cessation of the symptom. (synthesised)(en)">
 			>
 			["ac5"] = <
 				text = <"*Impact(en)">
@@ -846,20 +846,20 @@ terminology
 				description = <"*The site on the body where the symptom was located.(en)">
 			>
 			["ac1"] = <
-				text = <"*Variation(en)">
-				description = <"*The variation of the symptom.(en)">
+				text = <"*Variation (synthesised)(en)">
+				description = <"*The variation of the symptom. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Onset Type(en)">
-				description = <"*The nature of the onset of the symptom.(en)">
+				text = <"*Onset Type (synthesised)(en)">
+				description = <"*The nature of the onset of the symptom. (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Progression(en)">
-				description = <"*The progress of the symptom relative to the past.(en)">
+				text = <"*Progression (synthesised)(en)">
+				description = <"*The progress of the symptom relative to the past. (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Cessation(en)">
-				description = <"*The nature of the cessation of the symptom.(en)">
+				text = <"*Cessation (synthesised)(en)">
+				description = <"*The nature of the cessation of the symptom. (synthesised)(en)">
 			>
 			["ac5"] = <
 				text = <"*Impact(en)">
@@ -1132,20 +1132,20 @@ terminology
 				description = <"The site on the body where the symptom was located.">
 			>
 			["ac1"] = <
-				text = <"Variation">
-				description = <"The variation of the symptom.">
+				text = <"Variation (synthesised)">
+				description = <"The variation of the symptom. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Onset Type">
-				description = <"The nature of the onset of the symptom.">
+				text = <"Onset Type (synthesised)">
+				description = <"The nature of the onset of the symptom. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Progression">
-				description = <"The progress of the symptom relative to the past.">
+				text = <"Progression (synthesised)">
+				description = <"The progress of the symptom relative to the past. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Cessation">
-				description = <"The nature of the cessation of the symptom.">
+				text = <"Cessation (synthesised)">
+				description = <"The nature of the cessation of the symptom. (synthesised)">
 			>
 			["ac5"] = <
 				text = <"Impact">

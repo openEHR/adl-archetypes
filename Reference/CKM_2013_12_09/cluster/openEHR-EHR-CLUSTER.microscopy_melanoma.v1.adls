@@ -71,7 +71,7 @@ definition
 			ELEMENT[id8] occurrences matches {0..1} matches {	-- Clark Level
 				value matches {
 					DV_CODED_TEXT[id131] matches {
-						defining_code matches {[ac1]}		-- Clark Level
+						defining_code matches {[ac1]}		-- Clark Level (synthesised)
 					}
 				}
 			}
@@ -87,14 +87,14 @@ definition
 					ELEMENT[id23] occurrences matches {0..1} matches {	-- Ulceration
 						value matches {
 							DV_CODED_TEXT[id133] matches {
-								defining_code matches {[ac2]}		-- Ulceration
+								defining_code matches {[ac2]}		-- Ulceration (synthesised)
 							}
 						}
 					}
 					ELEMENT[id24] occurrences matches {0..1} matches {	-- Extent of ulceration
 						value matches {
 							DV_QUANTITY[id134] matches {
-								property matches {[at131]}
+								property matches {[at130]}
 								magnitude matches {|>=0.0|}
 							}
 						}
@@ -112,14 +112,14 @@ definition
 					ELEMENT[id28] occurrences matches {0..1} matches {	-- Microsatellites
 						value matches {
 							DV_CODED_TEXT[id135] matches {
-								defining_code matches {[ac3]}		-- Microsatellites
+								defining_code matches {[ac3]}		-- Microsatellites (synthesised)
 							}
 						}
 					}
 					ELEMENT[id29] occurrences matches {0..1} matches {	-- In-transit microsatellites
 						value matches {
 							DV_CODED_TEXT[id136] matches {
-								defining_code matches {[ac4]}		-- In-transit microsatellites
+								defining_code matches {[ac4]}		-- In-transit microsatellites (synthesised)
 							}
 						}
 					}
@@ -130,14 +130,14 @@ definition
 					ELEMENT[id33] occurrences matches {0..1} matches {	-- Distribution
 						value matches {
 							DV_CODED_TEXT[id137] matches {
-								defining_code matches {[ac5]}		-- Distribution
+								defining_code matches {[ac5]}		-- Distribution (synthesised)
 							}
 						}
 					}
 					ELEMENT[id84] occurrences matches {0..1} matches {	-- Density
 						value matches {
 							DV_CODED_TEXT[id138] matches {
-								defining_code matches {[ac6]}		-- Density
+								defining_code matches {[ac6]}		-- Density (synthesised)
 							}
 						}
 					}
@@ -148,7 +148,7 @@ definition
 					ELEMENT[id52] occurrences matches {0..1} matches {	-- Intermediate/late regression
 						value matches {
 							DV_CODED_TEXT[id139] matches {
-								defining_code matches {[ac7]}		-- Intermediate/late regression
+								defining_code matches {[ac7]}		-- Intermediate/late regression (synthesised)
 							}
 						}
 					}
@@ -161,7 +161,7 @@ definition
 					ELEMENT[id114] occurrences matches {0..1} matches {	-- Marginal clearance of regression
 						value matches {
 							DV_QUANTITY[id140] matches {
-								property matches {[at132]}
+								property matches {[at130]}
 								magnitude matches {|>=0.0|}
 							}
 						}
@@ -173,7 +173,7 @@ definition
 					ELEMENT[id39] occurrences matches {0..1} matches {	-- Desmoplasia
 						value matches {
 							DV_CODED_TEXT[id141] matches {
-								defining_code matches {[ac8]}		-- Desmoplasia
+								defining_code matches {[ac8]}		-- Desmoplasia (synthesised)
 							}
 						}
 					}
@@ -194,7 +194,7 @@ definition
 					ELEMENT[id102] occurrences matches {0..1} matches {	-- Solar elastosis
 						value matches {
 							DV_CODED_TEXT[id143] matches {
-								defining_code matches {[ac9]}		-- Solar elastosis
+								defining_code matches {[ac9]}		-- Solar elastosis (synthesised)
 							}
 						}
 					}
@@ -210,7 +210,7 @@ definition
 					ELEMENT[id108] occurrences matches {0..1} matches {	-- Predominant cell type
 						value matches {
 							DV_CODED_TEXT[id145] matches {
-								defining_code matches {[ac10]}		-- Predominant cell type
+								defining_code matches {[ac10]}		-- Predominant cell type (synthesised)
 							}
 							DV_TEXT[id146] 
 						}
@@ -237,7 +237,7 @@ definition
 					ELEMENT[id46] occurrences matches {0..1} matches {	-- Intraepidermal growth pattern
 						value matches {
 							DV_CODED_TEXT[id148] matches {
-								defining_code matches {[ac11]}		-- Intraepidermal growth pattern
+								defining_code matches {[ac11]}		-- Intraepidermal growth pattern (synthesised)
 							}
 							DV_TEXT[id149] 
 						}
@@ -556,58 +556,50 @@ terminology
 				description = <"Tumour infiltrating lymphocytes are present.">
 			>
 			["ac1"] = <
-				text = <"Clark Level">
-				description = <"Grading of invasion of the melanoma.">
+				text = <"Clark Level (synthesised)">
+				description = <"Grading of invasion of the melanoma. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Ulceration">
-				description = <"Finding of tumour-associated ulceration.">
+				text = <"Ulceration (synthesised)">
+				description = <"Finding of tumour-associated ulceration. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Microsatellites">
-				description = <"Finding of microsatellites.">
+				text = <"Microsatellites (synthesised)">
+				description = <"Finding of microsatellites. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"In-transit microsatellites">
-				description = <"Finding of in-transit microsatellites.">
+				text = <"In-transit microsatellites (synthesised)">
+				description = <"Finding of in-transit microsatellites. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Distribution">
-				description = <"Distribution pattern of tumour infiltrating lymphocytes.">
+				text = <"Distribution (synthesised)">
+				description = <"Distribution pattern of tumour infiltrating lymphocytes. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Density">
-				description = <"Density of tumour infiltrating lymphocytes.">
+				text = <"Density (synthesised)">
+				description = <"Density of tumour infiltrating lymphocytes. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Intermediate/late regression">
-				description = <"Finding of tumour regression.">
+				text = <"Intermediate/late regression (synthesised)">
+				description = <"Finding of tumour regression. (synthesised)">
 			>
 			["ac8"] = <
-				text = <"Desmoplasia">
-				description = <"Finding of desmoplasia.">
+				text = <"Desmoplasia (synthesised)">
+				description = <"Finding of desmoplasia. (synthesised)">
 			>
 			["ac9"] = <
-				text = <"Solar elastosis">
-				description = <"Finding of solar elastosis.">
+				text = <"Solar elastosis (synthesised)">
+				description = <"Finding of solar elastosis. (synthesised)">
 			>
 			["ac10"] = <
-				text = <"Predominant cell type">
-				description = <"Finding of a single predominant tumour cell type.">
+				text = <"Predominant cell type (synthesised)">
+				description = <"Finding of a single predominant tumour cell type. (synthesised)">
 			>
 			["ac11"] = <
-				text = <"Intraepidermal growth pattern">
-				description = <"Description of the melanoma growth pattern.">
+				text = <"Intraepidermal growth pattern (synthesised)">
+				description = <"Description of the melanoma growth pattern. (synthesised)">
 			>
 			["at130"] = <
-				text = <"Length">
-				description = <"Length">
-			>
-			["at131"] = <
-				text = <"Length">
-				description = <"Length">
-			>
-			["at132"] = <
 				text = <"Length">
 				description = <"Length">
 			>
@@ -616,18 +608,12 @@ terminology
 	term_bindings = <
 		["openehr"] = <
 			["at130"] = <http://openehr.org/id/122>
-			["at131"] = <http://openehr.org/id/122>
-			["at132"] = <http://openehr.org/id/122>
 		>
 	>
 	value_sets = <
-		["ac4"] = <
-			id = <"ac4">
-			members = <"at95", "at96", "at97">
-		>
-		["ac7"] = <
-			id = <"ac7">
-			members = <"at16", "at53", "at54", "at112", "at119">
+		["ac6"] = <
+			id = <"ac6">
+			members = <"at85", "at86", "at87">
 		>
 		["ac1"] = <
 			id = <"ac1">
@@ -641,13 +627,17 @@ terminology
 			id = <"ac3">
 			members = <"at79", "at80", "at81">
 		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at95", "at96", "at97">
+		>
 		["ac5"] = <
 			id = <"ac5">
 			members = <"at50", "at51", "at82", "at83", "at129">
 		>
-		["ac6"] = <
-			id = <"ac6">
-			members = <"at85", "at86", "at87">
+		["ac7"] = <
+			id = <"ac7">
+			members = <"at16", "at53", "at54", "at112", "at119">
 		>
 		["ac8"] = <
 			id = <"ac8">

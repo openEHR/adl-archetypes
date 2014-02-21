@@ -56,7 +56,7 @@ definition
 					ELEMENT[id12] occurrences matches {0..1} matches {	-- Intensity
 						value matches {
 							DV_CODED_TEXT[id19] matches {
-								defining_code matches {[ac1]}		-- Intensity
+								defining_code matches {[ac1]}		-- Intensity (synthesised)
 							}
 						}
 					}
@@ -73,7 +73,7 @@ definition
 			ELEMENT[id10] occurrences matches {0..1} matches {	-- Phase
 				value matches {
 					DV_CODED_TEXT[id21] matches {
-						defining_code matches {[ac2]}		-- Phase
+						defining_code matches {[ac2]}		-- Phase (synthesised)
 					}
 				}
 			}
@@ -136,12 +136,12 @@ terminology
 				description = <"Description of the exertion.">
 			>
 			["ac1"] = <
-				text = <"Intensity">
-				description = <"Semiquantitative description of the intensity of exercise undertaken.">
+				text = <"Intensity (synthesised)">
+				description = <"Semiquantitative description of the intensity of exercise undertaken. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Phase">
-				description = <"The phase or context of exercise.">
+				text = <"Phase (synthesised)">
+				description = <"The phase or context of exercise. (synthesised)">
 			>
 			["at17"] = <
 				text = <"Work">
@@ -202,12 +202,12 @@ terminology
 				description = <"وصف المجهود">
 			>
 			["ac1"] = <
-				text = <"*Intensity(en)">
-				description = <"*Semiquantitative description of the intensity of exercise undertaken.(en)">
+				text = <"*Intensity (synthesised)(en)">
+				description = <"*Semiquantitative description of the intensity of exercise undertaken. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Phase(en)">
-				description = <"*The phase or context of exercise.(en)">
+				text = <"*Phase (synthesised)(en)">
+				description = <"*The phase or context of exercise. (synthesised)(en)">
 			>
 			["at17"] = <
 				text = <"*Work (en)">

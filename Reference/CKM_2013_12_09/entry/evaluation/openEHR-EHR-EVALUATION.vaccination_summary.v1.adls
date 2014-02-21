@@ -43,7 +43,7 @@ definition
 					ELEMENT[id4] occurrences matches {0..1} matches {	-- Primary Course Status
 						value matches {
 							DV_CODED_TEXT[id18] matches {
-								defining_code matches {[ac1]}		-- Primary Course Status
+								defining_code matches {[ac1]}		-- Primary Course Status (synthesised)
 							}
 						}
 					}
@@ -60,7 +60,7 @@ definition
 					ELEMENT[id11] occurrences matches {0..1} matches {	-- Vaccination Status
 						value matches {
 							DV_CODED_TEXT[id21] matches {
-								defining_code matches {[ac2]}		-- Vaccination Status
+								defining_code matches {[ac2]}		-- Vaccination Status (synthesised)
 							}
 						}
 					}
@@ -145,12 +145,12 @@ terminology
 				description = <"The date on which the immunisation summary was last updated.">
 			>
 			["ac1"] = <
-				text = <"Primary Course Status">
-				description = <"Status of the primary course of vaccinations.">
+				text = <"Primary Course Status (synthesised)">
+				description = <"Status of the primary course of vaccinations. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Vaccination Status">
-				description = <"An assertion about whether the vaccination course is up-to-date.">
+				text = <"Vaccination Status (synthesised)">
+				description = <"An assertion about whether the vaccination course is up-to-date. (synthesised)">
 			>
 		>
 	>

@@ -56,7 +56,7 @@ definition
 					ELEMENT[id26] occurrences matches {0..1} matches {	-- Residual tumour (R)
 						value matches {
 							DV_CODED_TEXT[id40] matches {
-								defining_code matches {[ac1]}		-- Residual tumour (R)
+								defining_code matches {[ac1]}		-- Residual tumour (R) (synthesised)
 							}
 						}
 					}
@@ -97,14 +97,14 @@ definition
 					ELEMENT[id31] occurrences matches {0..1} matches {	-- Residual tumour (pR)
 						value matches {
 							DV_CODED_TEXT[id47] matches {
-								defining_code matches {[ac2]}		-- Residual tumour (pR)
+								defining_code matches {[ac2]}		-- Residual tumour (pR) (synthesised)
 							}
 						}
 					}
 					ELEMENT[id36] occurrences matches {0..1} matches {	-- Histopathological grading (G)
 						value matches {
 							DV_CODED_TEXT[id48] matches {
-								defining_code matches {[ac3]}		-- Histopathological grading (G)
+								defining_code matches {[ac3]}		-- Histopathological grading (G) (synthesised)
 							}
 						}
 					}
@@ -256,16 +256,16 @@ terminology
 				description = <"Undifferentiated">
 			>
 			["ac1"] = <
-				text = <"Residual tumour (R)">
-				description = <"Clinical assessment of post-treatment residual tumour.">
+				text = <"Residual tumour (R) (synthesised)">
+				description = <"Clinical assessment of post-treatment residual tumour. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Residual tumour (pR)">
-				description = <"Pathological assessment of post-treatment residual tumour.">
+				text = <"Residual tumour (pR) (synthesised)">
+				description = <"Pathological assessment of post-treatment residual tumour. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Histopathological grading (G)">
-				description = <"TNM histopathological grading classification. ">
+				text = <"Histopathological grading (G) (synthesised)">
+				description = <"TNM histopathological grading classification.  (synthesised)">
 			>
 		>
 	>

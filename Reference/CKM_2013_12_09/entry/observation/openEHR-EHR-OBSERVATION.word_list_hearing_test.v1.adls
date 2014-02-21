@@ -52,7 +52,7 @@ definition
 									ELEMENT[id15] occurrences matches {0..1} matches {	-- Test
 										value matches {
 											DV_CODED_TEXT[id20] matches {
-												defining_code matches {[ac1]}		-- Test
+												defining_code matches {[ac1]}		-- Test (synthesised)
 											}
 										}
 									}
@@ -77,7 +77,7 @@ definition
 											ELEMENT[id18] occurrences matches {0..1} matches {	-- New element
 												value matches {
 													DV_MULTIMEDIA[id23] matches {
-														media_type matches {[ac2]}		-- New element
+														media_type matches {[ac2]}		-- New element (synthesised)
 													}
 												}
 											}
@@ -97,14 +97,14 @@ definition
 									ELEMENT[id6] occurrences matches {0..1} matches {	-- Occlusion
 										value matches {
 											DV_CODED_TEXT[id25] matches {
-												defining_code matches {[ac3]}		-- Occlusion
+												defining_code matches {[ac3]}		-- Occlusion (synthesised)
 											}
 										}
 									}
 									ELEMENT[id9] occurrences matches {0..1} matches {	-- Lip reading
 										value matches {
 											DV_CODED_TEXT[id26] matches {
-												defining_code matches {[ac4]}		-- Lip reading
+												defining_code matches {[ac4]}		-- Lip reading (synthesised)
 											}
 										}
 									}
@@ -185,20 +185,20 @@ terminology
 				description = <"Comment on test ">
 			>
 			["ac1"] = <
-				text = <"Test">
-				description = <"Identify the test performed">
+				text = <"Test (synthesised)">
+				description = <"Identify the test performed (synthesised)">
 			>
 			["ac2"] = <
-				text = <"New element">
-				description = <"Image of test result">
+				text = <"New element (synthesised)">
+				description = <"Image of test result (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Occlusion">
-				description = <"*">
+				text = <"Occlusion (synthesised)">
+				description = <"* (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Lip reading">
-				description = <"Is the person using lip-reading when performing the test">
+				text = <"Lip reading (synthesised)">
+				description = <"Is the person using lip-reading when performing the test (synthesised)">
 			>
 			["at18"] = <
 				text = <"Proportion">
@@ -295,20 +295,20 @@ terminology
 				description = <"تعليق على الاختبار">
 			>
 			["ac1"] = <
-				text = <"*Test(en)">
-				description = <"*Identify the test performed(en)">
+				text = <"*Test (synthesised)(en)">
+				description = <"*Identify the test performed (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*New element(en)">
-				description = <"*Image of test result(en)">
+				text = <"*New element (synthesised)(en)">
+				description = <"*Image of test result (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Occlusion(en)">
-				description = <"**(en)">
+				text = <"*Occlusion (synthesised)(en)">
+				description = <"** (synthesised)(en)">
 			>
 			["ac4"] = <
-				text = <"*Lip reading(en)">
-				description = <"*Is the person using lip-reading when performing the test(en)">
+				text = <"*Lip reading (synthesised)(en)">
+				description = <"*Is the person using lip-reading when performing the test (synthesised)(en)">
 			>
 			["at18"] = <
 				text = <"*Proportion (en)">

@@ -41,7 +41,7 @@ definition
 							ELEMENT[id3] occurrences matches {0..1} matches {	-- Prescription category
 								value matches {
 									DV_CODED_TEXT[id10] matches {
-										defining_code matches {[ac1]}		-- Prescription category
+										defining_code matches {[ac1]}		-- Prescription category (synthesised)
 									}
 								}
 							}
@@ -88,8 +88,8 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"Prescription category">
-				description = <"Australian prescription category">
+				text = <"Prescription category (synthesised)">
+				description = <"Australian prescription category (synthesised)">
 			>
 			["at7"] = <
 				text = <"event">

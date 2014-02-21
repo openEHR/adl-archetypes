@@ -75,14 +75,14 @@ definition
 									ELEMENT[id5] occurrences matches {0..1} matches {	-- Presence
 										value matches {
 											DV_CODED_TEXT[id30] matches {
-												defining_code matches {[ac1]}		-- Presence
+												defining_code matches {[ac1]}		-- Presence (synthesised)
 											}
 										}
 									}
 									ELEMENT[id20] occurrences matches {0..1} matches {	-- Pattern
 										value matches {
 											DV_CODED_TEXT[id31] matches {
-												defining_code matches {[ac2]}		-- Pattern
+												defining_code matches {[ac2]}		-- Pattern (synthesised)
 											}
 										}
 									}
@@ -180,12 +180,12 @@ terminology
 				description = <"Narrative description of the fetal movements as noted by the mother.">
 			>
 			["ac1"] = <
-				text = <"Presence">
-				description = <"Presence of spontaneous fetal movements.">
+				text = <"Presence (synthesised)">
+				description = <"Presence of spontaneous fetal movements. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Pattern">
-				description = <"Pattern of spontaneous fetal movements.">
+				text = <"Pattern (synthesised)">
+				description = <"Pattern of spontaneous fetal movements. (synthesised)">
 			>
 			["at26"] = <
 				text = <"total">
@@ -247,12 +247,12 @@ terminology
 				description = <"*Narrative description of the fetal movements as noted by the mother.(en)">
 			>
 			["ac1"] = <
-				text = <"*Presence(en)">
-				description = <"*Presence of spontaneous fetal movements.(en)">
+				text = <"*Presence (synthesised)(en)">
+				description = <"*Presence of spontaneous fetal movements. (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Pattern(en)">
-				description = <"*Pattern of spontaneous fetal movements.(en)">
+				text = <"*Pattern (synthesised)(en)">
+				description = <"*Pattern of spontaneous fetal movements. (synthesised)(en)">
 			>
 			["at26"] = <
 				text = <"*total (en)">

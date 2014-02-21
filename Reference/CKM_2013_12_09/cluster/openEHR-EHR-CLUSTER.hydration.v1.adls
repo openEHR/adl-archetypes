@@ -44,14 +44,14 @@ definition
 			ELEMENT[id5] occurrences matches {0..1} matches {	-- Mucous membranes
 				value matches {
 					DV_CODED_TEXT[id29] matches {
-						defining_code matches {[ac1]}		-- Mucous membranes
+						defining_code matches {[ac1]}		-- Mucous membranes (synthesised)
 					}
 				}
 			}
 			ELEMENT[id6] occurrences matches {0..1} matches {	-- Anterior fontanelle
 				value matches {
 					DV_CODED_TEXT[id30] matches {
-						defining_code matches {[ac2]}		-- Anterior fontanelle
+						defining_code matches {[ac2]}		-- Anterior fontanelle (synthesised)
 					}
 				}
 			}
@@ -64,21 +64,21 @@ definition
 			ELEMENT[id16] occurrences matches {0..1} matches {	-- Skin turgor
 				value matches {
 					DV_CODED_TEXT[id31] matches {
-						defining_code matches {[ac3]}		-- Skin turgor
+						defining_code matches {[ac3]}		-- Skin turgor (synthesised)
 					}
 				}
 			}
 			ELEMENT[id19] occurrences matches {0..1} matches {	-- Appearance of eyes
 				value matches {
 					DV_CODED_TEXT[id32] matches {
-						defining_code matches {[ac4]}		-- Appearance of eyes
+						defining_code matches {[ac4]}		-- Appearance of eyes (synthesised)
 					}
 				}
 			}
 			ELEMENT[id22] occurrences matches {0..1} matches {	-- Capillary return
 				value matches {
 					DV_CODED_TEXT[id33] matches {
-						defining_code matches {[ac5]}		-- Capillary return
+						defining_code matches {[ac5]}		-- Capillary return (synthesised)
 					}
 				}
 			}
@@ -186,24 +186,24 @@ terminology
 				description = <"Details of thickness of saliva.">
 			>
 			["ac1"] = <
-				text = <"Mucous membranes">
-				description = <"Finding of state of mucous membranes including mouth and lips.">
+				text = <"Mucous membranes (synthesised)">
+				description = <"Finding of state of mucous membranes including mouth and lips. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Anterior fontanelle">
-				description = <"Describing state of infant's anteroir fontanelle.">
+				text = <"Anterior fontanelle (synthesised)">
+				description = <"Describing state of infant's anteroir fontanelle. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Skin turgor">
-				description = <"Describing state of skin/tissue turgor.">
+				text = <"Skin turgor (synthesised)">
+				description = <"Describing state of skin/tissue turgor. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Appearance of eyes">
-				description = <"Describes state of eyes.">
+				text = <"Appearance of eyes (synthesised)">
+				description = <"Describes state of eyes. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Capillary return">
-				description = <"Description of state of capillary return.">
+				text = <"Capillary return (synthesised)">
+				description = <"Description of state of capillary return. (synthesised)">
 			>
 		>
 	>

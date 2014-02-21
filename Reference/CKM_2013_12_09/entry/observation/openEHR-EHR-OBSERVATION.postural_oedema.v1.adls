@@ -73,14 +73,14 @@ definition
 									ELEMENT[id6] occurrences matches {0..1} matches {	-- Usual activity level
 										value matches {
 											DV_CODED_TEXT[id30] matches {
-												defining_code matches {[ac1]}		-- Usual activity level
+												defining_code matches {[ac1]}		-- Usual activity level (synthesised)
 											}
 										}
 									}
 									ELEMENT[id11] occurrences matches {0..1} matches {	-- Position
 										value matches {
 											DV_CODED_TEXT[id31] matches {
-												defining_code matches {[ac2]}		-- Position
+												defining_code matches {[ac2]}		-- Position (synthesised)
 											}
 										}
 									}
@@ -186,12 +186,12 @@ terminology
 				description = <"Oedema">
 			>
 			["ac1"] = <
-				text = <"Usual activity level">
-				description = <"Usual activity of patient">
+				text = <"Usual activity level (synthesised)">
+				description = <"Usual activity of patient (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Position">
-				description = <"Usual position of person, if inactive">
+				text = <"Position (synthesised)">
+				description = <"Usual position of person, if inactive (synthesised)">
 			>
 		>
 	>

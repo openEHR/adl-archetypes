@@ -83,7 +83,7 @@ definition
 					ELEMENT[id10] occurrences matches {0..1} matches {	-- Status
 						value matches {
 							DV_CODED_TEXT[id20] matches {
-								defining_code matches {[ac1]}		-- Status
+								defining_code matches {[ac1]}		-- Status (synthesised)
 							}
 						}
 					}
@@ -155,8 +155,8 @@ terminology
 				description = <"**(en)">
 			>
 			["ac1"] = <
-				text = <"*Status(en)">
-				description = <"*An indication of whether the alert is considered to be an active, currently inactive, or resolved and not likely to impact on the patient again.(en)">
+				text = <"*Status (synthesised)(en)">
+				description = <"*An indication of whether the alert is considered to be an active, currently inactive, or resolved and not likely to impact on the patient again. (synthesised)(en)">
 			>
 		>
 		["en"] = <
@@ -205,8 +205,8 @@ terminology
 				description = <"Identification of the alert.">
 			>
 			["ac1"] = <
-				text = <"Status">
-				description = <"An indication of whether the alert is considered to be an active, currently inactive, or resolved and not likely to impact on the patient again.">
+				text = <"Status (synthesised)">
+				description = <"An indication of whether the alert is considered to be an active, currently inactive, or resolved and not likely to impact on the patient again. (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -255,8 +255,8 @@ terminology
 				description = <"*Identification of the alert.(en)">
 			>
 			["ac1"] = <
-				text = <"*Status(en)">
-				description = <"*An indication of whether the alert is considered to be an active, currently inactive, or resolved and not likely to impact on the patient again.(en)">
+				text = <"*Status (synthesised)(en)">
+				description = <"*An indication of whether the alert is considered to be an active, currently inactive, or resolved and not likely to impact on the patient again. (synthesised)(en)">
 			>
 		>
 	>

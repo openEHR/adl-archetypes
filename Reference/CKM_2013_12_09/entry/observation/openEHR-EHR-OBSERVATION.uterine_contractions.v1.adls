@@ -64,7 +64,7 @@ definition
 									ELEMENT[id17] occurrences matches {0..1} matches {	-- Pattern
 										value matches {
 											DV_CODED_TEXT[id40] matches {
-												defining_code matches {[ac1]}		-- Pattern
+												defining_code matches {[ac1]}		-- Pattern (synthesised)
 											}
 										}
 									}
@@ -100,7 +100,7 @@ definition
 											ELEMENT[id36] occurrences matches {0..1} matches {	-- Frequency per hour
 												value matches {
 													DV_QUANTITY[id45] matches {
-														property matches {[at39]}
+														property matches {[at38]}
 														units matches {"/h"}
 													}
 												}
@@ -110,14 +110,14 @@ definition
 									ELEMENT[id25] occurrences matches {0..1} matches {	-- Effectiveness
 										value matches {
 											DV_CODED_TEXT[id46] matches {
-												defining_code matches {[ac2]}		-- Effectiveness
+												defining_code matches {[ac2]}		-- Effectiveness (synthesised)
 											}
 										}
 									}
 									ELEMENT[id16] occurrences matches {0..1} matches {	-- Intra-uterine pressure
 										value matches {
 											DV_QUANTITY[id47] matches {
-												property matches {[at40]}
+												property matches {[at39]}
 												units matches {"mm[Hg]"}
 											}
 										}
@@ -135,7 +135,7 @@ definition
 					ELEMENT[id29] occurrences matches {0..1} matches {	-- Method
 						value matches {
 							DV_CODED_TEXT[id48] matches {
-								defining_code matches {[ac3]}		-- Method
+								defining_code matches {[ac3]}		-- Method (synthesised)
 							}
 						}
 					}
@@ -264,26 +264,22 @@ terminology
 				description = <"A textual comment on the duration of contractions - e.g. '10 to 20 seconds'">
 			>
 			["ac1"] = <
-				text = <"Pattern">
-				description = <"The rhythm of the contractions">
+				text = <"Pattern (synthesised)">
+				description = <"The rhythm of the contractions (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Effectiveness">
-				description = <"The effectiveness of the contractions">
+				text = <"Effectiveness (synthesised)">
+				description = <"The effectiveness of the contractions (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Method">
-				description = <"The method used to determine the uterine contraction features">
+				text = <"Method (synthesised)">
+				description = <"The method used to determine the uterine contraction features (synthesised)">
 			>
 			["at38"] = <
 				text = <"Frequency">
 				description = <"Frequency">
 			>
 			["at39"] = <
-				text = <"Frequency">
-				description = <"Frequency">
-			>
-			["at40"] = <
 				text = <"Pressure">
 				description = <"Pressure">
 			>
@@ -410,26 +406,22 @@ terminology
 				description = <"تعليق تعليق نصي عن مدة التقلصات, مثلا 10 إلى 20 ثانية">
 			>
 			["ac1"] = <
-				text = <"*Pattern(en)">
-				description = <"*The rhythm of the contractions(en)">
+				text = <"*Pattern (synthesised)(en)">
+				description = <"*The rhythm of the contractions (synthesised)(en)">
 			>
 			["ac2"] = <
-				text = <"*Effectiveness(en)">
-				description = <"*The effectiveness of the contractions(en)">
+				text = <"*Effectiveness (synthesised)(en)">
+				description = <"*The effectiveness of the contractions (synthesised)(en)">
 			>
 			["ac3"] = <
-				text = <"*Method(en)">
-				description = <"*The method used to determine the uterine contraction features(en)">
+				text = <"*Method (synthesised)(en)">
+				description = <"*The method used to determine the uterine contraction features (synthesised)(en)">
 			>
 			["at38"] = <
 				text = <"*Frequency (en)">
 				description = <"*Frequency (en)">
 			>
 			["at39"] = <
-				text = <"*Frequency (en)">
-				description = <"*Frequency (en)">
-			>
-			["at40"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
 			>
@@ -442,8 +434,7 @@ terminology
 	term_bindings = <
 		["openehr"] = <
 			["at38"] = <http://openehr.org/id/382>
-			["at39"] = <http://openehr.org/id/382>
-			["at40"] = <http://openehr.org/id/125>
+			["at39"] = <http://openehr.org/id/125>
 		>
 	>
 	value_sets = <

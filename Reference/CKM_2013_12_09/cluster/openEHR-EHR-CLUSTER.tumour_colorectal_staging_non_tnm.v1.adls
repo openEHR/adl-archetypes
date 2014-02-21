@@ -40,21 +40,21 @@ definition
 			ELEMENT[id2] occurrences matches {0..1} matches {	-- Dukes Score
 				value matches {
 					DV_CODED_TEXT[id18] matches {
-						defining_code matches {[ac1]}		-- Dukes Score
+						defining_code matches {[ac1]}		-- Dukes Score (synthesised)
 					}
 				}
 			}
 			ELEMENT[id3] occurrences matches {0..1} matches {	-- ACPS Score
 				value matches {
 					DV_CODED_TEXT[id19] matches {
-						defining_code matches {[ac2]}		-- ACPS Score
+						defining_code matches {[ac2]}		-- ACPS Score (synthesised)
 					}
 				}
 			}
 			ELEMENT[id17] occurrences matches {0..1} matches {	-- ACPS Concord variant
 				value matches {
 					DV_CODED_TEXT[id20] matches {
-						defining_code matches {[ac3]}		-- ACPS Concord variant
+						defining_code matches {[ac3]}		-- ACPS Concord variant (synthesised)
 					}
 				}
 			}
@@ -153,16 +153,16 @@ terminology
 				description = <"Distant metastases (clinical or histological).">
 			>
 			["ac1"] = <
-				text = <"Dukes Score">
-				description = <"Dukes classification for colorectal cancer (Dukes and Bussey modification)">
+				text = <"Dukes Score (synthesised)">
+				description = <"Dukes classification for colorectal cancer (Dukes and Bussey modification) (synthesised)">
 			>
 			["ac2"] = <
-				text = <"ACPS Score">
-				description = <"Australian clinicopathological staging (ACPS) system.">
+				text = <"ACPS Score (synthesised)">
+				description = <"Australian clinicopathological staging (ACPS) system. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"ACPS Concord variant">
-				description = <"Concord substage variant of Australian clinicopathological staging (ACPS) system.">
+				text = <"ACPS Concord variant (synthesised)">
+				description = <"Concord substage variant of Australian clinicopathological staging (ACPS) system. (synthesised)">
 			>
 		>
 	>

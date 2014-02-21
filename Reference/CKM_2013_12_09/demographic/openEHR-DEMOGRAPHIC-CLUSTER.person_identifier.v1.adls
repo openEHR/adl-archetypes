@@ -57,7 +57,7 @@ definition
 				value matches {
 					DV_TEXT[id9] 
 					DV_CODED_TEXT[id10] matches {
-						defining_code matches {[ac5]}		-- Área geografica
+						defining_code matches {[ac5]}		-- Área geografica (synthesised)
 					}
 				}
 			}
@@ -158,8 +158,8 @@ terminology
 				description = <"valid codes for countries.">
 			>
 			["ac5"] = <
-				text = <"*Área geografica(pt-br)">
-				description = <"*Indica a área geográfica onde o documento é váĺido.(pt-br)">
+				text = <"*Área geografica (synthesised)(pt-br)">
+				description = <"*Indica a área geográfica onde o documento é váĺido. (synthesised)(pt-br)">
 			>
 		>
 		["pt-br"] = <
@@ -220,8 +220,8 @@ terminology
 				description = <"códigos válidos para paises.">
 			>
 			["ac5"] = <
-				text = <"Área geografica">
-				description = <"Indica a área geográfica onde o documento é váĺido.">
+				text = <"Área geografica (synthesised)">
+				description = <"Indica a área geográfica onde o documento é váĺido. (synthesised)">
 			>
 		>
 	>
