@@ -1,0 +1,159 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ROLE.healthcare_provider_individual_role.v1.0.0
+
+specialize
+	CIMI-CORE-ROLE.healthcare_provider_role.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ROLE[id1.1.1.1] matches {	-- Healthcare provider individual role
+		details matches {
+			CLUSTER[id0.0.0.1] occurrences matches {0..*} matches {	-- Registration
+				item matches {
+					ELEMENT[id0.0.0.2] occurrences matches {0..1} matches {	-- Identifier
+						value matches {
+							TEXT[id0.0.0.13] 
+						}
+					}
+					ELEMENT[id0.0.0.3] occurrences matches {0..1} matches {	-- Registering organisation
+						value matches {
+							TEXT[id0.0.0.14] 
+						}
+					}
+					ELEMENT[id0.0.0.4] occurrences matches {0..1} matches {	-- Status
+						value matches {
+							CODED_TEXT[id0.0.0.15] 
+						}
+					}
+					ELEMENT[id0.0.0.5] occurrences matches {0..1} matches {	-- Datetime range
+						value matches {
+							INTERVAL_VALUE<DATE_TIME>[id0.0.0.16] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.0.0.6] occurrences matches {0..*} matches {	-- Qualification
+				item matches {
+					ELEMENT[id0.0.0.7] occurrences matches {1} matches {	-- Name
+						value matches {
+							TEXT[id0.0.0.17] 
+						}
+					}
+					ELEMENT[id0.0.0.8] occurrences matches {0..1} matches {	-- Level
+						value matches {
+							CODED_TEXT[id0.0.0.18] 
+						}
+					}
+					ELEMENT[id0.0.0.9] occurrences matches {0..1} matches {	-- Issuing institution
+						value matches {
+							TEXT[id0.0.0.19] 
+						}
+					}
+					ELEMENT[id0.0.0.10] occurrences matches {0..1} matches {	-- Issuing country
+						value matches {
+							CODED_TEXT[id0.0.0.20] 
+						}
+					}
+					ELEMENT[id0.0.0.11] occurrences matches {0..1} matches {	-- Date
+						value matches {
+							DATE[id0.0.0.21] 
+						}
+					}
+				}
+			}
+			ELEMENT[id0.0.0.12] occurrences matches {0..*} matches {	-- Role
+				value matches {
+					TEXT[id0.0.0.22] 
+				}
+			}
+		}
+		relationship matches {
+			use_archetype PARTY_RELATIONSHIP[CIMI-CORE-PARTY_RELATIONSHIP.employer_relationship.v1] 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1.1"] = <
+				text = <"Healthcare provider individual role">
+				description = <"Healthcare provider individual role">
+			>
+			["id0.0.0.1"] = <
+				text = <"Registration">
+				description = <"Registration">
+			>
+			["id0.0.0.2"] = <
+				text = <"Identifier">
+				description = <"Identifier">
+			>
+			["id0.0.0.3"] = <
+				text = <"Registering organisation">
+				description = <"Registering organisation">
+			>
+			["id0.0.0.4"] = <
+				text = <"Status">
+				description = <"Status">
+			>
+			["id0.0.0.5"] = <
+				text = <"Datetime range">
+				description = <"Datetime range">
+			>
+			["id0.0.0.6"] = <
+				text = <"Qualification">
+				description = <"Qualification">
+			>
+			["id0.0.0.7"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["id0.0.0.8"] = <
+				text = <"Level">
+				description = <"Level">
+			>
+			["id0.0.0.9"] = <
+				text = <"Issuing institution">
+				description = <"Issuing institution">
+			>
+			["id0.0.0.10"] = <
+				text = <"Issuing country">
+				description = <"Issuing country">
+			>
+			["id0.0.0.11"] = <
+				text = <"Date">
+				description = <"Date">
+			>
+			["id0.0.0.12"] = <
+				text = <"Role">
+				description = <"Role">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1.1"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.1"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.2"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.3"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.4"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.5"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.6"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.7"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.8"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.9"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.10"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.11"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.12"] = <http://snomedct.info/id/138875005>
+		>
+	>

@@ -1,0 +1,58 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-ENTRY.laboratory_report_header.v3
+
+specialize
+	CIMI-CORE-ENTRY.clinical_report_header.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	ENTRY[at0000.1.1] matches { -- Laboratory Report Header
+		/data matches {
+			ELEMENT[at0.0.1] occurrences matches {0..1} matches { -- Report Type
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.0.2] occurrences matches {0..*} matches { -- Diagnosis
+				value matches {
+					TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1.1"] = <
+				text = <"Laboratory Report Header">
+				description = <"Laboratory Report Header">
+			>
+			["at0.0.1"] = <
+				text = <"Report Type">
+				description = <"Report Type">
+			>
+			["at0.0.2"] = <
+				text = <"Diagnosis">
+				description = <"Diagnosis">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0.0.1"] = <[SNOMED-CT::364712009]>
+				["at0.0.2"] = <[SNOMED-CT::138875005]>
+			>
+		>
+	>

@@ -1,0 +1,48 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.specimen_collection_site.v1.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.anatomical_location.v2
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1.1] matches {	-- Specimen Collection Site
+		/item matches {
+			ELEMENT[id0.0.1] occurrences matches {0..1} matches {	-- Body side
+				value matches {
+					TEXT[id0.0.2] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1"] = <
+				text = <"Specimen Collection Site">
+				description = <"Specimen Collection Site">
+			>
+			["id0.0.1"] = <
+				text = <"Body side">
+				description = <"Body side">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1"] = <http://snomedct.info/id/123037004>
+			["id0.0.1"] = <http://snomedct.info/id/182353008>
+		>
+	>

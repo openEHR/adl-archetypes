@@ -1,0 +1,99 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.finding_item.v1.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.finding.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1] matches {	-- Finding Item
+		/item matches {
+			ELEMENT[id0.1] occurrences matches {0..1} matches {	-- Finding value
+				value matches {
+					DATA_VALUE[id0.7] 
+				}
+			}
+			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Normal range
+				value matches {
+					INTERVAL_VALUE<DATE_TIME>[id0.8] 
+				}
+			}
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.reference_range.v1] 
+			ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Delta flag
+				value matches {
+					CODED_TEXT[id0.9] 
+				}
+			}
+			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Signal flag
+				value matches {
+					CODED_TEXT[id0.10] 
+				}
+			}
+			ELEMENT[id0.5] occurrences matches {0..1} matches {	-- Confidence
+				value matches {
+					TEXT[id0.11] 
+				}
+			}
+			ELEMENT[id0.6] occurrences matches {0..*} matches {	-- Method
+				value matches {
+					TEXT[id0.12] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Finding Item">
+				description = <"Finding Item">
+			>
+			["id0.1"] = <
+				text = <"Finding value">
+				description = <"Finding value">
+			>
+			["id0.2"] = <
+				text = <"Normal range">
+				description = <"Normal range">
+			>
+			["id0.3"] = <
+				text = <"Delta flag">
+				description = <"Delta flag">
+			>
+			["id0.4"] = <
+				text = <"Signal flag">
+				description = <"Signal flag">
+			>
+			["id0.5"] = <
+				text = <"Confidence">
+				description = <"Confidence">
+			>
+			["id0.6"] = <
+				text = <"Method">
+				description = <"Method">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1"] = <http://snomedct.info/id/404684003>
+			["id0.1"] = <http://snomedct.info/id/404684003>
+			["id0.2"] = <http://snomedct.info/id/138875005>
+			["id0.3"] = <http://snomedct.info/id/288533004>
+			["id0.4"] = <http://snomedct.info/id/288533004>
+			["id0.5"] = <http://snomedct.info/id/138875005>
+			["id0.6"] = <http://snomedct.info/id/138875005>
+		>
+	>

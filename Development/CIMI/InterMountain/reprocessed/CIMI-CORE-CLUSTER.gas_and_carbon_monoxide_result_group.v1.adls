@@ -1,0 +1,39 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.gas_and_carbon_monoxide_result_group.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1] matches {	-- Gas and carbon monoxide result group
+		item matches {
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.ph_of_blood.v1] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.ph_of_blood_adjusted_to_patient_temperature.v1] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.carbon_dioxide_partial_pressure_blood.v1] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.carbon_dioxide_partial_pressure_adjusted_to_patient_temperature.v1] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.oxygen_partial_pressure_in_blood.v1] 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Gas and carbon monoxide result group">
+				description = <"Gas and carbon monoxide result group">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+		>
+	>

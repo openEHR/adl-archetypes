@@ -1,0 +1,52 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ENTRY.gas_and_carbon_monoxide_panel.v1.0.0
+
+specialize
+	CIMI-CORE-ENTRY.laboratory_test_observation.v2
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ENTRY[id1.1.1.1] matches {	-- Gas and Carbon Monoxide Panel
+		/data matches {
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.gas_and_carbon_monoxide_observable.v1] 
+			CLUSTER[id0.0.0.1] occurrences matches {0..1} matches {	-- Test results REF<CIMI-CORE-CLUSTER.gas_and_carbon_monoxide_result_group>
+				item matches {
+					use_archetype CLUSTER[CIMI-CORE-CLUSTER.ph_of_blood.v1] 
+					use_archetype CLUSTER[CIMI-CORE-CLUSTER.ph_of_blood_adjusted_to_patient_temperature.v1] 
+					use_archetype CLUSTER[CIMI-CORE-CLUSTER.carbon_dioxide_partial_pressure_blood.v1] 
+					use_archetype CLUSTER[CIMI-CORE-CLUSTER.carbon_dioxide_partial_pressure_adjusted_to_patient_temperature.v1] 
+					use_archetype CLUSTER[CIMI-CORE-CLUSTER.oxygen_partial_pressure_in_blood.v1] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1.1"] = <
+				text = <"Gas and Carbon Monoxide Panel">
+				description = <"Gas and Carbon Monoxide Panel">
+			>
+			["id0.0.0.1"] = <
+				text = <"Test results REF<CIMI-CORE-CLUSTER.gas_and_carbon_monoxide_result_group>">
+				description = <"Test results REF<CIMI-CORE-CLUSTER.gas_and_carbon_monoxide_result_group>">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1.1"] = <http://snomedct.info/id/441742003>
+		>
+	>

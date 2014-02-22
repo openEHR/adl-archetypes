@@ -1,0 +1,253 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.person_name_detailed.v1.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.person_name.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1.1.1] matches {	-- Person name detailed
+		item matches {
+			ELEMENT[id0.0.0.1] occurrences matches {0..1} matches {	-- Value
+				value matches {
+					TEXT[id0.0.0.23] 
+				}
+			}
+			ELEMENT[id0.0.0.2] occurrences matches {0..1} matches {	-- Identifier
+				value matches {
+					IDENTIFIER[id0.0.0.24] 
+				}
+			}
+			CLUSTER[id0.0.0.3] occurrences matches {0..*} matches {	-- Title
+				item matches {
+					ELEMENT[id0.0.0.4] occurrences matches {0..1} matches {	-- Part number
+						value matches {
+							COUNT[id0.0.0.25] 
+						}
+					}
+					ELEMENT[id0.0.0.5] occurrences matches {0..1} matches {	-- Value
+						value matches {
+							TEXT[id0.0.0.26] 
+						}
+					}
+					ELEMENT[id0.0.0.6] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.0.0.27] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.0.0.7] occurrences matches {0..*} matches {	-- Given name
+				item matches {
+					ELEMENT[id0.0.0.8] occurrences matches {0..1} matches {	-- Part number
+						value matches {
+							COUNT[id0.0.0.28] 
+						}
+					}
+					ELEMENT[id0.0.0.9] occurrences matches {0..1} matches {	-- Value
+						value matches {
+							TEXT[id0.0.0.29] 
+						}
+					}
+					ELEMENT[id0.0.0.10] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.0.0.30] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.0.0.11] occurrences matches {0..*} matches {	-- Middle name
+				item matches {
+					ELEMENT[id0.0.0.12] occurrences matches {0..1} matches {	-- Part number
+						value matches {
+							COUNT[id0.0.0.31] 
+						}
+					}
+					ELEMENT[id0.0.0.13] occurrences matches {0..1} matches {	-- Value
+						value matches {
+							TEXT[id0.0.0.32] 
+						}
+					}
+					ELEMENT[id0.0.0.14] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.0.0.33] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.0.0.15] occurrences matches {0..*} matches {	-- Family name
+				item matches {
+					ELEMENT[id0.0.0.16] occurrences matches {0..1} matches {	-- Part number
+						value matches {
+							COUNT[id0.0.0.34] 
+						}
+					}
+					ELEMENT[id0.0.0.17] occurrences matches {0..1} matches {	-- Value
+						value matches {
+							TEXT[id0.0.0.35] 
+						}
+					}
+					ELEMENT[id0.0.0.18] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.0.0.36] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.0.0.19] occurrences matches {0..*} matches {	-- Suffix
+				item matches {
+					ELEMENT[id0.0.0.20] occurrences matches {0..1} matches {	-- Part number
+						value matches {
+							COUNT[id0.0.0.37] 
+						}
+					}
+					ELEMENT[id0.0.0.21] occurrences matches {0..1} matches {	-- Value
+						value matches {
+							TEXT[id0.0.0.38] 
+						}
+					}
+					ELEMENT[id0.0.0.22] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.0.0.39] 
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1.1"] = <
+				text = <"Person name detailed">
+				description = <"Person name detailed">
+			>
+			["id0.0.0.1"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["id0.0.0.2"] = <
+				text = <"Identifier">
+				description = <"Identifier">
+			>
+			["id0.0.0.3"] = <
+				text = <"Title">
+				description = <"Title">
+			>
+			["id0.0.0.4"] = <
+				text = <"Part number">
+				description = <"Part number">
+			>
+			["id0.0.0.5"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["id0.0.0.6"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.0.0.7"] = <
+				text = <"Given name">
+				description = <"Given name">
+			>
+			["id0.0.0.8"] = <
+				text = <"Part number">
+				description = <"Part number">
+			>
+			["id0.0.0.9"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["id0.0.0.10"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.0.0.11"] = <
+				text = <"Middle name">
+				description = <"Middle name">
+			>
+			["id0.0.0.12"] = <
+				text = <"Part number">
+				description = <"Part number">
+			>
+			["id0.0.0.13"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["id0.0.0.14"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.0.0.15"] = <
+				text = <"Family name">
+				description = <"Family name">
+			>
+			["id0.0.0.16"] = <
+				text = <"Part number">
+				description = <"Part number">
+			>
+			["id0.0.0.17"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["id0.0.0.18"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.0.0.19"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.0.0.20"] = <
+				text = <"Part number">
+				description = <"Part number">
+			>
+			["id0.0.0.21"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["id0.0.0.22"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1.1"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.1"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.2"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.3"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.4"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.5"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.6"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.7"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.8"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.9"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.10"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.11"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.12"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.13"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.14"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.15"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.16"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.17"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.18"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.19"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.20"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.21"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.22"] = <http://snomedct.info/id/138875005>
+		>
+	>

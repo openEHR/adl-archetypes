@@ -1,0 +1,54 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.lymphocytes_variant_per_hundred_in_blood_auto.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1] matches {	-- Lymphocytes variant per hundred leukocytes in blood by automated count
+		item matches {
+			ELEMENT[id3] occurrences matches {1} matches {	-- Name
+				value matches {
+					TEXT[id5] 
+				}
+			}
+			ELEMENT[id4] occurrences matches {1} matches {	-- Result value
+				value matches {
+					QUANTITY[id6] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Lymphocytes variant per hundred leukocytes in blood by automated count">
+				description = <"Lymphocytes variant per hundred leukocytes in blood by automated count">
+			>
+			["id3"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["id4"] = <
+				text = <"Result value">
+				description = <"Result value">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id3"] = <http://snomedct.info/id/138875005>
+			["id4"] = <http://snomedct.info/id/138875005>
+		>
+	>

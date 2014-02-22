@@ -1,0 +1,113 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.verify_birthdate_action.v1.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.action.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1] matches {	-- Verify birthdate action
+		/item matches {
+			ELEMENT[id0.1] occurrences matches {1} matches {	-- Action type
+				value matches {
+					CODED_TEXT[id0.10] 
+				}
+			}
+			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Verify birthdate datetime
+				value matches {
+					DATE_TIME[id0.11] 
+				}
+			}
+			ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Verify birthdate datetime range
+				value matches {
+					INTERVAL_VALUE<DATE_TIME>[id0.12] 
+				}
+			}
+			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Verify birthdate duration
+				value matches {
+					DURATION[id0.13] 
+				}
+			}
+			ELEMENT[id0.5] occurrences matches {0..1} matches {	-- Verify birthdate timing offset
+				value matches {
+					DURATION[id0.14] 
+				}
+			}
+			ELEMENT[id0.6] occurrences matches {0..1} matches {	-- Verify birthdate timing offset origin
+				value matches {
+					DATE_TIME[id0.15] 
+				}
+			}
+		}
+		participation matches {
+			PARTICIPATION[id0.7] occurrences matches {0..*} 	-- Verifier
+			PARTICIPATION[id0.8] occurrences matches {0..1} 	-- Locationof subject
+			PARTICIPATION[id0.9] occurrences matches {0..1} 	-- Locationof verifier
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Verify birthdate action">
+				description = <"Verify birthdate action">
+			>
+			["id0.1"] = <
+				text = <"Action type">
+				description = <"Action type">
+			>
+			["id0.2"] = <
+				text = <"Verify birthdate datetime">
+				description = <"Verify birthdate datetime">
+			>
+			["id0.3"] = <
+				text = <"Verify birthdate datetime range">
+				description = <"Verify birthdate datetime range">
+			>
+			["id0.4"] = <
+				text = <"Verify birthdate duration">
+				description = <"Verify birthdate duration">
+			>
+			["id0.5"] = <
+				text = <"Verify birthdate timing offset">
+				description = <"Verify birthdate timing offset">
+			>
+			["id0.6"] = <
+				text = <"Verify birthdate timing offset origin">
+				description = <"Verify birthdate timing offset origin">
+			>
+			["id0.7"] = <
+				text = <"Verifier">
+				description = <"Verifier">
+			>
+			["id0.8"] = <
+				text = <"Locationof subject">
+				description = <"Locationof subject">
+			>
+			["id0.9"] = <
+				text = <"Locationof verifier">
+				description = <"Locationof verifier">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id0.1"] = <http://snomedct.info/id/364713004>
+			["id0.2"] = <http://snomedct.info/id/364713004>
+			["id0.3"] = <http://snomedct.info/id/48176007>
+			["id0.4"] = <http://snomedct.info/id/308916002>
+			["id0.5"] = <http://snomedct.info/id/308916002>
+		>
+	>

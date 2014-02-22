@@ -1,0 +1,131 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ACTOR.organisation.v1.0.0
+
+specialize
+	CIMI-CORE-ACTOR.actor.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ACTOR[id1.1.1] matches {	-- Organisation
+		/details matches {
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.organization_name.v1] 
+			ELEMENT[id0.0.1] occurrences matches {0..1} matches {	-- Department/ unit
+				value matches {
+					TEXT[id0.0.10] 
+				}
+			}
+			ELEMENT[id0.0.2] occurrences matches {0..1} matches {	-- Industry
+				value matches {
+					TEXT[id0.0.11] 
+				}
+			}
+			ELEMENT[id0.0.3] occurrences matches {0..1} matches {	-- Status
+				value matches {
+					CODED_TEXT[id0.0.12] 
+				}
+			}
+			CLUSTER[id0.0.4] occurrences matches {0..*} matches {	-- Accreditation
+				item matches {
+					ELEMENT[id0.0.5] occurrences matches {0..1} matches {	-- Identifier
+						value matches {
+							IDENTIFIER[id0.0.13] 
+						}
+					}
+					ELEMENT[id0.0.6] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							TEXT[id0.0.14] 
+						}
+					}
+					ELEMENT[id0.0.7] occurrences matches {0..1} matches {	-- Date range
+						value matches {
+							INTERVAL_VALUE<DATE>[id0.0.15] 
+						}
+					}
+				}
+			}
+			ELEMENT[id0.0.8] occurrences matches {0..1} matches {	-- Date range
+				value matches {
+					INTERVAL_VALUE<DATE>[id0.0.16] 
+				}
+			}
+			ELEMENT[id0.0.9] occurrences matches {1} matches {	-- Organisation type
+				value matches {
+					CODED_TEXT[id0.0.17] 
+				}
+			}
+		}
+		relationship matches {
+			use_archetype PARTY_RELATIONSHIP[CIMI-CORE-PARTY_RELATIONSHIP.healthcare_provider_relationship.v1] 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1"] = <
+				text = <"Organisation">
+				description = <"Organisation">
+			>
+			["id0.0.1"] = <
+				text = <"Department/ unit">
+				description = <"Department/ unit">
+			>
+			["id0.0.2"] = <
+				text = <"Industry">
+				description = <"Industry">
+			>
+			["id0.0.3"] = <
+				text = <"Status">
+				description = <"Status">
+			>
+			["id0.0.4"] = <
+				text = <"Accreditation">
+				description = <"Accreditation">
+			>
+			["id0.0.5"] = <
+				text = <"Identifier">
+				description = <"Identifier">
+			>
+			["id0.0.6"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.0.7"] = <
+				text = <"Date range">
+				description = <"Date range">
+			>
+			["id0.0.8"] = <
+				text = <"Date range">
+				description = <"Date range">
+			>
+			["id0.0.9"] = <
+				text = <"Organisation type">
+				description = <"Organisation type">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1"] = <http://snomedct.info/id/138875005>
+			["id0.0.1"] = <http://snomedct.info/id/138875005>
+			["id0.0.2"] = <http://snomedct.info/id/138875005>
+			["id0.0.3"] = <http://snomedct.info/id/138875005>
+			["id0.0.4"] = <http://snomedct.info/id/138875005>
+			["id0.0.5"] = <http://snomedct.info/id/138875005>
+			["id0.0.6"] = <http://snomedct.info/id/138875005>
+			["id0.0.7"] = <http://snomedct.info/id/138875005>
+			["id0.0.8"] = <http://snomedct.info/id/138875005>
+			["id0.0.9"] = <http://snomedct.info/id/138875005>
+		>
+	>

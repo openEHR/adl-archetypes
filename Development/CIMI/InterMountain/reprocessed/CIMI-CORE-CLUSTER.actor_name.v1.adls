@@ -1,0 +1,48 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.actor_name.v1.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.party_name.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1] matches {	-- Actor name
+		/item matches {
+			ELEMENT[id0.1] occurrences matches {0..1} matches {	-- Value
+				value matches {
+					TEXT[id0.2] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Actor name">
+				description = <"Actor name">
+			>
+			["id0.1"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1"] = <http://snomedct.info/id/138875005>
+			["id0.1"] = <http://snomedct.info/id/138875005>
+		>
+	>

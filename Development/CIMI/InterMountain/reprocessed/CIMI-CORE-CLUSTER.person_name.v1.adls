@@ -1,0 +1,176 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.person_name.v1.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.actor_name.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1.1] matches {	-- Person name
+		item matches {
+			ELEMENT[id0.0.1] occurrences matches {0..1} matches {	-- Value
+				value matches {
+					TEXT[id0.0.15] 
+				}
+			}
+			ELEMENT[id0.0.2] occurrences matches {0..1} matches {	-- Identifier
+				value matches {
+					IDENTIFIER[id0.0.16] 
+				}
+			}
+			CLUSTER[id0.0.3] occurrences matches {0..*} matches {	-- Part
+				item matches {
+					ELEMENT[id0.0.4] occurrences matches {0..1} matches {	-- Part number
+						value matches {
+							COUNT[id0.0.17] 
+						}
+					}
+					ELEMENT[id0.0.5] occurrences matches {0..1} matches {	-- Value
+						value matches {
+							TEXT[id0.0.18] 
+						}
+					}
+					ELEMENT[id0.0.6] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.0.19] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.0.7] occurrences matches {0..*} matches {	-- Use
+				item matches {
+					ELEMENT[id0.0.8] occurrences matches {1} matches {	-- Value
+						value matches {
+							TEXT[id0.0.20] 
+						}
+					}
+					ELEMENT[id0.0.9] occurrences matches {0..1} matches {	-- Datetime range
+						value matches {
+							DATE_TIME[id0.0.21] 
+						}
+					}
+					ELEMENT[id0.0.10] occurrences matches {0..1} matches {	-- Identifier
+						value matches {
+							IDENTIFIER[id0.0.22] 
+						}
+					}
+				}
+			}
+			ELEMENT[id0.0.11] occurrences matches {0..1} matches {	-- Datetime range
+				value matches {
+					INTERVAL_VALUE<DATE>[id0.0.23] 
+				}
+			}
+			ELEMENT[id0.0.12] occurrences matches {0..1} matches {	-- Usage conditions
+				value matches {
+					TEXT[id0.0.24] 
+				}
+			}
+			ELEMENT[id0.0.13] occurrences matches {0..1} matches {	-- Status
+				value matches {
+					CODED_TEXT[id0.0.25] 
+				}
+			}
+			ELEMENT[id0.0.14] occurrences matches {0..1} matches {	-- Preferred flag
+				value matches {
+					CODED_TEXT[id0.0.26] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1"] = <
+				text = <"Person name">
+				description = <"Person name">
+			>
+			["id0.0.1"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["id0.0.2"] = <
+				text = <"Identifier">
+				description = <"Identifier">
+			>
+			["id0.0.3"] = <
+				text = <"Part">
+				description = <"Part">
+			>
+			["id0.0.4"] = <
+				text = <"Part number">
+				description = <"Part number">
+			>
+			["id0.0.5"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["id0.0.6"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.0.7"] = <
+				text = <"Use">
+				description = <"Use">
+			>
+			["id0.0.8"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["id0.0.9"] = <
+				text = <"Datetime range">
+				description = <"Datetime range">
+			>
+			["id0.0.10"] = <
+				text = <"Identifier">
+				description = <"Identifier">
+			>
+			["id0.0.11"] = <
+				text = <"Datetime range">
+				description = <"Datetime range">
+			>
+			["id0.0.12"] = <
+				text = <"Usage conditions">
+				description = <"Usage conditions">
+			>
+			["id0.0.13"] = <
+				text = <"Status">
+				description = <"Status">
+			>
+			["id0.0.14"] = <
+				text = <"Preferred flag">
+				description = <"Preferred flag">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1"] = <http://snomedct.info/id/138875005>
+			["id0.0.1"] = <http://snomedct.info/id/138875005>
+			["id0.0.2"] = <http://snomedct.info/id/138875005>
+			["id0.0.3"] = <http://snomedct.info/id/138875005>
+			["id0.0.4"] = <http://snomedct.info/id/138875005>
+			["id0.0.5"] = <http://snomedct.info/id/138875005>
+			["id0.0.6"] = <http://snomedct.info/id/138875005>
+			["id0.0.7"] = <http://snomedct.info/id/138875005>
+			["id0.0.8"] = <http://snomedct.info/id/138875005>
+			["id0.0.9"] = <http://snomedct.info/id/138875005>
+			["id0.0.10"] = <http://snomedct.info/id/138875005>
+			["id0.0.11"] = <http://snomedct.info/id/138875005>
+			["id0.0.12"] = <http://snomedct.info/id/138875005>
+			["id0.0.13"] = <http://snomedct.info/id/138875005>
+			["id0.0.14"] = <http://snomedct.info/id/138875005>
+		>
+	>

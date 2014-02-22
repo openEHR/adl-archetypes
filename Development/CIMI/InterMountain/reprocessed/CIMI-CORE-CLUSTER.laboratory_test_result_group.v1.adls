@@ -1,0 +1,61 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.laboratory_test_result_group.v1.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.finding_group.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1.1] matches {	-- Laboratory Test Result Group
+		/item matches {
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.laboratory_test_result_item.v1] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.laboratory_test_result_group.v1] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.specimen.v3] 
+			ELEMENT[id0.0.1] occurrences matches {0..*} matches {	-- Diagnosis
+				value matches {
+					TEXT[id0.0.3] 
+				}
+			}
+			ELEMENT[id0.0.2] occurrences matches {0..*} matches {	-- Conclusions
+				value matches {
+					TEXT[id0.0.4] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1"] = <
+				text = <"Laboratory Test Result Group">
+				description = <"Laboratory Test Result Group">
+			>
+			["id0.0.1"] = <
+				text = <"Diagnosis">
+				description = <"Diagnosis">
+			>
+			["id0.0.2"] = <
+				text = <"Conclusions">
+				description = <"Conclusions">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1"] = <http://snomedct.info/id/441742003>
+			["id0.0.1"] = <http://snomedct.info/id/123038009>
+			["id0.0.2"] = <http://snomedct.info/id/123038009>
+		>
+	>

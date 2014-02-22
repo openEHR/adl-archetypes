@@ -1,0 +1,87 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-PARTY_RELATIONSHIP.employer_relationship.v1.0.0
+
+specialize
+	CIMI-CORE-PARTY_RELATIONSHIP.organisation_relationship.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	PARTY_RELATIONSHIP[id1.1.1] matches {	-- Employer
+		details matches {
+			ELEMENT[id0.0.1] occurrences matches {0..1} matches {	-- Role
+				value matches {
+					TEXT[id0.0.6] 
+				}
+			}
+			ELEMENT[id0.0.2] occurrences matches {0..1} matches {	-- Rank
+				value matches {
+					TEXT[id0.0.7] 
+				}
+			}
+			ELEMENT[id0.0.3] occurrences matches {0..1} matches {	-- Occupation
+				value matches {
+					TEXT[id0.0.8] 
+				}
+			}
+			ELEMENT[id0.0.4] occurrences matches {0..1} matches {	-- Salary type
+				value matches {
+					TEXT[id0.0.9] 
+				}
+			}
+			ELEMENT[id0.0.5] occurrences matches {0..1} matches {	-- Salary quantity
+				value matches {
+					QUANTITY[id0.0.10] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1"] = <
+				text = <"Employer">
+				description = <"Employer">
+			>
+			["id0.0.1"] = <
+				text = <"Role">
+				description = <"Role">
+			>
+			["id0.0.2"] = <
+				text = <"Rank">
+				description = <"Rank">
+			>
+			["id0.0.3"] = <
+				text = <"Occupation">
+				description = <"Occupation">
+			>
+			["id0.0.4"] = <
+				text = <"Salary type">
+				description = <"Salary type">
+			>
+			["id0.0.5"] = <
+				text = <"Salary quantity">
+				description = <"Salary quantity">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1"] = <http://snomedct.info/id/138875005>
+			["id0.0.1"] = <http://snomedct.info/id/138875005>
+			["id0.0.2"] = <http://snomedct.info/id/138875005>
+			["id0.0.3"] = <http://snomedct.info/id/138875005>
+			["id0.0.4"] = <http://snomedct.info/id/138875005>
+		>
+	>

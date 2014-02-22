@@ -1,0 +1,35 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ROLE.healthcare_provider_organisation_role.v1.0.0
+
+specialize
+	CIMI-CORE-ROLE.healthcare_provider_role.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ROLE[id1.1.1.1] 	-- Healthcare provider organisation role
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1.1"] = <
+				text = <"Healthcare provider organisation role">
+				description = <"Healthcare provider organisation role">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1.1"] = <http://snomedct.info/id/138875005>
+		>
+	>

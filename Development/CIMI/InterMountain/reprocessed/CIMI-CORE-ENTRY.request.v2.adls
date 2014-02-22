@@ -1,0 +1,53 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ENTRY.request.v2.0.0
+
+specialize
+	CIMI-CORE-ENTRY.clinical_activity.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ENTRY[id1.1.1] matches {	-- Request
+		data matches {
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.request_action.v1] 
+			ITEM[id0.0.1] occurrences matches {0..*} 	-- Requested item
+		}
+		link matches {
+			LINK[id0.0.2] occurrences matches {0..*} 	-- Requested item link
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1"] = <
+				text = <"Request">
+				description = <"Request">
+			>
+			["id0.0.1"] = <
+				text = <"Requested item">
+				description = <"Requested item">
+			>
+			["id0.0.2"] = <
+				text = <"Requested item link">
+				description = <"Requested item link">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1"] = <http://snomedct.info/id/308539001>
+			["id0.0.1"] = <http://snomedct.info/id/138875005>
+			["id0.0.2"] = <http://snomedct.info/id/138875005>
+		>
+	>

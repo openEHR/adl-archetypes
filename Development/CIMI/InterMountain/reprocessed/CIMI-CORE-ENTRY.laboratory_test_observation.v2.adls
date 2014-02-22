@@ -1,0 +1,71 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ENTRY.laboratory_test_observation.v2.0.0
+
+specialize
+	CIMI-CORE-ENTRY.observation.v4
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ENTRY[id1.1.1] matches {	-- Laboratory Test Observation
+		/data matches {
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.laboratory_test_observable.v1] 
+			CLUSTER[id0.0.1] occurrences matches {0..1} matches {	-- Test results REF<CIMI-CORE-CLUSTER.laboratory_test_result_group>
+				item matches {
+					use_archetype CLUSTER[CIMI-CORE-CLUSTER.laboratory_test_result_item.v1] 
+					use_archetype CLUSTER[CIMI-CORE-CLUSTER.laboratory_test_result_group.v1] 
+					use_archetype CLUSTER[CIMI-CORE-CLUSTER.specimen.v3] 
+					ELEMENT[id0.0.2] occurrences matches {0..*} matches {	-- Diagnosis
+						value matches {
+							TEXT[id0.0.4] 
+						}
+					}
+					ELEMENT[id0.0.3] occurrences matches {0..*} matches {	-- Conclusions
+						value matches {
+							TEXT[id0.0.5] 
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1"] = <
+				text = <"Laboratory Test Observation">
+				description = <"Laboratory Test Observation">
+			>
+			["id0.0.1"] = <
+				text = <"Test results REF<CIMI-CORE-CLUSTER.laboratory_test_result_group>">
+				description = <"Test results REF<CIMI-CORE-CLUSTER.laboratory_test_result_group>">
+			>
+			["id0.0.2"] = <
+				text = <"Diagnosis">
+				description = <"Diagnosis">
+			>
+			["id0.0.3"] = <
+				text = <"Conclusions">
+				description = <"Conclusions">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1"] = <http://snomedct.info/id/364712009>
+			["id0.0.1"] = <http://snomedct.info/id/441742003>
+			["id0.0.2"] = <http://snomedct.info/id/123038009>
+			["id0.0.3"] = <http://snomedct.info/id/123038009>
+		>
+	>

@@ -1,0 +1,50 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ENTRY.patient_encounter_summary.v2.0.0
+
+specialize
+	CIMI-CORE-ENTRY.clinical_activity.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ENTRY[id1.1.1] matches {	-- Patient Encounter Summary
+		participation matches {
+			PARTICIPATION[id0.0.1] occurrences matches {0..1} 	-- Subject of care
+			PARTICIPATION[id0.0.2] occurrences matches {0..1} 	-- Information subject
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1"] = <
+				text = <"Patient Encounter Summary">
+				description = <"Patient Encounter Summary">
+			>
+			["id0.0.1"] = <
+				text = <"Subject of care">
+				description = <"Subject of care">
+			>
+			["id0.0.2"] = <
+				text = <"Information subject">
+				description = <"Information subject">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1"] = <http://snomedct.info/id/308335008>
+			["id0.0.1"] = <http://snomedct.info/id/125676002>
+			["id0.0.2"] = <http://snomedct.info/id/125676002>
+		>
+	>

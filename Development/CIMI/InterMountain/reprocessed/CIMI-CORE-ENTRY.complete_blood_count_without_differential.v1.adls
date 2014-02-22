@@ -1,0 +1,47 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ENTRY.complete_blood_count_without_differential.v1.0.0
+
+specialize
+	CIMI-CORE-ENTRY.complete_blood_count.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ENTRY[id1.1.1.1.1] matches {	-- Complete Blood Count Without Differential
+		data matches {
+			CLUSTER[id0.0.0.0.1] occurrences matches {0..1} matches {	-- Test results REF<CIMI-CORE-CLUSTER.complete_blood_count_result_group>
+				item matches {
+					use_archetype CLUSTER[CIMI-CORE-CLUSTER.laboratory_test_result_group.v1] 
+					use_archetype CLUSTER[CIMI-CORE-CLUSTER.laboratory_test_result_item.v1] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1.1.1"] = <
+				text = <"Complete Blood Count Without Differential">
+				description = <"Complete Blood Count Without Differential">
+			>
+			["id0.0.0.0.1"] = <
+				text = <"Test results REF<CIMI-CORE-CLUSTER.complete_blood_count_result_group>">
+				description = <"Test results REF<CIMI-CORE-CLUSTER.complete_blood_count_result_group>">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+		>
+	>

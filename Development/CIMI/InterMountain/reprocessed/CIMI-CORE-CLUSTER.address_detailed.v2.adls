@@ -1,0 +1,4366 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.address_detailed.v2.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.address.v2
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1] matches {	-- Address detailed
+		item matches {
+			CLUSTER[id0.1] occurrences matches {0..*} matches {	-- Additional locator
+				item matches {
+					ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.453] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.3] occurrences matches {0..1} matches {	-- Site name
+				item matches {
+					ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.454] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.5] occurrences matches {0..1} matches {	-- Unit number
+				item matches {
+					ELEMENT[id0.6] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.455] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.7] occurrences matches {0..1} matches {	-- Unit type
+				item matches {
+					ELEMENT[id0.8] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.456] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.9] occurrences matches {0..1} matches {	-- Postal box number
+				item matches {
+					ELEMENT[id0.10] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.457] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.11] occurrences matches {0..1} matches {	-- Floor/level number
+				item matches {
+					ELEMENT[id0.12] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.458] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.13] occurrences matches {0..1} matches {	-- Floor/level type
+				item matches {
+					ELEMENT[id0.14] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.459] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.15] occurrences matches {0..1} matches {	-- Lot number
+				item matches {
+					ELEMENT[id0.16] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.460] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.17] occurrences matches {0..1} matches {	-- Street
+				item matches {
+					ELEMENT[id0.18] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.461] 
+						}
+					}
+					ELEMENT[id0.19] occurrences matches {0..1} matches {	-- Name
+						value matches {
+							CODED_TEXT[id0.462] 
+						}
+					}
+					ELEMENT[id0.20] occurrences matches {0..1} matches {	-- Street type
+						value matches {
+							TEXT[id0.463] 
+						}
+					}
+					ELEMENT[id0.21] occurrences matches {0..1} matches {	-- Direction
+						value matches {
+							CODED_TEXT[id0.464] 
+						}
+					}
+					ELEMENT[id0.22] occurrences matches {0..1} matches {	-- Suffix
+						value matches {
+							TEXT[id0.465] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.23] occurrences matches {0..1} matches {	-- Street number
+				item matches {
+					ELEMENT[id0.24] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.466] 
+						}
+					}
+					ELEMENT[id0.25] occurrences matches {0..1} matches {	-- Numeric
+						value matches {
+							TEXT[id0.467] 
+						}
+					}
+					ELEMENT[id0.26] occurrences matches {0..1} matches {	-- Suffix
+						value matches {
+							TEXT[id0.468] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.27] occurrences matches {0..1} matches {	-- Intersection description
+				item matches {
+					ELEMENT[id0.28] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.469] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.29] occurrences matches {0..1} matches {	-- Visualisation
+				item matches {
+					ELEMENT[id0.30] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.470] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.31] occurrences matches {0..1} matches {	-- Census area
+				item matches {
+					ELEMENT[id0.32] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.471] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.33] occurrences matches {0..1} matches {	-- Delivery point identifier
+				item matches {
+					ELEMENT[id0.34] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.472] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.35] occurrences matches {0..1} matches {	-- Delivery number
+				item matches {
+					ELEMENT[id0.36] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.473] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.37] occurrences matches {0..1} matches {	-- Delivery installation type
+				item matches {
+					ELEMENT[id0.38] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.474] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.39] occurrences matches {0..1} matches {	-- Delivery installation area
+				item matches {
+					ELEMENT[id0.40] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.475] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.41] occurrences matches {0..1} matches {	-- Delivery installation qualifier
+				item matches {
+					ELEMENT[id0.42] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.476] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.43] occurrences matches {0..1} matches {	-- Delivery mode
+				item matches {
+					ELEMENT[id0.44] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.477] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.45] occurrences matches {0..1} matches {	-- Delivery mode identifier
+				item matches {
+					ELEMENT[id0.46] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.478] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.47] occurrences matches {0..1} matches {	-- Postal code
+				item matches {
+					ELEMENT[id0.48] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.479] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.49] occurrences matches {0..1} matches {	-- District TEXT
+				item matches {
+					ELEMENT[id0.50] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.480] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.51] occurrences matches {0..1} matches {	-- Suburb/town/locality
+				item matches {
+					ELEMENT[id0.52] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.481] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.53] occurrences matches {0..1} matches {	-- City
+				item matches {
+					ELEMENT[id0.54] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.482] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.55] occurrences matches {0..1} matches {	-- State/territory/province
+				item matches {
+					ELEMENT[id0.56] occurrences matches {0..1} matches {	-- Type
+						value matches {
+							CODED_TEXT[id0.483] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.56] occurrences matches {0..1} matches {	-- Type
+				item matches {
+					ELEMENT[id0.57] occurrences matches {0..1} matches {	-- Country
+						value matches {
+							CODED_TEXT[id0.484] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.58] occurrences matches {0..1} matches {	-- Type
+				item matches {
+					ELEMENT[id0.59] occurrences matches {0..1} matches {	-- Care of
+						value matches {
+							CODED_TEXT[id0.485] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.60] occurrences matches {0..1} matches {	-- Type
+				item matches {
+					ELEMENT[id0.61] occurrences matches {0..1} matches {	-- Delimiter
+						value matches {
+							CODED_TEXT[id0.486] 
+						}
+					}
+				}
+			}
+			CLUSTER[id0.62] occurrences matches {0..1} matches {	-- Type
+				item matches {
+					ELEMENT[id0.63] occurrences matches {0..1} matches {	-- Address line 1
+						value matches {
+							COUNT[id0.487] 
+						}
+					}
+					ELEMENT[id0.64] occurrences matches {0..1} matches {	-- Line number
+						value matches {
+							CODED_TEXT[id0.488] 
+						}
+					}
+					CLUSTER[id0.65] occurrences matches {0..*} matches {	-- Type
+						item matches {
+							ELEMENT[id0.66] occurrences matches {0..1} matches {	-- Additional locator
+								value matches {
+									CODED_TEXT[id0.489] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.67] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.68] occurrences matches {0..1} matches {	-- Site name
+								value matches {
+									CODED_TEXT[id0.490] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.69] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.70] occurrences matches {0..1} matches {	-- Unit number
+								value matches {
+									CODED_TEXT[id0.491] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.71] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.72] occurrences matches {0..1} matches {	-- Unit type
+								value matches {
+									CODED_TEXT[id0.492] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.73] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.74] occurrences matches {0..1} matches {	-- Postal box number
+								value matches {
+									CODED_TEXT[id0.493] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.75] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.76] occurrences matches {0..1} matches {	-- Floor/level number
+								value matches {
+									CODED_TEXT[id0.494] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.77] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.78] occurrences matches {0..1} matches {	-- Floor/level type
+								value matches {
+									CODED_TEXT[id0.495] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.79] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.80] occurrences matches {0..1} matches {	-- Lot number
+								value matches {
+									CODED_TEXT[id0.496] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.81] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.82] occurrences matches {0..1} matches {	-- Street
+								value matches {
+									CODED_TEXT[id0.497] 
+								}
+							}
+							ELEMENT[id0.83] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									CODED_TEXT[id0.498] 
+								}
+							}
+							ELEMENT[id0.84] occurrences matches {0..1} matches {	-- Name
+								value matches {
+									TEXT[id0.499] 
+								}
+							}
+							ELEMENT[id0.85] occurrences matches {0..1} matches {	-- Street type
+								value matches {
+									CODED_TEXT[id0.500] 
+								}
+							}
+							ELEMENT[id0.86] occurrences matches {0..1} matches {	-- Direction
+								value matches {
+									TEXT[id0.501] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.87] occurrences matches {0..1} matches {	-- Suffix
+						item matches {
+							ELEMENT[id0.88] occurrences matches {0..1} matches {	-- Street number
+								value matches {
+									CODED_TEXT[id0.502] 
+								}
+							}
+							ELEMENT[id0.89] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									TEXT[id0.503] 
+								}
+							}
+							ELEMENT[id0.90] occurrences matches {0..1} matches {	-- Numeric
+								value matches {
+									TEXT[id0.504] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.91] occurrences matches {0..1} matches {	-- Suffix
+						item matches {
+							ELEMENT[id0.92] occurrences matches {0..1} matches {	-- Intersection description
+								value matches {
+									CODED_TEXT[id0.505] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.93] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.94] occurrences matches {0..1} matches {	-- Visualisation
+								value matches {
+									CODED_TEXT[id0.506] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.95] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.96] occurrences matches {0..1} matches {	-- Census area
+								value matches {
+									CODED_TEXT[id0.507] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.97] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.98] occurrences matches {0..1} matches {	-- Delivery point identifier
+								value matches {
+									CODED_TEXT[id0.508] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.99] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.100] occurrences matches {0..1} matches {	-- Delivery number
+								value matches {
+									CODED_TEXT[id0.509] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.101] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.102] occurrences matches {0..1} matches {	-- Delivery installation type
+								value matches {
+									CODED_TEXT[id0.510] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.103] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.104] occurrences matches {0..1} matches {	-- Delivery installation area
+								value matches {
+									CODED_TEXT[id0.511] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.105] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.106] occurrences matches {0..1} matches {	-- Delivery installation qualifier
+								value matches {
+									CODED_TEXT[id0.512] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.107] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.108] occurrences matches {0..1} matches {	-- Delivery mode
+								value matches {
+									CODED_TEXT[id0.513] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.109] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.110] occurrences matches {0..1} matches {	-- Delivery mode identifier
+								value matches {
+									CODED_TEXT[id0.514] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.111] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.112] occurrences matches {0..1} matches {	-- Postal code
+								value matches {
+									CODED_TEXT[id0.515] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.113] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.114] occurrences matches {0..1} matches {	-- District TEXT
+								value matches {
+									CODED_TEXT[id0.516] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.115] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.116] occurrences matches {0..1} matches {	-- Suburb/town/locality
+								value matches {
+									CODED_TEXT[id0.517] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.117] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.118] occurrences matches {0..1} matches {	-- City
+								value matches {
+									CODED_TEXT[id0.518] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.119] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.120] occurrences matches {0..1} matches {	-- State/territory/province
+								value matches {
+									CODED_TEXT[id0.519] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.121] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.122] occurrences matches {0..1} matches {	-- Country
+								value matches {
+									CODED_TEXT[id0.520] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.123] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.124] occurrences matches {0..1} matches {	-- Care of
+								value matches {
+									CODED_TEXT[id0.521] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.125] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.126] occurrences matches {0..1} matches {	-- Delimiter
+								value matches {
+									CODED_TEXT[id0.522] 
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[id0.127] occurrences matches {0..1} matches {	-- Type
+				item matches {
+					ELEMENT[id0.128] occurrences matches {0..1} matches {	-- Address line 2
+						value matches {
+							COUNT[id0.523] 
+						}
+					}
+					ELEMENT[id0.129] occurrences matches {0..1} matches {	-- Line number
+						value matches {
+							CODED_TEXT[id0.524] 
+						}
+					}
+					CLUSTER[id0.130] occurrences matches {0..*} matches {	-- Type
+						item matches {
+							ELEMENT[id0.131] occurrences matches {0..1} matches {	-- Additional locator
+								value matches {
+									CODED_TEXT[id0.525] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.132] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.133] occurrences matches {0..1} matches {	-- Site name
+								value matches {
+									CODED_TEXT[id0.526] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.134] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.135] occurrences matches {0..1} matches {	-- Unit number
+								value matches {
+									CODED_TEXT[id0.527] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.136] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.137] occurrences matches {0..1} matches {	-- Unit type
+								value matches {
+									CODED_TEXT[id0.528] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.138] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.139] occurrences matches {0..1} matches {	-- Postal box number
+								value matches {
+									CODED_TEXT[id0.529] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.140] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.141] occurrences matches {0..1} matches {	-- Floor/level number
+								value matches {
+									CODED_TEXT[id0.530] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.142] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.143] occurrences matches {0..1} matches {	-- Floor/level type
+								value matches {
+									CODED_TEXT[id0.531] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.144] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.145] occurrences matches {0..1} matches {	-- Lot number
+								value matches {
+									CODED_TEXT[id0.532] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.146] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.147] occurrences matches {0..1} matches {	-- Street
+								value matches {
+									CODED_TEXT[id0.533] 
+								}
+							}
+							ELEMENT[id0.148] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									CODED_TEXT[id0.534] 
+								}
+							}
+							ELEMENT[id0.149] occurrences matches {0..1} matches {	-- Name
+								value matches {
+									TEXT[id0.535] 
+								}
+							}
+							ELEMENT[id0.150] occurrences matches {0..1} matches {	-- Street type
+								value matches {
+									CODED_TEXT[id0.536] 
+								}
+							}
+							ELEMENT[id0.151] occurrences matches {0..1} matches {	-- Direction
+								value matches {
+									TEXT[id0.537] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.152] occurrences matches {0..1} matches {	-- Suffix
+						item matches {
+							ELEMENT[id0.153] occurrences matches {0..1} matches {	-- Street number
+								value matches {
+									CODED_TEXT[id0.538] 
+								}
+							}
+							ELEMENT[id0.154] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									TEXT[id0.539] 
+								}
+							}
+							ELEMENT[id0.155] occurrences matches {0..1} matches {	-- Numeric
+								value matches {
+									TEXT[id0.540] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.156] occurrences matches {0..1} matches {	-- Suffix
+						item matches {
+							ELEMENT[id0.157] occurrences matches {0..1} matches {	-- Intersection description
+								value matches {
+									CODED_TEXT[id0.541] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.158] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.159] occurrences matches {0..1} matches {	-- Visualisation
+								value matches {
+									CODED_TEXT[id0.542] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.160] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.161] occurrences matches {0..1} matches {	-- Census area
+								value matches {
+									CODED_TEXT[id0.543] 
+								}
+							}
+							ELEMENT[id0.162] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									COUNT[id0.544] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.163] occurrences matches {0..1} matches {	-- Line number
+						item matches {
+							ELEMENT[id0.164] occurrences matches {0..1} matches {	-- Delivery point identifier
+								value matches {
+									CODED_TEXT[id0.545] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.165] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.166] occurrences matches {0..1} matches {	-- Delivery number
+								value matches {
+									CODED_TEXT[id0.546] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.167] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.168] occurrences matches {0..1} matches {	-- Delivery installation type
+								value matches {
+									CODED_TEXT[id0.547] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.169] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.170] occurrences matches {0..1} matches {	-- Delivery installation area
+								value matches {
+									CODED_TEXT[id0.548] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.171] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.172] occurrences matches {0..1} matches {	-- Delivery installation qualifier
+								value matches {
+									CODED_TEXT[id0.549] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.173] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.174] occurrences matches {0..1} matches {	-- Delivery mode
+								value matches {
+									CODED_TEXT[id0.550] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.175] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.176] occurrences matches {0..1} matches {	-- Delivery mode identifier
+								value matches {
+									CODED_TEXT[id0.551] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.177] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.178] occurrences matches {0..1} matches {	-- Postal code
+								value matches {
+									CODED_TEXT[id0.552] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.179] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.180] occurrences matches {0..1} matches {	-- District TEXT
+								value matches {
+									CODED_TEXT[id0.553] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.181] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.182] occurrences matches {0..1} matches {	-- Suburb/town/locality
+								value matches {
+									CODED_TEXT[id0.554] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.183] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.184] occurrences matches {0..1} matches {	-- City
+								value matches {
+									CODED_TEXT[id0.555] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.185] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.186] occurrences matches {0..1} matches {	-- State/territory/province
+								value matches {
+									CODED_TEXT[id0.556] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.187] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.188] occurrences matches {0..1} matches {	-- Country
+								value matches {
+									CODED_TEXT[id0.557] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.189] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.190] occurrences matches {0..1} matches {	-- Care of
+								value matches {
+									CODED_TEXT[id0.558] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.191] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.192] occurrences matches {0..1} matches {	-- Delimiter
+								value matches {
+									CODED_TEXT[id0.559] 
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[id0.193] occurrences matches {0..1} matches {	-- Type
+				item matches {
+					ELEMENT[id0.194] occurrences matches {0..1} matches {	-- Address line 3
+						value matches {
+							COUNT[id0.560] 
+						}
+					}
+					ELEMENT[id0.195] occurrences matches {0..1} matches {	-- Line number
+						value matches {
+							CODED_TEXT[id0.561] 
+						}
+					}
+					CLUSTER[id0.196] occurrences matches {0..*} matches {	-- Type
+						item matches {
+							ELEMENT[id0.197] occurrences matches {0..1} matches {	-- Additional locator
+								value matches {
+									CODED_TEXT[id0.562] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.198] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.199] occurrences matches {0..1} matches {	-- Site name
+								value matches {
+									CODED_TEXT[id0.563] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.200] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.201] occurrences matches {0..1} matches {	-- Unit number
+								value matches {
+									CODED_TEXT[id0.564] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.202] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.203] occurrences matches {0..1} matches {	-- Unit type
+								value matches {
+									CODED_TEXT[id0.565] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.204] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.205] occurrences matches {0..1} matches {	-- Postal box number
+								value matches {
+									CODED_TEXT[id0.566] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.206] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.207] occurrences matches {0..1} matches {	-- Floor/level number
+								value matches {
+									CODED_TEXT[id0.567] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.208] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.209] occurrences matches {0..1} matches {	-- Floor/level type
+								value matches {
+									CODED_TEXT[id0.568] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.210] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.211] occurrences matches {0..1} matches {	-- Lot number
+								value matches {
+									CODED_TEXT[id0.569] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.212] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.213] occurrences matches {0..1} matches {	-- Street
+								value matches {
+									CODED_TEXT[id0.570] 
+								}
+							}
+							ELEMENT[id0.214] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									CODED_TEXT[id0.571] 
+								}
+							}
+							ELEMENT[id0.215] occurrences matches {0..1} matches {	-- Name
+								value matches {
+									TEXT[id0.572] 
+								}
+							}
+							ELEMENT[id0.216] occurrences matches {0..1} matches {	-- Street type
+								value matches {
+									CODED_TEXT[id0.573] 
+								}
+							}
+							ELEMENT[id0.217] occurrences matches {0..1} matches {	-- Direction
+								value matches {
+									TEXT[id0.574] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.218] occurrences matches {0..1} matches {	-- Suffix
+						item matches {
+							ELEMENT[id0.219] occurrences matches {0..1} matches {	-- Street number
+								value matches {
+									CODED_TEXT[id0.575] 
+								}
+							}
+							ELEMENT[id0.220] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									TEXT[id0.576] 
+								}
+							}
+							ELEMENT[id0.221] occurrences matches {0..1} matches {	-- Numeric
+								value matches {
+									TEXT[id0.577] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.222] occurrences matches {0..1} matches {	-- Suffix
+						item matches {
+							ELEMENT[id0.223] occurrences matches {0..1} matches {	-- Intersection description
+								value matches {
+									CODED_TEXT[id0.578] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.224] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.225] occurrences matches {0..1} matches {	-- Visualisation
+								value matches {
+									CODED_TEXT[id0.579] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.226] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.227] occurrences matches {0..1} matches {	-- Census area
+								value matches {
+									CODED_TEXT[id0.580] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.228] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.229] occurrences matches {0..1} matches {	-- Delivery point identifier
+								value matches {
+									CODED_TEXT[id0.581] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.230] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.231] occurrences matches {0..1} matches {	-- Delivery number
+								value matches {
+									CODED_TEXT[id0.582] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.232] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.233] occurrences matches {0..1} matches {	-- Delivery installation type
+								value matches {
+									CODED_TEXT[id0.583] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.234] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.235] occurrences matches {0..1} matches {	-- Delivery installation area
+								value matches {
+									CODED_TEXT[id0.584] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.236] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.237] occurrences matches {0..1} matches {	-- Delivery installation qualifier
+								value matches {
+									CODED_TEXT[id0.585] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.238] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.239] occurrences matches {0..1} matches {	-- Delivery mode
+								value matches {
+									CODED_TEXT[id0.586] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.240] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.241] occurrences matches {0..1} matches {	-- Delivery mode identifier
+								value matches {
+									CODED_TEXT[id0.587] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.242] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.243] occurrences matches {0..1} matches {	-- Postal code
+								value matches {
+									CODED_TEXT[id0.588] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.244] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.245] occurrences matches {0..1} matches {	-- District TEXT
+								value matches {
+									CODED_TEXT[id0.589] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.246] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.247] occurrences matches {0..1} matches {	-- Suburb/town/locality
+								value matches {
+									CODED_TEXT[id0.590] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.248] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.249] occurrences matches {0..1} matches {	-- City
+								value matches {
+									CODED_TEXT[id0.591] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.250] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.251] occurrences matches {0..1} matches {	-- State/territory/province
+								value matches {
+									CODED_TEXT[id0.592] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.252] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.253] occurrences matches {0..1} matches {	-- Country
+								value matches {
+									CODED_TEXT[id0.593] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.254] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.255] occurrences matches {0..1} matches {	-- Care of
+								value matches {
+									CODED_TEXT[id0.594] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.256] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.257] occurrences matches {0..1} matches {	-- Delimiter
+								value matches {
+									CODED_TEXT[id0.595] 
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[id0.258] occurrences matches {0..1} matches {	-- Type
+				item matches {
+					ELEMENT[id0.259] occurrences matches {0..1} matches {	-- Address line 4
+						value matches {
+							COUNT[id0.596] 
+						}
+					}
+					ELEMENT[id0.260] occurrences matches {0..1} matches {	-- Line number
+						value matches {
+							CODED_TEXT[id0.597] 
+						}
+					}
+					CLUSTER[id0.261] occurrences matches {0..*} matches {	-- Type
+						item matches {
+							ELEMENT[id0.262] occurrences matches {0..1} matches {	-- Additional locator
+								value matches {
+									CODED_TEXT[id0.598] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.263] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.264] occurrences matches {0..1} matches {	-- Site name
+								value matches {
+									CODED_TEXT[id0.599] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.265] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.266] occurrences matches {0..1} matches {	-- Unit number
+								value matches {
+									CODED_TEXT[id0.600] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.267] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.268] occurrences matches {0..1} matches {	-- Unit type
+								value matches {
+									CODED_TEXT[id0.601] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.269] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.270] occurrences matches {0..1} matches {	-- Postal box number
+								value matches {
+									CODED_TEXT[id0.602] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.271] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.272] occurrences matches {0..1} matches {	-- Floor/level number
+								value matches {
+									CODED_TEXT[id0.603] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.273] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.274] occurrences matches {0..1} matches {	-- Floor/level type
+								value matches {
+									CODED_TEXT[id0.604] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.275] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.276] occurrences matches {0..1} matches {	-- Lot number
+								value matches {
+									CODED_TEXT[id0.605] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.277] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.278] occurrences matches {0..1} matches {	-- Street
+								value matches {
+									CODED_TEXT[id0.606] 
+								}
+							}
+							ELEMENT[id0.279] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									CODED_TEXT[id0.607] 
+								}
+							}
+							ELEMENT[id0.280] occurrences matches {0..1} matches {	-- Name
+								value matches {
+									TEXT[id0.608] 
+								}
+							}
+							ELEMENT[id0.281] occurrences matches {0..1} matches {	-- Street type
+								value matches {
+									CODED_TEXT[id0.609] 
+								}
+							}
+							ELEMENT[id0.282] occurrences matches {0..1} matches {	-- Direction
+								value matches {
+									TEXT[id0.610] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.283] occurrences matches {0..1} matches {	-- Suffix
+						item matches {
+							ELEMENT[id0.284] occurrences matches {0..1} matches {	-- Street number
+								value matches {
+									CODED_TEXT[id0.611] 
+								}
+							}
+							ELEMENT[id0.285] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									TEXT[id0.612] 
+								}
+							}
+							ELEMENT[id0.286] occurrences matches {0..1} matches {	-- Numeric
+								value matches {
+									TEXT[id0.613] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.287] occurrences matches {0..1} matches {	-- Suffix
+						item matches {
+							ELEMENT[id0.288] occurrences matches {0..1} matches {	-- Intersection description
+								value matches {
+									CODED_TEXT[id0.614] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.289] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.290] occurrences matches {0..1} matches {	-- Visualisation
+								value matches {
+									CODED_TEXT[id0.615] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.291] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.292] occurrences matches {0..1} matches {	-- Census area
+								value matches {
+									CODED_TEXT[id0.616] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.293] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.294] occurrences matches {0..1} matches {	-- Delivery point identifier
+								value matches {
+									CODED_TEXT[id0.617] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.295] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.296] occurrences matches {0..1} matches {	-- Delivery number
+								value matches {
+									CODED_TEXT[id0.618] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.297] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.298] occurrences matches {0..1} matches {	-- Delivery installation type
+								value matches {
+									CODED_TEXT[id0.619] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.299] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.300] occurrences matches {0..1} matches {	-- Delivery installation area
+								value matches {
+									CODED_TEXT[id0.620] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.301] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.302] occurrences matches {0..1} matches {	-- Delivery installation qualifier
+								value matches {
+									CODED_TEXT[id0.621] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.303] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.304] occurrences matches {0..1} matches {	-- Delivery mode
+								value matches {
+									CODED_TEXT[id0.622] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.305] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.306] occurrences matches {0..1} matches {	-- Delivery mode identifier
+								value matches {
+									CODED_TEXT[id0.623] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.307] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.308] occurrences matches {0..1} matches {	-- Postal code
+								value matches {
+									CODED_TEXT[id0.624] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.309] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.310] occurrences matches {0..1} matches {	-- District TEXT
+								value matches {
+									CODED_TEXT[id0.625] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.311] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.312] occurrences matches {0..1} matches {	-- Suburb/town/locality
+								value matches {
+									CODED_TEXT[id0.626] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.313] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.314] occurrences matches {0..1} matches {	-- City
+								value matches {
+									CODED_TEXT[id0.627] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.315] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.316] occurrences matches {0..1} matches {	-- State/territory/province
+								value matches {
+									CODED_TEXT[id0.628] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.317] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.318] occurrences matches {0..1} matches {	-- Country
+								value matches {
+									CODED_TEXT[id0.629] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.319] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.320] occurrences matches {0..1} matches {	-- Care of
+								value matches {
+									CODED_TEXT[id0.630] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.321] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.322] occurrences matches {0..1} matches {	-- Delimiter
+								value matches {
+									CODED_TEXT[id0.631] 
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[id0.323] occurrences matches {0..1} matches {	-- Type
+				item matches {
+					ELEMENT[id0.324] occurrences matches {0..1} matches {	-- Street address line
+						value matches {
+							COUNT[id0.632] 
+						}
+					}
+					ELEMENT[id0.325] occurrences matches {0..1} matches {	-- Line number
+						value matches {
+							CODED_TEXT[id0.633] 
+						}
+					}
+					CLUSTER[id0.326] occurrences matches {0..*} matches {	-- Type
+						item matches {
+							ELEMENT[id0.327] occurrences matches {0..1} matches {	-- Additional locator
+								value matches {
+									CODED_TEXT[id0.634] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.328] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.329] occurrences matches {0..1} matches {	-- Site name
+								value matches {
+									CODED_TEXT[id0.635] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.330] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.331] occurrences matches {0..1} matches {	-- Unit number
+								value matches {
+									CODED_TEXT[id0.636] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.332] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.333] occurrences matches {0..1} matches {	-- Unit type
+								value matches {
+									CODED_TEXT[id0.637] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.334] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.335] occurrences matches {0..1} matches {	-- Postal box number
+								value matches {
+									CODED_TEXT[id0.638] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.336] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.337] occurrences matches {0..1} matches {	-- Floor/level number
+								value matches {
+									CODED_TEXT[id0.639] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.338] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.339] occurrences matches {0..1} matches {	-- Floor/level type
+								value matches {
+									CODED_TEXT[id0.640] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.340] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.341] occurrences matches {0..1} matches {	-- Lot number
+								value matches {
+									CODED_TEXT[id0.641] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.342] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.343] occurrences matches {0..1} matches {	-- Street
+								value matches {
+									CODED_TEXT[id0.642] 
+								}
+							}
+							ELEMENT[id0.344] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									CODED_TEXT[id0.643] 
+								}
+							}
+							ELEMENT[id0.345] occurrences matches {0..1} matches {	-- Name
+								value matches {
+									TEXT[id0.644] 
+								}
+							}
+							ELEMENT[id0.346] occurrences matches {0..1} matches {	-- Street type
+								value matches {
+									CODED_TEXT[id0.645] 
+								}
+							}
+							ELEMENT[id0.347] occurrences matches {0..1} matches {	-- Direction
+								value matches {
+									TEXT[id0.646] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.348] occurrences matches {0..1} matches {	-- Suffix
+						item matches {
+							ELEMENT[id0.349] occurrences matches {0..1} matches {	-- Street number
+								value matches {
+									CODED_TEXT[id0.647] 
+								}
+							}
+							ELEMENT[id0.350] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									TEXT[id0.648] 
+								}
+							}
+							ELEMENT[id0.351] occurrences matches {0..1} matches {	-- Numeric
+								value matches {
+									TEXT[id0.649] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.352] occurrences matches {0..1} matches {	-- Suffix
+						item matches {
+							ELEMENT[id0.353] occurrences matches {0..1} matches {	-- Intersection description
+								value matches {
+									CODED_TEXT[id0.650] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.354] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.355] occurrences matches {0..1} matches {	-- Visualisation
+								value matches {
+									CODED_TEXT[id0.651] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.356] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.357] occurrences matches {0..1} matches {	-- Census area
+								value matches {
+									CODED_TEXT[id0.652] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.358] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.359] occurrences matches {0..1} matches {	-- Delivery point identifier
+								value matches {
+									CODED_TEXT[id0.653] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.360] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.361] occurrences matches {0..1} matches {	-- Delivery number
+								value matches {
+									CODED_TEXT[id0.654] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.362] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.363] occurrences matches {0..1} matches {	-- Delivery installation type
+								value matches {
+									CODED_TEXT[id0.655] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.364] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.365] occurrences matches {0..1} matches {	-- Delivery installation area
+								value matches {
+									CODED_TEXT[id0.656] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.366] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.367] occurrences matches {0..1} matches {	-- Delivery installation qualifier
+								value matches {
+									CODED_TEXT[id0.657] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.368] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.369] occurrences matches {0..1} matches {	-- Delivery mode
+								value matches {
+									CODED_TEXT[id0.658] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.370] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.371] occurrences matches {0..1} matches {	-- Delivery mode identifier
+								value matches {
+									CODED_TEXT[id0.659] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.372] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.373] occurrences matches {0..1} matches {	-- Postal code
+								value matches {
+									CODED_TEXT[id0.660] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.374] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.375] occurrences matches {0..1} matches {	-- District TEXT
+								value matches {
+									CODED_TEXT[id0.661] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.376] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.377] occurrences matches {0..1} matches {	-- Suburb/town/locality
+								value matches {
+									CODED_TEXT[id0.662] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.378] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.379] occurrences matches {0..1} matches {	-- City
+								value matches {
+									CODED_TEXT[id0.663] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.380] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.381] occurrences matches {0..1} matches {	-- State/territory/province
+								value matches {
+									CODED_TEXT[id0.664] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.382] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.383] occurrences matches {0..1} matches {	-- Country
+								value matches {
+									CODED_TEXT[id0.665] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.384] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.385] occurrences matches {0..1} matches {	-- Care of
+								value matches {
+									CODED_TEXT[id0.666] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.386] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.387] occurrences matches {0..1} matches {	-- Delimiter
+								value matches {
+									CODED_TEXT[id0.667] 
+								}
+							}
+						}
+					}
+				}
+			}
+			CLUSTER[id0.388] occurrences matches {0..1} matches {	-- Type
+				item matches {
+					ELEMENT[id0.389] occurrences matches {0..1} matches {	-- Delivery address line
+						value matches {
+							COUNT[id0.668] 
+						}
+					}
+					ELEMENT[id0.390] occurrences matches {0..1} matches {	-- Line number
+						value matches {
+							CODED_TEXT[id0.669] 
+						}
+					}
+					CLUSTER[id0.391] occurrences matches {0..*} matches {	-- Type
+						item matches {
+							ELEMENT[id0.392] occurrences matches {0..1} matches {	-- Additional locator
+								value matches {
+									CODED_TEXT[id0.670] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.393] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.394] occurrences matches {0..1} matches {	-- Site name
+								value matches {
+									CODED_TEXT[id0.671] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.395] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.396] occurrences matches {0..1} matches {	-- Unit number
+								value matches {
+									CODED_TEXT[id0.672] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.397] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.398] occurrences matches {0..1} matches {	-- Unit type
+								value matches {
+									CODED_TEXT[id0.673] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.399] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.400] occurrences matches {0..1} matches {	-- Postal box number
+								value matches {
+									CODED_TEXT[id0.674] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.401] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.402] occurrences matches {0..1} matches {	-- Floor/level number
+								value matches {
+									CODED_TEXT[id0.675] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.403] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.404] occurrences matches {0..1} matches {	-- Floor/level type
+								value matches {
+									CODED_TEXT[id0.676] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.405] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.406] occurrences matches {0..1} matches {	-- Lot number
+								value matches {
+									CODED_TEXT[id0.677] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.407] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.408] occurrences matches {0..1} matches {	-- Street
+								value matches {
+									CODED_TEXT[id0.678] 
+								}
+							}
+							ELEMENT[id0.409] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									CODED_TEXT[id0.679] 
+								}
+							}
+							ELEMENT[id0.410] occurrences matches {0..1} matches {	-- Name
+								value matches {
+									TEXT[id0.680] 
+								}
+							}
+							ELEMENT[id0.411] occurrences matches {0..1} matches {	-- Street type
+								value matches {
+									CODED_TEXT[id0.681] 
+								}
+							}
+							ELEMENT[id0.412] occurrences matches {0..1} matches {	-- Direction
+								value matches {
+									TEXT[id0.682] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.413] occurrences matches {0..1} matches {	-- Suffix
+						item matches {
+							ELEMENT[id0.414] occurrences matches {0..1} matches {	-- Street number
+								value matches {
+									CODED_TEXT[id0.683] 
+								}
+							}
+							ELEMENT[id0.415] occurrences matches {0..1} matches {	-- Type
+								value matches {
+									TEXT[id0.684] 
+								}
+							}
+							ELEMENT[id0.416] occurrences matches {0..1} matches {	-- Numeric
+								value matches {
+									TEXT[id0.685] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.417] occurrences matches {0..1} matches {	-- Suffix
+						item matches {
+							ELEMENT[id0.418] occurrences matches {0..1} matches {	-- Intersection description
+								value matches {
+									CODED_TEXT[id0.686] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.419] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.420] occurrences matches {0..1} matches {	-- Visualisation
+								value matches {
+									CODED_TEXT[id0.687] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.421] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.422] occurrences matches {0..1} matches {	-- Census area
+								value matches {
+									CODED_TEXT[id0.688] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.423] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.424] occurrences matches {0..1} matches {	-- Delivery point identifier
+								value matches {
+									CODED_TEXT[id0.689] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.425] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.426] occurrences matches {0..1} matches {	-- Delivery number
+								value matches {
+									CODED_TEXT[id0.690] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.427] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.428] occurrences matches {0..1} matches {	-- Delivery installation type
+								value matches {
+									CODED_TEXT[id0.691] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.429] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.430] occurrences matches {0..1} matches {	-- Delivery installation area
+								value matches {
+									CODED_TEXT[id0.692] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.431] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.432] occurrences matches {0..1} matches {	-- Delivery installation qualifier
+								value matches {
+									CODED_TEXT[id0.693] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.433] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.434] occurrences matches {0..1} matches {	-- Delivery mode
+								value matches {
+									CODED_TEXT[id0.694] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.435] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.436] occurrences matches {0..1} matches {	-- Delivery mode identifier
+								value matches {
+									CODED_TEXT[id0.695] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.437] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.438] occurrences matches {0..1} matches {	-- Postal code
+								value matches {
+									CODED_TEXT[id0.696] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.439] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.440] occurrences matches {0..1} matches {	-- District TEXT
+								value matches {
+									CODED_TEXT[id0.697] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.441] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.442] occurrences matches {0..1} matches {	-- Suburb/town/locality
+								value matches {
+									CODED_TEXT[id0.698] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.443] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.444] occurrences matches {0..1} matches {	-- City
+								value matches {
+									CODED_TEXT[id0.699] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.445] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.446] occurrences matches {0..1} matches {	-- State/territory/province
+								value matches {
+									CODED_TEXT[id0.700] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.447] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.448] occurrences matches {0..1} matches {	-- Country
+								value matches {
+									CODED_TEXT[id0.701] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.449] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.450] occurrences matches {0..1} matches {	-- Care of
+								value matches {
+									CODED_TEXT[id0.702] 
+								}
+							}
+						}
+					}
+					CLUSTER[id0.451] occurrences matches {0..1} matches {	-- Type
+						item matches {
+							ELEMENT[id0.452] occurrences matches {0..1} matches {	-- Delimiter
+								value matches {
+									CODED_TEXT[id0.703] 
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Address detailed">
+				description = <"Address detailed">
+			>
+			["id0.1"] = <
+				text = <"Additional locator">
+				description = <"Additional locator">
+			>
+			["id0.2"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.3"] = <
+				text = <"Site name">
+				description = <"Site name">
+			>
+			["id0.4"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.5"] = <
+				text = <"Unit number">
+				description = <"Unit number">
+			>
+			["id0.6"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.7"] = <
+				text = <"Unit type">
+				description = <"Unit type">
+			>
+			["id0.8"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.9"] = <
+				text = <"Postal box number">
+				description = <"Postal box number">
+			>
+			["id0.10"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.11"] = <
+				text = <"Floor/level number">
+				description = <"Floor/level number">
+			>
+			["id0.12"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.13"] = <
+				text = <"Floor/level type">
+				description = <"Floor/level type">
+			>
+			["id0.14"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.15"] = <
+				text = <"Lot number">
+				description = <"Lot number">
+			>
+			["id0.16"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.17"] = <
+				text = <"Street">
+				description = <"Street">
+			>
+			["id0.18"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.19"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["id0.20"] = <
+				text = <"Street type">
+				description = <"Street type">
+			>
+			["id0.21"] = <
+				text = <"Direction">
+				description = <"Direction">
+			>
+			["id0.22"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.23"] = <
+				text = <"Street number">
+				description = <"Street number">
+			>
+			["id0.24"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.25"] = <
+				text = <"Numeric">
+				description = <"Numeric">
+			>
+			["id0.26"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.27"] = <
+				text = <"Intersection description">
+				description = <"Intersection description">
+			>
+			["id0.28"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.29"] = <
+				text = <"Visualisation">
+				description = <"Visualisation">
+			>
+			["id0.30"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.31"] = <
+				text = <"Census area">
+				description = <"Census area">
+			>
+			["id0.32"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.33"] = <
+				text = <"Delivery point identifier">
+				description = <"Delivery point identifier">
+			>
+			["id0.34"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.35"] = <
+				text = <"Delivery number">
+				description = <"Delivery number">
+			>
+			["id0.36"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.37"] = <
+				text = <"Delivery installation type">
+				description = <"Delivery installation type">
+			>
+			["id0.38"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.39"] = <
+				text = <"Delivery installation area">
+				description = <"Delivery installation area">
+			>
+			["id0.40"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.41"] = <
+				text = <"Delivery installation qualifier">
+				description = <"Delivery installation qualifier">
+			>
+			["id0.42"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.43"] = <
+				text = <"Delivery mode">
+				description = <"Delivery mode">
+			>
+			["id0.44"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.45"] = <
+				text = <"Delivery mode identifier">
+				description = <"Delivery mode identifier">
+			>
+			["id0.46"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.47"] = <
+				text = <"Postal code">
+				description = <"Postal code">
+			>
+			["id0.48"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.49"] = <
+				text = <"District TEXT">
+				description = <"District TEXT">
+			>
+			["id0.50"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.51"] = <
+				text = <"Suburb/town/locality">
+				description = <"Suburb/town/locality">
+			>
+			["id0.52"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.53"] = <
+				text = <"City">
+				description = <"City">
+			>
+			["id0.54"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.55"] = <
+				text = <"State/territory/province">
+				description = <"State/territory/province">
+			>
+			["id0.56"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.57"] = <
+				text = <"Country">
+				description = <"Country">
+			>
+			["id0.58"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.59"] = <
+				text = <"Care of">
+				description = <"Care of">
+			>
+			["id0.60"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.61"] = <
+				text = <"Delimiter">
+				description = <"Delimiter">
+			>
+			["id0.62"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.63"] = <
+				text = <"Address line 1">
+				description = <"Address line 1">
+			>
+			["id0.64"] = <
+				text = <"Line number">
+				description = <"Line number">
+			>
+			["id0.65"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.66"] = <
+				text = <"Additional locator">
+				description = <"Additional locator">
+			>
+			["id0.67"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.68"] = <
+				text = <"Site name">
+				description = <"Site name">
+			>
+			["id0.69"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.70"] = <
+				text = <"Unit number">
+				description = <"Unit number">
+			>
+			["id0.71"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.72"] = <
+				text = <"Unit type">
+				description = <"Unit type">
+			>
+			["id0.73"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.74"] = <
+				text = <"Postal box number">
+				description = <"Postal box number">
+			>
+			["id0.75"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.76"] = <
+				text = <"Floor/level number">
+				description = <"Floor/level number">
+			>
+			["id0.77"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.78"] = <
+				text = <"Floor/level type">
+				description = <"Floor/level type">
+			>
+			["id0.79"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.80"] = <
+				text = <"Lot number">
+				description = <"Lot number">
+			>
+			["id0.81"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.82"] = <
+				text = <"Street">
+				description = <"Street">
+			>
+			["id0.83"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.84"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["id0.85"] = <
+				text = <"Street type">
+				description = <"Street type">
+			>
+			["id0.86"] = <
+				text = <"Direction">
+				description = <"Direction">
+			>
+			["id0.87"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.88"] = <
+				text = <"Street number">
+				description = <"Street number">
+			>
+			["id0.89"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.90"] = <
+				text = <"Numeric">
+				description = <"Numeric">
+			>
+			["id0.91"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.92"] = <
+				text = <"Intersection description">
+				description = <"Intersection description">
+			>
+			["id0.93"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.94"] = <
+				text = <"Visualisation">
+				description = <"Visualisation">
+			>
+			["id0.95"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.96"] = <
+				text = <"Census area">
+				description = <"Census area">
+			>
+			["id0.97"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.98"] = <
+				text = <"Delivery point identifier">
+				description = <"Delivery point identifier">
+			>
+			["id0.99"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.100"] = <
+				text = <"Delivery number">
+				description = <"Delivery number">
+			>
+			["id0.101"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.102"] = <
+				text = <"Delivery installation type">
+				description = <"Delivery installation type">
+			>
+			["id0.103"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.104"] = <
+				text = <"Delivery installation area">
+				description = <"Delivery installation area">
+			>
+			["id0.105"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.106"] = <
+				text = <"Delivery installation qualifier">
+				description = <"Delivery installation qualifier">
+			>
+			["id0.107"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.108"] = <
+				text = <"Delivery mode">
+				description = <"Delivery mode">
+			>
+			["id0.109"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.110"] = <
+				text = <"Delivery mode identifier">
+				description = <"Delivery mode identifier">
+			>
+			["id0.111"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.112"] = <
+				text = <"Postal code">
+				description = <"Postal code">
+			>
+			["id0.113"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.114"] = <
+				text = <"District TEXT">
+				description = <"District TEXT">
+			>
+			["id0.115"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.116"] = <
+				text = <"Suburb/town/locality">
+				description = <"Suburb/town/locality">
+			>
+			["id0.117"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.118"] = <
+				text = <"City">
+				description = <"City">
+			>
+			["id0.119"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.120"] = <
+				text = <"State/territory/province">
+				description = <"State/territory/province">
+			>
+			["id0.121"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.122"] = <
+				text = <"Country">
+				description = <"Country">
+			>
+			["id0.123"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.124"] = <
+				text = <"Care of">
+				description = <"Care of">
+			>
+			["id0.125"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.126"] = <
+				text = <"Delimiter">
+				description = <"Delimiter">
+			>
+			["id0.127"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.128"] = <
+				text = <"Address line 2">
+				description = <"Address line 2">
+			>
+			["id0.129"] = <
+				text = <"Line number">
+				description = <"Line number">
+			>
+			["id0.130"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.131"] = <
+				text = <"Additional locator">
+				description = <"Additional locator">
+			>
+			["id0.132"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.133"] = <
+				text = <"Site name">
+				description = <"Site name">
+			>
+			["id0.134"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.135"] = <
+				text = <"Unit number">
+				description = <"Unit number">
+			>
+			["id0.136"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.137"] = <
+				text = <"Unit type">
+				description = <"Unit type">
+			>
+			["id0.138"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.139"] = <
+				text = <"Postal box number">
+				description = <"Postal box number">
+			>
+			["id0.140"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.141"] = <
+				text = <"Floor/level number">
+				description = <"Floor/level number">
+			>
+			["id0.142"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.143"] = <
+				text = <"Floor/level type">
+				description = <"Floor/level type">
+			>
+			["id0.144"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.145"] = <
+				text = <"Lot number">
+				description = <"Lot number">
+			>
+			["id0.146"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.147"] = <
+				text = <"Street">
+				description = <"Street">
+			>
+			["id0.148"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.149"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["id0.150"] = <
+				text = <"Street type">
+				description = <"Street type">
+			>
+			["id0.151"] = <
+				text = <"Direction">
+				description = <"Direction">
+			>
+			["id0.152"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.153"] = <
+				text = <"Street number">
+				description = <"Street number">
+			>
+			["id0.154"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.155"] = <
+				text = <"Numeric">
+				description = <"Numeric">
+			>
+			["id0.156"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.157"] = <
+				text = <"Intersection description">
+				description = <"Intersection description">
+			>
+			["id0.158"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.159"] = <
+				text = <"Visualisation">
+				description = <"Visualisation">
+			>
+			["id0.160"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.161"] = <
+				text = <"Census area">
+				description = <"Census area">
+			>
+			["id0.162"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.163"] = <
+				text = <"Line number">
+				description = <"Line number">
+			>
+			["id0.164"] = <
+				text = <"Delivery point identifier">
+				description = <"Delivery point identifier">
+			>
+			["id0.165"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.166"] = <
+				text = <"Delivery number">
+				description = <"Delivery number">
+			>
+			["id0.167"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.168"] = <
+				text = <"Delivery installation type">
+				description = <"Delivery installation type">
+			>
+			["id0.169"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.170"] = <
+				text = <"Delivery installation area">
+				description = <"Delivery installation area">
+			>
+			["id0.171"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.172"] = <
+				text = <"Delivery installation qualifier">
+				description = <"Delivery installation qualifier">
+			>
+			["id0.173"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.174"] = <
+				text = <"Delivery mode">
+				description = <"Delivery mode">
+			>
+			["id0.175"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.176"] = <
+				text = <"Delivery mode identifier">
+				description = <"Delivery mode identifier">
+			>
+			["id0.177"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.178"] = <
+				text = <"Postal code">
+				description = <"Postal code">
+			>
+			["id0.179"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.180"] = <
+				text = <"District TEXT">
+				description = <"District TEXT">
+			>
+			["id0.181"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.182"] = <
+				text = <"Suburb/town/locality">
+				description = <"Suburb/town/locality">
+			>
+			["id0.183"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.184"] = <
+				text = <"City">
+				description = <"City">
+			>
+			["id0.185"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.186"] = <
+				text = <"State/territory/province">
+				description = <"State/territory/province">
+			>
+			["id0.187"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.188"] = <
+				text = <"Country">
+				description = <"Country">
+			>
+			["id0.189"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.190"] = <
+				text = <"Care of">
+				description = <"Care of">
+			>
+			["id0.191"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.192"] = <
+				text = <"Delimiter">
+				description = <"Delimiter">
+			>
+			["id0.193"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.194"] = <
+				text = <"Address line 3">
+				description = <"Address line 3">
+			>
+			["id0.195"] = <
+				text = <"Line number">
+				description = <"Line number">
+			>
+			["id0.196"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.197"] = <
+				text = <"Additional locator">
+				description = <"Additional locator">
+			>
+			["id0.198"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.199"] = <
+				text = <"Site name">
+				description = <"Site name">
+			>
+			["id0.200"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.201"] = <
+				text = <"Unit number">
+				description = <"Unit number">
+			>
+			["id0.202"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.203"] = <
+				text = <"Unit type">
+				description = <"Unit type">
+			>
+			["id0.204"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.205"] = <
+				text = <"Postal box number">
+				description = <"Postal box number">
+			>
+			["id0.206"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.207"] = <
+				text = <"Floor/level number">
+				description = <"Floor/level number">
+			>
+			["id0.208"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.209"] = <
+				text = <"Floor/level type">
+				description = <"Floor/level type">
+			>
+			["id0.210"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.211"] = <
+				text = <"Lot number">
+				description = <"Lot number">
+			>
+			["id0.212"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.213"] = <
+				text = <"Street">
+				description = <"Street">
+			>
+			["id0.214"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.215"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["id0.216"] = <
+				text = <"Street type">
+				description = <"Street type">
+			>
+			["id0.217"] = <
+				text = <"Direction">
+				description = <"Direction">
+			>
+			["id0.218"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.219"] = <
+				text = <"Street number">
+				description = <"Street number">
+			>
+			["id0.220"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.221"] = <
+				text = <"Numeric">
+				description = <"Numeric">
+			>
+			["id0.222"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.223"] = <
+				text = <"Intersection description">
+				description = <"Intersection description">
+			>
+			["id0.224"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.225"] = <
+				text = <"Visualisation">
+				description = <"Visualisation">
+			>
+			["id0.226"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.227"] = <
+				text = <"Census area">
+				description = <"Census area">
+			>
+			["id0.228"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.229"] = <
+				text = <"Delivery point identifier">
+				description = <"Delivery point identifier">
+			>
+			["id0.230"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.231"] = <
+				text = <"Delivery number">
+				description = <"Delivery number">
+			>
+			["id0.232"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.233"] = <
+				text = <"Delivery installation type">
+				description = <"Delivery installation type">
+			>
+			["id0.234"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.235"] = <
+				text = <"Delivery installation area">
+				description = <"Delivery installation area">
+			>
+			["id0.236"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.237"] = <
+				text = <"Delivery installation qualifier">
+				description = <"Delivery installation qualifier">
+			>
+			["id0.238"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.239"] = <
+				text = <"Delivery mode">
+				description = <"Delivery mode">
+			>
+			["id0.240"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.241"] = <
+				text = <"Delivery mode identifier">
+				description = <"Delivery mode identifier">
+			>
+			["id0.242"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.243"] = <
+				text = <"Postal code">
+				description = <"Postal code">
+			>
+			["id0.244"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.245"] = <
+				text = <"District TEXT">
+				description = <"District TEXT">
+			>
+			["id0.246"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.247"] = <
+				text = <"Suburb/town/locality">
+				description = <"Suburb/town/locality">
+			>
+			["id0.248"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.249"] = <
+				text = <"City">
+				description = <"City">
+			>
+			["id0.250"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.251"] = <
+				text = <"State/territory/province">
+				description = <"State/territory/province">
+			>
+			["id0.252"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.253"] = <
+				text = <"Country">
+				description = <"Country">
+			>
+			["id0.254"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.255"] = <
+				text = <"Care of">
+				description = <"Care of">
+			>
+			["id0.256"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.257"] = <
+				text = <"Delimiter">
+				description = <"Delimiter">
+			>
+			["id0.258"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.259"] = <
+				text = <"Address line 4">
+				description = <"Address line 4">
+			>
+			["id0.260"] = <
+				text = <"Line number">
+				description = <"Line number">
+			>
+			["id0.261"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.262"] = <
+				text = <"Additional locator">
+				description = <"Additional locator">
+			>
+			["id0.263"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.264"] = <
+				text = <"Site name">
+				description = <"Site name">
+			>
+			["id0.265"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.266"] = <
+				text = <"Unit number">
+				description = <"Unit number">
+			>
+			["id0.267"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.268"] = <
+				text = <"Unit type">
+				description = <"Unit type">
+			>
+			["id0.269"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.270"] = <
+				text = <"Postal box number">
+				description = <"Postal box number">
+			>
+			["id0.271"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.272"] = <
+				text = <"Floor/level number">
+				description = <"Floor/level number">
+			>
+			["id0.273"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.274"] = <
+				text = <"Floor/level type">
+				description = <"Floor/level type">
+			>
+			["id0.275"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.276"] = <
+				text = <"Lot number">
+				description = <"Lot number">
+			>
+			["id0.277"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.278"] = <
+				text = <"Street">
+				description = <"Street">
+			>
+			["id0.279"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.280"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["id0.281"] = <
+				text = <"Street type">
+				description = <"Street type">
+			>
+			["id0.282"] = <
+				text = <"Direction">
+				description = <"Direction">
+			>
+			["id0.283"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.284"] = <
+				text = <"Street number">
+				description = <"Street number">
+			>
+			["id0.285"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.286"] = <
+				text = <"Numeric">
+				description = <"Numeric">
+			>
+			["id0.287"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.288"] = <
+				text = <"Intersection description">
+				description = <"Intersection description">
+			>
+			["id0.289"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.290"] = <
+				text = <"Visualisation">
+				description = <"Visualisation">
+			>
+			["id0.291"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.292"] = <
+				text = <"Census area">
+				description = <"Census area">
+			>
+			["id0.293"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.294"] = <
+				text = <"Delivery point identifier">
+				description = <"Delivery point identifier">
+			>
+			["id0.295"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.296"] = <
+				text = <"Delivery number">
+				description = <"Delivery number">
+			>
+			["id0.297"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.298"] = <
+				text = <"Delivery installation type">
+				description = <"Delivery installation type">
+			>
+			["id0.299"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.300"] = <
+				text = <"Delivery installation area">
+				description = <"Delivery installation area">
+			>
+			["id0.301"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.302"] = <
+				text = <"Delivery installation qualifier">
+				description = <"Delivery installation qualifier">
+			>
+			["id0.303"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.304"] = <
+				text = <"Delivery mode">
+				description = <"Delivery mode">
+			>
+			["id0.305"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.306"] = <
+				text = <"Delivery mode identifier">
+				description = <"Delivery mode identifier">
+			>
+			["id0.307"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.308"] = <
+				text = <"Postal code">
+				description = <"Postal code">
+			>
+			["id0.309"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.310"] = <
+				text = <"District TEXT">
+				description = <"District TEXT">
+			>
+			["id0.311"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.312"] = <
+				text = <"Suburb/town/locality">
+				description = <"Suburb/town/locality">
+			>
+			["id0.313"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.314"] = <
+				text = <"City">
+				description = <"City">
+			>
+			["id0.315"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.316"] = <
+				text = <"State/territory/province">
+				description = <"State/territory/province">
+			>
+			["id0.317"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.318"] = <
+				text = <"Country">
+				description = <"Country">
+			>
+			["id0.319"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.320"] = <
+				text = <"Care of">
+				description = <"Care of">
+			>
+			["id0.321"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.322"] = <
+				text = <"Delimiter">
+				description = <"Delimiter">
+			>
+			["id0.323"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.324"] = <
+				text = <"Street address line">
+				description = <"Street address line">
+			>
+			["id0.325"] = <
+				text = <"Line number">
+				description = <"Line number">
+			>
+			["id0.326"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.327"] = <
+				text = <"Additional locator">
+				description = <"Additional locator">
+			>
+			["id0.328"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.329"] = <
+				text = <"Site name">
+				description = <"Site name">
+			>
+			["id0.330"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.331"] = <
+				text = <"Unit number">
+				description = <"Unit number">
+			>
+			["id0.332"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.333"] = <
+				text = <"Unit type">
+				description = <"Unit type">
+			>
+			["id0.334"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.335"] = <
+				text = <"Postal box number">
+				description = <"Postal box number">
+			>
+			["id0.336"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.337"] = <
+				text = <"Floor/level number">
+				description = <"Floor/level number">
+			>
+			["id0.338"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.339"] = <
+				text = <"Floor/level type">
+				description = <"Floor/level type">
+			>
+			["id0.340"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.341"] = <
+				text = <"Lot number">
+				description = <"Lot number">
+			>
+			["id0.342"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.343"] = <
+				text = <"Street">
+				description = <"Street">
+			>
+			["id0.344"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.345"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["id0.346"] = <
+				text = <"Street type">
+				description = <"Street type">
+			>
+			["id0.347"] = <
+				text = <"Direction">
+				description = <"Direction">
+			>
+			["id0.348"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.349"] = <
+				text = <"Street number">
+				description = <"Street number">
+			>
+			["id0.350"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.351"] = <
+				text = <"Numeric">
+				description = <"Numeric">
+			>
+			["id0.352"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.353"] = <
+				text = <"Intersection description">
+				description = <"Intersection description">
+			>
+			["id0.354"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.355"] = <
+				text = <"Visualisation">
+				description = <"Visualisation">
+			>
+			["id0.356"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.357"] = <
+				text = <"Census area">
+				description = <"Census area">
+			>
+			["id0.358"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.359"] = <
+				text = <"Delivery point identifier">
+				description = <"Delivery point identifier">
+			>
+			["id0.360"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.361"] = <
+				text = <"Delivery number">
+				description = <"Delivery number">
+			>
+			["id0.362"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.363"] = <
+				text = <"Delivery installation type">
+				description = <"Delivery installation type">
+			>
+			["id0.364"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.365"] = <
+				text = <"Delivery installation area">
+				description = <"Delivery installation area">
+			>
+			["id0.366"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.367"] = <
+				text = <"Delivery installation qualifier">
+				description = <"Delivery installation qualifier">
+			>
+			["id0.368"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.369"] = <
+				text = <"Delivery mode">
+				description = <"Delivery mode">
+			>
+			["id0.370"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.371"] = <
+				text = <"Delivery mode identifier">
+				description = <"Delivery mode identifier">
+			>
+			["id0.372"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.373"] = <
+				text = <"Postal code">
+				description = <"Postal code">
+			>
+			["id0.374"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.375"] = <
+				text = <"District TEXT">
+				description = <"District TEXT">
+			>
+			["id0.376"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.377"] = <
+				text = <"Suburb/town/locality">
+				description = <"Suburb/town/locality">
+			>
+			["id0.378"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.379"] = <
+				text = <"City">
+				description = <"City">
+			>
+			["id0.380"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.381"] = <
+				text = <"State/territory/province">
+				description = <"State/territory/province">
+			>
+			["id0.382"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.383"] = <
+				text = <"Country">
+				description = <"Country">
+			>
+			["id0.384"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.385"] = <
+				text = <"Care of">
+				description = <"Care of">
+			>
+			["id0.386"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.387"] = <
+				text = <"Delimiter">
+				description = <"Delimiter">
+			>
+			["id0.388"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.389"] = <
+				text = <"Delivery address line">
+				description = <"Delivery address line">
+			>
+			["id0.390"] = <
+				text = <"Line number">
+				description = <"Line number">
+			>
+			["id0.391"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.392"] = <
+				text = <"Additional locator">
+				description = <"Additional locator">
+			>
+			["id0.393"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.394"] = <
+				text = <"Site name">
+				description = <"Site name">
+			>
+			["id0.395"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.396"] = <
+				text = <"Unit number">
+				description = <"Unit number">
+			>
+			["id0.397"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.398"] = <
+				text = <"Unit type">
+				description = <"Unit type">
+			>
+			["id0.399"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.400"] = <
+				text = <"Postal box number">
+				description = <"Postal box number">
+			>
+			["id0.401"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.402"] = <
+				text = <"Floor/level number">
+				description = <"Floor/level number">
+			>
+			["id0.403"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.404"] = <
+				text = <"Floor/level type">
+				description = <"Floor/level type">
+			>
+			["id0.405"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.406"] = <
+				text = <"Lot number">
+				description = <"Lot number">
+			>
+			["id0.407"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.408"] = <
+				text = <"Street">
+				description = <"Street">
+			>
+			["id0.409"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.410"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["id0.411"] = <
+				text = <"Street type">
+				description = <"Street type">
+			>
+			["id0.412"] = <
+				text = <"Direction">
+				description = <"Direction">
+			>
+			["id0.413"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.414"] = <
+				text = <"Street number">
+				description = <"Street number">
+			>
+			["id0.415"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.416"] = <
+				text = <"Numeric">
+				description = <"Numeric">
+			>
+			["id0.417"] = <
+				text = <"Suffix">
+				description = <"Suffix">
+			>
+			["id0.418"] = <
+				text = <"Intersection description">
+				description = <"Intersection description">
+			>
+			["id0.419"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.420"] = <
+				text = <"Visualisation">
+				description = <"Visualisation">
+			>
+			["id0.421"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.422"] = <
+				text = <"Census area">
+				description = <"Census area">
+			>
+			["id0.423"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.424"] = <
+				text = <"Delivery point identifier">
+				description = <"Delivery point identifier">
+			>
+			["id0.425"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.426"] = <
+				text = <"Delivery number">
+				description = <"Delivery number">
+			>
+			["id0.427"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.428"] = <
+				text = <"Delivery installation type">
+				description = <"Delivery installation type">
+			>
+			["id0.429"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.430"] = <
+				text = <"Delivery installation area">
+				description = <"Delivery installation area">
+			>
+			["id0.431"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.432"] = <
+				text = <"Delivery installation qualifier">
+				description = <"Delivery installation qualifier">
+			>
+			["id0.433"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.434"] = <
+				text = <"Delivery mode">
+				description = <"Delivery mode">
+			>
+			["id0.435"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.436"] = <
+				text = <"Delivery mode identifier">
+				description = <"Delivery mode identifier">
+			>
+			["id0.437"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.438"] = <
+				text = <"Postal code">
+				description = <"Postal code">
+			>
+			["id0.439"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.440"] = <
+				text = <"District TEXT">
+				description = <"District TEXT">
+			>
+			["id0.441"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.442"] = <
+				text = <"Suburb/town/locality">
+				description = <"Suburb/town/locality">
+			>
+			["id0.443"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.444"] = <
+				text = <"City">
+				description = <"City">
+			>
+			["id0.445"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.446"] = <
+				text = <"State/territory/province">
+				description = <"State/territory/province">
+			>
+			["id0.447"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.448"] = <
+				text = <"Country">
+				description = <"Country">
+			>
+			["id0.449"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.450"] = <
+				text = <"Care of">
+				description = <"Care of">
+			>
+			["id0.451"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+			["id0.452"] = <
+				text = <"Delimiter">
+				description = <"Delimiter">
+			>
+			["at0.453"] = <
+				text = <"Type">
+				description = <"Type">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1"] = <http://snomedct.info/id/129264002>
+			["id0.1"] = <http://snomedct.info/id/138875005>
+			["id0.2"] = <http://snomedct.info/id/138875005>
+			["id0.3"] = <http://snomedct.info/id/138875005>
+			["id0.4"] = <http://snomedct.info/id/138875005>
+			["id0.5"] = <http://snomedct.info/id/138875005>
+			["id0.6"] = <http://snomedct.info/id/138875005>
+			["id0.7"] = <http://snomedct.info/id/138875005>
+			["id0.8"] = <http://snomedct.info/id/138875005>
+			["id0.9"] = <http://snomedct.info/id/138875005>
+			["id0.10"] = <http://snomedct.info/id/138875005>
+			["id0.11"] = <http://snomedct.info/id/138875005>
+			["id0.12"] = <http://snomedct.info/id/138875005>
+			["id0.13"] = <http://snomedct.info/id/138875005>
+			["id0.14"] = <http://snomedct.info/id/138875005>
+			["id0.15"] = <http://snomedct.info/id/138875005>
+			["id0.16"] = <http://snomedct.info/id/138875005>
+			["id0.17"] = <http://snomedct.info/id/138875005>
+			["id0.18"] = <http://snomedct.info/id/138875005>
+			["id0.19"] = <http://snomedct.info/id/138875005>
+			["id0.20"] = <http://snomedct.info/id/138875005>
+			["id0.21"] = <http://snomedct.info/id/138875005>
+			["id0.22"] = <http://snomedct.info/id/138875005>
+			["id0.23"] = <http://snomedct.info/id/364713004>
+			["id0.24"] = <http://snomedct.info/id/138875005>
+			["id0.25"] = <http://snomedct.info/id/138875005>
+			["id0.26"] = <http://snomedct.info/id/138875005>
+			["id0.27"] = <http://snomedct.info/id/138875005>
+			["id0.28"] = <http://snomedct.info/id/138875005>
+			["id0.29"] = <http://snomedct.info/id/138875005>
+			["id0.30"] = <http://snomedct.info/id/138875005>
+			["id0.31"] = <http://snomedct.info/id/138875005>
+			["id0.32"] = <http://snomedct.info/id/138875005>
+			["id0.33"] = <http://snomedct.info/id/138875005>
+			["id0.34"] = <http://snomedct.info/id/138875005>
+			["id0.35"] = <http://snomedct.info/id/138875005>
+			["id0.36"] = <http://snomedct.info/id/138875005>
+			["id0.37"] = <http://snomedct.info/id/138875005>
+			["id0.38"] = <http://snomedct.info/id/138875005>
+			["id0.39"] = <http://snomedct.info/id/364713004>
+			["id0.40"] = <http://snomedct.info/id/138875005>
+			["id0.41"] = <http://snomedct.info/id/138875005>
+			["id0.42"] = <http://snomedct.info/id/138875005>
+			["id0.43"] = <http://snomedct.info/id/138875005>
+			["id0.44"] = <http://snomedct.info/id/138875005>
+			["id0.45"] = <http://snomedct.info/id/138875005>
+			["id0.46"] = <http://snomedct.info/id/138875005>
+			["id0.47"] = <http://snomedct.info/id/138875005>
+			["id0.48"] = <http://snomedct.info/id/138875005>
+			["id0.49"] = <http://snomedct.info/id/138875005>
+			["id0.50"] = <http://snomedct.info/id/138875005>
+			["id0.51"] = <http://snomedct.info/id/138875005>
+			["id0.52"] = <http://snomedct.info/id/138875005>
+			["id0.53"] = <http://snomedct.info/id/138875005>
+			["id0.54"] = <http://snomedct.info/id/138875005>
+			["id0.55"] = <http://snomedct.info/id/138875005>
+			["id0.56"] = <http://snomedct.info/id/138875005>
+			["id0.57"] = <http://snomedct.info/id/138875005>
+			["id0.58"] = <http://snomedct.info/id/138875005>
+			["id0.59"] = <http://snomedct.info/id/138875005>
+			["id0.60"] = <http://snomedct.info/id/138875005>
+			["id0.61"] = <http://snomedct.info/id/138875005>
+			["id0.62"] = <http://snomedct.info/id/138875005>
+			["id0.63"] = <http://snomedct.info/id/138875005>
+			["id0.64"] = <http://snomedct.info/id/138875005>
+			["id0.65"] = <http://snomedct.info/id/138875005>
+			["id0.66"] = <http://snomedct.info/id/138875005>
+			["id0.67"] = <http://snomedct.info/id/138875005>
+			["id0.68"] = <http://snomedct.info/id/138875005>
+			["id0.69"] = <http://snomedct.info/id/138875005>
+			["id0.70"] = <http://snomedct.info/id/138875005>
+			["id0.71"] = <http://snomedct.info/id/138875005>
+			["id0.72"] = <http://snomedct.info/id/138875005>
+			["id0.73"] = <http://snomedct.info/id/138875005>
+			["id0.74"] = <http://snomedct.info/id/138875005>
+			["id0.75"] = <http://snomedct.info/id/138875005>
+			["id0.76"] = <http://snomedct.info/id/138875005>
+			["id0.77"] = <http://snomedct.info/id/138875005>
+			["id0.78"] = <http://snomedct.info/id/138875005>
+			["id0.79"] = <http://snomedct.info/id/138875005>
+			["id0.80"] = <http://snomedct.info/id/138875005>
+			["id0.81"] = <http://snomedct.info/id/138875005>
+			["id0.82"] = <http://snomedct.info/id/138875005>
+			["id0.83"] = <http://snomedct.info/id/138875005>
+			["id0.84"] = <http://snomedct.info/id/138875005>
+			["id0.85"] = <http://snomedct.info/id/138875005>
+			["id0.86"] = <http://snomedct.info/id/138875005>
+			["id0.87"] = <http://snomedct.info/id/138875005>
+			["id0.88"] = <http://snomedct.info/id/138875005>
+			["id0.89"] = <http://snomedct.info/id/138875005>
+			["id0.90"] = <http://snomedct.info/id/138875005>
+			["id0.91"] = <http://snomedct.info/id/138875005>
+			["id0.92"] = <http://snomedct.info/id/138875005>
+			["id0.93"] = <http://snomedct.info/id/138875005>
+			["id0.94"] = <http://snomedct.info/id/138875005>
+			["id0.95"] = <http://snomedct.info/id/138875005>
+			["id0.96"] = <http://snomedct.info/id/138875005>
+			["id0.97"] = <http://snomedct.info/id/138875005>
+			["id0.98"] = <http://snomedct.info/id/138875005>
+			["id0.99"] = <http://snomedct.info/id/138875005>
+			["id0.100"] = <http://snomedct.info/id/138875005>
+			["id0.101"] = <http://snomedct.info/id/138875005>
+			["id0.102"] = <http://snomedct.info/id/138875005>
+			["id0.103"] = <http://snomedct.info/id/138875005>
+			["id0.104"] = <http://snomedct.info/id/364713004>
+			["id0.105"] = <http://snomedct.info/id/138875005>
+			["id0.106"] = <http://snomedct.info/id/138875005>
+			["id0.107"] = <http://snomedct.info/id/138875005>
+			["id0.108"] = <http://snomedct.info/id/138875005>
+			["id0.109"] = <http://snomedct.info/id/138875005>
+			["id0.110"] = <http://snomedct.info/id/138875005>
+			["id0.111"] = <http://snomedct.info/id/138875005>
+			["id0.112"] = <http://snomedct.info/id/138875005>
+			["id0.113"] = <http://snomedct.info/id/138875005>
+			["id0.114"] = <http://snomedct.info/id/138875005>
+			["id0.115"] = <http://snomedct.info/id/138875005>
+			["id0.116"] = <http://snomedct.info/id/138875005>
+			["id0.117"] = <http://snomedct.info/id/138875005>
+			["id0.118"] = <http://snomedct.info/id/138875005>
+			["id0.119"] = <http://snomedct.info/id/138875005>
+			["id0.120"] = <http://snomedct.info/id/138875005>
+			["id0.121"] = <http://snomedct.info/id/138875005>
+			["id0.122"] = <http://snomedct.info/id/138875005>
+			["id0.123"] = <http://snomedct.info/id/138875005>
+			["id0.124"] = <http://snomedct.info/id/138875005>
+			["id0.125"] = <http://snomedct.info/id/138875005>
+			["id0.126"] = <http://snomedct.info/id/138875005>
+			["id0.127"] = <http://snomedct.info/id/138875005>
+			["id0.128"] = <http://snomedct.info/id/138875005>
+			["id0.129"] = <http://snomedct.info/id/138875005>
+			["id0.130"] = <http://snomedct.info/id/138875005>
+			["id0.131"] = <http://snomedct.info/id/138875005>
+			["id0.132"] = <http://snomedct.info/id/138875005>
+			["id0.133"] = <http://snomedct.info/id/138875005>
+			["id0.134"] = <http://snomedct.info/id/138875005>
+			["id0.135"] = <http://snomedct.info/id/138875005>
+			["id0.136"] = <http://snomedct.info/id/138875005>
+			["id0.137"] = <http://snomedct.info/id/138875005>
+			["id0.138"] = <http://snomedct.info/id/138875005>
+			["id0.139"] = <http://snomedct.info/id/138875005>
+			["id0.140"] = <http://snomedct.info/id/138875005>
+			["id0.141"] = <http://snomedct.info/id/138875005>
+			["id0.142"] = <http://snomedct.info/id/138875005>
+			["id0.143"] = <http://snomedct.info/id/138875005>
+			["id0.144"] = <http://snomedct.info/id/138875005>
+			["id0.145"] = <http://snomedct.info/id/138875005>
+			["id0.146"] = <http://snomedct.info/id/138875005>
+			["id0.147"] = <http://snomedct.info/id/138875005>
+			["id0.148"] = <http://snomedct.info/id/138875005>
+			["id0.149"] = <http://snomedct.info/id/138875005>
+			["id0.150"] = <http://snomedct.info/id/138875005>
+			["id0.151"] = <http://snomedct.info/id/138875005>
+			["id0.152"] = <http://snomedct.info/id/138875005>
+			["id0.153"] = <http://snomedct.info/id/138875005>
+			["id0.154"] = <http://snomedct.info/id/138875005>
+			["id0.155"] = <http://snomedct.info/id/138875005>
+			["id0.156"] = <http://snomedct.info/id/138875005>
+			["id0.157"] = <http://snomedct.info/id/138875005>
+			["id0.158"] = <http://snomedct.info/id/138875005>
+			["id0.159"] = <http://snomedct.info/id/138875005>
+			["id0.160"] = <http://snomedct.info/id/138875005>
+			["id0.161"] = <http://snomedct.info/id/138875005>
+			["id0.162"] = <http://snomedct.info/id/138875005>
+			["id0.163"] = <http://snomedct.info/id/138875005>
+			["id0.164"] = <http://snomedct.info/id/138875005>
+			["id0.165"] = <http://snomedct.info/id/138875005>
+			["id0.166"] = <http://snomedct.info/id/138875005>
+			["id0.167"] = <http://snomedct.info/id/138875005>
+			["id0.168"] = <http://snomedct.info/id/138875005>
+			["id0.169"] = <http://snomedct.info/id/138875005>
+			["id0.170"] = <http://snomedct.info/id/364713004>
+			["id0.171"] = <http://snomedct.info/id/138875005>
+			["id0.172"] = <http://snomedct.info/id/138875005>
+			["id0.173"] = <http://snomedct.info/id/138875005>
+			["id0.174"] = <http://snomedct.info/id/138875005>
+			["id0.175"] = <http://snomedct.info/id/138875005>
+			["id0.176"] = <http://snomedct.info/id/138875005>
+			["id0.177"] = <http://snomedct.info/id/138875005>
+			["id0.178"] = <http://snomedct.info/id/138875005>
+			["id0.179"] = <http://snomedct.info/id/138875005>
+			["id0.180"] = <http://snomedct.info/id/138875005>
+			["id0.181"] = <http://snomedct.info/id/138875005>
+			["id0.182"] = <http://snomedct.info/id/138875005>
+			["id0.183"] = <http://snomedct.info/id/138875005>
+			["id0.184"] = <http://snomedct.info/id/138875005>
+			["id0.185"] = <http://snomedct.info/id/138875005>
+			["id0.186"] = <http://snomedct.info/id/138875005>
+			["id0.187"] = <http://snomedct.info/id/138875005>
+			["id0.188"] = <http://snomedct.info/id/138875005>
+			["id0.189"] = <http://snomedct.info/id/138875005>
+			["id0.190"] = <http://snomedct.info/id/138875005>
+			["id0.191"] = <http://snomedct.info/id/138875005>
+			["id0.192"] = <http://snomedct.info/id/138875005>
+			["id0.193"] = <http://snomedct.info/id/138875005>
+			["id0.194"] = <http://snomedct.info/id/138875005>
+			["id0.195"] = <http://snomedct.info/id/138875005>
+			["id0.196"] = <http://snomedct.info/id/138875005>
+			["id0.197"] = <http://snomedct.info/id/138875005>
+			["id0.198"] = <http://snomedct.info/id/138875005>
+			["id0.199"] = <http://snomedct.info/id/138875005>
+			["id0.200"] = <http://snomedct.info/id/138875005>
+			["id0.201"] = <http://snomedct.info/id/138875005>
+			["id0.202"] = <http://snomedct.info/id/138875005>
+			["id0.203"] = <http://snomedct.info/id/138875005>
+			["id0.204"] = <http://snomedct.info/id/138875005>
+			["id0.205"] = <http://snomedct.info/id/138875005>
+			["id0.206"] = <http://snomedct.info/id/138875005>
+			["id0.207"] = <http://snomedct.info/id/138875005>
+			["id0.208"] = <http://snomedct.info/id/138875005>
+			["id0.209"] = <http://snomedct.info/id/138875005>
+			["id0.210"] = <http://snomedct.info/id/138875005>
+			["id0.211"] = <http://snomedct.info/id/138875005>
+			["id0.212"] = <http://snomedct.info/id/138875005>
+			["id0.213"] = <http://snomedct.info/id/138875005>
+			["id0.214"] = <http://snomedct.info/id/138875005>
+			["id0.215"] = <http://snomedct.info/id/138875005>
+			["id0.216"] = <http://snomedct.info/id/138875005>
+			["id0.217"] = <http://snomedct.info/id/138875005>
+			["id0.218"] = <http://snomedct.info/id/138875005>
+			["id0.219"] = <http://snomedct.info/id/138875005>
+			["id0.220"] = <http://snomedct.info/id/138875005>
+			["id0.221"] = <http://snomedct.info/id/138875005>
+			["id0.222"] = <http://snomedct.info/id/138875005>
+			["id0.223"] = <http://snomedct.info/id/138875005>
+			["id0.224"] = <http://snomedct.info/id/138875005>
+			["id0.225"] = <http://snomedct.info/id/138875005>
+			["id0.226"] = <http://snomedct.info/id/138875005>
+			["id0.227"] = <http://snomedct.info/id/138875005>
+			["id0.228"] = <http://snomedct.info/id/138875005>
+			["id0.229"] = <http://snomedct.info/id/138875005>
+			["id0.230"] = <http://snomedct.info/id/138875005>
+			["id0.231"] = <http://snomedct.info/id/138875005>
+			["id0.232"] = <http://snomedct.info/id/138875005>
+			["id0.233"] = <http://snomedct.info/id/138875005>
+			["id0.234"] = <http://snomedct.info/id/138875005>
+			["id0.235"] = <http://snomedct.info/id/364713004>
+			["id0.236"] = <http://snomedct.info/id/138875005>
+			["id0.237"] = <http://snomedct.info/id/138875005>
+			["id0.238"] = <http://snomedct.info/id/138875005>
+			["id0.239"] = <http://snomedct.info/id/138875005>
+			["id0.240"] = <http://snomedct.info/id/138875005>
+			["id0.241"] = <http://snomedct.info/id/138875005>
+			["id0.242"] = <http://snomedct.info/id/138875005>
+			["id0.243"] = <http://snomedct.info/id/138875005>
+			["id0.244"] = <http://snomedct.info/id/138875005>
+			["id0.245"] = <http://snomedct.info/id/138875005>
+			["id0.246"] = <http://snomedct.info/id/138875005>
+			["id0.247"] = <http://snomedct.info/id/138875005>
+			["id0.248"] = <http://snomedct.info/id/138875005>
+			["id0.249"] = <http://snomedct.info/id/138875005>
+			["id0.250"] = <http://snomedct.info/id/138875005>
+			["id0.251"] = <http://snomedct.info/id/138875005>
+			["id0.252"] = <http://snomedct.info/id/138875005>
+			["id0.253"] = <http://snomedct.info/id/138875005>
+			["id0.254"] = <http://snomedct.info/id/138875005>
+			["id0.255"] = <http://snomedct.info/id/138875005>
+			["id0.256"] = <http://snomedct.info/id/138875005>
+			["id0.257"] = <http://snomedct.info/id/138875005>
+			["id0.258"] = <http://snomedct.info/id/138875005>
+			["id0.259"] = <http://snomedct.info/id/138875005>
+			["id0.260"] = <http://snomedct.info/id/138875005>
+			["id0.261"] = <http://snomedct.info/id/138875005>
+			["id0.262"] = <http://snomedct.info/id/138875005>
+			["id0.263"] = <http://snomedct.info/id/138875005>
+			["id0.264"] = <http://snomedct.info/id/138875005>
+			["id0.265"] = <http://snomedct.info/id/138875005>
+			["id0.266"] = <http://snomedct.info/id/138875005>
+			["id0.267"] = <http://snomedct.info/id/138875005>
+			["id0.268"] = <http://snomedct.info/id/138875005>
+			["id0.269"] = <http://snomedct.info/id/138875005>
+			["id0.270"] = <http://snomedct.info/id/138875005>
+			["id0.271"] = <http://snomedct.info/id/138875005>
+			["id0.272"] = <http://snomedct.info/id/138875005>
+			["id0.273"] = <http://snomedct.info/id/138875005>
+			["id0.274"] = <http://snomedct.info/id/138875005>
+			["id0.275"] = <http://snomedct.info/id/138875005>
+			["id0.276"] = <http://snomedct.info/id/138875005>
+			["id0.277"] = <http://snomedct.info/id/138875005>
+			["id0.278"] = <http://snomedct.info/id/138875005>
+			["id0.279"] = <http://snomedct.info/id/138875005>
+			["id0.280"] = <http://snomedct.info/id/138875005>
+			["id0.281"] = <http://snomedct.info/id/138875005>
+			["id0.282"] = <http://snomedct.info/id/138875005>
+			["id0.283"] = <http://snomedct.info/id/138875005>
+			["id0.284"] = <http://snomedct.info/id/138875005>
+			["id0.285"] = <http://snomedct.info/id/138875005>
+			["id0.286"] = <http://snomedct.info/id/138875005>
+			["id0.287"] = <http://snomedct.info/id/138875005>
+			["id0.288"] = <http://snomedct.info/id/138875005>
+			["id0.289"] = <http://snomedct.info/id/138875005>
+			["id0.290"] = <http://snomedct.info/id/138875005>
+			["id0.291"] = <http://snomedct.info/id/138875005>
+			["id0.292"] = <http://snomedct.info/id/138875005>
+			["id0.293"] = <http://snomedct.info/id/138875005>
+			["id0.294"] = <http://snomedct.info/id/138875005>
+			["id0.295"] = <http://snomedct.info/id/138875005>
+			["id0.296"] = <http://snomedct.info/id/138875005>
+			["id0.297"] = <http://snomedct.info/id/138875005>
+			["id0.298"] = <http://snomedct.info/id/138875005>
+			["id0.299"] = <http://snomedct.info/id/138875005>
+			["id0.300"] = <http://snomedct.info/id/364713004>
+			["id0.301"] = <http://snomedct.info/id/138875005>
+			["id0.302"] = <http://snomedct.info/id/138875005>
+			["id0.303"] = <http://snomedct.info/id/138875005>
+			["id0.304"] = <http://snomedct.info/id/138875005>
+			["id0.305"] = <http://snomedct.info/id/138875005>
+			["id0.306"] = <http://snomedct.info/id/138875005>
+			["id0.307"] = <http://snomedct.info/id/138875005>
+			["id0.308"] = <http://snomedct.info/id/138875005>
+			["id0.309"] = <http://snomedct.info/id/138875005>
+			["id0.310"] = <http://snomedct.info/id/138875005>
+			["id0.311"] = <http://snomedct.info/id/138875005>
+			["id0.312"] = <http://snomedct.info/id/138875005>
+			["id0.313"] = <http://snomedct.info/id/138875005>
+			["id0.314"] = <http://snomedct.info/id/138875005>
+			["id0.315"] = <http://snomedct.info/id/138875005>
+			["id0.316"] = <http://snomedct.info/id/138875005>
+			["id0.317"] = <http://snomedct.info/id/138875005>
+			["id0.318"] = <http://snomedct.info/id/138875005>
+			["id0.319"] = <http://snomedct.info/id/138875005>
+			["id0.320"] = <http://snomedct.info/id/138875005>
+			["id0.321"] = <http://snomedct.info/id/138875005>
+			["id0.322"] = <http://snomedct.info/id/138875005>
+			["id0.323"] = <http://snomedct.info/id/138875005>
+			["id0.324"] = <http://snomedct.info/id/138875005>
+			["id0.325"] = <http://snomedct.info/id/138875005>
+			["id0.326"] = <http://snomedct.info/id/138875005>
+			["id0.327"] = <http://snomedct.info/id/138875005>
+			["id0.328"] = <http://snomedct.info/id/138875005>
+			["id0.329"] = <http://snomedct.info/id/138875005>
+			["id0.330"] = <http://snomedct.info/id/138875005>
+			["id0.331"] = <http://snomedct.info/id/138875005>
+			["id0.332"] = <http://snomedct.info/id/138875005>
+			["id0.333"] = <http://snomedct.info/id/138875005>
+			["id0.334"] = <http://snomedct.info/id/138875005>
+			["id0.335"] = <http://snomedct.info/id/138875005>
+			["id0.336"] = <http://snomedct.info/id/138875005>
+			["id0.337"] = <http://snomedct.info/id/138875005>
+			["id0.338"] = <http://snomedct.info/id/138875005>
+			["id0.339"] = <http://snomedct.info/id/138875005>
+			["id0.340"] = <http://snomedct.info/id/138875005>
+			["id0.341"] = <http://snomedct.info/id/138875005>
+			["id0.342"] = <http://snomedct.info/id/138875005>
+			["id0.343"] = <http://snomedct.info/id/138875005>
+			["id0.344"] = <http://snomedct.info/id/138875005>
+			["id0.345"] = <http://snomedct.info/id/138875005>
+			["id0.346"] = <http://snomedct.info/id/138875005>
+			["id0.347"] = <http://snomedct.info/id/138875005>
+			["id0.348"] = <http://snomedct.info/id/138875005>
+			["id0.349"] = <http://snomedct.info/id/138875005>
+			["id0.350"] = <http://snomedct.info/id/138875005>
+			["id0.351"] = <http://snomedct.info/id/138875005>
+			["id0.352"] = <http://snomedct.info/id/138875005>
+			["id0.353"] = <http://snomedct.info/id/138875005>
+			["id0.354"] = <http://snomedct.info/id/138875005>
+			["id0.355"] = <http://snomedct.info/id/138875005>
+			["id0.356"] = <http://snomedct.info/id/138875005>
+			["id0.357"] = <http://snomedct.info/id/138875005>
+			["id0.358"] = <http://snomedct.info/id/138875005>
+			["id0.359"] = <http://snomedct.info/id/138875005>
+			["id0.360"] = <http://snomedct.info/id/138875005>
+			["id0.361"] = <http://snomedct.info/id/138875005>
+			["id0.362"] = <http://snomedct.info/id/138875005>
+			["id0.363"] = <http://snomedct.info/id/138875005>
+			["id0.364"] = <http://snomedct.info/id/138875005>
+			["id0.365"] = <http://snomedct.info/id/364713004>
+			["id0.366"] = <http://snomedct.info/id/138875005>
+			["id0.367"] = <http://snomedct.info/id/138875005>
+			["id0.368"] = <http://snomedct.info/id/138875005>
+			["id0.369"] = <http://snomedct.info/id/138875005>
+			["id0.370"] = <http://snomedct.info/id/138875005>
+			["id0.371"] = <http://snomedct.info/id/138875005>
+			["id0.372"] = <http://snomedct.info/id/138875005>
+			["id0.373"] = <http://snomedct.info/id/138875005>
+			["id0.374"] = <http://snomedct.info/id/138875005>
+			["id0.375"] = <http://snomedct.info/id/138875005>
+			["id0.376"] = <http://snomedct.info/id/138875005>
+			["id0.377"] = <http://snomedct.info/id/138875005>
+			["id0.378"] = <http://snomedct.info/id/138875005>
+			["id0.379"] = <http://snomedct.info/id/138875005>
+			["id0.380"] = <http://snomedct.info/id/138875005>
+			["id0.381"] = <http://snomedct.info/id/138875005>
+			["id0.382"] = <http://snomedct.info/id/138875005>
+			["id0.383"] = <http://snomedct.info/id/138875005>
+			["id0.384"] = <http://snomedct.info/id/138875005>
+			["id0.385"] = <http://snomedct.info/id/138875005>
+			["id0.386"] = <http://snomedct.info/id/138875005>
+			["id0.387"] = <http://snomedct.info/id/138875005>
+			["id0.388"] = <http://snomedct.info/id/138875005>
+			["id0.389"] = <http://snomedct.info/id/138875005>
+			["id0.390"] = <http://snomedct.info/id/138875005>
+			["id0.391"] = <http://snomedct.info/id/138875005>
+			["id0.392"] = <http://snomedct.info/id/138875005>
+			["id0.393"] = <http://snomedct.info/id/138875005>
+			["id0.394"] = <http://snomedct.info/id/138875005>
+			["id0.395"] = <http://snomedct.info/id/138875005>
+			["id0.396"] = <http://snomedct.info/id/138875005>
+			["id0.397"] = <http://snomedct.info/id/138875005>
+			["id0.398"] = <http://snomedct.info/id/138875005>
+			["id0.399"] = <http://snomedct.info/id/138875005>
+			["id0.400"] = <http://snomedct.info/id/138875005>
+			["id0.401"] = <http://snomedct.info/id/138875005>
+			["id0.402"] = <http://snomedct.info/id/138875005>
+			["id0.403"] = <http://snomedct.info/id/138875005>
+			["id0.404"] = <http://snomedct.info/id/138875005>
+			["id0.405"] = <http://snomedct.info/id/138875005>
+			["id0.406"] = <http://snomedct.info/id/138875005>
+			["id0.407"] = <http://snomedct.info/id/138875005>
+			["id0.408"] = <http://snomedct.info/id/138875005>
+			["id0.409"] = <http://snomedct.info/id/138875005>
+			["id0.410"] = <http://snomedct.info/id/138875005>
+			["id0.411"] = <http://snomedct.info/id/138875005>
+			["id0.412"] = <http://snomedct.info/id/138875005>
+			["id0.413"] = <http://snomedct.info/id/138875005>
+			["id0.414"] = <http://snomedct.info/id/138875005>
+			["id0.415"] = <http://snomedct.info/id/138875005>
+			["id0.416"] = <http://snomedct.info/id/138875005>
+			["id0.417"] = <http://snomedct.info/id/138875005>
+			["id0.418"] = <http://snomedct.info/id/138875005>
+			["id0.419"] = <http://snomedct.info/id/138875005>
+			["id0.420"] = <http://snomedct.info/id/138875005>
+			["id0.421"] = <http://snomedct.info/id/138875005>
+			["id0.422"] = <http://snomedct.info/id/138875005>
+			["id0.423"] = <http://snomedct.info/id/138875005>
+			["id0.424"] = <http://snomedct.info/id/138875005>
+			["id0.425"] = <http://snomedct.info/id/138875005>
+			["id0.426"] = <http://snomedct.info/id/138875005>
+			["id0.427"] = <http://snomedct.info/id/138875005>
+			["id0.428"] = <http://snomedct.info/id/138875005>
+			["id0.429"] = <http://snomedct.info/id/138875005>
+			["id0.430"] = <http://snomedct.info/id/364713004>
+			["id0.431"] = <http://snomedct.info/id/138875005>
+			["id0.432"] = <http://snomedct.info/id/138875005>
+			["id0.433"] = <http://snomedct.info/id/138875005>
+			["id0.434"] = <http://snomedct.info/id/138875005>
+			["id0.435"] = <http://snomedct.info/id/138875005>
+			["id0.436"] = <http://snomedct.info/id/138875005>
+			["id0.437"] = <http://snomedct.info/id/138875005>
+			["id0.438"] = <http://snomedct.info/id/138875005>
+			["id0.439"] = <http://snomedct.info/id/138875005>
+			["id0.440"] = <http://snomedct.info/id/138875005>
+			["id0.441"] = <http://snomedct.info/id/138875005>
+			["id0.442"] = <http://snomedct.info/id/138875005>
+			["id0.443"] = <http://snomedct.info/id/138875005>
+			["id0.444"] = <http://snomedct.info/id/138875005>
+			["id0.445"] = <http://snomedct.info/id/138875005>
+			["id0.446"] = <http://snomedct.info/id/138875005>
+			["id0.447"] = <http://snomedct.info/id/138875005>
+			["id0.448"] = <http://snomedct.info/id/138875005>
+			["id0.449"] = <http://snomedct.info/id/138875005>
+			["id0.450"] = <http://snomedct.info/id/138875005>
+			["id0.451"] = <http://snomedct.info/id/138875005>
+			["id0.452"] = <http://snomedct.info/id/138875005>
+			["at0.453"] = <http://snomedct.info/id/138875005>
+		>
+	>

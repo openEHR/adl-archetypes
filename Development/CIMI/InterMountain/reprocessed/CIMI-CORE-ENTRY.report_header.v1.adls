@@ -1,0 +1,31 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ENTRY.report_header.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ENTRY[id1] 	-- Report header
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Report header">
+				description = <"Report header">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+		>
+	>

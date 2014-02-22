@@ -1,0 +1,47 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.gas_and_carbon_monoxide_observable.v1.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.observable.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1] matches {	-- Gas and carbon monoxide observable
+		/item matches {
+			ELEMENT[id0.1] occurrences matches {1} matches {	-- Test name
+				value matches {
+					TEXT[id0.2] 
+				}
+			}
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.specimen.v3] 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Gas and carbon monoxide observable">
+				description = <"Gas and carbon monoxide observable">
+			>
+			["id0.1"] = <
+				text = <"Test name">
+				description = <"Test name">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+		>
+	>

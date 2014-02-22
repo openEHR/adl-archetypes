@@ -1,0 +1,70 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-PARTY.party.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	PARTY[id1] matches {	-- Party
+		details matches {
+			CLUSTER[id2] occurrences matches {0..*} matches {	-- Identifier
+				item matches {
+					ELEMENT[id3] occurrences matches {1} matches {	-- Value
+						value matches {
+							IDENTIFIER[id5] 
+						}
+					}
+				}
+			}
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.party_name.v1] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.address.v2] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.electronic_contact.v1] 
+			ELEMENT[id4] occurrences matches {1} matches {	-- Party type
+				value matches {
+					CODED_TEXT[id6] 
+				}
+			}
+		}
+		relationship matches {
+			use_archetype PARTY_RELATIONSHIP[CIMI-CORE-PARTY_RELATIONSHIP.party_relationship.v1] 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Party">
+				description = <"Party">
+			>
+			["id2"] = <
+				text = <"Identifier">
+				description = <"Identifier">
+			>
+			["id3"] = <
+				text = <"Value">
+				description = <"Value">
+			>
+			["id4"] = <
+				text = <"Party type">
+				description = <"Party type">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1"] = <http://snomedct.info/id/138875005>
+			["id2"] = <http://snomedct.info/id/138875005>
+			["id3"] = <http://snomedct.info/id/138875005>
+			["id4"] = <http://snomedct.info/id/138875005>
+		>
+	>

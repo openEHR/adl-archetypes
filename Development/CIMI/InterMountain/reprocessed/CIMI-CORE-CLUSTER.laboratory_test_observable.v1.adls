@@ -1,0 +1,68 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.laboratory_test_observable.v1.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.observable.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1] matches {	-- Laboratory Test Observable
+		item matches {
+			ELEMENT[id0.1] occurrences matches {1} matches {	-- Test name
+				value matches {
+					TEXT[id0.4] 
+				}
+			}
+			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Diagnostic service**
+				value matches {
+					TEXT[id0.5] 
+				}
+			}
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.specimen.v3] 
+			ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Poct indicator
+				value matches {
+					CODED_TEXT[id0.6] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Laboratory Test Observable">
+				description = <"Laboratory Test Observable">
+			>
+			["id0.1"] = <
+				text = <"Test name">
+				description = <"Test name">
+			>
+			["id0.2"] = <
+				text = <"Diagnostic service**">
+				description = <"Diagnostic service**">
+			>
+			["id0.3"] = <
+				text = <"Poct indicator">
+				description = <"Poct indicator">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id0.1"] = <http://snomedct.info/id/364712009>
+			["id0.2"] = <http://snomedct.info/id/364712009>
+			["id0.3"] = <http://snomedct.info/id/364712009>
+		>
+	>

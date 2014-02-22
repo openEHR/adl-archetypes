@@ -1,0 +1,77 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.observable.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1] matches {	-- Observable
+		item matches {
+			ELEMENT[id2] occurrences matches {1} matches {	-- Name
+				value matches {
+					TEXT[id7] 
+				}
+			}
+			ITEM[id3] occurrences matches {0..*} 	-- Reason
+			ITEM[id4] occurrences matches {0..*} 	-- Method
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Status
+				value matches {
+					CODED_TEXT[id8] 
+				}
+			}
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Priority
+				value matches {
+					TEXT[id9] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Observable">
+				description = <"Observable">
+			>
+			["id2"] = <
+				text = <"Name">
+				description = <"Name">
+			>
+			["id3"] = <
+				text = <"Reason">
+				description = <"Reason">
+			>
+			["id4"] = <
+				text = <"Method">
+				description = <"Method">
+			>
+			["id5"] = <
+				text = <"Status">
+				description = <"Status">
+			>
+			["id6"] = <
+				text = <"Priority">
+				description = <"Priority">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1"] = <http://snomedct.info/id/363787002>
+			["id2"] = <http://snomedct.info/id/363787002>
+			["id3"] = <http://snomedct.info/id/138875005>
+			["id4"] = <http://snomedct.info/id/138875005>
+			["id5"] = <http://snomedct.info/id/288532009>
+			["id6"] = <http://snomedct.info/id/272125009>
+		>
+	>

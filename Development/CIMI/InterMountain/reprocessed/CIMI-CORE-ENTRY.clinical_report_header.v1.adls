@@ -1,0 +1,140 @@
+archetype (adl_version=1.5; generated)
+	CIMI-CORE-ENTRY.clinical_report_header.v1
+
+specialize
+	CIMI-CORE-ENTRY.clinical_entry.v2
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	ENTRY[at0000.1] matches { -- Clinical Report Header
+		/data matches {
+			ELEMENT[at0.1] occurrences matches {0..1} matches { -- Report id
+				value matches {
+					IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0.2] occurrences matches {0..1} matches { -- Versioned report id
+				value matches {
+					IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0.3] occurrences matches {0..1} matches { -- Report version
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.4] occurrences matches {0..1} matches { -- Status
+				value matches {
+					CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.5] occurrences matches {0..1} matches { -- Report type
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.6] occurrences matches {0..1} matches { -- Conclusions
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.7] occurrences matches {0..*} matches { -- Recommendations
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.8] occurrences matches {0..*} matches { -- Comments
+				value matches {
+					TEXT matches {*}
+				}
+			}
+			ELEMENT[at0.9] occurrences matches {0..*} matches { -- Report representation
+				value matches {
+					MULTIMEDIA matches {*}
+				}
+			}
+			ELEMENT[at0.10] occurrences matches {0..1} matches { -- Report link
+				value matches {
+					URI matches {*}
+				}
+			}
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.author_action.v1] -- Author action
+			use_archetype CLUSTER [CIMI-CORE-CLUSTER.issue_action.v1] -- Issue action
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["at0000.1"] = <
+				text = <"Clinical Report Header">
+				description = <"Clinical Report Header">
+			>
+			["at0.1"] = <
+				text = <"Report id">
+				description = <"Report id">
+			>
+			["at0.2"] = <
+				text = <"Versioned report id">
+				description = <"Versioned report id">
+			>
+			["at0.3"] = <
+				text = <"Report version">
+				description = <"Report version">
+			>
+			["at0.4"] = <
+				text = <"Status">
+				description = <"Status">
+			>
+			["at0.5"] = <
+				text = <"Report type">
+				description = <"Report type">
+			>
+			["at0.6"] = <
+				text = <"Conclusions">
+				description = <"Conclusions">
+			>
+			["at0.7"] = <
+				text = <"Recommendations">
+				description = <"Recommendations">
+			>
+			["at0.8"] = <
+				text = <"Comments">
+				description = <"Comments">
+			>
+			["at0.9"] = <
+				text = <"Report representation">
+				description = <"Report representation">
+			>
+			["at0.10"] = <
+				text = <"Report link">
+				description = <"Report link">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0.1"] = <[SNOMED-CT::423901009]>
+				["at0.2"] = <[SNOMED-CT::423901009]>
+				["at0.3"] = <[SNOMED-CT::138875005]>
+				["at0.4"] = <[SNOMED-CT::138875005]>
+				["at0.5"] = <[SNOMED-CT::138875005]>
+				["at0.6"] = <[SNOMED-CT::138875005]>
+				["at0.7"] = <[SNOMED-CT::138875005]>
+				["at0.8"] = <[SNOMED-CT::138875005]>
+				["at0.9"] = <[SNOMED-CT::138875005]>
+				["at0.10"] = <[SNOMED-CT::138875005]>
+			>
+		>
+	>

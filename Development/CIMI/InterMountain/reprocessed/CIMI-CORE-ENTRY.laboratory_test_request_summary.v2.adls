@@ -1,0 +1,48 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ENTRY.laboratory_test_request_summary.v2.0.0
+
+specialize
+	CIMI-CORE-ENTRY.observation_request.v2
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ENTRY[id1.1.1.1.1] matches {	-- Laboratory Test Request Summary
+		data matches {
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.laboratory_test_request_action.v1] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.laboratory_test_observable.v1] 
+		}
+		link matches {
+			LINK[id0.0.0.0.1] occurrences matches {0..*} 	-- Requested laboratory test link
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1.1.1"] = <
+				text = <"Laboratory Test Request Summary">
+				description = <"Laboratory Test Request Summary">
+			>
+			["id0.0.0.0.1"] = <
+				text = <"Requested laboratory test link">
+				description = <"Requested laboratory test link">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1.1.1"] = <http://snomedct.info/id/394838008>
+			["id0.0.0.0.1"] = <http://snomedct.info/id/364712009>
+		>
+	>

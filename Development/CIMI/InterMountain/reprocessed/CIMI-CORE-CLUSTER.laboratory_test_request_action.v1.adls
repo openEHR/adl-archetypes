@@ -1,0 +1,67 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.laboratory_test_request_action.v1.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.request_action.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1.1] matches {	-- Laboratory Test Request Action
+		/item matches {
+			ELEMENT[id0.0.1] occurrences matches {0..1} matches {	-- Requester request identifier
+				value matches {
+					IDENTIFIER[id0.0.4] 
+				}
+			}
+			ELEMENT[id0.0.2] occurrences matches {0..1} matches {	-- Receiver request identifier
+				value matches {
+					IDENTIFIER[id0.0.5] 
+				}
+			}
+			ELEMENT[id0.0.3] occurrences matches {1} matches {	-- Action type
+				value matches {
+					CODED_TEXT[id0.0.6] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1"] = <
+				text = <"Laboratory Test Request Action">
+				description = <"Laboratory Test Request Action">
+			>
+			["id0.0.1"] = <
+				text = <"Requester request identifier">
+				description = <"Requester request identifier">
+			>
+			["id0.0.2"] = <
+				text = <"Receiver request identifier">
+				description = <"Receiver request identifier">
+			>
+			["id0.0.3"] = <
+				text = <"Action type">
+				description = <"Action type">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id0.0.1"] = <http://snomedct.info/id/129264002>
+			["id0.0.2"] = <http://snomedct.info/id/138875005>
+			["id0.0.3"] = <http://snomedct.info/id/138875005>
+		>
+	>

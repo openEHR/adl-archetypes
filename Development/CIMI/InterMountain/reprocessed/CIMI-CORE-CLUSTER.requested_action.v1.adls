@@ -1,0 +1,127 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.requested_action.v1.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.action.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1] matches {	-- Requested Action
+		/item matches {
+			ELEMENT[id0.1] occurrences matches {1} matches {	-- Action type
+				value matches {
+					CODED_TEXT[id0.12] 
+				}
+			}
+			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Requested datetime
+				value matches {
+					DATE_TIME[id0.13] 
+				}
+			}
+			ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Requested datetime range
+				value matches {
+					INTERVAL_VALUE<DATE_TIME>[id0.14] 
+				}
+			}
+			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Requested duration
+				value matches {
+					DURATION[id0.15] 
+				}
+			}
+			ELEMENT[id0.5] occurrences matches {0..1} matches {	-- Requested timing offset
+				value matches {
+					DURATION[id0.16] 
+				}
+			}
+			ELEMENT[id0.6] occurrences matches {0..1} matches {	-- Requested timing offset origin
+				value matches {
+					DATE_TIME[id0.17] 
+				}
+			}
+			ITEM[id0.7] occurrences matches {0..1} 	-- Status
+			ITEM[id0.8] occurrences matches {0..*} 	-- Clinical information provided
+		}
+		participation matches {
+			PARTICIPATION[id0.9] occurrences matches {0..*} 	-- Requested participant
+			PARTICIPATION[id0.10] occurrences matches {0..1} 	-- Locationof subject
+			PARTICIPATION[id0.11] occurrences matches {0..1} 	-- Locationof requested participant
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Requested Action">
+				description = <"Requested Action">
+			>
+			["id0.1"] = <
+				text = <"Action type">
+				description = <"Action type">
+			>
+			["id0.2"] = <
+				text = <"Requested datetime">
+				description = <"Requested datetime">
+			>
+			["id0.3"] = <
+				text = <"Requested datetime range">
+				description = <"Requested datetime range">
+			>
+			["id0.4"] = <
+				text = <"Requested duration">
+				description = <"Requested duration">
+			>
+			["id0.5"] = <
+				text = <"Requested timing offset">
+				description = <"Requested timing offset">
+			>
+			["id0.6"] = <
+				text = <"Requested timing offset origin">
+				description = <"Requested timing offset origin">
+			>
+			["id0.7"] = <
+				text = <"Status">
+				description = <"Status">
+			>
+			["id0.8"] = <
+				text = <"Clinical information provided">
+				description = <"Clinical information provided">
+			>
+			["id0.9"] = <
+				text = <"Requested participant">
+				description = <"Requested participant">
+			>
+			["id0.10"] = <
+				text = <"Locationof subject">
+				description = <"Locationof subject">
+			>
+			["id0.11"] = <
+				text = <"Locationof requested participant">
+				description = <"Locationof requested participant">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id0.1"] = <http://snomedct.info/id/71388002>
+			["id0.2"] = <http://snomedct.info/id/71388002>
+			["id0.3"] = <http://snomedct.info/id/252129004>
+			["id0.4"] = <http://snomedct.info/id/252131008>
+			["id0.5"] = <http://snomedct.info/id/442371002>
+			["id0.6"] = <http://snomedct.info/id/288532009>
+			["id0.7"] = <http://snomedct.info/id/48176007>
+			["id0.8"] = <http://snomedct.info/id/308916002>
+			["id0.9"] = <http://snomedct.info/id/308916002>
+		>
+	>

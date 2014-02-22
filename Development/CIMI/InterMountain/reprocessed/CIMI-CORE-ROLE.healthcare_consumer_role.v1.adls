@@ -1,0 +1,122 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ROLE.healthcare_consumer_role.v1.0.0
+
+specialize
+	CIMI-CORE-ROLE.person_role.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ROLE[id1.1.1.1] matches {	-- Healthcare consumer role
+		details matches {
+			ELEMENT[id0.0.0.1] occurrences matches {1} matches {	-- Role type
+				value matches {
+					CODED_TEXT[id0.0.0.9] 
+				}
+			}
+			ELEMENT[id0.0.0.2] occurrences matches {0..1} matches {	-- Importance
+				value matches {
+					TEXT[id0.0.0.10] 
+				}
+			}
+			ELEMENT[id0.0.0.3] occurrences matches {0..1} matches {	-- Paper record location
+				value matches {
+					TEXT[id0.0.0.11] 
+				}
+			}
+			ELEMENT[id0.0.0.4] occurrences matches {0..1} matches {	-- Organ donor type
+				value matches {
+					CODED_TEXT[id0.0.0.12] 
+				}
+			}
+			ELEMENT[id0.0.0.5] occurrences matches {0..1} matches {	-- Diet
+				value matches {
+					TEXT[id0.0.0.13] 
+				}
+			}
+			ELEMENT[id0.0.0.6] occurrences matches {0..1} matches {	-- Importance
+				value matches {
+					TEXT[id0.0.0.14] 
+				}
+			}
+			ELEMENT[id0.0.0.7] occurrences matches {0..1} matches {	-- Importance
+				value matches {
+					TEXT[id0.0.0.15] 
+				}
+			}
+			ELEMENT[id0.0.0.8] occurrences matches {0..1} matches {	-- Importance
+				value matches {
+					TEXT[id0.0.0.16] 
+				}
+			}
+		}
+		relationship matches {
+			use_archetype PARTY_RELATIONSHIP[CIMI-CORE-PARTY_RELATIONSHIP.healthcare_provider_relationship.v1] 
+			use_archetype PARTY_RELATIONSHIP[CIMI-CORE-PARTY_RELATIONSHIP.next_of_kin_relationship.v1] 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1.1"] = <
+				text = <"Healthcare consumer role">
+				description = <"Healthcare consumer role">
+			>
+			["id0.0.0.1"] = <
+				text = <"Role type">
+				description = <"Role type">
+			>
+			["id0.0.0.2"] = <
+				text = <"Importance">
+				description = <"Importance">
+			>
+			["id0.0.0.3"] = <
+				text = <"Paper record location">
+				description = <"Paper record location">
+			>
+			["id0.0.0.4"] = <
+				text = <"Organ donor type">
+				description = <"Organ donor type">
+			>
+			["id0.0.0.5"] = <
+				text = <"Diet">
+				description = <"Diet">
+			>
+			["id0.0.0.6"] = <
+				text = <"Importance">
+				description = <"Importance">
+			>
+			["id0.0.0.7"] = <
+				text = <"Importance">
+				description = <"Importance">
+			>
+			["id0.0.0.8"] = <
+				text = <"Importance">
+				description = <"Importance">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1.1.1"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.1"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.2"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.3"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.4"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.5"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.6"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.7"] = <http://snomedct.info/id/138875005>
+			["id0.0.0.8"] = <http://snomedct.info/id/138875005>
+		>
+	>

@@ -1,0 +1,168 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.specimen.v3.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.material_entity.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1] matches {	-- Specimen
+		/item matches {
+			ELEMENT[id0.1] occurrences matches {0..1} matches {	-- Specimen identifier
+				value matches {
+					IDENTIFIER[id0.14] 
+				}
+			}
+			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Container identifier
+				value matches {
+					IDENTIFIER[id0.15] 
+				}
+			}
+			ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Source specimen identifier
+				value matches {
+					IDENTIFIER[id0.16] 
+				}
+			}
+			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Specimen type
+				value matches {
+					TEXT[id0.17] 
+				}
+			}
+			ELEMENT[id0.5] occurrences matches {0..1} matches {	-- Specimen description
+				value matches {
+					TEXT[id0.18] 
+				}
+			}
+			ELEMENT[id0.6] occurrences matches {0..1} matches {	-- Specimen volume
+				value matches {
+					QUANTITY[id0.19] 
+				}
+			}
+			ELEMENT[id0.7] occurrences matches {0..*} matches {	-- Specimen weight
+				value matches {
+					QUANTITY[id0.20] 
+				}
+			}
+			ELEMENT[id0.8] occurrences matches {0..*} matches {	-- Specimen dimension
+				value matches {
+					QUANTITY[id0.21] 
+				}
+			}
+			ELEMENT[id0.9] occurrences matches {0..1} matches {	-- Specimen size description
+				value matches {
+					TEXT[id0.22] 
+				}
+			}
+			ELEMENT[id0.10] occurrences matches {0..1} matches {	-- Sequence number
+				value matches {
+					TEXT[id0.23] 
+				}
+			}
+			ELEMENT[id0.11] occurrences matches {0..1} matches {	-- Specimen additive
+				value matches {
+					TEXT[id0.24] 
+				}
+			}
+			ELEMENT[id0.12] occurrences matches {0..1} matches {	-- Specimen handling risk
+				value matches {
+					TEXT[id0.25] 
+				}
+			}
+			ELEMENT[id0.13] occurrences matches {0..*} matches {	-- Special handling instructions
+				value matches {
+					TEXT[id0.26] 
+				}
+			}
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.collect_action.v1] 
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.receive_action.v1] 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Specimen">
+				description = <"Specimen">
+			>
+			["id0.1"] = <
+				text = <"Specimen identifier">
+				description = <"Specimen identifier">
+			>
+			["id0.2"] = <
+				text = <"Container identifier">
+				description = <"Container identifier">
+			>
+			["id0.3"] = <
+				text = <"Source specimen identifier">
+				description = <"Source specimen identifier">
+			>
+			["id0.4"] = <
+				text = <"Specimen type">
+				description = <"Specimen type">
+			>
+			["id0.5"] = <
+				text = <"Specimen description">
+				description = <"Specimen description">
+			>
+			["id0.6"] = <
+				text = <"Specimen volume">
+				description = <"Specimen volume">
+			>
+			["id0.7"] = <
+				text = <"Specimen weight">
+				description = <"Specimen weight">
+			>
+			["id0.8"] = <
+				text = <"Specimen dimension">
+				description = <"Specimen dimension">
+			>
+			["id0.9"] = <
+				text = <"Specimen size description">
+				description = <"Specimen size description">
+			>
+			["id0.10"] = <
+				text = <"Sequence number">
+				description = <"Sequence number">
+			>
+			["id0.11"] = <
+				text = <"Specimen additive">
+				description = <"Specimen additive">
+			>
+			["id0.12"] = <
+				text = <"Specimen handling risk">
+				description = <"Specimen handling risk">
+			>
+			["id0.13"] = <
+				text = <"Special handling instructions">
+				description = <"Special handling instructions">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1"] = <http://snomedct.info/id/123038009>
+			["id0.1"] = <http://snomedct.info/id/423901009>
+			["id0.2"] = <http://snomedct.info/id/423901009>
+			["id0.3"] = <http://snomedct.info/id/423901009>
+			["id0.4"] = <http://snomedct.info/id/123038009>
+			["id0.5"] = <http://snomedct.info/id/123038009>
+			["id0.6"] = <http://snomedct.info/id/404230009>
+			["id0.7"] = <http://snomedct.info/id/371506001>
+			["id0.8"] = <http://snomedct.info/id/371475003>
+			["id0.9"] = <http://snomedct.info/id/371475003>
+			["id0.10"] = <http://snomedct.info/id/410681005>
+			["id0.11"] = <http://snomedct.info/id/105590001>
+		>
+	>

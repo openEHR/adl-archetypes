@@ -1,0 +1,48 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-PARTY_RELATIONSHIP.organisation_relationship.v1.0.0
+
+specialize
+	CIMI-CORE-PARTY_RELATIONSHIP.party_relationship.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	PARTY_RELATIONSHIP[id1.1] matches {	-- Organisation relationship
+		details matches {
+			ELEMENT[id0.1] occurrences matches {1} matches {	-- Scoping status
+				value matches {
+					CODED_TEXT[id0.2] 
+				}
+			}
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.location.v1] 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Organisation relationship">
+				description = <"Organisation relationship">
+			>
+			["id0.1"] = <
+				text = <"Scoping status">
+				description = <"Scoping status">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1.1"] = <http://snomedct.info/id/138875005>
+		>
+	>

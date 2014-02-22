@@ -1,0 +1,114 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-CLUSTER.author_action.v1.0.0
+
+specialize
+	CIMI-CORE-CLUSTER.action.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	CLUSTER[id1.1] matches {	-- Author Action
+		/item matches {
+			ELEMENT[id0.1] occurrences matches {1} matches {	-- Action type
+				value matches {
+					CODED_TEXT[id0.10] 
+				}
+			}
+			ELEMENT[id0.2] occurrences matches {0..1} matches {	-- Author datetime
+				value matches {
+					DATE_TIME[id0.11] 
+				}
+			}
+			ELEMENT[id0.3] occurrences matches {0..1} matches {	-- Author datetime range
+				value matches {
+					INTERVAL_VALUE<DATE_TIME>[id0.12] 
+				}
+			}
+			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Author duration
+				value matches {
+					DURATION[id0.13] 
+				}
+			}
+			ELEMENT[id0.5] occurrences matches {0..1} matches {	-- Author timing offset
+				value matches {
+					DURATION[id0.14] 
+				}
+			}
+			ELEMENT[id0.6] occurrences matches {0..1} matches {	-- Author timing offset origin
+				value matches {
+					DATE_TIME[id0.15] 
+				}
+			}
+		}
+		participation matches {
+			PARTICIPATION[id0.7] occurrences matches {0..*} 	-- Author
+			PARTICIPATION[id0.8] occurrences matches {0..1} 	-- Locationof subject
+			PARTICIPATION[id0.9] occurrences matches {0..1} 	-- Locationof author
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Author Action">
+				description = <"Author Action">
+			>
+			["id0.1"] = <
+				text = <"Action type">
+				description = <"Action type">
+			>
+			["id0.2"] = <
+				text = <"Author datetime">
+				description = <"Author datetime">
+			>
+			["id0.3"] = <
+				text = <"Author datetime range">
+				description = <"Author datetime range">
+			>
+			["id0.4"] = <
+				text = <"Author duration">
+				description = <"Author duration">
+			>
+			["id0.5"] = <
+				text = <"Author timing offset">
+				description = <"Author timing offset">
+			>
+			["id0.6"] = <
+				text = <"Author timing offset origin">
+				description = <"Author timing offset origin">
+			>
+			["id0.7"] = <
+				text = <"Author">
+				description = <"Author">
+			>
+			["id0.8"] = <
+				text = <"Locationof subject">
+				description = <"Locationof subject">
+			>
+			["id0.9"] = <
+				text = <"Locationof author">
+				description = <"Locationof author">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id0.1"] = <http://snomedct.info/id/252129004>
+			["id0.2"] = <http://snomedct.info/id/252131008>
+			["id0.3"] = <http://snomedct.info/id/442371002>
+			["id0.4"] = <http://snomedct.info/id/125676002>
+			["id0.5"] = <http://snomedct.info/id/308916002>
+			["id0.6"] = <http://snomedct.info/id/308916002>
+		>
+	>

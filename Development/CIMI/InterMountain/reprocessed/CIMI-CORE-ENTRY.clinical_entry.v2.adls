@@ -1,0 +1,50 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ENTRY.clinical_entry.v2.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ENTRY[id1] matches {	-- Clinical Entry
+		participation matches {
+			PARTICIPATION[id2] occurrences matches {0..1} 	-- Subject of care
+			PARTICIPATION[id3] occurrences matches {0..1} 	-- Information subject
+		}
+		data matches {
+			use_archetype CLUSTER[CIMI-CORE-CLUSTER.action.v1] 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Clinical Entry">
+				description = <"Clinical Entry">
+			>
+			["id2"] = <
+				text = <"Subject of care">
+				description = <"Subject of care">
+			>
+			["id3"] = <
+				text = <"Information subject">
+				description = <"Information subject">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			["id1"] = <http://snomedct.info/id/404684003>
+			["id2"] = <http://snomedct.info/id/125676002>
+			["id3"] = <http://snomedct.info/id/125676002>
+		>
+	>
