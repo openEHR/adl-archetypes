@@ -18,7 +18,10 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["regression"] = <"PASS">
+	>
 
 definition
 	OBSERVATION[id1] matches {	-- Apgar score

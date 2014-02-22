@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1)
+archetype (adl_version=1.5.1)
 	openEHR-EHR-SECTION.slot_include_empty_exclude_empty.v1.0.0
 
 language
@@ -14,12 +14,12 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test slot with no include or exclude">
+			purpose = <"Test slot with no include or exclude; should fail with VASMD">
 		>
 	>
 	lifecycle_state = <"initial">
 	other_details = <
-		["regression"] = <"PASS">
+		["regression"] = <"VASMD">
 	>
 
 definition
