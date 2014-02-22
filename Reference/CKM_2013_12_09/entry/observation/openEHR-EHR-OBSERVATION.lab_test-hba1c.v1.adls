@@ -42,7 +42,6 @@ definition
 				data matches {
 					ITEM_TREE[id4] matches {
 						items matches {
-							ELEMENT[id6] 
 							ELEMENT[id79.1] occurrences matches {0..1} matches {	-- HbA1c
 								value matches {
 									DV_PROPORTION[id0.1] matches {

@@ -57,12 +57,10 @@ definition
 			}
 		}
 		/protocol[id9]/items matches {
-			ELEMENT[id11] 
 			allow_archetype CLUSTER[id142] occurrences matches {0..1} matches {
 				include
 					archetype_id/value matches {/.*/}
 			}
-			ELEMENT[id12] 
 			allow_archetype CLUSTER[id143] occurrences matches {0..1} matches {
 				include
 					archetype_id/value matches {/.*/}

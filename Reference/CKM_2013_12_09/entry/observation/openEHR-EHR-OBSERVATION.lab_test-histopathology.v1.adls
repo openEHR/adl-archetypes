@@ -61,7 +61,6 @@ definition
 				data matches {
 					ITEM_TREE[id4] matches {
 						items matches {
-							ELEMENT[id6] 
 							after [id66]
 							CLUSTER[id0.86] occurrences matches {0..1} matches {	-- Macroscopic findings
 								items matches {

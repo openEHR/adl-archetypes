@@ -34,8 +34,6 @@ description
 definition
 	INSTRUCTION[id1.1] matches {	-- Referral request
 		/protocol[id9]/items matches {
-			ELEMENT[id11] 
-			ELEMENT[id12] 
 			after [id129]
 			allow_archetype CLUSTER[id0.5] occurrences matches {0..*} matches {	-- Contacts
 				include

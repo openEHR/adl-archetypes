@@ -35,11 +35,6 @@ DICOM Standards Committee, Working Groups 26, Pathology.">
 definition
 	CLUSTER[id1.1] matches {	-- Precise anatomical location
 		/items matches {
-			CLUSTER[id6] matches {
-				items matches {
-					ELEMENT[id2] 
-				}
-			}
 			before [id54]
 			CLUSTER[id0.51] occurrences matches {0..1} matches {	-- Coordinates
 				items matches {

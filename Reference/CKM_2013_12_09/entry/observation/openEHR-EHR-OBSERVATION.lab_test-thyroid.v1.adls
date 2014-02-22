@@ -44,7 +44,6 @@ definition
 				data matches {
 					ITEM_TREE[id4] matches {
 						items matches {
-							ELEMENT[id6] 
 							ELEMENT[id79.2] occurrences matches {0..1} matches {	-- Thyroid stimulating hormone (TSH)
 								value matches {
 									DV_QUANTITY[id0.1] matches {

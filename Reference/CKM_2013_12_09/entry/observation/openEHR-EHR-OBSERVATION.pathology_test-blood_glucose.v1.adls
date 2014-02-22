@@ -115,15 +115,6 @@ definition
 			}
 		}
 		/data[id2]/events matches {
-			EVENT[id3] matches {
-				data matches {
-					ITEM_TREE[id4] matches {
-						items matches {
-							ELEMENT[id6] 
-						}
-					}
-				}
-			}
 			POINT_EVENT[id0.2] occurrences matches {0..1} matches {	-- Baseline Measurement
 				offset matches {
 					DV_DURATION[id0.21] matches {

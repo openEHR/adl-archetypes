@@ -50,14 +50,6 @@ If there are more specific details about the test and/or specimen include this i
 
 definition
 	INSTRUCTION[id1.1] matches {	-- Laboratory Test request
-		protocol matches {
-			ITEM_TREE[id9] matches {
-				items matches {
-					ELEMENT[id11] 
-					ELEMENT[id12] 
-				}
-			}
-		}
 		/activities[id2]/description[id10]/items matches {
 			before [id63]
 			allow_archetype CLUSTER[id0.145] occurrences matches {0..*} matches {	-- Specimen details

@@ -38,7 +38,6 @@ definition
 				data matches {
 					ITEM_TREE[id4] matches {
 						items matches {
-							ELEMENT[id6] 
 							ELEMENT[id79.5] occurrences matches {0..1} matches {	-- Sodum
 								value matches {
 									DV_QUANTITY[id0.1] matches {

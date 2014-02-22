@@ -32,12 +32,7 @@ description
 	>
 
 definition
-	CLUSTER[id1.1] matches {	-- Tumour - Breast Cancer TNM staging 7th Edition
-		items matches {
-			ELEMENT[id4] 
-			ELEMENT[id5] 
-		}
-	}
+	CLUSTER[id1.1] 	-- Tumour - Breast Cancer TNM staging 7th Edition
 
 terminology
 	term_definitions = <

@@ -46,14 +46,6 @@ definition
 				}
 			}
 		}
-		protocol matches {
-			ITEM_TREE[id9] matches {
-				items matches {
-					ELEMENT[id11] 
-					ELEMENT[id12] 
-				}
-			}
-		}
 	}
 
 terminology

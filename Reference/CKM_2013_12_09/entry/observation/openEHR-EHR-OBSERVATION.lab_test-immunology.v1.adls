@@ -49,7 +49,6 @@ definition
 				data matches {
 					ITEM_TREE[id4] matches {
 						items matches {
-							ELEMENT[id6] 
 							ELEMENT[id79] 
 							before [id58]
 							CLUSTER[id0.97] occurrences matches {0..*} matches {	-- Immunology result

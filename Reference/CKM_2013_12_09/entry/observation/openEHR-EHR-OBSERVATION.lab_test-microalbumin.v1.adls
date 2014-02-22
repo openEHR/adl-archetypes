@@ -45,7 +45,6 @@ definition
 				data matches {
 					ITEM_TREE[id4] matches {
 						items matches {
-							ELEMENT[id6] 
 							ELEMENT[id79.3] occurrences matches {0..1} matches {	-- Urine microalbumin
 								value matches {
 									DV_QUANTITY[id0.91] matches {

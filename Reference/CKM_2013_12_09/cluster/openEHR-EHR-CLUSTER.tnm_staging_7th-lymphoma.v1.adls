@@ -33,10 +33,6 @@ description
 
 definition
 	CLUSTER[id1.1] matches {	-- Tumour - TNM staging Lymphoma  7th Edition
-		items matches {
-			ELEMENT[id4] 
-			ELEMENT[id5] 
-		}
 		/items[id15]/value matches {
 			DV_CODED_TEXT[id62.1] matches {
 				defining_code matches {[ac0.2]}		-- Stage grouping (synthesised)
