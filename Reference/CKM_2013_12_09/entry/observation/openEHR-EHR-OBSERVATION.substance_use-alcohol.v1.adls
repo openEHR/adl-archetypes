@@ -34,7 +34,7 @@ Not to be used for recording use or consumption histories for substances other t
 
 definition
 	OBSERVATION[id1.1] matches {	-- Alcohol Consumption
-		/protocol matches {
+		protocol matches {
 			ITEM_TREE[id0.29] matches {
 				items matches {
 					ELEMENT[id0.30] occurrences matches {0..1} matches {	-- Alcohol per standard drink
