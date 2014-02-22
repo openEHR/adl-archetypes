@@ -59,22 +59,22 @@ definition
 							DV_TEXT[id0.102] 
 						}
 					}
-					use_node ELEMENT[id0.90] /items[id9.1]/items[id0.42]	-- /items[Abdominal Findings]/items[Position]
-					use_node ELEMENT[id0.91] /items[id9.1]/items[id0.29]	-- /items[Abdominal Findings]/items[Station]
+					use_node ELEMENT[id0.103] /items[id9.1]/items[id0.42]	-- /items[Abdominal Findings]/items[Position]
+					use_node ELEMENT[id0.104] /items[id9.1]/items[id0.29]	-- /items[Abdominal Findings]/items[Station]
 				}
 			}
 		}
 		/items[id9.1]/items matches {
 			ELEMENT[id0.4] occurrences matches {0..1} matches {	-- Lie of the fetus
 				value matches {
-					DV_CODED_TEXT[id0.90] matches {	-- (added by post-parse processor)
+					DV_CODED_TEXT[id0.90] matches {
 						defining_code matches {[ac0.1]}		-- Lie of the fetus (synthesised)
 					}
 				}
 			}
 			ELEMENT[id0.8] occurrences matches {0..1} matches {	-- Presentation
 				value matches {
-					DV_CODED_TEXT[id0.91] matches {	-- (added by post-parse processor)
+					DV_CODED_TEXT[id0.91] matches {
 						defining_code matches {[ac0.2]}		-- Presentation (synthesised)
 					}
 				}
@@ -476,11 +476,11 @@ terminology
 				text = <"Mass">
 				description = <"Mass">
 			>
-			["id0.90"] = <
+			["id0.103"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
 			>
-			["id0.91"] = <
+			["id0.104"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
 			>

@@ -38,7 +38,7 @@ definition
 			ELEMENT[id5] 
 		}
 		/items[id15]/value matches {
-			DV_CODED_TEXT[id62.3] matches {
+			DV_CODED_TEXT[id62.1] matches {
 				defining_code matches {[ac0.2]}		-- Stage grouping (synthesised)
 			}
 		}

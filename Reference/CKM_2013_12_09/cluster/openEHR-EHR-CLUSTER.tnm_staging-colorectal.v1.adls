@@ -40,42 +40,42 @@ Available from: http://www.cancerstaging.org/education/tnmschema/tnmschema.html
 definition
 	CLUSTER[id1.1] matches {	-- TNM staging - Colorectal cancer (Sixth edition)
 		/items[id3]/items[id4]/value matches {
-			DV_CODED_TEXT[id37.2] matches {
+			DV_CODED_TEXT[id37.1] matches {
 				defining_code matches {[ac0.1]}		-- Primary tumour (T) (synthesised)
 			}
 		}
 		/items[id3]/items[id5]/value matches {
-			DV_CODED_TEXT[id38.2] matches {
+			DV_CODED_TEXT[id38.1] matches {
 				defining_code matches {[ac0.2]}		-- Regional lymph nodes (N) (synthesised)
 			}
 		}
 		/items[id3]/items[id6]/value matches {
-			DV_CODED_TEXT[id39.2] matches {
+			DV_CODED_TEXT[id39.1] matches {
 				defining_code matches {[ac0.3]}		-- Distant metastasis (M) (synthesised)
 			}
 		}
 		/items[id3]/items[id15]/value matches {
-			DV_CODED_TEXT[id42.2] matches {
+			DV_CODED_TEXT[id42.1] matches {
 				defining_code matches {[ac0.5]}		-- Clinical stage grouping (synthesised)
 			}
 		}
 		/items[id7]/items[id8]/value matches {
-			DV_CODED_TEXT[id44.2] matches {
+			DV_CODED_TEXT[id44.1] matches {
 				defining_code matches {[ac0.6]}		-- Primary tumour (pT) (synthesised)
 			}
 		}
 		/items[id7]/items[id9]/value matches {
-			DV_CODED_TEXT[id45.2] matches {
+			DV_CODED_TEXT[id45.1] matches {
 				defining_code matches {[ac0.7]}		-- Regional lymph node (pN) (synthesised)
 			}
 		}
 		/items[id7]/items[id10]/value matches {
-			DV_CODED_TEXT[id46.2] matches {
+			DV_CODED_TEXT[id46.1] matches {
 				defining_code matches {[ac0.8]}		-- Distant metastasis (pM) (synthesised)
 			}
 		}
 		/items[id7]/items[id16]/value matches {
-			DV_CODED_TEXT[id50.2] matches {
+			DV_CODED_TEXT[id50.1] matches {
 				defining_code matches {[ac0.11]}		-- Pathological stage grouping (synthesised)
 			}
 		}

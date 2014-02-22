@@ -35,27 +35,27 @@ Not to be used for other editions of TNM classification.">
 definition
 	CLUSTER[id1.1] matches {	-- Tumour - Lung cancer TNM staging 7th Edition
 		/items[id4]/value matches {
-			DV_CODED_TEXT[id55.2] matches {
+			DV_CODED_TEXT[id55.1] matches {
 				defining_code matches {[ac0.1]}		-- Primary tumour (T) (synthesised)
 			}
 		}
 		/items[id5]/value matches {
-			DV_CODED_TEXT[id56.2] matches {
+			DV_CODED_TEXT[id56.1] matches {
 				defining_code matches {[ac0.2]}		-- Regional lymph nodes (N) (synthesised)
 			}
 		}
 		/items[id6]/value matches {
-			DV_CODED_TEXT[id57.2] matches {
+			DV_CODED_TEXT[id57.1] matches {
 				defining_code matches {[ac0.3]}		-- Distant metastasis (M) (synthesised)
 			}
 		}
 		/items[id26]/value matches {
-			DV_CODED_TEXT[id58.2] matches {
+			DV_CODED_TEXT[id58.1] matches {
 				defining_code matches {[ac0.4]}		-- Residual tumour (R) (synthesised)
 			}
 		}
 		/items[id15]/value matches {
-			DV_CODED_TEXT[id62.2] matches {
+			DV_CODED_TEXT[id62.1] matches {
 				defining_code matches {[ac0.6]}		-- Stage grouping (synthesised)
 			}
 		}

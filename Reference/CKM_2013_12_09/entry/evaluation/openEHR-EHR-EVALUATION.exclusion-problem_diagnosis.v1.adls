@@ -47,7 +47,7 @@ definition
 			}
 		}
 		/data[id2]/items[id4.1]/value matches {
-			DV_CODED_TEXT[id10.4] matches {
+			DV_CODED_TEXT[id10.1] matches {
 				defining_code matches {[ac0.1]}		-- Problem or Diagnosis
 			}
 			DV_TEXT[id10] 

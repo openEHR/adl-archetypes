@@ -44,7 +44,7 @@ definition
 							ELEMENT[id6] 
 							ELEMENT[id79.2] occurrences matches {0..1} matches {	-- Blood glucose
 								value matches {
-									DV_QUANTITY[id0.112] matches {	-- (added by post-parse processor)
+									DV_QUANTITY[id0.112] matches {
 										property matches {[at0.114]}
 										[magnitude, units] matches {
 											[{|>=0.0|}, {"mmol/l"}],
@@ -64,21 +64,21 @@ definition
 								items matches {
 									ELEMENT[id0.91] occurrences matches {0..1} matches {	-- Intake
 										value matches {
-											DV_CODED_TEXT[id0.113] matches {	-- (added by post-parse processor)
+											DV_CODED_TEXT[id0.113] matches {
 												defining_code matches {[ac0.2; at0.95]}		-- Intake (synthesised)
 											}
 										}
 									}
 									ELEMENT[id0.96] occurrences matches {0..1} matches {	-- Duration
 										value matches {
-											DV_DURATION[id0.114] matches {	-- (added by post-parse processor)
+											DV_DURATION[id0.114] matches {
 												value matches {PDTHMS}
 											}
 										}
 									}
 									ELEMENT[id0.97] occurrences matches {0..1} matches {	-- Description
 										value matches {
-											DV_TEXT[id0.115] 	-- (added by post-parse processor)
+											DV_TEXT[id0.115] 
 										}
 									}
 								}
@@ -87,7 +87,7 @@ definition
 								items matches {
 									ELEMENT[id0.100] occurrences matches {0..1} matches {	-- Dose
 										value matches {
-											DV_QUANTITY[id0.116] matches {	-- (added by post-parse processor)
+											DV_QUANTITY[id0.116] matches {
 												property matches {[at0.115]}
 												magnitude matches {|>=0.0|}
 											}
@@ -107,14 +107,14 @@ definition
 											}
 										}
 									}
-									use_node ELEMENT[id0.112] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.90]/items[id0.96]	-- /data[id2]/events[id3]/state[id0.89]/items[Diet]/items[Duration]
+									use_node ELEMENT[id0.119] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.90]/items[id0.96]	-- /data[id2]/events[id3]/state[id0.89]/items[Diet]/items[Duration]
 								}
 							}
 							CLUSTER[id0.107] occurrences matches {0..1} matches {	-- Insulin challenge
 								items matches {
 									ELEMENT[id0.110] occurrences matches {0..1} matches {	-- Dose
 										value matches {
-											DV_QUANTITY[id0.119] matches {
+											DV_QUANTITY[id0.120] matches {
 												property matches {[at0.116]}
 												magnitude matches {|>=0.0|}
 											}
@@ -122,24 +122,24 @@ definition
 									}
 									ELEMENT[id0.111] occurrences matches {0..1} matches {	-- Route
 										value matches {
-											DV_CODED_TEXT[id0.120] matches {
+											DV_CODED_TEXT[id0.121] matches {
 												defining_code matches {[ac0.5; at0.113]}		-- Route (synthesised)
 											}
 										}
 									}
-									use_node ELEMENT[id0.113] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.98]/items[id0.112][id0.99]	-- /data[id2]/events[id3]/state[id0.89]/items[Glucose challenge]/items[(added by post-parse processor)]
-									use_node ELEMENT[id0.114] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.90]/items[id0.96]	-- /data[id2]/events[id3]/state[id0.89]/items[Diet]/items[Duration]
+									use_node ELEMENT[id0.122] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.98]/items[id0.119][id0.99]	-- /data[id2]/events[id3]/state[id0.89]/items[Glucose challenge]/items[(added by post-parse processor)]
+									use_node ELEMENT[id0.123] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.90]/items[id0.96]	-- /data[id2]/events[id3]/state[id0.89]/items[Diet]/items[Duration]
 								}
 							}
 							CLUSTER[id0.108] occurrences matches {0..1} matches {	-- Event
 								items matches {
 									ELEMENT[id0.109] occurrences matches {0..1} matches {	-- Event name
 										value matches {
-											DV_TEXT[id0.121] 
+											DV_TEXT[id0.124] 
 										}
 									}
-									use_node ELEMENT[id0.115] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.98]/items[id0.112][id0.99]	-- /data[id2]/events[id3]/state[id0.89]/items[Glucose challenge]/items[(added by post-parse processor)]
-									use_node ELEMENT[id0.116] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.90]/items[id0.96]	-- /data[id2]/events[id3]/state[id0.89]/items[Diet]/items[Duration]
+									use_node ELEMENT[id0.125] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.98]/items[id0.119][id0.99]	-- /data[id2]/events[id3]/state[id0.89]/items[Glucose challenge]/items[(added by post-parse processor)]
+									use_node ELEMENT[id0.126] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.90]/items[id0.96]	-- /data[id2]/events[id3]/state[id0.89]/items[Diet]/items[Duration]
 								}
 							}
 						}
@@ -281,23 +281,23 @@ terminology
 				text = <"Mass (Units)">
 				description = <"Mass (Units)">
 			>
-			["id0.112"] = <
+			["id0.119"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
 			>
-			["id0.113"] = <
+			["id0.122"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
 			>
-			["id0.114"] = <
+			["id0.123"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
 			>
-			["id0.115"] = <
+			["id0.125"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
 			>
-			["id0.116"] = <
+			["id0.126"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
 			>

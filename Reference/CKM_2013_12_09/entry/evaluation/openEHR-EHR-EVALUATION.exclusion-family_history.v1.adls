@@ -41,7 +41,7 @@ definition
 	EVALUATION[id1.1] matches {	-- Exclusion of Family History
 		/data[id2]/items[id4.1]/value matches {
 			DV_TEXT[id10] 
-			DV_CODED_TEXT[id10.2] matches {
+			DV_CODED_TEXT[id10.1] matches {
 				defining_code matches {[ac0.1]}		-- Family History
 			}
 		}

@@ -36,14 +36,14 @@ definition
 		/items[id9.1]/items matches {
 			ELEMENT[id0.10] occurrences matches {0..1} matches {	-- Visible abnormality
 				value matches {
-					DV_BOOLEAN[id0.21] matches {	-- (added by post-parse processor)
+					DV_BOOLEAN[id0.21] matches {
 						value matches {True, False}
 					}
 				}
 			}
 			ELEMENT[id0.11] occurrences matches {0..1} matches {	-- Mobility on swallowing liquid
 				value matches {
-					DV_TEXT[id0.22] 	-- (added by post-parse processor)
+					DV_TEXT[id0.22] 
 				}
 			}
 			CLUSTER[id0.13] occurrences matches {0..1} matches {	-- Left lateral lobe
@@ -61,7 +61,7 @@ definition
 			}
 			CLUSTER[id0.14] occurrences matches {0..1} matches {	-- Right lateral lobe
 				items matches {
-					use_node ELEMENT[id0.21] occurrences matches {0..1} /items[id9.1]/items[id0.13]/items[id0.20]	-- /items[Findings]/items[Left lateral lobe]/items[Description]
+					use_node ELEMENT[id0.24] occurrences matches {0..1} /items[id9.1]/items[id0.13]/items[id0.20]	-- /items[Findings]/items[Left lateral lobe]/items[Description]
 					allow_archetype CLUSTER[id0.18] occurrences matches {0..1} matches {	-- Right lateral lobe
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1/}
@@ -71,7 +71,7 @@ definition
 			before [id10]
 			CLUSTER[id0.15] occurrences matches {0..1} matches {	-- Isthmus
 				items matches {
-					use_node ELEMENT[id0.22] occurrences matches {0..1} /items[id9.1]/items[id0.13]/items[id0.20]	-- /items[Findings]/items[Left lateral lobe]/items[Description]
+					use_node ELEMENT[id0.25] occurrences matches {0..1} /items[id9.1]/items[id0.13]/items[id0.20]	-- /items[Findings]/items[Left lateral lobe]/items[Description]
 					allow_archetype CLUSTER[id0.15] occurrences matches {0..1} matches {	-- Isthmus
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1/}
@@ -124,11 +124,11 @@ terminology
 				text = <"Findings">
 				description = <"Clinical findings.">
 			>
-			["id0.21"] = <
+			["id0.24"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
 			>
-			["id0.22"] = <
+			["id0.25"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
 			>

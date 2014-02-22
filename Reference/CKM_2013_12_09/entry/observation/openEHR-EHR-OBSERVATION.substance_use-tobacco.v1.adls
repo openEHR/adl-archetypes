@@ -36,12 +36,12 @@ A typical use would be to record usage in an tobacco usage diary.">
 definition
 	OBSERVATION[id1.1] matches {	-- Tobacco Use
 		/data[id2]/events[id3]/data[id4]/items[id5]/value matches {
-			DV_CODED_TEXT[id20.3] matches {
+			DV_CODED_TEXT[id20.1] matches {
 				defining_code matches {[at0.2]}
 			}
 		}
 		/data[id2]/events[id3]/data[id4]/items[id11]/items[id12]/value matches {
-			DV_CODED_TEXT[id21.3] matches {
+			DV_CODED_TEXT[id21.1] matches {
 				defining_code matches {[ac0.1]}		-- Form (synthesised)
 			}
 		}

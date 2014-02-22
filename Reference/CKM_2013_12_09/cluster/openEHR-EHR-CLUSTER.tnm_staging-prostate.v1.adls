@@ -40,47 +40,47 @@ Greene FL, Page DL, Fleming ID. et al, eds, for the American Joint Committee on 
 definition
 	CLUSTER[id1.1] matches {	-- TNM staging - Prostate cancer (Sixth edition)
 		/items[id3]/items[id4]/value matches {
-			DV_CODED_TEXT[id37.4] matches {
+			DV_CODED_TEXT[id37.1] matches {
 				defining_code matches {[ac0.2]}		-- Primary tumour (T) (synthesised)
 			}
 		}
 		/items[id3]/items[id5]/value matches {
-			DV_CODED_TEXT[id38.5] matches {
+			DV_CODED_TEXT[id38.1] matches {
 				defining_code matches {[ac0.3]}		-- Regional lymph nodes (N) (synthesised)
 			}
 		}
 		/items[id3]/items[id6]/value matches {
-			DV_CODED_TEXT[id39.5] matches {
+			DV_CODED_TEXT[id39.1] matches {
 				defining_code matches {[ac0.4]}		-- Distant metastasis (M) (synthesised)
 			}
 		}
 		/items[id3]/items[id15]/value matches {
-			DV_CODED_TEXT[id42.4] matches {
+			DV_CODED_TEXT[id42.1] matches {
 				defining_code matches {[ac0.6]}		-- Clinical stage grouping (synthesised)
 			}
 		}
 		/items[id7]/items[id8]/value matches {
-			DV_CODED_TEXT[id44.5] matches {
+			DV_CODED_TEXT[id44.1] matches {
 				defining_code matches {[ac0.7]}		-- Primary tumour (pT) (synthesised)
 			}
 		}
 		/items[id7]/items[id9]/value matches {
-			DV_CODED_TEXT[id45.5] matches {
+			DV_CODED_TEXT[id45.1] matches {
 				defining_code matches {[ac0.8]}		-- Regional lymph node (pN) (synthesised)
 			}
 		}
 		/items[id7]/items[id10]/value matches {
-			DV_CODED_TEXT[id46.5] matches {
+			DV_CODED_TEXT[id46.1] matches {
 				defining_code matches {[ac0.9]}		-- Distant metastasis (pM) (synthesised)
 			}
 		}
 		/items[id7]/items[id12]/value matches {
-			DV_CODED_TEXT[id49.2] matches {
+			DV_CODED_TEXT[id49.1] matches {
 				defining_code 
 			}
 		}
 		/items[id7]/items[id16]/value matches {
-			DV_CODED_TEXT[id50.4] matches {
+			DV_CODED_TEXT[id50.1] matches {
 				defining_code matches {[ac0.12]}		-- Pathological stage grouping (synthesised)
 			}
 		}

@@ -34,7 +34,7 @@ description
 definition
 	CLUSTER[id1.1] matches {	-- Examination of nose
 		/items[id5]/items[id6.1]/value matches {
-			DV_CODED_TEXT[id11.2] matches {
+			DV_CODED_TEXT[id11.1] matches {
 				defining_code matches {[at0.39]}
 			}
 		}
@@ -43,7 +43,7 @@ definition
 				items matches {
 					ELEMENT[id0.10] occurrences matches {0..1} matches {	-- Description
 						value matches {
-							DV_CODED_TEXT[id0.44] matches {	-- (added by post-parse processor)
+							DV_CODED_TEXT[id0.44] matches {
 								defining_code 
 							}
 						}
@@ -56,32 +56,32 @@ definition
 						items matches {
 							ELEMENT[id0.35] occurrences matches {0..1} matches {	-- Nares patent?
 								value matches {
-									DV_BOOLEAN[id0.45] matches {	-- (added by post-parse processor)
+									DV_BOOLEAN[id0.45] matches {
 										value matches {True, False}
 									}
 								}
 							}
 							ELEMENT[id0.38] occurrences matches {0..1} matches {	-- Nasal breathing?
 								value matches {
-									DV_BOOLEAN[id0.46] matches {	-- (added by post-parse processor)
+									DV_BOOLEAN[id0.46] matches {
 										value matches {True, False}
 									}
 								}
 							}
-							use_node ELEMENT[id0.44] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
+							use_node ELEMENT[id0.47] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
 						}
 					}
 				}
 			}
 			CLUSTER[id0.12] occurrences matches {0..1} matches {	-- Internal
 				items matches {
-					use_node ELEMENT[id0.45] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
+					use_node ELEMENT[id0.48] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
 					CLUSTER[id0.14] occurrences matches {0..1} matches {	-- Nasal septum
 						items matches {
-							use_node ELEMENT[id0.46] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
+							use_node ELEMENT[id0.49] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
 							ELEMENT[id0.16] occurrences matches {0..1} matches {	-- Septal haematoma
 								value matches {
-									DV_BOOLEAN[id0.47] matches {	-- (added by post-parse processor)
+									DV_BOOLEAN[id0.50] matches {
 										value matches {True, False}
 									}
 								}
@@ -94,7 +94,7 @@ definition
 					}
 					CLUSTER[id0.18] occurrences matches {0..1} matches {	-- Nasal mucosa
 						items matches {
-							use_node ELEMENT[id0.47] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
+							use_node ELEMENT[id0.51] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
 							allow_archetype CLUSTER[id0.41] occurrences matches {0..1} matches {	-- Mucosal detail
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1/}
@@ -103,7 +103,7 @@ definition
 					}
 					CLUSTER[id0.24] occurrences matches {0..1} matches {	-- Turbinates
 						items matches {
-							use_node ELEMENT[id0.48] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
+							use_node ELEMENT[id0.52] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
 							allow_archetype CLUSTER[id0.42] occurrences matches {0..1} matches {	-- Turbinate detail
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1/}
@@ -112,7 +112,7 @@ definition
 					}
 					CLUSTER[id0.27] occurrences matches {0..1} matches {	-- Discharge
 						items matches {
-							use_node ELEMENT[id0.49] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
+							use_node ELEMENT[id0.53] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
 							allow_archetype CLUSTER[id0.43] occurrences matches {0..1} matches {	-- Discharge detail
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.bodily_substance(-a-zA-Z0-9_]+)*\.v1/}
@@ -203,18 +203,6 @@ terminology
 				text = <"Findings">
 				description = <"Clinical findings.">
 			>
-			["id0.44"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-			["id0.45"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-			["id0.46"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
 			["id0.47"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
@@ -224,6 +212,18 @@ terminology
 				description = <"(added by post-parse processor)">
 			>
 			["id0.49"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["id0.51"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["id0.52"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["id0.53"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
 			>

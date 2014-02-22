@@ -39,32 +39,32 @@ Greene FL, Page DL, Fleming ID. et al, eds, for the American Joint Committee on 
 definition
 	CLUSTER[id1.1] matches {	-- TNM staging - Melanoma of skin (Sixth edition)
 		/items[id3]/items[id5]/value matches {
-			DV_CODED_TEXT[id38.4] matches {
+			DV_CODED_TEXT[id38.1] matches {
 				defining_code matches {[ac0.1]}		-- Regional lymph nodes (N) (synthesised)
 			}
 		}
 		/items[id3]/items[id6]/value matches {
-			DV_CODED_TEXT[id39.4] matches {
+			DV_CODED_TEXT[id39.1] matches {
 				defining_code matches {[ac0.2]}		-- Distant metastasis (M) (synthesised)
 			}
 		}
 		/items[id3]/items[id11]/value matches {
-			DV_CODED_TEXT[id41.2] matches {
+			DV_CODED_TEXT[id41.1] matches {
 				defining_code matches {[ac0.4]}		-- Clinical staging (synthesised)
 			}
 		}
 		/items[id7]/items[id8]/value matches {
-			DV_CODED_TEXT[id44.4] matches {
+			DV_CODED_TEXT[id44.1] matches {
 				defining_code matches {[ac0.5]}		-- Primary tumour (pT) (synthesised)
 			}
 		}
 		/items[id7]/items[id9]/value matches {
-			DV_CODED_TEXT[id45.4] matches {
+			DV_CODED_TEXT[id45.1] matches {
 				defining_code matches {[ac0.6]}		-- Regional lymph node (pN) (synthesised)
 			}
 		}
 		/items[id7]/items[id10]/value matches {
-			DV_CODED_TEXT[id46.4] matches {
+			DV_CODED_TEXT[id46.1] matches {
 				defining_code matches {[ac0.7]}		-- Distant metastasis (pM) (synthesised)
 			}
 		}

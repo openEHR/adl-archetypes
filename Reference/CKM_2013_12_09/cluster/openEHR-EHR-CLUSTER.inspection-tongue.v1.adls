@@ -32,7 +32,7 @@ description
 definition
 	CLUSTER[id1.1] matches {	-- Inspection of tongue
 		/items[id2]/items[id3]/value matches {
-			DV_CODED_TEXT[id54.2] matches {
+			DV_CODED_TEXT[id54.1] matches {
 				defining_code matches {[at0.62]}
 			}
 		}

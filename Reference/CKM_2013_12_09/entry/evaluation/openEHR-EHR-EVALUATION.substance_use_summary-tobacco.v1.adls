@@ -35,12 +35,12 @@ Not to be used to record information about any other substance other than tobacc
 definition
 	EVALUATION[id1.1] matches {	-- Tobacco Use Summary
 		/data[id2]/items[id6]/value matches {
-			DV_CODED_TEXT[id17.2] matches {
+			DV_CODED_TEXT[id17.1] matches {
 				defining_code matches {[at0.17]}
 			}
 		}
 		/data[id2]/items[id8]/items[id9]/value matches {
-			DV_CODED_TEXT[id19.2] matches {
+			DV_CODED_TEXT[id19.1] matches {
 				defining_code matches {[ac0.2]}		-- Form (synthesised)
 			}
 		}
