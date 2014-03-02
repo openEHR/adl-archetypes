@@ -455,60 +455,60 @@ terminology
 				description = <"لم يتم استكمال الاستقصاء التصويري و لن يتم استكماله">
 			>
 			["at2"] = <
-				text = <"*Planned(en)">
-				description = <"*Imaging investigation is planned.(en)">
+				text = <"مخطَّط">
+				description = <"تم التخطيط للاستقصاء التصويري">
 			>
 			["at5"] = <
-				text = <"*Requested(en)">
-				description = <"*Imaging investigation has been requested.(en)">
+				text = <"تم الطلب">
+				description = <"تم طلب الاستقصاء التصويري">
 			>
 			["at3"] = <
-				text = <"*Postponed(en)">
-				description = <"*Imaging investigation is postponed.(en)">
+				text = <"تم التأجيل">
+				description = <"تم تأجيل الاستقصاء التصويري">
 			>
 			["at4"] = <
-				text = <"*Cancelled(en)">
-				description = <"*Imaging investigation is cancelled.(en)">
+				text = <"تم الإلغاء">
+				description = <"تم إلغاء الاستقصاء التصويري">
 			>
 			["at6"] = <
-				text = <"*Appointment made(en)">
-				description = <"*Imaging investigation scheduled for specific date and time.(en)">
+				text = <"تم تحديد الموعد">
+				description = <"تم تحديد موعد الاستقصاء التصويري بالتاريخ و التوقيت">
 			>
 			["at7"] = <
-				text = <"*Resheduled(en)">
-				description = <"*Appointment for imaging investigation has been altered.(en)">
+				text = <"تم إعادة تحديد الموعد">
+				description = <"تم تعديل موعد إجراء الاستقصاء التصويري">
 			>
 			["at8"] = <
-				text = <"*Commenced(en)">
-				description = <"*Imaging investigation has commenced.(en)">
+				text = <"تم البدء">
+				description = <"تم البدء في الاستقصاء التصويري">
 			>
 			["at9"] = <
-				text = <"*Investigation complete(en)">
-				description = <"*The imaging investigation has been completed; awaiting report.(en)">
+				text = <"تم اكتمال الاستقصاء">
+				description = <"تم استكمال الاستقصاء التصويري, في انتظار التقرير">
 			>
 			["at10"] = <
-				text = <"*Reported(en)">
-				description = <"*The imaging investigation has been reported.(en)">
+				text = <"تم كتابة التقرير">
+				description = <"تم كتابة تقرير الاستقصاء التصويري">
 			>
 			["at12"] = <
-				text = <"*Report communicated(en)">
-				description = <"*The imaging investigation has been reported and communicated to the referer.(en)">
+				text = <"تم توصيل التقرير">
+				description = <"تم كتابة التقرير الخاص بالاستقصاء التصويري و تم توصيل التقرير إلى من قام بالإحالة.">
 			>
 			["at13"] = <
-				text = <"*Further imaging required(en)">
-				description = <"*The investigator has established that further imaging is required.(en)">
+				text = <"يوجد احتياج لمزيد من التصوير">
+				description = <"بعد القيام بالاستقصاء, تم تحديد أن هناك حاجة لمزيد من التصوير">
 			>
 			["at14"] = <
-				text = <"*Imaging suspended(en)">
-				description = <"*The imaging was not able to be completed.(en)">
+				text = <"تم تعليق التصوير">
+				description = <"لم يُتَمَكَّن من إكمال التصوير">
 			>
 			["at15"] = <
-				text = <"*Imaging aborted(en)">
-				description = <"*The imaging investigation was not and will not be completed.(en)">
+				text = <"تم إيقاف التصوير بشكل مفاجئ">
+				description = <"لم يتم استكمال الاستقصاء التصويري و لن يتم استكماله">
 			>
 			["at11"] = <
-				text = <"*Completed(en)">
-				description = <"*The imaging investigation is completed and report processed.(en)">
+				text = <"اكتمل">
+				description = <"تم إكمال الاستقصاء التصويري و تم معالجة التقرير">
 			>
 			["at16"] = <
 				text = <"*initial (en)">
@@ -605,60 +605,60 @@ terminology
 				description = <"La evaluación de imágenes no será completada.">
 			>
 			["at2"] = <
-				text = <"*Planned(en)">
-				description = <"*Imaging investigation is planned.(en)">
+				text = <"Planeada">
+				description = <"La evaluación de imágenes está planeada.">
 			>
 			["at5"] = <
-				text = <"*Requested(en)">
-				description = <"*Imaging investigation has been requested.(en)">
+				text = <"Solicitada">
+				description = <"La evaluación de imágenes ha sido solicitada">
 			>
 			["at3"] = <
-				text = <"*Postponed(en)">
-				description = <"*Imaging investigation is postponed.(en)">
+				text = <"Pospuesta">
+				description = <"La evaluación de imágenes se pospone">
 			>
 			["at4"] = <
-				text = <"*Cancelled(en)">
-				description = <"*Imaging investigation is cancelled.(en)">
+				text = <"Cancelada">
+				description = <"La evaluación de imágenes se cancela.">
 			>
 			["at6"] = <
-				text = <"*Appointment made(en)">
-				description = <"*Imaging investigation scheduled for specific date and time.(en)">
+				text = <"Reserva de turno realizada">
+				description = <"La evaluación de imágenes fue agendada para una fecha y hora específica.">
 			>
 			["at7"] = <
-				text = <"*Resheduled(en)">
-				description = <"*Appointment for imaging investigation has been altered.(en)">
+				text = <"Reprogramada">
+				description = <"El turno para la evaluación de imágenes fue reprogramada.">
 			>
 			["at8"] = <
-				text = <"*Commenced(en)">
-				description = <"*Imaging investigation has commenced.(en)">
+				text = <"Comenzada">
+				description = <"La evaluación de imágenes ha comenzado.">
 			>
 			["at9"] = <
-				text = <"*Investigation complete(en)">
-				description = <"*The imaging investigation has been completed; awaiting report.(en)">
+				text = <"Evaluación completa">
+				description = <"La evaluación de imágenes ha sido completada; en espera del reporte.">
 			>
 			["at10"] = <
-				text = <"*Reported(en)">
-				description = <"*The imaging investigation has been reported.(en)">
+				text = <"Reportada">
+				description = <"La evaluación de imágenes ha sido reportada.">
 			>
 			["at12"] = <
-				text = <"*Report communicated(en)">
-				description = <"*The imaging investigation has been reported and communicated to the referer.(en)">
+				text = <"Reporte comunicado">
+				description = <"La evaluación de imágenes ha sido reportada y comunicada al solicitante.">
 			>
 			["at13"] = <
-				text = <"*Further imaging required(en)">
-				description = <"*The investigator has established that further imaging is required.(en)">
+				text = <"Se requieren mas evaluaciones de imágenes">
+				description = <"El realizador de la evaluación de imágenes ha determinado que se requieren mas evaluaciones de imágenes.">
 			>
 			["at14"] = <
-				text = <"*Imaging suspended(en)">
-				description = <"*The imaging was not able to be completed.(en)">
+				text = <"Evaluación de imágenes suspendida">
+				description = <"No se pudo completar la evaluación de imágenes.">
 			>
 			["at15"] = <
-				text = <"*Imaging aborted(en)">
-				description = <"*The imaging investigation was not and will not be completed.(en)">
+				text = <"Evaluación de imágenes abortada">
+				description = <"La evaluación de imágenes no será completada.">
 			>
 			["at11"] = <
-				text = <"*Completed(en)">
-				description = <"*The imaging investigation is completed and report processed.(en)">
+				text = <"Completada">
+				description = <"La evaluación de imágenes fue completada y ha sido reportada.">
 			>
 			["at16"] = <
 				text = <"*initial (en)">

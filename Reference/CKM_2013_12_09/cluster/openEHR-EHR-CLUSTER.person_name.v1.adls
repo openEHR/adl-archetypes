@@ -309,8 +309,8 @@ terminology
 				description = <"*Indicates that this is the name by which a person chooses to be identified.(en)">
 			>
 			["ac1"] = <
-				text = <"*Name type (synthesised)(en)">
-				description = <"*Type of name described. (synthesised)(en)">
+				text = <"*Name type(en) (synthesised)">
+				description = <"*Type of name described.(en) (synthesised)">
 			>
 		>
 		["es-ar"] = <
@@ -391,8 +391,8 @@ terminology
 				description = <"*Indicates that this is the name by which a person chooses to be identified.(en)">
 			>
 			["ac1"] = <
-				text = <"*Name type (synthesised)(en)">
-				description = <"*Type of name described. (synthesised)(en)">
+				text = <"Tipo de nombre (synthesised)">
+				description = <"Descripción del tipo de nombre. (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -473,8 +473,8 @@ terminology
 				description = <"*Indicates that this is the name by which a person chooses to be identified.(en)">
 			>
 			["ac1"] = <
-				text = <"*Name type (synthesised)(en)">
-				description = <"*Type of name described. (synthesised)(en)">
+				text = <"نوع الاسم (synthesised)">
+				description = <"نوع الاسم الذي يتم وصفه (synthesised)">
 			>
 		>
 	>

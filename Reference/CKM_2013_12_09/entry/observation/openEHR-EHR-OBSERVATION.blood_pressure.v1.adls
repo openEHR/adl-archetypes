@@ -599,6 +599,18 @@ terminology
 				text = <"Intra-arterial">
 				description = <"Invasive measurement via transducer access line within an artery. Location of the transducer can be recorded in 'Specific Location' data element, if required.">
 			>
+			["at1055"] = <
+				text = <"Pressure">
+				description = <"Pressure">
+			>
+			["at1056"] = <
+				text = <"Angle, plane">
+				description = <"Angle, plane">
+			>
+			["at1057"] = <
+				text = <"mean">
+				description = <"mean">
+			>
 			["ac1"] = <
 				text = <"Position (synthesised)">
 				description = <"The position of the subject at the time of measurement. (synthesised)">
@@ -622,18 +634,6 @@ terminology
 			["ac6"] = <
 				text = <"Diastolic endpoint (synthesised)">
 				description = <"Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)">
-			>
-			["at1055"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
-			["at1056"] = <
-				text = <"Angle, plane">
-				description = <"Angle, plane">
-			>
-			["at1057"] = <
-				text = <"mean">
-				description = <"mean">
 			>
 		>
 		["ja"] = <
@@ -853,30 +853,6 @@ terminology
 				text = <"動脈内">
 				description = <"動脈内のトランスデューサーに接続されたラインから侵襲的に測定する方法。動脈の部位は必要であれば「特別な部位」エレメントに記録される">
 			>
-			["ac1"] = <
-				text = <"*Position (synthesised)(en)">
-				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Sleep status (synthesised)(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Cuff size (synthesised)(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Location of measurement (synthesised)(en)">
-				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
-			>
-			["ac5"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
-			>
-			["ac6"] = <
-				text = <"*Diastolic endpoint (synthesised)(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
-			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
@@ -888,6 +864,30 @@ terminology
 			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
+			>
+			["ac1"] = <
+				text = <"体位 (synthesised)">
+				description = <"計測のときの対象者の体位 (synthesised)">
+			>
+			["ac2"] = <
+				text = <"睡眠状況 (synthesised)">
+				description = <"睡眠状況 24時間外来血圧記録の解釈を助けるため (synthesised)">
+			>
+			["ac3"] = <
+				text = <"カフサイズ (synthesised)">
+				description = <"血圧測定のために使われるカフの大きさ. (synthesised)">
+			>
+			["ac4"] = <
+				text = <"計測部位 (synthesised)">
+				description = <"血圧が一般的に測定される身体の部位 (synthesised)">
+			>
+			["ac5"] = <
+				text = <"方法 (synthesised)">
+				description = <"*Method of measurement of blood pressure.(en) (synthesised)">
+			>
+			["ac6"] = <
+				text = <"拡張期終末 (synthesised)">
+				description = <"拡張期圧を決めるためにどのコロトコフ音が使用されたかというを記録. (synthesised)">
 			>
 		>
 		["de"] = <
@@ -1107,30 +1107,6 @@ terminology
 				text = <"Intra-arteriell">
 				description = <"Invasive Messung über einen arteriellen Drucksensor. Die genaue Stelle des Drucksensors kann, falls benötigt, als 'Spezifische Stelle' genauer identifiziert werden.">
 			>
-			["ac1"] = <
-				text = <"*Position (synthesised)(en)">
-				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Sleep status (synthesised)(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Cuff size (synthesised)(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Location of measurement (synthesised)(en)">
-				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
-			>
-			["ac5"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
-			>
-			["ac6"] = <
-				text = <"*Diastolic endpoint (synthesised)(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
-			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
@@ -1142,6 +1118,30 @@ terminology
 			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
+			>
+			["ac1"] = <
+				text = <"Position (synthesised)">
+				description = <"Die Position der untersuchten Person während der Messung. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Schlafzustand (synthesised)">
+				description = <"Schlafzustand  - unterstützt die Auswertung von 24-stündigen ambulanten Aufzeichnungen des Blutdrucks. (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Manschettengröße (synthesised)">
+				description = <"Die Größe der Manschette, die zur Blutdruckmessung benutzt wurde. (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Körperstelle der Messung (synthesised)">
+				description = <"Gewöhnliche Körperstellen, an denen der Blutdruck gemessen wird. (synthesised)">
+			>
+			["ac5"] = <
+				text = <"Methode (synthesised)">
+				description = <"Methode der Messung des Blutdrucks. (synthesised)">
+			>
+			["ac6"] = <
+				text = <"Diastolischer Endpunkt (synthesised)">
+				description = <"Dient der Dokumentation des Korotkoff-Geräusches, das verwendet wird, um bei auskultarischer Messung den diastolischen Blutdruck zu bestimmen. (synthesised)">
 			>
 		>
 		["zh-cn"] = <
@@ -1361,30 +1361,6 @@ terminology
 				text = <"*Intra-arterial(en)">
 				description = <"*Invasive measurement via transducer access line within an artery. Location of the transducer can be recorded in 'Specific Location' data element, if required.(en)">
 			>
-			["ac1"] = <
-				text = <"*Position (synthesised)(en)">
-				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Sleep status (synthesised)(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Cuff size (synthesised)(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Location of measurement (synthesised)(en)">
-				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
-			>
-			["ac5"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
-			>
-			["ac6"] = <
-				text = <"*Diastolic endpoint (synthesised)(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
-			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
@@ -1396,6 +1372,30 @@ terminology
 			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
+			>
+			["ac1"] = <
+				text = <"*Position(en) (synthesised)">
+				description = <"*The position of the subject at the time of measurement(en) (synthesised)">
+			>
+			["ac2"] = <
+				text = <"*Sleep status(en) (synthesised)">
+				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. (en) (synthesised)">
+			>
+			["ac3"] = <
+				text = <"*Cuff size(en) (synthesised)">
+				description = <"*The size of the cuff used for blood pressure measurement(en) (synthesised)">
+			>
+			["ac4"] = <
+				text = <"*Location of measurement(en) (synthesised)">
+				description = <"*Common body locations where blood pressure is recorded(en) (synthesised)">
+			>
+			["ac5"] = <
+				text = <"*New element(en) (synthesised)">
+				description = <"**(en) (synthesised)">
+			>
+			["ac6"] = <
+				text = <"*Diastolic endpoint(en) (synthesised)">
+				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method(en) (synthesised)">
 			>
 		>
 		["nl"] = <
@@ -1615,30 +1615,6 @@ terminology
 				text = <"Intra-arterieel">
 				description = <"Invasieve meting via lijn met transducer in een arterie. Locatie van de transducer kan, zo nodig, opgeslagen worden in 'specifieke locatie' data element.">
 			>
-			["ac1"] = <
-				text = <"*Position (synthesised)(en)">
-				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Sleep status (synthesised)(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Cuff size (synthesised)(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Location of measurement (synthesised)(en)">
-				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
-			>
-			["ac5"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
-			>
-			["ac6"] = <
-				text = <"*Diastolic endpoint (synthesised)(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
-			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
@@ -1650,6 +1626,30 @@ terminology
 			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
+			>
+			["ac1"] = <
+				text = <"Houding (synthesised)">
+				description = <"De houding van het individu op het moment van de meting (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Slaap/waak toestand (synthesised)">
+				description = <"Slaap/waak toestand, ondersteunt de interpretatie van de 24-uurs bloeddrukmeting. (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Manchet grootte (synthesised)">
+				description = <"De grootte van de manchet gebruikt bij de meting (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Plaats van meting (synthesised)">
+				description = <"Gewoonlijke lichaamslocaties waar bloeddruk gemeten wordt. (synthesised)">
+			>
+			["ac5"] = <
+				text = <"Methodiek (synthesised)">
+				description = <"De methode van de meting van de bloeddruk (synthesised)">
+			>
+			["ac6"] = <
+				text = <"Diastolisch eindpunt (synthesised)">
+				description = <"Om te registreren welk Korotkoff geluid gebruikt is om de diastolische druk te meten door de auscultatieve methode. (synthesised)">
 			>
 		>
 		["ru"] = <
@@ -1870,30 +1870,6 @@ terminology
 				text = <"Внутриартериальное">
 				description = <"Инвазивное измерение с помощью датчика линии доступа в артерию. Расположение датчика могут быть записаны в элемент данных \"Точное месторасположение\", в случае необходимости.">
 			>
-			["ac1"] = <
-				text = <"*Position (synthesised)(en)">
-				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Sleep status (synthesised)(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Cuff size (synthesised)(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Location of measurement (synthesised)(en)">
-				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
-			>
-			["ac5"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
-			>
-			["ac6"] = <
-				text = <"*Diastolic endpoint (synthesised)(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
-			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
@@ -1905,6 +1881,30 @@ terminology
 			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
+			>
+			["ac1"] = <
+				text = <"Поза (synthesised)">
+				description = <"Поза пациента во время измерения давления. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Стадия сна(ru) (synthesised)">
+				description = <"Стадия сна - для интерпретации записи амбулаторного измерения АД в течение 42 часов. (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Размер манжеты(ru) (synthesised)">
+				description = <"Размер манжеты для измерения кровяного давления. (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Место измерения (synthesised)">
+				description = <"Обобщенное место тела, в которм производится измерение артериального давления. (synthesised)">
+			>
+			["ac5"] = <
+				text = <"Метод (synthesised)">
+				description = <"Метод измерения кровяного давления. (synthesised)">
+			>
+			["ac6"] = <
+				text = <"Диастолическая конечная точка (synthesised)">
+				description = <"Запись звука Короткова который используют для определения диастолического давления с помощью метода аускультации. (synthesised)">
 			>
 		>
 		["fa"] = <
@@ -2125,30 +2125,6 @@ terminology
 				text = <"*Intra-arterial(en)">
 				description = <"*Invasive measurement via transducer access line within an artery. Location of the transducer can be recorded in 'Specific Location' data element, if required.(en)">
 			>
-			["ac1"] = <
-				text = <"*Position (synthesised)(en)">
-				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Sleep status (synthesised)(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Cuff size (synthesised)(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Location of measurement (synthesised)(en)">
-				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
-			>
-			["ac5"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
-			>
-			["ac6"] = <
-				text = <"*Diastolic endpoint (synthesised)(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
-			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
@@ -2160,6 +2136,30 @@ terminology
 			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
+			>
+			["ac1"] = <
+				text = <"موقعیت (synthesised)">
+				description = <"موقعیت فرد در زمان اندازه گیری  (synthesised)">
+			>
+			["ac2"] = <
+				text = <"وضعیت خواب (synthesised)">
+				description = <"وضعیت خواب- به تفسیر ثبتهای صورت گرفته از فشار خون در خانه در طول 24 ساعت کمک می کند  (synthesised)">
+			>
+			["ac3"] = <
+				text = <"اندازه کاف (synthesised)">
+				description = <"اندازه کاف استفاده شده برای اندازه گیری فشار خون (synthesised)">
+			>
+			["ac4"] = <
+				text = <"*Location of measurement(en) (synthesised)">
+				description = <"*Common body sites where blood pressure is recorded.(en) (synthesised)">
+			>
+			["ac5"] = <
+				text = <"*Method(en) (synthesised)">
+				description = <"*Method of measurement of blood pressure.(en) (synthesised)">
+			>
+			["ac6"] = <
+				text = <"*Diastolic endpoint(en) (synthesised)">
+				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en) (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -2384,30 +2384,6 @@ terminology
 				description = <"قياس باضع عن طريق دخول خط تِرجام في داخل الشريان. 
 يمكن تسجيل الترجام كنوع بيانات (موضع معيَّن), حسب الحاجة.">
 			>
-			["ac1"] = <
-				text = <"*Position (synthesised)(en)">
-				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Sleep status (synthesised)(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Cuff size (synthesised)(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Location of measurement (synthesised)(en)">
-				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
-			>
-			["ac5"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
-			>
-			["ac6"] = <
-				text = <"*Diastolic endpoint (synthesised)(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
-			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
@@ -2419,6 +2395,30 @@ terminology
 			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
+			>
+			["ac1"] = <
+				text = <"الموضع (synthesised)">
+				description = <"موضع الشخص في وقت القياس (synthesised)">
+			>
+			["ac2"] = <
+				text = <"حالة النوم (synthesised)">
+				description = <"حالة النوم - تدعم تفسير قياسات ضغط الدم المِسيارية خلال 24 ساعة (synthesised)">
+			>
+			["ac3"] = <
+				text = <"حجم الكُفَّة (synthesised)">
+				description = <"حجم الكُفَّة المستخدمة في قياس ضغط الدم (synthesised)">
+			>
+			["ac4"] = <
+				text = <"موضع القياس (synthesised)">
+				description = <"الأماكن المعتادة من الجسم التي يتم فيها عادة قياس ضغط الدم (synthesised)">
+			>
+			["ac5"] = <
+				text = <"الطريقة (synthesised)">
+				description = <"طريقة قياس ضغط الدم (synthesised)">
+			>
+			["ac6"] = <
+				text = <"النقطة النهائية الانبساطية/ الارتخائية (synthesised)">
+				description = <"تستخدم أصوات كورتكوف لتحديد ضغط الدم الانبساطي باستخدام طريقة التسمُّع (synthesised)">
 			>
 		>
 		["es-ar"] = <
@@ -2638,30 +2638,6 @@ terminology
 				text = <"Intra-arterial">
 				description = <"Medición invasiva mediante una vía de acceso transductor, dentro de la arteria.  La localización del transductor puede ser registrado en el data elemento: 'Localización específica' si se requiere. ">
 			>
-			["ac1"] = <
-				text = <"*Position (synthesised)(en)">
-				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Sleep status (synthesised)(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Cuff size (synthesised)(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Location of measurement (synthesised)(en)">
-				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
-			>
-			["ac5"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
-			>
-			["ac6"] = <
-				text = <"*Diastolic endpoint (synthesised)(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
-			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
@@ -2673,6 +2649,30 @@ terminology
 			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
+			>
+			["ac1"] = <
+				text = <"Posición (synthesised)">
+				description = <"La posición del individuo en el momento del registro. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Estado del sueño (synthesised)">
+				description = <"Estado del sueño - soporta la interpretación de los registros de presión arterial ambulatorios de 24 horas (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Tamaño del manguito (synthesised)">
+				description = <"El tamaño del manguito usado para la toma de la presión arterial (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Localización de la medida (synthesised)">
+				description = <"Sitios comunes del cuerpo donde se registra la presión arterial (synthesised)">
+			>
+			["ac5"] = <
+				text = <"Método (synthesised)">
+				description = <"Método de la medición de la presión arterial (synthesised)">
+			>
+			["ac6"] = <
+				text = <"Punto final diastólica (synthesised)">
+				description = <"Registro usando los sonidos de Korotkoff para determinar la presión diastólica (synthesised)">
 			>
 		>
 		["pt-br"] = <
@@ -2892,30 +2892,6 @@ terminology
 				text = <"Intra-arterial">
 				description = <"Medida invasiva da pressão em uma artéria acessada  por um cateter . Local do transductor pode ser registrado no elemento de dado  'Local Específico', se requerido.">
 			>
-			["ac1"] = <
-				text = <"*Position (synthesised)(en)">
-				description = <"*The position of the subject at the time of measurement. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Sleep status (synthesised)(en)">
-				description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.  (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Cuff size (synthesised)(en)">
-				description = <"*The size of the cuff used for blood pressure measurement.   (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Location of measurement (synthesised)(en)">
-				description = <"*Common body sites where blood pressure is recorded. (synthesised)(en)">
-			>
-			["ac5"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*Method of measurement of blood pressure. (synthesised)(en)">
-			>
-			["ac6"] = <
-				text = <"*Diastolic endpoint (synthesised)(en)">
-				description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (synthesised)(en)">
-			>
 			["at1055"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
@@ -2927,6 +2903,30 @@ terminology
 			["at1057"] = <
 				text = <"*mean (en)">
 				description = <"*mean (en)">
+			>
+			["ac1"] = <
+				text = <"Posição (synthesised)">
+				description = <"A posição do sujeito na hora da medida. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Status do sono (synthesised)">
+				description = <"Status do sono - apóia a interpretação do registro do mapa de pressão arterial (ambulatorial de 24 horas). (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Tamanho da braçadeira (synthesised)">
+				description = <"Tamanho da braçadeira  usada para medir a pressão arterial. (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Local de Medida (synthesised)">
+				description = <"Locais do corpo mais comuns onde a pressão arterial é medida. (synthesised)">
+			>
+			["ac5"] = <
+				text = <"Método (synthesised)">
+				description = <"Método de medida da pressão arterial. (synthesised)">
+			>
+			["ac6"] = <
+				text = <"Final da diástole (synthesised)">
+				description = <"Registro  do som Korotkoff usado para determinar a pressão arterial diastólica, usando o método auscultativo. (synthesised)">
 			>
 		>
 	>

@@ -345,12 +345,12 @@ terminology
 				description = <"A temporary name issued where the subject's name has not been determined.">
 			>
 			["ac1"] = <
-				text = <"*Nome da pessoa (synthesised)(pt-br)">
-				description = <"*Estrutura do nome de uma pessoa. (synthesised)(pt-br)">
+				text = <"Person name (synthesised)">
+				description = <"Person name details. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Indicador de acurácia/segurança (synthesised)(pt-br)">
-				description = <"*Um indicador das condições específicas ou regras que devem ser aplicadas ao nome de uma pessoa. (synthesised)(pt-br)">
+				text = <"Issues of accuracy and privacy (synthesised)">
+				description = <"An indicator of specific conditions or rules that should be applied to the use of the person name. (synthesised)">
 			>
 		>
 	>

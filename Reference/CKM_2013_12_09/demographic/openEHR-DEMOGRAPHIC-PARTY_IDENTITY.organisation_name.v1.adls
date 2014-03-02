@@ -177,8 +177,8 @@ terminology
 				description = <"Used when the organisation name type is unknown.">
 			>
 			["ac1"] = <
-				text = <"*Nome da organização (synthesised)(pt-br)">
-				description = <"*Nome da organização. (synthesised)(pt-br)">
+				text = <"Organisation name (synthesised)">
+				description = <"An organisation name. (synthesised)">
 			>
 		>
 	>

@@ -68,7 +68,7 @@ definition
 					ELEMENT[id0.53] occurrences matches {0..1} matches {	-- Deviation on protrusion
 						value matches {
 							DV_CODED_TEXT[id0.66] matches {
-								defining_code matches {[ac0.2]}		-- Deviation on protrusion (synthesised)
+								defining_code matches {[ac0.1]}		-- Deviation on protrusion (synthesised)
 							}
 						}
 					}
@@ -137,15 +137,15 @@ terminology
 				text = <"Inspection of tongue">
 				description = <"The findings on physical examination by inspection of the tongue">
 			>
-			["ac0.2"] = <
+			["ac0.1"] = <
 				text = <"Deviation on protrusion (synthesised)">
 				description = <"Does the tongue deviate on protrusion (synthesised)">
 			>
 		>
 	>
 	value_sets = <
-		["ac0.2"] = <
-			id = <"ac0.2">
+		["ac0.1"] = <
+			id = <"ac0.1">
 			members = <"at0.54", "at0.55", "at0.56">
 		>
 	>

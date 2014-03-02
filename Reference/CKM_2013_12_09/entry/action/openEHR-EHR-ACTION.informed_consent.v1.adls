@@ -438,22 +438,6 @@ terminology
 				text = <"Completed">
 				description = <"Informed consent has been provided by the patient or patient's agent and the activity is now complete.">
 			>
-			["ac1"] = <
-				text = <"Informed Consent Requested (synthesised)">
-				description = <"Informed consent has been requested from the patient or patient's agent, but no response has been received. (synthesised)">
-			>
-			["ac2"] = <
-				text = <"Form of Consent (synthesised)">
-				description = <"Form of the consent sought or provided. (synthesised)">
-			>
-			["ac3"] = <
-				text = <"Evidence of Consent (synthesised)">
-				description = <"Evidence of consent status. (synthesised)">
-			>
-			["ac4"] = <
-				text = <"Multimedia Representation (synthesised)">
-				description = <"Digital representation of the Patient Information made available. (synthesised)">
-			>
 			["at29"] = <
 				text = <"planned">
 				description = <"planned">
@@ -817,6 +801,22 @@ terminology
 			["at119"] = <
 				text = <"video/quicktime">
 				description = <"video/quicktime">
+			>
+			["ac1"] = <
+				text = <"Informed Consent Requested (synthesised)">
+				description = <"Informed consent has been requested from the patient or patient's agent, but no response has been received. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Form of Consent (synthesised)">
+				description = <"Form of the consent sought or provided. (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Evidence of Consent (synthesised)">
+				description = <"Evidence of consent status. (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Multimedia Representation (synthesised)">
+				description = <"Digital representation of the Patient Information made available. (synthesised)">
 			>
 		>
 	>

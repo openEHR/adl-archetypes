@@ -157,10 +157,6 @@ terminology
 				text = <"Umfang">
 				description = <"der Umfang des Brustkorbes">
 			>
-			["ac1"] = <
-				text = <"*Respiratory phase (synthesised)(en)">
-				description = <"*The phase of respiration during which the measurement is taken (synthesised)(en)">
-			>
 			["at11"] = <
 				text = <"*Length (en)">
 				description = <"*Length (en)">
@@ -168,6 +164,10 @@ terminology
 			["at12"] = <
 				text = <"*increase (en)">
 				description = <"*increase (en)">
+			>
+			["ac1"] = <
+				text = <"Atmungsphase (synthesised)">
+				description = <"Die Phase der Atmung, während der die Messung vorgenommen wurde (synthesised)">
 			>
 		>
 		["en"] = <
@@ -203,10 +203,6 @@ terminology
 				text = <"Circumference">
 				description = <"The circumference of the chest">
 			>
-			["ac1"] = <
-				text = <"Respiratory phase (synthesised)">
-				description = <"The phase of respiration during which the measurement is taken (synthesised)">
-			>
 			["at11"] = <
 				text = <"Length">
 				description = <"Length">
@@ -214,6 +210,10 @@ terminology
 			["at12"] = <
 				text = <"increase">
 				description = <"increase">
+			>
+			["ac1"] = <
+				text = <"Respiratory phase (synthesised)">
+				description = <"The phase of respiration during which the measurement is taken (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -249,10 +249,6 @@ terminology
 				text = <"المحيط">
 				description = <"محيط الصدر">
 			>
-			["ac1"] = <
-				text = <"*Respiratory phase (synthesised)(en)">
-				description = <"*The phase of respiration during which the measurement is taken (synthesised)(en)">
-			>
 			["at11"] = <
 				text = <"*Length (en)">
 				description = <"*Length (en)">
@@ -260,6 +256,10 @@ terminology
 			["at12"] = <
 				text = <"*increase (en)">
 				description = <"*increase (en)">
+			>
+			["ac1"] = <
+				text = <"الطور التنفسي (synthesised)">
+				description = <"طور التنفس الذي يتم أخذ القياس في أثنائه (synthesised)">
 			>
 		>
 		["es-ar"] = <
@@ -295,10 +295,6 @@ terminology
 				text = <"Circunferencia">
 				description = <"La circunferencia del tórax.">
 			>
-			["ac1"] = <
-				text = <"*Respiratory phase (synthesised)(en)">
-				description = <"*The phase of respiration during which the measurement is taken (synthesised)(en)">
-			>
 			["at11"] = <
 				text = <"*Length (en)">
 				description = <"*Length (en)">
@@ -306,6 +302,10 @@ terminology
 			["at12"] = <
 				text = <"*increase (en)">
 				description = <"*increase (en)">
+			>
+			["ac1"] = <
+				text = <"Fase respiratoria (synthesised)">
+				description = <"La fase de la respiración durante la cual la medición fue realizada. (synthesised)">
 			>
 		>
 	>

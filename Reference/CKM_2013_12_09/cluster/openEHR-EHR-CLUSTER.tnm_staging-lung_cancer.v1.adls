@@ -55,27 +55,27 @@ definition
 		}
 		/items[id3]/items[id15]/value matches {
 			DV_CODED_TEXT[id42.1] matches {
-				defining_code matches {[ac0.5]}		-- Clinical stage grouping (synthesised)
+				defining_code matches {[ac0.4]}		-- Clinical stage grouping (synthesised)
 			}
 		}
 		/items[id7]/items[id8]/value matches {
 			DV_CODED_TEXT[id44.1] matches {
-				defining_code matches {[ac0.6]}		-- Primary tumour (pT) (synthesised)
+				defining_code matches {[ac0.5]}		-- Primary tumour (pT) (synthesised)
 			}
 		}
 		/items[id7]/items[id9]/value matches {
 			DV_CODED_TEXT[id45.1] matches {
-				defining_code matches {[ac0.7]}		-- Regional lymph node (pN) (synthesised)
+				defining_code matches {[ac0.6]}		-- Regional lymph node (pN) (synthesised)
 			}
 		}
 		/items[id7]/items[id10]/value matches {
 			DV_CODED_TEXT[id46.1] matches {
-				defining_code matches {[ac0.8]}		-- Distant metastasis (pM) (synthesised)
+				defining_code matches {[ac0.7]}		-- Distant metastasis (pM) (synthesised)
 			}
 		}
 		/items[id7]/items[id16]/value matches {
 			DV_CODED_TEXT[id50.1] matches {
-				defining_code matches {[ac0.11]}		-- Pathological stage grouping (synthesised)
+				defining_code matches {[ac0.8]}		-- Pathological stage grouping (synthesised)
 			}
 		}
 	}
@@ -247,23 +247,23 @@ terminology
 				text = <"Distant metastasis (M) (synthesised)">
 				description = <"Clinical assessment of distant metastasis. (synthesised)">
 			>
-			["ac0.5"] = <
+			["ac0.4"] = <
 				text = <"Clinical stage grouping (synthesised)">
 				description = <"The TNM Clinical stage grouping. (synthesised)">
 			>
-			["ac0.6"] = <
+			["ac0.5"] = <
 				text = <"Primary tumour (pT) (synthesised)">
 				description = <"Pathological assessment of the primary tumour. (synthesised)">
 			>
-			["ac0.7"] = <
+			["ac0.6"] = <
 				text = <"Regional lymph node (pN) (synthesised)">
 				description = <"Pathological assessment of the regional lymph nodes. (synthesised)">
 			>
-			["ac0.8"] = <
+			["ac0.7"] = <
 				text = <"Distant metastasis (pM) (synthesised)">
 				description = <"Pathological assessment of distant metastases. (synthesised)">
 			>
-			["ac0.11"] = <
+			["ac0.8"] = <
 				text = <"Pathological stage grouping (synthesised)">
 				description = <"The TNM Pathological stage grouping. (synthesised)">
 			>
@@ -282,24 +282,24 @@ terminology
 			id = <"ac0.3">
 			members = <"at0.26", "at0.27", "at0.28">
 		>
+		["ac0.4"] = <
+			id = <"ac0.4">
+			members = <"at0.33", "at0.34", "at0.54", "at0.35", "at0.36", "at0.37", "at0.38">
+		>
 		["ac0.5"] = <
 			id = <"ac0.5">
-			members = <"at0.33", "at0.34", "at0.54", "at0.35", "at0.36", "at0.37", "at0.38">
+			members = <"at0.39", "at0.40", "at0.41", "at0.42", "at0.43", "at0.44", "at0.45">
 		>
 		["ac0.6"] = <
 			id = <"ac0.6">
-			members = <"at0.39", "at0.40", "at0.41", "at0.42", "at0.43", "at0.44", "at0.45">
+			members = <"at0.46", "at0.47", "at0.48", "at0.49", "at0.50">
 		>
 		["ac0.7"] = <
 			id = <"ac0.7">
-			members = <"at0.46", "at0.47", "at0.48", "at0.49", "at0.50">
+			members = <"at0.51", "at0.52", "at0.53">
 		>
 		["ac0.8"] = <
 			id = <"ac0.8">
-			members = <"at0.51", "at0.52", "at0.53">
-		>
-		["ac0.11"] = <
-			id = <"ac0.11">
 			members = <"at0.33", "at0.34", "at0.54", "at0.35", "at0.36", "at0.37", "at0.38">
 		>
 	>

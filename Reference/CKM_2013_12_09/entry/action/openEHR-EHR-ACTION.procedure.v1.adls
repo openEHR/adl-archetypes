@@ -712,52 +712,52 @@ terminology
 				description = <"Este procedimento foi realizado como urgência? Verdadeiro se Sim.">
 			>
 			["at35"] = <
-				text = <"*Request initiated(en)">
-				description = <"*Request for procedure is initiated.(en)">
+				text = <"Pedido iniciado">
+				description = <"Pedido para o procedimento é iniciado.">
 			>
 			["at36"] = <
-				text = <"*Request sent(en)">
-				description = <"*Request for procedure sent.(en)">
+				text = <"Pedido enviado">
+				description = <"Pedido para o procedimento enviado.">
 			>
 			["at39"] = <
-				text = <"*Request postponed(en)">
-				description = <"*Request for procedure is postponed.(en)">
+				text = <"Pedido adiado">
+				description = <"Pedido para o procedimento é adiado.">
 			>
 			["at40"] = <
-				text = <"*Request cancelled(en)">
-				description = <"*Procedure request has been cancelled.(en)">
+				text = <"Pedido cancelado">
+				description = <"Pedido para o procedimento foi cancelado.">
 			>
 			["at37"] = <
-				text = <"*Procedure scheduled(en)">
-				description = <"*Procedure has been scheduled.(en)">
+				text = <"Procedimento agendado">
+				description = <"Procedimento foi agendado.">
 			>
 			["at48"] = <
-				text = <"*In progress(en)">
-				description = <"*Procedure is being carried out.(en)">
+				text = <"Em progresso">
+				description = <"Procedimento está sendo realizado.">
 			>
 			["at41"] = <
-				text = <"*Procedure suspended(en)">
-				description = <"*Procedure has been suspended.(en)">
+				text = <"Procedimento suspenso">
+				description = <"Procedimento foi suspenso.">
 			>
 			["at42"] = <
-				text = <"*Procedure aborted(en)">
-				description = <"*Procedure has been aborted.(en)">
+				text = <"Procedimento abortado">
+				description = <"Procedimento foi abortado.">
 			>
 			["at44"] = <
-				text = <"*Completed(en)">
-				description = <"*Procedure has been completed.(en)">
+				text = <"Concluido">
+				description = <"Procedimento foi concluído.">
 			>
 			["at45"] = <
-				text = <"*Report authored(en)">
-				description = <"*Procedure report has been written.(en)">
+				text = <"Autoria do relatório">
+				description = <"Relatório do procedimento foi escrito.">
 			>
 			["at46"] = <
-				text = <"*Report attested(en)">
-				description = <"*Procedure report has been attested.(en)">
+				text = <"Relatório atestado">
+				description = <"Relatório do procedimento foi atestado.">
 			>
 			["at47"] = <
-				text = <"*Report sent(en)">
-				description = <"*Procedure report has been distributed.(en)">
+				text = <"Relatório enviado">
+				description = <"Relatório do procedimento foi distribuído.">
 			>
 			["at49"] = <
 				text = <"*initial (en)">
@@ -934,52 +934,52 @@ terminology
 				description = <"هل كان الإجراء الذي تم تنفيذه حالة طارئة - الإجابة بصحيح تعني أنه كان بالفعل بسبب حالة طارئة">
 			>
 			["at35"] = <
-				text = <"*Request initiated(en)">
-				description = <"*Request for procedure is initiated.(en)">
+				text = <"تم البدء في الطلب">
+				description = <"تم البدء في طلب الإجراء الطبي">
 			>
 			["at36"] = <
-				text = <"*Request sent(en)">
-				description = <"*Request for procedure sent.(en)">
+				text = <"تم إرسال الطلب">
+				description = <"تم إرسال طلب الإجراء الطبي">
 			>
 			["at39"] = <
-				text = <"*Request postponed(en)">
-				description = <"*Request for procedure is postponed.(en)">
+				text = <"تم تأجيل الطلب">
+				description = <"تم تأجيل طلب الإجراء الطبي">
 			>
 			["at40"] = <
-				text = <"*Request cancelled(en)">
-				description = <"*Procedure request has been cancelled.(en)">
+				text = <"تم إلغاء الطلب">
+				description = <"تم إلغاء طلب الإجراء الطبي">
 			>
 			["at37"] = <
-				text = <"*Procedure scheduled(en)">
-				description = <"*Procedure has been scheduled.(en)">
+				text = <"تم تحديد موعد الإجراء الطبي">
+				description = <"تم تحديد موعد تنفيذ الإجراء الطبي">
 			>
 			["at48"] = <
-				text = <"*In progress(en)">
-				description = <"*Procedure is being carried out.(en)">
+				text = <"دائر - يحدث حاليا">
+				description = <"يتم حاليا تنفيذ الإجراء الطبي">
 			>
 			["at41"] = <
-				text = <"*Procedure suspended(en)">
-				description = <"*Procedure has been suspended.(en)">
+				text = <"تم تعليق الإجراء الطبي">
+				description = <"تم تعليق الإجراء الطبي">
 			>
 			["at42"] = <
-				text = <"*Procedure aborted(en)">
-				description = <"*Procedure has been aborted.(en)">
+				text = <"تم إنهاء الإجراء الطبي فجأة">
+				description = <"تم إنهاء الإجراء الطبي فجأة">
 			>
 			["at44"] = <
-				text = <"*Completed(en)">
-				description = <"*Procedure has been completed.(en)">
+				text = <"اكتمل">
+				description = <"تم إكمال الإجراء الطبي">
 			>
 			["at45"] = <
-				text = <"*Report authored(en)">
-				description = <"*Procedure report has been written.(en)">
+				text = <"تمت كتابة التقرير">
+				description = <"تم كتابة تقرير الإجراء الطبي">
 			>
 			["at46"] = <
-				text = <"*Report attested(en)">
-				description = <"*Procedure report has been attested.(en)">
+				text = <"تم التصديق على/توثيق التقرير">
+				description = <"تم التصديق على/توثيق تقرير الإجراء الطبي">
 			>
 			["at47"] = <
-				text = <"*Report sent(en)">
-				description = <"*Procedure report has been distributed.(en)">
+				text = <"تم إرسال التقرير">
+				description = <"تم توزيع تقرير الإجراء الطبي">
 			>
 			["at49"] = <
 				text = <"*initial (en)">
@@ -1156,52 +1156,52 @@ terminology
 				description = <"Была ли процедура выполнена по неотложным показаниям? Да, если это так">
 			>
 			["at35"] = <
-				text = <"*Request initiated(en)">
-				description = <"*Request for procedure is initiated.(en)">
+				text = <"Процедура заказана">
+				description = <"Начало заказа процедуры">
 			>
 			["at36"] = <
-				text = <"*Request sent(en)">
-				description = <"*Request for procedure sent.(en)">
+				text = <"Заявка отправлена">
+				description = <"Отправлена заявка на выполнение процедуры">
 			>
 			["at39"] = <
-				text = <"*Request postponed(en)">
-				description = <"*Request for procedure is postponed.(en)">
+				text = <"Заявка задержана">
+				description = <"Заявка на процедуру задержана">
 			>
 			["at40"] = <
-				text = <"*Request cancelled(en)">
-				description = <"*Procedure request has been cancelled.(en)">
+				text = <"Заявка отменена">
+				description = <"Заявка отменена">
 			>
 			["at37"] = <
-				text = <"*Procedure scheduled(en)">
-				description = <"*Procedure has been scheduled.(en)">
+				text = <"Включена в расписание">
+				description = <"Процедура включена в расписание">
 			>
 			["at48"] = <
-				text = <"*In progress(en)">
-				description = <"*Procedure is being carried out.(en)">
+				text = <"Выполняется">
+				description = <"Процедура в процессе выполнения">
 			>
 			["at41"] = <
-				text = <"*Procedure suspended(en)">
-				description = <"*Procedure has been suspended.(en)">
+				text = <"Отложена">
+				description = <"Процедура отложена">
 			>
 			["at42"] = <
-				text = <"*Procedure aborted(en)">
-				description = <"*Procedure has been aborted.(en)">
+				text = <"Процедура прервана">
+				description = <"Процедура прервана">
 			>
 			["at44"] = <
-				text = <"*Completed(en)">
-				description = <"*Procedure has been completed.(en)">
+				text = <"Выполнена">
+				description = <"Процедура выполнена">
 			>
 			["at45"] = <
-				text = <"*Report authored(en)">
-				description = <"*Procedure report has been written.(en)">
+				text = <"Ппротокол подписан">
+				description = <"Протокол процедуры подписан">
 			>
 			["at46"] = <
-				text = <"*Report attested(en)">
-				description = <"*Procedure report has been attested.(en)">
+				text = <"Протокол проверен">
+				description = <"Протокол проверен">
 			>
 			["at47"] = <
-				text = <"*Report sent(en)">
-				description = <"*Procedure report has been distributed.(en)">
+				text = <"Протокол отправлен">
+				description = <"Протокол отправлен">
 			>
 			["at49"] = <
 				text = <"*initial (en)">

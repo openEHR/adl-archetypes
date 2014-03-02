@@ -1016,29 +1016,29 @@ terminology
 				description = <"Finding of non-neoplastic change. (synthesised)">
 			>
 			["ac16"] = <
-				text = <"Mitotic frequency score">
-				description = <"Mitotic frequency score calculated from the mitosis count and the microscopy field diameter via a lookup table.">
+				text = <"Mitotic frequency score (synthesised)">
+				description = <"Mitotic frequency score calculated from the mitosis count and the microscopy field diameter via a lookup table. (synthesised)">
 			>
 			["ac17"] = <
-				text = <"Nuclear score">
-				description = <"Nuclear score.">
+				text = <"Nuclear score (synthesised)">
+				description = <"Nuclear score. (synthesised)">
 			>
 			["ac18"] = <
-				text = <"Tubular formation score">
-				description = <"Tubular formation score, representing the extent of tubular formation within invasive carcinoma cells.">
+				text = <"Tubular formation score (synthesised)">
+				description = <"Tubular formation score, representing the extent of tubular formation within invasive carcinoma cells. (synthesised)">
 			>
 			["ac19"] = <
-				text = <"Histologic grade">
-				description = <"Bloom and Richardson Grade of breast cancer, derived from the total score of its components: Mitotic frequency score, Nuclear score and Tubular formation score.">
+				text = <"Histologic grade (synthesised)">
+				description = <"Bloom and Richardson Grade of breast cancer, derived from the total score of its components: Mitotic frequency score, Nuclear score and Tubular formation score. (synthesised)">
 			>
 			["ac20"] = <
-				text = <"Nuclear score">
+				text = <"Nuclear score (synthesised)">
 				description = <"Nuclear score, using the Elston and Ellis modification of the Bloom and
- Richardson system for grading invasive carcinoma.">
+ Richardson system for grading invasive carcinoma. (synthesised)">
 			>
 			["ac21"] = <
-				text = <"Van Nuys Prognostic Index">
-				description = <"The Van Nuys Prognostic Index (VNPI).">
+				text = <"Van Nuys Prognostic Index (synthesised)">
+				description = <"The Van Nuys Prognostic Index (VNPI). (synthesised)">
 			>
 		>
 	>

@@ -446,24 +446,24 @@ terminology
 				description = <"Apgar score at any additional time, as required.">
 			>
 			["ac1"] = <
-				text = <"Respiratory effort">
-				description = <"Observation of the infant's respiratory effort.">
+				text = <"Respiratory effort (synthesised)">
+				description = <"Observation of the infant's respiratory effort. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Heart Rate">
-				description = <"Recording of the infant's heart rate.">
+				text = <"Heart Rate (synthesised)">
+				description = <"Recording of the infant's heart rate. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Muscle tone">
-				description = <"Observation of the infant's muscle tone.">
+				text = <"Muscle tone (synthesised)">
+				description = <"Observation of the infant's muscle tone. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Reflex irritability">
-				description = <"Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter.">
+				text = <"Reflex irritability (synthesised)">
+				description = <"Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Skin colour">
-				description = <"Observation of the skin colour of the infant.">
+				text = <"Skin colour (synthesised)">
+				description = <"Observation of the skin colour of the infant. (synthesised)">
 			>
 		>
 		["es-cl"] = <
@@ -584,24 +584,24 @@ terminology
 				description = <"*Apgar score at any additional time, as required.(en)">
 			>
 			["ac1"] = <
-				text = <"*Respiratory effort(en)">
-				description = <"*Observation of the infant's respiratory effort.(en)">
+				text = <"Respiración (synthesised)">
+				description = <"Valoración del esfuerzo respiratorio del neonato. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Heart Rate(en)">
-				description = <"*Recording of the infant's heart rate.(en)">
+				text = <"Frecuencia cardíaca (synthesised)">
+				description = <"Valoración de la función cardíaca en el recién nacido. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Muscle tone(en)">
-				description = <"*Observation of the infant's muscle tone.(en)">
+				text = <"*Muscle tone(en) (synthesised)">
+				description = <"*Observation of the infant's muscle tone(en) (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Reflex irritability(en)">
-				description = <"*Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter.(en)">
+				text = <"*Reflex irritability(en) (synthesised)">
+				description = <"*Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter.(en) (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Skin colour(en)">
-				description = <"*Observation of the skin colour of the infant.(en)">
+				text = <"*Skin colour(en) (synthesised)">
+				description = <"*Observation of the skin colour of the infant(en) (synthesised)">
 			>
 		>
 		["de"] = <
@@ -722,24 +722,24 @@ terminology
 				description = <"Apgar-Score zu beliebigen Zeitpunkten, je nach Bedarf.">
 			>
 			["ac1"] = <
-				text = <"*Respiratory effort(en)">
-				description = <"*Observation of the infant's respiratory effort.(en)">
+				text = <"Atemantrieb (synthesised)">
+				description = <"Beurteilung des Atemantriebs des Neugeborenen. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Heart Rate(en)">
-				description = <"*Recording of the infant's heart rate.(en)">
+				text = <"Herzfrequenz (synthesised)">
+				description = <"Beurteilung der Herzfrequenz des Neubegorenen. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Muscle tone(en)">
-				description = <"*Observation of the infant's muscle tone.(en)">
+				text = <"Muskeltonus (synthesised)">
+				description = <"Beobachtung des Musketonus des Neugeborenen. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Reflex irritability(en)">
-				description = <"*Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter.(en)">
+				text = <"Reflexauslösbarkeit (synthesised)">
+				description = <"Beobachtung der Antwort des Neugeborens auf eine Reizstimulation, z.B. Absaugen des Oropharynxs und der Nasenlöcher mit einem weichem Gummikatheter. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Skin colour(en)">
-				description = <"*Observation of the skin colour of the infant.(en)">
+				text = <"Hautfarbe (synthesised)">
+				description = <"Beobachtung der Hautfarbe des Neugeborenen. (synthesised)">
 			>
 		>
 		["fa"] = <
@@ -860,24 +860,24 @@ terminology
 				description = <"نمره آپگار در هر زمان ممکن و در صورت نیاز">
 			>
 			["ac1"] = <
-				text = <"*Respiratory effort(en)">
-				description = <"*Observation of the infant's respiratory effort.(en)">
+				text = <"تلاش تنفسی (synthesised)">
+				description = <"مشاهده تلاش تنفسی نوزاد (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Heart Rate(en)">
-				description = <"*Recording of the infant's heart rate.(en)">
+				text = <"ضربان قلب (synthesised)">
+				description = <"ثبت ضربان قلب نوزاد (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Muscle tone(en)">
-				description = <"*Observation of the infant's muscle tone.(en)">
+				text = <"تون عضلانی (synthesised)">
+				description = <"مشاهده تلون عضلانی نوزاد (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Reflex irritability(en)">
-				description = <"*Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter.(en)">
+				text = <"رفلکس تحریک پذیری (synthesised)">
+				description = <"مشاهده پاسخ نوزاد به تحریکات محرک به عنوان مثال مکش دهانی حلقی و سوراخ بینی با کاتتر لاستیکی نرم   (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Skin colour(en)">
-				description = <"*Observation of the skin colour of the infant.(en)">
+				text = <"رنگ پوست (synthesised)">
+				description = <"مشاهده رنگ پوست نوزاد (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -998,24 +998,24 @@ terminology
 				description = <"حرز أبغار عند أي وقت إضافي, حسب الحاجة">
 			>
 			["ac1"] = <
-				text = <"*Respiratory effort(en)">
-				description = <"*Observation of the infant's respiratory effort.(en)">
+				text = <"المجهود التنفسي (synthesised)">
+				description = <"ملاحظة المجهود التنفسي لدى الرضيع (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Heart Rate(en)">
-				description = <"*Recording of the infant's heart rate.(en)">
+				text = <"معدل القلب (synthesised)">
+				description = <"تسجيل معدل قلب الرضيع (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Muscle tone(en)">
-				description = <"*Observation of the infant's muscle tone.(en)">
+				text = <"توتر العضلة (synthesised)">
+				description = <"ملاحظة توتر عضلات الرضيع (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Reflex irritability(en)">
-				description = <"*Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter.(en)">
+				text = <"التوتر الانعكاسي (synthesised)">
+				description = <"ملاحظة استجابة الرضيع لتحفيز مُهَيَّج, مثلا, مص محتويات البلعوم الفمي و فتحات الأنف باستخدام قثطار مطاطي ناعم. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Skin colour(en)">
-				description = <"*Observation of the skin colour of the infant.(en)">
+				text = <"لون الجلد/البشرة (synthesised)">
+				description = <"ملاحظة لون بشرة/جلد الرضيع (synthesised)">
 			>
 		>
 		["ru"] = <
@@ -1136,24 +1136,24 @@ terminology
 				description = <"Оценка по Апгар в дополнительное время, если требуется.">
 			>
 			["ac1"] = <
-				text = <"*Respiratory effort(en)">
-				description = <"*Observation of the infant's respiratory effort.(en)">
+				text = <"Дыхание (synthesised)">
+				description = <"Наблюдается за дыханием. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Heart Rate(en)">
-				description = <"*Recording of the infant's heart rate.(en)">
+				text = <"Сердцебиение (synthesised)">
+				description = <"Запись о ЧСС младенца. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Muscle tone(en)">
-				description = <"*Observation of the infant's muscle tone.(en)">
+				text = <"Мышечный тонус (synthesised)">
+				description = <"Оценка мышечного тонуса младенца. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Reflex irritability(en)">
-				description = <"*Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter.(en)">
+				text = <"Рефлексы на раздражение (synthesised)">
+				description = <"Наблюдение за реакцией ребенка на раздражающее стимуляции, например, очищения ротоглотки и носовых отверстий мягким резиновым катетером. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Skin colour(en)">
-				description = <"*Observation of the skin colour of the infant.(en)">
+				text = <"Цвет кожи (synthesised)">
+				description = <"Оценка цвета кожи младенца. (synthesised)">
 			>
 		>
 		["nl"] = <
@@ -1274,24 +1274,24 @@ terminology
 				description = <"Apgar score op elk toe te voegen tijdstip, indien nodig">
 			>
 			["ac1"] = <
-				text = <"*Respiratory effort(en)">
-				description = <"*Observation of the infant's respiratory effort.(en)">
+				text = <"Ademhalingsinspanning (synthesised)">
+				description = <"Observatie van de ademhalingsinspanning van het kind. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Heart Rate(en)">
-				description = <"*Recording of the infant's heart rate.(en)">
+				text = <"Hartslag (synthesised)">
+				description = <"Opnemen van de hartslag van het kind. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Muscle tone(en)">
-				description = <"*Observation of the infant's muscle tone.(en)">
+				text = <"Spiertonus (synthesised)">
+				description = <"Observatie van de spiertonus van het kind. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Reflex irritability(en)">
-				description = <"*Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter.(en)">
+				text = <"Reactie op prikkels (synthesised)">
+				description = <"Observatie van de reactie van het kind op een irritante prikkeling, bijvoorbeeld het uitzuigen van de keel en neus met een zachte rubberen katheter. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Skin colour(en)">
-				description = <"*Observation of the skin colour of the infant.(en)">
+				text = <"Huidskleur (synthesised)">
+				description = <"Observatie van de huidskleur van het kind. (synthesised)">
 			>
 		>
 		["pt-br"] = <
@@ -1412,24 +1412,24 @@ terminology
 				description = <"Escore Apgar em qualquer tempo adicional, se requerido.">
 			>
 			["ac1"] = <
-				text = <"*Respiratory effort(en)">
-				description = <"*Observation of the infant's respiratory effort.(en)">
+				text = <"Esforço respiratório (synthesised)">
+				description = <"Observação do esforço respiratório do recém-nascido. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Heart Rate(en)">
-				description = <"*Recording of the infant's heart rate.(en)">
+				text = <"Frequência cardíaca (synthesised)">
+				description = <"Registro da frequência cardíaca do recém-nascido. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Muscle tone(en)">
-				description = <"*Observation of the infant's muscle tone.(en)">
+				text = <"Tônus muscular (synthesised)">
+				description = <"Observação do tônus muscular do recém-nascido. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Reflex irritability(en)">
-				description = <"*Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter.(en)">
+				text = <"Reflexo de irritabilidade (synthesised)">
+				description = <"Observação da resposta a um estímulo irritativo, por exemplo, sucção da orofaringe e narinas com um cateter de borracha macia. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Skin colour(en)">
-				description = <"*Observation of the skin colour of the infant.(en)">
+				text = <"Cor da pele (synthesised)">
+				description = <"Observação da cor da pele do recém-nascido. (synthesised)">
 			>
 		>
 	>

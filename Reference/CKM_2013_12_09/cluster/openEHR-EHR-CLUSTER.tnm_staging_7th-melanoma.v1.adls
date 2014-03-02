@@ -50,7 +50,7 @@ definition
 		}
 		/items[id15]/value matches {
 			DV_CODED_TEXT[id62.1] matches {
-				defining_code matches {[ac0.5]}		-- Stage grouping (synthesised)
+				defining_code matches {[ac0.4]}		-- Stage grouping (synthesised)
 			}
 		}
 	}
@@ -230,7 +230,7 @@ terminology
 				text = <"Distant metastasis (M) (synthesised)">
 				description = <"Assessment of distant metastasis. (synthesised)">
 			>
-			["ac0.5"] = <
+			["ac0.4"] = <
 				text = <"Stage grouping (synthesised)">
 				description = <"The TNM Stage grouping. (synthesised)">
 			>
@@ -249,8 +249,8 @@ terminology
 			id = <"ac0.2">
 			members = <"at0.67", "at0.68", "at0.69", "at0.70", "at0.71", "at0.72", "at0.73", "at0.74", "at0.75", "at0.76">
 		>
-		["ac0.5"] = <
-			id = <"ac0.5">
+		["ac0.4"] = <
+			id = <"ac0.4">
 			members = <"at0.81", "at0.82", "at0.83", "at0.84", "at0.85", "at0.86", "at0.87", "at0.88", "at0.89", "at0.90">
 		>
 	>

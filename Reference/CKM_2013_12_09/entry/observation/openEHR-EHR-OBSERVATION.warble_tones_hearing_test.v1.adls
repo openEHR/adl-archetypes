@@ -188,22 +188,6 @@ terminology
 				text = <"0,5kHz">
 				description = <"*">
 			>
-			["ac1"] = <
-				text = <"Side (synthesised)">
-				description = <"Side being tested (synthesised)">
-			>
-			["ac2"] = <
-				text = <"Frequency (synthesised)">
-				description = <"Record frequency of Warble tone stimulus presented (synthesised)">
-			>
-			["ac3"] = <
-				text = <"Response (synthesised)">
-				description = <"Consistent response of infant to stimulus (synthesised)">
-			>
-			["ac4"] = <
-				text = <"Image (synthesised)">
-				description = <"Image of test result (synthesised)">
-			>
 			["at31"] = <
 				text = <"Frequency">
 				description = <"Frequency">
@@ -231,6 +215,22 @@ terminology
 			["at37"] = <
 				text = <"image/jpeg">
 				description = <"image/jpeg">
+			>
+			["ac1"] = <
+				text = <"Side (synthesised)">
+				description = <"Side being tested (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Frequency (synthesised)">
+				description = <"Record frequency of Warble tone stimulus presented (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Response (synthesised)">
+				description = <"Consistent response of infant to stimulus (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Image (synthesised)">
+				description = <"Image of test result (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -306,22 +306,6 @@ terminology
 				text = <"0.5 كيلو هرتز">
 				description = <"*">
 			>
-			["ac1"] = <
-				text = <"*Side (synthesised)(en)">
-				description = <"*Side being tested (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Frequency (synthesised)(en)">
-				description = <"*Record frequency of Warble tone stimulus presented (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Response (synthesised)(en)">
-				description = <"*Consistent response of infant to stimulus (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Image (synthesised)(en)">
-				description = <"*Image of test result (synthesised)(en)">
-			>
 			["at31"] = <
 				text = <"*Frequency (en)">
 				description = <"*Frequency (en)">
@@ -349,6 +333,22 @@ terminology
 			["at37"] = <
 				text = <"*image/jpeg (en)">
 				description = <"*image/jpeg (en)">
+			>
+			["ac1"] = <
+				text = <"الجانب (synthesised)">
+				description = <"الجانب الذي يتم اختباره (synthesised)">
+			>
+			["ac2"] = <
+				text = <"التكرار/ التردد (synthesised)">
+				description = <"تسجيل تكرار/تردد مُنَبِّه النغمات اللُّحموية التي يتم تقديمها (synthesised)">
+			>
+			["ac3"] = <
+				text = <"الاستجابة (synthesised)">
+				description = <"الاستجابة المُتَّسِقة من الطفل للمُنبِّه (synthesised)">
+			>
+			["ac4"] = <
+				text = <"الصورة (synthesised)">
+				description = <"صورة نتيجة الاختبار (synthesised)">
 			>
 		>
 	>

@@ -71,7 +71,7 @@ definition
 									ELEMENT[id0.96] occurrences matches {0..*} matches {	-- Fluoresence pattern
 										value matches {
 											DV_CODED_TEXT[id0.100] matches {
-												defining_code matches {[ac0.2]}		-- Fluoresence pattern (synthesised)
+												defining_code matches {[ac0.1]}		-- Fluoresence pattern (synthesised)
 											}
 										}
 									}
@@ -79,7 +79,7 @@ definition
 										value matches {
 											DV_TEXT[id0.101] 
 											DV_CODED_TEXT[id0.102] matches {
-												defining_code matches {[ac0.3]}		-- Qualitative result (synthesised)
+												defining_code matches {[ac0.2]}		-- Qualitative result (synthesised)
 											}
 										}
 									}
@@ -151,23 +151,23 @@ terminology
 				text = <"Titre">
 				description = <"The test result, expressed as a titre e.g. 1:450">
 			>
-			["ac0.2"] = <
+			["ac0.1"] = <
 				text = <"Fluoresence pattern (synthesised)">
 				description = <"The fluorescence staining pattern observed. (synthesised)">
 			>
-			["ac0.3"] = <
+			["ac0.2"] = <
 				text = <"Qualitative result (synthesised)">
 				description = <"The qualitative result of the test. (synthesised)">
 			>
 		>
 	>
 	value_sets = <
-		["ac0.2"] = <
-			id = <"ac0.2">
+		["ac0.1"] = <
+			id = <"ac0.1">
 			members = <"at0.98", "at0.99", "at0.100", "at0.101">
 		>
-		["ac0.3"] = <
-			id = <"ac0.3">
+		["ac0.2"] = <
+			id = <"ac0.2">
 			members = <"at0.90", "at0.91", "at0.92", "at0.93">
 		>
 	>

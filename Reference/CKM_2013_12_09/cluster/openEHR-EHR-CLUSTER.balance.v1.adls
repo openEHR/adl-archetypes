@@ -178,20 +178,20 @@ terminology
 				description = <"*The subject lost their balance completely.(en)">
 			>
 			["ac1"] = <
-				text = <"*Test Name (synthesised)(en)">
-				description = <"*Name of a specific test of subject's balance. (synthesised)(en)">
+				text = <"اسم الاختبار (synthesised)">
+				description = <"اسم الاختبار (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Eyes Open/closed (synthesised)(en)">
-				description = <"*Record of eyes being open or closed during performance of test. (synthesised)(en)">
+				text = <"العينان مفتوحتان/مغلقتان (synthesised)">
+				description = <"تسجيل ما إذا كانت العينان مفتوحتان أو مغلقتان في أثناء أداء/إجراء الاختبار (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Loss of Balance (synthesised)(en)">
-				description = <"*Finding of the extent of loss of balance. (synthesised)(en)">
+				text = <"فقد التوازن (synthesised)">
+				description = <"موجودات فقد التوازن (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Affected Side (synthesised)(en)">
-				description = <"*Identification of side of abnormal finding. (synthesised)(en)">
+				text = <"الجانب المتأثر (synthesised)">
+				description = <"تعريف الجانب الذي به موجودات غير طبيعية (synthesised)">
 			>
 		>
 		["en"] = <

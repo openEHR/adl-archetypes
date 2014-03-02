@@ -266,8 +266,8 @@ terminology
 				description = <"الشخص لم يستخدم المادة أبداً">
 			>
 			["ac1"] = <
-				text = <"*Usage Status (synthesised)(en)">
-				description = <"*Overview of usage of the substance. (synthesised)(en)">
+				text = <"حالة الاستعمال (synthesised)">
+				description = <"نظرة عامة حول استعمال المادة (synthesised)">
 			>
 		>
 		["es-ar"] = <
@@ -336,8 +336,8 @@ terminology
 				description = <"Persona que nunca usó la sustancia.">
 			>
 			["ac1"] = <
-				text = <"*Usage Status (synthesised)(en)">
-				description = <"*Overview of usage of the substance. (synthesised)(en)">
+				text = <"Estado de uso (synthesised)">
+				description = <"Visión general del uso de la sustancia. (synthesised)">
 			>
 		>
 	>

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4)
 	openEHR-EHR-EVALUATION.substance_use_summary-alcohol.v1
 specialise
 	openEHR-EHR-EVALUATION.substance_use_summary.v1
@@ -57,7 +57,7 @@ definition
 							}
 						}
 					}
-					CLUSTER[at0007] occurrences matches {0..*} matches {	-- Consumption Summary
+					CLUSTER[at0007] matches {	-- Consumption Summary
 						items cardinality matches {0..*; unordered} matches {
 							ELEMENT[at0008] occurrences matches {0..1} matches {	-- Form
 								value matches {

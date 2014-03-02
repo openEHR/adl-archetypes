@@ -330,10 +330,6 @@ terminology
 				text = <"*Interpretation(en)">
 				description = <"*Single word, phrase or brief description represents the clinical meaning and significance of the physical examination findings.(en)">
 			>
-			["ac1"] = <
-				text = <"*Sensor Type (synthesised)(en)">
-				description = <"*The type of measurement sensor used. (synthesised)(en)">
-			>
 			["at54"] = <
 				text = <"*Concentration (en)">
 				description = <"*Concentration (en)">
@@ -345,6 +341,10 @@ terminology
 			["at56"] = <
 				text = <"*Temperature (en)">
 				description = <"*Temperature (en)">
+			>
+			["ac1"] = <
+				text = <"*Sensor Type(en) (synthesised)">
+				description = <"*The type of measurement sensor used.(en) (synthesised)">
 			>
 		>
 		["en"] = <
@@ -456,10 +456,6 @@ terminology
 				text = <"Interpretation">
 				description = <"Single word, phrase or brief description represents the clinical meaning and significance of the physical examination findings.">
 			>
-			["ac1"] = <
-				text = <"Sensor Type (synthesised)">
-				description = <"The type of measurement sensor used. (synthesised)">
-			>
 			["at54"] = <
 				text = <"Concentration">
 				description = <"Concentration">
@@ -471,6 +467,10 @@ terminology
 			["at56"] = <
 				text = <"Temperature">
 				description = <"Temperature">
+			>
+			["ac1"] = <
+				text = <"Sensor Type (synthesised)">
+				description = <"The type of measurement sensor used. (synthesised)">
 			>
 		>
 	>

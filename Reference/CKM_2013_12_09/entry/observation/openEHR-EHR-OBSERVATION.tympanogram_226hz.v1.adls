@@ -449,26 +449,6 @@ terminology
 				text = <"*Comment(en)">
 				description = <"*Additional narrative about the protocol for the tympanogram not captured in other fields.(en)">
 			>
-			["ac1"] = <
-				text = <"*Test Ear (synthesised)(en)">
-				description = <"*Identification of the ear being tested. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Tympanogram Type (synthesised)(en)">
-				description = <"*Description of the the shape of the tympanogram plot using Jerger categories. (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Test Result Image (synthesised)(en)">
-				description = <"*Digital representation of the entire result. (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Direction of Pressure Change (synthesised)(en)">
-				description = <"*The dirction of change of pressure administered via the ear canal. (synthesised)(en)">
-			>
-			["ac5"] = <
-				text = <"*Admittance Measurement (synthesised)(en)">
-				description = <"*Method of acoustic admittance measurement used in the test. (synthesised)(en)">
-			>
 			["at51"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
@@ -508,6 +488,26 @@ terminology
 			["at60"] = <
 				text = <"*image/jpeg (en)">
 				description = <"*image/jpeg (en)">
+			>
+			["ac1"] = <
+				text = <"*Test Ear(en) (synthesised)">
+				description = <"*Identification of the ear being tested.(en) (synthesised)">
+			>
+			["ac2"] = <
+				text = <"*Tympanogram Type(en) (synthesised)">
+				description = <"*Description of the the shape of the tympanogram plot using Jerger categories.(en) (synthesised)">
+			>
+			["ac3"] = <
+				text = <"*Test Result Image(en) (synthesised)">
+				description = <"*Digital representation of the entire result.(en) (synthesised)">
+			>
+			["ac4"] = <
+				text = <"*Direction of Pressure Change(en) (synthesised)">
+				description = <"*The dirction of change of pressure administered via the ear canal.(en) (synthesised)">
+			>
+			["ac5"] = <
+				text = <"*Admittance Measurement(en) (synthesised)">
+				description = <"*Method of acoustic admittance measurement used in the test.(en) (synthesised)">
 			>
 		>
 		["en"] = <
@@ -683,26 +683,6 @@ terminology
 				text = <"Comment">
 				description = <"Additional narrative about the protocol for the tympanogram not captured in other fields.">
 			>
-			["ac1"] = <
-				text = <"Test Ear (synthesised)">
-				description = <"Identification of the ear being tested. (synthesised)">
-			>
-			["ac2"] = <
-				text = <"Tympanogram Type (synthesised)">
-				description = <"Description of the the shape of the tympanogram plot using Jerger categories. (synthesised)">
-			>
-			["ac3"] = <
-				text = <"Test Result Image (synthesised)">
-				description = <"Digital representation of the entire result. (synthesised)">
-			>
-			["ac4"] = <
-				text = <"Direction of Pressure Change (synthesised)">
-				description = <"The dirction of change of pressure administered via the ear canal. (synthesised)">
-			>
-			["ac5"] = <
-				text = <"Admittance Measurement (synthesised)">
-				description = <"Method of acoustic admittance measurement used in the test. (synthesised)">
-			>
 			["at51"] = <
 				text = <"Pressure">
 				description = <"Pressure">
@@ -742,6 +722,26 @@ terminology
 			["at60"] = <
 				text = <"image/jpeg">
 				description = <"image/jpeg">
+			>
+			["ac1"] = <
+				text = <"Test Ear (synthesised)">
+				description = <"Identification of the ear being tested. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Tympanogram Type (synthesised)">
+				description = <"Description of the the shape of the tympanogram plot using Jerger categories. (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Test Result Image (synthesised)">
+				description = <"Digital representation of the entire result. (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Direction of Pressure Change (synthesised)">
+				description = <"The dirction of change of pressure administered via the ear canal. (synthesised)">
+			>
+			["ac5"] = <
+				text = <"Admittance Measurement (synthesised)">
+				description = <"Method of acoustic admittance measurement used in the test. (synthesised)">
 			>
 		>
 	>

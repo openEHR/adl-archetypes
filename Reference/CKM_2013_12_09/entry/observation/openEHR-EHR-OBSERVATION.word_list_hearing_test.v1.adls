@@ -184,22 +184,6 @@ terminology
 				text = <"Comment">
 				description = <"Comment on test ">
 			>
-			["ac1"] = <
-				text = <"Test (synthesised)">
-				description = <"Identify the test performed (synthesised)">
-			>
-			["ac2"] = <
-				text = <"New element (synthesised)">
-				description = <"Image of test result (synthesised)">
-			>
-			["ac3"] = <
-				text = <"Occlusion (synthesised)">
-				description = <"* (synthesised)">
-			>
-			["ac4"] = <
-				text = <"Lip reading (synthesised)">
-				description = <"Is the person using lip-reading when performing the test (synthesised)">
-			>
 			["at18"] = <
 				text = <"Proportion">
 				description = <"Proportion">
@@ -227,6 +211,22 @@ terminology
 			["at24"] = <
 				text = <"image/jpeg">
 				description = <"image/jpeg">
+			>
+			["ac1"] = <
+				text = <"Test (synthesised)">
+				description = <"Identify the test performed (synthesised)">
+			>
+			["ac2"] = <
+				text = <"New element (synthesised)">
+				description = <"Image of test result (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Occlusion (synthesised)">
+				description = <"* (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Lip reading (synthesised)">
+				description = <"Is the person using lip-reading when performing the test (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -294,22 +294,6 @@ terminology
 				text = <"تعليق">
 				description = <"تعليق على الاختبار">
 			>
-			["ac1"] = <
-				text = <"*Test (synthesised)(en)">
-				description = <"*Identify the test performed (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*New element (synthesised)(en)">
-				description = <"*Image of test result (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Occlusion (synthesised)(en)">
-				description = <"** (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Lip reading (synthesised)(en)">
-				description = <"*Is the person using lip-reading when performing the test (synthesised)(en)">
-			>
 			["at18"] = <
 				text = <"*Proportion (en)">
 				description = <"*Proportion (en)">
@@ -337,6 +321,22 @@ terminology
 			["at24"] = <
 				text = <"*image/jpeg (en)">
 				description = <"*image/jpeg (en)">
+			>
+			["ac1"] = <
+				text = <"اختبار (synthesised)">
+				description = <"تعيين هوية (استعراف) الاختبار الذي يتم إنجازه / إجراؤه (synthesised)">
+			>
+			["ac2"] = <
+				text = <"عنصر جديد (synthesised)">
+				description = <"صورة نتيجة الاختبار (synthesised)">
+			>
+			["ac3"] = <
+				text = <"إطباق (synthesised)">
+				description = <"* (synthesised)">
+			>
+			["ac4"] = <
+				text = <"قراءة الشفاه (synthesised)">
+				description = <"هل يستخدم الشخص قراءة الشفاه عند إنجازه / إجرائه للاختبار (synthesised)">
 			>
 		>
 	>

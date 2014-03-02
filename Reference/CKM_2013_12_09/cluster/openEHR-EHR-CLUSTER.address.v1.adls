@@ -229,8 +229,8 @@ terminology
 				description = <"Der Zeitraum in dem die Adresse gültig ist.  ENV 13606 - 4:2000 7.11.11.">
 			>
 			["ac1"] = <
-				text = <"*Address Type (synthesised)(en)">
-				description = <"*The type of address. (synthesised)(en)">
+				text = <"Art (synthesised)">
+				description = <"Art der Adresse (synthesised)">
 			>
 		>
 	>

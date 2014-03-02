@@ -182,7 +182,7 @@ definition
 			ELEMENT[id0.15] occurrences matches {0..1} matches {	-- Route of Administration
 				value matches {
 					DV_CODED_TEXT[id0.35] matches {
-						defining_code matches {[ac0.4]}		-- Route of Administration (synthesised)
+						defining_code matches {[ac0.1]}		-- Route of Administration (synthesised)
 					}
 				}
 			}
@@ -261,10 +261,6 @@ terminology
 				text = <"Glucose Result">
 				description = <"Actual value of the glucose test result.">
 			>
-			["ac0.4"] = <
-				text = <"Route of Administration (synthesised)">
-				description = <"Route that the glucose was administered. (synthesised)">
-			>
 			["at0.18"] = <
 				text = <"Concentration">
 				description = <"Concentration">
@@ -276,6 +272,10 @@ terminology
 			["at0.20"] = <
 				text = <"Mass (IU)">
 				description = <"Mass (IU)">
+			>
+			["ac0.1"] = <
+				text = <"Route of Administration (synthesised)">
+				description = <"Route that the glucose was administered. (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -343,10 +343,6 @@ terminology
 				text = <"*Glucose Result">
 				description = <"*Actual value of the glucose test result.">
 			>
-			["ac0.4"] = <
-				text = <"*Route of Administration (synthesised)(en)">
-				description = <"*Route that the glucose was administered. (synthesised)(en)">
-			>
 			["at0.18"] = <
 				text = <"*Concentration (en)">
 				description = <"*Concentration (en)">
@@ -359,6 +355,10 @@ terminology
 				text = <"*Mass (IU) (en)">
 				description = <"*Mass (IU) (en)">
 			>
+			["ac0.1"] = <
+				text = <"*Route of Administration (synthesised)">
+				description = <"Route that the glucose was administered. (synthesised)">
+			>
 		>
 	>
 	term_bindings = <
@@ -369,8 +369,8 @@ terminology
 		>
 	>
 	value_sets = <
-		["ac0.4"] = <
-			id = <"ac0.4">
+		["ac0.1"] = <
+			id = <"ac0.1">
 			members = <"at0.16", "at0.17">
 		>
 	>

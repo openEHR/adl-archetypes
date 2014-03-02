@@ -512,44 +512,44 @@ terminology
 				description = <"The device/test method used">
 			>
 			["ac1"] = <
-				text = <"Glucose">
-				description = <"Detection of glucose in urine sample.">
+				text = <"Glucose (synthesised)">
+				description = <"Detection of glucose in urine sample. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Protein">
-				description = <"Detection of protein in urine sample.">
+				text = <"Protein (synthesised)">
+				description = <"Detection of protein in urine sample. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Bilirubin">
-				description = <"Detection of bilirubin in urine sample.">
+				text = <"Bilirubin (synthesised)">
+				description = <"Detection of bilirubin in urine sample. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Ketones">
-				description = <"Detection of ketones in urine sample.">
+				text = <"Ketones (synthesised)">
+				description = <"Detection of ketones in urine sample. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Specific gravity">
-				description = <"Specific gravity is measuring the concentration of solutes in the urine relative to distilled water.">
+				text = <"Specific gravity (synthesised)">
+				description = <"Specific gravity is measuring the concentration of solutes in the urine relative to distilled water. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Blood">
-				description = <"Detection of blood in urine sample.">
+				text = <"Blood (synthesised)">
+				description = <"Detection of blood in urine sample. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"pH">
-				description = <"Record pH from urinalysis (range 5.0-10.0).">
+				text = <"pH (synthesised)">
+				description = <"Record pH from urinalysis (range 5.0-10.0). (synthesised)">
 			>
 			["ac8"] = <
-				text = <"Urobilinogen">
-				description = <"Detection of urobilinogen in urine sample.">
+				text = <"Urobilinogen (synthesised)">
+				description = <"Detection of urobilinogen in urine sample. (synthesised)">
 			>
 			["ac9"] = <
-				text = <"Nitrite">
-				description = <"Detection of nitrites in urine sample.">
+				text = <"Nitrite (synthesised)">
+				description = <"Detection of nitrites in urine sample. (synthesised)">
 			>
 			["ac10"] = <
-				text = <"Leukocytes">
-				description = <"Detection of white blood cells in the urine.">
+				text = <"Leukocytes (synthesised)">
+				description = <"Detection of white blood cells in the urine. (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -846,44 +846,44 @@ terminology
 				description = <"الجهيزة/طريقة الاختبار المستخدمة.">
 			>
 			["ac1"] = <
-				text = <"*Glucose(en)">
-				description = <"*Detection of glucose in urine sample.(en)">
+				text = <"نتيجة اختبار سكر العنب - الغلوكوز (synthesised)">
+				description = <"اكتشاف سكر العنب في عينة البول (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Protein(en)">
-				description = <"*Detection of protein in urine sample.(en)">
+				text = <"نتيجة اختبار البوتينات (synthesised)">
+				description = <"اكتشاف البروتين في عينة البول (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Bilirubin(en)">
-				description = <"*Detection of bilirubin in urine sample.(en)">
+				text = <"بيليروبين (synthesised)">
+				description = <"اكتشاف البيليروبين في عينة البول (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Ketones(en)">
-				description = <"*Detection of ketones in urine sample.(en)">
+				text = <"الكيتونات (synthesised)">
+				description = <"اكتشاف الكيتونات في عينة البول (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Specific gravity(en)">
-				description = <"*Specific gravity is measuring the concentration of solutes in the urine relative to distilled water.(en)">
+				text = <"الثقل النوعي (synthesised)">
+				description = <"الثقل النوعي هو قياس الذائبات (المُذابات) في البول نسبة إلى الماء المقطر (synthesised)">
 			>
 			["ac6"] = <
-				text = <"*Blood(en)">
-				description = <"*Detection of blood in urine sample.(en)">
+				text = <"الدم (synthesised)">
+				description = <"اكتشاف الدم في عينة البول (synthesised)">
 			>
 			["ac7"] = <
-				text = <"*pH(en)">
-				description = <"*Record pH from urinalysis (range 5.0-10.0).(en)">
+				text = <"الرقم الهيدروجيني (synthesised)">
+				description = <"تسجيل الرقم الهيدروجيني من تحليل البول (مجال من 5.0 - 8.5 (synthesised)">
 			>
 			["ac8"] = <
-				text = <"*Urobilinogen(en)">
-				description = <"*Detection of urobilinogen in urine sample.(en)">
+				text = <"يوروبيلينوجين (synthesised)">
+				description = <"اكتشاف اليوروبيلينوجين في عينة الدم (synthesised)">
 			>
 			["ac9"] = <
-				text = <"*Nitrite(en)">
-				description = <"*Detection of nitrites in urine sample.(en)">
+				text = <"نِتريت (synthesised)">
+				description = <"اكتشاف النِّتريت في عينة البول (synthesised)">
 			>
 			["ac10"] = <
-				text = <"*Leukocytes(en)">
-				description = <"*Detection of white blood cells in the urine.(en)">
+				text = <"كُرَيَّة بيضاء (synthesised)">
+				description = <"اكتشاف خلايا الدم البيضاء في البول (synthesised)">
 			>
 		>
 	>

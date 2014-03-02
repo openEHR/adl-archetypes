@@ -50,7 +50,7 @@ definition
 		name matches {
 			DV_TEXT[id14] 
 			DV_CODED_TEXT[id15] matches {
-				defining_code matches {[ac1]}		-- *Meio de Comunicação eletrônica (synthesised)(pt-br)
+				defining_code matches {[ac1]}		-- Electronic address (synthesised)
 			}
 		}
 		details matches {
@@ -60,7 +60,7 @@ definition
 						value matches {
 							DV_TEXT[id16] 
 							DV_CODED_TEXT[id17] matches {
-								defining_code matches {[ac2]}		-- *Forma de utilização (synthesised)(pt-br)
+								defining_code matches {[ac2]}		-- Usage (synthesised)
 							}
 						}
 					}
@@ -68,7 +68,7 @@ definition
 						value matches {
 							DV_TEXT[id18] 
 							DV_CODED_TEXT[id19] matches {
-								defining_code matches {[ac3]}		-- *Horário de Utilização (synthesised)(pt-br)
+								defining_code matches {[ac3]}		-- Time preferences (synthesised)
 							}
 						}
 					}
@@ -277,16 +277,16 @@ terminology
 				description = <"The medium should be used during the evening or at night.">
 			>
 			["ac1"] = <
-				text = <"*Meio de Comunicação eletrônica (synthesised)(pt-br)">
-				description = <"*Meio de comunicação eletrônica. (synthesised)(pt-br)">
+				text = <"Electronic address (synthesised)">
+				description = <"The address of an electronic communication medium. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Forma de utilização (synthesised)(pt-br)">
-				description = <"*Um código que representa a forma de uso que uma pessoa/organização faz deste meio de comunicação. (synthesised)(pt-br)">
+				text = <"Usage (synthesised)">
+				description = <"A code representing the manner of use that a person/organization applies to an electronic medium. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Horário de Utilização (synthesised)(pt-br)">
-				description = <"*Uma indicação das preferências de horário de uso para este tipo de contato. (synthesised)(pt-br)">
+				text = <"Time preferences (synthesised)">
+				description = <"An indication of the time of day preference for use of this electronic contact address. (synthesised)">
 			>
 		>
 	>

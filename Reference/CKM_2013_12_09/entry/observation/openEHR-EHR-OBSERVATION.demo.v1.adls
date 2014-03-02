@@ -459,18 +459,6 @@ terminology
 				text = <"SubsetB">
 				description = <"XYZ codes from Terminology 123">
 			>
-			["ac5"] = <
-				text = <"Text That Uses Internal Codes (synthesised)">
-				description = <"Text data type which can use an internal vocabulary.  Each of these 'internal codes' can be bound to a terminology code. (synthesised)">
-			>
-			["ac6"] = <
-				text = <"Boolean (synthesised)">
-				description = <"Boolean datatype that allows for true or false answers. (synthesised)">
-			>
-			["ac7"] = <
-				text = <"Multimedia (synthesised)">
-				description = <"Multimedia datatypes allow for the recording of many types of multimedia files to be captured.  All available types have been explicitly selected in this example. (synthesised)">
-			>
 			["at45"] = <
 				text = <"Length">
 				description = <"Length">
@@ -679,9 +667,21 @@ terminology
 				text = <"application/dicom">
 				description = <"application/dicom">
 			>
+			["ac5"] = <
+				text = <"Text That Uses Internal Codes (synthesised)">
+				description = <"Text data type which can use an internal vocabulary.  Each of these 'internal codes' can be bound to a terminology code. (synthesised)">
+			>
+			["ac6"] = <
+				text = <"Boolean (synthesised)">
+				description = <"Boolean datatype that allows for true or false answers. (synthesised)">
+			>
+			["ac7"] = <
+				text = <"Multimedia (synthesised)">
+				description = <"Multimedia datatypes allow for the recording of many types of multimedia files to be captured.  All available types have been explicitly selected in this example. (synthesised)">
+			>
 			["ac8"] = <
-				text = <"Ordinal">
-				description = <"Ordinal datatypes pair a number and text - in this way scores can be calculated in software, or progression can be assessed eg if used in a pain score.">
+				text = <"Ordinal (synthesised)">
+				description = <"Ordinal datatypes pair a number and text - in this way scores can be calculated in software, or progression can be assessed eg if used in a pain score. (synthesised)">
 			>
 		>
 		["pt-br"] = <
@@ -852,18 +852,6 @@ terminology
 			["ac4"] = <
 				text = <"SubconjuntoB">
 				description = <"Códigos XYZ da Terminologia 123">
-			>
-			["ac5"] = <
-				text = <"*Text That Uses Internal Codes (synthesised)(en)">
-				description = <"*Text data type which can use an internal vocabulary.  Each of these 'internal codes' can be bound to a terminology code. (synthesised)(en)">
-			>
-			["ac6"] = <
-				text = <"*Boolean (synthesised)(en)">
-				description = <"*Boolean datatype that allows for true or false answers. (synthesised)(en)">
-			>
-			["ac7"] = <
-				text = <"*Multimedia (synthesised)(en)">
-				description = <"*Multimedia datatypes allow for the recording of many types of multimedia files to be captured.  All available types have been explicitly selected in this example. (synthesised)(en)">
 			>
 			["at45"] = <
 				text = <"*Length (en)">
@@ -1073,9 +1061,21 @@ terminology
 				text = <"*application/dicom (en)">
 				description = <"*application/dicom (en)">
 			>
+			["ac5"] = <
+				text = <"Texto Que Usa Códigos Internos (synthesised)">
+				description = <"Tipo de dados  Texto que pode usar um vocabulário interno. Cada um desses ' códigos internos' pode ser vnculado a um código de uma terminologia. (synthesised)">
+			>
+			["ac6"] = <
+				text = <"Booleano (synthesised)">
+				description = <"Tipo de dado  Booleano que permite repostas do tipo falso ou verdadeiro. (synthesised)">
+			>
+			["ac7"] = <
+				text = <"Multimídia (synthesised)">
+				description = <"Tipos de dado Multimídia permitem o registro de vários tipos de arquivos multimídia. Todos os tipos disponíveis foram explicitamente selecionados neste exemplo. (synthesised)">
+			>
 			["ac8"] = <
-				text = <"*Ordinal(en)">
-				description = <"*Ordinal datatypes pair a number and text - in this way scores can be calculated in software, or progression can be assessed eg if used in a pain score.(en)">
+				text = <"Ordinal (synthesised)">
+				description = <"Tipos de dados Ordinal pareiam um número e texto- deste modo  pode ser calculada uma pontuação pela  aplicação a progressão ser avaliada, como por exemplo se está se utilizando de uma escala de avaliação de dor. (synthesised)">
 			>
 		>
 	>

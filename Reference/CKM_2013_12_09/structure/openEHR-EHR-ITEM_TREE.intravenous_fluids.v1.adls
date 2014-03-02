@@ -191,14 +191,6 @@ terminology
 				text = <"Startanweisung">
 				description = <"*">
 			>
-			["ac1"] = <
-				text = <"*Route (synthesised)(en)">
-				description = <"*Route of administration (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Form of therapy (synthesised)(en)">
-				description = <"** (synthesised)(en)">
-			>
 			["at22"] = <
 				text = <"*Volume (en)">
 				description = <"*Volume (en)">
@@ -206,6 +198,14 @@ terminology
 			["at23"] = <
 				text = <"*Flow rate, volume (en)">
 				description = <"*Flow rate, volume (en)">
+			>
+			["ac1"] = <
+				text = <"Weg (synthesised)">
+				description = <"Weg der Verabreichung (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Therapieform (synthesised)">
+				description = <"* (synthesised)">
 			>
 		>
 		["en"] = <
@@ -285,14 +285,6 @@ terminology
 				text = <"Commencement instruction">
 				description = <"*">
 			>
-			["ac1"] = <
-				text = <"Route (synthesised)">
-				description = <"Route of administration (synthesised)">
-			>
-			["ac2"] = <
-				text = <"Form of therapy (synthesised)">
-				description = <"* (synthesised)">
-			>
 			["at22"] = <
 				text = <"Volume">
 				description = <"Volume">
@@ -300,6 +292,14 @@ terminology
 			["at23"] = <
 				text = <"Flow rate, volume">
 				description = <"Flow rate, volume">
+			>
+			["ac1"] = <
+				text = <"Route (synthesised)">
+				description = <"Route of administration (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Form of therapy (synthesised)">
+				description = <"* (synthesised)">
 			>
 		>
 	>

@@ -286,56 +286,56 @@ terminology
 				description = <"تمت إعادة تحديد الموعد خلال متابعة نشطة">
 			>
 			["at2"] = <
-				text = <"*Planned(en)">
-				description = <"*The follow up is planned.(en)">
+				text = <"مخطَّط">
+				description = <"تم التخطيط للمتابعة">
 			>
 			["at3"] = <
-				text = <"*Postponed(en)">
-				description = <"*Follow up still required but requires intervention.(en)">
+				text = <"تم التأجيل">
+				description = <"لا تزال المتابعة مطلوبة و لكنه يحتاج إلى تدخل/مداخلة">
 			>
 			["at8"] = <
-				text = <"*Cancelled(en)">
-				description = <"*Follow up has not begun and is no longer required.(en)">
+				text = <"تم الإلغاء">
+				description = <"لم تبدأ المتابعة و لكنها لم تعد مطلوبة">
 			>
 			["at4"] = <
-				text = <"*Scheduled(en)">
-				description = <"*The follow up is scheduled.(en)">
+				text = <"تم تحديد الموعد">
+				description = <"تم تحديد موعد المتابعة">
 			>
 			["at5"] = <
-				text = <"*Rescheduled(en)">
-				description = <"*The follow up has been rescheduled.(en)">
+				text = <"تم إعادة تحديد الموعد">
+				description = <"تم إعادة تحديد الموعد">
 			>
 			["at6"] = <
-				text = <"*Attended(en)">
-				description = <"*A follow up visit has occurred.(en)">
+				text = <"تم الحضور">
+				description = <"حدثت زيارة المتابعة بالفعل">
 			>
 			["at9"] = <
-				text = <"*Patient contacted(en)">
-				description = <"*Patient has been contacted regarding follow-up.(en)">
+				text = <"تم تواصل المريض">
+				description = <"تم تواصل المريض فيما بتعلق بالمتابعة">
 			>
 			["at10"] = <
-				text = <"*Reviewed(en)">
-				description = <"*Follow up has been reviewed.(en)">
+				text = <"تمت المراجعة">
+				description = <"تم مراجعة المتابعة">
 			>
 			["at13"] = <
-				text = <"*Did not attend(en)">
-				description = <"*The patient did not attend.(en)">
+				text = <"لم يتم الحضور">
+				description = <"لم يحضر المريض">
 			>
 			["at14"] = <
-				text = <"*Rescheduled(en)">
-				description = <"*An appointment has been resceduled during active follow up.(en)">
+				text = <"تمت إعادة تحديد الموعد">
+				description = <"تمت إعادة تحديد الموعد خلال متابعة نشطة">
 			>
 			["at7"] = <
-				text = <"*Suspended(en)">
-				description = <"*No further follow up until intervention.(en)">
+				text = <"تم التعليق/الإيقاف المؤقت">
+				description = <"لن يتم المزيد من المتابعة حتى يحدث التدخل/المداخلة">
 			>
 			["at11"] = <
-				text = <"*Ceased(en)">
-				description = <"*Follow up was commenced by has been ceased.(en)">
+				text = <"تم التوقف">
+				description = <"تم البدء بالمتابعة ثم تم إيقافها">
 			>
 			["at12"] = <
-				text = <"*Completed(en)">
-				description = <"*Follow up process has been completed.(en)">
+				text = <"اكتمل">
+				description = <"تم اكتمال عملية المتابعة">
 			>
 			["at15"] = <
 				text = <"*initial (en)">
@@ -570,56 +570,56 @@ terminology
 				description = <"Un turno ha sido reprogramado durante un seguimiento clínico activo">
 			>
 			["at2"] = <
-				text = <"*Planned(en)">
-				description = <"*The follow up is planned.(en)">
+				text = <"Planeada">
+				description = <"El seguimiento clínico esta planeado">
 			>
 			["at3"] = <
-				text = <"*Postponed(en)">
-				description = <"*Follow up still required but requires intervention.(en)">
+				text = <"Pospuesto">
+				description = <"El seguimiento clínico aún es requerido pero requiere intervención">
 			>
 			["at8"] = <
-				text = <"*Cancelled(en)">
-				description = <"*Follow up has not begun and is no longer required.(en)">
+				text = <"Cancelado">
+				description = <"El seguimiento clínico no comenzó aún y ya no es requerido">
 			>
 			["at4"] = <
-				text = <"*Scheduled(en)">
-				description = <"*The follow up is scheduled.(en)">
+				text = <"Programado">
+				description = <"El seguimiento clínico está programado">
 			>
 			["at5"] = <
-				text = <"*Rescheduled(en)">
-				description = <"*The follow up has been rescheduled.(en)">
+				text = <"Reprogramado">
+				description = <"El seguimiento clínico ha sido reprogramado">
 			>
 			["at6"] = <
-				text = <"*Attended(en)">
-				description = <"*A follow up visit has occurred.(en)">
+				text = <"Atendido">
+				description = <"Una visita de seguimiento clínico ha ocurrido">
 			>
 			["at9"] = <
-				text = <"*Patient contacted(en)">
-				description = <"*Patient has been contacted regarding follow-up.(en)">
+				text = <"Paciente contactado">
+				description = <"El paciente ha sido contactado en relación al seguimiento clínico ">
 			>
 			["at10"] = <
-				text = <"*Reviewed(en)">
-				description = <"*Follow up has been reviewed.(en)">
+				text = <"Revisado">
+				description = <"El seguimiento clínico ha sido revisado">
 			>
 			["at13"] = <
-				text = <"*Did not attend(en)">
-				description = <"*The patient did not attend.(en)">
+				text = <"No asistió">
+				description = <"El paciente no asistió">
 			>
 			["at14"] = <
-				text = <"*Rescheduled(en)">
-				description = <"*An appointment has been resceduled during active follow up.(en)">
+				text = <"Reprogramado">
+				description = <"Un turno ha sido reprogramado durante un seguimiento clínico activo">
 			>
 			["at7"] = <
-				text = <"*Suspended(en)">
-				description = <"*No further follow up until intervention.(en)">
+				text = <"Suspendido">
+				description = <"No se realizarán mas el seguimiento clínico">
 			>
 			["at11"] = <
-				text = <"*Ceased(en)">
-				description = <"*Follow up was commenced by has been ceased.(en)">
+				text = <"Interrumpido">
+				description = <"El seguimiento clínico ha sido interrumpido">
 			>
 			["at12"] = <
-				text = <"*Completed(en)">
-				description = <"*Follow up process has been completed.(en)">
+				text = <"Completado">
+				description = <"El seguimiento clínico ha sido completado">
 			>
 			["at15"] = <
 				text = <"*initial (en)">

@@ -84,8 +84,8 @@ terminology
 				description = <"Bottom of the retraction pocket can be seen only by using an endoscope.">
 			>
 			["ac1"] = <
-				text = <"Tos Classification">
-				description = <"Grading of the degree of tympanic membrane pars tensa retraction / atelectasis based on the Tos & Poulson Classification.">
+				text = <"Tos Classification (synthesised)">
+				description = <"Grading of the degree of tympanic membrane pars tensa retraction / atelectasis based on the Tos & Poulson Classification. (synthesised)">
 			>
 		>
 	>

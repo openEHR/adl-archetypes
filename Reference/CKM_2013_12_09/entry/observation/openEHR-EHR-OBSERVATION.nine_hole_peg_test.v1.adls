@@ -148,7 +148,7 @@ definition
 					ELEMENT[id84] occurrences matches {0..1} matches {	-- Dominant Hand
 						value matches {
 							DV_CODED_TEXT[id103] matches {
-								defining_code matches {[ac1]}		-- *Dominante Hand (synthesised)(de)
+								defining_code matches {[ac1]}		-- Dominant Hand (synthesised)
 							}
 						}
 					}
@@ -360,8 +360,8 @@ terminology
 				description = <"If multiple attempts were needed to complete the trials, please specify reasons.">
 			>
 			["ac1"] = <
-				text = <"*Dominante Hand (synthesised)(de)">
-				description = <"*Angabe der dominanten Hand (wenn der Proband beide Hände gleichrangig verwendet, die Hand die zum Schreiben bevorzugt wird). (synthesised)(de)">
+				text = <"Dominant Hand (synthesised)">
+				description = <"Indication of the dominant hand (if the subject uses both hands equally, the hand that is prefered for writing). (synthesised)">
 			>
 		>
 	>

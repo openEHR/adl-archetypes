@@ -128,8 +128,8 @@ terminology
 				description = <"The body location.">
 			>
 			["ac1"] = <
-				text = <"Staging">
-				description = <"Staging of the clubbing process.">
+				text = <"Staging (synthesised)">
+				description = <"Staging of the clubbing process. (synthesised)">
 			>
 		>
 	>

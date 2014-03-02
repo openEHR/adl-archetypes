@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4)
 	openEHR-EHR-CLUSTER.inspection-skin-scalp.v1
 specialise
 	openEHR-EHR-CLUSTER.inspection-skin.v1
@@ -47,7 +47,7 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			CLUSTER[at0006] occurrences matches {0..*} matches {	-- Skin Findings
+			CLUSTER[at0006] matches {	-- Skin Findings
 				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0.52] occurrences matches {0..1} matches {	-- Method
 						value matches {

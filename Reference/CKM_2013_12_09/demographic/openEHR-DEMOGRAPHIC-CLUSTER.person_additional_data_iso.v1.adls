@@ -141,8 +141,8 @@ terminology
 				description = <"is not to be used on primary collection forms. It is primarily for use in administrative collections when transferring data from data sets where the item has not been collected.">
 			>
 			["ac1"] = <
-				text = <"*sexo (synthesised)(pt-br)">
-				description = <"*sexo da pessoa (synthesised)(pt-br)">
+				text = <"Sex (synthesised)">
+				description = <"The sex of the subject. (synthesised)">
 			>
 		>
 	>

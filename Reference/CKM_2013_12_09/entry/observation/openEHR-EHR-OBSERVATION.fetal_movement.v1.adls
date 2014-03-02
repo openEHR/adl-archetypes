@@ -179,6 +179,10 @@ terminology
 				text = <"Description">
 				description = <"Narrative description of the fetal movements as noted by the mother.">
 			>
+			["at26"] = <
+				text = <"total">
+				description = <"total">
+			>
 			["ac1"] = <
 				text = <"Presence (synthesised)">
 				description = <"Presence of spontaneous fetal movements. (synthesised)">
@@ -186,10 +190,6 @@ terminology
 			["ac2"] = <
 				text = <"Pattern (synthesised)">
 				description = <"Pattern of spontaneous fetal movements. (synthesised)">
-			>
-			["at26"] = <
-				text = <"total">
-				description = <"total">
 			>
 		>
 		["es-cl"] = <
@@ -246,17 +246,17 @@ terminology
 				text = <"*Description(en)">
 				description = <"*Narrative description of the fetal movements as noted by the mother.(en)">
 			>
-			["ac1"] = <
-				text = <"*Presence (synthesised)(en)">
-				description = <"*Presence of spontaneous fetal movements. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Pattern (synthesised)(en)">
-				description = <"*Pattern of spontaneous fetal movements. (synthesised)(en)">
-			>
 			["at26"] = <
 				text = <"*total (en)">
 				description = <"*total (en)">
+			>
+			["ac1"] = <
+				text = <"Presencia (synthesised)">
+				description = <"La presencia de  movimientos espontáneos (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Patrón (synthesised)">
+				description = <"Patrón de movimientos fetales (synthesised)">
 			>
 		>
 	>

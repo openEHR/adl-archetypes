@@ -560,32 +560,32 @@ terminology
 				description = <"*The site on the body where the symptom was located.(en)">
 			>
 			["ac1"] = <
-				text = <"*Variation (synthesised)(en)">
-				description = <"*The variation of the symptom. (synthesised)(en)">
+				text = <"التنوع (synthesised)">
+				description = <"تنوع العرض (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Onset Type (synthesised)(en)">
-				description = <"*The nature of the onset of the symptom. (synthesised)(en)">
+				text = <"نوع بداية الإصابة (synthesised)">
+				description = <"طبيعة بداية الإصابة بالعرض (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Progression (synthesised)(en)">
-				description = <"*The progress of the symptom relative to the past. (synthesised)(en)">
+				text = <"التقدم (synthesised)">
+				description = <"تقدم العرض مقارنة بالماضي (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Cessation (synthesised)(en)">
-				description = <"*The nature of the cessation of the symptom. (synthesised)(en)">
+				text = <"التوقف التام (synthesised)">
+				description = <"طبيعة توقف هذا العرض (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Impact(en)">
-				description = <"*The severity of the symptom in its impact on daily living.(en)">
+				text = <"*Impact(en) (synthesised)">
+				description = <"*The severity of the symptom in its impact on daily living.(en) (synthesised)">
 			>
 			["ac6"] = <
-				text = <"*Degree(en)">
-				description = <"*The degree the symptom is bothering the patient.(en)">
+				text = <"الدرجة (synthesised)">
+				description = <"الدرجة التي يسبب فيها العرَض إزعاجا للمريض (synthesised)">
 			>
 			["ac7"] = <
-				text = <"*Change(en)">
-				description = <"*An event or activity that makes the symptom worse.(en)">
+				text = <"التغيير (synthesised)">
+				description = <"واقعة أو نشاط يؤدي إلى زيادة سوء حالة العرض (synthesised)">
 			>
 		>
 		["de"] = <
@@ -846,32 +846,32 @@ terminology
 				description = <"*The site on the body where the symptom was located.(en)">
 			>
 			["ac1"] = <
-				text = <"*Variation (synthesised)(en)">
-				description = <"*The variation of the symptom. (synthesised)(en)">
+				text = <"Variation (synthesised)">
+				description = <"die Variationen des Symptoms (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Onset Type (synthesised)(en)">
-				description = <"*The nature of the onset of the symptom. (synthesised)(en)">
+				text = <"Art des Eintretens (synthesised)">
+				description = <"die Art des Eintretens des Symptoms (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Progression (synthesised)(en)">
-				description = <"*The progress of the symptom relative to the past. (synthesised)(en)">
+				text = <"Entwicklung (synthesised)">
+				description = <"die Entwicklung des Symptoms im Hinblick auf die Vergangenheit (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Cessation (synthesised)(en)">
-				description = <"*The nature of the cessation of the symptom. (synthesised)(en)">
+				text = <"Ende (synthesised)">
+				description = <"die Art des Abklingens des Symptoms (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Impact(en)">
-				description = <"*The severity of the symptom in its impact on daily living.(en)">
+				text = <"*Impact(en) (synthesised)">
+				description = <"*The severity of the symptom in its impact on daily living.(en) (synthesised)">
 			>
 			["ac6"] = <
-				text = <"*Degree(en)">
-				description = <"*The degree the symptom is bothering the patient.(en)">
+				text = <"Grad (synthesised)">
+				description = <"der Grad der Beeinträchtigung des Patienten durch das Symptom (synthesised)">
 			>
 			["ac7"] = <
-				text = <"*Change(en)">
-				description = <"*An event or activity that makes the symptom worse.(en)">
+				text = <"Erschwerender Faktor (synthesised)">
+				description = <"ein Ereignis oder eine Handlung, die das Symptom verschlimmern (synthesised)">
 			>
 		>
 		["en"] = <
@@ -1148,16 +1148,16 @@ terminology
 				description = <"The nature of the cessation of the symptom. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Impact">
-				description = <"The severity of the symptom in its impact on daily living.">
+				text = <"Impact (synthesised)">
+				description = <"The severity of the symptom in its impact on daily living. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Degree">
-				description = <"The degree the symptom is bothering the patient.">
+				text = <"Degree (synthesised)">
+				description = <"The degree the symptom is bothering the patient. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Change">
-				description = <"An event or activity that makes the symptom worse.">
+				text = <"Change (synthesised)">
+				description = <"An event or activity that makes the symptom worse. (synthesised)">
 			>
 		>
 	>

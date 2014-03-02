@@ -337,52 +337,52 @@ terminology
 				description = <"Einzelheiten der Verabreichung.">
 			>
 			["at3"] = <
-				text = <"*Planned(en)">
-				description = <"*Transfusion has been planned.(en)">
+				text = <"Geplant">
+				description = <"Die Transfusion wurde geplant.">
 			>
 			["at5"] = <
-				text = <"*Prepared (Matching)(en)">
-				description = <"*Blood sent for testing appropriate blood products.(en)">
+				text = <"Vorbereitet (Probe)">
+				description = <"Blut wurde zum Testen geeigneter Blutprodukte gesendet.">
 			>
 			["at13"] = <
-				text = <"*Consent obtained(en)">
-				description = <"*Consent for the transfusion has been obtained.(en)">
+				text = <"Einwilligung eingeholt">
+				description = <"Einwilligung zur Transfusion wurde eingeholt.">
 			>
 			["at6"] = <
-				text = <"*Postponed(en)">
-				description = <"*Transfusion has been postponed.(en)">
+				text = <"Verschoben">
+				description = <"Die Transfusion wurde verschoben.">
 			>
 			["at7"] = <
-				text = <"*Cancelled(en)">
-				description = <"*The transfusion has been cancelled as no longer appropriate or required.(en)">
+				text = <"Abgebrochen">
+				description = <"Die Transfusion wurde abgebrochen, weil sie nicht weiter erforderlich oder angebracht ist.">
 			>
 			["at4"] = <
-				text = <"*Blood products ordered(en)">
-				description = <"*The blood products have been ordered.(en)">
+				text = <"Blutprodukte bestellt">
+				description = <"Die Blutprodukte wurde bestellt.">
 			>
 			["at8"] = <
-				text = <"*Blood and patient identification checked(en)">
-				description = <"*The transfusion product identification and patient identification have been matched.(en)">
+				text = <"Blut- und Patientenidentifikation überprüft">
+				description = <"Die Identifikation des Transfusionsproduktes und des Patienten wurden auf Übereinstimmung kontrolliert.">
 			>
 			["at9"] = <
-				text = <"*Transfusion unit commenced(en)">
-				description = <"*Transfusion has begun on a unit of blood product.(en)">
+				text = <"Transfusionseinheit begonnen">
+				description = <"Die Transfusion wurde mit einer Einheit Blutprodukt begonnen.">
 			>
 			["at14"] = <
-				text = <"*Transfusion unit completed(en)">
-				description = <"*A unit of blood product has been transfused.(en)">
+				text = <"Transfusionseinheit beendet">
+				description = <"Eine Einheit Blutprodukt wurde transfundiert.">
 			>
 			["at10"] = <
-				text = <"*Transfusion suspended(en)">
-				description = <"*The transfusion has been suspended and may restart.(en)">
+				text = <"Transfusion ausgesetzt">
+				description = <"Die Transfusion wurde ausgesetzt und kann neu begonnen werden.">
 			>
 			["at11"] = <
-				text = <"*Transfusion stopped(en)">
-				description = <"*Transfusion has been ceased and will not continue.(en)">
+				text = <"Transfusion gestoppt">
+				description = <"Die Transfusion wurde gestoppt und wird nicht fortgesetzt.">
 			>
 			["at12"] = <
-				text = <"*Transfusion has been completed(en)">
-				description = <"*The transfusion has been completed.(en)">
+				text = <"Transfusion wurde beendet">
+				description = <"Die Transfusion wurde beendet.">
 			>
 			["at15"] = <
 				text = <"*initial (en)">

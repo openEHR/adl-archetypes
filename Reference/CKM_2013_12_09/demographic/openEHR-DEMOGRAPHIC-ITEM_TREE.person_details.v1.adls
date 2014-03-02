@@ -805,20 +805,20 @@ terminology
 				description = <"Valid codes for the biometric localization">
 			>
 			["ac10"] = <
-				text = <"*sexo (synthesised)(pt-br)">
-				description = <"*sexo da pessoa (synthesised)(pt-br)">
+				text = <"Sex (synthesised)">
+				description = <"The sex of the subject. (synthesised)">
 			>
 			["ac11"] = <
-				text = <"*Fonte da notificação (synthesised)(pt-br)">
-				description = <"*Um código que informa sobre a fonte de notificação do óbito. Este campo fornece uma indicação da confiabilidade da informação (synthesised)(pt-br)">
+				text = <"Source of notification (synthesised)">
+				description = <"Indicates the source of information about a subject of care’s death. This field provides an indication of the certainty of the information (synthesised)">
 			>
 			["ac12"] = <
-				text = <"*Tipo (synthesised)(pt-br)">
-				description = <"*Tipo do identificador biométrico (synthesised)(pt-br)">
+				text = <"Type of biometric (synthesised)">
+				description = <"Identification of the type of biometric identifier described by this set of data (synthesised)">
 			>
 			["ac13"] = <
-				text = <"*Gênero (synthesised)(pt-br)">
-				description = <"*O gênero da pessoa (synthesised)(pt-br)">
+				text = <"Gender (synthesised)">
+				description = <"The gender of the subject (synthesised)">
 			>
 		>
 	>

@@ -227,12 +227,12 @@ terminology
 				description = <"Befunde bezüglich der Wirbelsäule">
 			>
 			["ac1"] = <
-				text = <"*System (synthesised)(en)">
-				description = <"*Findings relating to different body systems. (synthesised)(en)">
+				text = <"System (synthesised)">
+				description = <"Befunde bezüglich verschiedener Körpersysteme (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Organ (synthesised)(en)">
-				description = <"*Findings relating to biopsies of individual organs. (synthesised)(en)">
+				text = <"Organ (synthesised)">
+				description = <"Befund bezüglich der Biopsie einzelner Organe (synthesised)">
 			>
 		>
 		["ru"] = <
@@ -349,12 +349,12 @@ terminology
 				description = <"Заключение относительно позвоночника(ru)">
 			>
 			["ac1"] = <
-				text = <"*System (synthesised)(en)">
-				description = <"*Findings relating to different body systems. (synthesised)(en)">
+				text = <"Система (synthesised)">
+				description = <"Заключение по системе органов. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Organ (synthesised)(en)">
-				description = <"*Findings relating to biopsies of individual organs. (synthesised)(en)">
+				text = <"Орган (synthesised)">
+				description = <"Заключение биопсии отдельных органов. (synthesised)">
 			>
 		>
 		["en"] = <

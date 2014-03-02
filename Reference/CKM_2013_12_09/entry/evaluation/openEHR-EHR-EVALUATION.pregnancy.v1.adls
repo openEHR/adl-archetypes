@@ -854,45 +854,45 @@ terminology
 				text = <"مدة المرحلة الثانية">
 				description = <"*">
 			>
-			["ac1"] = <
-				text = <"*Maternity states (synthesised)(en)">
-				description = <"*The state of this pregnancy enabling computational decision support. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Type (synthesised)(en)">
-				description = <"*Type of onset. (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Type (synthesised)(en)">
-				description = <"*The type of amniotic membrane rupture. (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Outcome (synthesised)(en)">
-				description = <"*The outcome of the pregnancy. (synthesised)(en)">
-			>
-			["ac5"] = <
-				text = <"*Gender (synthesised)(en)">
-				description = <"*The gender of the offspring. (synthesised)(en)">
-			>
-			["ac6"] = <
-				text = <"*Mode of birth (synthesised)(en)">
-				description = <"*The means by which the baby was born. (synthesised)(en)">
-			>
-			["ac7"] = <
-				text = <"*Presenting part at birth (synthesised)(en)">
-				description = <"*The presenting part at birth. (synthesised)(en)">
-			>
-			["ac8"] = <
-				text = <"*Type (synthesised)(en)">
-				description = <"*Type of intervention. (synthesised)(en)">
-			>
-			["ac9"] = <
-				text = <"*Status (synthesised)(en)">
-				description = <"*The nature of the intervention. (synthesised)(en)">
-			>
 			["at104"] = <
 				text = <"*Mass (en)">
 				description = <"*Mass (en)">
+			>
+			["ac1"] = <
+				text = <"حالات الأمومة (synthesised)">
+				description = <"حالة هذا الحمل و التي تُمَكِّن من دعم القرار المُحَوْسَب (synthesised)">
+			>
+			["ac2"] = <
+				text = <"النمط (synthesised)">
+				description = <"نمط البداية (synthesised)">
+			>
+			["ac3"] = <
+				text = <"النمط (synthesised)">
+				description = <"نمط تمزق الغشاء السَّلَوي (synthesised)">
+			>
+			["ac4"] = <
+				text = <"الناتج (synthesised)">
+				description = <"ناتج الحمل (synthesised)">
+			>
+			["ac5"] = <
+				text = <"النوع/الجنس (synthesised)">
+				description = <"نوع/جنس النسل (synthesised)">
+			>
+			["ac6"] = <
+				text = <"طريقة الوضع/الولادة (synthesised)">
+				description = <"الوسيلة التي تم من خلالها ولادة/وضع الطفل (synthesised)">
+			>
+			["ac7"] = <
+				text = <"الجزء الجليّ عند الولادة/الوضع (synthesised)">
+				description = <"* (synthesised)">
+			>
+			["ac8"] = <
+				text = <"النمط (synthesised)">
+				description = <"نمط التدخل/المداخلة (synthesised)">
+			>
+			["ac9"] = <
+				text = <"الحالة (synthesised)">
+				description = <"طبيعة التدخل/المداخلة (synthesised)">
 			>
 		>
 		["de"] = <
@@ -1312,45 +1312,45 @@ terminology
 				text = <"Dauer der Eröffnungswehen">
 				description = <"*">
 			>
-			["ac1"] = <
-				text = <"*Maternity states (synthesised)(en)">
-				description = <"*The state of this pregnancy enabling computational decision support. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Type (synthesised)(en)">
-				description = <"*Type of onset. (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Type (synthesised)(en)">
-				description = <"*The type of amniotic membrane rupture. (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Outcome (synthesised)(en)">
-				description = <"*The outcome of the pregnancy. (synthesised)(en)">
-			>
-			["ac5"] = <
-				text = <"*Gender (synthesised)(en)">
-				description = <"*The gender of the offspring. (synthesised)(en)">
-			>
-			["ac6"] = <
-				text = <"*Mode of birth (synthesised)(en)">
-				description = <"*The means by which the baby was born. (synthesised)(en)">
-			>
-			["ac7"] = <
-				text = <"*Presenting part at birth (synthesised)(en)">
-				description = <"*The presenting part at birth. (synthesised)(en)">
-			>
-			["ac8"] = <
-				text = <"*Type (synthesised)(en)">
-				description = <"*Type of intervention. (synthesised)(en)">
-			>
-			["ac9"] = <
-				text = <"*Status (synthesised)(en)">
-				description = <"*The nature of the intervention. (synthesised)(en)">
-			>
 			["at104"] = <
 				text = <"*Mass (en)">
 				description = <"*Mass (en)">
+			>
+			["ac1"] = <
+				text = <"Schwangerschafts-Status (synthesised)">
+				description = <"Der Status diese Schwangerschaft, ermöglicht  rechnerunterstützte Entscheidungen (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Art (synthesised)">
+				description = <"Art des Beginns (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Art (synthesised)">
+				description = <"Die Art des Fruchtwassers (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Ausgang (synthesised)">
+				description = <"Der Ausgang der Schwangerschaft (synthesised)">
+			>
+			["ac5"] = <
+				text = <"Geschlecht (synthesised)">
+				description = <"Das Geschlecht des Nachkömmlings (synthesised)">
+			>
+			["ac6"] = <
+				text = <"Geburtsmodus (synthesised)">
+				description = <"Das bedeutet, wie das Baby geboren wurde (synthesised)">
+			>
+			["ac7"] = <
+				text = <"Zu sehender Teil bei der Geburt (synthesised)">
+				description = <"* (synthesised)">
+			>
+			["ac8"] = <
+				text = <"Art (synthesised)">
+				description = <"Art des Eingriffs (synthesised)">
+			>
+			["ac9"] = <
+				text = <"Status (synthesised)">
+				description = <"Die Art des Eingriffs (synthesised)">
 			>
 		>
 		["en"] = <
@@ -1770,6 +1770,10 @@ terminology
 				text = <"Duration of second stage">
 				description = <"The duration of the second stage of labour.">
 			>
+			["at104"] = <
+				text = <"Mass">
+				description = <"Mass">
+			>
 			["ac1"] = <
 				text = <"Maternity states (synthesised)">
 				description = <"The state of this pregnancy enabling computational decision support. (synthesised)">
@@ -1805,10 +1809,6 @@ terminology
 			["ac9"] = <
 				text = <"Status (synthesised)">
 				description = <"The nature of the intervention. (synthesised)">
-			>
-			["at104"] = <
-				text = <"Mass">
-				description = <"Mass">
 			>
 		>
 	>

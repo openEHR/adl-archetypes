@@ -158,8 +158,8 @@ terminology
 				description = <"valid codes for countries.">
 			>
 			["ac5"] = <
-				text = <"*Área geografica (synthesised)(pt-br)">
-				description = <"*Indica a área geográfica onde o documento é váĺido. (synthesised)(pt-br)">
+				text = <"Geographic scope (synthesised)">
+				description = <"Indicates the geographic area within which the identifier is valid. (synthesised)">
 			>
 		>
 		["pt-br"] = <

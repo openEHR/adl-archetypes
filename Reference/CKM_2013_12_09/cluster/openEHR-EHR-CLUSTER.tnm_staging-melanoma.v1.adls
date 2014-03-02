@@ -50,22 +50,22 @@ definition
 		}
 		/items[id3]/items[id11]/value matches {
 			DV_CODED_TEXT[id41.1] matches {
-				defining_code matches {[ac0.4]}		-- Clinical staging (synthesised)
+				defining_code matches {[ac0.3]}		-- Clinical staging (synthesised)
 			}
 		}
 		/items[id7]/items[id8]/value matches {
 			DV_CODED_TEXT[id44.1] matches {
-				defining_code matches {[ac0.5]}		-- Primary tumour (pT) (synthesised)
+				defining_code matches {[ac0.4]}		-- Primary tumour (pT) (synthesised)
 			}
 		}
 		/items[id7]/items[id9]/value matches {
 			DV_CODED_TEXT[id45.1] matches {
-				defining_code matches {[ac0.6]}		-- Regional lymph node (pN) (synthesised)
+				defining_code matches {[ac0.5]}		-- Regional lymph node (pN) (synthesised)
 			}
 		}
 		/items[id7]/items[id10]/value matches {
 			DV_CODED_TEXT[id46.1] matches {
-				defining_code matches {[ac0.7]}		-- Distant metastasis (pM) (synthesised)
+				defining_code matches {[ac0.6]}		-- Distant metastasis (pM) (synthesised)
 			}
 		}
 		/items[id7]/items[id12]/value matches {
@@ -373,19 +373,19 @@ terminology
 				text = <"Distant metastasis (M) (synthesised)">
 				description = <"Clinical assessment of distant metastasis. (synthesised)">
 			>
-			["ac0.4"] = <
+			["ac0.3"] = <
 				text = <"Clinical staging (synthesised)">
 				description = <"The overall Clinical staging derived from each T, N and M component e.g T1aM0NX. May include additional TNM descriptors. (synthesised)">
 			>
-			["ac0.5"] = <
+			["ac0.4"] = <
 				text = <"Primary tumour (pT) (synthesised)">
 				description = <"Pathological assessment of the primary tumour. (synthesised)">
 			>
-			["ac0.6"] = <
+			["ac0.5"] = <
 				text = <"Regional lymph node (pN) (synthesised)">
 				description = <"Pathological assessment of the regional lymph nodes. (synthesised)">
 			>
-			["ac0.7"] = <
+			["ac0.6"] = <
 				text = <"Distant metastasis (pM) (synthesised)">
 				description = <"Pathological assessment of distant metastases. (synthesised)">
 			>
@@ -400,20 +400,20 @@ terminology
 			id = <"ac0.2">
 			members = <"at0.78", "at0.79", "at0.80", "at0.81", "at0.82", "at0.83">
 		>
+		["ac0.3"] = <
+			id = <"ac0.3">
+			members = <"at0.90", "at0.91", "at0.92", "at0.93", "at0.94", "at0.95", "at0.96", "at0.97", "at0.98", "at0.99", "at0.100", "at0.101">
+		>
 		["ac0.4"] = <
 			id = <"ac0.4">
-			members = <"at0.90", "at0.91", "at0.92", "at0.93", "at0.94", "at0.95", "at0.96", "at0.97", "at0.98", "at0.99", "at0.100", "at0.101">
+			members = <"at0.43", "at0.44", "at0.45", "at0.46", "at0.47", "at0.48", "at0.49", "at0.50", "at0.51", "at0.52", "at0.53", "at0.54", "at0.55", "at0.56", "at0.57">
 		>
 		["ac0.5"] = <
 			id = <"ac0.5">
-			members = <"at0.43", "at0.44", "at0.45", "at0.46", "at0.47", "at0.48", "at0.49", "at0.50", "at0.51", "at0.52", "at0.53", "at0.54", "at0.55", "at0.56", "at0.57">
+			members = <"at0.68", "at0.69", "at0.70", "at0.71", "at0.72", "at0.73", "at0.74", "at0.75", "at0.76", "at0.77">
 		>
 		["ac0.6"] = <
 			id = <"ac0.6">
-			members = <"at0.68", "at0.69", "at0.70", "at0.71", "at0.72", "at0.73", "at0.74", "at0.75", "at0.76", "at0.77">
-		>
-		["ac0.7"] = <
-			id = <"ac0.7">
 			members = <"at0.84", "at0.85", "at0.86", "at0.87", "at0.88", "at0.89">
 		>
 	>

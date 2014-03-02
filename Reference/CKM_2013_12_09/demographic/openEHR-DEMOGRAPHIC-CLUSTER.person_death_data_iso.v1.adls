@@ -148,8 +148,8 @@ terminology
 				description = <"Indicate that the notification source is unknown">
 			>
 			["ac1"] = <
-				text = <"*Fonte da notificação (synthesised)(pt-br)">
-				description = <"*Um código que informa sobre a fonte de notificação do óbito. Este campo fornece uma indicação da confiabilidade da informação (synthesised)(pt-br)">
+				text = <"Source of notification (synthesised)">
+				description = <"Indicates the source of information about a subject of care’s death. This field provides an indication of the certainty of the information (synthesised)">
 			>
 		>
 	>

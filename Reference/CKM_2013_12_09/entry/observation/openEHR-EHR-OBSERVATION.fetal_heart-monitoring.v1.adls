@@ -188,7 +188,7 @@ definition
 							ELEMENT[id0.29] occurrences matches {0..1} matches {	-- In Labor?
 								value matches {
 									DV_CODED_TEXT[id0.55] matches {
-										defining_code matches {[ac0.9]}		-- In Labor? (synthesised)
+										defining_code matches {[ac0.8]}		-- In Labor? (synthesised)
 									}
 								}
 							}
@@ -368,6 +368,10 @@ terminology
 				text = <"Maternal Confounding Factors">
 				description = <"Description of incidental maternal factors, not recorded elsewhere, that may cause difficulties in monitoring or effect the quality of the tracing.">
 			>
+			["at0.32"] = <
+				text = <"actual">
+				description = <"actual">
+			>
 			["ac0.1"] = <
 				text = <"Variability Category (synthesised)">
 				description = <"Category of variability observed during the monitoring interval. (synthesised)">
@@ -396,13 +400,9 @@ terminology
 				text = <"Tracing Assessment (synthesised)">
 				description = <"Overall conclusion regarding findings during the monitoring interval. (synthesised)">
 			>
-			["ac0.9"] = <
+			["ac0.8"] = <
 				text = <"In Labor? (synthesised)">
 				description = <"Was the mother in active labor during the monitoring interval? (synthesised)">
-			>
-			["at0.32"] = <
-				text = <"actual">
-				description = <"actual">
 			>
 		>
 	>
@@ -440,8 +440,8 @@ terminology
 			id = <"ac0.7">
 			members = <"at0.24", "at0.25", "at0.26">
 		>
-		["ac0.9"] = <
-			id = <"ac0.9">
+		["ac0.8"] = <
+			id = <"ac0.8">
 			members = <"at0.30", "at0.31">
 		>
 	>

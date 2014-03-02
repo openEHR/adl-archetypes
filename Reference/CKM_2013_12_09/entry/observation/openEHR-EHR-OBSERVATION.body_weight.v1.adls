@@ -275,6 +275,10 @@ terminology
 				text = <"Gewicht">
 				description = <"Het gewicht van het individu.">
 			>
+			["ac1"] = <
+				text = <"Hoeveelheid kleding (synthesised)">
+				description = <"Beschrijving van de hoeveelheid kleding van de persoon, op het moment van wegen. (synthesised)">
+			>
 			["id10"] = <
 				text = <"Hoeveelheid kleding">
 				description = <"Beschrijving van de hoeveelheid kleding van de persoon, op het moment van wegen.">
@@ -307,10 +311,6 @@ terminology
 				text = <"BeÏnvloedende factoren">
 				description = <"Registreer eventuele problemen of factoren die van invloed kunnen zijn op de meting van het lichaamsgewicht bijvoorbeeld timing in de menstruele cyclus, timing van de recente stoelgang of het noteren van een amputatie.">
 			>
-			["ac1"] = <
-				text = <"*State of Dress (synthesised)(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
-			>
 			["at19"] = <
 				text = <"*Mass (en)">
 				description = <"*Mass (en)">
@@ -328,6 +328,10 @@ terminology
 			["id5"] = <
 				text = <"Weight">
 				description = <"The weight of the individual.">
+			>
+			["ac1"] = <
+				text = <"State of Dress (synthesised)">
+				description = <"Description of the state of dress of the person at the time of weighing. (synthesised)">
 			>
 			["id10"] = <
 				text = <"State of Dress">
@@ -361,10 +365,6 @@ terminology
 				text = <"Confounding Factors">
 				description = <"Record any issues or factors that may impact on the measurement of body weight eg timing in menstrual cycle, timing of recent bowel motion or noting of amputation.">
 			>
-			["ac1"] = <
-				text = <"State of Dress (synthesised)">
-				description = <"Description of the state of dress of the person at the time of weighing. (synthesised)">
-			>
 			["at19"] = <
 				text = <"Mass">
 				description = <"Mass">
@@ -382,6 +382,10 @@ terminology
 			["id5"] = <
 				text = <"Gewicht">
 				description = <"Das Gewicht eines Individuums.">
+			>
+			["ac1"] = <
+				text = <"Bekleidung (synthesised)">
+				description = <"Beschreibung der Bekleidung zum Zeitpunkt der Messung. (synthesised)">
 			>
 			["id10"] = <
 				text = <"Bekleidung">
@@ -415,10 +419,6 @@ terminology
 				text = <"Störfaktoren">
 				description = <"Zur Dokumentation von Faktoren, die einen Einfluss auf die Messung des Körpergewichts haben können, z.B. Zeitpunkt in der Menstruationsperiode, Zeitpunkt des letzten Stuhlgangs, durchgeführte Amputationen.">
 			>
-			["ac1"] = <
-				text = <"*State of Dress (synthesised)(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
-			>
 			["at19"] = <
 				text = <"*Mass (en)">
 				description = <"*Mass (en)">
@@ -436,6 +436,10 @@ terminology
 			["id5"] = <
 				text = <"Peso">
 				description = <"O peso do indivíduo.">
+			>
+			["ac1"] = <
+				text = <"Vestuário (synthesised)">
+				description = <"Descrição do vestuário da pessoa na hora da pesagem. (synthesised)">
 			>
 			["id10"] = <
 				text = <"Vestuário">
@@ -469,10 +473,6 @@ terminology
 				text = <"Fatores de erro">
 				description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição de peso corporal, por exemplo, no momento do ciclo menstrual, o ciclo intestinal ou anotando amputação.">
 			>
-			["ac1"] = <
-				text = <"*State of Dress (synthesised)(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
-			>
 			["at19"] = <
 				text = <"*Mass (en)">
 				description = <"*Mass (en)">
@@ -490,6 +490,10 @@ terminology
 			["id5"] = <
 				text = <"Вес">
 				description = <"Актуальный вес человека.">
+			>
+			["ac1"] = <
+				text = <"Наличие и характер одежды (synthesised)">
+				description = <"Описание наличия и характера одежды пациента во время взвешивания. (synthesised)">
 			>
 			["id10"] = <
 				text = <"Наличие и характер одежды">
@@ -523,10 +527,6 @@ terminology
 				text = <"Стохастическая погрешность">
 				description = <"Фиксация любых фактов, могущих повлиять на результат взвешивания: фаза менструального цикла, давность опорожнения кишечника, сведения об ампутации и др.">
 			>
-			["ac1"] = <
-				text = <"*State of Dress (synthesised)(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
-			>
 			["at19"] = <
 				text = <"*Mass (en)">
 				description = <"*Mass (en)">
@@ -544,6 +544,10 @@ terminology
 			["id5"] = <
 				text = <"وزن">
 				description = <"وزن فرد">
+			>
+			["ac1"] = <
+				text = <"میزان لباس (synthesised)">
+				description = <"توصیف میزان لباس فرد در زمان اندازه گیری وزن  (synthesised)">
 			>
 			["id10"] = <
 				text = <"میزان لباس">
@@ -577,10 +581,6 @@ terminology
 				text = <"فاکتورهای جانبی">
 				description = <"ثبت هر گونه مساله یا فاکتوری که ممکن است روی اندازه گیری وزن در زمان اندازه گیری تاثیر داشته باشه به عنوان مثال در زمان عادت ماهیانه ،دفع مدفوع، یا ثبت قطع عضو">
 			>
-			["ac1"] = <
-				text = <"*State of Dress (synthesised)(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
-			>
 			["at19"] = <
 				text = <"*Mass (en)">
 				description = <"*Mass (en)">
@@ -598,6 +598,10 @@ terminology
 			["id5"] = <
 				text = <"الوزن">
 				description = <"وزن الشخص">
+			>
+			["ac1"] = <
+				text = <"حالة الملبس (synthesised)">
+				description = <"وصف حالة الملبس الذي يرتديه الشخص في وقت قياس الوزن. (synthesised)">
 			>
 			["id10"] = <
 				text = <"حالة الملبس">
@@ -631,10 +635,6 @@ terminology
 				text = <"العوامل المربكة">
 				description = <"لتسجيل أي قضايا أو عوامل قد تؤثر في قياس وزن الجسم, مثل الوقت من الدورة الشهرية, آخر مرة لإفراغ الأمعاء أو ملاحظة وجود بتر في أحد الأعضاء">
 			>
-			["ac1"] = <
-				text = <"*State of Dress (synthesised)(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
-			>
 			["at19"] = <
 				text = <"*Mass (en)">
 				description = <"*Mass (en)">
@@ -652,6 +652,10 @@ terminology
 			["id5"] = <
 				text = <"Peso">
 				description = <"Peso del individuo.">
+			>
+			["ac1"] = <
+				text = <"Indumentaria (synthesised)">
+				description = <"Descripción de la indumentaria del sujeto en el momento de la medición. (synthesised)">
 			>
 			["id10"] = <
 				text = <"Indumentaria">
@@ -684,10 +688,6 @@ terminology
 			["id26"] = <
 				text = <"Factores de alteración">
 				description = <"Registrar cualquier consideración que pueda influir en la medida del peso ej: amputaciones, momento del ciclo menstrual, etc. (en)">
-			>
-			["ac1"] = <
-				text = <"*State of Dress (synthesised)(en)">
-				description = <"*Description of the state of dress of the person at the time of weighing. (synthesised)(en)">
 			>
 			["at19"] = <
 				text = <"*Mass (en)">

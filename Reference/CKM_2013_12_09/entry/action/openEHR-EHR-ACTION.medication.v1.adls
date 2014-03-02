@@ -636,18 +636,6 @@ terminology
 				text = <"Complete medication">
 				description = <"The medication has been completed as instructed.">
 			>
-			["ac3"] = <
-				text = <"Issue prescription for medication (synthesised)">
-				description = <"The instruction has issued as an item on a prescription. (synthesised)">
-			>
-			["ac4"] = <
-				text = <"Dispense medication (synthesised)">
-				description = <"The medication has been dispensed. (synthesised)">
-			>
-			["ac5"] = <
-				text = <"Return medication (synthesised)">
-				description = <"A dispensed medication is returned or not collected without use. (synthesised)">
-			>
 			["at43"] = <
 				text = <"initial">
 				description = <"initial">
@@ -703,6 +691,18 @@ terminology
 			["at56"] = <
 				text = <"initial">
 				description = <"initial">
+			>
+			["ac3"] = <
+				text = <"Issue prescription for medication (synthesised)">
+				description = <"The instruction has issued as an item on a prescription. (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Dispense medication (synthesised)">
+				description = <"The medication has been dispensed. (synthesised)">
+			>
+			["ac5"] = <
+				text = <"Return medication (synthesised)">
+				description = <"A dispensed medication is returned or not collected without use. (synthesised)">
 			>
 		>
 		["sl"] = <
@@ -942,18 +942,6 @@ terminology
 				text = <"*Complete medication(en)">
 				description = <"*The medication has been completed as instructed.(en)">
 			>
-			["ac3"] = <
-				text = <"*Issue prescription for medication (synthesised)(en)">
-				description = <"*The instruction has issued as an item on a prescription. (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Dispense medication (synthesised)(en)">
-				description = <"*The medication has been dispensed. (synthesised)(en)">
-			>
-			["ac5"] = <
-				text = <"*Return medication (synthesised)(en)">
-				description = <"*A dispensed medication is returned or not collected without use. (synthesised)(en)">
-			>
 			["at43"] = <
 				text = <"*initial (en)">
 				description = <"*initial (en)">
@@ -1009,6 +997,18 @@ terminology
 			["at56"] = <
 				text = <"*initial (en)">
 				description = <"*initial (en)">
+			>
+			["ac3"] = <
+				text = <"*Issue prescription for medication(en) (synthesised)">
+				description = <"*The instruction has issued as an item on a prescription.(en) (synthesised)">
+			>
+			["ac4"] = <
+				text = <"*Dispense medication(en) (synthesised)">
+				description = <"*The medication has been dispensed.(en) (synthesised)">
+			>
+			["ac5"] = <
+				text = <"*Return medication(en) (synthesised)">
+				description = <"*A dispensed medication is returned or not collected without use.(en) (synthesised)">
 			>
 		>
 	>

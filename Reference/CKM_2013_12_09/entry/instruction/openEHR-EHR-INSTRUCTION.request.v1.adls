@@ -361,8 +361,8 @@ terminology
 				description = <"آخر تاريخ لا يزال فيه مقبولا أن يتم إكمال/إتمام الخدمة.">
 			>
 			["ac1"] = <
-				text = <"*Urgency (synthesised)(en)">
-				description = <"*Urgency of the request. (synthesised)(en)">
+				text = <"الإلحاح (synthesised)">
+				description = <"إلحاح الطلب (synthesised)">
 			>
 		>
 	>

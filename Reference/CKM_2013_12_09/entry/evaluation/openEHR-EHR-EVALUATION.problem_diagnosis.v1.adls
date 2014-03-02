@@ -361,13 +361,13 @@ terminology
 				text = <"*Cluster(en)">
 				description = <"**(en)">
 			>
-			["ac1"] = <
-				text = <"*Relationship Type (synthesised)(en)">
-				description = <"*The type of relationship that this problem/diagnosis has to the related item. (synthesised)(en)">
-			>
 			["at43"] = <
 				text = <"*Frequency (en)">
 				description = <"*Frequency (en)">
+			>
+			["ac1"] = <
+				text = <"الوصف السريري (synthesised)">
+				description = <"وصف للمشكلة التي تسببت في المضاعفات (synthesised)">
 			>
 		>
 		["en"] = <
@@ -471,13 +471,13 @@ terminology
 				text = <"Status">
 				description = <"Descriptor for context- or use-case specific label or workflow-related aspect of the diagnostic process which may not be safe to exchange between systems or use in a shared environment. Examples include: active/inactive; primary/secondary; preliminary/provisional/working/final.">
 			>
-			["ac1"] = <
-				text = <"Relationship Type (synthesised)">
-				description = <"The type of relationship that this problem/diagnosis has to the related item. (synthesised)">
-			>
 			["at43"] = <
 				text = <"Frequency">
 				description = <"Frequency">
+			>
+			["ac1"] = <
+				text = <"Relationship Type (synthesised)">
+				description = <"The type of relationship that this problem/diagnosis has to the related item. (synthesised)">
 			>
 		>
 		["de"] = <
@@ -581,13 +581,13 @@ terminology
 				text = <"*Cluster(en)">
 				description = <"**(en)">
 			>
-			["ac1"] = <
-				text = <"*Relationship Type (synthesised)(en)">
-				description = <"*The type of relationship that this problem/diagnosis has to the related item. (synthesised)(en)">
-			>
 			["at43"] = <
 				text = <"*Frequency (en)">
 				description = <"*Frequency (en)">
+			>
+			["ac1"] = <
+				text = <"*Clinical description(en) (synthesised)">
+				description = <"*Decription of the related problem.(en) (synthesised)">
 			>
 		>
 		["pt-br"] = <
@@ -691,13 +691,13 @@ terminology
 				text = <"*Cluster(en)">
 				description = <"**(en)">
 			>
-			["ac1"] = <
-				text = <"*Relationship Type (synthesised)(en)">
-				description = <"*The type of relationship that this problem/diagnosis has to the related item. (synthesised)(en)">
-			>
 			["at43"] = <
 				text = <"*Frequency (en)">
 				description = <"*Frequency (en)">
+			>
+			["ac1"] = <
+				text = <"Descrição clínica (synthesised)">
+				description = <"Decription do problema relacionado. (synthesised)">
 			>
 		>
 		["es-ar"] = <
@@ -801,13 +801,13 @@ terminology
 				text = <"*Cluster(en)">
 				description = <"**(en)">
 			>
-			["ac1"] = <
-				text = <"*Relationship Type (synthesised)(en)">
-				description = <"*The type of relationship that this problem/diagnosis has to the related item. (synthesised)(en)">
-			>
 			["at43"] = <
 				text = <"*Frequency (en)">
 				description = <"*Frequency (en)">
+			>
+			["ac1"] = <
+				text = <"Descripción clínica (synthesised)">
+				description = <"Descripción del problema relacionado. (synthesised)">
 			>
 		>
 	>

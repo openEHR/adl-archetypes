@@ -155,8 +155,8 @@ terminology
 				description = <"**(en)">
 			>
 			["ac1"] = <
-				text = <"*Status (synthesised)(en)">
-				description = <"*An indication of whether the alert is considered to be an active, currently inactive, or resolved and not likely to impact on the patient again. (synthesised)(en)">
+				text = <"Zustand (synthesised)">
+				description = <"Ein Hinweis, ob die Warnung als aktives oder inaktives Problem angesehen wird (synthesised)">
 			>
 		>
 		["en"] = <
@@ -255,8 +255,8 @@ terminology
 				description = <"*Identification of the alert.(en)">
 			>
 			["ac1"] = <
-				text = <"*Status (synthesised)(en)">
-				description = <"*An indication of whether the alert is considered to be an active, currently inactive, or resolved and not likely to impact on the patient again. (synthesised)(en)">
+				text = <"الحالة (synthesised)">
+				description = <"إشارة إلى ما إذا كان التنبيه هو لأمر نشط/حالي أو غير نشط/غير حالي (synthesised)">
 			>
 		>
 	>

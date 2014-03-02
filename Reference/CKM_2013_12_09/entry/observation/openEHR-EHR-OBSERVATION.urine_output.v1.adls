@@ -182,10 +182,6 @@ terminology
 				text = <"Fluid cluster">
 				description = <"*">
 			>
-			["ac1"] = <
-				text = <"Method of catchment (synthesised)">
-				description = <"The method of quantifying urine (synthesised)">
-			>
 			["at14"] = <
 				text = <"Volume">
 				description = <"Volume">
@@ -201,6 +197,10 @@ terminology
 			["at17"] = <
 				text = <"actual">
 				description = <"actual">
+			>
+			["ac1"] = <
+				text = <"Method of catchment (synthesised)">
+				description = <"The method of quantifying urine (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -258,10 +258,6 @@ terminology
 				text = <"عنقود خاص بالسائل الذي تم تجميعه">
 				description = <"**(en)">
 			>
-			["ac1"] = <
-				text = <"*Method of catchment (synthesised)(en)">
-				description = <"*The method of quantifying urine (synthesised)(en)">
-			>
 			["at14"] = <
 				text = <"*Volume (en)">
 				description = <"*Volume (en)">
@@ -277,6 +273,10 @@ terminology
 			["at17"] = <
 				text = <"*actual (en)">
 				description = <"*actual (en)">
+			>
+			["ac1"] = <
+				text = <"طريقة الاستجماع  (synthesised)">
+				description = <"طريقة التقدير الكَمِّي للبول (synthesised)">
 			>
 		>
 	>

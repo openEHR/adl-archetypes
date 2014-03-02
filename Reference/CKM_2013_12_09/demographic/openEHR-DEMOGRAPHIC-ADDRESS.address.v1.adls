@@ -50,7 +50,7 @@ definition
 		name matches {
 			DV_TEXT[id33] 
 			DV_CODED_TEXT[id34] matches {
-				defining_code matches {[ac6]}		-- *Endereço (synthesised)(pt-br)
+				defining_code matches {[ac6]}		-- Address (synthesised)
 			}
 		}
 		details matches {
@@ -464,8 +464,8 @@ terminology
 				description = <"valid codes for countries.">
 			>
 			["ac6"] = <
-				text = <"*Endereço (synthesised)(pt-br)">
-				description = <"*Endereço. (synthesised)(pt-br)">
+				text = <"Address (synthesised)">
+				description = <"Address based on ISO22220 standard. (synthesised)">
 			>
 		>
 	>

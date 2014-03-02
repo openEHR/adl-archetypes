@@ -169,8 +169,8 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"*Delivery method (synthesised)(en)">
-				description = <"*Method of delivery of placenta. (synthesised)(en)">
+				text = <"Entbindungsmethode (synthesised)">
+				description = <"Entbindungsmethode der Plazenta. (synthesised)">
 			>
 		>
 		["en"] = <

@@ -424,16 +424,16 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"*Side (synthesised)(en)">
-				description = <"** (synthesised)(en)">
+				text = <"Lado (synthesised)">
+				description = <"Lado examinado. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Ease of Visualisation (synthesised)(en)">
-				description = <"*Description of ease to visualise all the sturctures during fundoscopy (synthesised)(en)">
+				text = <"Visibilidade (synthesised)">
+				description = <"Facilidade de visualizar as estruturas durante fundoscopia. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"** (synthesised)(en)">
+				text = <"Método (synthesised)">
+				description = <"Método usado no exame de fundoscopia. (synthesised)">
 			>
 		>
 	>

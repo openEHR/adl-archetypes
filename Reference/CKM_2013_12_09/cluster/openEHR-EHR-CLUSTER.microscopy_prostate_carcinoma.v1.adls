@@ -645,16 +645,16 @@ terminology
 				description = <"Additional histological finding related to prostate cancer. (synthesised)">
 			>
 			["ac9"] = <
-				text = <"Primary Gleason grade">
-				description = <"The primary Gleason score.">
+				text = <"Primary Gleason grade (synthesised)">
+				description = <"The primary Gleason score. (synthesised)">
 			>
 			["ac10"] = <
-				text = <"Secondary Gleason grade">
-				description = <"The secondary Gleason score.">
+				text = <"Secondary Gleason grade (synthesised)">
+				description = <"The secondary Gleason score. (synthesised)">
 			>
 			["ac11"] = <
-				text = <"Tertiary Gleason grade">
-				description = <"The tertiary Gleason score.">
+				text = <"Tertiary Gleason grade (synthesised)">
+				description = <"The tertiary Gleason score. (synthesised)">
 			>
 		>
 	>

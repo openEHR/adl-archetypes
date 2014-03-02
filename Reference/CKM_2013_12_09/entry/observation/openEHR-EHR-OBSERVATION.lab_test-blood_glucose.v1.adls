@@ -64,7 +64,7 @@ definition
 									ELEMENT[id0.91] occurrences matches {0..1} matches {	-- Intake
 										value matches {
 											DV_CODED_TEXT[id0.113] matches {
-												defining_code matches {[ac0.2; at0.95]}		-- Intake (synthesised)
+												defining_code matches {[ac0.1; at0.95]}		-- Intake (synthesised)
 											}
 										}
 									}
@@ -95,14 +95,14 @@ definition
 									ELEMENT[id0.101] occurrences matches {0..1} matches {	-- Route
 										value matches {
 											DV_CODED_TEXT[id0.117] matches {
-												defining_code matches {[ac0.3; at0.105]}		-- Route (synthesised)
+												defining_code matches {[ac0.2; at0.105]}		-- Route (synthesised)
 											}
 										}
 									}
 									ELEMENT[id0.99] occurrences matches {0..1} matches {	-- Timing
 										value matches {
 											DV_CODED_TEXT[id0.118] matches {
-												defining_code matches {[ac0.4; at0.104]}		-- Timing (synthesised)
+												defining_code matches {[ac0.3; at0.104]}		-- Timing (synthesised)
 											}
 										}
 									}
@@ -122,7 +122,7 @@ definition
 									ELEMENT[id0.111] occurrences matches {0..1} matches {	-- Route
 										value matches {
 											DV_CODED_TEXT[id0.121] matches {
-												defining_code matches {[ac0.5; at0.113]}		-- Route (synthesised)
+												defining_code matches {[ac0.4; at0.113]}		-- Route (synthesised)
 											}
 										}
 									}
@@ -252,22 +252,6 @@ terminology
 				text = <"Blood glucose">
 				description = <"Concentration of blood glucose in the sample.">
 			>
-			["ac0.2"] = <
-				text = <"Intake (synthesised)">
-				description = <"Description of calorific intake. (synthesised)">
-			>
-			["ac0.3"] = <
-				text = <"Route (synthesised)">
-				description = <"The route of administration of the glucose challenge. (synthesised)">
-			>
-			["ac0.4"] = <
-				text = <"Timing (synthesised)">
-				description = <"The relationship of the sample to the challenge. (synthesised)">
-			>
-			["ac0.5"] = <
-				text = <"Route (synthesised)">
-				description = <"The route of administration of the insulin. (synthesised)">
-			>
 			["at0.114"] = <
 				text = <"Concentration">
 				description = <"Concentration">
@@ -300,6 +284,22 @@ terminology
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
 			>
+			["ac0.1"] = <
+				text = <"Intake (synthesised)">
+				description = <"Description of calorific intake. (synthesised)">
+			>
+			["ac0.2"] = <
+				text = <"Route (synthesised)">
+				description = <"The route of administration of the glucose challenge. (synthesised)">
+			>
+			["ac0.3"] = <
+				text = <"Timing (synthesised)">
+				description = <"The relationship of the sample to the challenge. (synthesised)">
+			>
+			["ac0.4"] = <
+				text = <"Route (synthesised)">
+				description = <"The route of administration of the insulin. (synthesised)">
+			>
 		>
 	>
 	term_bindings = <
@@ -310,20 +310,20 @@ terminology
 		>
 	>
 	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at0.92", "at0.93", "at0.94", "at0.95">
+		>
 		["ac0.2"] = <
 			id = <"ac0.2">
-			members = <"at0.92", "at0.93", "at0.94", "at0.95">
+			members = <"at0.105", "at0.106">
 		>
 		["ac0.3"] = <
 			id = <"ac0.3">
-			members = <"at0.105", "at0.106">
+			members = <"at0.103", "at0.104">
 		>
 		["ac0.4"] = <
 			id = <"ac0.4">
-			members = <"at0.103", "at0.104">
-		>
-		["ac0.5"] = <
-			id = <"ac0.5">
 			members = <"at0.112", "at0.113">
 		>
 	>

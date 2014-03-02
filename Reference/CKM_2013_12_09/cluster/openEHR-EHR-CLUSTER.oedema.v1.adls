@@ -146,8 +146,8 @@ terminology
 				description = <"Addtional comments about the oedema.">
 			>
 			["ac1"] = <
-				text = <"Degree">
-				description = <"The degree of oedema.">
+				text = <"Degree (synthesised)">
+				description = <"The degree of oedema. (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -192,8 +192,8 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"*Degree(en)">
-				description = <"*The degree of oedema.(en)">
+				text = <"الدرجة (synthesised)">
+				description = <"* (synthesised)">
 			>
 		>
 		["ru"] = <
@@ -238,8 +238,8 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"*Degree(en)">
-				description = <"*The degree of oedema.(en)">
+				text = <"Выраженность (synthesised)">
+				description = <"Описание выраженности отека (synthesised)">
 			>
 		>
 	>

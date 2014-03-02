@@ -179,8 +179,8 @@ terminology
 				description = <"Valid codes for usage of identifiers">
 			>
 			["ac2"] = <
-				text = <"*Área geografica (synthesised)(pt-br)">
-				description = <"*Indica a área geográfica onde o documento é utilizado (synthesised)(pt-br)">
+				text = <"Geographic area (synthesised)">
+				description = <"Indicates the geographic area within which the identifier is used (synthesised)">
 			>
 		>
 		["pt-br"] = <

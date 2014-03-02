@@ -98,8 +98,8 @@ terminology
 				description = <"The tympanic membrane is spontaneously perforated with evidence of otorrhea and polyp formation.">
 			>
 			["ac1"] = <
-				text = <"Sade Classification">
-				description = <"Grading of the degree of tympanic membrane pars tensa retraction / atelectasis based on the Sade Classification.">
+				text = <"Sade Classification (synthesised)">
+				description = <"Grading of the degree of tympanic membrane pars tensa retraction / atelectasis based on the Sade Classification. (synthesised)">
 			>
 		>
 	>

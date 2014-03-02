@@ -118,8 +118,8 @@ terminology
 				description = <"Die Berechnung des Risikos">
 			>
 			["ac1"] = <
-				text = <"*Significance of risk (synthesised)(en)">
-				description = <"*The likelihood that this person will develop this condition or suffer in this way in the future (synthesised)(en)">
+				text = <"Bedeutung des Risikos (synthesised)">
+				description = <"Die Wahrscheinlichkeit, dass diese Person diesen Zustand entwickelt oder in der Zukunft darunter leiden wird (synthesised)">
 			>
 		>
 		["en"] = <

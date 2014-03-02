@@ -556,22 +556,6 @@ terminology
 				text = <"*Rate of Frequency Change(en)">
 				description = <"*The rate of change of the probe tone frequency used in tympanometry.(en)">
 			>
-			["ac1"] = <
-				text = <"*Test Ear (synthesised)(en)">
-				description = <"*Identification of the ear being tested. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Tympanogram Type (synthesised)(en)">
-				description = <"*Classification of the the shape of the tympanogram curve. (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Vanhuyse Classification Type (synthesised)(en)">
-				description = <"*Classification of tympanogram type based on Vanhuyse classification system. (synthesised)(en)">
-			>
-			["ac4"] = <
-				text = <"*Test Result Image (synthesised)(en)">
-				description = <"*Digital representation of the entire result. (synthesised)(en)">
-			>
 			["at81"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
@@ -615,6 +599,22 @@ terminology
 			["at91"] = <
 				text = <"*image/jpeg (en)">
 				description = <"*image/jpeg (en)">
+			>
+			["ac1"] = <
+				text = <"*Test Ear(en) (synthesised)">
+				description = <"*Identification of the ear being tested.(en) (synthesised)">
+			>
+			["ac2"] = <
+				text = <"*Tympanogram Type(en) (synthesised)">
+				description = <"*Classification of the the shape of the tympanogram curve.(en) (synthesised)">
+			>
+			["ac3"] = <
+				text = <"*Vanhuyse Classification Type(en) (synthesised)">
+				description = <"*Classification of tympanogram type based on Vanhuyse classification system.(en) (synthesised)">
+			>
+			["ac4"] = <
+				text = <"*Test Result Image(en) (synthesised)">
+				description = <"*Digital representation of the entire result.(en) (synthesised)">
 			>
 		>
 		["en"] = <
@@ -814,22 +814,6 @@ terminology
 				text = <"Rate of Frequency Change">
 				description = <"The rate of change of the probe tone frequency used in tympanometry.">
 			>
-			["ac1"] = <
-				text = <"Test Ear (synthesised)">
-				description = <"Identification of the ear being tested. (synthesised)">
-			>
-			["ac2"] = <
-				text = <"Tympanogram Type (synthesised)">
-				description = <"Classification of the the shape of the tympanogram curve. (synthesised)">
-			>
-			["ac3"] = <
-				text = <"Vanhuyse Classification Type (synthesised)">
-				description = <"Classification of tympanogram type based on Vanhuyse classification system. (synthesised)">
-			>
-			["ac4"] = <
-				text = <"Test Result Image (synthesised)">
-				description = <"Digital representation of the entire result. (synthesised)">
-			>
 			["at81"] = <
 				text = <"Pressure">
 				description = <"Pressure">
@@ -873,6 +857,22 @@ terminology
 			["at91"] = <
 				text = <"image/jpeg">
 				description = <"image/jpeg">
+			>
+			["ac1"] = <
+				text = <"Test Ear (synthesised)">
+				description = <"Identification of the ear being tested. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Tympanogram Type (synthesised)">
+				description = <"Classification of the the shape of the tympanogram curve. (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Vanhuyse Classification Type (synthesised)">
+				description = <"Classification of tympanogram type based on Vanhuyse classification system. (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Test Result Image (synthesised)">
+				description = <"Digital representation of the entire result. (synthesised)">
 			>
 		>
 	>

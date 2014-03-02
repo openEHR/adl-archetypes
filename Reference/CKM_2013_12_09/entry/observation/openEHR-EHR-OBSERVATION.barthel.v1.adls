@@ -383,44 +383,44 @@ terminology
 				description = <"**(nl)">
 			>
 			["ac1"] = <
-				text = <"*Continence of bowels(en)">
-				description = <"*Over the previous week, occasional accident is once per week.(en)">
+				text = <"*Blaas(nl) (synthesised)">
+				description = <"*Voorgaande week: Af en toe = 1 keer per dagEen patiÃ«nt die zijn catheter zelf kan verzorgen wordt aangemerkt als 'continent'.(nl) (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Bladder control(en)">
-				description = <"*Assessment of urinary control over the previous week, occasional accident <= 1 time per week.(en)">
+				text = <"*Darm(nl) (synthesised)">
+				description = <"*Voorgaande week: Indien klysma noodzakelijk is dan wordt dit aangemerkt als 'incontinent'. Af en toe = 1 keer per week.(nl) (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Personal care/hygeine(en)">
-				description = <"*Ability over the previous 24-48 hours to attend to personal hygiene such as brushing teeth, shaving and washing.(en)">
+				text = <"*Uiterlijke verzorging(nl) (synthesised)">
+				description = <"*Voorgaande 24-48 uur: Verwijst naar persoonlijke hygiÃ«ne zoals tandenpoetsen, scheren en wassen. Hierbij benodigde attributen mogen worden aangereikt.(nl) (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Toilet use(en)">
-				description = <"*Ability to use toilet over the previous 48 hours.(en)">
+				text = <"*Toiletgebruik(nl) (synthesised)">
+				description = <"*Met hulp = kan zich afvegen en enige van bovenstaande handelingen uitvoeren.Onafhankelijk = in staat om naar toilet te gaan, zich voldoende uit te kleden, schoon te maken, aan te kleden en weg te gaan.(nl) (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Eating(en)">
-				description = <"*Ability to eat food.(en)">
+				text = <"*Eten(nl) (synthesised)">
+				description = <"*Hulp = voedsel wordt fijngemaakt; patiÃ«nt eet zelf.In staat om normaal voedsel (ook hard voedsel) te eten. (Het eten mag gekookt en geserveerd worden door anderen maar mag niet worden fijngemaakt).(nl) (synthesised)">
 			>
 			["ac6"] = <
-				text = <"*Transfer(en)">
-				description = <"*Ability to get up from a bed or chair.(en)">
+				text = <"*Transfer (van bed naar stoel en terug)(nl) (synthesised)">
+				description = <"*Afhankelijk = niet in staat om te zitten; er wordt gebruik gemaakt van tillift. Veel hulp = een sterk, getraind persoon of 2 gewone personen; patiÃ«nt kan rechtop zitten.Weinig hulp = een persoon voor toezicht of enige hulp.(nl) (synthesised)">
 			>
 			["ac7"] = <
-				text = <"*Mobility(en)">
-				description = <"*Ability to get about the house or institution.(en)">
+				text = <"*Mobiliteit(nl) (synthesised)">
+				description = <"*Hulp = een ongetraind persoon, incl. toezicht en morele steun.Onafhankelijk = kan zich verplaatsen in huis of op afdeling; hulpmiddel mag worden gebruikt. Een patiÃ«nt in rolstoel moet zonder hulp met hoeken en deuren kunnen omgaan.(nl) (synthesised)">
 			>
 			["ac8"] = <
-				text = <"*Dressing/undressing(en)">
-				description = <"*Ability to choose clothes, put them on and fasten them.(en)">
+				text = <"*Aan - en uitkleden(nl) (synthesised)">
+				description = <"*De helft  = alleen hulp bij knopen, ritssluitingen enz; kan enkele kledingstukken zelf aandoen. Onafhankelijk = in staat kleren te kiezen en aan te doen.(nl) (synthesised)">
 			>
 			["ac9"] = <
-				text = <"*Stairs(en)">
-				description = <"*Ability to negotiate stairs.(en)">
+				text = <"*Trappen(nl) (synthesised)">
+				description = <"*Trappen.(nl) (synthesised)">
 			>
 			["ac10"] = <
-				text = <"*Bathing(en)">
-				description = <"*Independent = without supervision or help when getting in and out of the bath and when washing.(en)">
+				text = <"*Baden/douche(nl) (synthesised)">
+				description = <"*Onafhankelijk = zonder toezicht of hulp in en uit bad stappen en zichzelf wassen.(nl) (synthesised)">
 			>
 		>
 		["nl"] = <
@@ -589,44 +589,44 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"*Continence of bowels(en)">
-				description = <"*Over the previous week, occasional accident is once per week.(en)">
+				text = <"Blaas (synthesised)">
+				description = <"Voorgaande week: Af en toe = 1 keer per dagEen patiÃ«nt die zijn catheter zelf kan verzorgen wordt aangemerkt als 'continent'. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Bladder control(en)">
-				description = <"*Assessment of urinary control over the previous week, occasional accident <= 1 time per week.(en)">
+				text = <"Darm (synthesised)">
+				description = <"Voorgaande week: Indien klysma noodzakelijk is dan wordt dit aangemerkt als 'incontinent'. Af en toe = 1 keer per week. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Personal care/hygeine(en)">
-				description = <"*Ability over the previous 24-48 hours to attend to personal hygiene such as brushing teeth, shaving and washing.(en)">
+				text = <"Uiterlijke verzorging (synthesised)">
+				description = <"Voorgaande 24-48 uur: Verwijst naar persoonlijke hygiÃ«ne zoals tandenpoetsen, scheren en wassen. Hierbij benodigde attributen mogen worden aangereikt. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Toilet use(en)">
-				description = <"*Ability to use toilet over the previous 48 hours.(en)">
+				text = <"Toiletgebruik (synthesised)">
+				description = <"Met hulp = kan zich afvegen en enige van bovenstaande handelingen uitvoeren.Onafhankelijk = in staat om naar toilet te gaan, zich voldoende uit te kleden, schoon te maken, aan te kleden en weg te gaan. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Eating(en)">
-				description = <"*Ability to eat food.(en)">
+				text = <"Eten (synthesised)">
+				description = <"Hulp = voedsel wordt fijngemaakt; patiÃ«nt eet zelf.In staat om normaal voedsel (ook hard voedsel) te eten. (Het eten mag gekookt en geserveerd worden door anderen maar mag niet worden fijngemaakt). (synthesised)">
 			>
 			["ac6"] = <
-				text = <"*Transfer(en)">
-				description = <"*Ability to get up from a bed or chair.(en)">
+				text = <"Transfer (van bed naar stoel en terug) (synthesised)">
+				description = <"Afhankelijk = niet in staat om te zitten; er wordt gebruik gemaakt van tillift. Veel hulp = een sterk, getraind persoon of 2 gewone personen; patiÃ«nt kan rechtop zitten.Weinig hulp = een persoon voor toezicht of enige hulp. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"*Mobility(en)">
-				description = <"*Ability to get about the house or institution.(en)">
+				text = <"Mobiliteit (synthesised)">
+				description = <"Hulp = een ongetraind persoon, incl. toezicht en morele steun.Onafhankelijk = kan zich verplaatsen in huis of op afdeling; hulpmiddel mag worden gebruikt. Een patiÃ«nt in rolstoel moet zonder hulp met hoeken en deuren kunnen omgaan. (synthesised)">
 			>
 			["ac8"] = <
-				text = <"*Dressing/undressing(en)">
-				description = <"*Ability to choose clothes, put them on and fasten them.(en)">
+				text = <"Aan - en uitkleden (synthesised)">
+				description = <"De helft  = alleen hulp bij knopen, ritssluitingen enz; kan enkele kledingstukken zelf aandoen. Onafhankelijk = in staat kleren te kiezen en aan te doen. (synthesised)">
 			>
 			["ac9"] = <
-				text = <"*Stairs(en)">
-				description = <"*Ability to negotiate stairs.(en)">
+				text = <"Trappen (synthesised)">
+				description = <"Trappen. (synthesised)">
 			>
 			["ac10"] = <
-				text = <"*Bathing(en)">
-				description = <"*Independent = without supervision or help when getting in and out of the bath and when washing.(en)">
+				text = <"Baden/douche (synthesised)">
+				description = <"Onafhankelijk = zonder toezicht of hulp in en uit bad stappen en zichzelf wassen. (synthesised)">
 			>
 		>
 		["en"] = <
@@ -795,44 +795,44 @@ terminology
 				description = <"Can carry aid alone if required.">
 			>
 			["ac1"] = <
-				text = <"Continence of bowels">
-				description = <"Over the previous week, occasional accident is once per week.">
+				text = <"Continence of bowels (synthesised)">
+				description = <"Over the previous week, occasional accident is once per week. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Bladder control">
-				description = <"Assessment of urinary control over the previous week, occasional accident <= 1 time per week.">
+				text = <"Bladder control (synthesised)">
+				description = <"Assessment of urinary control over the previous week, occasional accident <= 1 time per week. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Personal care/hygeine">
-				description = <"Ability over the previous 24-48 hours to attend to personal hygiene such as brushing teeth, shaving and washing.">
+				text = <"Personal care/hygeine (synthesised)">
+				description = <"Ability over the previous 24-48 hours to attend to personal hygiene such as brushing teeth, shaving and washing. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Toilet use">
-				description = <"Ability to use toilet over the previous 48 hours.">
+				text = <"Toilet use (synthesised)">
+				description = <"Ability to use toilet over the previous 48 hours. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Eating">
-				description = <"Ability to eat food.">
+				text = <"Eating (synthesised)">
+				description = <"Ability to eat food. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Transfer">
-				description = <"Ability to get up from a bed or chair.">
+				text = <"Transfer (synthesised)">
+				description = <"Ability to get up from a bed or chair. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Mobility">
-				description = <"Ability to get about the house or institution.">
+				text = <"Mobility (synthesised)">
+				description = <"Ability to get about the house or institution. (synthesised)">
 			>
 			["ac8"] = <
-				text = <"Dressing/undressing">
-				description = <"Ability to choose clothes, put them on and fasten them.">
+				text = <"Dressing/undressing (synthesised)">
+				description = <"Ability to choose clothes, put them on and fasten them. (synthesised)">
 			>
 			["ac9"] = <
-				text = <"Stairs">
-				description = <"Ability to negotiate stairs.">
+				text = <"Stairs (synthesised)">
+				description = <"Ability to negotiate stairs. (synthesised)">
 			>
 			["ac10"] = <
-				text = <"Bathing">
-				description = <"Independent = without supervision or help when getting in and out of the bath and when washing.">
+				text = <"Bathing (synthesised)">
+				description = <"Independent = without supervision or help when getting in and out of the bath and when washing. (synthesised)">
 			>
 		>
 		["ru"] = <
@@ -1001,44 +1001,44 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"*Continence of bowels(en)">
-				description = <"*Over the previous week, occasional accident is once per week.(en)">
+				text = <"Контроль мочеиспускания (synthesised)">
+				description = <"По результатам предыдущей недели.Катетер определяется как недержание. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Bladder control(en)">
-				description = <"*Assessment of urinary control over the previous week, occasional accident <= 1 time per week.(en)">
+				text = <"Контроль стула (synthesised)">
+				description = <"По результатам предыдущей недели. Если необходима клизма - отмечать как недержание. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Personal care/hygeine(en)">
-				description = <"*Ability over the previous 24-48 hours to attend to personal hygiene such as brushing teeth, shaving and washing.(en)">
+				text = <"Навыки опрятности (synthesised)">
+				description = <"Предыдущие 24-48 часов: Относится к действиям личной гигиены, таких как чистить зубы, бриться и умываться. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Toilet use(en)">
-				description = <"*Ability to use toilet over the previous 48 hours.(en)">
+				text = <"Пользование туалетом (synthesised)">
+				description = <"Самостоятельно - может сам пойти в туалет, достаточно раздеться, соблюсти чистоту, одеться и уйти. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Eating(en)">
-				description = <"*Ability to eat food.(en)">
+				text = <"Питание (synthesised)">
+				description = <"Питание: пациент может есть нормальную пищу, даже фаст фуд, без предварительного измельчения. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"*Transfer(en)">
-				description = <"*Ability to get up from a bed or chair.(en)">
+				text = <"Передвижение по комнате (от кровати до стула и обратно) (synthesised)">
+				description = <"Если пациент не в состоянии сидеть - отметить \"невозможно\". (synthesised)">
 			>
 			["ac7"] = <
-				text = <"*Mobility(en)">
-				description = <"*Ability to get about the house or institution.(en)">
+				text = <"Подвижность (synthesised)">
+				description = <"Прогулки, по неровной поверхности. (synthesised)">
 			>
 			["ac8"] = <
-				text = <"*Dressing/undressing(en)">
-				description = <"*Ability to choose clothes, put them on and fasten them.(en)">
+				text = <"Одевание и раздевание (synthesised)">
+				description = <"С помощью - нужна помощь с кнопками, пуговицами, молниями. (synthesised)">
 			>
 			["ac9"] = <
-				text = <"*Stairs(en)">
-				description = <"*Ability to negotiate stairs.(en)">
+				text = <"Лестницы (synthesised)">
+				description = <"Лестницы. (synthesised)">
 			>
 			["ac10"] = <
-				text = <"*Bathing(en)">
-				description = <"*Independent = without supervision or help when getting in and out of the bath and when washing.(en)">
+				text = <"Пользование ванной/душем (synthesised)">
+				description = <"Самостоятельно: без присмотра и помощи может дойти до ванной  и самостоятельно моется. (synthesised)">
 			>
 		>
 	>

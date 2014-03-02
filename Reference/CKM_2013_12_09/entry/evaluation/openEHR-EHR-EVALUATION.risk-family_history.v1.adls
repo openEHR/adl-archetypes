@@ -131,14 +131,14 @@ definition
 					ELEMENT[id0.15] occurrences matches {0..1} matches {	-- Degree
 						value matches {
 							DV_CODED_TEXT[id0.44] matches {
-								defining_code matches {[ac0.3]}		-- Degree (synthesised)
+								defining_code matches {[ac0.2]}		-- Degree (synthesised)
 							}
 						}
 					}
 					ELEMENT[id0.22] occurrences matches {0..1} matches {	-- Gender
 						value matches {
 							DV_CODED_TEXT[id0.45] matches {
-								defining_code matches {[ac0.4]}		-- Gender (synthesised)
+								defining_code matches {[ac0.3]}		-- Gender (synthesised)
 							}
 						}
 					}
@@ -296,17 +296,17 @@ terminology
 				text = <"Relationship with subject of entry">
 				description = <"The relationship of the affected relative with the person of whom this is the family history">
 			>
-			["ac0.3"] = <
-				text = <"Degree (synthesised)">
-				description = <"The proximity or line of the relatives (synthesised)">
-			>
-			["ac0.4"] = <
-				text = <"Gender (synthesised)">
-				description = <"The gender of the relatives included in the affected ratio (synthesised)">
-			>
 			["at0.26"] = <
 				text = <"Time">
 				description = <"Time">
+			>
+			["ac0.2"] = <
+				text = <"Degree (synthesised)">
+				description = <"The proximity or line of the relatives (synthesised)">
+			>
+			["ac0.3"] = <
+				text = <"Gender (synthesised)">
+				description = <"The gender of the relatives included in the affected ratio (synthesised)">
 			>
 		>
 	>
@@ -316,12 +316,12 @@ terminology
 		>
 	>
 	value_sets = <
-		["ac0.3"] = <
-			id = <"ac0.3">
+		["ac0.2"] = <
+			id = <"ac0.2">
 			members = <"at0.16", "at0.17", "at0.18", "at0.19", "at0.20", "at0.21">
 		>
-		["ac0.4"] = <
-			id = <"ac0.4">
+		["ac0.3"] = <
+			id = <"ac0.3">
 			members = <"at0.23", "at0.24", "at0.25">
 		>
 	>

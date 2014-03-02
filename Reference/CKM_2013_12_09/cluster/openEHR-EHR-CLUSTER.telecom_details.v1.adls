@@ -262,12 +262,12 @@ terminology
 				description = <"Durchwahl. ENV13606-4:2000 7.11.18">
 			>
 			["ac1"] = <
-				text = <"*Mode (synthesised)(en)">
-				description = <"*A qualifier for a telecom contact, describing its context e.g. 'Work', 'Home'.   ENV 13606 - 4:2000 7.11.19. (synthesised)(en)">
+				text = <"Art (synthesised)">
+				description = <"Zuordnung einer Kontaktangabe bzgl. der Umgebung z.B. 'Arbeit', 'Privat'.   ENV 13606 - 4:2000 7.11.19(en) (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Telecoms type (synthesised)(en)">
-				description = <"*Telecom mechanism e.g. telephone, facsimile, pager etc.  ENV 13606-4:2000 7.11.19. (synthesised)(en)">
+				text = <"Kontakttyp (synthesised)">
+				description = <"Typ des Kontakts z.B. Telefon, Fax, Pager etc.  ENV 13606-4:2000 7.11.19 (synthesised)">
 			>
 		>
 	>

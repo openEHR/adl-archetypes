@@ -149,7 +149,7 @@ definition
 					ELEMENT[id13] occurrences matches {0..1} matches {	-- Number Sequence Used
 						value matches {
 							DV_CODED_TEXT[id83] matches {
-								defining_code matches {[ac1]}		-- *Verwendete Zahlensequenz (synthesised)(de)
+								defining_code matches {[ac1]}		-- Number Sequence Used (synthesised)
 							}
 						}
 					}
@@ -331,8 +331,8 @@ terminology
 				description = <"If more than one attempted trial was needed to complete the test, please specify reasons.">
 			>
 			["ac1"] = <
-				text = <"*Verwendete Zahlensequenz (synthesised)(de)">
-				description = <"*Angabe mit welcher Zahlenfolge der Test durchgeführt wurde. (synthesised)(de)">
+				text = <"Number Sequence Used (synthesised)">
+				description = <"Record which sequence of numbers was used. (synthesised)">
 			>
 		>
 	>

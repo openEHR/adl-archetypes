@@ -50,7 +50,7 @@ definition
 			ELEMENT[id2] occurrences matches {1} matches {	-- Type of biometric
 				value matches {
 					DV_CODED_TEXT[id11] matches {
-						defining_code matches {[ac3]}		-- *Tipo (synthesised)(pt-br)
+						defining_code matches {[ac3]}		-- Type of biometric (synthesised)
 					}
 				}
 			}
@@ -335,8 +335,8 @@ terminology
 				description = <"Valid codes for the biometric localization">
 			>
 			["ac3"] = <
-				text = <"*Tipo (synthesised)(pt-br)">
-				description = <"*Tipo do identificador biométrico (synthesised)(pt-br)">
+				text = <"Type of biometric (synthesised)">
+				description = <"Identification of the type of biometric identifier described by this set of data (synthesised)">
 			>
 		>
 	>

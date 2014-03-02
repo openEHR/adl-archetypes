@@ -288,16 +288,16 @@ terminology
 				description = <"Reason for inability to test motor response.">
 			>
 			["ac1"] = <
-				text = <"Best eye response (E)">
-				description = <"Best eye response to stimulus.">
+				text = <"Best eye response (E) (synthesised)">
+				description = <"Best eye response to stimulus. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Best motor response (M)">
-				description = <"Best motor response to stimulus.">
+				text = <"Best motor response (M) (synthesised)">
+				description = <"Best motor response to stimulus. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Best verbal response (V)">
-				description = <"Best verbal response to stimulus.">
+				text = <"Best verbal response (V) (synthesised)">
+				description = <"Best verbal response to stimulus. (synthesised)">
 			>
 		>
 		["pt-br"] = <
@@ -418,16 +418,16 @@ terminology
 				description = <"Motivo da impossibilidade de testar a resposta motora.">
 			>
 			["ac1"] = <
-				text = <"*Best eye response (E)(en)">
-				description = <"*Best eye response to stimulus.(en)">
+				text = <"Abertura ocular (AO) (synthesised)">
+				description = <"Melhor resposta ocular a estímulos. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Best motor response (M)(en)">
-				description = <"*Best motor response to stimulus.(en)">
+				text = <"Melhor resposta motora (MRM) (synthesised)">
+				description = <"Melhor resposta motora a estímulos. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Best verbal response (V)(en)">
-				description = <"*Best verbal response to stimulus.(en)">
+				text = <"Melhor resposta verbal (MRV) (synthesised)">
+				description = <"Melhor resposta verbal a estímulos. (synthesised)">
 			>
 		>
 	>

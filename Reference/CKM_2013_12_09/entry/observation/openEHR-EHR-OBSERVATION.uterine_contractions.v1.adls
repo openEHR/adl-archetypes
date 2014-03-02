@@ -263,6 +263,14 @@ terminology
 				text = <"Duration comment">
 				description = <"A textual comment on the duration of contractions - e.g. '10 to 20 seconds'">
 			>
+			["at38"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["at39"] = <
+				text = <"Pressure">
+				description = <"Pressure">
+			>
 			["ac1"] = <
 				text = <"Pattern (synthesised)">
 				description = <"The rhythm of the contractions (synthesised)">
@@ -275,17 +283,9 @@ terminology
 				text = <"Method (synthesised)">
 				description = <"The method used to determine the uterine contraction features (synthesised)">
 			>
-			["at38"] = <
-				text = <"Frequency">
-				description = <"Frequency">
-			>
-			["at39"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
 			["ac4"] = <
-				text = <"Strength">
-				description = <"The strength of uterine contractions">
+				text = <"Strength (synthesised)">
+				description = <"The strength of uterine contractions (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -405,18 +405,6 @@ terminology
 				text = <"تعليق حول المدة">
 				description = <"تعليق تعليق نصي عن مدة التقلصات, مثلا 10 إلى 20 ثانية">
 			>
-			["ac1"] = <
-				text = <"*Pattern (synthesised)(en)">
-				description = <"*The rhythm of the contractions (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Effectiveness (synthesised)(en)">
-				description = <"*The effectiveness of the contractions (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*The method used to determine the uterine contraction features (synthesised)(en)">
-			>
 			["at38"] = <
 				text = <"*Frequency (en)">
 				description = <"*Frequency (en)">
@@ -425,9 +413,21 @@ terminology
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
 			>
+			["ac1"] = <
+				text = <"الطراز (synthesised)">
+				description = <"نَظْم التقلصات (synthesised)">
+			>
+			["ac2"] = <
+				text = <"الفعالية (synthesised)">
+				description = <"فعالية التقلصات (synthesised)">
+			>
+			["ac3"] = <
+				text = <"الطريقة (synthesised)">
+				description = <"الطريقة المستخدمة لتحديد ملامح / قسمات التقلصات الرحمية (synthesised)">
+			>
 			["ac4"] = <
-				text = <"*Strength(en)">
-				description = <"*The strength of uterine contractions(en)">
+				text = <"القوة (synthesised)">
+				description = <"قوة التقلصات الرَّحِمية (synthesised)">
 			>
 		>
 	>

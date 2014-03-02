@@ -342,8 +342,8 @@ This archetype also acts as the parent for specialisations appropriate for more 
 				description = <"تفاصيل حول الطبيب السريري أو المؤسسة التي تطلب الاختبار المعملي.">
 			>
 			["ac1"] = <
-				text = <"*Test status (synthesised)(en)">
-				description = <"*The status of the lab test as a whole. (synthesised)(en)">
+				text = <"حالة الاختبار (synthesised)">
+				description = <"حالة الاختبار المعملي ككل (synthesised)">
 			>
 		>
 	>

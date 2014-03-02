@@ -106,7 +106,7 @@ definition
 					ELEMENT[id13] occurrences matches {0..*} matches {	-- Unilateral Assistive Device
 						value matches {
 							DV_CODED_TEXT[id28] matches {
-								defining_code matches {[ac1]}		-- *Unilaterale Gehhilfe (synthesised)(de)
+								defining_code matches {[ac1]}		-- Unilateral Assistive Device (synthesised)
 							}
 							DV_TEXT[id29] 
 						}
@@ -114,7 +114,7 @@ definition
 					ELEMENT[id21] occurrences matches {0..*} matches {	-- Bilateral Assistive Device
 						value matches {
 							DV_CODED_TEXT[id30] matches {
-								defining_code matches {[ac2]}		-- *Bilaterale Gehhilfen (synthesised)(de)
+								defining_code matches {[ac2]}		-- Bilateral Assistive Device (synthesised)
 							}
 							DV_TEXT[id31] 
 						}
@@ -270,12 +270,12 @@ terminology
 				description = <"Record which bilateral assistive devices were used.">
 			>
 			["ac1"] = <
-				text = <"*Unilaterale Gehhilfe (synthesised)(de)">
-				description = <"*Angabe, welches unterstützende Hilfsmittel verwendet wurde. (synthesised)(de)">
+				text = <"Unilateral Assistive Device (synthesised)">
+				description = <"Record which unilateral assistive devices were used. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Bilaterale Gehhilfen (synthesised)(de)">
-				description = <"*Angabe, welche unterstützenden Hilfsmittel verwendet wurden. (synthesised)(de)">
+				text = <"Bilateral Assistive Device (synthesised)">
+				description = <"Record which bilateral assistive devices were used. (synthesised)">
 			>
 		>
 	>

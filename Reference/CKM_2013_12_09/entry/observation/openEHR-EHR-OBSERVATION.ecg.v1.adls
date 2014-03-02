@@ -712,14 +712,6 @@ the ST segment onset (J point).">
 				text = <"ECG Viewer">
 				description = <"Details of device used to view the ECG output.">
 			>
-			["ac1"] = <
-				text = <"Per-lead Parameters (synthesised)">
-				description = <"Details about measured parameters for each named lead (specified in the run-time name constraint). (synthesised)">
-			>
-			["ac2"] = <
-				text = <"ST shape (synthesised)">
-				description = <"The ST segment shape. (synthesised)">
-			>
 			["at74"] = <
 				text = <"Frequency">
 				description = <"Frequency">
@@ -739,6 +731,14 @@ the ST segment onset (J point).">
 			["at78"] = <
 				text = <"Electrical potential time">
 				description = <"Electrical potential time">
+			>
+			["ac1"] = <
+				text = <"Per-lead Parameters (synthesised)">
+				description = <"Details about measured parameters for each named lead (specified in the run-time name constraint). (synthesised)">
+			>
+			["ac2"] = <
+				text = <"ST shape (synthesised)">
+				description = <"The ST segment shape. (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -1070,14 +1070,6 @@ T">
 				text = <"عارض مخطط كهربية عضلة القلب">
 				description = <"تفاصيل حول الجهيزة المستخدمة لعرض ناتج تخطيط كهربية عضلة القلب.">
 			>
-			["ac1"] = <
-				text = <"*Per-lead Parameters (synthesised)(en)">
-				description = <"*Details about measured parameters for each named lead (specified in the run-time name constraint). (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*ST shape (synthesised)(en)">
-				description = <"*The ST segment shape. (synthesised)(en)">
-			>
 			["at74"] = <
 				text = <"*Frequency (en)">
 				description = <"*Frequency (en)">
@@ -1097,6 +1089,15 @@ T">
 			["at78"] = <
 				text = <"*Electrical potential time (en)">
 				description = <"*Electrical potential time (en)">
+			>
+			["ac1"] = <
+				text = <"المعايير الخاصة بكل اتجاه (synthesised)">
+				description = <"تفاصيل حول المعايير المقاسة لكل اتجاه بعينه - يتم تحديدها باسم مخصص أثناء القياس (synthesised)">
+			>
+			["ac2"] = <
+				text = <" شكل القطعة ST (synthesised)">
+				description = <"شكل القطعة 
+ST (synthesised)">
 			>
 		>
 	>

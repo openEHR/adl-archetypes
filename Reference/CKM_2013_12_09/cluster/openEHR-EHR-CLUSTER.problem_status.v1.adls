@@ -475,32 +475,32 @@ terminology
 				description = <"*An issue which ocurred at present.(en)">
 			>
 			["ac1"] = <
-				text = <"*Certainty (synthesised)(en)">
-				description = <"*The level of confidence in the identification of the problem or diagnosis. (synthesised)(en)">
+				text = <"Zanesljivost (synthesised)">
+				description = <"Zanesljivost opredeljenega problema oz. posatvljene diagnoze (synthesised)">
 			>
 			["ac2"] = <
-				text = <"*Impact (synthesised)(en)">
-				description = <"*Description of the impact of the problem or diagnosis on the patient as a whole. Unlike 'severity' this can be used to compare the clinical impact of different problems. (synthesised)(en)">
+				text = <"Vpliv (synthesised)">
+				description = <"Opis vpliva problema/diagnoze (synthesised)">
 			>
 			["ac3"] = <
-				text = <"*Category (synthesised)(en)">
-				description = <"*Cateories of problem/ diagnosis/issue. (synthesised)(en)">
+				text = <"*Category(en) (synthesised)">
+				description = <"*Cateories of problem/ diagnosis/issue.(en) (synthesised)">
 			>
 			["ac4"] = <
-				text = <"*Active status (synthesised)(en)">
-				description = <"*The degree to which the problem is active and relevant within the current clinical context. (synthesised)(en)">
+				text = <"Aktivnost (synthesised)">
+				description = <"Stopnja aktivnosti problema (synthesised)">
 			>
 			["ac5"] = <
-				text = <"*Evolution (synthesised)(en)">
-				description = <"*Records temporal/evidential progress towards identification of the problem or diagnosis, recognising that precise identification may take time to evolve as increasing amounts of evidence become available. (synthesised)(en)">
+				text = <"*Evolution(en) (synthesised)">
+				description = <"*Records temporal/evidential progress towards identification of the problem or diagnosis, recognising that precise identification may take time to evolve as increasing amounts of evidence become available.(en) (synthesised)">
 			>
 			["ac6"] = <
-				text = <"*Temporal context (synthesised)(en)">
-				description = <"*Temporal context indicator aligned with SNOMEDCT. (synthesised)(en)">
+				text = <"*Temporal context(en) (synthesised)">
+				description = <"**(en) (synthesised)">
 			>
 			["ac7"] = <
-				text = <"*Episodicity (synthesised)(en)">
-				description = <"*Episodicity is used within a primary care context to distinguish between ongoing and new episodes of a problem or diagnosis, primarily for public health or quality assessment purposes. (synthesised)(en)">
+				text = <"Epizoda (synthesised)">
+				description = <"Epizoda problema (synthesised)">
 			>
 		>
 	>

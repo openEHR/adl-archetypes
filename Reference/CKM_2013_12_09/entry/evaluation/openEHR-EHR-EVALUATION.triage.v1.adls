@@ -122,8 +122,8 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"Triage evaluation">
-				description = <"Record of need for prioritisation of treatment">
+				text = <"Triage evaluation (synthesised)">
+				description = <"Record of need for prioritisation of treatment (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -160,8 +160,8 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"*Triage evaluation(en)">
-				description = <"*Record of need for prioritisation of treatment(en)">
+				text = <"تقييم الفرز (synthesised)">
+				description = <"تسجيل للحاجة إلى ترتيب أولويات المعالجة (synthesised)">
 			>
 		>
 		["es-ar"] = <
@@ -198,8 +198,8 @@ terminology
 				description = <"*">
 			>
 			["ac1"] = <
-				text = <"*Triage evaluation(en)">
-				description = <"*Record of need for prioritisation of treatment(en)">
+				text = <"Evaluación Triage (synthesised)">
+				description = <"Registro de la necesidad de priorización del tratamiento. (synthesised)">
 			>
 		>
 	>

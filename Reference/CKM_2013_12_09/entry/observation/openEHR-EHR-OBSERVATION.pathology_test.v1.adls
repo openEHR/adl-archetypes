@@ -353,18 +353,6 @@ terminology
 				text = <"Test Procedure">
 				description = <"Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
 			>
-			["ac1"] = <
-				text = <"Overall Test Result Status (synthesised)">
-				description = <"The publication status of the entire pathology test result. (synthesised)">
-			>
-			["ac2"] = <
-				text = <"Result Value Status (synthesised)">
-				description = <"The status of the result value. (synthesised)">
-			>
-			["ac3"] = <
-				text = <"Test Result Representation (synthesised)">
-				description = <"Rich text representation of the entire result as issued by the diagnostic service. (synthesised)">
-			>
 			["at109"] = <
 				text = <"text/html">
 				description = <"text/html">
@@ -396,6 +384,18 @@ terminology
 			["at116"] = <
 				text = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
 				description = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+			>
+			["ac1"] = <
+				text = <"Overall Test Result Status (synthesised)">
+				description = <"The publication status of the entire pathology test result. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Result Value Status (synthesised)">
+				description = <"The status of the result value. (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Test Result Representation (synthesised)">
+				description = <"Rich text representation of the entire result as issued by the diagnostic service. (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -532,18 +532,6 @@ terminology
 				text = <"*Test Procedure">
 				description = <"*Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
 			>
-			["ac1"] = <
-				text = <"*Overall Test Result Status (synthesised)(en)">
-				description = <"*The publication status of the entire pathology test result. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Result Value Status (synthesised)(en)">
-				description = <"*The status of the result value. (synthesised)(en)">
-			>
-			["ac3"] = <
-				text = <"*Test Result Representation (synthesised)(en)">
-				description = <"*Rich text representation of the entire result as issued by the diagnostic service. (synthesised)(en)">
-			>
 			["at109"] = <
 				text = <"*text/html (en)">
 				description = <"*text/html (en)">
@@ -575,6 +563,18 @@ terminology
 			["at116"] = <
 				text = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
 				description = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
+			>
+			["ac1"] = <
+				text = <"حالة الاختبار (synthesised)">
+				description = <"حالة الاختبار المعملي ككل (synthesised)">
+			>
+			["ac2"] = <
+				text = <"*Result Value Status (synthesised)">
+				description = <"*The status of the result value. (synthesised)">
+			>
+			["ac3"] = <
+				text = <"تمثيل الوسائط المتعددة (synthesised)">
+				description = <"تمثيلات الاختبار الكلي عن طريق الوسائط المتعددة مثل: الصورة, الصوت, و الفيديو (synthesised)">
 			>
 		>
 	>
