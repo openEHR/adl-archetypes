@@ -101,10 +101,6 @@ terminology
 				text = <"Grams of tobacco">
 				description = <"Weight of tobacco consumed eg in a pipe">
 			>
-			["ac0.1"] = <
-				text = <"Form (synthesised)">
-				description = <"Form of tobacco used (synthesised)">
-			>
 			["at0.7"] = <
 				text = <"Frequency">
 				description = <"Frequency">
@@ -112,6 +108,10 @@ terminology
 			["at0.8"] = <
 				text = <"Flow rate, mass">
 				description = <"Flow rate, mass">
+			>
+			["ac0.1"] = <
+				text = <"Form (synthesised)">
+				description = <"Form of tobacco used (synthesised)">
 			>
 		>
 	>

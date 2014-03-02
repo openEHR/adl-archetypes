@@ -242,6 +242,10 @@ terminology
 				text = <"Comment">
 				description = <"Furrher text comment on the perforation.">
 			>
+			["at354"] = <
+				text = <"Length">
+				description = <"Length">
+			>
 			["ac1"] = <
 				text = <"Tumour perforation (synthesised)">
 				description = <"Finding of tumour perforation. (synthesised)">
@@ -257,10 +261,6 @@ terminology
 			["ac4"] = <
 				text = <"Intactness of the mesorectum (synthesised)">
 				description = <"An assessment of the intactness of the mesorectum. (synthesised)">
-			>
-			["at354"] = <
-				text = <"Length">
-				description = <"Length">
 			>
 		>
 	>

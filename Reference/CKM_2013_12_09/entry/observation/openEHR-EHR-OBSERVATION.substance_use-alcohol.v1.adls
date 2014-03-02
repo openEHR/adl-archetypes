@@ -138,10 +138,6 @@ terminology
 				text = <"Grams of alcohol">
 				description = <"Number of grams of alcohol consumed">
 			>
-			["ac0.1"] = <
-				text = <"Form (synthesised)">
-				description = <"Form of alcohol used (synthesised)">
-			>
 			["at0.29"] = <
 				text = <"Frequency">
 				description = <"Frequency">
@@ -153,6 +149,10 @@ terminology
 			["at0.31"] = <
 				text = <"Mass">
 				description = <"Mass">
+			>
+			["ac0.1"] = <
+				text = <"Form (synthesised)">
+				description = <"Form of alcohol used (synthesised)">
 			>
 		>
 	>

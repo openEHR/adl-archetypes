@@ -92,10 +92,6 @@ terminology
 				text = <"Image Representation">
 				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the body system or anatomical structure.">
 			>
-			["ac1"] = <
-				text = <"Image Representation (synthesised)">
-				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the body system or anatomical structure. (synthesised)">
-			>
 			["at1"] = <
 				text = <"image/cgm">
 				description = <"image/cgm">
@@ -147,6 +143,10 @@ terminology
 			["at13"] = <
 				text = <"application/pdf">
 				description = <"application/pdf">
+			>
+			["ac1"] = <
+				text = <"Image Representation (synthesised)">
+				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the body system or anatomical structure. (synthesised)">
 			>
 		>
 	>

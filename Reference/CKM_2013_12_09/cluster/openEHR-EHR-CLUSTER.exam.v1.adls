@@ -94,10 +94,6 @@ terminology
 				text = <"Detail">
 				description = <"More focused examination findings.">
 			>
-			["ac1"] = <
-				text = <"Image (synthesised)">
-				description = <"Drawing or image of the area examined. (synthesised)">
-			>
 			["at1"] = <
 				text = <"image/gif">
 				description = <"image/gif">
@@ -109,6 +105,10 @@ terminology
 			["at3"] = <
 				text = <"image/jpeg">
 				description = <"image/jpeg">
+			>
+			["ac1"] = <
+				text = <"Image (synthesised)">
+				description = <"Drawing or image of the area examined. (synthesised)">
 			>
 		>
 	>

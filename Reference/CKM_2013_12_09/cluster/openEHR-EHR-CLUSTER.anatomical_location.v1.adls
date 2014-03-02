@@ -325,6 +325,10 @@ terminology
 				text = <"Visual markings/orientation">
 				description = <"Description of any visual markings used to orientate the viewer e.g external reference points, special sutures, ink markings.">
 			>
+			["at53"] = <
+				text = <"Length">
+				description = <"Length">
+			>
 			["ac1"] = <
 				text = <"Side (synthesised)">
 				description = <"Specify lateraility of the anatomical location. (synthesised)">
@@ -340,10 +344,6 @@ terminology
 			["ac4"] = <
 				text = <"Aspect (synthesised)">
 				description = <"Qualifier to identify which direction the anatomical location is in relation to the identified landmark. (synthesised)">
-			>
-			["at53"] = <
-				text = <"Length">
-				description = <"Length">
 			>
 		>
 	>

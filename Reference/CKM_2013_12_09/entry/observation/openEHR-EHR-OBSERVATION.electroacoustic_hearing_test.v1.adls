@@ -330,6 +330,30 @@ terminology
 				text = <"Right side normal">
 				description = <"The right ear test is normal">
 			>
+			["at51"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["at52"] = <
+				text = <"image/cgm">
+				description = <"image/cgm">
+			>
+			["at53"] = <
+				text = <"image/gif">
+				description = <"image/gif">
+			>
+			["at54"] = <
+				text = <"image/png">
+				description = <"image/png">
+			>
+			["at55"] = <
+				text = <"image/tiff">
+				description = <"image/tiff">
+			>
+			["at56"] = <
+				text = <"image/jpeg">
+				description = <"image/jpeg">
+			>
 			["ac1"] = <
 				text = <"Test (synthesised)">
 				description = <"Identify test performed (synthesised)">
@@ -365,30 +389,6 @@ terminology
 			["ac9"] = <
 				text = <"Stimulus (synthesised)">
 				description = <"Identify stimulus (synthesised)">
-			>
-			["at51"] = <
-				text = <"Frequency">
-				description = <"Frequency">
-			>
-			["at52"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
-			>
-			["at53"] = <
-				text = <"image/gif">
-				description = <"image/gif">
-			>
-			["at54"] = <
-				text = <"image/png">
-				description = <"image/png">
-			>
-			["at55"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
-			>
-			["at56"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
 			>
 		>
 	>

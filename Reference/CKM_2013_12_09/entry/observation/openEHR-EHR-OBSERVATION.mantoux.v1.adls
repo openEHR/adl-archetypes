@@ -132,14 +132,6 @@ terminology
 				text = <"Image">
 				description = <"Digital image of the test reaction.">
 			>
-			["ac1"] = <
-				text = <"Image (synthesised)">
-				description = <"Digital image of the test reaction. (synthesised)">
-			>
-			["ac2"] = <
-				text = <"Interpretation (synthesised)">
-				description = <"Clinical interpretation of the induration response. (synthesised)">
-			>
 			["at12"] = <
 				text = <"Length">
 				description = <"Length">
@@ -191,6 +183,14 @@ terminology
 			["at24"] = <
 				text = <"video/quicktime">
 				description = <"video/quicktime">
+			>
+			["ac1"] = <
+				text = <"Image (synthesised)">
+				description = <"Digital image of the test reaction. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Interpretation (synthesised)">
+				description = <"Clinical interpretation of the induration response. (synthesised)">
 			>
 		>
 	>

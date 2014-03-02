@@ -100,10 +100,6 @@ terminology
 				text = <"Author">
 				description = <"The author of the chat or instigator of the recording.">
 			>
-			["ac1"] = <
-				text = <"Audio or Video Record (synthesised)">
-				description = <"The audio or video conversation between two or more healthcare providers. (synthesised)">
-			>
 			["at1"] = <
 				text = <"actual">
 				description = <"actual">
@@ -227,6 +223,10 @@ terminology
 			["at31"] = <
 				text = <"audio/telephone-event">
 				description = <"audio/telephone-event">
+			>
+			["ac1"] = <
+				text = <"Audio or Video Record (synthesised)">
+				description = <"The audio or video conversation between two or more healthcare providers. (synthesised)">
 			>
 		>
 	>

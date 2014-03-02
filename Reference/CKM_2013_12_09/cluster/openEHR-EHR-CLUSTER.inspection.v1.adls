@@ -231,14 +231,6 @@ terminology
 				text = <"Cluster: Exam">
 				description = <"Exam details">
 			>
-			["ac1"] = <
-				text = <"Definition (synthesised)">
-				description = <"The nature of the edge of the object of examination (synthesised)">
-			>
-			["ac2"] = <
-				text = <"Drawing (synthesised)">
-				description = <"A drawing of the findings on inspection (synthesised)">
-			>
 			["at34"] = <
 				text = <"image/cgm">
 				description = <"image/cgm">
@@ -258,6 +250,14 @@ terminology
 			["at38"] = <
 				text = <"image/jpeg">
 				description = <"image/jpeg">
+			>
+			["ac1"] = <
+				text = <"Definition (synthesised)">
+				description = <"The nature of the edge of the object of examination (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Drawing (synthesised)">
+				description = <"A drawing of the findings on inspection (synthesised)">
 			>
 		>
 	>

@@ -447,8 +447,8 @@ terminology
 				description = <"*Narrative description of clinician instructions or advice related to future exposure to, or administration of, the Substance/Agent.(en)">
 			>
 			["ac1"] = <
-				text = <"*Certainty (synthesised)(en)">
-				description = <"*Degree of certainty, as assessed by a clinician, that the specific Substance/Agent was the cause of the Adverse Reaction. (synthesised)(en)">
+				text = <"*Certainty(en) (synthesised)">
+				description = <"*Degree of certainty, as assessed by a clinician, that the specific Substance/Agent was the cause of the Adverse Reaction.(en) (synthesised)">
 			>
 		>
 		["en"] = <
@@ -691,8 +691,8 @@ terminology
 				description = <"*Narrative description of clinician instructions or advice related to future exposure to, or administration of, the Substance/Agent.(en)">
 			>
 			["ac1"] = <
-				text = <"*Certainty (synthesised)(en)">
-				description = <"*Degree of certainty, as assessed by a clinician, that the specific Substance/Agent was the cause of the Adverse Reaction. (synthesised)(en)">
+				text = <"*Certainty(en) (synthesised)">
+				description = <"*Degree of certainty, as assessed by a clinician, that the specific Substance/Agent was the cause of the Adverse Reaction.(en) (synthesised)">
 			>
 		>
 	>

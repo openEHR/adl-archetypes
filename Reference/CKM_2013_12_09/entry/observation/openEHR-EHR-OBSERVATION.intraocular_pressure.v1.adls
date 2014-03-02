@@ -252,6 +252,14 @@ terminology
 				text = <"Overall Interpretation">
 				description = <"A textual intepretation, generally coded, of all the test results.">
 			>
+			["at75"] = <
+				text = <"Pressure">
+				description = <"Pressure">
+			>
+			["at76"] = <
+				text = <"Time">
+				description = <"Time">
+			>
 			["ac1"] = <
 				text = <"Eye (synthesised)">
 				description = <"The eye that was examined. (synthesised)">
@@ -263,14 +271,6 @@ terminology
 			["ac3"] = <
 				text = <"Tonometry Method (synthesised)">
 				description = <"Type of tonometery used to measure intracoular pressure. (synthesised)">
-			>
-			["at75"] = <
-				text = <"Pressure">
-				description = <"Pressure">
-			>
-			["at76"] = <
-				text = <"Time">
-				description = <"Time">
 			>
 		>
 	>

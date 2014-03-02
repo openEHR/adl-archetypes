@@ -314,22 +314,6 @@ terminology
 				text = <"FASTPAC automated standard perimetry">
 				description = <"FASTPAC automated standard perimetry was used to measure the visual fields.">
 			>
-			["ac1"] = <
-				text = <"Eye (synthesised)">
-				description = <"The eye which is being examined. (synthesised)">
-			>
-			["ac2"] = <
-				text = <"Glaucoma Hemifield Test (GHT) (synthesised)">
-				description = <"A coded intepretation of the Glaucoma Hemifield Test (GHT). (synthesised)">
-			>
-			["ac3"] = <
-				text = <"Image (synthesised)">
-				description = <"A multimedia representaion of the visual field test. (synthesised)">
-			>
-			["ac4"] = <
-				text = <"Perimetry Method (synthesised)">
-				description = <"The method used to record the perimetry result. (synthesised)">
-			>
 			["at42"] = <
 				text = <"Loudness">
 				description = <"Loudness">
@@ -353,6 +337,22 @@ terminology
 			["at47"] = <
 				text = <"image/jpeg">
 				description = <"image/jpeg">
+			>
+			["ac1"] = <
+				text = <"Eye (synthesised)">
+				description = <"The eye which is being examined. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Glaucoma Hemifield Test (GHT) (synthesised)">
+				description = <"A coded intepretation of the Glaucoma Hemifield Test (GHT). (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Image (synthesised)">
+				description = <"A multimedia representaion of the visual field test. (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Perimetry Method (synthesised)">
+				description = <"The method used to record the perimetry result. (synthesised)">
 			>
 		>
 	>

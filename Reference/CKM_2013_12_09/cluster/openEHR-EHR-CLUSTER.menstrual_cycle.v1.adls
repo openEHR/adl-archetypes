@@ -341,6 +341,10 @@ terminology
 				text = <"Cluster: Day of cycle">
 				description = <"Number of days since onset of last period.">
 			>
+			["at57"] = <
+				text = <"Time">
+				description = <"Time">
+			>
 			["ac1"] = <
 				text = <"Relative duration of cycle (synthesised)">
 				description = <"Description of the relative duration of menstrual cycle. (synthesised)">
@@ -356,10 +360,6 @@ terminology
 			["ac4"] = <
 				text = <"Type of Sanitary product (synthesised)">
 				description = <"Type of sanitary product used. (synthesised)">
-			>
-			["at57"] = <
-				text = <"Time">
-				description = <"Time">
 			>
 		>
 	>

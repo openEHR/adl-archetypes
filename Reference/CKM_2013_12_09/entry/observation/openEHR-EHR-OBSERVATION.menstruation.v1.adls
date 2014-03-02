@@ -293,13 +293,13 @@ terminology
 				text = <"Cluster: associated symptoms">
 				description = <"*">
 			>
-			["ac1"] = <
-				text = <"Hormonal or intrauterine contraception (synthesised)">
-				description = <"Details of hormonal or intrauterine contraception (synthesised)">
-			>
 			["at31"] = <
 				text = <"Time">
 				description = <"Time">
+			>
+			["ac1"] = <
+				text = <"Hormonal or intrauterine contraception (synthesised)">
+				description = <"Details of hormonal or intrauterine contraception (synthesised)">
 			>
 		>
 	>

@@ -145,13 +145,13 @@ terminology
 				text = <"Nature of involvement">
 				description = <"The nature of involvement of the tumour with the surgical margin.">
 			>
-			["ac1"] = <
-				text = <"Marginal involvement (synthesised)">
-				description = <"Evidence of tumour at a surgical resection margin. (synthesised)">
-			>
 			["at19"] = <
 				text = <"Length">
 				description = <"Length">
+			>
+			["ac1"] = <
+				text = <"Marginal involvement (synthesised)">
+				description = <"Evidence of tumour at a surgical resection margin. (synthesised)">
 			>
 		>
 	>

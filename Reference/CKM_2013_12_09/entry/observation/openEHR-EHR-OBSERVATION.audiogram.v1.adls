@@ -383,6 +383,10 @@ terminology
 				text = <"Any event">
 				description = <"Any unspecified point in time or interval event.">
 			>
+			["ac2"] = <
+				text = <"Screening Assessment (synthesised)">
+				description = <"Interpretation of a series of audiometric measurements, for purposes of screening assessment. (synthesised)">
+			>
 			["id7"] = <
 				text = <"Test">
 				description = <"The audiometry test result which can be recorded per ear or for both ears simultaneously.">
@@ -438,6 +442,10 @@ terminology
 			["at31"] = <
 				text = <"Unaided">
 				description = <"The test has been conducted without the patient using any form of auditory assistance, such as a hearing aid or cochlear implant.">
+			>
+			["ac13"] = <
+				text = <"Test Stimulus (synthesised)">
+				description = <"Identification of the frequency-specific stimulus used in measuring the hearing threshold. (synthesised)">
 			>
 			["id35"] = <
 				text = <"Test Stimulus">
@@ -771,13 +779,41 @@ terminology
 				text = <"Free text term">
 				description = <"Free text term">
 			>
+			["at135"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["at136"] = <
+				text = <"Loudness">
+				description = <"Loudness">
+			>
+			["at137"] = <
+				text = <"Time">
+				description = <"Time">
+			>
+			["at138"] = <
+				text = <"image/cgm">
+				description = <"image/cgm">
+			>
+			["at139"] = <
+				text = <"image/gif">
+				description = <"image/gif">
+			>
+			["at140"] = <
+				text = <"image/png">
+				description = <"image/png">
+			>
+			["at141"] = <
+				text = <"image/tiff">
+				description = <"image/tiff">
+			>
+			["at142"] = <
+				text = <"image/jpeg">
+				description = <"image/jpeg">
+			>
 			["ac1"] = <
 				text = <"Test Ear (synthesised)">
 				description = <"Identification of the ear being tested. (synthesised)">
-			>
-			["ac2"] = <
-				text = <"Screening Assessment (synthesised)">
-				description = <"Interpretation of a series of audiometric measurements, for purposes of screening assessment. (synthesised)">
 			>
 			["ac3"] = <
 				text = <"Type of Loss (synthesised)">
@@ -819,10 +855,6 @@ terminology
 				text = <"Test Environment (synthesised)">
 				description = <"The space and conditions in which the audiometric test is administered. (synthesised)">
 			>
-			["ac13"] = <
-				text = <"Test Stimulus (synthesised)">
-				description = <"Identification of the frequency-specific stimulus used in measuring the hearing threshold. (synthesised)">
-			>
 			["ac14"] = <
 				text = <"Threshold Definition (synthesised)">
 				description = <"Definition of the threshold level used in the test. (synthesised)">
@@ -846,38 +878,6 @@ terminology
 			["ac19"] = <
 				text = <"Stimulus Type (synthesised)">
 				description = <"Type of stimulus used. (synthesised)">
-			>
-			["at135"] = <
-				text = <"Frequency">
-				description = <"Frequency">
-			>
-			["at136"] = <
-				text = <"Loudness">
-				description = <"Loudness">
-			>
-			["at137"] = <
-				text = <"Time">
-				description = <"Time">
-			>
-			["at138"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
-			>
-			["at139"] = <
-				text = <"image/gif">
-				description = <"image/gif">
-			>
-			["at140"] = <
-				text = <"image/png">
-				description = <"image/png">
-			>
-			["at141"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
-			>
-			["at142"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
 			>
 		>
 	>

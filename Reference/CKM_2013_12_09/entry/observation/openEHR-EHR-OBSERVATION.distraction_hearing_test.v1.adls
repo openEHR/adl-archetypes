@@ -181,22 +181,6 @@ terminology
 				text = <"Reliability">
 				description = <"Estimation of the reliability of the test result - indicated by behaviour of child eg cooperative etc.">
 			>
-			["ac1"] = <
-				text = <"Side (synthesised)">
-				description = <"Side being tested (synthesised)">
-			>
-			["ac2"] = <
-				text = <"Stimulus (synthesised)">
-				description = <"Nature of stimulus sound (synthesised)">
-			>
-			["ac3"] = <
-				text = <"Response (synthesised)">
-				description = <"Consistent response of infant to stimulus (synthesised)">
-			>
-			["ac4"] = <
-				text = <"Image (synthesised)">
-				description = <"Image of test result (synthesised)">
-			>
 			["at24"] = <
 				text = <"Frequency">
 				description = <"Frequency">
@@ -224,6 +208,22 @@ terminology
 			["at30"] = <
 				text = <"image/jpeg">
 				description = <"image/jpeg">
+			>
+			["ac1"] = <
+				text = <"Side (synthesised)">
+				description = <"Side being tested (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Stimulus (synthesised)">
+				description = <"Nature of stimulus sound (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Response (synthesised)">
+				description = <"Consistent response of infant to stimulus (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Image (synthesised)">
+				description = <"Image of test result (synthesised)">
 			>
 		>
 	>

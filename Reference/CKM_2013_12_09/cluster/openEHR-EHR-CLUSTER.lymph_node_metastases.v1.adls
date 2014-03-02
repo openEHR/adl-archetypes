@@ -288,6 +288,14 @@ terminology
 				text = <"Radioactivity count">
 				description = <"Radioactivity count measured after use of radiocolloid. ">
 			>
+			["at52"] = <
+				text = <"Length">
+				description = <"Length">
+			>
+			["at53"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
 			["ac1"] = <
 				text = <"Tissue available (synthesised)">
 				description = <"Has the appropriate lymph node tissue been made available for examination? (synthesised)">
@@ -307,14 +315,6 @@ terminology
 			["ac5"] = <
 				text = <"Extra-capsular extension (synthesised)">
 				description = <"Findings of extension of tumour beyond a node capsule. (synthesised)">
-			>
-			["at52"] = <
-				text = <"Length">
-				description = <"Length">
-			>
-			["at53"] = <
-				text = <"Frequency">
-				description = <"Frequency">
 			>
 		>
 	>

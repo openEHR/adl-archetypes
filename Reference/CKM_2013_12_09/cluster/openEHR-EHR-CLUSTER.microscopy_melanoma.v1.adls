@@ -555,6 +555,10 @@ terminology
 				text = <"Present">
 				description = <"Tumour infiltrating lymphocytes are present.">
 			>
+			["at130"] = <
+				text = <"Length">
+				description = <"Length">
+			>
 			["ac1"] = <
 				text = <"Clark Level (synthesised)">
 				description = <"Grading of invasion of the melanoma. (synthesised)">
@@ -598,10 +602,6 @@ terminology
 			["ac11"] = <
 				text = <"Intraepidermal growth pattern (synthesised)">
 				description = <"Description of the melanoma growth pattern. (synthesised)">
-			>
-			["at130"] = <
-				text = <"Length">
-				description = <"Length">
 			>
 		>
 	>

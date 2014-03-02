@@ -225,10 +225,6 @@ terminology
 				text = <"Examination of the abdomen">
 				description = <"For recording findings on physical examination of the abdomen.">
 			>
-			["ac0.1"] = <
-				text = <"Region (synthesised)">
-				description = <"The abdominal region being described. (synthesised)">
-			>
 			["id0.33"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
@@ -252,6 +248,10 @@ terminology
 			["id0.38"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
+			>
+			["ac0.1"] = <
+				text = <"Region (synthesised)">
+				description = <"The abdominal region being described. (synthesised)">
 			>
 		>
 	>

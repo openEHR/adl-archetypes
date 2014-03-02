@@ -109,8 +109,8 @@ terminology
 				description = <"Patient has died.">
 			>
 			["ac1"] = <
-				text = <"Performance Status">
-				description = <"The functional performance status of a patient with cancer.">
+				text = <"Performance Status (synthesised)">
+				description = <"The functional performance status of a patient with cancer. (synthesised)">
 			>
 		>
 	>

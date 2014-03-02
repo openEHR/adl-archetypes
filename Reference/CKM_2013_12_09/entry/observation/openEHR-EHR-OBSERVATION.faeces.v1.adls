@@ -190,10 +190,6 @@ terminology
 				text = <"Time since last opened bowels">
 				description = <"Amount of time since last opened bowels">
 			>
-			["ac1"] = <
-				text = <"Consistency (synthesised)">
-				description = <"The consistency of faeces (synthesised)">
-			>
 			["at19"] = <
 				text = <"Time">
 				description = <"Time">
@@ -206,9 +202,13 @@ terminology
 				text = <"Mass">
 				description = <"Mass">
 			>
+			["ac1"] = <
+				text = <"Consistency (synthesised)">
+				description = <"The consistency of faeces (synthesised)">
+			>
 			["ac2"] = <
-				text = <"Amount">
-				description = <"The amount as a category">
+				text = <"Amount (synthesised)">
+				description = <"The amount as a category (synthesised)">
 			>
 		>
 	>

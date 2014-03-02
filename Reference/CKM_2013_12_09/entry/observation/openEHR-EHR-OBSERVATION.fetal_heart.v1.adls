@@ -173,10 +173,6 @@ terminology
 				text = <"Device">
 				description = <"Details about the device used to detect the fetal heart rate. For example, Pinard's stethoscope or Doppler Ultrasound.">
 			>
-			["ac1"] = <
-				text = <"Position of Mother (synthesised)">
-				description = <"The position of the mother when the fetal heart rate was measured. (synthesised)">
-			>
 			["at19"] = <
 				text = <"foetus">
 				description = <"foetus">
@@ -184,6 +180,10 @@ terminology
 			["at20"] = <
 				text = <"Frequency">
 				description = <"Frequency">
+			>
+			["ac1"] = <
+				text = <"Position of Mother (synthesised)">
+				description = <"The position of the mother when the fetal heart rate was measured. (synthesised)">
 			>
 		>
 	>

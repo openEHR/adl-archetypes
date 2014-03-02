@@ -233,10 +233,6 @@ terminology
 				text = <"Confounding factors">
 				description = <"Other factors that may interfere with interpretation of the measurement.">
 			>
-			["ac1"] = <
-				text = <"Phase of heart cycle (synthesised)">
-				description = <"The phase of the heart cycle at the time of the measurement (synthesised)">
-			>
 			["at29"] = <
 				text = <"Pressure">
 				description = <"Pressure">
@@ -245,9 +241,13 @@ terminology
 				text = <"mean">
 				description = <"mean">
 			>
+			["ac1"] = <
+				text = <"Phase of heart cycle (synthesised)">
+				description = <"The phase of the heart cycle at the time of the measurement (synthesised)">
+			>
 			["ac2"] = <
-				text = <"Relative pressure">
-				description = <"The pressure in relative terms.">
+				text = <"Relative pressure (synthesised)">
+				description = <"The pressure in relative terms. (synthesised)">
 			>
 		>
 	>

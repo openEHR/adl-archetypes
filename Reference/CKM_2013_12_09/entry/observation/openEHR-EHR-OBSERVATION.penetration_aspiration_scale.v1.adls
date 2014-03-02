@@ -109,8 +109,8 @@ terminology
 				description = <"Material passes glottis, and is not ejected; visible subglottic stasis; absent patient response.">
 			>
 			["ac1"] = <
-				text = <"Penetration-Aspiration Scale">
-				description = <"Scale to describe penetration and aspiration events.">
+				text = <"Penetration-Aspiration Scale (synthesised)">
+				description = <"Scale to describe penetration and aspiration events. (synthesised)">
 			>
 		>
 	>

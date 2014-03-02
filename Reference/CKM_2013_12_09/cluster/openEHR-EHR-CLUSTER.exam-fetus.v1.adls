@@ -436,6 +436,22 @@ terminology
 				text = <"Abdominal Findings">
 				description = <"Clinical findings on abdominal examination.">
 			>
+			["at0.87"] = <
+				text = <"Length">
+				description = <"Length">
+			>
+			["at0.88"] = <
+				text = <"Mass">
+				description = <"Mass">
+			>
+			["id0.103"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+			["id0.104"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
 			["ac0.1"] = <
 				text = <"Lie of the fetus (synthesised)">
 				description = <"The position of the fetus. (synthesised)">
@@ -467,22 +483,6 @@ terminology
 			["ac0.8"] = <
 				text = <"Flexion (synthesised)">
 				description = <"Findings about fetal flexion on vaginal examination. (synthesised)">
-			>
-			["at0.87"] = <
-				text = <"Length">
-				description = <"Length">
-			>
-			["at0.88"] = <
-				text = <"Mass">
-				description = <"Mass">
-			>
-			["id0.103"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
-			>
-			["id0.104"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
 			>
 		>
 	>

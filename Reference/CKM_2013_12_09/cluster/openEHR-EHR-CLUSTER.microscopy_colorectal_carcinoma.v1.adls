@@ -735,6 +735,10 @@ terminology
 				text = <"Comment">
 				description = <"Comment concerning adenomatous polyps.">
 			>
+			["at372"] = <
+				text = <"Length">
+				description = <"Length">
+			>
 			["ac1"] = <
 				text = <"Grade (synthesised)">
 				description = <"Histological grade of the tumour. (synthesised)">
@@ -790,10 +794,6 @@ terminology
 			["ac14"] = <
 				text = <"Grade (RCP) (synthesised)">
 				description = <"An estimate of the response to neoadjuvant therapy. (RCP) Royal College of Pathologists (UK). (synthesised)">
-			>
-			["at372"] = <
-				text = <"Length">
-				description = <"Length">
 			>
 		>
 	>

@@ -398,6 +398,10 @@ healthcare provider, but may be collected directly by the patient or carer at ho
 				text = <"Number of containers">
 				description = <"The total number of containers holding this specimen.">
 			>
+			["at66"] = <
+				text = <"Length">
+				description = <"Length">
+			>
 			["ac1"] = <
 				text = <"Specimen received issues (synthesised)">
 				description = <"Specific issue with a received specimen. (synthesised)">
@@ -409,10 +413,6 @@ healthcare provider, but may be collected directly by the patient or carer at ho
 			["ac3"] = <
 				text = <"Adequacy for testing (synthesised)">
 				description = <"Is the specimen adequate for testing? (synthesised)">
-			>
-			["at66"] = <
-				text = <"Length">
-				description = <"Length">
 			>
 		>
 	>

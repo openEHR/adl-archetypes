@@ -413,6 +413,34 @@ terminology
 				text = <"Confounding Factors">
 				description = <"Description of incidental factors that may be contributing to the screening result.">
 			>
+			["at141"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["at142"] = <
+				text = <"Loudness">
+				description = <"Loudness">
+			>
+			["at143"] = <
+				text = <"image/cgm">
+				description = <"image/cgm">
+			>
+			["at144"] = <
+				text = <"image/gif">
+				description = <"image/gif">
+			>
+			["at145"] = <
+				text = <"image/png">
+				description = <"image/png">
+			>
+			["at146"] = <
+				text = <"image/tiff">
+				description = <"image/tiff">
+			>
+			["at147"] = <
+				text = <"image/jpeg">
+				description = <"image/jpeg">
+			>
 			["ac1"] = <
 				text = <"Test Ear (synthesised)">
 				description = <"Identification of the ear to which the test stimulus is being presented. (synthesised)">
@@ -444,34 +472,6 @@ terminology
 			["ac8"] = <
 				text = <"Calibration Reference dB (synthesised)">
 				description = <"Scale used for acoustic calibration check. (synthesised)">
-			>
-			["at141"] = <
-				text = <"Frequency">
-				description = <"Frequency">
-			>
-			["at142"] = <
-				text = <"Loudness">
-				description = <"Loudness">
-			>
-			["at143"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
-			>
-			["at144"] = <
-				text = <"image/gif">
-				description = <"image/gif">
-			>
-			["at145"] = <
-				text = <"image/png">
-				description = <"image/png">
-			>
-			["at146"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
-			>
-			["at147"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
 			>
 		>
 	>

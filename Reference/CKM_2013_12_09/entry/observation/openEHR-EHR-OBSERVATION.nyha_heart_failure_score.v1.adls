@@ -117,10 +117,6 @@ terminology
 				text = <"Confounding factors">
 				description = <"Record any issues or factors that may impact on the classification of heart failure symptoms.">
 			>
-			["ac1"] = <
-				text = <"Heart failure classification (synthesised)">
-				description = <"The functional classification of heart failure based on patient symptoms. (synthesised)">
-			>
 			["at10"] = <
 				text = <"unknown">
 				description = <"unknown">
@@ -137,9 +133,13 @@ terminology
 				text = <"not applicable">
 				description = <"not applicable">
 			>
+			["ac1"] = <
+				text = <"Heart failure classification (synthesised)">
+				description = <"The functional classification of heart failure based on patient symptoms. (synthesised)">
+			>
 			["ac2"] = <
-				text = <"Heart failure classification">
-				description = <"The functional classification of heart failure based on patient symptoms.">
+				text = <"Heart failure classification (synthesised)">
+				description = <"The functional classification of heart failure based on patient symptoms. (synthesised)">
 			>
 		>
 	>

@@ -203,6 +203,10 @@ terminology
 				text = <"Findings">
 				description = <"Clinical findings.">
 			>
+			["at0.28"] = <
+				text = <"Length">
+				description = <"Length">
+			>
 			["ac0.1"] = <
 				text = <"Position (synthesised)">
 				description = <"Position of uterus. (synthesised)">
@@ -210,10 +214,6 @@ terminology
 			["ac0.2"] = <
 				text = <"Relative to anatomical markers (synthesised)">
 				description = <"Relative size of uterus related to anatomy of person. (synthesised)">
-			>
-			["at0.28"] = <
-				text = <"Length">
-				description = <"Length">
 			>
 		>
 	>

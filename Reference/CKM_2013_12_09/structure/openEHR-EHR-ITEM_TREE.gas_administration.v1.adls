@@ -177,10 +177,6 @@ terminology
 				text = <"Selbstverabreichung">
 				description = <"Verabreichung vom Patienten selbst, wenn erforderlich">
 			>
-			["ac1"] = <
-				text = <"*Means of delivery (synthesised)(en)">
-				description = <"*The means of delivery (synthesised)(en)">
-			>
 			["at13"] = <
 				text = <"*Flow rate, volume (en)">
 				description = <"*Flow rate, volume (en)">
@@ -188,6 +184,10 @@ terminology
 			["at14"] = <
 				text = <"*Pressure (en)">
 				description = <"*Pressure (en)">
+			>
+			["ac1"] = <
+				text = <"Zuführungsart (synthesised)">
+				description = <"Die Art der Zuführung (synthesised)">
 			>
 		>
 		["en"] = <
@@ -251,10 +251,6 @@ terminology
 				text = <"Self-administered">
 				description = <"Is the administration by the patient as required">
 			>
-			["ac1"] = <
-				text = <"Means of delivery (synthesised)">
-				description = <"The means of delivery (synthesised)">
-			>
 			["at13"] = <
 				text = <"Flow rate, volume">
 				description = <"Flow rate, volume">
@@ -262,6 +258,10 @@ terminology
 			["at14"] = <
 				text = <"Pressure">
 				description = <"Pressure">
+			>
+			["ac1"] = <
+				text = <"Means of delivery (synthesised)">
+				description = <"The means of delivery (synthesised)">
 			>
 		>
 	>

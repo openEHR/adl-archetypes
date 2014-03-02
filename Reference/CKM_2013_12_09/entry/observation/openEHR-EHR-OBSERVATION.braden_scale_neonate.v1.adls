@@ -297,32 +297,32 @@ terminology
 				description = <"The neonate is at risk of developing a pressure ulcer.">
 			>
 			["ac1"] = <
-				text = <"General physical condition">
-				description = <"An assessment of general condition, based on gestational age.">
+				text = <"General physical condition (synthesised)">
+				description = <"An assessment of general condition, based on gestational age. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Moisture">
-				description = <"The dgree to which the infant's skin is exposed to moisture.">
+				text = <"Moisture (synthesised)">
+				description = <"The dgree to which the infant's skin is exposed to moisture. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Nutrition">
-				description = <"The usual food intake of the neonate.">
+				text = <"Nutrition (synthesised)">
+				description = <"The usual food intake of the neonate. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Activity">
-				description = <"The amount of physical activity of the neonate.">
+				text = <"Activity (synthesised)">
+				description = <"The amount of physical activity of the neonate. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Mobility">
-				description = <"The neonate's ability ot change and control body position.">
+				text = <"Mobility (synthesised)">
+				description = <"The neonate's ability ot change and control body position. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Mental status">
-				description = <"An evaluation of the mental status or sensory preception of the neonate.">
+				text = <"Mental status (synthesised)">
+				description = <"An evaluation of the mental status or sensory preception of the neonate. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Graded risk">
-				description = <"A graded risk derived from the summed Total score.">
+				text = <"Graded risk (synthesised)">
+				description = <"A graded risk derived from the summed Total score. (synthesised)">
 			>
 		>
 	>

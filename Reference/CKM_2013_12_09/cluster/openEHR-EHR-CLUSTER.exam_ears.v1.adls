@@ -85,10 +85,6 @@ terminology
 				text = <"Multimedia Representation">
 				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the ears.">
 			>
-			["ac1"] = <
-				text = <"Multimedia Representation (synthesised)">
-				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the ears. (synthesised)">
-			>
 			["at1"] = <
 				text = <"image/cgm">
 				description = <"image/cgm">
@@ -140,6 +136,10 @@ terminology
 			["at13"] = <
 				text = <"application/pdf">
 				description = <"application/pdf">
+			>
+			["ac1"] = <
+				text = <"Multimedia Representation (synthesised)">
+				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the ears. (synthesised)">
 			>
 		>
 	>

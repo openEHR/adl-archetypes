@@ -275,10 +275,6 @@ terminology
 				text = <"Findings">
 				description = <"Clinical findings about the mouth.">
 			>
-			["ac0.1"] = <
-				text = <"Deviation (synthesised)">
-				description = <"Findings of uvular deviation. (synthesised)">
-			>
 			["id0.44"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
@@ -306,6 +302,10 @@ terminology
 			["id0.56"] = <
 				text = <"(added by post-parse processor)">
 				description = <"(added by post-parse processor)">
+			>
+			["ac0.1"] = <
+				text = <"Deviation (synthesised)">
+				description = <"Findings of uvular deviation. (synthesised)">
 			>
 		>
 	>

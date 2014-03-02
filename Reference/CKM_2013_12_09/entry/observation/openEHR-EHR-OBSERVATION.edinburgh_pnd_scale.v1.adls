@@ -406,44 +406,44 @@ terminology
 				description = <"Total score for the Edinburgh Postnatal Depression Scale.">
 			>
 			["ac1"] = <
-				text = <"I have been able to laugh and see the funny side of things">
-				description = <"Item 1.">
+				text = <"I have been able to laugh and see the funny side of things (synthesised)">
+				description = <"Item 1. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"I have looked forward with enjoyment to things">
-				description = <"Item 2.">
+				text = <"I have looked forward with enjoyment to things (synthesised)">
+				description = <"Item 2. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"I have blamed myself unnecessarily when things went wrong">
-				description = <"Item 3.">
+				text = <"I have blamed myself unnecessarily when things went wrong (synthesised)">
+				description = <"Item 3. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"I have been worried and anxious for no good reason">
-				description = <"Item 4.">
+				text = <"I have been worried and anxious for no good reason (synthesised)">
+				description = <"Item 4. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"I have felt scared or panicky for no very good reason">
-				description = <"Item 5.">
+				text = <"I have felt scared or panicky for no very good reason (synthesised)">
+				description = <"Item 5. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Things have been getting on top of me">
-				description = <"Item 6.">
+				text = <"Things have been getting on top of me (synthesised)">
+				description = <"Item 6. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"I have been so unhappy that I have had difficulties sleeping">
-				description = <"Item 7.">
+				text = <"I have been so unhappy that I have had difficulties sleeping (synthesised)">
+				description = <"Item 7. (synthesised)">
 			>
 			["ac8"] = <
-				text = <"I have felt sad or miserable">
-				description = <"Item 8.">
+				text = <"I have felt sad or miserable (synthesised)">
+				description = <"Item 8. (synthesised)">
 			>
 			["ac9"] = <
-				text = <"I have been so unhappy that I have been crying">
-				description = <"Item 9.">
+				text = <"I have been so unhappy that I have been crying (synthesised)">
+				description = <"Item 9. (synthesised)">
 			>
 			["ac10"] = <
-				text = <"The thought of harming myself has occurred to me">
-				description = <"Item 10.">
+				text = <"The thought of harming myself has occurred to me (synthesised)">
+				description = <"Item 10. (synthesised)">
 			>
 		>
 	>

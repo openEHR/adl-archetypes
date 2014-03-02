@@ -404,6 +404,18 @@ terminology
 				text = <"Contained substance detail">
 				description = <"Details of a contained substance.">
 			>
+			["at84"] = <
+				text = <"Volume">
+				description = <"Volume">
+			>
+			["at85"] = <
+				text = <"Mass">
+				description = <"Mass">
+			>
+			["at86"] = <
+				text = <"Flow rate, volume">
+				description = <"Flow rate, volume">
+			>
 			["ac1"] = <
 				text = <"Amount (synthesised)">
 				description = <"The amount of substance as a category. (synthesised)">
@@ -431,18 +443,6 @@ terminology
 			["ac7"] = <
 				text = <"Consistency (synthesised)">
 				description = <"Findings realted to the consistency of the substance. (synthesised)">
-			>
-			["at84"] = <
-				text = <"Volume">
-				description = <"Volume">
-			>
-			["at85"] = <
-				text = <"Mass">
-				description = <"Mass">
-			>
-			["at86"] = <
-				text = <"Flow rate, volume">
-				description = <"Flow rate, volume">
 			>
 		>
 	>

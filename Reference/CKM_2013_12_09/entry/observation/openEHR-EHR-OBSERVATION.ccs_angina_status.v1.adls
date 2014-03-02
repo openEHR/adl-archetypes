@@ -98,8 +98,8 @@ terminology
 				description = <"Inability to perform any physical activity without discomfort.">
 			>
 			["ac1"] = <
-				text = <"Angina classification">
-				description = <"Angina symptom score based on Canadian Cardiovascular Society (CCS) Angina Status classification.">
+				text = <"Angina classification (synthesised)">
+				description = <"Angina symptom score based on Canadian Cardiovascular Society (CCS) Angina Status classification. (synthesised)">
 			>
 		>
 	>

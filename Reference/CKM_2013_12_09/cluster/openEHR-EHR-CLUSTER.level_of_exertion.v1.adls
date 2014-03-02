@@ -135,6 +135,10 @@ terminology
 				text = <"Description">
 				description = <"Description of the exertion.">
 			>
+			["at17"] = <
+				text = <"Work">
+				description = <"Work">
+			>
 			["ac1"] = <
 				text = <"Intensity (synthesised)">
 				description = <"Semiquantitative description of the intensity of exercise undertaken. (synthesised)">
@@ -142,10 +146,6 @@ terminology
 			["ac2"] = <
 				text = <"Phase (synthesised)">
 				description = <"The phase or context of exercise. (synthesised)">
-			>
-			["at17"] = <
-				text = <"Work">
-				description = <"Work">
 			>
 		>
 		["ar-sy"] = <
@@ -201,17 +201,17 @@ terminology
 				text = <"الوصف">
 				description = <"وصف المجهود">
 			>
-			["ac1"] = <
-				text = <"*Intensity (synthesised)(en)">
-				description = <"*Semiquantitative description of the intensity of exercise undertaken. (synthesised)(en)">
-			>
-			["ac2"] = <
-				text = <"*Phase (synthesised)(en)">
-				description = <"*The phase or context of exercise. (synthesised)(en)">
-			>
 			["at17"] = <
 				text = <"*Work (en)">
 				description = <"*Work (en)">
+			>
+			["ac1"] = <
+				text = <"الشدة (synthesised)">
+				description = <"وصف نصف كمي لشدة التمرين الذي يتم فعله (synthesised)">
+			>
+			["ac2"] = <
+				text = <"الطور (synthesised)">
+				description = <"طور أو سياق التمرين (synthesised)">
 			>
 		>
 	>

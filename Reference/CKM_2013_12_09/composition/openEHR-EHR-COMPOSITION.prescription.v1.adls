@@ -87,13 +87,13 @@ terminology
 				text = <"Section: Medications">
 				description = <"*">
 			>
-			["ac1"] = <
-				text = <"Prescription category (synthesised)">
-				description = <"Australian prescription category (synthesised)">
-			>
 			["at7"] = <
 				text = <"event">
 				description = <"event">
+			>
+			["ac1"] = <
+				text = <"Prescription category (synthesised)">
+				description = <"Australian prescription category (synthesised)">
 			>
 		>
 	>

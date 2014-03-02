@@ -254,13 +254,13 @@ terminology
 				text = <"Comentário">
 				description = <"Comentário sobre a medição, por exemplo, IMC observando que as medidas utilizadas foram ajustadas para peso / altura.">
 			>
-			["ac1"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*The method of entering the Body Mass Index. (synthesised)(en)">
-			>
 			["at10"] = <
 				text = <"*Mass per area (en)">
 				description = <"*Mass per area (en)">
+			>
+			["ac1"] = <
+				text = <"Método (synthesised)">
+				description = <"Método de entrada do IMC. (synthesised)">
 			>
 		>
 		["es-ar"] = <
@@ -296,13 +296,13 @@ terminology
 				text = <"Comentario">
 				description = <"Comentario sobre la medición del Índice de Masa Corporal ej: informando que la medición registrada fue peso/altura ajustado. ">
 			>
-			["ac1"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*The method of entering the Body Mass Index. (synthesised)(en)">
-			>
 			["at10"] = <
 				text = <"*Mass per area (en)">
 				description = <"*Mass per area (en)">
+			>
+			["ac1"] = <
+				text = <"Método (synthesised)">
+				description = <"El método de registro del Índice de Masa Corporal. (synthesised)">
 			>
 		>
 		["fa"] = <
@@ -339,13 +339,13 @@ terminology
 				text = <"نظر">
 				description = <"نظر در مورد اندازه گیری شاخص توده بدن به عنوان مثال ذکر اینکه در اندازه گیری های انجام شده از وزن و یا قد معادل استفاده شده است ">
 			>
-			["ac1"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*The method of entering the Body Mass Index. (synthesised)(en)">
-			>
 			["at10"] = <
 				text = <"*Mass per area (en)">
 				description = <"*Mass per area (en)">
+			>
+			["ac1"] = <
+				text = <"روش (synthesised)">
+				description = <"روش ثبت شاخص توده بدن (synthesised)">
 			>
 		>
 		["en"] = <
@@ -381,13 +381,13 @@ terminology
 				text = <"Comment">
 				description = <"Comment about the Body Mass Index measurement eg noting that the measurements used were adjusted weight/height.">
 			>
-			["ac1"] = <
-				text = <"Method (synthesised)">
-				description = <"The method of entering the Body Mass Index. (synthesised)">
-			>
 			["at10"] = <
 				text = <"Mass per area">
 				description = <"Mass per area">
+			>
+			["ac1"] = <
+				text = <"Method (synthesised)">
+				description = <"The method of entering the Body Mass Index. (synthesised)">
 			>
 		>
 		["ar-sy"] = <
@@ -423,13 +423,13 @@ terminology
 				text = <"تعليق">
 				description = <"تعليق حول قياس معامل كتلة الجسم مثل ملاحظة أن القياسات المستخدمة هي قياسات مصححة للوزن و الطول">
 			>
-			["ac1"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*The method of entering the Body Mass Index. (synthesised)(en)">
-			>
 			["at10"] = <
 				text = <"*Mass per area (en)">
 				description = <"*Mass per area (en)">
+			>
+			["ac1"] = <
+				text = <"الطريقة (synthesised)">
+				description = <"طريقة إدخال معامل كتلة الجسم (synthesised)">
 			>
 		>
 		["nl"] = <
@@ -465,13 +465,13 @@ terminology
 				text = <"Opmerking">
 				description = <"Opmerking over de Body Mass Index meting, b.v. dat de metingen die gebruikt werden voor de berekening, aangepaste lengte/gewicht zijn.">
 			>
-			["ac1"] = <
-				text = <"*Method (synthesised)(en)">
-				description = <"*The method of entering the Body Mass Index. (synthesised)(en)">
-			>
 			["at10"] = <
 				text = <"*Mass per area (en)">
 				description = <"*Mass per area (en)">
+			>
+			["ac1"] = <
+				text = <"Methode (synthesised)">
+				description = <"De methode om de Body Mass Index in te voeren. (synthesised)">
 			>
 		>
 	>

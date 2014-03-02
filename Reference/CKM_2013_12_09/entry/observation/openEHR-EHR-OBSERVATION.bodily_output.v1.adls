@@ -193,10 +193,6 @@ terminology
 				text = <"Voiding difficulty">
 				description = <"Description of  any difficulty voiding.">
 			>
-			["ac1"] = <
-				text = <"Measurement precision (synthesised)">
-				description = <"Records the level of precision of the fluid output observation. (synthesised)">
-			>
 			["at22"] = <
 				text = <"total">
 				description = <"total">
@@ -204,6 +200,10 @@ terminology
 			["at23"] = <
 				text = <"actual">
 				description = <"actual">
+			>
+			["ac1"] = <
+				text = <"Measurement precision (synthesised)">
+				description = <"Records the level of precision of the fluid output observation. (synthesised)">
 			>
 		>
 	>

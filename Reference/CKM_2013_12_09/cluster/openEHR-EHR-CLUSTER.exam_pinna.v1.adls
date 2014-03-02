@@ -227,18 +227,6 @@ terminology
 				text = <"Related Examination Detail">
 				description = <"Structured details of related physical examination findings for the identified pinna structure.">
 			>
-			["ac1"] = <
-				text = <"Symmetry? (synthesised)">
-				description = <"Description of the symmetry of the ears in comparison to one another. (synthesised)">
-			>
-			["ac2"] = <
-				text = <"Pinna Examined (synthesised)">
-				description = <"Identification of the pinna examined. (synthesised)">
-			>
-			["ac3"] = <
-				text = <"Image Representation (synthesised)">
-				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the body system or anatomical structure. (synthesised)">
-			>
 			["at14"] = <
 				text = <"image/cgm">
 				description = <"image/cgm">
@@ -290,6 +278,18 @@ terminology
 			["at26"] = <
 				text = <"application/pdf">
 				description = <"application/pdf">
+			>
+			["ac1"] = <
+				text = <"Symmetry? (synthesised)">
+				description = <"Description of the symmetry of the ears in comparison to one another. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Pinna Examined (synthesised)">
+				description = <"Identification of the pinna examined. (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Image Representation (synthesised)">
+				description = <"Digital image or video taken, or a diagram drawn, during the physical examination of the body system or anatomical structure. (synthesised)">
 			>
 		>
 	>

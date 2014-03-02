@@ -166,10 +166,6 @@ terminology
 				text = <"Interpupillary Distance">
 				description = <"The distance between the center of the pupils of the two eyes.">
 			>
-			["ac1"] = <
-				text = <"Prism Base Direction (synthesised)">
-				description = <"Prism base direction expressed as a numeric angle or as coded text. (synthesised)">
-			>
 			["at15"] = <
 				text = <"Refractive power">
 				description = <"Refractive power">
@@ -181,6 +177,10 @@ terminology
 			["at17"] = <
 				text = <"Length">
 				description = <"Length">
+			>
+			["ac1"] = <
+				text = <"Prism Base Direction (synthesised)">
+				description = <"Prism base direction expressed as a numeric angle or as coded text. (synthesised)">
 			>
 		>
 	>

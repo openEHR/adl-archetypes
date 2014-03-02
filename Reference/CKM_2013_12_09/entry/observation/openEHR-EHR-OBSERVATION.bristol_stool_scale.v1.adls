@@ -141,8 +141,8 @@ terminology
 				description = <"Stool is watery, no solid pieces. Entirely liquid.">
 			>
 			["ac1"] = <
-				text = <"Bristol Stool scale">
-				description = <"A score to assess the characteristics of faeces after defaecation.">
+				text = <"Bristol Stool scale (synthesised)">
+				description = <"A score to assess the characteristics of faeces after defaecation. (synthesised)">
 			>
 			["id15"] = <
 				text = <"Confounding factors">
@@ -195,8 +195,8 @@ terminology
 				description = <"*Stool is watery, no solid pieces. Entirely liquid.(en)">
 			>
 			["ac1"] = <
-				text = <"*Bristol Stool scale(en)">
-				description = <"*A score to assess the characteristics of faeces after defaecation.(en)">
+				text = <"Lestvica Bristol (synthesised)">
+				description = <"*A score to assess the characteristics of faeces after defaecation.(en) (synthesised)">
 			>
 			["id15"] = <
 				text = <"*Confounding factors(en)">

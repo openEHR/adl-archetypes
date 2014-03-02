@@ -316,32 +316,32 @@ terminology
 				description = <"At extreme risk for developing pressure ulcers and an aggressive prevention protocol should be initiated.">
 			>
 			["ac1"] = <
-				text = <"Sensory perception">
-				description = <"Ability to respond meaningfully to pressure-related discomfort.">
+				text = <"Sensory perception (synthesised)">
+				description = <"Ability to respond meaningfully to pressure-related discomfort. (synthesised)">
 			>
 			["ac2"] = <
-				text = <"Moisture">
-				description = <"Degree to which skin is exposed to moisture.">
+				text = <"Moisture (synthesised)">
+				description = <"Degree to which skin is exposed to moisture. (synthesised)">
 			>
 			["ac3"] = <
-				text = <"Activity">
-				description = <"Degree of physical ability.">
+				text = <"Activity (synthesised)">
+				description = <"Degree of physical ability. (synthesised)">
 			>
 			["ac4"] = <
-				text = <"Mobility">
-				description = <"Ability to change and control body position.">
+				text = <"Mobility (synthesised)">
+				description = <"Ability to change and control body position. (synthesised)">
 			>
 			["ac5"] = <
-				text = <"Nutrition">
-				description = <"Usual food intake pattern.">
+				text = <"Nutrition (synthesised)">
+				description = <"Usual food intake pattern. (synthesised)">
 			>
 			["ac6"] = <
-				text = <"Friction and shear">
-				description = <"Friction occurs when skin moves against support surfaces.  Shear occurs when skin and adjacent bony surface slide across one another.">
+				text = <"Friction and shear (synthesised)">
+				description = <"Friction occurs when skin moves against support surfaces.  Shear occurs when skin and adjacent bony surface slide across one another. (synthesised)">
 			>
 			["ac7"] = <
-				text = <"Braden risk grade">
-				description = <"A graded risk score based upon addition of all sub-scores that determines the patient's overall risk for developing a pressure ulcer.">
+				text = <"Braden risk grade (synthesised)">
+				description = <"A graded risk score based upon addition of all sub-scores that determines the patient's overall risk for developing a pressure ulcer. (synthesised)">
 			>
 		>
 	>

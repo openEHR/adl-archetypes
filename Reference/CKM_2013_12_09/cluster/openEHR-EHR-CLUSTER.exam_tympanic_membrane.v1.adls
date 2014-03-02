@@ -832,6 +832,70 @@ terminology
 				text = <"Indeterminate">
 				description = <"It is not possible to tell if the tympanic membrane is intact or perforated.">
 			>
+			["at184"] = <
+				text = <"unknown">
+				description = <"unknown">
+			>
+			["at185"] = <
+				text = <"no information">
+				description = <"no information">
+			>
+			["at186"] = <
+				text = <"not applicable">
+				description = <"not applicable">
+			>
+			["at187"] = <
+				text = <"masked">
+				description = <"masked">
+			>
+			["at188"] = <
+				text = <"image/cgm">
+				description = <"image/cgm">
+			>
+			["at189"] = <
+				text = <"image/gif">
+				description = <"image/gif">
+			>
+			["at190"] = <
+				text = <"image/png">
+				description = <"image/png">
+			>
+			["at191"] = <
+				text = <"image/tiff">
+				description = <"image/tiff">
+			>
+			["at192"] = <
+				text = <"image/jpeg">
+				description = <"image/jpeg">
+			>
+			["at193"] = <
+				text = <"video/BT656">
+				description = <"video/BT656">
+			>
+			["at194"] = <
+				text = <"video/CelB">
+				description = <"video/CelB">
+			>
+			["at195"] = <
+				text = <"video/H261">
+				description = <"video/H261">
+			>
+			["at196"] = <
+				text = <"video/H263">
+				description = <"video/H263">
+			>
+			["at197"] = <
+				text = <"video/H263-1998">
+				description = <"video/H263-1998">
+			>
+			["at198"] = <
+				text = <"video/H263-2000">
+				description = <"video/H263-2000">
+			>
+			["at199"] = <
+				text = <"video/quicktime">
+				description = <"video/quicktime">
+			>
 			["ac1"] = <
 				text = <"Ear Examined (synthesised)">
 				description = <"Identification of the ear under examination. (synthesised)">
@@ -943,70 +1007,6 @@ terminology
 			["ac28"] = <
 				text = <"Image (synthesised)">
 				description = <"Multimedia image taken during the physical examination of the external auditory canal and tympanic membrane. (synthesised)">
-			>
-			["at184"] = <
-				text = <"unknown">
-				description = <"unknown">
-			>
-			["at185"] = <
-				text = <"no information">
-				description = <"no information">
-			>
-			["at186"] = <
-				text = <"not applicable">
-				description = <"not applicable">
-			>
-			["at187"] = <
-				text = <"masked">
-				description = <"masked">
-			>
-			["at188"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
-			>
-			["at189"] = <
-				text = <"image/gif">
-				description = <"image/gif">
-			>
-			["at190"] = <
-				text = <"image/png">
-				description = <"image/png">
-			>
-			["at191"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
-			>
-			["at192"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
-			>
-			["at193"] = <
-				text = <"video/BT656">
-				description = <"video/BT656">
-			>
-			["at194"] = <
-				text = <"video/CelB">
-				description = <"video/CelB">
-			>
-			["at195"] = <
-				text = <"video/H261">
-				description = <"video/H261">
-			>
-			["at196"] = <
-				text = <"video/H263">
-				description = <"video/H263">
-			>
-			["at197"] = <
-				text = <"video/H263-1998">
-				description = <"video/H263-1998">
-			>
-			["at198"] = <
-				text = <"video/H263-2000">
-				description = <"video/H263-2000">
-			>
-			["at199"] = <
-				text = <"video/quicktime">
-				description = <"video/quicktime">
 			>
 		>
 	>
