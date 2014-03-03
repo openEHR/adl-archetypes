@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4)
 	openEHR-EHR-OBSERVATION.pathology_test-lipids.v1
 specialise
 	openEHR-EHR-OBSERVATION.pathology_test.v1
@@ -171,7 +171,7 @@ definition
 															>
 														}
 													}
-													use_node ELEMENT occurrences matches {0..*} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
+													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0103]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Reference Range Guidance]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0108]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Value Status]
 												}
@@ -195,7 +195,7 @@ definition
 															>
 														}
 													}
-													use_node ELEMENT occurrences matches {0..*} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
+													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0103]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Reference Range Guidance]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0108]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Value Status]
 												}
@@ -219,7 +219,7 @@ definition
 															>
 														}
 													}
-													use_node ELEMENT occurrences matches {0..*} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
+													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0103]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Reference Range Guidance]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0108]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Value Status]
 												}
@@ -243,7 +243,7 @@ definition
 															>
 														}
 													}
-													use_node ELEMENT occurrences matches {0..*} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
+													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0103]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Reference Range Guidance]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0108]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Value Status]
 												}
@@ -267,7 +267,7 @@ definition
 															>
 														}
 													}
-													use_node ELEMENT occurrences matches {0..*} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
+													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0103]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Reference Range Guidance]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0108]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Value Status]
 												}
@@ -282,7 +282,7 @@ definition
 															}
 														}
 													}
-													use_node ELEMENT occurrences matches {0..*} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
+													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0103]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Reference Range Guidance]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0108]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Value Status]
 												}
@@ -297,7 +297,7 @@ definition
 															}
 														}
 													}
-													use_node ELEMENT occurrences matches {0..*} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
+													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0102]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Comment]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0103]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Reference Range Guidance]
 													use_node ELEMENT occurrences matches {0..1} /data[at0001]/events[at0002]/data[at0003]/items[at0095]/items[at0096.6]/items[at0108]	-- /data[Event Series]/events[Any event]/data[Tree]/items[Result Group]/items[Total Cholesterol]/items[Result Value Status]
 												}
