@@ -126,7 +126,7 @@ definition
 											}
 										}
 									}
-									use_node ELEMENT[id0.122] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.98]/items[id0.119][id0.99]	-- /data[id2]/events[id3]/state[id0.89]/items[Glucose challenge]/items[(added by post-parse processor)]
+									use_node ELEMENT[id0.122] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.98]/items[id0.99]	-- /data[id2]/events[id3]/state[id0.89]/items[Glucose challenge]/items[Timing]
 									use_node ELEMENT[id0.123] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.90]/items[id0.96]	-- /data[id2]/events[id3]/state[id0.89]/items[Diet]/items[Duration]
 								}
 							}
@@ -137,7 +137,7 @@ definition
 											DV_TEXT[id0.124] 
 										}
 									}
-									use_node ELEMENT[id0.125] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.98]/items[id0.119][id0.99]	-- /data[id2]/events[id3]/state[id0.89]/items[Glucose challenge]/items[(added by post-parse processor)]
+									use_node ELEMENT[id0.125] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.98]/items[id0.99]	-- /data[id2]/events[id3]/state[id0.89]/items[Glucose challenge]/items[Timing]
 									use_node ELEMENT[id0.126] occurrences matches {0..1} /data[id2]/events[id3]/state[id0.89]/items[id0.90]/items[id0.96]	-- /data[id2]/events[id3]/state[id0.89]/items[Diet]/items[Duration]
 								}
 							}
