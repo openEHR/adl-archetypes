@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4)
 	openEHR-EHR-OBSERVATION.intravascular_pressure-cvp.v1
 specialise
 	openEHR-EHR-OBSERVATION.intravascular_pressure.v1
@@ -145,14 +145,9 @@ definition
 		protocol matches {
 			ITEM_TREE[at0021] matches {	-- Tree
 				items cardinality matches {0..*; ordered} matches {
-					allow_archetype CLUSTER[at0030] occurrences matches {0..*} matches {	-- Device
+					allow_archetype CLUSTER[at0030] occurrences matches {0..1} matches {	-- Device
 						include
 							archetype_id/value matches {/.*/}
-					}
-					ELEMENT[at0031] occurrences matches {0..1} matches {	-- Confounding factors
-						value matches {
-							DV_TEXT matches {*}
-						}
 					}
 				}
 			}

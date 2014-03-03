@@ -70,6 +70,8 @@ definition
 												list = <
 													["1"] = <
 														units = <"cm[H20]">
+														magnitude = <|>=0.0|>
+														precision = <|2|>
 													>
 												>
 											>
@@ -195,7 +197,7 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0021] matches {	-- Tree
+			ITEM_TREE[at0021] matches {	-- List
 				items cardinality matches {0..*; unordered} matches {
 					allow_archetype CLUSTER[at0030] occurrences matches {0..1} matches {	-- Device
 						include

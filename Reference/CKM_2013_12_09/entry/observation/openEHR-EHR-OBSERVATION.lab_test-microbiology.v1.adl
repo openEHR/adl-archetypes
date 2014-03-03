@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4)
 	openEHR-EHR-OBSERVATION.lab_test-microbiology.v1
 specialise
 	openEHR-EHR-OBSERVATION.lab_test.v1
@@ -275,30 +275,30 @@ definition
 		}
 		protocol matches {
 			ITEM_TREE[at0004] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0062] occurrences matches {0..1} matches {	-- Requestor order identifier
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					allow_archetype CLUSTER[at0090] occurrences matches {0..*} matches {	-- Requestor 
-						include
-							archetype_id/value matches {/.*/}
-					}
-					ELEMENT[at0063] occurrences matches {0..1} matches {	-- Receiver order Identifier
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {	-- Receiving laboratory 
-						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v1/}
-						exclude
-							archetype_id/value matches {/.*/}
-					}
-					ELEMENT[at0068] occurrences matches {0..1} matches {	-- Laboratory test result identifier
-						value matches {
-							DV_TEXT matches {*}
+				items matches {
+					CLUSTER[at0013] occurrences matches {0..1} matches {	-- Test identification
+						items matches {
+							ELEMENT[at0062] occurrences matches {0..1} matches {	-- Placer order identifier
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0063] occurrences matches {0..1} matches {	-- Filler order Identifier
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0068] occurrences matches {0..1} matches {	-- Laboratory test result identifier
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {	-- Laboratory details  
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v1/}
+								exclude
+									archetype_id/value matches {/.*/}
+							}
 						}
 					}
 					ELEMENT[at0075] occurrences matches {0..1} matches {	-- Datetime result issued
