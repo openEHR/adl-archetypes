@@ -112,6 +112,8 @@ definition
 															DV_QUANTITY[id89] matches {
 																property matches {[at82]}
 																magnitude matches {|0.0..5.0|}
+																precision matches {1}
+																units matches {"mmho"}
 															}
 														}
 													}
@@ -166,6 +168,8 @@ definition
 															DV_QUANTITY[id95] matches {
 																property matches {[at81]}
 																magnitude matches {|0.0..400.0|}
+																precision matches {0}
+																units matches {"daPa"}
 															}
 														}
 													}
@@ -285,6 +289,8 @@ definition
 									DV_QUANTITY[id111] matches {
 										property matches {[at81]}
 										magnitude matches {|-600.0..400.0|}
+										precision matches {0}
+										units matches {"daPa"}
 									}
 								}
 							}
@@ -293,6 +299,8 @@ definition
 									DV_QUANTITY[id112] matches {
 										property matches {[at81]}
 										magnitude matches {|-600.0..400.0|}
+										precision matches {0}
+										units matches {"daPa"}
 									}
 								}
 							}

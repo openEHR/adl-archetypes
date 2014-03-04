@@ -44,6 +44,7 @@ definition
 					DV_QUANTITY[id13] matches {
 						property matches {[at2]}
 						precision matches {1}
+						units matches {"%"}
 					}
 				}
 			}

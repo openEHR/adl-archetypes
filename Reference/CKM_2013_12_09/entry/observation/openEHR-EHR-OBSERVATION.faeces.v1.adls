@@ -91,10 +91,14 @@ definition
 											DV_QUANTITY[id30] matches {
 												property matches {[at20]}
 												magnitude matches {|>=0.0|}
+												precision matches {0}
+												units matches {"ml"}
 											}
 											DV_QUANTITY[id31] matches {
 												property matches {[at21]}
 												magnitude matches {|>=0.0|}
+												precision matches {0}
+												units matches {"gm"}
 											}
 										}
 									}

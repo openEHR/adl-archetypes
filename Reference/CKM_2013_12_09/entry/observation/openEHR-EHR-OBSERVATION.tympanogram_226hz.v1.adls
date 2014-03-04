@@ -121,6 +121,7 @@ definition
 															DV_QUANTITY[id60] matches {
 																property matches {[at51]}
 																magnitude matches {|0.0..400.0|}
+																units matches {"daPa"}
 															}
 														}
 													}
@@ -261,6 +262,8 @@ definition
 							DV_QUANTITY[id78] matches {
 								property matches {[at53]}
 								magnitude matches {|0.5..5.0|}
+								precision matches {1}
+								units matches {"cc"}
 							}
 						}
 					}

@@ -41,6 +41,7 @@ definition
 											DV_QUANTITY[id8] matches {
 												property matches {[at1]}
 												precision matches {2}
+												units matches {"m2"}
 											}
 										}
 									}
