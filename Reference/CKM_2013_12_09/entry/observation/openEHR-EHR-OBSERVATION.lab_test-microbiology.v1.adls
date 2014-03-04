@@ -98,6 +98,7 @@ definition
 							DV_QUANTITY[id0.46] matches {
 								property matches {[at0.14]}
 								magnitude matches {|>=0.0|}
+								units matches {"10*6/l"}
 							}
 						}
 					}
@@ -106,6 +107,7 @@ definition
 							DV_QUANTITY[id0.47] matches {
 								property matches {[at0.14]}
 								magnitude matches {|>=0.0|}
+								units matches {"10*6/l"}
 							}
 						}
 					}

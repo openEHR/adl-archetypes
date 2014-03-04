@@ -123,6 +123,8 @@ definition
 					DV_QUANTITY[id0.97] matches {
 						property matches {[at0.87]}
 						magnitude matches {|-5.0..5.0|}
+						precision matches {0}
+						units matches {"cm"}
 					}
 				}
 			}

@@ -50,6 +50,8 @@ definition
 									DV_QUANTITY[id0.91] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										precision matches {1}
+										units matches {"mg/l"}
 									}
 								}
 							}
@@ -58,6 +60,8 @@ definition
 									DV_QUANTITY[id0.92] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										precision matches {1}
+										units matches {"mg/l"}
 									}
 								}
 							}

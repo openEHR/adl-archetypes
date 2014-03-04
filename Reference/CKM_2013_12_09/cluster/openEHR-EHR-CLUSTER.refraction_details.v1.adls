@@ -42,6 +42,8 @@ definition
 					DV_QUANTITY[id18] matches {
 						property matches {[at15]}
 						magnitude matches {|-100.0..100.0|}
+						precision matches {2}
+						units matches {"dioptre"}
 					}
 				}
 			}
@@ -50,6 +52,8 @@ definition
 					DV_QUANTITY[id19] matches {
 						property matches {[at15]}
 						magnitude matches {|-100.0..100.0|}
+						precision matches {2}
+						units matches {"dioptre"}
 					}
 				}
 			}
@@ -58,6 +62,8 @@ definition
 					DV_QUANTITY[id20] matches {
 						property matches {[at16]}
 						magnitude matches {|0.0..180.0|}
+						precision matches {1}
+						units matches {"°"}
 					}
 				}
 			}
@@ -77,6 +83,7 @@ definition
 					DV_QUANTITY[id23] matches {
 						property matches {[at16]}
 						magnitude matches {|0.0..360.0|}
+						units matches {"°"}
 					}
 				}
 			}
@@ -85,6 +92,7 @@ definition
 					DV_QUANTITY[id24] matches {
 						property matches {[at15]}
 						precision matches {2}
+						units matches {"dioptre"}
 					}
 				}
 			}
@@ -93,6 +101,7 @@ definition
 					DV_QUANTITY[id25] matches {
 						property matches {[at15]}
 						precision matches {2}
+						units matches {"dioptre"}
 					}
 				}
 			}
@@ -101,6 +110,8 @@ definition
 					DV_QUANTITY[id26] matches {
 						property matches {[at17]}
 						magnitude matches {|0.0..500.0|}
+						precision matches {1}
+						units matches {"mm"}
 					}
 				}
 			}

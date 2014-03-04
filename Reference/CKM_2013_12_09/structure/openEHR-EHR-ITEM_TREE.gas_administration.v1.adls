@@ -75,6 +75,8 @@ definition
 							DV_QUANTITY[id20] matches {
 								property matches {[at13]}
 								magnitude matches {|>=0.0|}
+								precision matches {0}
+								units matches {"l/m"}
 							}
 						}
 					}
@@ -83,6 +85,8 @@ definition
 							DV_QUANTITY[id21] matches {
 								property matches {[at14]}
 								magnitude matches {|>=0.0|}
+								precision matches {1}
+								units matches {"bar"}
 							}
 						}
 					}

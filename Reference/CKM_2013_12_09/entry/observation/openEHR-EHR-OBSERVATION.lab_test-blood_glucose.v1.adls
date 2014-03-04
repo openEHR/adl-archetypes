@@ -89,6 +89,7 @@ definition
 											DV_QUANTITY[id0.116] matches {
 												property matches {[at0.115]}
 												magnitude matches {|>=0.0|}
+												units matches {"gm"}
 											}
 										}
 									}
@@ -116,6 +117,7 @@ definition
 											DV_QUANTITY[id0.120] matches {
 												property matches {[at0.116]}
 												magnitude matches {|>=0.0|}
+												units matches {"U"}
 											}
 										}
 									}

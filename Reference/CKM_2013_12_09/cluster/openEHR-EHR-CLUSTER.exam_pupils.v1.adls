@@ -95,6 +95,8 @@ definition
 							DV_QUANTITY[id83] matches {
 								property matches {[at75]}
 								magnitude matches {|0.0..30.0|}
+								precision matches {0}
+								units matches {"mm"}
 							}
 						}
 					}

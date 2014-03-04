@@ -87,6 +87,8 @@ definition
 															DV_QUANTITY[id156] matches {
 																property matches {[at136]}
 																magnitude matches {|-10.0..120.0|}
+																precision matches {0}
+																units matches {"dB"}
 															}
 														}
 													}
@@ -118,6 +120,8 @@ definition
 															DV_QUANTITY[id160] matches {
 																property matches {[at136]}
 																magnitude matches {|-10.0..120.0|}
+																precision matches {1}
+																units matches {"dB"}
 															}
 														}
 													}
@@ -346,6 +350,8 @@ definition
 									DV_QUANTITY[id186] matches {
 										property matches {[at136]}
 										magnitude matches {|-10.0..120.0|}
+										precision matches {0}
+										units matches {"dB"}
 									}
 								}
 							}

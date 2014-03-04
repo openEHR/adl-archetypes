@@ -79,6 +79,8 @@ definition
 													DV_QUANTITY[id83] matches {
 														property matches {[at75]}
 														magnitude matches {|0.0..90.0|}
+														precision matches {1}
+														units matches {"mm[Hg]"}
 													}
 												}
 											}
@@ -87,6 +89,8 @@ definition
 													DV_QUANTITY[id84] matches {
 														property matches {[at76]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}

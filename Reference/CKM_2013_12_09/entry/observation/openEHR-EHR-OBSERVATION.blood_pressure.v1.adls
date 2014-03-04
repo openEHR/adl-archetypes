@@ -232,6 +232,8 @@ definition
 											DV_QUANTITY[id1054] matches {
 												property matches {[at1055]}
 												magnitude matches {|0.0..<1000.0|}
+												precision matches {0}
+												units matches {"mm[Hg]"}
 											}
 										}
 									}
@@ -240,6 +242,8 @@ definition
 											DV_QUANTITY[id1055] matches {
 												property matches {[at1055]}
 												magnitude matches {|0.0..<1000.0|}
+												precision matches {0}
+												units matches {"mm[Hg]"}
 											}
 										}
 									}
@@ -248,6 +252,8 @@ definition
 											DV_QUANTITY[id1056] matches {
 												property matches {[at1055]}
 												magnitude matches {|0.0..<1000.0|}
+												precision matches {0}
+												units matches {"mm[Hg]"}
 											}
 										}
 									}
@@ -256,6 +262,8 @@ definition
 											DV_QUANTITY[id1057] matches {
 												property matches {[at1055]}
 												magnitude matches {|0.0..<1000.0|}
+												precision matches {0}
+												units matches {"mm[Hg]"}
 											}
 										}
 									}
@@ -298,6 +306,8 @@ definition
 											DV_QUANTITY[id1062] matches {
 												property matches {[at1056]}
 												magnitude matches {|-90.0..90.0|}
+												precision matches {0}
+												units matches {"°"}
 											}
 										}
 									}

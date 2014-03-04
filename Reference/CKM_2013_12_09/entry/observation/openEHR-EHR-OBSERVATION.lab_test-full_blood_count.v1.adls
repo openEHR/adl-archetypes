@@ -54,6 +54,7 @@ definition
 									DV_QUANTITY[id0.1] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"gm/l"}
 									}
 								}
 							}
@@ -83,6 +84,7 @@ definition
 									DV_QUANTITY[id0.4] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"gm/l"}
 									}
 								}
 							}
@@ -91,6 +93,7 @@ definition
 									DV_QUANTITY[id0.5] matches {
 										property matches {[at0.2]}
 										magnitude matches {|>=0.0|}
+										units matches {"fl"}
 									}
 								}
 							}
@@ -99,6 +102,7 @@ definition
 									DV_QUANTITY[id0.6] matches {
 										property matches {[at0.3]}
 										magnitude matches {|>=0.0|}
+										units matches {"pg"}
 									}
 								}
 							}
@@ -116,6 +120,7 @@ definition
 									DV_QUANTITY[id0.8] matches {
 										property matches {[at0.4]}
 										magnitude matches {|>=0.0|}
+										units matches {"mm/h"}
 									}
 								}
 							}
@@ -124,6 +129,7 @@ definition
 									DV_QUANTITY[id0.9] matches {
 										property matches {[at0.2]}
 										magnitude matches {|>=0.0|}
+										units matches {"fl"}
 									}
 								}
 							}
@@ -141,6 +147,7 @@ definition
 									DV_QUANTITY[id0.11] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"10*9/l"}
 									}
 								}
 							}
@@ -159,6 +166,7 @@ definition
 									DV_QUANTITY[id0.13] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"10*9/l"}
 									}
 								}
 							}
@@ -169,6 +177,7 @@ definition
 											DV_QUANTITY[id0.14] matches {
 												property matches {[at0.1]}
 												magnitude matches {|>=0.0|}
+												units matches {"10*9/l"}
 											}
 										}
 									}
@@ -177,6 +186,7 @@ definition
 											DV_QUANTITY[id0.15] matches {
 												property matches {[at0.1]}
 												magnitude matches {|>=0.0|}
+												units matches {"10*9/l"}
 											}
 										}
 									}
@@ -185,6 +195,7 @@ definition
 											DV_QUANTITY[id0.16] matches {
 												property matches {[at0.1]}
 												magnitude matches {|>=0.0|}
+												units matches {"10*9/l"}
 											}
 										}
 									}
@@ -193,6 +204,7 @@ definition
 											DV_QUANTITY[id0.17] matches {
 												property matches {[at0.1]}
 												magnitude matches {|>=0.0|}
+												units matches {"10*9/l"}
 											}
 										}
 									}
@@ -201,6 +213,7 @@ definition
 											DV_QUANTITY[id0.18] matches {
 												property matches {[at0.1]}
 												magnitude matches {|>=0.0|}
+												units matches {"10*9/l"}
 											}
 										}
 									}

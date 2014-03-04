@@ -64,6 +64,8 @@ definition
 													DV_QUANTITY[id84] matches {
 														property matches {[at74]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"/min"}
 													}
 												}
 											}
@@ -72,6 +74,8 @@ definition
 													DV_QUANTITY[id85] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -80,6 +84,8 @@ definition
 													DV_QUANTITY[id86] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -88,6 +94,8 @@ definition
 													DV_QUANTITY[id87] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -96,6 +104,8 @@ definition
 													DV_QUANTITY[id88] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -149,6 +159,8 @@ definition
 													DV_QUANTITY[id94] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -157,6 +169,7 @@ definition
 													DV_QUANTITY[id95] matches {
 														property matches {[at78]}
 														precision matches {1}
+														units matches {"Ashman units"}
 													}
 												}
 											}
@@ -173,6 +186,8 @@ definition
 													DV_QUANTITY[id97] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -181,6 +196,7 @@ definition
 													DV_QUANTITY[id98] matches {
 														property matches {[at78]}
 														precision matches {1}
+														units matches {"Ashman units"}
 													}
 												}
 											}
@@ -197,6 +213,8 @@ definition
 													DV_QUANTITY[id100] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -213,6 +231,8 @@ definition
 													DV_QUANTITY[id102] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -229,6 +249,8 @@ definition
 													DV_QUANTITY[id104] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -245,6 +267,8 @@ definition
 													DV_QUANTITY[id106] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -261,6 +285,8 @@ definition
 													DV_QUANTITY[id108] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -269,6 +295,8 @@ definition
 													DV_QUANTITY[id109] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -277,6 +305,8 @@ definition
 													DV_QUANTITY[id110] matches {
 														property matches {[at77]}
 														magnitude matches {|>=0.0|}
+														precision matches {2}
+														units matches {"mV"}
 													}
 												}
 											}
@@ -285,6 +315,8 @@ definition
 													DV_QUANTITY[id111] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -293,6 +325,7 @@ definition
 													DV_QUANTITY[id112] matches {
 														property matches {[at78]}
 														precision matches {1}
+														units matches {"Ashman units"}
 													}
 												}
 											}
@@ -333,6 +366,8 @@ definition
 													DV_QUANTITY[id117] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -341,6 +376,8 @@ definition
 													DV_QUANTITY[id118] matches {
 														property matches {[at76]}
 														magnitude matches {|-90.0..90.0|}
+														precision matches {0}
+														units matches {"°"}
 													}
 												}
 											}
@@ -356,6 +393,7 @@ definition
 													DV_QUANTITY[id120] matches {
 														property matches {[at77]}
 														precision matches {2}
+														units matches {"mV"}
 													}
 												}
 											}
@@ -364,6 +402,8 @@ definition
 													DV_QUANTITY[id121] matches {
 														property matches {[at75]}
 														magnitude matches {|>=0.0|}
+														precision matches {0}
+														units matches {"millisec"}
 													}
 												}
 											}
@@ -372,6 +412,7 @@ definition
 													DV_QUANTITY[id122] matches {
 														property matches {[at78]}
 														precision matches {1}
+														units matches {"Ashman units"}
 													}
 												}
 											}

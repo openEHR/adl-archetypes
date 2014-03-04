@@ -51,6 +51,8 @@ definition
 									DV_QUANTITY[id0.1] matches {
 										property matches {[at0.1]}
 										magnitude matches {|0.0..500.0|}
+										precision matches {0}
+										units matches {"mm/h"}
 									}
 								}
 							}

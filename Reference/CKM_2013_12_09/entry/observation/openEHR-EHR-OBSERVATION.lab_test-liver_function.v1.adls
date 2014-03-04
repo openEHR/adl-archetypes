@@ -46,6 +46,7 @@ definition
 									DV_QUANTITY[id0.1] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"U/l"}
 									}
 								}
 							}
@@ -54,6 +55,7 @@ definition
 									DV_QUANTITY[id0.2] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"µmol/l"}
 									}
 								}
 							}
@@ -62,6 +64,7 @@ definition
 									DV_QUANTITY[id0.3] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"µmol/l"}
 									}
 								}
 							}
@@ -70,6 +73,7 @@ definition
 									DV_QUANTITY[id0.4] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"µmol/l"}
 									}
 								}
 							}
@@ -78,6 +82,7 @@ definition
 									DV_QUANTITY[id0.5] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"U/l"}
 									}
 								}
 							}
@@ -86,6 +91,7 @@ definition
 									DV_QUANTITY[id0.6] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"U/l"}
 									}
 								}
 							}
@@ -94,6 +100,7 @@ definition
 									DV_QUANTITY[id0.7] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"U/l"}
 									}
 								}
 							}
@@ -102,6 +109,7 @@ definition
 									DV_QUANTITY[id0.8] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"U/l"}
 									}
 								}
 							}
@@ -110,6 +118,7 @@ definition
 									DV_QUANTITY[id0.9] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"gm/l"}
 									}
 								}
 							}
@@ -118,6 +127,7 @@ definition
 									DV_QUANTITY[id0.10] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"gm/l"}
 									}
 								}
 							}
@@ -126,6 +136,7 @@ definition
 									DV_QUANTITY[id0.11] matches {
 										property matches {[at0.1]}
 										magnitude matches {|>=0.0|}
+										units matches {"gm/l"}
 									}
 								}
 							}

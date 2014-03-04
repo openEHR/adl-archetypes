@@ -56,20 +56,22 @@ definition
 									DV_TEXT[id0.34] 
 								}
 								value matches {
-									DV_QUANTITY[id25] matches {
-										units matches {"/min"}
-									}
+									after [id25]
 									DV_INTERVAL<DV_QUANTITY>[id0.35] matches {
 										upper matches {
 											DV_QUANTITY[id0.36] matches {
 												property matches {[at20]}
 												magnitude matches {|>=0.0|}
+												precision matches {0}
+												units matches {"/min"}
 											}
 										}
 										lower matches {
 											DV_QUANTITY[id0.37] matches {
 												property matches {[at20]}
 												magnitude matches {|>=0.0|}
+												precision matches {0}
+												units matches {"/min"}
 											}
 										}
 									}

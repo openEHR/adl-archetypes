@@ -57,6 +57,7 @@ definition
 					DV_QUANTITY[id356] matches {
 						property matches {[at354]}
 						magnitude matches {|>=0.0|}
+						units matches {"mm"}
 					}
 				}
 			}
@@ -65,6 +66,7 @@ definition
 					DV_QUANTITY[id357] matches {
 						property matches {[at354]}
 						magnitude matches {|>=0.0|}
+						units matches {"mm"}
 					}
 				}
 			}
@@ -73,6 +75,7 @@ definition
 					DV_QUANTITY[id358] matches {
 						property matches {[at354]}
 						magnitude matches {|>=0.0|}
+						units matches {"mm"}
 					}
 				}
 			}
@@ -81,6 +84,7 @@ definition
 					DV_QUANTITY[id359] matches {
 						property matches {[at354]}
 						magnitude matches {|>=0.0|}
+						units matches {"mm"}
 					}
 				}
 			}

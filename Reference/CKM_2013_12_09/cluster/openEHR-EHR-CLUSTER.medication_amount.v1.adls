@@ -35,18 +35,21 @@ definition
 					DV_QUANTITY[id10] matches {
 						property matches {[at1]}
 						magnitude matches {|>=0.0|}
+						units matches {"1"}
 					}
 					DV_INTERVAL<DV_QUANTITY>[id11] matches {
 						upper matches {
 							DV_QUANTITY[id12] matches {
 								property matches {[at1]}
 								magnitude matches {|>=0.0|}
+								units matches {"1"}
 							}
 						}
 						lower matches {
 							DV_QUANTITY[id13] matches {
 								property matches {[at1]}
 								magnitude matches {|>=0.0|}
+								units matches {"1"}
 							}
 						}
 					}

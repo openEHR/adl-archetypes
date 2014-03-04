@@ -41,6 +41,7 @@ definition
 					DV_QUANTITY[id0.0.43] matches {
 						property matches {[at0.14]}
 						magnitude matches {|>=0.0|}
+						units matches {"10*6/l"}
 					}
 				}
 			}
@@ -49,6 +50,7 @@ definition
 					DV_QUANTITY[id0.0.44] matches {
 						property matches {[at0.14]}
 						magnitude matches {|>=0.0|}
+						units matches {"10*6/l"}
 					}
 				}
 			}
@@ -57,6 +59,7 @@ definition
 					DV_QUANTITY[id0.0.45] matches {
 						property matches {[at0.14]}
 						magnitude matches {|>=0.0|}
+						units matches {"gm/l"}
 					}
 				}
 			}

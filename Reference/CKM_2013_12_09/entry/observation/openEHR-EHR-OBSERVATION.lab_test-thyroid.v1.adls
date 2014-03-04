@@ -49,6 +49,7 @@ definition
 									DV_QUANTITY[id0.1] matches {
 										property matches {[at0.1]}
 										magnitude matches {|0.0..100.0|}
+										units matches {"mIU/l"}
 									}
 								}
 							}
@@ -57,6 +58,7 @@ definition
 									DV_QUANTITY[id0.2] matches {
 										property matches {[at0.1]}
 										magnitude matches {|0.0..1000.0|}
+										units matches {"pmol/l"}
 									}
 								}
 							}
@@ -65,6 +67,7 @@ definition
 									DV_QUANTITY[id0.3] matches {
 										property matches {[at0.1]}
 										magnitude matches {|0.0..1000.0|}
+										units matches {"pmol/l"}
 									}
 								}
 							}
@@ -73,6 +76,7 @@ definition
 									DV_QUANTITY[id0.4] matches {
 										property matches {[at0.1]}
 										magnitude matches {|0.0..1000.0|}
+										units matches {"pmol/l"}
 									}
 								}
 							}
@@ -81,6 +85,7 @@ definition
 									DV_QUANTITY[id0.5] matches {
 										property matches {[at0.1]}
 										magnitude matches {|0.0..1000.0|}
+										units matches {"pmol/l"}
 									}
 								}
 							}

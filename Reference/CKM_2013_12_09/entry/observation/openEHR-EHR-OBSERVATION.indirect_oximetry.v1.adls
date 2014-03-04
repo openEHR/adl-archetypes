@@ -88,6 +88,7 @@ definition
 											DV_QUANTITY[id61] matches {
 												property matches {[at54]}
 												magnitude matches {|>=0.0|}
+												units matches {"ml/ml"}
 											}
 										}
 									}
@@ -114,6 +115,8 @@ definition
 											DV_QUANTITY[id64] matches {
 												property matches {[at55]}
 												magnitude matches {|>=0.0|}
+												precision matches {1}
+												units matches {"mm[Hg]"}
 											}
 										}
 									}
@@ -122,6 +125,8 @@ definition
 											DV_QUANTITY[id65] matches {
 												property matches {[at55]}
 												magnitude matches {|>=0.0|}
+												precision matches {1}
+												units matches {"mm[Hg]"}
 											}
 										}
 									}
@@ -198,6 +203,8 @@ definition
 							DV_QUANTITY[id74] matches {
 								property matches {[at56]}
 								magnitude matches {|0.0..100.0|}
+								precision matches {1}
+								units matches {"°C"}
 							}
 						}
 					}

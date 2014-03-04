@@ -74,6 +74,8 @@ definition
 									DV_QUANTITY[id47] matches {
 										property matches {[at26]}
 										magnitude matches {|>=0.0|}
+										precision matches {0}
+										units matches {"°"}
 									}
 								}
 							}

@@ -79,6 +79,7 @@ definition
 							DV_QUANTITY[id0.37] matches {
 								property matches {[at0.26]}
 								magnitude matches {|0.0..200.0|}
+								units matches {"a"}
 							}
 						}
 					}
