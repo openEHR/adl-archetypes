@@ -1,0 +1,30 @@
+﻿template_overlay (adl_version=1.5.1)
+	openEHR-DEMOGRAPHIC-CLUSTER.t_person_race_data_ds.v1.0.0
+
+specialize
+	openEHR-DEMOGRAPHIC-CLUSTER.person_additional_data_br.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+definition
+	CLUSTER[id1.1] matches {	-- Person additional demographic data
+		/items matches {
+			ELEMENT[id2] occurrences matches {0} 
+			ELEMENT[id3.1] 	-- Race
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Person additional demographic data">
+				description = <"Person additional demographic data">
+			>
+			["id3.1"] = <
+				text = <"Race">
+				description = <"The person's race classifier">
+			>
+		>
+	>

@@ -1,31 +1,29 @@
-﻿template_overlay (adl_version=1.5)
-	openEHR-EHR-EVALUATION.t_medication_orders_summary_ds.v1
+﻿template_overlay (adl_version=1.5.1)
+	openEHR-EHR-EVALUATION.t_medication_orders_summary_ds.v1.0.0
 
-specialise
+specialize
 	openEHR-EHR-EVALUATION.clinical_synopsis.v1
 
 language
 	original_language = <[ISO_639-1::en]>
 
 definition
-	EVALUATION[at0000.1] matches {
-		/data[at0001]/items matches {
-			ELEMENT[at0002.1]
+	EVALUATION[id1.1] matches {	-- Medication orders summary
+		/data[id2]/items matches {
+			ELEMENT[id3.1] 	-- Description
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000.1"] = <
-					text = <"Medication orders summary">
-					description = <"Summary of medication orders">
-				>
-				["at0002.1"] = <
-					text = <"Description">
-					description = <"Summary of medications description">
-				>
+			["id1.1"] = <
+				text = <"Medication orders summary">
+				description = <"Summary of medication orders">
+			>
+			["id3.1"] = <
+				text = <"Description">
+				description = <"Summary of medications description">
 			>
 		>
 	>

@@ -1,7 +1,7 @@
-template (adl_version=1.5)
-	openEHR-EHR-COMPOSITION.t_clinical_info_ds.v1
+﻿template (adl_version=1.5.1)
+	openEHR-EHR-COMPOSITION.t_clinical_info_ds.v1.0.0
 
-specialise
+specialize
 	openEHR-EHR-COMPOSITION.discharge.v1
 
 language
@@ -21,32 +21,30 @@ description
 			copyright = <"copyright (c) 2011 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	COMPOSITION[at0000.1] matches {	-- Discharge
-		context existence matches {0}
+	COMPOSITION[id1.1] matches {	-- Clinical detail
+		context existence matches {0} 
 		content matches {
-			use_archetype SECTION[openEHR-EHR-SECTION.t_patient_event_info_ds.v1] occurrences matches {1}
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_allergy_adverse_ds.v1] occurrences matches {0..1}
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_alerts_ds.v1]
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_clinical_synopsis_ds.v1]
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_diagnosis_ds.v1] occurrences matches {1..*}
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_investigations_summary_ds.v1] occurrences matches {0..1}
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_medication_orders_summary_ds.v1] occurrences matches {0..1}
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_procedures_summary_ds.v1] occurrences matches {0..*}
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_medical_certificate_ds.v1]
+			use_archetype SECTION[openEHR-EHR-SECTION.t_patient_event_info_ds.v1] occurrences matches {1} 
+			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_allergy_adverse_ds.v1] occurrences matches {0..1} 
+			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_alerts_ds.v1] 
+			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_clinical_synopsis_ds.v1] 
+			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_diagnosis_ds.v1] occurrences matches {1..*} 
+			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_investigations_summary_ds.v1] occurrences matches {0..1} 
+			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_medication_orders_summary_ds.v1] occurrences matches {0..1} 
+			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_procedures_summary_ds.v1] occurrences matches {0..*} 
+			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_medical_certificate_ds.v1] 
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000.1"] = <
-					text = <"Clinical detail">
-					description = <"Clinical detail of Simple discharge summary">
-				>
+			["id1.1"] = <
+				text = <"Clinical detail">
+				description = <"Clinical detail of Simple discharge summary">
 			>
 		>
 	>

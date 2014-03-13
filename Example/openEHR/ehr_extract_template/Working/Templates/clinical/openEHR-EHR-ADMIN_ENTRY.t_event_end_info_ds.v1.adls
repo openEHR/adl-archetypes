@@ -1,65 +1,63 @@
-template_overlay (adl_version=1.5)
-	openEHR-EHR-ADMIN_ENTRY.t_event_end_info_ds.v1
+template_overlay (adl_version=1.5.1)
+	openEHR-EHR-ADMIN_ENTRY.t_event_end_info_ds.v1.0.0
 
-specialise
+specialize
 	openEHR-EHR-ADMIN_ENTRY.discharge.v1
 
 language
 	original_language = <[ISO_639-1::en]>
 
 definition
-	ADMIN_ENTRY[at0000.1] matches {	
+	ADMIN_ENTRY[id1.1] matches {	-- Discharge event end information - Simple discharge summary
 		/other_participations matches {
-			X_PARTICIPATION[at0084.1] occurrences matches {1} matches {
-				performer existence matches {1}
+			X_PARTICIPATION[id85.1] occurrences matches {1} matches {	-- Responsible clinician on discharge
+				performer existence matches {1} 
 			}
-			PARTICIPATION[at0085] occurrences matches {0}
-			PARTICIPATION[at0086] occurrences matches {0}
+			PARTICIPATION[id86] occurrences matches {0} 
+			PARTICIPATION[id87] occurrences matches {0} 
 		}
-		/data[at0003]/items matches {
-			ELEMENT[at0004.1] occurrences matches {1}
-			ELEMENT[at0080] occurrences matches {0}
-			ELEMENT[at0060.1]
-			ELEMENT[at0071] occurrences matches {0}
-			allow_archetype CLUSTER[at0074.1] closed
-			ELEMENT[at0077.1]
-			ELEMENT[at0078] occurrences matches {0}
-			ELEMENT[at0079.1] occurrences matches {1}
+		/data[id4]/items matches {
+			ELEMENT[id5.1] occurrences matches {1} 	-- Event end datetime
+			ELEMENT[id81] occurrences matches {0} 
+			ELEMENT[id61.1] 	-- Discharge from service/specialty
+			ELEMENT[id72] occurrences matches {0} 
+			allow_archetype CLUSTER[id75.1] closed 	-- Slot closed
+			ELEMENT[id78.1] 	-- Discharge outcome
+			ELEMENT[id79] occurrences matches {0} 
+			ELEMENT[id80.1] occurrences matches {1} 	-- Discharge status/type
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000.1"] = <
-					text = <"Discharge event end information - Simple discharge summary">
-					description = <"The administrative information at discharge of a patient from a period of care">
-				>
-				["at0004.1"] = <
-					text = <"Event end datetime">
-					description = <"*">
-				>
-				["at0060.1"] = <
-					text = <"Discharge from service/specialty">
-					description = <"*">
-				>
-				["at0074.1"] = <
-					text = <"Slot closed">
-					description = <"Slot closed">
-				>
-				["at0077.1"] = <
-					text = <"Discharge outcome">
-					description = <"*">
-				>
-				["at0079.1"] = <
-					text = <"Discharge status/type">
-					description = <"*">
-				>
-				["at0084.1"] = <
-					text = <"Responsible clinician on discharge">
-					description = <"Clinician responsible for discharge">
-				>
+			["id1.1"] = <
+				text = <"Discharge event end information - Simple discharge summary">
+				description = <"The administrative information at discharge of a patient from a period of care">
+			>
+			["id5.1"] = <
+				text = <"Event end datetime">
+				description = <"*">
+			>
+			["id61.1"] = <
+				text = <"Discharge from service/specialty">
+				description = <"*">
+			>
+			["id75.1"] = <
+				text = <"Slot closed">
+				description = <"Slot closed">
+			>
+			["id78.1"] = <
+				text = <"Discharge outcome">
+				description = <"*">
+			>
+			["id80.1"] = <
+				text = <"Discharge status/type">
+				description = <"*">
+			>
+			["id85.1"] = <
+				text = <"Responsible clinician on discharge">
+				description = <"Clinician responsible for discharge">
 			>
 		>
 	>

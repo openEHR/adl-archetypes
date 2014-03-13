@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openEHR-EHR_EXTRACT-EXTRACT.discharge_summary.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR_EXTRACT-EXTRACT.discharge_summary.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -17,53 +17,53 @@ description
 			copyright = <"copyright (c) 2011 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"Initial">
+	lifecycle_state = <"unmanaged">
 
 definition
-	EXTRACT[at0000] matches {	-- Discharge summary
+	EXTRACT[id1] matches {	-- Simple discharge summary
 		chapters matches {
-			EXTRACT_CHAPTER[at0002] matches {
+			EXTRACT_CHAPTER[id3] matches {	-- Participations
 				items matches {
-					GENERIC_CONTENT_ITEM[at0003] occurrences matches {1} matches {
+					GENERIC_CONTENT_ITEM[id4] occurrences matches {1} matches {	-- Patient demographic content
 						item matches {
-							allow_archetype PERSON[at0100] matches {
+							allow_archetype PERSON[id101] matches {	-- Patient demographics slot
 								include
 									archetype_id/value matches {/openEHR-DEMOGRAPHIC-PERSON\..*/}
 								exclude
 									archetype_id/value matches {/.*/}
 							}
 						}
-						uid existence matches {1}
+						uid 
 					}
-					GENERIC_CONTENT_ITEM[at0004] occurrences matches {1} matches {
+					GENERIC_CONTENT_ITEM[id5] occurrences matches {1} matches {	-- Healthcare establishment demographic content
 						item matches {
-							allow_archetype ORGANISATION[at0101] matches {
+							allow_archetype ORGANISATION[id102] matches {	-- Healthcare establishment demographics slot
 								include
 									archetype_id/value matches {/openEHR-DEMOGRAPHIC-ORGANISATION\..*/}
 								exclude
 									archetype_id/value matches {/.*/}
 							}
 						}
-						uid existence matches {1}
+						uid 
 					}
-					GENERIC_CONTENT_ITEM[at0005] occurrences matches {1..*} matches {
+					GENERIC_CONTENT_ITEM[id6] occurrences matches {1..*} matches {	-- Healthcare professional demographic content
 						item matches {
-							allow_archetype PERSON[at0102] matches {
+							allow_archetype PERSON[id103] matches {	-- Healthcare individual provider demographics slot
 								include
 									archetype_id/value matches {/openEHR-DEMOGRAPHIC-PERSON\..*/}
 								exclude
 									archetype_id/value matches {/.*/}
 							}
 						}
-						uid existence matches {1}
+						uid 
 					}
 				}
 			}
-			EXTRACT_CHAPTER[at0001] matches {
+			EXTRACT_CHAPTER[id2] matches {	-- Subject
 				items matches {
-					GENERIC_CONTENT_ITEM[at0006] occurrences matches {1} matches {
+					GENERIC_CONTENT_ITEM[id7] occurrences matches {1} matches {	-- Clinical data
 						item matches {
-							allow_archetype COMPOSITION[at0103] matches {
+							allow_archetype COMPOSITION[id104] matches {	-- Patient discharge data slot
 								include
 									archetype_id/value matches {/openEHR-EHR-COMPOSITION\..*/}
 								exclude
@@ -76,54 +76,52 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"Simple discharge summary">
-					description = <"Discharge summary document for patient leaving a hospital">
-				>
-				["at0001"] = <
-					text = <"Subject">
-					description = <"Chapter containing subject discharge information">
-				>
-				["at0002"] = <
-					text = <"Participations">
-					description = <"Chapter containing participations information">
-				>
-				["at0003"] = <
-					text = <"Patient demographic content">
-					description = <"Patient demographic content">
-				>
-				["at0004"] = <
-					text = <"Healthcare establishment demographic content">
-					description = <"Healthcare establishment demographic content">
-				>
-				["at0005"] = <
-					text = <"Healthcare professional demographic content">
-					description = <"Healthcare professional demographic content">
-				>
-				["at0006"] = <
-					text = <"Clinical data">
-					description = <"Clinical discharge data for patient">
-				>
-				["at0100"] = <
-					text = <"Patient demographics slot">
-					description = <"Patient demographics slot">
-				>
-				["at0101"] = <
-					text = <"Healthcare establishment demographics slot">
-					description = <"Healthcare establishment demographics slot">
-				>
-				["at0102"] = <
-					text = <"Healthcare individual provider demographics slot">
-					description = <"Healthcare individual provider demographics slot">
-				>
-				["at0103"] = <
-					text = <"Patient discharge data slot">
-					description = <"Patient discharge data slot">
-				>
+			["id1"] = <
+				text = <"Simple discharge summary">
+				description = <"Discharge summary document for patient leaving a hospital">
+			>
+			["id2"] = <
+				text = <"Subject">
+				description = <"Chapter containing subject discharge information">
+			>
+			["id3"] = <
+				text = <"Participations">
+				description = <"Chapter containing participations information">
+			>
+			["id4"] = <
+				text = <"Patient demographic content">
+				description = <"Patient demographic content">
+			>
+			["id5"] = <
+				text = <"Healthcare establishment demographic content">
+				description = <"Healthcare establishment demographic content">
+			>
+			["id6"] = <
+				text = <"Healthcare professional demographic content">
+				description = <"Healthcare professional demographic content">
+			>
+			["id7"] = <
+				text = <"Clinical data">
+				description = <"Clinical discharge data for patient">
+			>
+			["id101"] = <
+				text = <"Patient demographics slot">
+				description = <"Patient demographics slot">
+			>
+			["id102"] = <
+				text = <"Healthcare establishment demographics slot">
+				description = <"Healthcare establishment demographics slot">
+			>
+			["id103"] = <
+				text = <"Healthcare individual provider demographics slot">
+				description = <"Healthcare individual provider demographics slot">
+			>
+			["id104"] = <
+				text = <"Patient discharge data slot">
+				description = <"Patient discharge data slot">
 			>
 		>
 	>

@@ -1,8 +1,9 @@
-﻿archetype (adl_version=1.5)
-	openEHR-EHR-SECTION.adhoc.v1
+﻿archetype (adl_version=1.5.1)
+	openEHR-EHR-SECTION.adhoc.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
@@ -19,19 +20,17 @@ description
 			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"unmanaged">
 
 definition
-	SECTION[at0000] matches {*}	-- Adhoc heading
+	SECTION[id1] 	-- Adhoc heading
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"Adhoc heading">
-					description = <"A generic section header.">
-				>
+			["id1"] = <
+				text = <"Adhoc heading">
+				description = <"A generic section header.">
 			>
 		>
 	>

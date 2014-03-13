@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.5)
-	openEHR-DEMOGRAPHIC-CLUSTER.person_additional_data_br.v1
+﻿archetype (adl_version=1.5.1)
+	openEHR-DEMOGRAPHIC-CLUSTER.person_additional_data_br.v1.0.0
 
 language
 	original_language = <[ISO_639-1::pt-br]>
@@ -13,6 +13,7 @@ language
 			>
 		>
 	>
+
 description
 	original_author = <
 		["name"] = <"Sergio Miranda Freire & Rigoleta Dutra Mediano Dias">
@@ -36,86 +37,72 @@ description
 			copyright = <"copyright (c) 2010 openEHR foundation">
 		>
 	>
-	lifecycle_state = <"Authordraft">
+	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[at0000] occurrences matches {0..1} matches {	-- Extended personal demographics
+	CLUSTER[id1] occurrences matches {0..1} matches {	-- Extended personal demographics
 		items matches {
-			ELEMENT[at0001] occurrences matches {0..*} matches {	-- Marital status
+			ELEMENT[id2] occurrences matches {0..*} matches {	-- Marital status
 				value matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {[ac0001]}		-- Marital status codes
+					DV_CODED_TEXT[id4] matches {
+						defining_code matches {[ac2]}		-- Marital status codes
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..*} matches {	-- Ethnic background
+			ELEMENT[id3] occurrences matches {0..*} matches {	-- Ethnic background
 				value matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {[ac0002]}		-- Ethnic background codes
+					DV_CODED_TEXT[id5] matches {
+						defining_code matches {[ac3]}		-- Ethnic background codes
 					}
 				}
 			}
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["pt-br"] = <
-			items = <
-				["at0000"] = <
-					text = <"Dados demográficos adicionais da pessoa">
-					description = <"Dados demográficos adicionais da pessoa além daqueles especificados pela ISO 22220">
-				>
-				["at0001"] = <
-					text = <"Estado Civil">
-					description = <"Estado Civil">
-				>
-				["at0002"] = <
-					text = <"Etnia">
-					description = <"Grupo étnico ao qual a pessoa pertence">
-				>
+			["id1"] = <
+				text = <"Dados demográficos adicionais da pessoa">
+				description = <"Dados demográficos adicionais da pessoa além daqueles especificados pela ISO 22220">
+			>
+			["id2"] = <
+				text = <"Estado Civil">
+				description = <"Estado Civil">
+			>
+			["id3"] = <
+				text = <"Etnia">
+				description = <"Grupo étnico ao qual a pessoa pertence">
+			>
+			["ac2"] = <
+				text = <"Códigos para Estado Civil">
+				description = <"Códigos válidos para Estado Civil">
+			>
+			["ac3"] = <
+				text = <"Códigos para grupos étnicos">
+				description = <"códigos válidos para grupos étnicos">
 			>
 		>
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"Extended personal demographics">
-					description = <"Personal demographic data extended beyond those specified by ISO 22220.">
-				>
-				["at0001"] = <
-					text = <"Marital status">
-					description = <"Marital status.">
-				>
-				["at0002"] = <
-					text = <"Ethnic background">
-					description = <"The person's ethnic background.">
-				>
+			["id1"] = <
+				text = <"Extended personal demographics">
+				description = <"Personal demographic data extended beyond those specified by ISO 22220.">
 			>
-		>
-	>
-	constraint_definitions = <
-		["pt-br"] = <
-			items = <
-				["ac0001"] = <
-					text = <"Códigos para Estado Civil">
-					description = <"Códigos válidos para Estado Civil">
-				>
-				["ac0002"] = <
-					text = <"Códigos para grupos étnicos">
-					description = <"códigos válidos para grupos étnicos">
-				>
+			["id2"] = <
+				text = <"Marital status">
+				description = <"Marital status.">
 			>
-		>
-		["en"] = <
-			items = <
-				["ac0001"] = <
-					text = <"Marital status codes">
-					description = <"Valid codes for marital status">
-				>
-				["ac0002"] = <
-					text = <"Ethnic background codes">
-					description = <"Valid codes for ethnic background">
-				>
+			["id3"] = <
+				text = <"Ethnic background">
+				description = <"The person's ethnic background.">
+			>
+			["ac2"] = <
+				text = <"Marital status codes">
+				description = <"Valid codes for marital status">
+			>
+			["ac3"] = <
+				text = <"Ethnic background codes">
+				description = <"Valid codes for ethnic background">
 			>
 		>
 	>

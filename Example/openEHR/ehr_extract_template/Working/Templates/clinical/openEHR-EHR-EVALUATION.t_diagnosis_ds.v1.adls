@@ -1,5 +1,5 @@
-﻿template_overlay (adl_version=1.5)
-	openEHR-EHR-EVALUATION.t_diagnosis_ds.v1
+﻿template_overlay (adl_version=1.5.1)
+	openEHR-EHR-EVALUATION.t_diagnosis_ds.v1.0.0
 
 specialize
 	openEHR-EHR-EVALUATION.problem-diagnosis-simple.v1
@@ -8,45 +8,43 @@ language
 	original_language = <[ISO_639-1::en]>
 
 definition
-	EVALUATION[at0000.1.1.1] matches {	-- Simple Discharge Diagnosis
-		/data[at0001]/items matches {
-			ELEMENT[at0002.1.0.1] occurrences matches {1}
-			ELEMENT[at0.32] occurrences matches {0}
-			ELEMENT[at0003] occurrences matches {0}
-			ELEMENT[at0004] occurrences matches {0}
-			ELEMENT[at0005] occurrences matches {0}
-			ELEMENT[at0009.0.0.1]
-			ELEMENT[at0038] occurrences matches {0}
-			ELEMENT[at0010] occurrences matches {0}
-			ELEMENT[at0037] occurrences matches {0}
-			CLUSTER[at0011] occurrences matches {0}
-			ELEMENT[at0031] occurrences matches {0}
-			CLUSTER[at0.35] occurrences matches {0}
-			ELEMENT[at0.0.55.1] occurrences matches {1}
+	EVALUATION[id1.1.1.1] matches {	-- Simple problem / diagnosis summary
+		/data[id2]/items matches {
+			ELEMENT[id3.1.0.1] occurrences matches {1} 	-- Diagnosis
+			ELEMENT[id0.32] occurrences matches {0} 
+			ELEMENT[id4] occurrences matches {0} 
+			ELEMENT[id5] occurrences matches {0} 
+			ELEMENT[id6] occurrences matches {0} 
+			ELEMENT[id10.0.0.1] 	-- Additional remarks
+			ELEMENT[id39] occurrences matches {0} 
+			ELEMENT[id11] occurrences matches {0} 
+			ELEMENT[id38] occurrences matches {0} 
+			CLUSTER[id12] occurrences matches {0} 
+			ELEMENT[id32] occurrences matches {0} 
+			CLUSTER[id0.35] occurrences matches {0} 
+			ELEMENT[id0.0.55.1] occurrences matches {1} 	-- Diagnosis type
 		}
-		/protocol existence matches {0}
+		/protocol existence matches {0} 
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000.1.1.1"] = <
-					text = <"Simple problem / diagnosis summary">
-					description = <"Simple problem / diagnosis summary">
-				>
-				["at0002.1.0.1"] = <
-					text = <"Diagnosis">
-					description = <"Diagnosis">
-				>
-				["at0009.0.0.1"] = <
-					text = <"Additional remarks">
-					description = <"Diagnosis/problem additional remarks">
-				>
-				["at0.0.55.1"] = <
-					text = <"Diagnosis type">
-					description = <"Diagnosis type">
-				>
+			["id1.1.1.1"] = <
+				text = <"Simple problem / diagnosis summary">
+				description = <"Simple problem / diagnosis summary">
+			>
+			["id3.1.0.1"] = <
+				text = <"Diagnosis">
+				description = <"Diagnosis">
+			>
+			["id10.0.0.1"] = <
+				text = <"Additional remarks">
+				description = <"Diagnosis/problem additional remarks">
+			>
+			["id0.0.55.1"] = <
+				text = <"Diagnosis type">
+				description = <"Diagnosis type">
 			>
 		>
 	>

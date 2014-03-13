@@ -1,33 +1,31 @@
-﻿template_overlay (adl_version=1.5)
-	openEHR-DEMOGRAPHIC-CLUSTER.t_person_other_data_iso_ds.v1
+﻿template_overlay (adl_version=1.5.1)
+	openEHR-DEMOGRAPHIC-CLUSTER.t_person_other_data_iso_ds.v1.0.0
 
-specialise
+specialize
 	openEHR-DEMOGRAPHIC-CLUSTER.person_additional_data_iso.v1
 
 language
 	original_language = <[ISO_639-1::en]>
 
 definition
-	CLUSTER[at0000.1] matches {
+	CLUSTER[id1.1] matches {	-- Person additional demographic data
 		/items matches {
-			ELEMENT[at0001.1] occurrences matches {0..1}
-			ELEMENT[at0002] occurrences matches {0}
-			ELEMENT[at0003] occurrences matches {0} 
+			ELEMENT[id2.1] occurrences matches {0..1} 	-- Sex
+			ELEMENT[id3] occurrences matches {0} 
+			ELEMENT[id4] occurrences matches {0} 
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000.1"] = <
-					text = <"Person additional demographic data">
-					description = <"*">
-				>
-				["at0001.1"] = <
-					text = <"Sex">
-					description = <"*">
-				>
+			["id1.1"] = <
+				text = <"Person additional demographic data">
+				description = <"*">
+			>
+			["id2.1"] = <
+				text = <"Sex">
+				description = <"*">
 			>
 		>
 	>

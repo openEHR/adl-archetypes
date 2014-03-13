@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.5)
-	openEHR-DEMOGRAPHIC-ORGANISATION.healthcare_establishment.v1
+﻿archetype (adl_version=1.5.1)
+	openEHR-DEMOGRAPHIC-ORGANISATION.healthcare_establishment.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -18,28 +18,27 @@ description
 			copyright = <"copyright (c) 2011 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
-	other_contributors = <>
+	lifecycle_state = <"unmanaged">
 
 definition
-	ORGANISATION[at0000] matches {	
+	ORGANISATION[id1] matches {	-- Organisation
 		identities cardinality matches {1..*; ordered} matches {
-			PARTY_IDENTITY[at0001] occurrences matches {1..*} matches {	
+			PARTY_IDENTITY[id2] occurrences matches {1..*} matches {	-- Identification
 				details matches {
-					ITEM_LIST matches {	
+					ITEM_LIST[id6] matches {
 						items cardinality matches {2..*; ordered} matches {
-							ELEMENT[at0003] occurrences matches {1} matches {	
+							ELEMENT[id4] occurrences matches {1} matches {	-- Name
 								value matches {
-									DV_TEXT matches {*}
+									DV_TEXT[id7] 
 								}
 							}
-							ELEMENT[at0004] occurrences matches {1..*} matches {	
+							ELEMENT[id5] occurrences matches {1..*} matches {	-- Identifier
 								value matches {
-									DV_IDENTIFIER matches {
-										issuer matches {*}
-										id matches {*}
-										type matches {*}
-										realm matches {*}
+									DV_IDENTIFIER[id8] matches {
+										issuer 
+										id 
+										type 
+										realm 
 									}
 								}
 							}
@@ -50,26 +49,24 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"Organisation">
-					description = <"Organisation demographic data">
-				>
-				["at0001"] = <
-					text = <"Identification">
-					description = <"Identification - the names the organisation is known by">
-				>
-				["at0003"] = <
-					text = <"Name">
-					description = <"An organisation name">
-				>
-				["at0004"] = <
-					text = <"Identifier">
-					description = <"An organisation Identifier">
-				>
+			["id1"] = <
+				text = <"Organisation">
+				description = <"Organisation demographic data">
+			>
+			["id2"] = <
+				text = <"Identification">
+				description = <"Identification - the names the organisation is known by">
+			>
+			["id4"] = <
+				text = <"Name">
+				description = <"An organisation name">
+			>
+			["id5"] = <
+				text = <"Identifier">
+				description = <"An organisation Identifier">
 			>
 		>
 	>

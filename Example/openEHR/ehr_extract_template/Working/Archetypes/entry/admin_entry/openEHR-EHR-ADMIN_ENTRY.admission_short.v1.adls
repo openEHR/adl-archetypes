@@ -1,8 +1,9 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-ADMIN_ENTRY.admission_short.v1
+archetype (adl_version=1.5.1)
+	openEHR-EHR-ADMIN_ENTRY.admission_short.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["organisation"] = <"NHS CFH">
@@ -18,70 +19,65 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"Initial">
-	other_contributors = <>
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"7E981EB27C8273A46437E1A7E6D09990">
 	>
 
 definition
-	ADMIN_ENTRY[at0000] matches {	-- Admission Short Singapore
+	ADMIN_ENTRY[id1] matches {	-- Admission Short Singapore
 		other_participations matches {
-			PARTICIPATION[at0040] occurrences matches {0..1} matches {	-- Referring doctor participation
+			PARTICIPATION[id41] occurrences matches {0..1} matches {	-- Referring doctor participation
 				function matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {[local::at0059]}		-- Referring clinician
+					DV_CODED_TEXT[id60] matches {
+						defining_code matches {[at60]}
 					}
 				}
 			}
-			PARTICIPATION[at0041] occurrences matches {0..1} matches {	-- Admitting doctor participation
+			PARTICIPATION[id42] occurrences matches {0..1} matches {	-- Admitting doctor participation
 				function matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {[local::at0060]}		-- Principal admitting clinician
+					DV_CODED_TEXT[id61] matches {
+						defining_code matches {[at61]}
 					}
 				}
 			}
-			PARTICIPATION[at0042] occurrences matches {0..1} matches {	-- Admitting organisation participation
+			PARTICIPATION[id43] occurrences matches {0..1} matches {	-- Admitting organisation participation
 				function matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {[local::at0061]}		-- Admitting organisation
+					DV_CODED_TEXT[id62] matches {
+						defining_code matches {[at62]}
 					}
 				}
 			}
 		}
 		data matches {
-			ITEM_TREE[at0003] matches {	-- Tree
+			ITEM_TREE[id4] matches {
 				items matches {
-					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Date of admission
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Date of admission
 						value matches {
-							DV_DATE_TIME matches {*}
+							DV_DATE_TIME[id63] 
 						}
 					}
-					ELEMENT[at0057] occurrences matches {0..*} matches {	-- Event Identifier
+					ELEMENT[id58] occurrences matches {0..*} matches {	-- Event Identifier
 						value matches {
-							DV_TEXT matches {*}
+							DV_TEXT[id64] 
 						}
 					}
-					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Source of admission
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Source of admission
 						value matches {
-							DV_TEXT matches {*}
+							DV_TEXT[id65] 
 						}
 					}
-					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Admission type
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Admission type
 						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0046, 	-- Emergency
-									at0047]	-- Elective
-								}
+							DV_CODED_TEXT[id66] matches {
+								defining_code matches {[ac1]}		-- Admission type (synthesised)
 							}
 						}
 					}
-					ELEMENT[at0058] occurrences matches {0..1} matches {	-- Admitting unit
+					ELEMENT[id59] occurrences matches {0..1} matches {	-- Admitting unit
 						value matches {
-							DV_TEXT matches {*}
+							DV_TEXT[id67] 
 						}
 					}
 				}
@@ -89,72 +85,74 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"Admission Short Singapore">
-					description = <"Administrative information for the admission of a patient to the care of a hospital/institution">
-				>
-				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"Date of admission">
-					description = <"*">
-				>
-				["at0005"] = <
-					comment = <"NHS Data Dictionary v3.0">
-					text = <"Admission type">
-					description = <"*">
-				>
-				["at0011"] = <
-					comment = <"NHS Data Dictionary v3.0">
-					text = <"Source of admission">
-					description = <"The place from which the patient was admitted">
-				>
-				["at0040"] = <
-					text = <"Referring doctor participation">
-					description = <"Participation of referring doctor">
-				>
-				["at0041"] = <
-					text = <"Admitting doctor participation">
-					description = <"Admitting doctor participation">
-				>
-				["at0042"] = <
-					text = <"Admitting organisation participation">
-					description = <"Participation of admitting organisation">
-				>
-				["at0046"] = <
-					text = <"Emergency">
-					description = <"*">
-				>
-				["at0047"] = <
-					text = <"Elective">
-					description = <"*">
-				>
-				["at0057"] = <
-					text = <"Event Identifier">
-					description = <"*">
-				>
-				["at0058"] = <
-					text = <"Admitting unit">
-					description = <"*">
-				>
-				["at0059"] = <
-					text = <"Referring clinician">
-					description = <"*">
-				>
-				["at0060"] = <
-					text = <"Principal admitting clinician">
-					description = <"The clinician with primary responsibility for admission.">
-				>
-				["at0061"] = <
-					text = <"Admitting organisation">
-					description = <"*">
-				>
+			["id1"] = <
+				text = <"Admission Short Singapore">
+				description = <"Administrative information for the admission of a patient to the care of a hospital/institution">
 			>
+			["id5"] = <
+				text = <"Date of admission">
+				description = <"*">
+			>
+			["id6"] = <
+				text = <"Admission type">
+				description = <"*">
+			>
+			["id12"] = <
+				text = <"Source of admission">
+				description = <"The place from which the patient was admitted">
+			>
+			["id41"] = <
+				text = <"Referring doctor participation">
+				description = <"Participation of referring doctor">
+			>
+			["id42"] = <
+				text = <"Admitting doctor participation">
+				description = <"Admitting doctor participation">
+			>
+			["id43"] = <
+				text = <"Admitting organisation participation">
+				description = <"Participation of admitting organisation">
+			>
+			["at47"] = <
+				text = <"Emergency">
+				description = <"*">
+			>
+			["at48"] = <
+				text = <"Elective">
+				description = <"*">
+			>
+			["id58"] = <
+				text = <"Event Identifier">
+				description = <"*">
+			>
+			["id59"] = <
+				text = <"Admitting unit">
+				description = <"*">
+			>
+			["at60"] = <
+				text = <"Referring clinician">
+				description = <"*">
+			>
+			["at61"] = <
+				text = <"Principal admitting clinician">
+				description = <"The clinician with primary responsibility for admission.">
+			>
+			["at62"] = <
+				text = <"Admitting organisation">
+				description = <"*">
+			>
+			["ac1"] = <
+				text = <"Admission type (synthesised)">
+				description = <"* (synthesised)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at47", "at48">
 		>
 	>

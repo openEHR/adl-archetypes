@@ -1,7 +1,7 @@
-﻿template (adl_version=1.5)
-	openEHR-EHR-SECTION.t_patient_event_info_ds.v1
+template (adl_version=1.5.1)
+	openEHR-EHR-SECTION.t_patient_event_info_ds.v1.0.0
 
-specialise
+specialize
 	openEHR-EHR-SECTION.adhoc.v1
 
 language
@@ -21,24 +21,22 @@ description
 			copyright = <"copyright (c) 2011 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"unmanaged">
 
 definition
-	SECTION[at0000.1] matches {
+	SECTION[id1.1] matches {	-- Patient event information
 		items matches {
-			use_archetype ADMIN_ENTRY[openEHR-EHR-ADMIN_ENTRY.t_event_start_info_ds.v1] occurrences matches {1}
-			use_archetype ADMIN_ENTRY[openEHR-EHR-ADMIN_ENTRY.t_event_end_info_ds.v1] occurrences matches {1}
+			use_archetype ADMIN_ENTRY[openEHR-EHR-ADMIN_ENTRY.t_event_start_info_ds.v1] occurrences matches {1} 
+			use_archetype ADMIN_ENTRY[openEHR-EHR-ADMIN_ENTRY.t_event_end_info_ds.v1] occurrences matches {1} 
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000.1"] = <
-					text = <"Patient event information">
-					description = <"Information about the patient event">
-				>
+			["id1.1"] = <
+				text = <"Patient event information">
+				description = <"Information about the patient event">
 			>
 		>
 	>
