@@ -1,0 +1,84 @@
+﻿template (adl_version=1.5.1)
+	openEHR-EHR_EXTRACT-EXTRACT.t_basic_discharge_summary_sf.v1.0.0
+
+specialize
+	openEHR-EHR_EXTRACT-EXTRACT.discharge_summary.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["date"] = <"01-04-2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Basic discharge summary">
+			keywords = <"discharge", "admin">
+			copyright = <"copyright (c) 2011 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	EXTRACT[id1.1] matches {	-- Discharge summary
+		/chapters[id3]/items[id4]/item matches {
+			use_archetype PERSON[id101, openEHR-DEMOGRAPHIC-PERSON.t_patient_ds_sf.v1] 
+			allow_archetype PERSON[id101.1] closed 	-- Patient demographics slot - closed
+		}
+		/chapters[id3]/items[id5]/item matches {
+			use_archetype ORGANISATION[id102, openEHR-DEMOGRAPHIC-ORGANISATION.healthcare_establishment.v1] 
+			allow_archetype ORGANISATION[id102.1] closed 	-- Healthcare establishment demographics slot - closed
+		}
+		/chapters[id3]/items[id6]/item matches {
+			use_archetype PERSON[id103, openEHR-DEMOGRAPHIC-PERSON.healthcare_professional.v1] 
+			allow_archetype PERSON[id103.1] closed 	-- Healthcare individual provider demographics slot - closed
+		}
+		/chapters[id2]/items matches {
+			GENERIC_CONTENT_ITEM[id7.1] matches {	-- Clinical data
+				version_set_id existence matches {1} 
+				item_status existence matches {1} 
+				item_type existence matches {1} 
+				item_type_version existence matches {1} 
+				creation_time existence matches {1} 
+				author existence matches {1} 
+			}
+		}
+		/chapters[id2]/items[id7]/item matches {
+			use_archetype COMPOSITION[id104, openEHR-EHR-COMPOSITION.t_clinical_info_ds_sf.v1] 
+			allow_archetype COMPOSITION[id104.1] closed 	-- Patient discharge data slot - closed
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Discharge summary">
+				description = <"Discharge summary document for patient leaving a hospital">
+			>
+			["id7.1"] = <
+				text = <"Clinical data">
+				description = <"Clinical discharge data for patient">
+			>
+			["id101.1"] = <
+				text = <"Patient demographics slot - closed">
+				description = <"Patient demographics slot - closed">
+			>
+			["id102.1"] = <
+				text = <"Healthcare establishment demographics slot - closed">
+				description = <"Healthcare establishment demographics slot - closed">
+			>
+			["id103.1"] = <
+				text = <"Healthcare individual provider demographics slot - closed">
+				description = <"Healthcare individual provider demographics slot - closed">
+			>
+			["id104.1"] = <
+				text = <"Patient discharge data slot - closed">
+				description = <"Patient discharge data slot - closed">
+			>
+		>
+	>

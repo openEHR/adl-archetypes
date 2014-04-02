@@ -1,0 +1,121 @@
+archetype (adl_version=1.5.1)
+	openEHR-EHR-COMPOSITION.discharge.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"14/11/2007">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For communication at the time of discharge from an episode of care or an institution.">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	COMPOSITION[id1] matches {	-- Discharge
+		category matches {
+			DV_CODED_TEXT[id29] matches {
+				defining_code matches {[at10]}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT[id30] matches {
+				other_context matches {
+					ITEM_TREE[id2] matches {
+						items matches {
+							ELEMENT[id4] occurrences matches {0..*} matches {	-- Report identifier
+								value matches {
+									DV_TEXT[id31] 
+								}
+							}
+							ELEMENT[id5] occurrences matches {0..1} matches {	-- Status
+								value matches {
+									DV_CODED_TEXT[id32] matches {
+										defining_code matches {[ac1]}		-- Status (synthesised)
+									}
+								}
+							}
+							ELEMENT[id10] occurrences matches {0..1} matches {	-- Date/time of status
+								value matches {
+									DV_DATE_TIME[id33] 
+								}
+							}
+							allow_archetype CLUSTER[id28] occurrences matches {0..*} matches {	-- Details
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Discharge">
+				description = <"A summarising communication about at the time of discharge from an institution or an episode of care">
+			>
+			["id4"] = <
+				text = <"Report identifier">
+				description = <"Identification information about the report">
+			>
+			["id5"] = <
+				text = <"Status">
+				description = <"The status of the report">
+			>
+			["at6"] = <
+				text = <"Final">
+				description = <"The report is the final Report">
+			>
+			["at7"] = <
+				text = <"Interim">
+				description = <"This report is an interim report and a final or further interim report is to be expected">
+			>
+			["at8"] = <
+				text = <"Supplementary">
+				description = <"This report is supplementary to a previous report">
+			>
+			["at9"] = <
+				text = <"Corrected/Amended">
+				description = <"This report is a correction or amendment of a previous report">
+			>
+			["id10"] = <
+				text = <"Date/time of status">
+				description = <"The date and time the report was officially issued">
+			>
+			["id28"] = <
+				text = <"Details">
+				description = <"*">
+			>
+			["at10"] = <
+				text = <"event">
+				description = <"event">
+			>
+			["ac1"] = <
+				text = <"Status (synthesised)">
+				description = <"The status of the report (synthesised)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at10"] = <http://openehr.org/id/433>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at6", "at7", "at8", "at9">
+		>
+	>

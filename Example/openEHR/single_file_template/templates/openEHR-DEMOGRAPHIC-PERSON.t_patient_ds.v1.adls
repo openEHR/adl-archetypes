@@ -1,0 +1,243 @@
+﻿template (adl_version=1.5.1)
+	openEHR-DEMOGRAPHIC-PERSON.t_patient_ds_sf.v1.0.0
+
+specialize
+	openEHR-DEMOGRAPHIC-PERSON.person.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"01/04/2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Templated PERSON object to describe patient in Simple discharge summary">
+			copyright = <"copyright (c) 2011 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"initial">
+
+definition
+	PERSON[id1.1] matches {	-- Patient demographic data
+		/details[id2]/items matches {
+			use_archetype CLUSTER[id11, openEHR-DEMOGRAPHIC-CLUSTER.t_patient_ds_sf-1.v1] occurrences matches {0..1} 
+			use_archetype CLUSTER[id11, openEHR-DEMOGRAPHIC-CLUSTER.t_patient_ds_sf-2.v1] occurrences matches {0..1} 
+			use_archetype CLUSTER[id11, openEHR-DEMOGRAPHIC-CLUSTER.t_patient_ds_sf-3.v1] occurrences matches {0..1} 
+			allow_archetype CLUSTER[id11.1] closed 	-- Other details - closed slot
+		}
+		/identities matches {
+			use_archetype PARTY_IDENTITY[id3, openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_patient_ds_sf-4.v1] 
+			allow_archetype PARTY_IDENTITY[id3.1] closed 	-- Party identity - closed slot
+		}
+		/contacts[id4]/addresses matches {
+			use_archetype ADDRESS[id31, openEHR-DEMOGRAPHIC-ADDRESS.t_patient_ds_sf-5.v1] 
+			allow_archetype ADDRESS[id31.1] closed 	-- Address - closed slot
+		}
+		/relationships existence matches {0} 
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Patient demographic data">
+				description = <"Simple patient personal demographic data">
+			>
+			["id11.1"] = <
+				text = <"Other details - closed slot">
+				description = <"Other details - closed slot">
+			>
+			["id3.1"] = <
+				text = <"Party identity - closed slot">
+				description = <"Party identity - closed slot">
+			>
+			["id31.1"] = <
+				text = <"Address - closed slot">
+				description = <"Address - closed slot">
+			>
+		>
+	>
+
+
+------------------------------------------------------------------------------------------
+template_overlay
+	openEHR-DEMOGRAPHIC-CLUSTER.t_patient_ds_sf-1.v1.0.0
+
+specialize
+	openEHR-DEMOGRAPHIC-CLUSTER.person_additional_data_br.v1
+
+definition
+	CLUSTER[id1.1] matches {	-- Person additional demographic data
+		/items matches {
+			ELEMENT[id2] occurrences matches {0} 
+			ELEMENT[id3.1] 	-- Race
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Person additional demographic data">
+				description = <"Person additional demographic data">
+			>
+			["id3.1"] = <
+				text = <"Race">
+				description = <"The person's race classifier">
+			>
+		>
+	>
+
+
+------------------------------------------------------------------------------------------
+template_overlay
+	openEHR-DEMOGRAPHIC-CLUSTER.t_patient_ds_sf-2.v1.0.0
+
+specialize
+	openEHR-DEMOGRAPHIC-CLUSTER.person_additional_data_iso.v1
+
+definition
+	CLUSTER[id1.1] matches {	-- Person additional demographic data
+		/items matches {
+			ELEMENT[id2.1] occurrences matches {0..1} 	-- Sex
+			ELEMENT[id3] occurrences matches {0} 
+			ELEMENT[id4] occurrences matches {0} 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Person additional demographic data">
+				description = <"*">
+			>
+			["id2.1"] = <
+				text = <"Sex">
+				description = <"*">
+			>
+		>
+	>
+
+
+------------------------------------------------------------------------------------------
+template_overlay
+	openEHR-DEMOGRAPHIC-CLUSTER.t_patient_ds_sf-3.v1.0.0
+
+specialize
+	openEHR-DEMOGRAPHIC-CLUSTER.person_birth_data_iso.v1
+
+definition
+	CLUSTER[id1.1] matches {	-- Birth data
+		items matches {
+			ELEMENT[id3] occurrences matches {0} 
+			ELEMENT[id5] occurrences matches {0} 
+			ELEMENT[id6] occurrences matches {0} 
+			allow_archetype CLUSTER[id7.1] closed 	-- Country specific data - closed slot
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Birth data">
+				description = <"Singapore birth demographic data">
+			>
+			["id7.1"] = <
+				text = <"Country specific data - closed slot">
+				description = <"Country specific data - closed slot">
+			>
+		>
+	>
+
+
+------------------------------------------------------------------------------------------
+template_overlay
+	openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_patient_ds_sf-4.v1.0.0
+
+specialize
+	openEHR-DEMOGRAPHIC-PARTY_IDENTITY.person_name.v1
+
+definition
+	PARTY_IDENTITY[id1.1] matches {	-- Person name
+		/details[id2]/items matches {
+			ELEMENT[id6] occurrences matches {0} 
+			ELEMENT[id20] occurrences matches {0} 
+			ELEMENT[id21] occurrences matches {0} 
+			ELEMENT[id9] occurrences matches {0} 
+			ELEMENT[id10] occurrences matches {0} 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Person name">
+				description = <"Person name for Simple discharge summary">
+			>
+		>
+	>
+
+------------------------------------------------------------------------------------------
+template_overlay
+	openEHR-DEMOGRAPHIC-ADDRESS.t_patient_ds_sf-5.v1.0.0
+
+specialize
+	openEHR-DEMOGRAPHIC-ADDRESS.address.v1
+
+definition
+	ADDRESS[id1.1] matches {	-- Address
+		/details[id2]/items matches {
+			CLUSTER[id3.1] occurrences matches {1..3} matches {	-- Address lines
+				items matches {
+					ELEMENT[id22] occurrences matches {0} 
+					ELEMENT[id23] occurrences matches {0} 
+					ELEMENT[id24] occurrences matches {0} 
+					ELEMENT[id25] occurrences matches {0} 
+					ELEMENT[id26] occurrences matches {0} 
+					ELEMENT[id27] occurrences matches {0} 
+					ELEMENT[id28] occurrences matches {0} 
+					ELEMENT[id29] occurrences matches {0} 
+					ELEMENT[id30] occurrences matches {0} 
+					ELEMENT[id31] occurrences matches {0} 
+					allow_archetype CLUSTER[id33.1] closed 	-- Slot closed
+				}
+			}
+			ELEMENT[id4] occurrences matches {0} 
+			ELEMENT[id7] occurrences matches {0} 
+			ELEMENT[id9] occurrences matches {0} 
+			ELEMENT[id10] occurrences matches {0} 
+			allow_archetype CLUSTER[id11.1] closed 	-- Slot closed
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Address">
+				description = <"Address based on ISO22220 standard.">
+			>
+			["id3.1"] = <
+				text = <"Address lines">
+				description = <"Address lines">
+			>
+			["id11.1"] = <
+				text = <"Slot closed">
+				description = <"Slot closed">
+			>
+			["id33.1"] = <
+				text = <"Slot closed">
+				description = <"Slot closed">
+			>
+		>
+	>
+

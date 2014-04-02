@@ -1,0 +1,158 @@
+archetype (adl_version=1.5.1)
+	openEHR-EHR-ADMIN_ENTRY.admission_short.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["organisation"] = <"NHS CFH">
+		["name"] = <"D B Hutchinson">
+		["date"] = <"14/11/2007">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Administrative information for the admission of a patient to the care of a hospital/institution">
+			use = <"">
+			keywords = <"admission", "admin">
+			misuse = <"">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["references"] = <"">
+		["MD5-CAM-1.0.1"] = <"7E981EB27C8273A46437E1A7E6D09990">
+	>
+
+definition
+	ADMIN_ENTRY[id1] matches {	-- Admission Short Singapore
+		other_participations matches {
+			PARTICIPATION[id41] occurrences matches {0..1} matches {	-- Referring doctor participation
+				function matches {
+					DV_CODED_TEXT[id60] matches {
+						defining_code matches {[at60]}
+					}
+				}
+			}
+			PARTICIPATION[id42] occurrences matches {0..1} matches {	-- Admitting doctor participation
+				function matches {
+					DV_CODED_TEXT[id61] matches {
+						defining_code matches {[at61]}
+					}
+				}
+			}
+			PARTICIPATION[id43] occurrences matches {0..1} matches {	-- Admitting organisation participation
+				function matches {
+					DV_CODED_TEXT[id62] matches {
+						defining_code matches {[at62]}
+					}
+				}
+			}
+		}
+		data matches {
+			ITEM_TREE[id4] matches {
+				items matches {
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Date of admission
+						value matches {
+							DV_DATE_TIME[id63] 
+						}
+					}
+					ELEMENT[id58] occurrences matches {0..*} matches {	-- Event Identifier
+						value matches {
+							DV_TEXT[id64] 
+						}
+					}
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Source of admission
+						value matches {
+							DV_TEXT[id65] 
+						}
+					}
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Admission type
+						value matches {
+							DV_CODED_TEXT[id66] matches {
+								defining_code matches {[ac1]}		-- Admission type (synthesised)
+							}
+						}
+					}
+					ELEMENT[id59] occurrences matches {0..1} matches {	-- Admitting unit
+						value matches {
+							DV_TEXT[id67] 
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Admission Short Singapore">
+				description = <"Administrative information for the admission of a patient to the care of a hospital/institution">
+			>
+			["id5"] = <
+				text = <"Date of admission">
+				description = <"*">
+			>
+			["id6"] = <
+				text = <"Admission type">
+				description = <"*">
+			>
+			["id12"] = <
+				text = <"Source of admission">
+				description = <"The place from which the patient was admitted">
+			>
+			["id41"] = <
+				text = <"Referring doctor participation">
+				description = <"Participation of referring doctor">
+			>
+			["id42"] = <
+				text = <"Admitting doctor participation">
+				description = <"Admitting doctor participation">
+			>
+			["id43"] = <
+				text = <"Admitting organisation participation">
+				description = <"Participation of admitting organisation">
+			>
+			["at47"] = <
+				text = <"Emergency">
+				description = <"*">
+			>
+			["at48"] = <
+				text = <"Elective">
+				description = <"*">
+			>
+			["id58"] = <
+				text = <"Event Identifier">
+				description = <"*">
+			>
+			["id59"] = <
+				text = <"Admitting unit">
+				description = <"*">
+			>
+			["at60"] = <
+				text = <"Referring clinician">
+				description = <"*">
+			>
+			["at61"] = <
+				text = <"Principal admitting clinician">
+				description = <"The clinician with primary responsibility for admission.">
+			>
+			["at62"] = <
+				text = <"Admitting organisation">
+				description = <"*">
+			>
+			["ac1"] = <
+				text = <"Admission type (synthesised)">
+				description = <"* (synthesised)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at47", "at48">
+		>
+	>

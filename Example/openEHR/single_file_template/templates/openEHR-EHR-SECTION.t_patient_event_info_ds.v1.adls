@@ -1,0 +1,143 @@
+template (adl_version=1.5.1)
+	openEHR-EHR-SECTION.t_patient_event_info_ds_sf.v1.0.0
+
+specialize
+	openEHR-EHR-SECTION.adhoc.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"01/04/2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Templated section for Simple discharge summary">
+			copyright = <"copyright (c) 2011 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	SECTION[id1.1] matches {	-- Patient event information
+		items matches {
+			use_archetype ADMIN_ENTRY[openEHR-EHR-ADMIN_ENTRY.t_patient_event_info_ds_sf-1.v1] occurrences matches {1} 
+			use_archetype ADMIN_ENTRY[openEHR-EHR-ADMIN_ENTRY.t_patient_event_info_ds_sf-2.v1] occurrences matches {1} 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Patient event information">
+				description = <"Information about the patient event">
+			>
+		>
+	>
+
+---------------------------------------------------------------------------------------------
+template_overlay
+	openEHR-EHR-ADMIN_ENTRY.t_patient_event_info_ds_sf-1.v1.0.0
+
+specialize
+	openEHR-EHR-ADMIN_ENTRY.admission_short.v1
+
+definition
+	ADMIN_ENTRY[id1.1] matches {	-- Admission event start information
+		/other_participations existence matches {0} 
+		/data[id4]/items matches {
+			ELEMENT[id5.1] occurrences matches {1} 	-- Event start date/time
+			ELEMENT[id12] occurrences matches {0} 
+			ELEMENT[id6] occurrences matches {0} 
+			ELEMENT[id58.1] occurrences matches {1..*} 	-- Event identifier - mandatory
+			ELEMENT[id59] occurrences matches {0} 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Admission event start information">
+				description = <"Administrative information for the start of episode in hospital">
+			>
+			["id5.1"] = <
+				text = <"Event start date/time">
+				description = <"*">
+			>
+			["id58.1"] = <
+				text = <"Event identifier - mandatory">
+				description = <"Event identifier - mandatory">
+			>
+		>
+	>
+
+
+---------------------------------------------------------------------------------------------
+template_overlay
+	openEHR-EHR-ADMIN_ENTRY.t_patient_event_info_ds_sf-2.v1.0.0
+
+specialize
+	openEHR-EHR-ADMIN_ENTRY.discharge.v1
+
+definition
+	ADMIN_ENTRY[id1.1] matches {	-- Discharge event end information - Simple discharge summary
+		/other_participations matches {
+			X_PARTICIPATION[id85.1] occurrences matches {1} matches {	-- Responsible clinician on discharge
+				performer existence matches {1} 
+			}
+			PARTICIPATION[id86] occurrences matches {0} 
+			PARTICIPATION[id87] occurrences matches {0} 
+		}
+		/data[id4]/items matches {
+			ELEMENT[id5.1] occurrences matches {1} 	-- Event end datetime
+			ELEMENT[id81] occurrences matches {0} 
+			ELEMENT[id61.1] 	-- Discharge from service/specialty
+			ELEMENT[id72] occurrences matches {0} 
+			allow_archetype CLUSTER[id75.1] closed 	-- Slot closed
+			ELEMENT[id78.1] 	-- Discharge outcome
+			ELEMENT[id79] occurrences matches {0} 
+			ELEMENT[id80.1] occurrences matches {1} 	-- Discharge status/type
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Discharge event end information - Simple discharge summary">
+				description = <"The administrative information at discharge of a patient from a period of care">
+			>
+			["id5.1"] = <
+				text = <"Event end datetime">
+				description = <"*">
+			>
+			["id61.1"] = <
+				text = <"Discharge from service/specialty">
+				description = <"*">
+			>
+			["id75.1"] = <
+				text = <"Slot closed">
+				description = <"Slot closed">
+			>
+			["id78.1"] = <
+				text = <"Discharge outcome">
+				description = <"*">
+			>
+			["id80.1"] = <
+				text = <"Discharge status/type">
+				description = <"*">
+			>
+			["id85.1"] = <
+				text = <"Responsible clinician on discharge">
+				description = <"Clinician responsible for discharge">
+			>
+		>
+	>
+

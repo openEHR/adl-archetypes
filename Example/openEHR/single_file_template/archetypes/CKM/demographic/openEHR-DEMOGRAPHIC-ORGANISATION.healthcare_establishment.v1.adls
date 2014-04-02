@@ -1,0 +1,72 @@
+﻿archetype (adl_version=1.5.1)
+	openEHR-DEMOGRAPHIC-ORGANISATION.healthcare_establishment.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"01/04/2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Healthcare establishment demographic identifier">
+			copyright = <"copyright (c) 2011 openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ORGANISATION[id1] matches {	-- Organisation
+		identities cardinality matches {1..*; ordered} matches {
+			PARTY_IDENTITY[id2] occurrences matches {1..*} matches {	-- Identification
+				details matches {
+					ITEM_LIST[id6] matches {
+						items cardinality matches {2..*; ordered} matches {
+							ELEMENT[id4] occurrences matches {1} matches {	-- Name
+								value matches {
+									DV_TEXT[id7] 
+								}
+							}
+							ELEMENT[id5] occurrences matches {1..*} matches {	-- Identifier
+								value matches {
+									DV_IDENTIFIER[id8] matches {
+										issuer 
+										id 
+										type 
+										realm 
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Organisation">
+				description = <"Organisation demographic data">
+			>
+			["id2"] = <
+				text = <"Identification">
+				description = <"Identification - the names the organisation is known by">
+			>
+			["id4"] = <
+				text = <"Name">
+				description = <"An organisation name">
+			>
+			["id5"] = <
+				text = <"Identifier">
+				description = <"An organisation Identifier">
+			>
+		>
+	>
