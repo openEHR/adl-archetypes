@@ -1,0 +1,302 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-SECTION.Antecedentes.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    SECTION[at0000] occurrences matches {1..1} matches {  -- Antecedentes
+        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+            SECTION[at0002] occurrences matches {0..1} matches {  -- Enfermedades familiares hereditarias
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ENTRY[at0003] occurrences matches {0..*} matches {  -- Enfermedad familiar hederitaria
+                        items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                            ELEMENT[at0004] occurrences matches {0..1} matches {  -- Descripción
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0005] occurrences matches {0..1} matches {*}  -- SIMPLE_TEXT
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0006] occurrences matches {0..1} matches {  -- Enfermedades previas
+                members existence matches {0..1} cardinality matches {0..*; unordered} matches {
+                    ENTRY[at0007] occurrences matches {0..*} matches {  -- Enfermedad previa
+                        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0008] occurrences matches {0..1} matches {  -- Descripción
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0009] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0010] occurrences matches {0..1} matches {  -- Antecedentes neonatales, obstétricos y quirúrgicos
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ENTRY[at0011] occurrences matches {0..*} matches {  -- Antecedente neonatal, obstétrico y quirúrgico
+                        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0012] occurrences matches {0..1} matches {  -- Descripción
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0013] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0014] occurrences matches {0..1} matches {  -- Alergias
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    allow_archetype ENTRY[at0015] occurrences matches {0..*} matches {  -- Alergia
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.Alergia.v1/}
+                    }
+                }
+            }
+            SECTION[at0016] occurrences matches {0..1} matches {  -- Hábitos tóxicos
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ENTRY[at0017] occurrences matches {0..*} matches {  -- Hábito tóxico
+                        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0018] occurrences matches {0..1} matches {  -- ELEMENT
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0019] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0020] occurrences matches {0..1} matches {  -- Actuaciones preventivas
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ENTRY[at0021] occurrences matches {0..*} matches {  -- Actuación preventiva
+                        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0022] occurrences matches {0..1} matches {  -- Descripción
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0023] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0024] occurrences matches {0..1} matches {  -- Medicación previa
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ENTRY[at0025] occurrences matches {0..*} matches {  -- Medicación previa
+                        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0026] occurrences matches {0..1} matches {  -- Descripción
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0027] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            ENTRY[at0029] occurrences matches {0..1} matches {  -- Situación funcional
+                items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ELEMENT[at0030] occurrences matches {0..1} matches {  -- Descripción
+                        value existence matches {0..1} matches {
+                            SIMPLE_TEXT[at0031] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                originalText existence matches {0..1} matches {/.*/}
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0032] occurrences matches {0..1} matches {  -- Antecedentes sociales y profesionales
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ENTRY[at0033] occurrences matches {0..*} matches {  -- Antecedente social y profesional
+                        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0034] occurrences matches {0..1} matches {  -- Descripción
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0035] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Antecedentes">
+                    description = <"Antecedentes">
+                >
+                ["at0002"] = <
+                    text = <"Enfermedades familiares hereditarias">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"Enfermedad familiar hederitaria">
+                    description = <"">
+                >
+                ["at0004"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0005"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"Enfermedades previas">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"Enfermedad previa">
+                    description = <"">
+                >
+                ["at0008"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0009"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0010"] = <
+                    text = <"Antecedentes neonatales, obstétricos y quirúrgicos">
+                    description = <"">
+                >
+                ["at0011"] = <
+                    text = <"Antecedente neonatal, obstétrico y quirúrgico">
+                    description = <"">
+                >
+                ["at0012"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0013"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0014"] = <
+                    text = <"Alergias">
+                    description = <"">
+                >
+                ["at0015"] = <
+                    text = <"Alergia">
+                    description = <"">
+                >
+                ["at0016"] = <
+                    text = <"Hábitos tóxicos">
+                    description = <"">
+                >
+                ["at0017"] = <
+                    text = <"Hábito tóxico">
+                    description = <"">
+                >
+                ["at0018"] = <
+                    text = <"ELEMENT">
+                    description = <"">
+                >
+                ["at0019"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0020"] = <
+                    text = <"Actuaciones preventivas">
+                    description = <"Vacunaciones infantiles, del adulto, quimioprofilaxis realizadas, etc">
+                >
+                ["at0021"] = <
+                    text = <"Actuación preventiva">
+                    description = <"">
+                >
+                ["at0022"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0023"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0024"] = <
+                    text = <"Medicación previa">
+                    description = <"">
+                >
+                ["at0025"] = <
+                    text = <"Medicación previa">
+                    description = <"">
+                >
+                ["at0026"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0027"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0029"] = <
+                    text = <"Situación funcional">
+                    description = <"Se refiere a la valoración del impacto funcional de los problemas activos o enfermedades y se podrán utilizar una o varias escalas (Escalas de dependencia, clasificación funcional de la insuficiencia cardíaca, valoraciones del grado de demencia, escalas de calidad de vida, etc.)">
+                >
+                ["at0030"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0031"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0032"] = <
+                    text = <"Antecedentes sociales y profesionales">
+                    description = <"">
+                >
+                ["at0033"] = <
+                    text = <"Antecedente social y profesional">
+                    description = <"">
+                >
+                ["at0034"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0035"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

@@ -1,0 +1,72 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.PruebaDiagnosticaDeLaboratorio.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- Prueba Diagnostica De Laboratorio
+        items existence matches {1..1} cardinality matches {0..*; unordered; unique} matches {
+            allow_archetype CLUSTER[at0001] occurrences matches {1..1} matches {  -- Datos de la muestra
+                include
+                    archetype_id/value matches {/CEN-EN13606-CLUSTER.Muestra.v1/}
+            }
+            allow_archetype CLUSTER[at0002] occurrences matches {0..1} matches {  -- Resultado prueba Diagnóstica Cuantitativa
+                include
+                    archetype_id/value matches {/CEN-EN13606-CLUSTER.ResultadoPruebaDiagnosticaCuantitativa.v1/}
+            }
+            allow_archetype CLUSTER[at0003] occurrences matches {0..1} matches {  -- Resultado prueba Diagnóstica Cualitativa
+                include
+                    archetype_id/value matches {/CEN-EN13606-CLUSTER.ResultadoPruebaDiagnosticaCualitativa.v1/}
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Prueba Diagnostica De Laboratorio">
+                    description = <"Resultado de una Prueba Diagnostica De Laboratorio">
+                >
+                ["at0001"] = <
+                    text = <"Datos de la muestra">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"Resultado prueba Diagnóstica Cuantitativa">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"Resultado prueba Diagnóstica Cualitativa">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

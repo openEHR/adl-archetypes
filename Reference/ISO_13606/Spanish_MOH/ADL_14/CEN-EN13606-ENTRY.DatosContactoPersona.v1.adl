@@ -1,0 +1,68 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.DatosContactoPersona.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- Datos básicos de contacto
+        items existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+            ELEMENT[at0003] occurrences matches {0..*} matches {  -- teléfono de contacto
+                value existence matches {0..1} matches {
+                    URI[at0005] occurrences matches {0..1} matches {  -- URI
+                        value existence matches {0..1} matches {/.*/; ""}
+                        scheme existence matches {0..1} matches {"telephone"}
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Datos básicos de contacto">
+                    description = <"DatosDeReferenciaPaciente">
+                >
+                ["at0001"] = <
+                    text = <"nombre de persona">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"teléfono de contacto">
+                    description = <"">
+                >
+                ["at0005"] = <
+                    text = <"URI">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

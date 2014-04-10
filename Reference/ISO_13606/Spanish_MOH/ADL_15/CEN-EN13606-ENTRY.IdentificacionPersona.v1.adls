@@ -1,0 +1,169 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-ENTRY.IdentificacionPersona.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- identificadores de persona
+		items matches {
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- DNI
+				value matches {
+					II[id18] occurrences matches {0..1} matches {	-- Número de DNI
+						root existence matches {1} matches {
+							OID[id4] occurrences matches {1} matches {	-- OID
+								oid matches {"1.3.6.1.4.1.19126.3"}
+							}
+						}
+					}
+				}
+			}
+			ELEMENT[id10] occurrences matches {0..1} matches {	-- Tarjeta de residencia
+				value matches {
+					II[id13] occurrences matches {0..1} 	-- Identificador que representa la tarjeta de residencia
+				}
+			}
+			ELEMENT[id15] occurrences matches {0..1} matches {	-- Pasaporte
+				value matches {
+					II[id17] occurrences matches {0..1} 	-- Identificador que representa el número de pasaporte
+				}
+			}
+			ELEMENT[id2] occurrences matches {1} matches {	-- NASS
+				value matches {
+					II[id5] occurrences matches {0..1} matches {	-- Identificador que representa el Número de aficiliación a la seguridad social
+						root existence matches {1} matches {
+							OID[id8] occurrences matches {1} matches {	-- OID
+								oid matches {"1.3.6.1.4.1.19126.4"}
+							}
+						}
+					}
+				}
+			}
+			ELEMENT[id6] occurrences matches {1} matches {	-- CIP de Comunidad Autónoma
+				value matches {
+					II[id7] occurrences matches {0..1} 	-- Identificador que representa el CIP de Comunidad Autónoma
+				}
+			}
+			ELEMENT[id9] occurrences matches {0..1} matches {	-- Código SNS
+				value matches {
+					II[id11] occurrences matches {0..1} 	-- Identificador que representa el código SNS
+				}
+			}
+			ELEMENT[id12] occurrences matches {0..1} matches {	-- CIP Europeo
+				value matches {
+					II[id14] occurrences matches {0..1} matches {	-- Identificador que representa el CIP europeo
+						root existence matches {0} matches {
+							OID[id16] occurrences matches {0..1} matches {
+								oid matches {""}
+							}
+						}
+						extension existence matches {0} matches {""}
+					}
+				}
+			}
+			ELEMENT[id19] occurrences matches {1} matches {	-- Número de Historia Clínica
+				value matches {
+					II[id20] occurrences matches {0..1} 	-- Identificador que representa el número de historia clínica
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"identificadores de persona">
+				description = <"identificadores de persona">
+			>
+			["id3"] = <
+				text = <"DNI">
+				description = <"Número de DNI">
+			>
+			["id18"] = <
+				text = <"Número de DNI">
+				description = <"">
+			>
+			["id2"] = <
+				text = <"NASS">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"Identificador que representa el Número de aficiliación a la seguridad social">
+				description = <"">
+			>
+			["id6"] = <
+				text = <"CIP de Comunidad Autónoma">
+				description = <"">
+			>
+			["id7"] = <
+				text = <"Identificador que representa el CIP de Comunidad Autónoma">
+				description = <"">
+			>
+			["id9"] = <
+				text = <"Código SNS">
+				description = <"">
+			>
+			["id11"] = <
+				text = <"Identificador que representa el código SNS">
+				description = <"">
+			>
+			["id12"] = <
+				text = <"CIP Europeo">
+				description = <"Se reserva este espacio en previsión de que en el futuro, exista un código europeo/internacional de identificación.">
+			>
+			["id14"] = <
+				text = <"Identificador que representa el CIP europeo">
+				description = <"">
+			>
+			["id19"] = <
+				text = <"Número de Historia Clínica">
+				description = <"">
+			>
+			["id20"] = <
+				text = <"Identificador que representa el número de historia clínica">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"OID">
+				description = <"">
+			>
+			["id8"] = <
+				text = <"OID">
+				description = <"">
+			>
+			["id10"] = <
+				text = <"Tarjeta de residencia">
+				description = <"">
+			>
+			["id13"] = <
+				text = <"Identificador que representa la tarjeta de residencia">
+				description = <"">
+			>
+			["id15"] = <
+				text = <"Pasaporte">
+				description = <"">
+			>
+			["id17"] = <
+				text = <"Identificador que representa el número de pasaporte">
+				description = <"">
+			>
+		>
+	>

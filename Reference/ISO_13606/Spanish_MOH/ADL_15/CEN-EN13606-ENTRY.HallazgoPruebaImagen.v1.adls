@@ -1,0 +1,135 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-ENTRY.HallazgoPruebaImagen.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- Hallazgo en prueba de imagen
+		items matches {
+			ELEMENT[id2] occurrences matches {1} matches {	-- Descripción
+				value 
+			}
+			CLUSTER[id6] occurrences matches {0..1} matches {	-- Hallazgos negativos
+				parts matches {
+					ELEMENT[id9] occurrences matches {0..*} matches {	-- Información sobre el hallazgo negativo
+						value matches {
+							CODED_TEXT[id16] occurrences matches {0..1} matches {	-- CODED_TEXT
+								codedValue 
+								originalText existence matches {1} matches {/.*/}
+							}
+						}
+					}
+				}
+				structure_type matches {
+					CS[id17] occurrences matches {1} matches {
+						codeValue matches {"STRC01"}
+						codingSchemeName matches {"CEN/TC251/EN13606-3:STRUCTURE_TYPE"}
+					}
+				}
+			}
+			CLUSTER[id21] occurrences matches {0..1} matches {	-- Comparaciones con estudios previso
+				parts matches {
+					ELEMENT[id24] occurrences matches {0..*} matches {	-- Comparación
+						value matches {
+							CODED_TEXT[id26] occurrences matches {0..1} matches {	-- CODED_TEXT
+								codedValue 
+								originalText existence matches {1} matches {/.*/}
+							}
+						}
+					}
+				}
+				structure_type matches {
+					CS[id25] occurrences matches {1} matches {
+						codeValue matches {"STRC01"}
+						codingSchemeName matches {"CEN/TC251/EN13606-3:STRUCTURE_TYPE"}
+					}
+				}
+			}
+			CLUSTER[id27] occurrences matches {0..1} matches {	-- Limitaciones diagnósticas
+				parts matches {
+					ELEMENT[id30] occurrences matches {0..*} matches {	-- Limitación
+						value matches {
+							CODED_TEXT[id4] occurrences matches {0..1} matches {	-- CODED_TEXT
+								codedValue 
+								originalText existence matches {1} matches {/.*/}
+							}
+						}
+					}
+				}
+				structure_type matches {
+					CS[id3] occurrences matches {1} matches {
+						codeValue matches {"STRC01"}
+						codingSchemeName matches {"CEN/TC251/EN13606-3:STRUCTURE_TYPE"}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Hallazgo en prueba de imagen">
+				description = <"Hallazgoen Prueba de Imagen">
+			>
+			["id2"] = <
+				text = <"Descripción">
+				description = <"">
+			>
+			["id6"] = <
+				text = <"Hallazgos negativos">
+				description = <"">
+			>
+			["id9"] = <
+				text = <"Información sobre el hallazgo negativo">
+				description = <"">
+			>
+			["id16"] = <
+				text = <"CODED_TEXT">
+				description = <"">
+			>
+			["id21"] = <
+				text = <"Comparaciones con estudios previso">
+				description = <"">
+			>
+			["id24"] = <
+				text = <"Comparación">
+				description = <"">
+			>
+			["id26"] = <
+				text = <"CODED_TEXT">
+				description = <"">
+			>
+			["id27"] = <
+				text = <"Limitaciones diagnósticas">
+				description = <"">
+			>
+			["id30"] = <
+				text = <"Limitación">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"CODED_TEXT">
+				description = <"">
+			>
+		>
+	>

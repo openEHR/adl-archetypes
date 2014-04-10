@@ -1,0 +1,156 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.PresionSanguinea.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- Presión sanguínea
+        items existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+            CLUSTER[at0008] occurrences matches {0..1} matches {  -- Medida de presión sanguínea
+                parts existence matches {0..1} cardinality matches {2..4; ordered; unique} matches {
+                    ELEMENT[at0001] occurrences matches {1..1} matches {  -- Sistólica
+                        value existence matches {1..1} matches {
+                            PQ[at0005] occurrences matches {1..1} matches {  -- Medida sistólica
+                                units existence matches {1..1} matches {
+                                    CS[at0009] occurrences matches {0..1} matches {  -- CS
+                                        codeValue existence matches {0..1} matches {"mm[Hg]"}
+                                        codingSchemeName existence matches {0..1} matches {"UCUM"}
+                                    }
+                                }
+                                value existence matches {1..1} matches {|0.0..<1000.0|}
+                            }
+                        }
+                    }
+                    ELEMENT[at0002] occurrences matches {1..1} matches {  -- Diastólica
+                        value existence matches {1..1} matches {
+                            PQ[at0006] occurrences matches {1..1} matches {  -- Medida diastólica
+                                units existence matches {1..1} matches {
+                                    CS[at0010] occurrences matches {0..1} matches {  -- CS
+                                        codeValue existence matches {0..1} matches {"mm[Hg]"}
+                                        codingSchemeName existence matches {0..1} matches {"UCUM"}
+                                    }
+                                }
+                                value existence matches {1..1} matches {|0.0..<1000.0|}
+                            }
+                        }
+                    }
+                    ELEMENT[at0003] occurrences matches {0..1} matches {  -- Presión arterial media
+                        value existence matches {0..1} matches {
+                            PQ[at0007] occurrences matches {1..1} matches {  -- Media de medidas
+                                units existence matches {1..1} matches {
+                                    CS[at0011] occurrences matches {0..1} matches {  -- CS
+                                        codeValue existence matches {0..1} matches {"mm[Hg]"}
+                                        codingSchemeName existence matches {0..1} matches {"UCUM"}
+                                    }
+                                }
+                                value existence matches {1..1} matches {|0.0..750.0|}
+                            }
+                        }
+                    }
+                    ELEMENT[at0004] occurrences matches {0..1} matches {  -- Posición
+                        value existence matches {0..1} matches {
+                            SIMPLE_TEXT[at0012] occurrences matches {0..1} matches {  -- Posición
+                                originalText existence matches {0..1} matches {"Standing","Sitting","Reclining","Lying"}
+                            }
+                        }
+                    }
+                }
+                structure_type existence matches {1..1} matches {
+                    CS[at0014] occurrences matches {1..1} matches {  -- 
+                        codeValue existence matches {0..1} matches {"STRC01"}
+                        codingSchemeName existence matches {0..1} matches {"CEN/TC251/EN13606-3:STRUCTURE_TYPE"}
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Presión sanguínea">
+                    description = <"La medida por cualquier método (invasivo o no invasivo) de la presión arterial sistémica que se considera que representa la presion sanguínea sistémica real">
+                >
+                ["at0001"] = <
+                    text = <"Sistólica">
+                    description = <"Objeto de tipo ELEMENT">
+                >
+                ["at0002"] = <
+                    text = <"Diastólica">
+                    description = <"Objeto de tipo ELEMENT">
+                >
+                ["at0003"] = <
+                    text = <"Presión arterial media">
+                    description = <"Objeto de tipo ELEMENT">
+                >
+                ["at0004"] = <
+                    text = <"Posición">
+                    description = <"Objeto de tipo ELEMENT">
+                >
+                ["at0005"] = <
+                    text = <"Medida sistólica">
+                    description = <"Objeto de tipo PQ">
+                >
+                ["at0006"] = <
+                    text = <"Medida diastólica">
+                    description = <"Objeto de tipo PQ">
+                >
+                ["at0007"] = <
+                    text = <"Media de medidas">
+                    description = <"Objeto de tipo PQ">
+                >
+                ["at0009"] = <
+                    text = <"CS">
+                    description = <"Objeto de tipo CS">
+                >
+                ["at0010"] = <
+                    text = <"CS">
+                    description = <"Objeto de tipo CS">
+                >
+                ["at0011"] = <
+                    text = <"CS">
+                    description = <"Objeto de tipo CS">
+                >
+                ["at0012"] = <
+                    text = <"Posición">
+                    description = <"Objeto de tipo SIMPLE_TEXT">
+                >
+                ["at0008"] = <
+                    text = <"Medida de presión sanguínea">
+                    description = <"Objeto de tipo CLUSTER">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+        ["es"] = <
+            items = <
+            >
+        >
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

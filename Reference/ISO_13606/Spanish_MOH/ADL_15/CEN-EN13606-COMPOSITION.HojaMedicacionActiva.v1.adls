@@ -1,0 +1,170 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-COMPOSITION.HojaMedicacionActiva.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			use = <"Comunicación y registro de la hoja de medicación activa e información al paciente del sistema de receta electrónica del Sistema Nacional de Salud.">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	COMPOSITION[id1] occurrences matches {1} matches {	-- HojaMedicacionActiva
+		content cardinality matches {0..5; unordered; unique} matches {
+			SECTION[id5] occurrences matches {1} matches {	-- Datos del paciente
+				members cardinality matches {0..2; unordered; unique} matches {
+					allow_archetype ENTRY[id6] occurrences matches {0..1} matches {	-- Identificadores del paciente
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.IdentificacionPersona.v1/}
+					}
+					allow_archetype ENTRY[id7] occurrences matches {0..1} matches {	-- Datos demográficos
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.DemograficosPersona.v1/}
+					}
+				}
+			}
+			SECTION[id9] occurrences matches {1} matches {	-- Prescripciones
+				members matches {
+					SECTION[id3] occurrences matches {0..*} matches {	-- Prescripción
+						members cardinality matches {0..1; unordered; unique} matches {
+							allow_archetype ENTRY[id10] occurrences matches {1} matches {	-- Medicación
+								include
+									archetype_id/value matches {/CEN-EN13606-ENTRY.Medicacion.v1/}
+							}
+							ENTRY[id12] occurrences matches {0..1} matches {	-- Identificador
+								items cardinality matches {0..1; unordered; unique} matches {
+									ELEMENT[id14] occurrences matches {0..1} matches {	-- Número o código
+										value matches {
+											SIMPLE_TEXT[id16] occurrences matches {0..1} 	-- SIMPLE_TEXT
+											II[id18] occurrences matches {0..1} 	-- II
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			SECTION[id11] occurrences matches {0..1} matches {	-- Diagnósticos
+				members matches {
+					allow_archetype ENTRY[id15] occurrences matches {0..*} matches {	-- Diagnóstico
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.ProblemaDiagnostico.v1/}
+					}
+				}
+			}
+			SECTION[id17] occurrences matches {0..1} matches {	-- Instrucciones para el paciente
+				members matches {
+					allow_archetype ENTRY[id13] occurrences matches {0..*} matches {	-- Instrucción
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.Instruccion.v1/}
+					}
+				}
+			}
+			SECTION[id4] occurrences matches {1} matches {	-- Prescriptor
+				members cardinality matches {1; unordered; unique} matches {
+					allow_archetype ENTRY[id8] occurrences matches {0..1} matches {	-- Detalles prescriptor
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.ProfesionalSanitario.v1/}
+					}
+				}
+			}
+		}
+		name matches {
+			SIMPLE_TEXT[id2] occurrences matches {1} matches {	-- SIMPLE_TEXT
+				originalText matches {"Hoja de medicación activa e información al paciente"}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"HojaMedicacionActiva">
+				description = <"HojaMedicacionActiva">
+			>
+			["id2"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"Datos del paciente">
+				description = <"">
+			>
+			["id6"] = <
+				text = <"Identificadores del paciente">
+				description = <"">
+			>
+			["id7"] = <
+				text = <"Datos demográficos">
+				description = <"">
+			>
+			["id9"] = <
+				text = <"Prescripciones">
+				description = <"">
+			>
+			["id10"] = <
+				text = <"Medicación">
+				description = <"">
+			>
+			["id11"] = <
+				text = <"Diagnósticos">
+				description = <"">
+			>
+			["id15"] = <
+				text = <"Diagnóstico">
+				description = <"">
+			>
+			["id17"] = <
+				text = <"Instrucciones para el paciente">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"Prescriptor">
+				description = <"">
+			>
+			["id8"] = <
+				text = <"Detalles prescriptor">
+				description = <"">
+			>
+			["id13"] = <
+				text = <"Instrucción">
+				description = <"">
+			>
+			["id3"] = <
+				text = <"Prescripción">
+				description = <"">
+			>
+			["id12"] = <
+				text = <"Identificador">
+				description = <"">
+			>
+			["id14"] = <
+				text = <"Número o código">
+				description = <"">
+			>
+			["id16"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id18"] = <
+				text = <"II">
+				description = <"">
+			>
+		>
+	>

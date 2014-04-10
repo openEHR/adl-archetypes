@@ -1,0 +1,54 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-ENTRY.TipoIngreso.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- Tipo de Ingreso
+		items cardinality matches {0..1; unordered; unique} matches {
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Descripción
+				value matches {
+					CODED_TEXT[id5] occurrences matches {0..1} matches {	-- CODED_TEXT
+						codedValue 
+						originalText existence matches {1} matches {"Urgente", "Programado"}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Tipo de Ingreso">
+				description = <"TipoIngreso">
+			>
+			["id2"] = <
+				text = <"Descripción">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"CODED_TEXT">
+				description = <"">
+			>
+		>
+	>

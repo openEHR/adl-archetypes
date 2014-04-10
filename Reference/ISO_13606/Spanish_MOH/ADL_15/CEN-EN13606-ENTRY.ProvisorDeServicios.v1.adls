@@ -1,0 +1,68 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-ENTRY.ProvisorDeServicios.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- Datos del provisor de servicios
+		items matches {
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Denominación del Servicio de salud
+				value matches {
+					CV[id3] occurrences matches {0..1} matches {	-- código del servicio de salud
+						codingSchemeName matches {"SubsetServiciosSaludSNS"}
+					}
+				}
+			}
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Denominación del provisor de servicios
+				value matches {
+					SIMPLE_TEXT[id5] occurrences matches {0..1} matches {	-- nombre del provisor de servicios
+						originalText matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Datos del provisor de servicios">
+				description = <"ProvisorDeServicios">
+			>
+			["id2"] = <
+				text = <"Denominación del Servicio de salud">
+				description = <"">
+			>
+			["id3"] = <
+				text = <"código del servicio de salud">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"Denominación del provisor de servicios">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"nombre del provisor de servicios">
+				description = <"">
+			>
+		>
+	>

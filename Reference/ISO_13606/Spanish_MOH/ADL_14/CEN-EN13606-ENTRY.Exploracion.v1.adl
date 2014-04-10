@@ -1,0 +1,256 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.Exploracion.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- Exploracion
+        items existence matches {0..1} cardinality matches {0..*; ordered} matches {
+            ELEMENT[at0001] occurrences matches {1..1} matches {  -- Tipo de exploración
+                value existence matches {0..1} matches {
+                    CODED_TEXT[at0002] occurrences matches {0..1} matches {  -- CODED_TEXT
+                        codedValue existence matches {0..1} matches {
+                            CD[at0003] occurrences matches {0..1} matches {*}  -- CD
+                        }
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+            ELEMENT[at0004] occurrences matches {1..1} matches {  -- Fecha de exploración
+                value existence matches {0..1} matches {
+                    DATE[at0005] occurrences matches {0..1} matches {  -- DATE
+                        date existence matches {1..1} matches {yyyy-mm-dd}
+                    }
+                }
+            }
+            CLUSTER[at0006] occurrences matches {1..1} matches {  -- Descripción de la exploración
+                parts existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+                    ELEMENT[at0007] occurrences matches {0..1} matches {  -- Prioridad
+                        value existence matches {0..1} matches {
+                            CODED_TEXT[at0008] occurrences matches {0..1} matches {  -- CODED_TEXT
+                                originalText existence matches {1..1} matches {/.*/}
+                                codedValue existence matches {0..1} matches {
+                                    CD[at0009] occurrences matches {0..1} matches {*}  -- CD
+                                }
+                            }
+                        }
+                    }
+                    CLUSTER[at0011] occurrences matches {0..1} matches {  -- Medios de contraste
+                        parts existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0012] occurrences matches {0..*} matches {  -- Medio de contraste
+                                value existence matches {0..1} matches {
+                                    CODED_TEXT[at0013] occurrences matches {0..1} matches {  -- CODED_TEXT
+                                        originalText existence matches {1..1} matches {/.*/}
+                                        codedValue existence matches {0..1} matches {
+                                            CD[at0014] occurrences matches {0..1} matches {*}  -- CD
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    CLUSTER[at0015] occurrences matches {0..1} matches {  -- Reacciones adversas
+                        parts existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0016] occurrences matches {0..*} matches {*}  -- Reacción adversa
+                        }
+                    }
+                    CLUSTER[at0010] occurrences matches {0..1} matches {  -- Otros incidentes
+                        parts existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0017] occurrences matches {0..*} matches {  -- Incidente en la exploración
+                                value existence matches {0..1} matches {
+                                    CODED_TEXT[at0018] occurrences matches {0..1} matches {  -- CODED_TEXT
+                                        originalText existence matches {1..1} matches {/.*/}
+                                        codedValue existence matches {0..1} matches {
+                                            CD[at0019] occurrences matches {0..1} matches {*}  -- CD
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    CLUSTER[at0020] occurrences matches {0..1} matches {  -- Limitaciones técnicas
+                        parts existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0021] occurrences matches {0..*} matches {  -- Limitación técnica
+                                value existence matches {0..1} matches {
+                                    CODED_TEXT[at0022] occurrences matches {0..1} matches {  -- CODED_TEXT
+                                        originalText existence matches {1..1} matches {/.*/}
+                                        codedValue existence matches {0..1} matches {
+                                            CD[at0023] occurrences matches {0..1} matches {*}  -- CD
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    CLUSTER[at0024] occurrences matches {0..1} matches {  -- Exploración de comparación
+                        parts existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0025] occurrences matches {1..1} matches {  -- Fecha de la exploración
+                                value existence matches {0..1} matches {
+                                    DATE[at0026] occurrences matches {0..1} matches {  -- DATE
+                                        date existence matches {1..1} matches {*}
+                                    }
+                                }
+                            }
+                            ELEMENT[at0027] occurrences matches {1..1} matches {  -- Identificador de la exploración
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0028] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Exploracion">
+                    description = <"Exploracion">
+                >
+                ["at0001"] = <
+                    text = <"Tipo de exploración">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+                ["at0004"] = <
+                    text = <"Fecha de exploración">
+                    description = <"">
+                >
+                ["at0005"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"Descripción de la exploración">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"Prioridad">
+                    description = <"">
+                >
+                ["at0008"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+                ["at0009"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+                ["at0011"] = <
+                    text = <"Medios de contraste">
+                    description = <"">
+                >
+                ["at0012"] = <
+                    text = <"Medio de contraste">
+                    description = <"">
+                >
+                ["at0013"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+                ["at0014"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+                ["at0015"] = <
+                    text = <"Reacciones adversas">
+                    description = <"">
+                >
+                ["at0016"] = <
+                    text = <"Reacción adversa">
+                    description = <"">
+                >
+                ["at0010"] = <
+                    text = <"Otros incidentes">
+                    description = <"Por ejemplo falta de colaboración, ansiedad, claustrofobia y abordaje de los mismos">
+                >
+                ["at0017"] = <
+                    text = <"Incidente en la exploración">
+                    description = <"">
+                >
+                ["at0018"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+                ["at0019"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+                ["at0020"] = <
+                    text = <"Limitaciones técnicas">
+                    description = <"">
+                >
+                ["at0021"] = <
+                    text = <"Limitación técnica">
+                    description = <"">
+                >
+                ["at0022"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+                ["at0023"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+                ["at0024"] = <
+                    text = <"Exploración de comparación">
+                    description = <"">
+                >
+                ["at0025"] = <
+                    text = <"Fecha de la exploración">
+                    description = <"">
+                >
+                ["at0026"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0027"] = <
+                    text = <"Identificador de la exploración">
+                    description = <"">
+                >
+                ["at0028"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

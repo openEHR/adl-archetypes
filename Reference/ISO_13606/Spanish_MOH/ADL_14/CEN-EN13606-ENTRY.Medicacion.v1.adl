@@ -1,0 +1,309 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.Medicacion.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- Medicación
+        items existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+            CLUSTER[at0005] occurrences matches {1..1} matches {  -- Presentación clínica con formato
+                parts existence matches {0..1} cardinality matches {1..2; unordered; unique} matches {
+                    ELEMENT[at0008] occurrences matches {0..1} matches {  -- VMPP
+                        value existence matches {0..1} matches {
+                            CD[at0009] occurrences matches {0..1} matches {*}  -- CD
+                        }
+                    }
+                    ELEMENT[at0010] occurrences matches {0..1} matches {  -- Código Nacional
+                        value existence matches {0..1} matches {
+                            CD[at0011] occurrences matches {0..1} matches {*}  -- CD
+                        }
+                    }
+                }
+            }
+            CLUSTER[at0022] occurrences matches {0..1} matches {  -- Especialidad
+                parts existence matches {0..1} cardinality matches {0..2; ordered; unique} matches {
+                    ELEMENT[at0023] occurrences matches {1..1} matches {  -- Marca comercial
+                        value existence matches {0..1} matches {
+                            CD[at0025] occurrences matches {0..1} matches {*}  -- CD
+                        }
+                    }
+                    ELEMENT[at0026] occurrences matches {0..1} matches {  -- Motivo
+                        value existence matches {0..1} matches {
+                            SIMPLE_TEXT[at0027] occurrences matches {0..1} matches {*}  -- SIMPLE_TEXT
+                        }
+                    }
+                }
+            }
+            ELEMENT[at0046] occurrences matches {0..1} matches {  -- vía de administración
+                value existence matches {0..1} matches {
+                    CODED_TEXT[at0001] occurrences matches {0..1} matches {  -- CODED_TEXT
+                        codedValue existence matches {0..1} matches {
+                            CD[at0002] occurrences matches {0..1} matches {  -- CD
+                                codeValue existence matches {0..1} matches {
+                                    [ac0002]
+                                }
+                            }
+                        }
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+            CLUSTER[at0012] occurrences matches {1..1} matches {  -- Posología
+                parts existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+                    ELEMENT[at0013] occurrences matches {1..1} matches {  -- Cantidad
+                        value existence matches {0..1} matches {
+                            INT[at0014] occurrences matches {0..1} matches {*}  -- INT
+                        }
+                    }
+                    ELEMENT[at0015] occurrences matches {1..1} matches {  -- Forma farmaceútica
+                        value existence matches {0..1} matches {
+                            CD[at0016] occurrences matches {0..1} matches {  -- CD
+                                codeValue existence matches {0..1} matches {
+                                    [ac0004]
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[at0017] occurrences matches {0..1} matches {  -- Frecuencia de administración
+                        value existence matches {0..1} matches {
+                            CD[at0018] occurrences matches {0..1} matches {  -- CD
+                                codeValue existence matches {0..1} matches {
+                                    [ac0005]
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[at0019] occurrences matches {0..1} matches {  -- momento de administración
+                        value existence matches {0..1} matches {
+                            CD[at0020] occurrences matches {0..1} matches {  -- CD
+                                codeValue existence matches {0..1} matches {
+                                    [ac0003]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            ELEMENT[at0050] occurrences matches {0..1} matches {  -- fecha de inicio
+                value existence matches {0..1} matches {
+                    DATE[at0052] occurrences matches {0..1} matches {  -- DATE
+                        date existence matches {1..1} matches {*}
+                    }
+                }
+            }
+            ELEMENT[at0054] occurrences matches {0..1} matches {  -- fecha de finalización
+                value existence matches {0..1} matches {
+                    DATE[at0056] occurrences matches {0..1} matches {  -- DATE
+                        date existence matches {1..1} matches {*}
+                    }
+                }
+            }
+            ELEMENT[at0058] occurrences matches {0..1} matches {  -- duración
+                value existence matches {0..1} matches {
+                    PQ[at0003] occurrences matches {0..1} matches {  -- PQ
+                        units existence matches {1..1} matches {
+                            CS[at0006] occurrences matches {1..1} matches {  -- CS
+                                codeValue existence matches {0..1} matches {
+                                    [ac0001]
+                                }
+                            }
+                        }
+                        value existence matches {1..1} matches {*}
+                    }
+                }
+            }
+            ELEMENT[at0029] occurrences matches {0..1} matches {  -- Origen
+                value existence matches {0..1} matches {
+                    CD[at0033] occurrences matches {0..1} matches {*}  -- CD
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Medicación">
+                    description = <"Medicación">
+                >
+                ["at0046"] = <
+                    text = <"vía de administración">
+                    description = <"">
+                >
+                ["at0050"] = <
+                    text = <"fecha de inicio">
+                    description = <"">
+                >
+                ["at0052"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0054"] = <
+                    text = <"fecha de finalización">
+                    description = <"">
+                >
+                ["at0056"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0058"] = <
+                    text = <"duración">
+                    description = <"">
+                >
+                ["at0001"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"PQ">
+                    description = <"">
+                >
+                ["at0005"] = <
+                    text = <"Presentación clínica con formato">
+                    description = <"">
+                >
+                ["at0008"] = <
+                    text = <"VMPP">
+                    description = <"Virtual Medicine Product Pack de Snomed-CT">
+                >
+                ["at0009"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+                ["at0010"] = <
+                    text = <"Código Nacional">
+                    description = <"">
+                >
+                ["at0011"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+                ["at0012"] = <
+                    text = <"Posología">
+                    description = <"">
+                >
+                ["at0013"] = <
+                    text = <"Cantidad">
+                    description = <"">
+                >
+                ["at0014"] = <
+                    text = <"INT">
+                    description = <"">
+                >
+                ["at0015"] = <
+                    text = <"Forma farmaceútica">
+                    description = <"">
+                >
+                ["at0016"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+                ["at0017"] = <
+                    text = <"Frecuencia de administración">
+                    description = <"">
+                >
+                ["at0018"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+                ["at0019"] = <
+                    text = <"momento de administración">
+                    description = <"Por ejemplo antes de la cena, después del desayuno, etc.">
+                >
+                ["at0020"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+                ["at0022"] = <
+                    text = <"Especialidad">
+                    description = <"Identificación marca comercial">
+                >
+                ["at0023"] = <
+                    text = <"Marca comercial">
+                    description = <"">
+                >
+                ["at0025"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+                ["at0026"] = <
+                    text = <"Motivo">
+                    description = <"Motivo de prescripción de marca comercial">
+                >
+                ["at0027"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0029"] = <
+                    text = <"Origen">
+                    description = <"">
+                >
+                ["at0033"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"CS">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+        ["es"] = <
+            items = <
+                ["ac0001"] = <
+                    text = <"Unidades de tiempo de duración de recetas">
+                    description = <"Unidades de tiempo de duración de recetas de acuerdo al subset del ministerio  SubsetUnidadesTiempoDuracionRecetaSNS">
+                >
+                ["ac0002"] = <
+                    text = <"Vias de administración">
+                    description = <"Vias de administración de acuerdo al subset del ministerio  SubsetViasAdministracion
+
+">
+                >
+                ["ac0003"] = <
+                    text = <"Momento de administración">
+                    description = <"Momento de administración de acuerdo al subset del ministerio  SubsetMomentosAdministracionRecetaSNS">
+                >
+                ["ac0004"] = <
+                    text = <"Forma farmacéutica">
+                    description = <"Formas farmacéuticas de acuerdo al subset del ministerio  SubsetUnidadesAdministracionSNS">
+                >
+                ["ac0005"] = <
+                    text = <"Frecuencia de administración">
+                    description = <"Frecuencias de administración de acuerdo al subset del ministerio  SubsetFrecuenciasAdministracionPosologiaRecetaSNS">
+                >
+            >
+        >
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

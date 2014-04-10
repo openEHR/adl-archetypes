@@ -1,0 +1,114 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-ENTRY.DemograficosPersona.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- Nombre de persona
+		items cardinality matches {2..5; unordered; unique} matches {
+			ELEMENT[id2] occurrences matches {1} matches {	-- Nombre
+				value matches {
+					SIMPLE_TEXT[id3] occurrences matches {1} matches {	-- Texto del nombre de persona
+						originalText existence matches {1} matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id4] occurrences matches {1} matches {	-- Primer apellido
+				value existence matches {1} matches {
+					SIMPLE_TEXT[id5] occurrences matches {1} matches {	-- Texto del primer apellido
+						originalText existence matches {1} matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Segundo apellido
+				value matches {
+					SIMPLE_TEXT[id7] occurrences matches {0..1} matches {	-- Texto del segundo apellido
+						originalText matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id8] occurrences matches {0..1} matches {	-- Fecha de nacimiento
+				value matches {
+					DATE[id12] occurrences matches {0..1} matches {	-- DATE
+						date existence matches {1} matches {yyyy-mm-dd}
+					}
+				}
+			}
+			ELEMENT[id10] occurrences matches {0..1} matches {	-- Sexo
+				value matches {
+					CV[id11] occurrences matches {0..1} matches {	-- código de SubsetSexoCivilSNS
+						codingSchemeName matches {"SubsetSexoCivilSNS"}
+						codeValue matches {"H", "M", "UNK"}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Nombre de persona">
+				description = <"Nombre de persona">
+			>
+			["id2"] = <
+				text = <"Nombre">
+				description = <"">
+			>
+			["id3"] = <
+				text = <"Texto del nombre de persona">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"Primer apellido">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"Texto del primer apellido">
+				description = <"">
+			>
+			["id6"] = <
+				text = <"Segundo apellido">
+				description = <"">
+			>
+			["id7"] = <
+				text = <"Texto del segundo apellido">
+				description = <"">
+			>
+			["id8"] = <
+				text = <"Fecha de nacimiento">
+				description = <"">
+			>
+			["id10"] = <
+				text = <"Sexo">
+				description = <"">
+			>
+			["id11"] = <
+				text = <"código de SubsetSexoCivilSNS">
+				description = <"">
+			>
+			["id12"] = <
+				text = <"DATE">
+				description = <"">
+			>
+		>
+	>

@@ -1,0 +1,161 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.ProfesionalSanitario.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- ProfesionalSanitario
+        items existence matches {0..1} cardinality matches {0..*; ordered} matches {
+            ELEMENT[at0001] occurrences matches {1..1} matches {  -- Nombre
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0002] occurrences matches {1..1} matches {  -- SIMPLE_TEXT
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+            ELEMENT[at0003] occurrences matches {1..1} matches {  -- Primer apellido
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0004] occurrences matches {1..1} matches {  -- SIMPLE_TEXT
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+            ELEMENT[at0005] occurrences matches {0..1} matches {  -- Segundo apellido
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0007] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+            ELEMENT[at0006] occurrences matches {0..1} matches {  -- Número Identificación
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0010] occurrences matches {0..1} matches {*}  -- SIMPLE_TEXT
+                    II[at0011] occurrences matches {0..1} matches {*}  -- II
+                }
+            }
+            ELEMENT[at0012] occurrences matches {0..1} matches {  -- Número colegiado
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0013] occurrences matches {0..1} matches {*}  -- SIMPLE_TEXT
+                    II[at0014] occurrences matches {0..1} matches {*}  -- II
+                }
+            }
+            ELEMENT[at0015] occurrences matches {0..1} matches {  -- Especialidad
+                value existence matches {0..1} matches {
+                    CODED_TEXT[at0018] occurrences matches {0..1} matches {  -- Descripción de la especialidad
+                        originalText existence matches {0..1} matches {*}
+                        codedValue existence matches {0..1} matches {*}
+                    }
+                }
+            }
+            ELEMENT[at0008] occurrences matches {0..1} matches {  -- Categoria profesional
+                value existence matches {0..1} matches {
+                    CODED_TEXT[at0019] occurrences matches {0..1} matches {  -- Descripción de la categoría profesional
+                        codedValue existence matches {0..1} matches {*}
+                        originalText existence matches {0..1} matches {*}
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"ProfesionalSanitario">
+                    description = <"ProfesionalSanitario">
+                >
+                ["at0001"] = <
+                    text = <"Nombre">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"Primer apellido">
+                    description = <"">
+                >
+                ["at0004"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0005"] = <
+                    text = <"Segundo apellido">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0008"] = <
+                    text = <"Categoria profesional">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"Número Identificación">
+                    description = <"">
+                >
+                ["at0010"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0011"] = <
+                    text = <"II">
+                    description = <"">
+                >
+                ["at0012"] = <
+                    text = <"Número colegiado">
+                    description = <"">
+                >
+                ["at0013"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0014"] = <
+                    text = <"II">
+                    description = <"">
+                >
+                ["at0015"] = <
+                    text = <"Especialidad">
+                    description = <"">
+                >
+                ["at0018"] = <
+                    text = <"Descripción de la especialidad">
+                    description = <"">
+                >
+                ["at0019"] = <
+                    text = <"Descripción de la categoría profesional">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

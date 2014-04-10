@@ -1,0 +1,78 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.ProvisorDeServicios.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- Datos del provisor de servicios
+        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+            ELEMENT[at0001] occurrences matches {0..1} matches {  -- Denominación del Servicio de salud
+                value existence matches {0..1} matches {
+                    CV[at0002] occurrences matches {0..1} matches {  -- código del servicio de salud
+                        codingSchemeName existence matches {0..1} matches {"SubsetServiciosSaludSNS"}
+                    }
+                }
+            }
+            ELEMENT[at0003] occurrences matches {0..1} matches {  -- Denominación del provisor de servicios
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0004] occurrences matches {0..1} matches {  -- nombre del provisor de servicios
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Datos del provisor de servicios">
+                    description = <"ProvisorDeServicios">
+                >
+                ["at0001"] = <
+                    text = <"Denominación del Servicio de salud">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"código del servicio de salud">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"Denominación del provisor de servicios">
+                    description = <"">
+                >
+                ["at0004"] = <
+                    text = <"nombre del provisor de servicios">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

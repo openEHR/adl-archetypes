@@ -1,0 +1,96 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-SECTION.Tratamiento.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    SECTION[at0000] occurrences matches {1..1} matches {  -- Tratamiento
+        members existence matches {0..1} cardinality matches {1..3; ordered} matches {
+            SECTION[at0005] occurrences matches {0..1} matches {  -- Información sobre recomendaciones terapeúticas
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    allow_archetype ENTRY[at0009] occurrences matches {0..*} matches {  -- Recomendación
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.Recomendacion.v1/}
+                    }
+                }
+            }
+            SECTION[at0004] occurrences matches {0..1} matches {  -- Información sobre fármacos
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    allow_archetype ENTRY[at0007] occurrences matches {0..*} matches {  -- Fármaco
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.Medicacion.v1/}
+                    }
+                }
+            }
+            SECTION[at0006] occurrences matches {1..1} matches {  -- Información sobre otras recomendaciones
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    allow_archetype ENTRY[at0008] occurrences matches {0..*} matches {  -- Otra recomendación
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.PlanDeActuacion.v1/}
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Tratamiento">
+                    description = <"Tratamiento">
+                >
+                ["at0004"] = <
+                    text = <"Información sobre fármacos">
+                    description = <"Prescripcoines activas al final del período de seguimiento. En la medida en que la implatantación de las aplicaciones informáticas de HCE, que incluyen módulos de prescripción lo permitan, el texto libre, será reemplazado progresivametne por el vocabulario del catáolgo del medicamentos autorizados (nomenclator Oficial/Snomed-CT)">
+                >
+                ["at0005"] = <
+                    text = <"Información sobre recomendaciones terapeúticas">
+                    description = <"Se trata de recomendaciones terapéuticas que no incluyen fármacos (oxigenoterapia, dieta, reposo o limitaciones del esfuerzo físico, etc.)">
+                >
+                ["at0006"] = <
+                    text = <"Información sobre otras recomendaciones">
+                    description = <"Se refiere a los planes de actuación previstos que no son propiamente medidas terapéuticas. Por ejemplo, fecha de la próxima cita, conveniencia de nueva revisión, petición de pruebas, etc. ">
+                >
+                ["at0007"] = <
+                    text = <"Fármaco">
+                    description = <"">
+                >
+                ["at0008"] = <
+                    text = <"Otra recomendación">
+                    description = <"">
+                >
+                ["at0009"] = <
+                    text = <"Recomendación">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

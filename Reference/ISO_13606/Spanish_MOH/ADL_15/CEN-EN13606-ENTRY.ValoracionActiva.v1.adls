@@ -1,0 +1,74 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-ENTRY.ValoracionActiva.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- Valoración Activa
+		items matches {
+			ELEMENT[id2] occurrences matches {1} matches {	-- Modelo de referencia utilizado
+				value 
+			}
+			CLUSTER[id3] occurrences matches {1} matches {	-- Resultados destacables
+				parts matches {
+					ELEMENT[id8] occurrences matches {0..*} matches {	-- Resultado
+						value matches {
+							SIMPLE_TEXT[id10] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+								originalText matches {/.*/}
+							}
+						}
+					}
+				}
+				structure_type matches {
+					CS[id9] occurrences matches {1} matches {
+						codeValue matches {"STRC01"}
+						codingSchemeName matches {"CEN/TC251/EN13606-3:STRUCTURE_TYPE"}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Valoración Activa">
+				description = <"Valoracioó Activa">
+			>
+			["id2"] = <
+				text = <"Modelo de referencia utilizado">
+				description = <"">
+			>
+			["id3"] = <
+				text = <"Resultados destacables">
+				description = <"">
+			>
+			["id8"] = <
+				text = <"Resultado">
+				description = <"">
+			>
+			["id10"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+		>
+	>

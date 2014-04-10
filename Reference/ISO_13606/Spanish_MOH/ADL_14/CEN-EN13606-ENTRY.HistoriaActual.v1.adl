@@ -1,0 +1,121 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.HistoriaActual.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- HistoriaActual
+        items existence matches {0..1} cardinality matches {0..*; unordered} matches {
+            CLUSTER[at0003] occurrences matches {0..*} matches {  -- Anotación de la historia actual
+                parts existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ELEMENT[at0006] occurrences matches {0..1} matches {  -- Descripción
+                        value existence matches {0..1} matches {
+                            CODED_TEXT[at0008] occurrences matches {0..1} matches {  -- CODED_TEXT
+                                codedValue existence matches {0..1} matches {*}
+                                originalText existence matches {1..1} matches {/.*/}
+                            }
+                        }
+                    }
+                    ELEMENT[at0010] occurrences matches {0..1} matches {  -- Periodo de tiempo
+                        value existence matches {0..1} matches {
+                            IVLTS[at0012] occurrences matches {0..1} matches {  -- IVLTS
+                                low existence matches {0..1} matches {
+                                    TS[at0013] occurrences matches {0..1} matches {  -- 
+                                        time existence matches {1..1} matches {yyyy-mm-ddThh:mm:ss}
+                                    }
+                                }
+                                high existence matches {0..1} matches {
+                                    TS[at0014] occurrences matches {0..1} matches {  -- 
+                                        time existence matches {1..1} matches {yyyy-mm-ddThh:mm:ss}
+                                    }
+                                }
+                                lowClosed existence matches {0..1} matches {true, false; false}
+                                highClosed existence matches {0..1} matches {true, false; false}
+                                width existence matches {0..1} matches {
+                                    DURATION[at0002] occurrences matches {0..1} matches {  -- DURATION
+                                        days existence matches {0..1} matches {*}
+                                        hours existence matches {0..1} matches {*}
+                                        minutes existence matches {0} matches {*}
+                                        seconds existence matches {0} matches {*}
+                                        fractional_second existence matches {0..1} matches {*}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                structure_type existence matches {1..1} matches {
+                    CS[at0011] occurrences matches {1..1} matches {  -- 
+                        codeValue existence matches {0..1} matches {"STRC02"}
+                        codingSchemeName existence matches {0..1} matches {"CEN/TC251/EN13606-3:STRUCTURE_TYPE"}
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"HistoriaActual">
+                    description = <"HistoriaActual">
+                >
+                ["at0003"] = <
+                    text = <"Anotación de la historia actual">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0008"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+                ["at0010"] = <
+                    text = <"Periodo de tiempo">
+                    description = <"">
+                >
+                ["at0012"] = <
+                    text = <"IVLTS">
+                    description = <"">
+                >
+                ["at0014"] = <
+                    text = <"">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"DURATION">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

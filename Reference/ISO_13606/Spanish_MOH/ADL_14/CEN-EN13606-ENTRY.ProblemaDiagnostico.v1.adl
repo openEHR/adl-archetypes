@@ -1,0 +1,138 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.ProblemaDiagnostico.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- Problema/Diagnóstico
+        items existence matches {0..1} cardinality matches {0..*; ordered} matches {
+            ELEMENT[at0009] occurrences matches {1..1} matches {  -- Problema/diagnóstico
+                value existence matches {0..1} matches {
+                    CODED_TEXT[at0010] occurrences matches {0..1} matches {  -- CODED_TEXT
+                        originalText existence matches {1..1} matches {*}
+                        codedValue existence matches {0..1} matches {*}
+                    }
+                }
+            }
+            ELEMENT[at0001] occurrences matches {0..1} matches {  -- Fecha inicio
+                value existence matches {0..1} matches {
+                    DATE[at0002] occurrences matches {0..1} matches {  -- DATE
+                        date existence matches {1..1} matches {yyyy-mm-dd}
+                    }
+                }
+            }
+            ELEMENT[at0003] occurrences matches {0..1} matches {  -- Fecha cierre
+                value existence matches {0..1} matches {
+                    DATE[at0004] occurrences matches {0..1} matches {  -- DATE
+                        date existence matches {1..1} matches {yyyy-mm-dd}
+                    }
+                }
+            }
+            ELEMENT[at0005] occurrences matches {0..1} matches {  -- Motivo cierre
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0006] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+            ELEMENT[at0007] occurrences matches {0..1} matches {  -- Estado
+                value existence matches {0..1} matches {
+                    CODED_TEXT[at0008] occurrences matches {0..1} matches {  -- CODED_TEXT
+                        codedValue existence matches {0..1} matches {*}
+                        originalText existence matches {0..1} matches {*}
+                    }
+                }
+            }
+            ELEMENT[at0011] occurrences matches {0..1} matches {  -- Resuelto
+                value existence matches {0..1} matches {
+                    BL[at0012] occurrences matches {0..1} matches {*}  -- BL
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Problema/Diagnóstico">
+                    description = <"Problema de salud o diagnóstico">
+                >
+                ["at0003"] = <
+                    text = <"Fecha cierre">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0001"] = <
+                    text = <"Fecha inicio">
+                    description = <"">
+                >
+                ["at0004"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0005"] = <
+                    text = <"Motivo cierre">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"Estado">
+                    description = <"ciclo de vida del problema, por ejemplo activo, inactivo">
+                >
+                ["at0008"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+                ["at0009"] = <
+                    text = <"Problema/diagnóstico">
+                    description = <"Descripción textual o codificada del problema o diagnóstico">
+                >
+                ["at0010"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+                ["at0011"] = <
+                    text = <"Resuelto">
+                    description = <"">
+                >
+                ["at0012"] = <
+                    text = <"BL">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

@@ -1,0 +1,62 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-ENTRY.PruebaDiagnosticaDeLaboratorio.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- Prueba Diagnostica De Laboratorio
+		items existence matches {1} matches {
+			allow_archetype CLUSTER[id2] occurrences matches {1} matches {	-- Datos de la muestra
+				include
+					archetype_id/value matches {/CEN-EN13606-CLUSTER.Muestra.v1/}
+			}
+			allow_archetype CLUSTER[id3] occurrences matches {0..1} matches {	-- Resultado prueba Diagnóstica Cuantitativa
+				include
+					archetype_id/value matches {/CEN-EN13606-CLUSTER.ResultadoPruebaDiagnosticaCuantitativa.v1/}
+			}
+			allow_archetype CLUSTER[id4] occurrences matches {0..1} matches {	-- Resultado prueba Diagnóstica Cualitativa
+				include
+					archetype_id/value matches {/CEN-EN13606-CLUSTER.ResultadoPruebaDiagnosticaCualitativa.v1/}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Prueba Diagnostica De Laboratorio">
+				description = <"Resultado de una Prueba Diagnostica De Laboratorio">
+			>
+			["id2"] = <
+				text = <"Datos de la muestra">
+				description = <"">
+			>
+			["id3"] = <
+				text = <"Resultado prueba Diagnóstica Cuantitativa">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"Resultado prueba Diagnóstica Cualitativa">
+				description = <"">
+			>
+		>
+	>

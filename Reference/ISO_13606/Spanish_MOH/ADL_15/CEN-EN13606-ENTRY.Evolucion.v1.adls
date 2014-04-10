@@ -1,0 +1,53 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-ENTRY.Evolucion.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- Evolucion
+		items matches {
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Comentario sobre la evolución
+				value matches {
+					SIMPLE_TEXT[id3] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+						originalText matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Evolucion">
+				description = <"En su caso pueden incluirse, además de comentarios evolutivos y del período de observación, la descripción de técnicas realizadas durante el proceso de atención. También es el lugar adecuado para describir reacciones adversas a fármacos utilizados en este episodio, complicaciones evolutivas de la/las enfermedades, realizar valoraciones diagnósticas o comentarios adicionales.">
+			>
+			["id2"] = <
+				text = <"Comentario sobre la evolución">
+				description = <"En su caso, puede incluirse el protocolo quirúrgico en este apartado, así como comentarios al diagnóstico o tratamiento, valoraciones diagnósticas adicionales, describir si el ingreso psiquiátrico fue involuntario,. describir reacciones adversas a fármacos u otras sustancias utilizados en este episodio, complicaciones evolutivas de la/las enfermedades o realizar valoraciones diagnósticas o comentarios adicionales.">
+			>
+			["id3"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+		>
+	>

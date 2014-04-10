@@ -1,0 +1,63 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.DispositivoAsistencial.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- Dispositivo Asistencial
+        items existence matches {0..1} cardinality matches {0..*; unordered} matches {
+            ELEMENT[at0001] occurrences matches {1..1} matches {  -- Nombre del dispositivo asistencial
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0002] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                        originalText existence matches {0..1} matches {"Centro de Salud","Hospital","Urgencias Hospitalarias","Urgencias Extrahospitalarias","Centro Sociosanitario","Otros"}
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Dispositivo Asistencial">
+                    description = <"Dispositivo Asistencial">
+                >
+                ["at0001"] = <
+                    text = <"Nombre del dispositivo asistencial">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

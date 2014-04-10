@@ -1,0 +1,118 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-CLUSTER.ResultadoPruebaDiagnosticaCualitativa.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	CLUSTER[id1] occurrences matches {1} matches {	-- Resultado Prueba Diagnostica Cualitativa
+		parts matches {
+			ELEMENT[id6] occurrences matches {1} matches {	-- Determinación
+				value matches {
+					CODED_TEXT[id7] occurrences matches {0..1} matches {	-- CODED_TEXT
+						originalText matches {/.*/}
+						codedValue matches {
+							CD[id9] occurrences matches {0..1} 	-- CD
+						}
+					}
+				}
+			}
+			ELEMENT[id2] occurrences matches {1} matches {	-- Técnica
+				value matches {
+					SIMPLE_TEXT[id3] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+						originalText matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id4] occurrences matches {1} matches {	-- Descripción
+				value matches {
+					SIMPLE_TEXT[id5] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+						originalText matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id11] occurrences matches {1} matches {	-- Conclusión
+				value matches {
+					CODED_TEXT[id12] occurrences matches {0..1} matches {	-- CODED_TEXT
+						originalText matches {/.*/}
+						codedValue matches {
+							CD[id13] occurrences matches {0..1} 	-- CD
+						}
+					}
+				}
+			}
+		}
+		structure_type matches {
+			CS[id10] occurrences matches {1} matches {
+				codeValue matches {"STRC01"}
+				codingSchemeName matches {"CEN/TC251/EN13606-3:STRUCTURE_TYPE"}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Resultado Prueba Diagnostica Cualitativa">
+				description = <"La determinación debe aparecer en el atributo Name">
+			>
+			["id2"] = <
+				text = <"Técnica">
+				description = <"">
+			>
+			["id3"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"Descripción">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id6"] = <
+				text = <"Determinación">
+				description = <"">
+			>
+			["id7"] = <
+				text = <"CODED_TEXT">
+				description = <"">
+			>
+			["id9"] = <
+				text = <"CD">
+				description = <"">
+			>
+			["id11"] = <
+				text = <"Conclusión">
+				description = <"">
+			>
+			["id12"] = <
+				text = <"CODED_TEXT">
+				description = <"">
+			>
+			["id13"] = <
+				text = <"CD">
+				description = <"">
+			>
+		>
+	>

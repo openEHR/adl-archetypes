@@ -1,0 +1,73 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.FrecuenciaCardiaca.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- FrecuenciaCardiaca
+        items existence matches {0..1} cardinality matches {0..*; unordered} matches {
+            ELEMENT[at0001] occurrences matches {0..1} matches {  -- Medida frecuencia cardiaca
+                value existence matches {0..1} matches {
+                    PQ[at0002] occurrences matches {0..1} matches {  -- PQ
+                        units existence matches {1..1} matches {
+                            CS[at0005] occurrences matches {1..1} matches {  -- CS
+                                codingSchemeName existence matches {0..1} matches {"UCUM"}
+                                codeValue existence matches {0..1} matches {"{bh}/min"}
+                            }
+                        }
+                        value existence matches {1..1} matches {|>=0.0|}
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"FrecuenciaCardiaca">
+                    description = <"FrecuenciaCardiaca">
+                >
+                ["at0001"] = <
+                    text = <"Medida frecuencia cardiaca">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"PQ">
+                    description = <"">
+                >
+                ["at0005"] = <
+                    text = <"CS">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

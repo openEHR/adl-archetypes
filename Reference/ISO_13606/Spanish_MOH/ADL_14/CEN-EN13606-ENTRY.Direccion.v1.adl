@@ -1,0 +1,229 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.Direccion.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- Dirección 
+        items existence matches {0..1} cardinality matches {0..*; ordered} matches {
+            ELEMENT[at0001] occurrences matches {0..1} matches {  -- Tipo de vía
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0002] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+            ELEMENT[at0003] occurrences matches {0..1} matches {  -- Nombre de la vía
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0004] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+            ELEMENT[at0005] occurrences matches {0..1} matches {  -- Número de la vía
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0006] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+            ELEMENT[at0007] occurrences matches {0..1} matches {  -- Piso
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0008] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+            ELEMENT[at0009] occurrences matches {0..1} matches {  -- Letra
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0010] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+            ELEMENT[at0011] occurrences matches {0..1} matches {  -- Código Postal
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0012] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+            ELEMENT[at0013] occurrences matches {0..1} matches {  -- Municipio
+                value existence matches {0..1} matches {
+                    CV[at0019] occurrences matches {0..1} matches {  -- CV
+                        codingSchemeName existence matches {0..1} matches {"SubsetMunicipiosSNS"}
+                    }
+                }
+            }
+            ELEMENT[at0015] occurrences matches {0..1} matches {  -- Provincia
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0016] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                        originalText existence matches {0..1} matches {/.*/}
+                    }
+                }
+            }
+            ELEMENT[at0017] occurrences matches {0..1} matches {  -- Pais
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0018] occurrences matches {0..1} matches {*}  -- Nombre del pais
+                }
+            }
+            ELEMENT[at0014] occurrences matches {0..1} matches {  -- Teléfono
+                value existence matches {0..1} matches {
+                    URI[at0020] occurrences matches {0..1} matches {  -- URI
+                        value existence matches {0..1} matches {/.*/}
+                        scheme existence matches {0..1} matches {"telephone"}
+                    }
+                }
+            }
+            ELEMENT[at0021] occurrences matches {0..1} matches {  -- Dirección Web
+                value existence matches {0..1} matches {
+                    URI[at0022] occurrences matches {0..1} matches {  -- URI
+                        value existence matches {0..1} matches {/.*/; ""}
+                        scheme existence matches {0..1} matches {"http"}
+                    }
+                }
+            }
+            ELEMENT[at0023] occurrences matches {0..1} matches {  -- Correo Electrónico
+                value existence matches {0..1} matches {
+                    URI[at0024] occurrences matches {0..1} matches {  -- URI
+                        value existence matches {0..1} matches {/.*/; ""}
+                        scheme existence matches {0..1} matches {"mailto"}
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Dirección ">
+                    description = <"Direccion">
+                >
+                ["at0001"] = <
+                    text = <"Tipo de vía">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"Nombre de la vía">
+                    description = <"">
+                >
+                ["at0004"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0005"] = <
+                    text = <"Número de la vía">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"Piso">
+                    description = <"">
+                >
+                ["at0008"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0009"] = <
+                    text = <"Letra">
+                    description = <"">
+                >
+                ["at0010"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0011"] = <
+                    text = <"Código Postal">
+                    description = <"">
+                >
+                ["at0012"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0013"] = <
+                    text = <"Municipio">
+                    description = <"">
+                >
+                ["at0015"] = <
+                    text = <"Provincia">
+                    description = <"">
+                >
+                ["at0016"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0017"] = <
+                    text = <"Pais">
+                    description = <"">
+                >
+                ["at0018"] = <
+                    text = <"Nombre del pais">
+                    description = <"">
+                >
+                ["at0019"] = <
+                    text = <"CV">
+                    description = <"">
+                >
+                ["at0014"] = <
+                    text = <"Teléfono">
+                    description = <"">
+                >
+                ["at0020"] = <
+                    text = <"URI">
+                    description = <"">
+                >
+                ["at0021"] = <
+                    text = <"Dirección Web">
+                    description = <"">
+                >
+                ["at0022"] = <
+                    text = <"URI">
+                    description = <"">
+                >
+                ["at0023"] = <
+                    text = <"Correo Electrónico">
+                    description = <"">
+                >
+                ["at0024"] = <
+                    text = <"URI">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

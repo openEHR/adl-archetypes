@@ -1,0 +1,181 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-SECTION.ResumenPruebasComplementarias.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    SECTION[at0000] occurrences matches {1..1} matches {  -- ResumenPruebasComplementarias
+        members existence matches {0..1} cardinality matches {0..*; unordered} matches {
+            SECTION[at0001] occurrences matches {0..1} matches {  -- Laboratorio
+                members existence matches {0..1} cardinality matches {0..2; ordered} matches {
+                    SECTION[at0008] occurrences matches {0..1} matches {  -- Resultados no estructurados
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ENTRY[at0002] occurrences matches {0..*} matches {  -- Resultado no estructurado
+                                items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                                    ELEMENT[at0003] occurrences matches {0..1} matches {  -- Descripción
+                                        value existence matches {0..1} matches {
+                                            SIMPLE_TEXT[at0004] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                                originalText existence matches {0..1} matches {/.*/}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    SECTION[at0015] occurrences matches {0..1} matches {  -- Resultados estructurados
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0007] occurrences matches {0..*} matches {  -- Resultado estructurado de prueba de laboratorio
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.PruebaDiagnosticaDeLaboratorio.v1/}
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0005] occurrences matches {0..1} matches {  -- Imagen
+                members existence matches {0..1} cardinality matches {0..*; ordered} matches {
+                    SECTION[at0016] occurrences matches {0..1} matches {  -- Resultados no estructurados
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ENTRY[at0006] occurrences matches {0..1} matches {  -- Resultado no estructurado
+                                items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                                    ELEMENT[at0009] occurrences matches {0..1} matches {  -- Texto descriptivo del resultado
+                                        value existence matches {0..1} matches {
+                                            SIMPLE_TEXT[at0010] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                                originalText existence matches {0..1} matches {/.*/}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    allow_archetype SECTION[at0018] occurrences matches {0..1} matches {  -- Resultados estructurado
+                        include
+                            archetype_id/value matches {/CEN-EN13606-SECTION.ResultadoPruebaDeImagen.v1/}
+                    }
+                }
+            }
+            SECTION[at0011] occurrences matches {0..1} matches {  -- Otras pruebas
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ENTRY[at0012] occurrences matches {0..*} matches {  -- Otro tipo de prueba
+                        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0013] occurrences matches {0..1} matches {  -- Descripción
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0014] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"ResumenPruebasComplementarias">
+                    description = <"ResumenPruebasComplementarias">
+                >
+                ["at0001"] = <
+                    text = <"Laboratorio">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"Resultado no estructurado">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0004"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0005"] = <
+                    text = <"Imagen">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"Resultado no estructurado">
+                    description = <"">
+                >
+                ["at0009"] = <
+                    text = <"Texto descriptivo del resultado">
+                    description = <"">
+                >
+                ["at0010"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0011"] = <
+                    text = <"Otras pruebas">
+                    description = <"">
+                >
+                ["at0012"] = <
+                    text = <"Otro tipo de prueba">
+                    description = <"">
+                >
+                ["at0013"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0014"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"Resultado estructurado de prueba de laboratorio">
+                    description = <"">
+                >
+                ["at0008"] = <
+                    text = <"Resultados no estructurados">
+                    description = <"">
+                >
+                ["at0015"] = <
+                    text = <"Resultados estructurados">
+                    description = <"">
+                >
+                ["at0016"] = <
+                    text = <"Resultados no estructurados">
+                    description = <"">
+                >
+                ["at0018"] = <
+                    text = <"Resultados estructurado">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

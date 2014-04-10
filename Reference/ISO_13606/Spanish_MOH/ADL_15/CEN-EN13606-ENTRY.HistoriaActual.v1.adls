@@ -1,0 +1,111 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-ENTRY.HistoriaActual.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- HistoriaActual
+		items matches {
+			CLUSTER[id4] occurrences matches {0..*} matches {	-- Anotación de la historia actual
+				parts matches {
+					ELEMENT[id7] occurrences matches {0..1} matches {	-- Descripción
+						value matches {
+							CODED_TEXT[id9] occurrences matches {0..1} matches {	-- CODED_TEXT
+								codedValue 
+								originalText existence matches {1} matches {/.*/}
+							}
+						}
+					}
+					ELEMENT[id11] occurrences matches {0..1} matches {	-- Periodo de tiempo
+						value matches {
+							IVLTS[id13] occurrences matches {0..1} matches {	-- IVLTS
+								low matches {
+									TS[id14] occurrences matches {0..1} matches {
+										time existence matches {1} matches {yyyy-mm-ddThh:mm:ss}
+									}
+								}
+								high matches {
+									TS[id15] occurrences matches {0..1} matches {	-- 
+										time existence matches {1} matches {yyyy-mm-ddThh:mm:ss}
+									}
+								}
+								lowClosed matches {True, False; False}
+								highClosed matches {True, False; False}
+								width matches {
+									DURATION[id3] occurrences matches {0..1} matches {	-- DURATION
+										days 
+										hours 
+										minutes existence matches {0} 
+										seconds existence matches {0} 
+										fractional_second 
+									}
+								}
+							}
+						}
+					}
+				}
+				structure_type matches {
+					CS[id12] occurrences matches {1} matches {
+						codeValue matches {"STRC02"}
+						codingSchemeName matches {"CEN/TC251/EN13606-3:STRUCTURE_TYPE"}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"HistoriaActual">
+				description = <"HistoriaActual">
+			>
+			["id4"] = <
+				text = <"Anotación de la historia actual">
+				description = <"">
+			>
+			["id7"] = <
+				text = <"Descripción">
+				description = <"">
+			>
+			["id9"] = <
+				text = <"CODED_TEXT">
+				description = <"">
+			>
+			["id11"] = <
+				text = <"Periodo de tiempo">
+				description = <"">
+			>
+			["id13"] = <
+				text = <"IVLTS">
+				description = <"">
+			>
+			["id15"] = <
+				text = <"">
+				description = <"">
+			>
+			["id3"] = <
+				text = <"DURATION">
+				description = <"">
+			>
+		>
+	>

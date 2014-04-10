@@ -1,0 +1,84 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.ValoracionActiva.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- Valoración Activa
+        items existence matches {0..1} cardinality matches {0..*; unordered} matches {
+            ELEMENT[at0001] occurrences matches {1..1} matches {  -- Modelo de referencia utilizado
+                value existence matches {0..1} matches {*}
+            }
+            CLUSTER[at0002] occurrences matches {1..1} matches {  -- Resultados destacables
+                parts existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ELEMENT[at0007] occurrences matches {0..*} matches {  -- Resultado
+                        value existence matches {0..1} matches {
+                            SIMPLE_TEXT[at0009] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                originalText existence matches {0..1} matches {/.*/}
+                            }
+                        }
+                    }
+                }
+                structure_type existence matches {1..1} matches {
+                    CS[at0008] occurrences matches {1..1} matches {  -- 
+                        codeValue existence matches {0..1} matches {"STRC01"}
+                        codingSchemeName existence matches {0..1} matches {"CEN/TC251/EN13606-3:STRUCTURE_TYPE"}
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Valoración Activa">
+                    description = <"Valoracioó Activa">
+                >
+                ["at0001"] = <
+                    text = <"Modelo de referencia utilizado">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"Resultados destacables">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"Resultado">
+                    description = <"">
+                >
+                ["at0009"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

@@ -1,0 +1,56 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-SECTION.Diagnosticos.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    SECTION[at0000] occurrences matches {1..1} matches {  -- Diagnosticos
+        members existence matches {0..1} cardinality matches {0..*; unordered} matches {
+            allow_archetype ENTRY[at0001] occurrences matches {0..*} matches {  -- Lista de Diagnósticos
+                include
+                    archetype_id/value matches {/CEN-EN13606-ENTRY.ProblemaDiagnostico.v1/}
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Diagnosticos">
+                    description = <"Diagnosticos">
+                >
+                ["at0001"] = <
+                    text = <"Lista de Diagnósticos">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

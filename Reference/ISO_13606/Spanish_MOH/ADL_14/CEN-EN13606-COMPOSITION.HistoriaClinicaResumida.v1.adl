@@ -1,0 +1,453 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-COMPOSITION.HistoriaClinicaResumida.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+            use = <"Comunicación y registro de la historia clínica resumida del conjunto mínimo de datos de los informes clínicos (CMDIC) en el Sistema Nacional de Salud.">
+        >
+    >
+
+definition
+    COMPOSITION[at0000] occurrences matches {1..1} matches {  -- HistoriaClinicaResumida
+        content existence matches {0..1} cardinality matches {0..4; ordered} matches {
+            SECTION[at0015] occurrences matches {1..1} matches {  -- Datos del documento
+                members existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                    ENTRY[at0016] occurrences matches {0..1} matches {  -- Metadatos básicos del documento
+                        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0019] occurrences matches {0..1} matches {  -- Fecha de creación
+                                value existence matches {0..1} matches {
+                                    DATE[at0020] occurrences matches {0..1} matches {  -- DATE
+                                        date existence matches {1..1} matches {yyyy-mm-dd}
+                                    }
+                                }
+                            }
+                            ELEMENT[at0021] occurrences matches {0..1} matches {  -- Fecha de última actualización
+                                value existence matches {0..1} matches {
+                                    DATE[at0022] occurrences matches {0..1} matches {  -- DATE
+                                        date existence matches {1..1} matches {yyyy-mm-dd}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0025] occurrences matches {0..1} matches {  -- Datos de la institución emisora
+                members existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                    allow_archetype ENTRY[at0055] occurrences matches {0..*} matches {  -- Provisor de servicios
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.ProvisorDeServicios.v1/}
+                    }
+                }
+            }
+            SECTION[at0023] occurrences matches {0..1} matches {  -- Datos del paciente
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    allow_archetype ENTRY[at0033] occurrences matches {0..1} matches {  -- Datos demógraficos básicos del usuario/paciente
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.DemograficosPersona.v1/}
+                    }
+                    allow_archetype ENTRY[at0036] occurrences matches {0..1} matches {  -- Identificadores del paciente
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.IdentificacionPersona.v1/}
+                    }
+                    allow_archetype ENTRY[at0037] occurrences matches {0..1} matches {  -- Dirección de usuario/paciente
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.Direccion.v1/}
+                    }
+                    allow_archetype ENTRY[at0039] occurrences matches {0..1} matches {  -- Datos contacto del usuario/paciente
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.DatosContactoPersona.v1/}
+                    }
+                    allow_archetype ENTRY[at0044] occurrences matches {0..1} matches {  -- Persona de referencia
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.DemograficosPersona.v1/}
+                    }
+                    allow_archetype ENTRY[at0045] occurrences matches {0..1} matches {  -- Datos de contacto con persona de referencia
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.DatosContactoPersona.v1/}
+                    }
+                    allow_archetype ENTRY[at0048] occurrences matches {0..1} matches {  -- Cuidador principal
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.DemograficosPersona.v1/}
+                    }
+                }
+            }
+            SECTION[at0043] occurrences matches {1..1} matches {  -- datos de salud
+                members existence matches {0..1} cardinality matches {0..*; ordered} matches {
+                    ENTRY[at0001] occurrences matches {1..1} matches {  -- Información reservada
+                        items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                            ELEMENT[at0002] occurrences matches {0..1} matches {  -- Existe información reservada por decisión del paciente
+                                value existence matches {0..1} matches {
+                                    BL[at0003] occurrences matches {0..1} matches {  -- BL
+                                        value existence matches {1..1} matches {true, false}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    allow_archetype ENTRY[at0017] occurrences matches {0..1} matches {  -- Instrucciones previas
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.VoluntadesAnticipadas.v1/}
+                    }
+                    ENTRY[at0007] occurrences matches {0..1} matches {  -- Protocolo de investigación clínica
+                        items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                            ELEMENT[at0008] occurrences matches {0..*} matches {  -- Está incluido en protocolo de investigación clínica
+                                value existence matches {0..1} matches {
+                                    BL[at0032] occurrences matches {0..1} matches {  -- BL
+                                        value existence matches {1..1} matches {true, false}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    SECTION[at0010] occurrences matches {0..1} matches {  -- Información sobre alergías
+                        members existence matches {0..1} cardinality matches {1..1; unordered; unique} matches {
+                            allow_archetype ENTRY[at0011] occurrences matches {0..*} matches {  -- Alergia
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.Alergia.v1/}
+                            }
+                        }
+                    }
+                    SECTION[at0012] occurrences matches {1..1} matches {  -- Información sobre vacunaciones
+                        members existence matches {0..1} cardinality matches {1..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0013] occurrences matches {0..*} matches {  -- Vacunación
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.Vacunacion.v1/}
+                            }
+                        }
+                    }
+                    SECTION[at0014] occurrences matches {0..1} matches {  -- Información sobre problemas de salud resueltos, cerrados o inactivos
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0040] occurrences matches {0..*} matches {  -- Problema, resuelto, cerrado o inactivo
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.ProblemaDiagnostico.v1/}
+                            }
+                        }
+                    }
+                    SECTION[at0042] occurrences matches {0..1} matches {  -- Información sobre problemas y episodios activos
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0046] occurrences matches {0..*} matches {  -- Problema o episodio activo
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.ProblemaDiagnostico.v1/}
+                            }
+                        }
+                    }
+                    SECTION[at0024] occurrences matches {1..1} matches {  -- Información sobre tratamientos
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            SECTION[at0038] occurrences matches {1..1} matches {  -- Información sobre recomendaciones
+                                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                                    allow_archetype ENTRY[at0052] occurrences matches {0..*} matches {  -- Recomendación
+                                        include
+                                            archetype_id/value matches {/CEN-EN13606-ENTRY.Recomendacion.v1/}
+                                    }
+                                }
+                            }
+                            SECTION[at0053] occurrences matches {1..1} matches {  -- Fármacos
+                                members existence matches {0..1} cardinality matches {1..*; unordered; unique} matches {
+                                    allow_archetype ENTRY[at0054] occurrences matches {0..*} matches {  -- fármaco
+                                        include
+                                            archetype_id/value matches {/CEN-EN13606-ENTRY.Medicacion.v1/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    SECTION[at0026] occurrences matches {1..1} matches {  -- Información de enfermería
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            SECTION[at0027] occurrences matches {1..1} matches {  -- Información sobre diagnósticos enfermeros activos
+                                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                                    allow_archetype ENTRY[at0028] occurrences matches {0..*} matches {  -- diagnóstico activo
+                                        include
+                                            archetype_id/value matches {/CEN-EN13606-ENTRY.ProblemaDiagnostico.v1/}
+                                    }
+                                }
+                            }
+                            SECTION[at0030] occurrences matches {1..1} matches {  -- Información sobre resultados de enfermería
+                                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                                    allow_archetype ENTRY[at0031] occurrences matches {0..*} matches {  -- resultado
+                                        include
+                                            archetype_id/value matches {/CEN-EN13606-ENTRY.Resultado.v1/}
+                                    }
+                                }
+                            }
+                            SECTION[at0034] occurrences matches {1..1} matches {  -- Información sobre intervenciones de enfermería
+                                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                                    allow_archetype ENTRY[at0035] occurrences matches {0..*} matches {  -- intervención
+                                        include
+                                            archetype_id/value matches {/CEN-EN13606-ENTRY.Procedimiento.v1/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    SECTION[at0009] occurrences matches {0..1} matches {  -- Información sobre alertas
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0029] occurrences matches {0..*} matches {  -- Alerta
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.Alerta.v1/}
+                            }
+                        }
+                    }
+                    SECTION[at0047] occurrences matches {0..1} matches {  -- Información subjetiva del profesional
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ENTRY[at0049] occurrences matches {0..*} matches {  -- Observaciones subjetiva del profesional
+                                items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                                    ELEMENT[at0050] occurrences matches {0..1} matches {  -- Observación subjetiva del profesional
+                                        value existence matches {0..1} matches {
+                                            SIMPLE_TEXT[at0051] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                                originalText existence matches {0..1} matches {*}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        name existence matches {1..1} matches {
+            SIMPLE_TEXT[at0041] occurrences matches {0..1} matches {  -- Tipo de documento
+                originalText existence matches {0..1} matches {/.*/}
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"HistoriaClinicaResumida">
+                    description = <"HistoriaClinicaResumida">
+                >
+                ["at0043"] = <
+                    text = <"datos de salud">
+                    description = <"">
+                >
+                ["at0001"] = <
+                    text = <"Información reservada">
+                    description = <"Este campo informa al profesional de que existe algún dato clínico que no figura en la HC por decisión del propio paciente">
+                >
+                ["at0002"] = <
+                    text = <"Existe información reservada por decisión del paciente">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"BL">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"Protocolo de investigación clínica">
+                    description = <"Informa de la inclusión en un protocolo de investigación en la fecha de última actualización.">
+                >
+                ["at0008"] = <
+                    text = <"Está incluido en protocolo de investigación clínica">
+                    description = <"">
+                >
+                ["at0032"] = <
+                    text = <"BL">
+                    description = <"">
+                >
+                ["at0015"] = <
+                    text = <"Datos del documento">
+                    description = <"">
+                >
+                ["at0016"] = <
+                    text = <"Metadatos básicos del documento">
+                    description = <"">
+                >
+                ["at0019"] = <
+                    text = <"Fecha de creación">
+                    description = <"">
+                >
+                ["at0020"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0021"] = <
+                    text = <"Fecha de última actualización">
+                    description = <"La fecha en la que fue modificado alguno de los componentes del registro por última vez">
+                >
+                ["at0022"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0023"] = <
+                    text = <"Datos del paciente">
+                    description = <"">
+                >
+                ["at0033"] = <
+                    text = <"Datos demógraficos básicos del usuario/paciente">
+                    description = <"">
+                >
+                ["at0036"] = <
+                    text = <"Identificadores del paciente">
+                    description = <"">
+                >
+                ["at0037"] = <
+                    text = <"Dirección de usuario/paciente">
+                    description = <"">
+                >
+                ["at0039"] = <
+                    text = <"Datos contacto del usuario/paciente">
+                    description = <"">
+                >
+                ["at0044"] = <
+                    text = <"Persona de referencia">
+                    description = <"">
+                >
+                ["at0045"] = <
+                    text = <"Datos de contacto con persona de referencia">
+                    description = <"">
+                >
+                ["at0048"] = <
+                    text = <"Cuidador principal">
+                    description = <"">
+                >
+                ["at0010"] = <
+                    text = <"Información sobre alergías">
+                    description = <"">
+                >
+                ["at0011"] = <
+                    text = <"Alergia">
+                    description = <"">
+                >
+                ["at0012"] = <
+                    text = <"Información sobre vacunaciones">
+                    description = <"">
+                >
+                ["at0013"] = <
+                    text = <"Vacunación">
+                    description = <"">
+                >
+                ["at0014"] = <
+                    text = <"Información sobre problemas de salud resueltos, cerrados o inactivos">
+                    description = <"Se especificará la fecha de cierre y el motivo">
+                >
+                ["at0040"] = <
+                    text = <"Problema, resuelto, cerrado o inactivo">
+                    description = <"">
+                >
+                ["at0042"] = <
+                    text = <"Información sobre problemas y episodios activos">
+                    description = <"Los que figuren en la historia a la fecha de última actualización. Los sistemas de codificación serán sustituidos por versiones posteriores si así se acordara en el Consejo Interterritorial del SNS">
+                >
+                ["at0046"] = <
+                    text = <"Problema o episodio activo">
+                    description = <"">
+                >
+                ["at0047"] = <
+                    text = <"Información subjetiva del profesional">
+                    description = <"La única justificación de este campo es recoger valoraciones del profesional, siempre que sean de auténtico interés para el manejo de los problemas de salud por otro profesional. Sólo deberán ser reseñadas aquellas observaciones que sean encuadrables en algunos de los siguientes apartados: VALORACIONES SOBRE HIPÓTESIS DIAGNÓSTICAS NO DEMOSTRADAS, SOSPECHA ACERCA DE INCUMPLIMIENTOS TERAPÉUTICOS , SOSPECHA DE TRATAMIENTOS NO DECLARADOS, SOSPECHA DE HÁBITOS NO RECONOCIDOS, SOSPECHA DE HABER SIDO VÍCTIMA DE MALOS TRATOS,  COMPORTAMIENTOS INSÓLITOS.">
+                >
+                ["at0049"] = <
+                    text = <"Observaciones subjetiva del profesional">
+                    description = <"">
+                >
+                ["at0050"] = <
+                    text = <"Observación subjetiva del profesional">
+                    description = <"">
+                >
+                ["at0051"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0009"] = <
+                    text = <"Información sobre alertas">
+                    description = <"Su contenido deben ser advertencias clave de carácter objetivo que por su especial trascendencia deban ser resaltadas para ser tenidas en cuenta por cualquier profesional que deba prestar atención (Ej: Angioedema desencadenado por IECAS, Dispositivo IV con reservorio)">
+                >
+                ["at0029"] = <
+                    text = <"Alerta">
+                    description = <"">
+                >
+                ["at0026"] = <
+                    text = <"Información de enfermería">
+                    description = <"">
+                >
+                ["at0027"] = <
+                    text = <"Información sobre diagnósticos enfermeros activos">
+                    description = <"">
+                >
+                ["at0028"] = <
+                    text = <"diagnóstico activo">
+                    description = <"">
+                >
+                ["at0030"] = <
+                    text = <"Información sobre resultados de enfermería">
+                    description = <"">
+                >
+                ["at0031"] = <
+                    text = <"resultado">
+                    description = <"">
+                >
+                ["at0034"] = <
+                    text = <"Información sobre intervenciones de enfermería">
+                    description = <"">
+                >
+                ["at0035"] = <
+                    text = <"intervención">
+                    description = <"">
+                >
+                ["at0024"] = <
+                    text = <"Información sobre tratamientos">
+                    description = <"">
+                >
+                ["at0038"] = <
+                    text = <"Información sobre recomendaciones">
+                    description = <"Se trata de recomendaciones terapéuticas que no incluyen fármacos (oxigenoterapia, dieta, limitaciones de esfuerzo físico, etc.)">
+                >
+                ["at0052"] = <
+                    text = <"Recomendación">
+                    description = <"">
+                >
+                ["at0053"] = <
+                    text = <"Fármacos">
+                    description = <"">
+                >
+                ["at0054"] = <
+                    text = <"fármaco">
+                    description = <"Prescripciones activas a la fecha de actualización. En la medida en que la implantación de las aplicaciones informáticas de HCE, que incluyen módulos de prescripción lo permitan, el texto libre, será reemplazado progresivamente por el vocabulario del catálogo de medicamentos autorizados (Nomenclator Oficial/ Snomed-CT">
+                >
+                ["at0025"] = <
+                    text = <"Datos de la institución emisora">
+                    description = <"">
+                >
+                ["at0055"] = <
+                    text = <"Provisor de servicios">
+                    description = <"">
+                >
+                ["at0041"] = <
+                    text = <"Tipo de documento">
+                    description = <"">
+                >
+                ["at0017"] = <
+                    text = <"Instrucciones previas">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

@@ -1,0 +1,462 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-COMPOSITION.InformeCuidadosEnfermeria.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+            use = <"Comunicación y registro del informe de cuidados de enfermeria del conjunto mínimo de datos de los informes clínicos (CMDIC) en el Sistema Nacional de Salud.">
+        >
+    >
+
+definition
+    COMPOSITION[at0000] occurrences matches {1..1} matches {  -- Informe Cuidados Enfermeria
+        content existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+            SECTION[at0020] occurrences matches {1..1} matches {  -- Datos del documento
+                members existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+                    ENTRY[at0030] occurrences matches {1..1} matches {  -- Fecha de firma
+                        items existence matches {0..1} cardinality matches {1..1; unordered; unique} matches {
+                            ELEMENT[at0038] occurrences matches {1..1} matches {  -- Fecha
+                                value existence matches {0..1} matches {
+                                    DATE[at0039] occurrences matches {0..1} matches {  -- DATE
+                                        date existence matches {1..1} matches {yyyy-mm-dd}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    ENTRY[at0040] occurrences matches {1..1} matches {  -- Fecha de Valoración de Enfermería
+                        items existence matches {0..1} cardinality matches {1..1; unordered; unique} matches {
+                            ELEMENT[at0041] occurrences matches {0..1} matches {  -- Fecha
+                                value existence matches {0..1} matches {
+                                    DATE[at0065] occurrences matches {0..1} matches {  -- DATE
+                                        date existence matches {1..1} matches {yyyy-mm-dd}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    ENTRY[at0043] occurrences matches {1..1} matches {  -- Fecha Alta o de Derivación de Enfermería
+                        items existence matches {0..1} cardinality matches {1..1; unordered; unique} matches {
+                            ELEMENT[at0044] occurrences matches {0..1} matches {  -- Fecha
+                                value existence matches {0..1} matches {
+                                    DATE[at0022] occurrences matches {0..1} matches {  -- DATE
+                                        date existence matches {1..1} matches {yyyy-mm-dd}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    allow_archetype ENTRY[at0046] occurrences matches {1..1} matches {  -- Enfermera Responsable 1
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.ProfesionalSanitario.v1/}
+                    }
+                    allow_archetype ENTRY[at0047] occurrences matches {1..1} matches {  -- Enfermera Responsable 2
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.ProfesionalSanitario.v1/}
+                    }
+                    allow_archetype ENTRY[at0036] occurrences matches {0..1} matches {  -- Dispositivo asistencial
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.DispositivoAsistencial.v1/}
+                    }
+                }
+            }
+            SECTION[at0001] occurrences matches {1..1} matches {  -- Datos de la institución emisora
+                members existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+                    SECTION[at0011] occurrences matches {1..1} matches {  -- Servicio de salud
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0012] occurrences matches {1..1} matches {  -- Servicio de salud
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.ProvisorDeServicios.v1/}
+                            }
+                        }
+                    }
+                    SECTION[at0010] occurrences matches {1..1} matches {  -- Centro de atención
+                        members existence matches {0..1} cardinality matches {0..1; ordered; unique} matches {
+                            allow_archetype ENTRY[at0005] occurrences matches {1..1} matches {  -- Identificación del centro
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.CentroSanitario.v1/}
+                            }
+                            allow_archetype ENTRY[at0013] occurrences matches {1..1} matches {  -- Dirección del centro
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.Direccion.v1/}
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0002] occurrences matches {1..1} matches {  -- Datos del paciente
+                members existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+                    allow_archetype ENTRY[at0003] occurrences matches {1..1} matches {  -- Datos demográficos básicos del paciente
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.DemograficosPersona.v1/}
+                    }
+                    allow_archetype ENTRY[at0004] occurrences matches {1..1} matches {  -- Identificadores del paciente
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.IdentificacionPersona.v1/}
+                    }
+                    allow_archetype ENTRY[at0006] occurrences matches {1..1} matches {  -- Dirección del paciente
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.Direccion.v1/}
+                    }
+                    allow_archetype ENTRY[at0007] occurrences matches {1..1} matches {  -- Datos de contacto del paciente
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.DatosContactoPersona.v1/}
+                    }
+                    allow_archetype ENTRY[at0045] occurrences matches {0..1} matches {  -- Persona de Referencia
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.DemograficosPersona.v1/}
+                    }
+                    allow_archetype ENTRY[at0048] occurrences matches {0..1} matches {  -- Teléfono de persona de referencia
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.DatosContactoPersona.v1/}
+                    }
+                }
+            }
+            SECTION[at0008] occurrences matches {1..1} matches {  -- Datos del proceso asistencial
+                members existence matches {0..1} cardinality matches {0..*; ordered} matches {
+                    SECTION[at0037] occurrences matches {1..1} matches {  -- Causas que generan la actuación enfermera
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0019] occurrences matches {0..*} matches {  -- 
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.MotivoDelEncuentro.v1/}
+                            }
+                        }
+                    }
+                    allow_archetype ENTRY[at0016] occurrences matches {1..1} matches {  -- Motivo del alta o derivación enfermera
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.MotivoDeAlta.v1/}
+                    }
+                    allow_archetype SECTION[at0018] occurrences matches {1..1} matches {  -- Antecedentes y entornos
+                        include
+                            archetype_id/value matches {/CEN-EN13606-SECTION.AntecedentesEnfermeria.v1/}
+                    }
+                    SECTION[at0067] occurrences matches {1..1} matches {  -- Diagnósticos
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype SECTION[at0021] occurrences matches {0..*} matches {  -- Diagnósticos enfermeros resueltos
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-SECTION.Diagnosticos.v1/}
+                            }
+                            allow_archetype SECTION[at0023] occurrences matches {0..*} matches {  -- Diagnósticos enfermeros activos
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-SECTION.Diagnosticos.v1/}
+                            }
+                        }
+                    }
+                    SECTION[at0070] occurrences matches {1..1} matches {  -- Protocolos asistenciales en los que está incluido
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0071] occurrences matches {0..*} matches {  -- Protocolo
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.ProtocoloAsistencial.v1/}
+                            }
+                        }
+                    }
+                    SECTION[at0014] occurrences matches {1..1} matches {  -- Información sobre la valoración activa
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0015] occurrences matches {0..*} matches {  -- Valoración activa
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.ValoracionActiva.v1/}
+                            }
+                        }
+                    }
+                    SECTION[at0073] occurrences matches {1..1} matches {  -- Resultados de enfermería
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0074] occurrences matches {0..*} matches {  -- Resultado de enfermeria
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.Resultado.v1/}
+                            }
+                        }
+                    }
+                    SECTION[at0017] occurrences matches {1..1} matches {  -- Intervenciones de enfermeria
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0072] occurrences matches {0..*} matches {  -- Intervención
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.Procedimiento.v1/}
+                            }
+                        }
+                    }
+                    SECTION[at0075] occurrences matches {1..1} matches {  -- Cuidador principal
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0077] occurrences matches {0..1} matches {  -- Datos del cuidador principal
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.DemograficosPersona.v1/}
+                            }
+                            ENTRY[at0078] occurrences matches {0..1} matches {  -- Vinculación con el usuario
+                                items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                                    ELEMENT[at0079] occurrences matches {0..1} matches {  -- Tipo de vinculación
+                                        value existence matches {0..1} matches {
+                                            SIMPLE_TEXT[at0080] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                                originalText existence matches {0..1} matches {/.*/}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    SECTION[at0081] occurrences matches {0..1} matches {  -- Información complementaria u observaciones
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ENTRY[at0082] occurrences matches {0..*} matches {  -- Información complementaria u observaciones
+                                items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                                    ELEMENT[at0083] occurrences matches {0..1} matches {  -- Descripción
+                                        value existence matches {0..1} matches {
+                                            CODED_TEXT[at0024] occurrences matches {0..1} matches {  -- CODED_TEXT
+                                                codedValue existence matches {0..1} matches {*}
+                                                originalText existence matches {0..1} matches {/.*/}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        name existence matches {1..1} matches {
+            SIMPLE_TEXT[at0009] occurrences matches {0..1} matches {  -- Tipo de documento
+                originalText existence matches {0..1} matches {"Informe de Cuidados de Enfermeria"}
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Informe Cuidados Enfermeria">
+                    description = <"Informe Cuidados Enfermeria">
+                >
+                ["at0002"] = <
+                    text = <"Datos del paciente">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"Datos demográficos básicos del paciente">
+                    description = <"">
+                >
+                ["at0004"] = <
+                    text = <"Identificadores del paciente">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"Dirección del paciente">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"Datos de contacto del paciente">
+                    description = <"">
+                >
+                ["at0001"] = <
+                    text = <"Datos de la institución emisora">
+                    description = <"">
+                >
+                ["at0010"] = <
+                    text = <"Centro de atención">
+                    description = <"">
+                >
+                ["at0011"] = <
+                    text = <"Servicio de salud">
+                    description = <"">
+                >
+                ["at0012"] = <
+                    text = <"Servicio de salud">
+                    description = <"">
+                >
+                ["at0013"] = <
+                    text = <"Dirección del centro">
+                    description = <"">
+                >
+                ["at0005"] = <
+                    text = <"Identificación del centro">
+                    description = <"">
+                >
+                ["at0008"] = <
+                    text = <"Datos del proceso asistencial">
+                    description = <"">
+                >
+                ["at0016"] = <
+                    text = <"Motivo del alta o derivación enfermera">
+                    description = <"">
+                >
+                ["at0018"] = <
+                    text = <"Antecedentes y entornos">
+                    description = <"">
+                >
+                ["at0017"] = <
+                    text = <"Intervenciones de enfermeria">
+                    description = <"">
+                >
+                ["at0020"] = <
+                    text = <"Datos del documento">
+                    description = <"">
+                >
+                ["at0030"] = <
+                    text = <"Fecha de firma">
+                    description = <"">
+                >
+                ["at0038"] = <
+                    text = <"Fecha">
+                    description = <"Es común a ambos pies de firma del informe">
+                >
+                ["at0039"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0040"] = <
+                    text = <"Fecha de Valoración de Enfermería">
+                    description = <"">
+                >
+                ["at0041"] = <
+                    text = <"Fecha">
+                    description = <"">
+                >
+                ["at0046"] = <
+                    text = <"Enfermera Responsable 1">
+                    description = <"Es parte del primer pie de firma del informe">
+                >
+                ["at0047"] = <
+                    text = <"Enfermera Responsable 2">
+                    description = <"Es parte del segundo pie de firma, que suele supervisar al primer firmante">
+                >
+                ["at0043"] = <
+                    text = <"Fecha Alta o de Derivación de Enfermería">
+                    description = <"">
+                >
+                ["at0044"] = <
+                    text = <"Fecha">
+                    description = <"">
+                >
+                ["at0045"] = <
+                    text = <"Persona de Referencia">
+                    description = <"">
+                >
+                ["at0048"] = <
+                    text = <"Teléfono de persona de referencia">
+                    description = <"">
+                >
+                ["at0009"] = <
+                    text = <"Tipo de documento">
+                    description = <"">
+                >
+                ["at0065"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0022"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0036"] = <
+                    text = <"Dispositivo asistencial">
+                    description = <"">
+                >
+                ["at0037"] = <
+                    text = <"Causas que generan la actuación enfermera">
+                    description = <"">
+                >
+                ["at0067"] = <
+                    text = <"Diagnósticos">
+                    description = <"">
+                >
+                ["at0070"] = <
+                    text = <"Protocolos asistenciales en los que está incluido">
+                    description = <"Tienen cabida todos los procesos asistenciales y programas de salud en los que se encuentre incluido, tanto programas preventivos como de seguimiento, rehabilitación o educación sanitaria entre otros. Así como la relación de problemas interdependientes y/o de colaboración si fuera el caso.">
+                >
+                ["at0071"] = <
+                    text = <"Protocolo">
+                    description = <"">
+                >
+                ["at0072"] = <
+                    text = <"Intervención">
+                    description = <"">
+                >
+                ["at0073"] = <
+                    text = <"Resultados de enfermería">
+                    description = <"">
+                >
+                ["at0074"] = <
+                    text = <"Resultado de enfermeria">
+                    description = <"">
+                >
+                ["at0075"] = <
+                    text = <"Cuidador principal">
+                    description = <"Deberá indicarse tanto el nombre como la relación que tiene con él (familiar, cuidador externo…)">
+                >
+                ["at0077"] = <
+                    text = <"Datos del cuidador principal">
+                    description = <"">
+                >
+                ["at0078"] = <
+                    text = <"Vinculación con el usuario">
+                    description = <"">
+                >
+                ["at0079"] = <
+                    text = <"Tipo de vinculación">
+                    description = <"">
+                >
+                ["at0080"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0081"] = <
+                    text = <"Información complementaria u observaciones">
+                    description = <"Puede incluirse información relativa a la presencia de catéteres, prótesis, dietas especiales, así como destacar algún aspecto de especial relevancia relativo a la aplicación de las intervenciones activas.">
+                >
+                ["at0082"] = <
+                    text = <"Información complementaria u observaciones">
+                    description = <"Puede incluirse información relativa a la presencia de catéteres, prótesis, dietas especiales, así como destacar algún aspecto de especial relevancia relativo a la apliación de las intervenciones activas.">
+                >
+                ["at0083"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0014"] = <
+                    text = <"Información sobre la valoración activa">
+                    description = <"">
+                >
+                ["at0015"] = <
+                    text = <"Valoración activa">
+                    description = <"">
+                >
+                ["at0019"] = <
+                    text = <"">
+                    description = <"">
+                >
+                ["at0021"] = <
+                    text = <"Diagnósticos enfermeros resueltos">
+                    description = <"Se trata de destacar aquellos diagnósticos, ya resuletos, que puedan resultar de interés para prever posteriores apariciones.">
+                >
+                ["at0023"] = <
+                    text = <"Diagnósticos enfermeros activos">
+                    description = <"Aquellos diagnósticos presentes en el momento de la elaboración del informe, tanto reales como potenciales">
+                >
+                ["at0024"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

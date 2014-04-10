@@ -1,0 +1,319 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-COMPOSITION.Receta.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"Receta médica">
+            use = <"Comunicación y registro de la receta médica oficial del Sistema Nacional de Salud y de las Mutualidades de funcionarios.">
+        >
+    >
+
+definition
+    COMPOSITION[at0000] occurrences matches {1..1} matches {  -- Receta
+        content existence matches {0..1} cardinality matches {0..*; ordered} matches {
+            ENTRY[at0023] occurrences matches {1..1} matches {  -- Código receta
+                items existence matches {0..1} cardinality matches {1..1; unordered; unique} matches {
+                    ELEMENT[at0027] occurrences matches {1..1} matches {  -- código
+                        value existence matches {0..1} matches {
+                            II[at0028] occurrences matches {0..1} matches {*}  -- II
+                            SIMPLE_TEXT[at0029] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                originalText existence matches {0..1} matches {*}
+                            }
+                        }
+                    }
+                }
+            }
+            allow_archetype ENTRY[at0011] occurrences matches {1..1} matches {  -- Medicación
+                include
+                    archetype_id/value matches {/CEN-EN13606-ENTRY.Medicacion.v1/}
+            }
+            SECTION[at0008] occurrences matches {1..1} matches {  -- Prescripción
+                members existence matches {0..1} cardinality matches {0..2; unordered; unique} matches {
+                    ENTRY[at0032] occurrences matches {1..1} matches {  -- Datos de la prescripción
+                        items existence matches {0..1} cardinality matches {0..3; ordered; unique} matches {
+                            ELEMENT[at0006] occurrences matches {1..1} matches {  -- Fecha
+                                value existence matches {0..1} matches {
+                                    DATE[at0007] occurrences matches {1..1} matches {  -- DATE
+                                        date existence matches {1..1} matches {yyyy-mm-dd}
+                                    }
+                                }
+                            }
+                            ELEMENT[at0031] occurrences matches {0..1} matches {  -- Número de envases
+                                value existence matches {0..1} matches {
+                                    INT[at0035] occurrences matches {0..1} matches {*}  -- INT
+                                }
+                            }
+                            ELEMENT[at0033] occurrences matches {0..1} matches {  -- Número de unidades
+                                value existence matches {0..1} matches {
+                                    INT[at0034] occurrences matches {0..1} matches {*}  -- INT
+                                }
+                            }
+                        }
+                    }
+                    allow_archetype ENTRY[at0009] occurrences matches {1..1} matches {  -- Prescriptor
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.ProfesionalSanitario.v1/}
+                    }
+                }
+            }
+            ENTRY[at0036] occurrences matches {0..1} matches {  -- Dispensación
+                items existence matches {0..1} cardinality matches {0..3; ordered; unique} matches {
+                    ELEMENT[at0017] occurrences matches {0..1} matches {  -- Fecha prevista de dispensación
+                        value existence matches {0..1} matches {
+                            DATE[at0018] occurrences matches {0..1} matches {  -- DATE
+                                date existence matches {1..1} matches {yyyy-mm-dd}
+                            }
+                        }
+                    }
+                    ELEMENT[at0037] occurrences matches {1..1} matches {  -- Fecha de dispensación
+                        value existence matches {0..1} matches {
+                            DATE[at0038] occurrences matches {0..1} matches {*}  -- DATE
+                        }
+                    }
+                    ELEMENT[at0013] occurrences matches {0..1} matches {  -- Número de orden
+                        value existence matches {0..1} matches {
+                            INT[at0014] occurrences matches {0..1} matches {  -- INT
+                                value existence matches {1..1} matches {*}
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0001] occurrences matches {1..1} matches {  -- Datos del paciente
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    allow_archetype ENTRY[at0002] occurrences matches {1..1} matches {  -- Datos personales
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.DemograficosPersona.v1/}
+                    }
+                    allow_archetype ENTRY[at0003] occurrences matches {1..1} matches {  -- Identificadores del paciente
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.IdentificacionPersona.v1/}
+                    }
+                }
+            }
+            ENTRY[at0019] occurrences matches {0..1} matches {  -- Motivo de la sustitución
+                items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                    ELEMENT[at0020] occurrences matches {0..1} matches {  -- Motivo
+                        value existence matches {0..1} matches {
+                            SIMPLE_TEXT[at0021] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                originalText existence matches {0..1} matches {"Urgencia","Desabastecimiento","Precio de referencia"}
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0010] occurrences matches {0..1} matches {  -- Farmacia
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    allow_archetype ENTRY[at0016] occurrences matches {0..1} matches {  -- Identicación
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.Farmacia.v1/}
+                    }
+                    allow_archetype ENTRY[at0022] occurrences matches {0..*} matches {  -- Dirección
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.Direccion.v1/}
+                    }
+                }
+            }
+            ENTRY[at0041] occurrences matches {0..1} matches {  -- Información al farmaceútico
+                items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ELEMENT[at0039] occurrences matches {0..1} matches {  -- información
+                        value existence matches {0..1} matches {
+                            SIMPLE_TEXT[at0040] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                originalText existence matches {0..1} matches {*}
+                            }
+                        }
+                    }
+                    ELEMENT[at0042] occurrences matches {0..1} matches {  -- Visado
+                        value existence matches {0..1} matches {
+                            SIMPLE_TEXT[at0043] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                originalText existence matches {0..1} matches {*}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        name existence matches {1..1} matches {
+            SIMPLE_TEXT[at0004] occurrences matches {1..1} matches {  -- SIMPLE_TEXT
+                originalText existence matches {1..1} matches {"Receta Médica"}
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Receta">
+                    description = <"Receta">
+                >
+                ["at0001"] = <
+                    text = <"Datos del paciente">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"Datos personales">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"Identificadores del paciente">
+                    description = <"">
+                >
+                ["at0004"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"Fecha">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0008"] = <
+                    text = <"Prescripción">
+                    description = <"">
+                >
+                ["at0009"] = <
+                    text = <"Prescriptor">
+                    description = <"">
+                >
+                ["at0011"] = <
+                    text = <"Medicación">
+                    description = <"">
+                >
+                ["at0013"] = <
+                    text = <"Número de orden">
+                    description = <"">
+                >
+                ["at0014"] = <
+                    text = <"INT">
+                    description = <"">
+                >
+                ["at0017"] = <
+                    text = <"Fecha prevista de dispensación">
+                    description = <"">
+                >
+                ["at0018"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0019"] = <
+                    text = <"Motivo de la sustitución">
+                    description = <"">
+                >
+                ["at0020"] = <
+                    text = <"Motivo">
+                    description = <"">
+                >
+                ["at0021"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0010"] = <
+                    text = <"Farmacia">
+                    description = <"">
+                >
+                ["at0016"] = <
+                    text = <"Identicación">
+                    description = <"">
+                >
+                ["at0022"] = <
+                    text = <"Dirección">
+                    description = <"">
+                >
+                ["at0023"] = <
+                    text = <"Código receta">
+                    description = <"">
+                >
+                ["at0027"] = <
+                    text = <"código">
+                    description = <"">
+                >
+                ["at0028"] = <
+                    text = <"II">
+                    description = <"">
+                >
+                ["at0029"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0031"] = <
+                    text = <"Número de envases">
+                    description = <"">
+                >
+                ["at0032"] = <
+                    text = <"Datos de la prescripción">
+                    description = <"">
+                >
+                ["at0033"] = <
+                    text = <"Número de unidades">
+                    description = <"">
+                >
+                ["at0034"] = <
+                    text = <"INT">
+                    description = <"">
+                >
+                ["at0035"] = <
+                    text = <"INT">
+                    description = <"">
+                >
+                ["at0036"] = <
+                    text = <"Dispensación">
+                    description = <"">
+                >
+                ["at0037"] = <
+                    text = <"Fecha de dispensación">
+                    description = <"">
+                >
+                ["at0038"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0039"] = <
+                    text = <"información">
+                    description = <"">
+                >
+                ["at0040"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0041"] = <
+                    text = <"Información al farmaceútico">
+                    description = <"">
+                >
+                ["at0042"] = <
+                    text = <"Visado">
+                    description = <"">
+                >
+                ["at0043"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

@@ -1,0 +1,114 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-CLUSTER.Muestra.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    CLUSTER[at0000] occurrences matches {1..1} matches {  -- Muestra
+        parts existence matches {0..1} cardinality matches {0..*; ordered} matches {
+            ELEMENT[at0001] occurrences matches {1..1} matches {  -- Fecha de toma de muestra
+                value existence matches {0..1} matches {
+                    DATE[at0002] occurrences matches {0..1} matches {  -- DATE
+                        date existence matches {1..1} matches {yyyy-mm-dd}
+                    }
+                }
+            }
+            ELEMENT[at0003] occurrences matches {1..1} matches {  -- Número de muestra
+                value existence matches {0..1} matches {
+                    SIMPLE_TEXT[at0007] occurrences matches {0..1} matches {*}  -- SIMPLE_TEXT
+                }
+            }
+            ELEMENT[at0006] occurrences matches {1..1} matches {  -- Tipo de muestra
+                value existence matches {0..1} matches {
+                    CODED_TEXT[at0010] occurrences matches {0..1} matches {  -- CODED_TEXT
+                        originalText existence matches {1..1} matches {*}
+                        codedValue existence matches {0..1} matches {*}
+                    }
+                }
+            }
+            ELEMENT[at0008] occurrences matches {1..1} matches {  -- Grupo de determinación
+                value existence matches {0..1} matches {
+                    CODED_TEXT[at0011] occurrences matches {0..1} matches {  -- CODED_TEXT
+                        originalText existence matches {1..1} matches {*}
+                        codedValue existence matches {0..1} matches {*}
+                    }
+                }
+            }
+        }
+        structure_type existence matches {1..1} matches {
+            CS[at0012] occurrences matches {1..1} matches {  -- 
+                codeValue existence matches {0..1} matches {"STRC01"}
+                codingSchemeName existence matches {0..1} matches {"CEN/TC251/EN13606-3:STRUCTURE_TYPE"}
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Muestra">
+                    description = <"Muestra">
+                >
+                ["at0001"] = <
+                    text = <"Fecha de toma de muestra">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"Número de muestra">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0008"] = <
+                    text = <"Grupo de determinación">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"Tipo de muestra">
+                    description = <"">
+                >
+                ["at0010"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+                ["at0011"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

@@ -1,0 +1,59 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-ENTRY.GlucemiaCapilar.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- GlucemiaCapilar
+		items matches {
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Medida de la glucemia capilar
+				value matches {
+					PQ[id3] occurrences matches {0..1} matches {	-- PQ
+						units existence matches {1} matches {
+							CS[id5] occurrences matches {1} matches {
+								codeValue matches {"mg/dL"}
+								codingSchemeName matches {"UCUM"}
+							}
+						}
+						value existence matches {1} 
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"GlucemiaCapilar">
+				description = <"GlucemiaCapilar">
+			>
+			["id2"] = <
+				text = <"Medida de la glucemia capilar">
+				description = <"">
+			>
+			["id3"] = <
+				text = <"PQ">
+				description = <"">
+			>
+		>
+	>

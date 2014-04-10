@@ -1,0 +1,70 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.Vacunacion.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- Vacunacion
+        items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+            ELEMENT[at0001] occurrences matches {0..1} matches {  -- Descripción de la vacunación
+                value existence matches {0..1} matches {
+                    CODED_TEXT[at0003] occurrences matches {0..1} matches {  -- CODED_TEXT
+                        codedValue existence matches {0..1} matches {
+                            CD[at0004] occurrences matches {0..1} matches {*}  -- CD
+                        }
+                        originalText existence matches {1..1} matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Vacunacion">
+                    description = <"Vacunacion">
+                >
+                ["at0001"] = <
+                    text = <"Descripción de la vacunación">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+                ["at0004"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

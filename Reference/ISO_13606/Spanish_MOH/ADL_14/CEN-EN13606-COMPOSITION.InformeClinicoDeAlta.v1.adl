@@ -1,0 +1,413 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-COMPOSITION.InformeClinicoDeAlta.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+            use = <"Comunicación y registro del informe clínico de alta del conjunto mínimo de datos de los informes clínicos (CMDIC) en el Sistema Nacional de Salud.">
+        >
+    >
+
+definition
+    COMPOSITION[at0000] occurrences matches {1..1} matches {  -- Informe Clinico De Alta
+        content existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+            SECTION[at0020] occurrences matches {1..1} matches {  -- Datos del documento
+                members existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+                    ENTRY[at0030] occurrences matches {1..1} matches {  -- Fecha de firma
+                        items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                            ELEMENT[at0038] occurrences matches {1..1} matches {  -- Fecha
+                                value existence matches {0..1} matches {
+                                    DATE[at0039] occurrences matches {0..1} matches {  -- DATE
+                                        date existence matches {1..1} matches {yyyy-mm-dd}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    ENTRY[at0042] occurrences matches {1..1} matches {  -- Fecha de ingreso
+                        items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                            ELEMENT[at0043] occurrences matches {0..1} matches {  -- Fecha 
+                                value existence matches {0..1} matches {
+                                    DATE[at0044] occurrences matches {0..1} matches {  -- DATE
+                                        date existence matches {1..1} matches {yyyy-mm-dd}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    ENTRY[at0040] occurrences matches {1..1} matches {  -- Fecha de alta
+                        items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                            ELEMENT[at0041] occurrences matches {0..1} matches {  -- Fecha de alta
+                                value existence matches {0..1} matches {
+                                    DATE[at0045] occurrences matches {0..1} matches {  -- DATE
+                                        date existence matches {1..1} matches {yyyy-mm-dd}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    allow_archetype ENTRY[at0046] occurrences matches {1..1} matches {  -- Responsable 1
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.ProfesionalSanitario.v1/}
+                    }
+                    allow_archetype ENTRY[at0047] occurrences matches {1..1} matches {  -- Responsable 2
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.ProfesionalSanitario.v1/}
+                    }
+                    ENTRY[at0048] occurrences matches {1..1} matches {  -- Servicio
+                        items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                            ELEMENT[at0049] occurrences matches {0..1} matches {  -- Nombre del servicio
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0054] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    ENTRY[at0051] occurrences matches {1..1} matches {  -- Unidad
+                        items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                            ELEMENT[at0052] occurrences matches {0..1} matches {  -- Nombre de la unidad
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0053] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0001] occurrences matches {1..1} matches {  -- Datos de la institución emisora
+                members existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+                    SECTION[at0011] occurrences matches {1..1} matches {  -- Servicio de salud
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0012] occurrences matches {1..1} matches {  -- Servicio de salud
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.ProvisorDeServicios.v1/}
+                            }
+                        }
+                    }
+                    SECTION[at0010] occurrences matches {1..1} matches {  -- Centro de atención
+                        members existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                            allow_archetype ENTRY[at0013] occurrences matches {1..1} matches {  -- Dirección del centro
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.Direccion.v1/}
+                            }
+                            allow_archetype ENTRY[at0005] occurrences matches {1..1} matches {  -- Identificación del centro
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.CentroSanitario.v1/}
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0002] occurrences matches {1..1} matches {  -- Datos del paciente
+                members existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+                    allow_archetype ENTRY[at0003] occurrences matches {1..1} matches {  -- Datos demográficos básicos del paciente
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.DemograficosPersona.v1/}
+                    }
+                    allow_archetype ENTRY[at0004] occurrences matches {1..1} matches {  -- Identificadores del paciente
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.IdentificacionPersona.v1/}
+                    }
+                    allow_archetype ENTRY[at0006] occurrences matches {1..1} matches {  -- Dirección del paciente
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.Direccion.v1/}
+                    }
+                    allow_archetype ENTRY[at0007] occurrences matches {1..1} matches {  -- Datos de contacto del paciente
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.DatosContactoPersona.v1/}
+                    }
+                }
+            }
+            SECTION[at0008] occurrences matches {1..1} matches {  -- Datos del proceso asistencial
+                members existence matches {0..1} cardinality matches {0..*; ordered} matches {
+                    allow_archetype ENTRY[at0016] occurrences matches {1..1} matches {  -- Motivo del alta
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.MotivoDeAlta.v1/}
+                    }
+                    allow_archetype ENTRY[at0028] occurrences matches {1..1} matches {  -- Motivo de Ingreso
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.MotivoDelEncuentro.v1/}
+                    }
+                    allow_archetype ENTRY[at0009] occurrences matches {1..1} matches {  -- Tipo de ingreso
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.TipoIngreso.v1/}
+                    }
+                    allow_archetype SECTION[at0018] occurrences matches {1..1} matches {  -- Antecedentes
+                        include
+                            archetype_id/value matches {/CEN-EN13606-SECTION.Antecedentes.v1/}
+                    }
+                    allow_archetype ENTRY[at0019] occurrences matches {1..1} matches {  -- Información sobre la historia actual
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.HistoriaActual.v1/}
+                    }
+                    allow_archetype SECTION[at0022] occurrences matches {1..1} matches {  -- Información sobre la exploración física
+                        include
+                            archetype_id/value matches {/CEN-EN13606-SECTION.ExploracionFisica.v1/}
+                    }
+                    allow_archetype SECTION[at0021] occurrences matches {1..1} matches {  -- Información de resumen sobre pruebas complementarias
+                        include
+                            archetype_id/value matches {/CEN-EN13606-SECTION.ResumenPruebasComplementarias.v1/}
+                    }
+                    SECTION[at0023] occurrences matches {1..1} matches {  -- Información sobre la evolución
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0024] occurrences matches {0..*} matches {  -- Comentario sobre la evolución
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.Evolucion.v1/}
+                            }
+                        }
+                    }
+                    SECTION[at0029] occurrences matches {1..1} matches {  -- Diagnóstico Principal
+                        members existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                            allow_archetype ENTRY[at0031] occurrences matches {0..1} matches {  -- Diagnóstico
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.ProblemaDiagnostico.v1/}
+                            }
+                        }
+                    }
+                    allow_archetype SECTION[at0027] occurrences matches {1..1} matches {  -- Otros diagnósticos
+                        include
+                            archetype_id/value matches {/CEN-EN13606-SECTION.Diagnosticos.v1/}
+                    }
+                    SECTION[at0017] occurrences matches {1..1} matches {  -- Información sobre Procedimientos
+                        members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            allow_archetype ENTRY[at0014] occurrences matches {0..*} matches {  -- Procedimiento
+                                include
+                                    archetype_id/value matches {/CEN-EN13606-ENTRY.Procedimiento.v1/}
+                            }
+                        }
+                    }
+                    allow_archetype SECTION[at0037] occurrences matches {1..1} matches {  -- Información sobre tratamientos
+                        include
+                            archetype_id/value matches {/CEN-EN13606-SECTION.Tratamiento.v1/}
+                    }
+                }
+            }
+        }
+        name existence matches {1..1} matches {
+            SIMPLE_TEXT[at0050] occurrences matches {0..1} matches {  -- Tipo de documento
+                originalText existence matches {0..1} matches {/.*/}
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Informe Clinico De Alta">
+                    description = <"Informe Clinico De Alta">
+                >
+                ["at0002"] = <
+                    text = <"Datos del paciente">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"Datos demográficos básicos del paciente">
+                    description = <"">
+                >
+                ["at0004"] = <
+                    text = <"Identificadores del paciente">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"Dirección del paciente">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"Datos de contacto del paciente">
+                    description = <"">
+                >
+                ["at0001"] = <
+                    text = <"Datos de la institución emisora">
+                    description = <"">
+                >
+                ["at0010"] = <
+                    text = <"Centro de atención">
+                    description = <"">
+                >
+                ["at0011"] = <
+                    text = <"Servicio de salud">
+                    description = <"">
+                >
+                ["at0012"] = <
+                    text = <"Servicio de salud">
+                    description = <"">
+                >
+                ["at0013"] = <
+                    text = <"Dirección del centro">
+                    description = <"">
+                >
+                ["at0005"] = <
+                    text = <"Identificación del centro">
+                    description = <"">
+                >
+                ["at0008"] = <
+                    text = <"Datos del proceso asistencial">
+                    description = <"">
+                >
+                ["at0016"] = <
+                    text = <"Motivo del alta">
+                    description = <"">
+                >
+                ["at0009"] = <
+                    text = <"Tipo de ingreso">
+                    description = <"">
+                >
+                ["at0018"] = <
+                    text = <"Antecedentes">
+                    description = <"">
+                >
+                ["at0019"] = <
+                    text = <"Información sobre la historia actual">
+                    description = <"">
+                >
+                ["at0022"] = <
+                    text = <"Información sobre la exploración física">
+                    description = <"">
+                >
+                ["at0021"] = <
+                    text = <"Información de resumen sobre pruebas complementarias">
+                    description = <"">
+                >
+                ["at0023"] = <
+                    text = <"Información sobre la evolución">
+                    description = <"">
+                >
+                ["at0024"] = <
+                    text = <"Comentario sobre la evolución">
+                    description = <"">
+                >
+                ["at0017"] = <
+                    text = <"Información sobre Procedimientos">
+                    description = <"">
+                >
+                ["at0027"] = <
+                    text = <"Otros diagnósticos">
+                    description = <"">
+                >
+                ["at0020"] = <
+                    text = <"Datos del documento">
+                    description = <"">
+                >
+                ["at0030"] = <
+                    text = <"Fecha de firma">
+                    description = <"">
+                >
+                ["at0038"] = <
+                    text = <"Fecha">
+                    description = <"Es común a ambos pies de firma del informe">
+                >
+                ["at0039"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0042"] = <
+                    text = <"Fecha de ingreso">
+                    description = <"">
+                >
+                ["at0043"] = <
+                    text = <"Fecha ">
+                    description = <"">
+                >
+                ["at0044"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0040"] = <
+                    text = <"Fecha de alta">
+                    description = <"">
+                >
+                ["at0041"] = <
+                    text = <"Fecha de alta">
+                    description = <"">
+                >
+                ["at0045"] = <
+                    text = <"DATE">
+                    description = <"">
+                >
+                ["at0046"] = <
+                    text = <"Responsable 1">
+                    description = <"Es parte del primer pie de firma del informe">
+                >
+                ["at0047"] = <
+                    text = <"Responsable 2">
+                    description = <"Es parte del segundo pie de firma, que suele supervisar al primer firmante">
+                >
+                ["at0048"] = <
+                    text = <"Servicio">
+                    description = <"">
+                >
+                ["at0049"] = <
+                    text = <"Nombre del servicio">
+                    description = <"Actualmente: clasificación de Servicios del CMBD/SIFCO">
+                >
+                ["at0051"] = <
+                    text = <"Unidad">
+                    description = <"">
+                >
+                ["at0052"] = <
+                    text = <"Nombre de la unidad">
+                    description = <"">
+                >
+                ["at0053"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0054"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0050"] = <
+                    text = <"Tipo de documento">
+                    description = <"">
+                >
+                ["at0037"] = <
+                    text = <"Información sobre tratamientos">
+                    description = <"">
+                >
+                ["at0028"] = <
+                    text = <"Motivo de Ingreso">
+                    description = <"">
+                >
+                ["at0029"] = <
+                    text = <"Diagnóstico Principal">
+                    description = <"">
+                >
+                ["at0031"] = <
+                    text = <"Diagnóstico">
+                    description = <"">
+                >
+                ["at0014"] = <
+                    text = <"Procedimiento">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

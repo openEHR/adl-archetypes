@@ -1,0 +1,101 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-ENTRY.VoluntadesAnticipadas.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    ENTRY[at0000] occurrences matches {1..1} matches {  -- Voluntades Anticipadas
+        items existence matches {0..1} cardinality matches {0..*; ordered} matches {
+            ELEMENT[at0001] occurrences matches {1..1} matches {  -- Existe documento
+                value existence matches {0..1} matches {
+                    BL[at0002] occurrences matches {0..1} matches {  -- BL
+                        value existence matches {1..1} matches {true, false}
+                    }
+                }
+            }
+            ELEMENT[at0003] occurrences matches {0..1} matches {  -- Localización
+                value existence matches {0..1} matches {
+                    URI[at0004] occurrences matches {0..1} matches {  -- URI
+                        value existence matches {0..1} matches {/.*/; ""}
+                        scheme existence matches {0..1} matches {/.*/; ""}
+                    }
+                }
+            }
+            ELEMENT[at0005] occurrences matches {0..1} matches {  -- Razón de no existencia
+                value existence matches {0..1} matches {
+                    CODED_TEXT[at0006] occurrences matches {0..1} matches {  -- CODED_TEXT
+                        originalText existence matches {0..1} matches {/.*/}
+                        codedValue existence matches {0..1} matches {
+                            CD[at0007] occurrences matches {0..1} matches {*}  -- CD
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Voluntades Anticipadas">
+                    description = <"Voluntades Anticipadas">
+                >
+                ["at0001"] = <
+                    text = <"Existe documento">
+                    description = <"">
+                >
+                ["at0002"] = <
+                    text = <"BL">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"Localización">
+                    description = <"">
+                >
+                ["at0004"] = <
+                    text = <"URI">
+                    description = <"">
+                >
+                ["at0005"] = <
+                    text = <"Razón de no existencia">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"CODED_TEXT">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"CD">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

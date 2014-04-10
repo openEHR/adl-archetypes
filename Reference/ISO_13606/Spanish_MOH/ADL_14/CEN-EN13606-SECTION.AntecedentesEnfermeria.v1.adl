@@ -1,0 +1,219 @@
+archetype (adl_version=1.4)
+    CEN-EN13606-SECTION.AntecedentesEnfermeria.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::es]>
+
+description
+    original_author = <
+        ["email"] = <"jamaldo@upv.es">
+        ["name"] = <"Grupo de Informática Médica (IBIME)">
+        ["organisation"] = <"Universitat Politècnica de Valencia">
+        ["date"] = <"20131108">
+    >
+    lifecycle_state = <"Draft">
+    other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad","Pablo Serrano, Hospital de Fuenlabrada">
+    details = <
+        ["es"] = <
+            language = <[ISO_639-1::es]>
+            keywords = <"CMDIC">
+        >
+    >
+
+definition
+    SECTION[at0000] occurrences matches {1..1} matches {  -- Antecedentes Enfermeria
+        members existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+            SECTION[at0001] occurrences matches {0..1} matches {  -- Enfermedades Previas
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ENTRY[at0028] occurrences matches {0..*} matches {  -- Enfermedad Previa
+                        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0036] occurrences matches {0..1} matches {  -- Descripción enfermedad
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0037] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0002] occurrences matches {0..1} matches {  -- Intervenciones quirúrgicas
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ENTRY[at0003] occurrences matches {0..*} matches {  -- Intervención quirúrgica
+                        items existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                            ELEMENT[at0004] occurrences matches {0..1} matches {  -- Descripción
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0005] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0006] occurrences matches {0..1} matches {  -- Tratamientos farmacológicos
+                members existence matches {0..1} cardinality matches {0..*; unordered} matches {
+                    ENTRY[at0007] occurrences matches {0..*} matches {  -- Tratamiento farmacológico
+                        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0008] occurrences matches {0..1} matches {  -- Descripción
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0009] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0014] occurrences matches {0..1} matches {  -- Alergias
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    allow_archetype ENTRY[at0015] occurrences matches {0..*} matches {  -- Alergia
+                        include
+                            archetype_id/value matches {/CEN-EN13606-ENTRY.Alergia.v1/}
+                    }
+                }
+            }
+            SECTION[at0020] occurrences matches {0..1} matches {  -- Actuaciones preventivas
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ENTRY[at0021] occurrences matches {0..*} matches {  -- Actuación preventiva
+                        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0022] occurrences matches {0..1} matches {  -- Descripción
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0023] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            SECTION[at0032] occurrences matches {0..1} matches {  -- Factores personales, familiares, sociales, cultuales y laborales destacables
+                members existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ENTRY[at0033] occurrences matches {0..*} matches {  -- Antecedente social y profesional
+                        items existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                            ELEMENT[at0034] occurrences matches {0..1} matches {  -- Descripción
+                                value existence matches {0..1} matches {
+                                    SIMPLE_TEXT[at0035] occurrences matches {0..1} matches {  -- SIMPLE_TEXT
+                                        originalText existence matches {0..1} matches {/.*/}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ontology
+    term_definitions = <
+        ["es"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"Antecedentes Enfermeria">
+                    description = <"Antecedentes enfermeria">
+                >
+                ["at0002"] = <
+                    text = <"Intervenciones quirúrgicas">
+                    description = <"">
+                >
+                ["at0003"] = <
+                    text = <"Intervención quirúrgica">
+                    description = <"">
+                >
+                ["at0004"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0005"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0006"] = <
+                    text = <"Tratamientos farmacológicos">
+                    description = <"">
+                >
+                ["at0007"] = <
+                    text = <"Tratamiento farmacológico">
+                    description = <"">
+                >
+                ["at0008"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0009"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0014"] = <
+                    text = <"Alergias">
+                    description = <"">
+                >
+                ["at0015"] = <
+                    text = <"Alergia">
+                    description = <"">
+                >
+                ["at0020"] = <
+                    text = <"Actuaciones preventivas">
+                    description = <"Vacunaciones y su estado">
+                >
+                ["at0021"] = <
+                    text = <"Actuación preventiva">
+                    description = <"">
+                >
+                ["at0022"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0023"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0032"] = <
+                    text = <"Factores personales, familiares, sociales, cultuales y laborales destacables">
+                    description = <"El conjunto de factores reseñados se refiere a aquellos elementos (personales, familiares, sociales o profesionales) que, formando parte de su entorno, pueden influir o condicionar la evolución de su estado de salud. Tienen cabida también aquellos acontecimientos puntuales (pérdida de familiar, evento laboral,…) que puedan influir en su respuesta ante diferentes situaciones de salud">
+                >
+                ["at0033"] = <
+                    text = <"Antecedente social y profesional">
+                    description = <"">
+                >
+                ["at0034"] = <
+                    text = <"Descripción">
+                    description = <"">
+                >
+                ["at0035"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+                ["at0001"] = <
+                    text = <"Enfermedades Previas">
+                    description = <"">
+                >
+                ["at0028"] = <
+                    text = <"Enfermedad Previa">
+                    description = <"">
+                >
+                ["at0036"] = <
+                    text = <"Descripción enfermedad">
+                    description = <"">
+                >
+                ["at0037"] = <
+                    text = <"SIMPLE_TEXT">
+                    description = <"">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >

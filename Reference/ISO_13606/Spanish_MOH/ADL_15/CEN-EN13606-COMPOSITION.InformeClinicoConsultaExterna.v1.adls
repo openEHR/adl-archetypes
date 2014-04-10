@@ -1,0 +1,364 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-COMPOSITION.InformeClinicoConsultaExterna.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			use = <"Comunicación y registro del informe clínico de consulta externa del conjunto mínimo de datos de los informes clínicos (CMDIC) en el Sistema Nacional de Salud.">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	COMPOSITION[id1] occurrences matches {1} matches {	-- Informe Clinico Consulta Externa
+		content matches {
+			SECTION[id21] occurrences matches {1} matches {	-- Datos del documento
+				members matches {
+					ENTRY[id31] occurrences matches {1} matches {	-- Fecha de firma
+						items cardinality matches {1; unordered; unique} matches {
+							ELEMENT[id39] occurrences matches {1} matches {	-- Fecha
+								value matches {
+									DATE[id40] occurrences matches {0..1} matches {	-- DATE
+										date existence matches {1} matches {yyyy-mm-dd}
+									}
+								}
+							}
+						}
+					}
+					ENTRY[id41] occurrences matches {1} matches {	-- Fecha de consulta
+						items cardinality matches {1; unordered; unique} matches {
+							ELEMENT[id42] occurrences matches {0..1} matches {	-- Fecha
+								value matches {
+									DATE[id46] occurrences matches {0..1} matches {	-- DATE
+										date existence matches {1} matches {yyyy-mm-dd}
+									}
+								}
+							}
+						}
+					}
+					allow_archetype ENTRY[id47] occurrences matches {1} matches {	-- Responsable 1
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.ProfesionalSanitario.v1/}
+					}
+					allow_archetype ENTRY[id48] occurrences matches {1} matches {	-- Responsable 2
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.ProfesionalSanitario.v1/}
+					}
+					ENTRY[id49] occurrences matches {1} matches {	-- Servicio
+						items cardinality matches {1; unordered; unique} matches {
+							ELEMENT[id50] occurrences matches {0..1} matches {	-- Nombre del servicio
+								value matches {
+									SIMPLE_TEXT[id55] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+										originalText matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+					ENTRY[id52] occurrences matches {1} matches {	-- Unidad
+						items matches {
+							ELEMENT[id53] occurrences matches {1} matches {	-- Nombre de la unidad
+								value matches {
+									SIMPLE_TEXT[id54] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+										originalText matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			SECTION[id2] occurrences matches {1} matches {	-- Datos de la institución emisora
+				members matches {
+					SECTION[id12] occurrences matches {1} matches {	-- Servicio de salud
+						members matches {
+							allow_archetype ENTRY[id13] occurrences matches {1} matches {	-- Servicio de salud
+								include
+									archetype_id/value matches {/CEN-EN13606-ENTRY.ProvisorDeServicios.v1/}
+							}
+						}
+					}
+					SECTION[id11] occurrences matches {1} matches {	-- Centro de atención
+						members cardinality matches {0..1; unordered; unique} matches {
+							allow_archetype ENTRY[id14] occurrences matches {1} matches {	-- Dirección del centro
+								include
+									archetype_id/value matches {/CEN-EN13606-ENTRY.Direccion.v1/}
+							}
+							allow_archetype ENTRY[id6] occurrences matches {1} matches {	-- Identificación del centro
+								include
+									archetype_id/value matches {/CEN-EN13606-ENTRY.CentroSanitario.v1/}
+							}
+						}
+					}
+				}
+			}
+			SECTION[id3] occurrences matches {1} matches {	-- Datos del paciente
+				members matches {
+					allow_archetype ENTRY[id4] occurrences matches {1} matches {	-- Datos demográficos básicos del paciente
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.DemograficosPersona.v1/}
+					}
+					allow_archetype ENTRY[id5] occurrences matches {1} matches {	-- Identificadores del paciente
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.IdentificacionPersona.v1/}
+					}
+					allow_archetype ENTRY[id7] occurrences matches {1} matches {	-- Dirección del paciente
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.Direccion.v1/}
+					}
+					allow_archetype ENTRY[id8] occurrences matches {1} matches {	-- Datos de contacto del paciente
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.DatosContactoPersona.v1/}
+					}
+				}
+			}
+			SECTION[id9] occurrences matches {1} matches {	-- Datos del proceso asistencial
+				members matches {
+					allow_archetype ENTRY[id29] occurrences matches {0..*} matches {	-- Motivo de consulta
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.MotivoDelEncuentro.v1/}
+					}
+					allow_archetype SECTION[id19] occurrences matches {1} matches {	-- Antecedentes
+						include
+							archetype_id/value matches {/CEN-EN13606-SECTION.Antecedentes.v1/}
+					}
+					allow_archetype ENTRY[id20] occurrences matches {1} matches {	-- Información sobre la historia actual
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.HistoriaActual.v1/}
+					}
+					allow_archetype SECTION[id23] occurrences matches {1} matches {	-- Información sobre la exploración física
+						include
+							archetype_id/value matches {/CEN-EN13606-SECTION.ExploracionFisica.v1/}
+					}
+					allow_archetype SECTION[id22] occurrences matches {1} matches {	-- Información de resumen sobre pruebas complementarias
+						include
+							archetype_id/value matches {/CEN-EN13606-SECTION.ResumenPruebasComplementarias.v1/}
+					}
+					SECTION[id24] occurrences matches {1} matches {	-- Información sobre la evolución
+						members matches {
+							allow_archetype ENTRY[id25] occurrences matches {1} matches {	-- Comentario sobre la evolución
+								include
+									archetype_id/value matches {/CEN-EN13606-ENTRY.Evolucion.v1/}
+							}
+						}
+					}
+					SECTION[id10] occurrences matches {1} matches {	-- Diagnóstico principal
+						members matches {
+							allow_archetype ENTRY[id15] occurrences matches {0..1} matches {	-- ENTRY
+								include
+									archetype_id/value matches {/CEN-EN13606-ENTRY.ProblemaDiagnostico.v1/}
+							}
+						}
+					}
+					allow_archetype SECTION[id28] occurrences matches {1} matches {	-- Otros diagnósticos
+						include
+							archetype_id/value matches {/CEN-EN13606-SECTION.Diagnosticos.v1/}
+					}
+					SECTION[id18] occurrences matches {1} matches {	-- Información sobre procedimientos
+						members matches {
+							allow_archetype ENTRY[id16] occurrences matches {0..*} matches {	-- Procedimiento
+								include
+									archetype_id/value matches {/CEN-EN13606-ENTRY.Procedimiento.v1/}
+							}
+						}
+					}
+					allow_archetype SECTION[id37] occurrences matches {1} matches {	-- Información sobre tratamientos
+						include
+							archetype_id/value matches {/CEN-EN13606-SECTION.Tratamiento.v1/}
+					}
+				}
+			}
+		}
+		name matches {
+			SIMPLE_TEXT[id43] occurrences matches {0..1} matches {	-- Tipo de documento
+				originalText matches {"Informe Clínico de Consulta Externa"}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Informe Clinico Consulta Externa">
+				description = <"Informe Clinico Consulta Externa">
+			>
+			["id3"] = <
+				text = <"Datos del paciente">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"Datos demográficos básicos del paciente">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"Identificadores del paciente">
+				description = <"">
+			>
+			["id7"] = <
+				text = <"Dirección del paciente">
+				description = <"">
+			>
+			["id8"] = <
+				text = <"Datos de contacto del paciente">
+				description = <"">
+			>
+			["id2"] = <
+				text = <"Datos de la institución emisora">
+				description = <"">
+			>
+			["id11"] = <
+				text = <"Centro de atención">
+				description = <"">
+			>
+			["id12"] = <
+				text = <"Servicio de salud">
+				description = <"">
+			>
+			["id13"] = <
+				text = <"Servicio de salud">
+				description = <"">
+			>
+			["id14"] = <
+				text = <"Dirección del centro">
+				description = <"">
+			>
+			["id6"] = <
+				text = <"Identificación del centro">
+				description = <"">
+			>
+			["id9"] = <
+				text = <"Datos del proceso asistencial">
+				description = <"">
+			>
+			["id19"] = <
+				text = <"Antecedentes">
+				description = <"">
+			>
+			["id20"] = <
+				text = <"Información sobre la historia actual">
+				description = <"">
+			>
+			["id23"] = <
+				text = <"Información sobre la exploración física">
+				description = <"">
+			>
+			["id22"] = <
+				text = <"Información de resumen sobre pruebas complementarias">
+				description = <"">
+			>
+			["id24"] = <
+				text = <"Información sobre la evolución">
+				description = <"Comentarios sobre el seguimiento evolutivo, en el caso de que el informe no se refiera a una sola consulta sino a un periodo de seguimiento en el que se han realizado varias entrevistas clínicas. En este caso se puede incluir aquí el periodo de tiempo del que es comprensivo el informe o reseñar las fechas en las que se produjeron las consultas. También es el lugar adecuado para describir reacciones adversas a fármacos utilizados en este episodo o describir complicaciones evolutivas de la/las enfermedades, realizar valoraciones diagnósticas o comentarios adicionales. ">
+			>
+			["id25"] = <
+				text = <"Comentario sobre la evolución">
+				description = <"">
+			>
+			["id18"] = <
+				text = <"Información sobre procedimientos">
+				description = <"">
+			>
+			["id28"] = <
+				text = <"Otros diagnósticos">
+				description = <"">
+			>
+			["id21"] = <
+				text = <"Datos del documento">
+				description = <"">
+			>
+			["id31"] = <
+				text = <"Fecha de firma">
+				description = <"">
+			>
+			["id39"] = <
+				text = <"Fecha">
+				description = <"Es común a ambos pies de firma del informe">
+			>
+			["id40"] = <
+				text = <"DATE">
+				description = <"">
+			>
+			["id41"] = <
+				text = <"Fecha de consulta">
+				description = <"">
+			>
+			["id42"] = <
+				text = <"Fecha">
+				description = <"">
+			>
+			["id46"] = <
+				text = <"DATE">
+				description = <"">
+			>
+			["id47"] = <
+				text = <"Responsable 1">
+				description = <"Es parte del primer pie de firma del informe">
+			>
+			["id48"] = <
+				text = <"Responsable 2">
+				description = <"Es parte del segundo pie de firma, que suele supervisar al primer firmante">
+			>
+			["id49"] = <
+				text = <"Servicio">
+				description = <"">
+			>
+			["id50"] = <
+				text = <"Nombre del servicio">
+				description = <"Actualmente: clasificación de Servicios del CMBD/SIFCO">
+			>
+			["id52"] = <
+				text = <"Unidad">
+				description = <"">
+			>
+			["id53"] = <
+				text = <"Nombre de la unidad">
+				description = <"">
+			>
+			["id54"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id55"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id43"] = <
+				text = <"Tipo de documento">
+				description = <"">
+			>
+			["id37"] = <
+				text = <"Información sobre tratamientos">
+				description = <"">
+			>
+			["id29"] = <
+				text = <"Motivo de consulta">
+				description = <"">
+			>
+			["id10"] = <
+				text = <"Diagnóstico principal">
+				description = <"">
+			>
+			["id15"] = <
+				text = <"ENTRY">
+				description = <"">
+			>
+			["id16"] = <
+				text = <"Procedimiento">
+				description = <"">
+			>
+		>
+	>

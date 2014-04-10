@@ -1,0 +1,60 @@
+archetype (adl_version=1.5.1; generated)
+	CEN-EN13606-ENTRY.Alerta.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unstable">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- Alerta
+		items cardinality matches {0..1; unordered; unique} matches {
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Descripción de la alerta
+				value matches {
+					CODED_TEXT[id4] occurrences matches {0..1} matches {	-- CODED_TEXT
+						originalText existence matches {1} matches {/.*/}
+						codedValue matches {
+							CD[id5] occurrences matches {0..1} 	-- CD
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Alerta">
+				description = <"Alerta">
+			>
+			["id2"] = <
+				text = <"Descripción de la alerta">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"CODED_TEXT">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"CD">
+				description = <"">
+			>
+		>
+	>
