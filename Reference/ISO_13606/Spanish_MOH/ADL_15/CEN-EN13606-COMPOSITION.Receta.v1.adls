@@ -30,9 +30,7 @@ definition
 					ELEMENT[id28] occurrences matches {1} matches {	-- código
 						value matches {
 							II[id29] occurrences matches {0..1} 	-- II
-							SIMPLE_TEXT[id30] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
-								originalText 
-							}
+							SIMPLE_TEXT[id30] occurrences matches {0..1} 	-- SIMPLE_TEXT
 						}
 					}
 				}
@@ -132,16 +130,12 @@ definition
 				items matches {
 					ELEMENT[id40] occurrences matches {0..1} matches {	-- información
 						value matches {
-							SIMPLE_TEXT[id41] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
-								originalText 
-							}
+							SIMPLE_TEXT[id41] occurrences matches {0..1} 	-- SIMPLE_TEXT
 						}
 					}
 					ELEMENT[id43] occurrences matches {0..1} matches {	-- Visado
 						value matches {
-							SIMPLE_TEXT[id44] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
-								originalText 
-							}
+							SIMPLE_TEXT[id44] occurrences matches {0..1} 	-- SIMPLE_TEXT
 						}
 					}
 				}

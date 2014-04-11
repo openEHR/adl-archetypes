@@ -24,9 +24,7 @@ description
 definition
 	ENTRY[id1] occurrences matches {1} matches {	-- Valoración Activa
 		items matches {
-			ELEMENT[id2] occurrences matches {1} matches {	-- Modelo de referencia utilizado
-				value 
-			}
+			ELEMENT[id2] occurrences matches {1} 	-- Modelo de referencia utilizado
 			CLUSTER[id3] occurrences matches {1} matches {	-- Resultados destacables
 				parts matches {
 					ELEMENT[id8] occurrences matches {0..*} matches {	-- Resultado

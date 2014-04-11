@@ -27,7 +27,6 @@ definition
 			ELEMENT[id2] occurrences matches {0..1} matches {	-- Descripción
 				value matches {
 					CODED_TEXT[id3] occurrences matches {0..1} matches {	-- CODED_TEXT
-						codedValue 
 						originalText existence matches {1} matches {/.*/}
 					}
 				}

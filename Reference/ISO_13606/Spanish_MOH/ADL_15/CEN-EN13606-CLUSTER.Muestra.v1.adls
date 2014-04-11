@@ -40,7 +40,6 @@ definition
 				value matches {
 					CODED_TEXT[id11] occurrences matches {0..1} matches {	-- CODED_TEXT
 						originalText existence matches {1} 
-						codedValue 
 					}
 				}
 			}
@@ -48,7 +47,6 @@ definition
 				value matches {
 					CODED_TEXT[id12] occurrences matches {0..1} matches {	-- CODED_TEXT
 						originalText existence matches {1} 
-						codedValue 
 					}
 				}
 			}

@@ -24,15 +24,12 @@ description
 definition
 	ENTRY[id1] occurrences matches {1} matches {	-- Hallazgo en prueba de imagen
 		items matches {
-			ELEMENT[id2] occurrences matches {1} matches {	-- Descripción
-				value 
-			}
+			ELEMENT[id2] occurrences matches {1} 	-- Descripción
 			CLUSTER[id6] occurrences matches {0..1} matches {	-- Hallazgos negativos
 				parts matches {
 					ELEMENT[id9] occurrences matches {0..*} matches {	-- Información sobre el hallazgo negativo
 						value matches {
 							CODED_TEXT[id16] occurrences matches {0..1} matches {	-- CODED_TEXT
-								codedValue 
 								originalText existence matches {1} matches {/.*/}
 							}
 						}
@@ -50,7 +47,6 @@ definition
 					ELEMENT[id24] occurrences matches {0..*} matches {	-- Comparación
 						value matches {
 							CODED_TEXT[id26] occurrences matches {0..1} matches {	-- CODED_TEXT
-								codedValue 
 								originalText existence matches {1} matches {/.*/}
 							}
 						}
@@ -68,7 +64,6 @@ definition
 					ELEMENT[id30] occurrences matches {0..*} matches {	-- Limitación
 						value matches {
 							CODED_TEXT[id4] occurrences matches {0..1} matches {	-- CODED_TEXT
-								codedValue 
 								originalText existence matches {1} matches {/.*/}
 							}
 						}

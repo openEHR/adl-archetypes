@@ -51,7 +51,6 @@ definition
 							ELEMENT[id4] occurrences matches {0..1} matches {	-- Identificación del Diagnóstico
 								value matches {
 									CODED_TEXT[id6] occurrences matches {0..1} matches {	-- CODED_TEXT
-										codedValue 
 										originalText matches {/.*/}
 									}
 								}

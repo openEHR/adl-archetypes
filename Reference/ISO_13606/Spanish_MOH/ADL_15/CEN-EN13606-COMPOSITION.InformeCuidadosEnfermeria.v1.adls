@@ -214,7 +214,6 @@ definition
 									ELEMENT[id84] occurrences matches {0..1} matches {	-- Descripción
 										value matches {
 											CODED_TEXT[id25] occurrences matches {0..1} matches {	-- CODED_TEXT
-												codedValue 
 												originalText matches {/.*/}
 											}
 										}

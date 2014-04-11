@@ -209,9 +209,7 @@ definition
 								items cardinality matches {0..1; unordered; unique} matches {
 									ELEMENT[id51] occurrences matches {0..1} matches {	-- Observación subjetiva del profesional
 										value matches {
-											SIMPLE_TEXT[id52] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
-												originalText 
-											}
+											SIMPLE_TEXT[id52] occurrences matches {0..1} 	-- SIMPLE_TEXT
 										}
 									}
 								}

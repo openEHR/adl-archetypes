@@ -35,7 +35,6 @@ definition
 				value matches {
 					CV[id6] occurrences matches {0..1} matches {	-- CV
 						codeValue matches {/.*/}
-						codingSchemeName 
 						displayName 
 					}
 				}

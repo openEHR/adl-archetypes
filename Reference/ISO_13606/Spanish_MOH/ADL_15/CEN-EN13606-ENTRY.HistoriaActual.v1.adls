@@ -29,7 +29,6 @@ definition
 					ELEMENT[id7] occurrences matches {0..1} matches {	-- Descripción
 						value matches {
 							CODED_TEXT[id9] occurrences matches {0..1} matches {	-- CODED_TEXT
-								codedValue 
 								originalText existence matches {1} matches {/.*/}
 							}
 						}
@@ -51,11 +50,9 @@ definition
 								highClosed matches {True, False; False}
 								width matches {
 									DURATION[id3] occurrences matches {0..1} matches {	-- DURATION
-										days 
 										hours 
 										minutes existence matches {0} 
 										seconds existence matches {0} 
-										fractional_second 
 									}
 								}
 							}

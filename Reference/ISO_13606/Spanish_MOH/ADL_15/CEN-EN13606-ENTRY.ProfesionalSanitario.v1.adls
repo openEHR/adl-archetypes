@@ -60,7 +60,6 @@ definition
 			ELEMENT[id16] occurrences matches {0..1} matches {	-- Especialidad
 				value matches {
 					CODED_TEXT[id19] occurrences matches {0..1} matches {	-- Descripción de la especialidad
-						originalText 
 						codedValue 
 					}
 				}
@@ -68,7 +67,6 @@ definition
 			ELEMENT[id9] occurrences matches {0..1} matches {	-- Categoria profesional
 				value matches {
 					CODED_TEXT[id20] occurrences matches {0..1} matches {	-- Descripción de la categoría profesional
-						codedValue 
 						originalText 
 					}
 				}

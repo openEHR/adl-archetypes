@@ -30,7 +30,6 @@ definition
 						units existence matches {1} matches {
 							CS[id6] occurrences matches {1} matches {	-- CS
 								codingSchemeName matches {"%"}
-								codeValue 
 							}
 						}
 						value existence matches {1} matches {|0.0..100.0|}
