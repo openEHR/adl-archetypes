@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4)
 	openEHR-EHR-CLUSTER.palpation.v1
 
 concept
@@ -572,10 +572,6 @@ ontology
 				["at0015"] = <
 					text = <"لم يتم اكتشاف نتيجة غير طبيعية">
 					description = <"لم يتم اكتشاف نتيجة غير طبيعية من خلال الجس">
-				>
-				["at0019"] = <
-					text = <"الإيلام/المضض">
-					description = <"مجموعة من البيانات حول وجود الألم">
 				>
 				["at0019"] = <
 					text = <"الإيلام/المضض">
