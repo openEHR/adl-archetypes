@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; generated)
+﻿archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.lab_test-microbiology.v1.0.0
 
 specialize
@@ -21,7 +21,7 @@ description
 			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"initial">
 	other_details = <
 		["regression"] = <"PASS">
 	>
@@ -34,7 +34,7 @@ definition
 				items matches {
 					ELEMENT[id0.36] occurrences matches {0..1} matches {	-- Red cell count
 						value matches {
-							DV_QUANTITY[id0.9] 
+							DV_QUANTITY[id0.37] 
 						}
 					}
 				}

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1)
+archetype (adl_version=1.5.1)
 	openEHR-EHR-OBSERVATION.apgar.v1.0.0
 
 language
@@ -28,7 +28,7 @@ definition
 					POINT_EVENT[id4] occurrences matches {0..1} matches {	-- 1 minute
 						offset matches {
 							DV_DURATION[id46] matches {
-								value matches {}
+								value matches {PT1M}
 							}
 						}
 						data matches {
@@ -103,7 +103,7 @@ definition
 					POINT_EVENT[id27] occurrences matches {0..1} matches {	-- 2 minute
 						offset matches {
 							DV_DURATION[id53] matches {
-								value matches {}
+								value matches {PT2M}
 							}
 						}
 						data matches {
@@ -113,7 +113,7 @@ definition
 					POINT_EVENT[id28] occurrences matches {0..1} matches {	-- 3 minute
 						offset matches {
 							DV_DURATION[id54] matches {
-								value matches {}
+								value matches {PT3M}
 							}
 						}
 						data matches {
@@ -123,7 +123,7 @@ definition
 					POINT_EVENT[id29] occurrences matches {0..1} matches {	-- 5 minute
 						offset matches {
 							DV_DURATION[id55] matches {
-								value matches {}
+								value matches {PT5M}
 							}
 						}
 						data matches {
@@ -133,7 +133,7 @@ definition
 					POINT_EVENT[id32] occurrences matches {0..1} matches {	-- 10 minute
 						offset matches {
 							DV_DURATION[id56] matches {
-								value matches {}
+								value matches {PT10M}
 							}
 						}
 						data matches {

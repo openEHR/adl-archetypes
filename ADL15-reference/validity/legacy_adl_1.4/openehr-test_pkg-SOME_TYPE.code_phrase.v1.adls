@@ -85,7 +85,7 @@ definition
 		}
 		clinical_coded_text_attr_1 matches {
 			DV_CODED_TEXT[id15] matches {
-				defining_code matches {[ac1; at112]}		-- Test
+				defining_code matches {[ac1; at112]}		-- Test (synthesised)
 			}
 		}
 	}
@@ -138,8 +138,8 @@ terminology
 				description = <"Site">
 			>
 			["ac1"] = <
-				text = <"Test">
-				description = <"Test">
+				text = <"Test (synthesised)">
+				description = <"Test (synthesised)">
 			>
 		>
 	>

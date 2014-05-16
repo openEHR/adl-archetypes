@@ -31,7 +31,7 @@ definition
 				}
 				null_flavour matches {
 					DV_CODED_TEXT[id4] matches {
-						defining_code matches {[ac1]}		-- New element
+						defining_code matches {[ac1]}		-- New element (synthesised)
 					}
 				}
 			}
@@ -49,10 +49,6 @@ terminology
 				text = <"New element">
 				description = <"*">
 			>
-			["ac1"] = <
-				text = <"New element">
-				description = <"*">
-			>
 			["at1"] = <
 				text = <"unknown">
 				description = <"unknown">
@@ -64,6 +60,10 @@ terminology
 			["at3"] = <
 				text = <"not applicable">
 				description = <"not applicable">
+			>
+			["ac1"] = <
+				text = <"New element (synthesised)">
+				description = <"* (synthesised)">
 			>
 		>
 	>

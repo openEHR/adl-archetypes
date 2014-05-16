@@ -44,7 +44,7 @@ definition
 		}
 		clinical_quantity_attr_2 matches {
 			DV_QUANTITY[id5] matches {
-				property matches {[at2]}
+				property matches {[at1]}
 				units matches {"C", "F"}
 			}
 		}
@@ -60,7 +60,7 @@ definition
 		}
 		clinical_quantity_attr_6 matches {
 			DV_QUANTITY[id8] matches {
-				property matches {[at3]}
+				property matches {[at1]}
 				precision matches {2}
 			}
 		}
@@ -85,20 +85,10 @@ terminology
 				text = <"Temperature">
 				description = <"Temperature">
 			>
-			["at2"] = <
-				text = <"Temperature">
-				description = <"Temperature">
-			>
-			["at3"] = <
-				text = <"Temperature">
-				description = <"Temperature">
-			>
 		>
 	>
 	term_bindings = <
 		["openehr"] = <
 			["at1"] = <http://openehr.org/id/127>
-			["at2"] = <http://openehr.org/id/127>
-			["at3"] = <http://openehr.org/id/127>
 		>
 	>
