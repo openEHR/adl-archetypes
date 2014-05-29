@@ -1,0 +1,317 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.specimen.v1
+
+concept
+	[at0000]	-- Specimen
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Grahame Grieve">
+		["organisation"] = <"Health Intersections P/L">
+		["email"] = <"grahame@healthintersections.com.au">
+		["date"] = <"27/06/2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details of a laboratory specimen, to supplement the information provided in an Pathology related Instruction, Action, or Observation. 
+">
+			use = <"The specimen archetype must be used within a entry archetype to which provides the context for the test order (Instruction), collection (Action), and the test report (Observation). 
+
+The specimen may either be a solid tissue excision, or a sampling of some fluid from within the organism. 
+
+By definition, a specimen can only be contained by one container - splitting a single \"sample\" across multiple containers creates multiple specimens. If the specimens are solid, a single container may contain multiple different specimens, and each will have it's own specimen archetype instance.">
+			keywords = <"specimen", "laboratory", "sample", "collection">
+			misuse = <"The specimen archetype is only for specimens extracted from individual living organisms; it is not used for specimens extracted from care provision devices etc. 
+
+The specimen details do not include the state of the individual from which specimen was taken (fasting, pre-dose, sitting, exercising etc); these must be specified in the Entry archetypes.
+
+The specimen archetype is only suitable for use with single specimens; a different archetype is be used for describing collections of specimens.
+
+The specimen archetype does not cover the laboratory processes for handling and reporting on a specimen. ">
+			copyright = <"© 2011 NEHTA">
+		>
+	>
+	lifecycle_state = <"Candidate">
+	other_contributors = <"Koray Atalag, University of Auckland, NZ", "Stephen Chu, NEHTA, Australia (Editor)", "Grahame Grieve, Health Intersections Pyty Ltd, Australia (Editor)", "Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, UK">
+	other_details = <
+		["references"] = <"Specimen, draft archetype, openEHR Foundation. “www.openEHR.org/knowledge.” openEHR Clinical Knowledge Manager. Authored: 27/01/2009. http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.331_8(accessed Jun 27, 2011).
+
+ANSI/HL7 2.6-2007: Chapter 7, HL7 v2.6 specifications - Final Standard. Health Level 7, Ann Arbour, Missouri.">
+		["MD5-CAM-1.0.1"] = <"67B1CE92FA4D592ABE080B661439C484">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Specimen
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0003] matches {	-- Specimen Type
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0019] occurrences matches {0..1} matches {	-- Date/Time of Collection
+				value matches {
+					DV_DATE_TIME matches {
+						value matches {yyyy-mm-ddTHH:MM:SS}
+					}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {	-- Collection Method
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0023] occurrences matches {0..1} matches {	-- Collection Description
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0007] occurrences matches {0..*} matches {	-- Collection Site
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1/}
+			}
+			allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {	-- Volume / Dimensions
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties_n(-[a-zA-Z0-9_]+)*\.v1/}
+			}
+			ELEMENT[at0013] occurrences matches {0..1} matches {	-- Sequence Number
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Preservative
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0018] occurrences matches {0..1} matches {	-- Specimen Handling Risk
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0017] occurrences matches {0..*} matches {	-- Transport Special Handling
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0034, 	-- Body temperature
+							at0035, 	-- Ambient temperature
+							at0036, 	-- Refrigerated temperature
+							at0037, 	-- Frozen temperature
+							at0038, 	-- Deep frozen
+							at0039, 	-- Ultra frozen
+							at0040, 	-- Liquid nitrogen
+							at0041, 	-- Protect from light
+							at0042, 	-- Protect from air
+							at0043, 	-- Dry
+							at0044, 	-- No shock
+							at0045, 	-- Do not shake
+							at0046, 	-- Upright
+							at0047]	-- Metal Free
+						}
+					}
+				}
+			}
+			ELEMENT[at0014] occurrences matches {0..1} matches {	-- Biopsy Core Needle Gauge
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0015] occurrences matches {0..1} matches {	-- Biopsy core length
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::122]>
+						list = <
+							["1"] = <
+								units = <"mm">
+							>
+							["2"] = <
+								units = <"micron">
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0016] occurrences matches {0..1} matches {	-- Biopsy Needle Entry Point
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- Specimen Identifier
+				value matches {
+					DV_IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Container Identifier
+				value matches {
+					DV_IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {	-- Extracted from Specimen Identifier
+				value matches {
+					DV_IDENTIFIER matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Specimen">
+					description = <"Tissue or fluid that is removed from a patient for subsequent testing in a laboratory.">
+				>
+				["at0001"] = <
+					text = <"Specimen Identifier">
+					description = <"The identifier for the specimen.">
+				>
+				["at0002"] = <
+					text = <"Container Identifier">
+					description = <"The identifier of the container that contains the specimen">
+					comment = <"
+
+In some cases, it is ambiguous whether the identifier belongs to the container or the specimen, since it is assigned after the specimen is placed in the container, and they are never parted. If the identifier is assigned to the container prior to it's selection for the specimen, then it is a container identifier. If consideration of the workflows associated with multiple solid specimens in a container doesn't indicate that the identifier is a container identifier, it should be considered to be a specimen identifier.">
+				>
+				["at0003"] = <
+					text = <"Specimen Type">
+					description = <"The type of the specimen. ">
+					comment = <"Type allows for fluid types such as blood as well as tissue types such as liver or a particular tumour.
+
+The type may include information about method or collection site. 
+
+Examples include Blood, Venous Blood, Arterial Blood, Mid-stream Urine, Clean catch urine, Deep Cough Sputum. ">
+				>
+				["at0004"] = <
+					text = <"Preservative">
+					description = <"The kind of preservative used for the specimen. Coding of the Preservative with a terminology is desirable, where possible.">
+					comment = <"Examples include Heparin, EDTA, Formalin, etc. Coding of the Preservative with a terminology is desirable, where possible.">
+				>
+				["at0005"] = <
+					text = <"Collection Method">
+					description = <"The name of the method for collecting the specimen. Coding of the Collection Method with a terminology is desirable, where possible.">
+					comment = <"The particular method may fix the values of some or many of the other properties of the specimen (type, preservative, collection site, etc). Where these are fixed by the method, they do not need to be represented explicitly in the data, though making them explicit may be useful for downstream processing where the method is not recognised. Coding of the Collection Method with a terminology is desirable, where possible.">
+					coding_preferred = <"true">
+				>
+				["at0007"] = <
+					text = <"Collection Site">
+					description = <"The specific site for the collecition, if not specified in the method or implied by the tissue type. May be general (such as \"Sub-Mandibular\" or \"central line\") or quite specific for swabs or excisions.">
+				>
+				["at0009"] = <
+					text = <"Volume / Dimensions">
+					description = <"The volume or dimensions of the specimen. For fluid specimens, only the volume should be used. Note that for solid specimens, which dimensions are length/breadth/depth is often arbitrary. For an instruction, it would be usual to specify a diameter as an approximate guide to expected size.">
+				>
+				["at0011"] = <
+					text = <"Extracted from Specimen Identifier">
+					description = <"The identifier of the source specimen or group of specimens from which this specimen is to be or was extracted.">
+					comment = <"Specimens are often derived from another specimen or a collection of specimens (by separating, splitting, cutting, aliquotting etc). This field identifies the other specimen from which this was derived (sometimes also called the \"parent specimen\"). If this field is missing, then this specimen is the original source specimen. 
+
+Note that the primary use of this attribute is within the lab, but there are cases where the derivation of the specimen occurs intra-operation etc. 
+
+">
+				>
+				["at0013"] = <
+					text = <"Sequence Number">
+					description = <"Where this specimen occurs in the sequence of specimens collected.">
+					comment = <"Examples include the sequence number in a CSF collection where the different specimens are used for different tests. ">
+				>
+				["at0014"] = <
+					text = <"Biopsy Core Needle Gauge">
+					description = <"The diameter of the core obtained via needle biopsy expressed using the needle gauge used to take the specimen.">
+				>
+				["at0015"] = <
+					text = <"Biopsy core length">
+					description = <"The length of the core obtained by needle biopsy.">
+				>
+				["at0016"] = <
+					text = <"Biopsy Needle Entry Point">
+					description = <"The entry point for the biopsy needle">
+				>
+				["at0017"] = <
+					text = <"Transport Special Handling">
+					description = <"Any special handling for the specimen.">
+					comment = <"Values from HL7 v2 Table 0376 are recommended where applicable.">
+				>
+				["at0018"] = <
+					text = <"Specimen Handling Risk">
+					description = <"Details of any special risks associated with handling the specimen (i.e .patient has communicable disease).">
+					comment = <"Note that by default, there are risks associated with handling any bioloigcal specimens. The lack of any details in this field does not imply that there are no risks associated with handling the specimen.">
+				>
+				["at0019"] = <
+					text = <"Date/Time of Collection">
+					description = <"The collection date and time of the specimen.">
+					comment = <"Note that this is information that is potentially duplicated from the Action archetype that records the collection of the specimen, but very frequently the detail of this Action record is not available when handling the specimen. For consistency, this information should be recorded here even when it is also recorded in an Action.
+
+ 
+Within the context of an Instruction, the date/time of collection is optional and may be used to indicate when collection should occur. When used in an Action, or an Observation, the date and time is mandatory. 
+
+
+
+If the specimen is derived from another, this is still the date and time of the original collection, since this is the biologically relevant time. ">
+				>
+				["at0023"] = <
+					text = <"Collection Description">
+					description = <"Narrative description of the Collection Method.">
+				>
+				["at0034"] = <
+					text = <"Body temperature">
+					description = <"Critical to keep at body temperature: 36 - 38° C.">
+				>
+				["at0035"] = <
+					text = <"Ambient temperature">
+					description = <"Keep at ambient (room) temperature, approximately 22 ± 2 degrees C.">
+				>
+				["at0036"] = <
+					text = <"Refrigerated temperature">
+					description = <"Keep at refrigerated temperature: 4-8° C.">
+				>
+				["at0037"] = <
+					text = <"Frozen temperature">
+					description = <"Keep at frozen temperature: -4° C.">
+				>
+				["at0038"] = <
+					text = <"Deep frozen">
+					description = <"Deep frozen: -16 to -20° C.">
+				>
+				["at0039"] = <
+					text = <"Ultra frozen">
+					description = <"Ultra cold frozen: ~ -75 to -85° C. (ultra cold freezer is typically at temperature of dry ice).">
+				>
+				["at0040"] = <
+					text = <"Liquid nitrogen">
+					description = <"Keep in liquid nitrogen.">
+				>
+				["at0041"] = <
+					text = <"Protect from light">
+					description = <"Protect from light (e.g., wrap in aluminum foil).">
+				>
+				["at0042"] = <
+					text = <"Protect from air">
+					description = <"Critical. Do not expose to atmosphere. Do not uncap.">
+				>
+				["at0043"] = <
+					text = <"Dry">
+					description = <"Keep in a dry environment.">
+				>
+				["at0044"] = <
+					text = <"No shock">
+					description = <"Protect from shock.">
+				>
+				["at0045"] = <
+					text = <"Do not shake">
+					description = <"Do not shake.">
+				>
+				["at0046"] = <
+					text = <"Upright">
+					description = <"Keep upright. Do not turn upside down.">
+				>
+				["at0047"] = <
+					text = <"Metal Free">
+					description = <"Container is free of heavy metals including lead.">
+				>
+			>
+		>
+	>

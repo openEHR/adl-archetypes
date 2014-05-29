@@ -1,0 +1,96 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-ADMIN_ENTRY.medicare_dva_services.v1
+
+concept
+	[at0000]	-- Medicare/DVA Services
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2011-09-30">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To provide information held by Medicare Australia about Medicare and DVA funded services provided to an individual.">
+			use = <"Use to display or share information about Medicare and DVA funded services provided to an individual for use in the PCEHR and related applications.">
+			keywords = <"medicare", "DVA", "services", "hospical">
+			misuse = <"">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Stephen Chu, NEHTA, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Kate Lazarenko, NEHTA, Australia", "Richard Townley-O'Neill, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"9B3AB45579DDCB78E9A04E3005DDD869">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {	-- Medicare/DVA Services
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Date of Service
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Medicare MBS Item
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Service in Hospital Indicator
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+						null_flavour existence matches {0..1} matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[openehr::273]}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Medicare/DVA Services">
+					description = <"Information held by Medicare Australia about Medicare and DVA funded services provided to an individual.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Date of Service">
+					description = <"The recorded date the service was supplied.">
+				>
+				["at0003"] = <
+					text = <"Service in Hospital Indicator">
+					description = <"Indicator to show if the service was provided in a hospital.">
+					comment = <"True, if the Service was provided in a hospital.
+
+ The 'Service in Hospital Indicator' field doesn't exist for DVA Allied Health and Hospital items. 
+
+For items where this field is not available, the value should be set to N/A">
+				>
+				["at0004"] = <
+					text = <"Medicare MBS Item">
+					description = <"The Medicare item number & short description of the service provided.">
+					comment = <"This data element will be coded and derived from the Medicare or DVA benefits schedules.">
+				>
+			>
+		>
+	>

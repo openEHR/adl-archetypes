@@ -1,0 +1,45 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-SECTION.adhoc.v1
+
+concept
+	[at0000]	-- Adhoc Heading
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"2010-03-17">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"A generic section header which is normally renamed locally at template level.">
+			use = <"To construct and name a section within a local template.">
+			misuse = <"">
+			copyright = <"© openEHR">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["MD5-CAM-1.0.1"] = <"8B8435D0AFF357E409EACE30FC6408E0">
+	>
+
+definition
+	SECTION[at0000] matches {*}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Adhoc Heading">
+					description = <"A generic heading for contextual renaming within a template.">
+				>
+			>
+		>
+	>

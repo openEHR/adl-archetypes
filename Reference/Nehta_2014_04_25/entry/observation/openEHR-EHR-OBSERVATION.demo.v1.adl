@@ -1,0 +1,569 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.demo.v1
+
+concept
+	[at0000]	-- Demonstration
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2008-12-23">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To provide an overview of the display of each of the datatypes available in an openEHR archetype, and of the Data, State, Event and Protocol models within the context of a HTML display and associated ADL.">
+			use = <"To provide a visual overview of archetype data types and archetype components to potential and current clinical content reviewers in the openEHR Clinical Knowledge Manager.">
+			keywords = <"demonstration", "test", "prototype", "datatypes", "state", "protocol", "event", "data">
+			misuse = <"Not to carry any real clinical data.">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"Published">
+	other_contributors = <"Individual A, Argentina", "Individual B, Belgium", "Individual C, Canada (Editor)">
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"openEHR website:  http://www.openehr.org/home.html
+CKM:  http://www.openehr.org/knowledge/">
+		["MD5-CAM-1.0.1"] = <"AEA1AE0BC2466A2D122B5A13AC957AB3">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Demonstration
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any Event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0032] occurrences matches {0..1} matches {*}
+									CLUSTER[at0004] occurrences matches {0..*} matches {	-- Heading1
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0005] occurrences matches {0..1} matches {	-- Free Text or Coded
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0006] occurrences matches {0..*} matches {	-- Text That Uses Internal Codes
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0007, 	-- Lying
+															at0008, 	-- Reclining
+															at0009, 	-- Sitting
+															at0010]	-- Standing
+														}
+													}
+												}
+											}
+											ELEMENT[at0011] matches {	-- Text That is Sourced From an External Terminology
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {[ac0001]}		-- SubsetA
+													}
+												}
+											}
+											ELEMENT[at0012] occurrences matches {0..1} matches {	-- Quantity
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"cm">
+																magnitude = <|0.0..100.0|>
+																precision = <|1|>
+															>
+															["2"] = <
+																units = <"mm">
+															>
+															["3"] = <
+																units = <"in">
+															>
+															["4"] = <
+																units = <"ft">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0023] occurrences matches {0..1} matches {	-- Interval of Quantity
+												value matches {
+													DV_INTERVAL<DV_QUANTITY> matches {
+														upper matches {
+															C_DV_QUANTITY <
+																property = <[openehr::122]>
+																list = <
+																	["1"] = <
+																		units = <"cm">
+																	>
+																	["2"] = <
+																		units = <"m">
+																	>
+																	["3"] = <
+																		units = <"in">
+																	>
+																	["4"] = <
+																		units = <"ft">
+																	>
+																>
+															>
+														}
+														lower matches {
+															C_DV_QUANTITY <
+																property = <[openehr::122]>
+																list = <
+																	["1"] = <
+																		units = <"cm">
+																	>
+																	["2"] = <
+																		units = <"m">
+																	>
+																	["3"] = <
+																		units = <"in">
+																	>
+																	["4"] = <
+																		units = <"ft">
+																	>
+																>
+															>
+														}
+													}
+												}
+											}
+											ELEMENT[at0013] occurrences matches {0..1} matches {	-- Count
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|>=0|}
+													}
+												}
+											}
+											ELEMENT[at0022] occurrences matches {0..1} matches {	-- Interval of Integer
+												value matches {
+													DV_INTERVAL<DV_COUNT> matches {
+														upper matches {
+															DV_COUNT matches {*}
+														}
+														lower matches {
+															DV_COUNT matches {*}
+														}
+													}
+												}
+											}
+											ELEMENT[at0028] occurrences matches {0..1} matches {	-- Proportion
+												value matches {
+													DV_PROPORTION matches {
+														is_integral matches {True}
+														type matches {0, 2, 3, 4}
+													}
+												}
+											}
+											ELEMENT[at0014] occurrences matches {0..1} matches {	-- Date/Time
+												value matches {
+													DV_DATE_TIME matches {*}
+												}
+											}
+											ELEMENT[at0024] occurrences matches {0..1} matches {	-- Interval of Date
+												value matches {
+													DV_INTERVAL<DV_DATE_TIME> matches {
+														upper matches {
+															DV_DATE_TIME matches {*}
+														}
+														lower matches {
+															DV_DATE_TIME matches {*}
+														}
+													}
+												}
+											}
+											ELEMENT[at0021] occurrences matches {0..1} matches {	-- Duration
+												value matches {
+													DV_DURATION matches {*}
+												}
+											}
+											ELEMENT[at0015] occurrences matches {0..1} matches {	-- Ordinal
+												value matches {
+													0|[local::at0038], 	-- No pain
+													1|[local::at0039], 	-- Slight pain
+													2|[local::at0040], 	-- Mild pain
+													5|[local::at0041], 	-- Moderate pain
+													9|[local::at0042], 	-- Severe pain
+													10|[local::at0043]  	-- Most severe pain imaginable
+												}
+											}
+											ELEMENT[at0016] occurrences matches {0..1} matches {	-- Boolean
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+												null_flavour existence matches {0..1} matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[openehr::
+															271, 
+															272, 
+															273, 
+															253]
+														}
+													}
+												}
+											}
+											ELEMENT[at0017] occurrences matches {0..1} matches {*}
+											ELEMENT[at0025] occurrences matches {0..1} matches {	-- Choice
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::124]>
+														list = <
+															["1"] = <
+																units = <"gm">
+															>
+															["2"] = <
+																units = <"oz(avdp)">
+															>
+														>
+													>
+													DV_CODED_TEXT matches {
+														defining_code matches {[ac0003]}		-- SubsetB
+													}
+												}
+											}
+											ELEMENT[at0026] occurrences matches {0..1} matches {	-- Multimedia
+												value matches {
+													DV_MULTIMEDIA matches {
+														media_type matches {
+															[openEHR::
+															387, 
+															388, 
+															389, 
+															390, 
+															391, 
+															392, 
+															393, 
+															394, 
+															395, 
+															396, 
+															397, 
+															398, 
+															399, 
+															400, 
+															409, 
+															410, 
+															411, 
+															412, 
+															413, 
+															425, 
+															426, 
+															427, 
+															428, 
+															429, 
+															415, 
+															416, 
+															417, 
+															418, 
+															419, 
+															420, 
+															421, 
+															422, 
+															423, 
+															424, 
+															401, 
+															402, 
+															404, 
+															405, 
+															406, 
+															407, 
+															414, 
+															517, 
+															518, 
+															519, 
+															637]
+														}
+													}
+												}
+											}
+											ELEMENT[at0027] occurrences matches {0..1} matches {	-- URI - resource identifier
+												value matches {
+													DV_URI matches {*}
+												}
+											}
+											ELEMENT[at0044] occurrences matches {0..1} matches {	-- Identifier
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+										}
+									}
+									CLUSTER[at0018] occurrences matches {0..1} matches {	-- Heading 2
+										items cardinality matches {1..*; unordered} matches {
+											allow_archetype CLUSTER[at0019] occurrences matches {0..*} matches {	-- Slot To Contain Other Cluster Archetypes
+												include
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.device\.v1/}
+											}
+											allow_archetype ELEMENT[at0020] occurrences matches {0..*} matches {	-- Slot To Contain Other Element Archetypes
+												include
+													archetype_id/value matches {/openEHR-EHR-ELEMENT\.ctg_codes\.v1/}
+												exclude
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[at0030] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0031] occurrences matches {0..1} matches {*}
+								}
+							}
+						}
+					}
+					POINT_EVENT[at0033] occurrences matches {0..1} matches {	-- Named Point In Time
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any Event]/data[Tree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/state[at0030]	-- /data[Event Series]/events[Any Event]/state[Tree]
+						}
+					}
+					INTERVAL_EVENT[at0034] occurrences matches {0..1} matches {	-- Named Interval
+						math_function matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[openehr::147]}
+							}
+						}
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any Event]/data[Tree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/state[at0030]	-- /data[Event Series]/events[Any Event]/state[Tree]
+						}
+					}
+					POINT_EVENT[at0035] occurrences matches {0..1} matches {	-- Offset Point In Time
+						offset matches {
+							DV_DURATION matches {
+								value matches {|PT5M|}
+							}
+						}
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]	-- /data[Event Series]/events[Any Event]/data[Tree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/state[at0030]	-- /data[Event Series]/events[Any Event]/state[Tree]
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0036] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0037] occurrences matches {0..1} matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	terminologies_available = <"SNOMED-CT", ...>
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Demonstration">
+					description = <"Demonstration archetype with descriptions and explanations.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any Event">
+					description = <"All archetypes of the OBSERVATION class contain a HISTORY or EVENT model which contains information about the timing of the observation and the 'width' of the information - either a point in time or an interval.  The default is 'Any event' and it is not specified if this is a Point in time or an Interval.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Heading1">
+					description = <"This is a symbol for a cluster which can have other elements 'nested' within it.">
+				>
+				["at0005"] = <
+					text = <"Free Text or Coded">
+					description = <"Text data type in which free text can be entered or coding can be incorporated either in the template or at run time.">
+				>
+				["at0006"] = <
+					text = <"Text That Uses Internal Codes">
+					description = <"Text data type which can use an internal vocabulary.  Each of these 'internal codes' can be bound to a terminology code.">
+				>
+				["at0007"] = <
+					text = <"Lying">
+					description = <"Patient is lying supine.">
+				>
+				["at0008"] = <
+					text = <"Reclining">
+					description = <"Patient is reclining, propped up on one medium pillow.">
+				>
+				["at0009"] = <
+					text = <"Sitting">
+					description = <"Patient is sitting on a chair.">
+				>
+				["at0010"] = <
+					text = <"Standing">
+					description = <"Patient is standing.">
+				>
+				["at0011"] = <
+					text = <"Text That is Sourced From an External Terminology">
+					description = <"Text data type utilising codes derived from an external terminology source eg a SNOMED-CT, LOINC or ICD subset.">
+				>
+				["at0012"] = <
+					text = <"Quantity">
+					description = <"A quantity data type used to record a measurement associated with its' appropriate units.  These are derived from ISO standards and the Reference model enables conversion between these units. The example shown here is length.">
+				>
+				["at0013"] = <
+					text = <"Count">
+					description = <"Count data types are composed of an integer with no units eg for recording the number of children - in this example the minimum is set at 0 and the maximum not specified.">
+				>
+				["at0014"] = <
+					text = <"Date/Time">
+					description = <"Date/Time datatype allows recording of a date and/or time, including partial dates such as year only or month and year only.  Allow all is the default - so all forms of date/time are permitted.">
+				>
+				["at0015"] = <
+					text = <"Ordinal">
+					description = <"Ordinal datatypes pair a number and text - in this way scores can be calculated in software, or progression can be assessed eg if used in a pain score.">
+				>
+				["at0016"] = <
+					text = <"Boolean">
+					description = <"Boolean datatype that allows for true or false answers.">
+				>
+				["at0017"] = <
+					text = <"Any">
+					description = <"The datatype for this 'any' element can be specified or constrained in a template or at run-time, but is not explicitly modelled in the archetype.">
+				>
+				["at0018"] = <
+					text = <"Heading 2">
+					description = <"This is a symbol for a cluster which can have other elements 'nested' within it.">
+				>
+				["at0019"] = <
+					text = <"Slot To Contain Other Cluster Archetypes">
+					description = <"List of CLUSTER archetypes allowed to be included or excluded within this OBSERVATION archetype.">
+				>
+				["at0020"] = <
+					text = <"Slot To Contain Other Element Archetypes">
+					description = <"List of ELEMENT archetypes allowed to be included or excluded within this OBSERVATION archetype.">
+				>
+				["at0021"] = <
+					text = <"Duration">
+					description = <"Duration datatype allows recording of the duration of clinical concepts.  'Allow all time units' is the default, although specific time units can be explicitly modelled.  Maximum and minum values can be set for each time unit.">
+				>
+				["at0022"] = <
+					text = <"Interval of Integer">
+					description = <"Interval of integer datatype allows for recording of a range of counts eg 1-2 tablets prescribed.  Maximum and minimum values can be set for the lower count and the upper count.">
+				>
+				["at0023"] = <
+					text = <"Interval of Quantity">
+					description = <"Interval of quantity datatypes allow for the recording of a range of measurements in association with appropriate units eg 1-2cm (prescribed amount of cream for a rash).">
+				>
+				["at0024"] = <
+					text = <"Interval of Date">
+					description = <"Interval of integer datatype allows for recording of a range of dates eg between September 1, 2008 and September 8, 2008.">
+				>
+				["at0025"] = <
+					text = <"Choice">
+					description = <"Choice datatype allows for a number of types of element to be specified simultaneously and which can constrained or selected within a template or at run-time.  In this example, a text datatype set to Free text or Coded and another that is constrained to Terminology record data about the same data element.">
+				>
+				["at0026"] = <
+					text = <"Multimedia">
+					description = <"Multimedia datatypes allow for the recording of many types of multimedia files to be captured.  All available types have been explicitly selected in this example.">
+				>
+				["at0027"] = <
+					text = <"URI - resource identifier">
+					description = <"URI datatypes allow for recording of relationships from this data to data recorded elsewhere.  These links can be within the same EHR, or external eg to a  URL.">
+				>
+				["at0028"] = <
+					text = <"Proportion">
+					description = <"Proportion datatypes allow for ratios, percent, fractions and proportions to be modelled.">
+				>
+				["at0030"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0031"] = <
+					text = <"State - Definition">
+					description = <"All archetypes of the OBSERVATION class can  contain a STATE model which contains information about the subject of data at the time the information was collected, and this information is required for safe clinical interpretation of the core information. An example is the position of the patient at the time of measuring a blood pressure.  Datatypes are identical to those explained in the Data model, above.">
+				>
+				["at0032"] = <
+					text = <"Data - Definition">
+					description = <"All archetypes of the OBSERVATION class contain a DATA model  which contains the core information e.g. the systolic and diastolic pressures when measuring a blood pressure.">
+				>
+				["at0033"] = <
+					text = <"Named Point In Time">
+					description = <"An event that is both named (eg Birth) and constrained as a Point in time event records the data elements in relation to a specified point in time eg Weight at Birth.">
+				>
+				["at0034"] = <
+					text = <"Named Interval">
+					description = <"An event that is both named and constrained as an Interval event records the data elements in relation to a period of time eg Weight Loss over time.  The interval can be fixed or left unspecified.  In addition there are mathematical functions that can be specified to capture concepts such as change, decrease, increase, maximum, minimum, mean etc.">
+				>
+				["at0035"] = <
+					text = <"Offset Point In Time">
+					description = <"Offset Point in time records data at a point in time with a fixed offset of 5 minutes from another specified event eg recording a 2 minute Apgar reading at 2 minutes offset from Birth.">
+				>
+				["at0036"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0037"] = <
+					text = <"Protocol - Definition">
+					description = <"All archetypes of the OBSERVATION class can contain a PROTOCOL model which records information on how the information was gathered or measured, and any other information that is not required for safe clinical interpretation of the core Data. Datatypes are identical to those explained in the Data model, above.">
+				>
+				["at0038"] = <
+					text = <"No pain">
+					description = <"No pain at all.">
+				>
+				["at0039"] = <
+					text = <"Slight pain">
+					description = <"Pain level rated as 1 out of a possible maximum score of 10.">
+				>
+				["at0040"] = <
+					text = <"Mild pain">
+					description = <"Pain level rated as 2 out of a possible maximum score of 10.">
+				>
+				["at0041"] = <
+					text = <"Moderate pain">
+					description = <"Pain level rated as 5 out of a possible maximum score of 10.">
+				>
+				["at0042"] = <
+					text = <"Severe pain">
+					description = <"Pain level rated as 9 out of a possible maximum score of 10.">
+				>
+				["at0043"] = <
+					text = <"Most severe pain imaginable">
+					description = <"Pain level rated as 10 out of a possible maximum score of 10.">
+				>
+				["at0044"] = <
+					text = <"Identifier">
+					description = <"Identifier datatypes enable recording of formal data identifiers.">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["en"] = <
+			items = <
+				["ac0001"] = <
+					text = <"SubsetA">
+					description = <"Terminology subset derived from XXX">
+				>
+				["ac0003"] = <
+					text = <"SubsetB">
+					description = <"XYZ codes from Terminology 123">
+				>
+			>
+		>
+	>

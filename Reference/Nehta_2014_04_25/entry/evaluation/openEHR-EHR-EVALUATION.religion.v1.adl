@@ -1,0 +1,75 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.religion.v1
+
+concept
+	[at0000]	-- Religion
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"17/12/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record information about an individual's religious and spiritual attitudes, beliefs or practice.">
+			use = <"Use to record information about an individual's religious and/or spiritual beliefs.
+<NOTE: This archetype is expected to develop further and grow over time>.">
+			keywords = <"religion", "spiritual", "belief", "religious">
+			misuse = <"">
+			copyright = <"© 2010 NEHTA">
+		>
+	>
+	lifecycle_state = <"CommitteeDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"ED7CA33D4079CE349BE813062A281FB8">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Religion
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Religious affiliation
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Religion">
+					description = <"Personal set of attitudes, beliefs or practices concerning the cause, nature, and purpose of life and the universe, or a relationship to that which they regard as holy, sacred, spiritual, or divine.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Religious affiliation">
+					description = <"Name of the religious or spiritual belief or practice to which the individual identifies or is affiliated. Coding with a terminology is desirable, where possible.">
+				>
+				["at0003"] = <
+					text = <"Comment">
+					description = <"Comment about the individual's religious beliefs.">
+				>
+			>
+		>
+	>

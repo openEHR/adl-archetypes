@@ -1,0 +1,781 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-ITEM_TREE.therapeutic_good_use.v2
+
+concept
+	[at0000]	-- Therapeutic Good Use
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+		["organisation"] = <"NEHTA">
+		["email"] = <"clinicalinfo@nehta.gov.au">
+		["date"] = <"16-Jul-2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Details of a therapeutic good with its use by a subject of care, and related information.">
+			use = <"">
+			keywords = <"Medication Item", "Prescribed Item Detail", "Dispensed Item Detail">
+			misuse = <"Not for recording stock on hand of a therapeutic good.">
+			copyright = <"© 2010 National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"Published">
+	other_contributors = <"Eric Browne", "Stephen Chu", "Eleanor Royle", "Ning Pan", "Robert L'egan", "Don Stewart", "Stephen Royce">
+	other_details = <
+		["references"] = <"">
+		["base_exist_collection"] = <"/db/nehta/ndsm/dev/data/item_detail/v6_2/draft_022">
+	>
+
+definition
+	ITEM_TREE[at0000] matches {	-- Therapeutic Good Use
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0015] occurrences matches {0..1} matches {	-- Prescription Item Identifier
+				value matches {
+					DV_IDENTIFIER matches {
+						issuer matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[at0001] matches {	-- Therapeutic Good Identification
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[ac0001]}
+					}
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0046] occurrences matches {0..1} matches {	-- Formula
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0027] occurrences matches {0..1} matches {	-- Batch Identifier
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0045] occurrences matches {0..1} matches {	-- DateTime of Expiry
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0044] occurrences matches {0..1} matches {	-- Serial Number
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			CLUSTER[at0002] occurrences matches {0..1} matches {	-- Dosage
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0003] matches {	-- Dose Instruction
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0004] occurrences matches {0..1} matches {	-- Dose Detail
+						items cardinality matches {3..*; unordered} matches {
+							ELEMENT[at0005] matches {	-- Dose Quantity
+								value matches {
+									DV_INTERVAL<DV_QUANTITY> matches {
+										upper matches {
+											C_DV_QUANTITY <
+											>}
+										lower matches {
+											C_DV_QUANTITY <
+											>}
+									}
+									C_DV_QUANTITY <
+									>
+								}
+							}
+							ELEMENT[at0006] matches {	-- Frequency
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {[ac0002]}
+									}
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0007] occurrences matches {0..*} matches {	-- Frequency Qualifier
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {[ac0003]}
+									}
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0008] occurrences matches {1..*} matches {	-- Route of Administration
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {[ac0004]}
+									}
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0009] occurrences matches {0..*} matches {	-- Site of Administration
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {[ac0005]}
+									}
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Additional Dose Instruction
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			ELEMENT[at0047] occurrences matches {0..1} matches {	-- Instructions for Use
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {	-- Quantity of Therapeutic Good
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			CLUSTER[at0012] occurrences matches {0..1} matches {	-- Quantity of Therapeutic Good Detail
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0013] occurrences matches {0..1} matches {	-- Strength
+						value matches {
+							C_DV_QUANTITY <
+							>}
+					}
+					ELEMENT[at0014] matches {	-- Quantity
+						value matches {
+							C_DV_QUANTITY <
+							>}
+					}
+				}
+			}
+			ELEMENT[at0017] occurrences matches {0..1} matches {	-- Brand Substitute Allowed
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {true, false}
+					}
+				}
+			}
+			ELEMENT[at0022] occurrences matches {0..1} matches {	-- Brand Substitution Occurred
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {true, false}
+					}
+				}
+			}
+			ELEMENT[at0018] occurrences matches {0..1} matches {	-- Maximum Number of Repeats
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0019] occurrences matches {0..1} matches {	-- Minimum Interval Between Repeats
+				value matches {
+					DV_DURATION matches {*}
+				}
+			}
+			ELEMENT[at0024] occurrences matches {0..1} matches {	-- Number of this Dispense
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0025] occurrences matches {0..1} matches {	-- Claim Category Type
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[ac0006]}
+					}
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0026] occurrences matches {0..1} matches {	-- Label Instruction
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0028] occurrences matches {0..1} matches {	-- Medical Benefit Category Type
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[ac0007]}
+					}
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {	-- Early Supply with Pharmaceutical Benefit
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {true, false}
+					}
+				}
+			}
+			ELEMENT[at0029] occurrences matches {0..1} matches {	-- Grounds for Concurrent Supply
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[ac0008]}
+					}
+				}
+			}
+			ELEMENT[at0030] occurrences matches {0..1} matches {	-- PBS/RPBS Authority Approval Number
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0031] occurrences matches {0..1} matches {	-- State Authority Number
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0040] occurrences matches {0..1} matches {	-- Reason for Therapeutic Good
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0032] occurrences matches {0..1} matches {	-- Medication Item Reviewer
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.participation\.v3/}
+				exclude
+					archetype_id/value matches {/.*/}
+			}
+			ELEMENT[at0033] occurrences matches {0..1} matches {	-- Additional Comments
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			CLUSTER[at0034] occurrences matches {0..1} matches {	-- Therapeutic Good Use History
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0035] occurrences matches {0..1} matches {	-- Item Status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[ac0009]}
+							}
+						}
+					}
+					CLUSTER[at0036] occurrences matches {0..1} matches {	-- Change Detail
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0037] matches {	-- Changes Made
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {[ac0010]}
+									}
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0038] occurrences matches {0..1} matches {	-- Follow Up Required
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0039] occurrences matches {0..1} matches {	-- Reason for Change
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0041] occurrences matches {0..1} matches {	-- Medication Duration
+						value matches {
+							DV_DURATION matches {*}
+							DV_INTERVAL<DV_DATE_TIME> matches {
+								upper matches {
+									DV_DATE_TIME matches {*}
+								}
+								lower matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+			ELEMENT[at0042] occurrences matches {0..1} matches {	-- Delivery Compliance Aid Description
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[ac0011]}
+					}
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0043] occurrences matches {0..*} matches {	-- Cautionary Advice
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[ac0012]}
+					}
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Therapeutic Good Use">
+					description = <"Details of a therapeutic good with its use by a subject of care, and related information.">
+					status = <"Published">
+					dc_id = <"10120">
+					detail_docref = <"data_groups/NEHTA-10120-Therapeutic_Good_Use-Data_Group.xml">
+					spec_id = <"32">
+					version = <"2.0">
+				>
+				["at0001"] = <
+					text = <"Therapeutic Good Identification">
+					description = <"Identifies a therapeutic good, which is broadly defined as a good which is represented in any way to be, or is likely to be taken to be, for therapeutic use (unless specifically excluded or included under Section 7 of the Therapeutic Goods Act 1989).  Therapeutic use means use in or in connection with: preventing, diagnosing, curing or alleviating a disease, ailment, defect or injury; influencing, inhibiting or modifying a physiological process; testing the susceptibility of persons to a disease or ailment; influencing, controlling or preventing conception; testing for pregnancy; or replacement or modification of parts of the anatomy.">
+					status = <"Published">
+					dc_id = <"10194">
+					detail_docref = <"data_elements/NEHTA-10194-Therapeutic_Good_Identification-Data_Element.xml">
+					version = <"3.0">
+				>
+				["at0002"] = <
+					text = <"Dosage">
+					description = <"The regimen governing the amount (in a single administration, i.e.  dose quantity), the frequency, the route, and the number of doses of a therapeutic agent to be administered to a subject of care.">
+					status = <"Published">
+					dc_id = <"16007">
+					detail_docref = <"data_groups/NEHTA-16007-Dosage-Data_Group.xml">
+					version = <"1.0">
+				>
+				["at0003"] = <
+					text = <"Dose Instruction">
+					description = <"A description of the dose quantity, frequency, route instruction and cautionary advice that determines how the prescribed therapeutic substance is administered to, or taken by, the subject of care.">
+					status = <"Published">
+					dc_id = <"16008">
+					detail_docref = <"data_elements/NEHTA-16008-Dose_Instruction-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0004"] = <
+					text = <"Dose Detail">
+					description = <"Provides an atomic representation of how a particular therapeutic good is being taken, or is intended to be taken, by the subject of care (patient).  This description must include the route, dose quantity, frequency and any additional instructions required to safely describe the appropriate dosage.  This should also include the administration schedule.">
+					status = <"Published">
+					dc_id = <"16043">
+					detail_docref = <"data_groups/NEHTA-16043-Dose_Detail-Data_Group.xml">
+					version = <"1.0">
+				>
+				["at0005"] = <
+					text = <"Dose Quantity">
+					description = <"The amount of therapeutic good to be taken/administered at one time.">
+					status = <"Published">
+					dc_id = <"10152">
+					detail_docref = <"data_elements/NEHTA-10152-Dose_Quantity-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0006"] = <
+					text = <"Frequency">
+					description = <"How often the therapeutic good has to be taken/administered.">
+					status = <"Published">
+					dc_id = <"10153">
+					detail_docref = <"data_elements/NEHTA-10153-Frequency-Data_Element.xml">
+					version = <"2.0">
+				>
+				["at0007"] = <
+					text = <"Frequency Qualifier">
+					description = <"Information provided in addition to the frequency that provides more detail or guidance about the timing of therapeutic good administration.">
+					status = <"Published">
+					dc_id = <"10154">
+					detail_docref = <"data_elements/NEHTA-10154-Frequency_Qualifier-Data_Element.xml">
+					version = <"2.0">
+				>
+				["at0008"] = <
+					text = <"Route of Administration">
+					description = <"The way through which a therapeutic good is administered.">
+					status = <"Published">
+					dc_id = <"10147">
+					detail_docref = <"data_elements/NEHTA-10147-Route_of_Administration-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0009"] = <
+					text = <"Site of Administration">
+					description = <"Location on or in the body of the subject of care where the therapeutic good was administered.">
+					status = <"Published">
+					dc_id = <"10156">
+					detail_docref = <"data_elements/NEHTA-10156-Site_of_Administration-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0010"] = <
+					text = <"Additional Dose Instruction">
+					description = <"Cautionary advice for the subject of care or person administering the therapeutic good when taking/administering the therapeutic good.">
+					status = <"Published">
+					dc_id = <"10166">
+					detail_docref = <"data_elements/NEHTA-10166-Additional_Dose_Instruction-Data_Element.xml">
+					version = <"2.0">
+				>
+				["at0011"] = <
+					text = <"Quantity of Therapeutic Good">
+					description = <"A statement of the total number of units or physical amount of the therapeutic good that is prescribed, dispensed or supplied to the subject of care.">
+					status = <"Published">
+					dc_id = <"10145">
+					detail_docref = <"data_elements/NEHTA-10145-Quantity_of_Therapeutic_Good-Data_Element.xml">
+					version = <"3.0">
+				>
+				["at0012"] = <
+					text = <"Quantity of Therapeutic Good Detail">
+					description = <"A structured representation of the number of doses and/or physical amount of the therapeutic good that has been prescribed or dispensed for the subject of care, or administered to/by the subject of care.">
+					status = <"Published">
+					dc_id = <"16042">
+					detail_docref = <"data_groups/NEHTA-16042-Quantity_of_Therapeutic_Good_Detail-Data_Group.xml">
+					version = <"2.0">
+				>
+				["at0013"] = <
+					text = <"Strength">
+					description = <"The representation of the amount of the medication's active ingredient present in a single dose unit for dispensing/administering.">
+					status = <"Published">
+					dc_id = <"20146">
+					detail_docref = <"data_elements/NEHTA-20146-Strength-Data_Element.xml">
+					version = <"2.0">
+				>
+				["at0014"] = <
+					text = <"Quantity">
+					description = <"The number of doses and/or physical amount of the therapeutic good.">
+					status = <"Published">
+					dc_id = <"10145">
+					detail_docref = <"data_elements/NEHTA-10145-Quantity-Data_Element.xml">
+					version = <"2.0">
+				>
+				["at0015"] = <
+					text = <"Prescription Item Identifier">
+					description = <"A string generated by an EPS (Electronic Prescribing System) to uniquely identify an instruction to use a therapeutic good.">
+					status = <"Published">
+					dc_id = <"10136">
+					detail_docref = <"data_elements/NEHTA-10136-Prescription_Item_Identifier-Data_Element.xml">
+					version = <"3.0">
+				>
+				["at0017"] = <
+					text = <"Brand Substitute Allowed">
+					description = <"Indicates whether or not the substitution of a prescribed medication with a different brand name of the same medication, which has been determined as bioequivalent, is allowed when the medication is dispensed/supplied.">
+					status = <"Published">
+					dc_id = <"10107">
+					detail_docref = <"data_elements/NEHTA-10107-Brand_Substitute_Allowed-Data_Element.xml">
+					version = <"2.1">
+				>
+				["at0018"] = <
+					text = <"Maximum Number of Repeats">
+					description = <"The number of times the supply of the prescribed item may be repeated under the terms of the prescription.">
+					status = <"Published">
+					dc_id = <"10169">
+					detail_docref = <"data_elements/NEHTA-10169-Maximum_Number_of_Repeats-Data_Element.xml">
+					version = <"3.0">
+				>
+				["at0019"] = <
+					text = <"Minimum Interval Between Repeats">
+					description = <"The minimum time before the therapeutic good can be dispensed again.">
+					status = <"Published">
+					dc_id = <"10164">
+					detail_docref = <"data_elements/NEHTA-10164-Minimum_Interval_Between_Repeats-Data_Element.xml">
+					version = <"2.0">
+				>
+				["at0020"] = <
+					text = <"Early Supply with Pharmaceutical Benefit">
+					description = <"Indicates whether or not the supply of the therapeutic good meets the criteria of a pharmaceutical benefit despite being supplied within the specified minimum supply interval.">
+					status = <"Published">
+					dc_id = <"16348">
+					detail_docref = <"data_elements/NEHTA-16348-Early_Supply_with_Pharmaceutical_Benefit-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0022"] = <
+					text = <"Brand Substitution Occurred">
+					description = <"Indicates whether or not the substitution of a prescribed medication with a different brand name of the same medication occurred when the medication was dispensed/supplied.">
+					status = <"Published">
+					dc_id = <"16064">
+					detail_docref = <"data_elements/NEHTA-16064-Brand_Substitution_Occurred-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0024"] = <
+					text = <"Number of this Dispense">
+					description = <"A numeric value that represents the dispense number or sequence number that has been reached for a therapeutic good prescribed with repeats.  This count includes the first dispense.  It has the value 1 when there are no repeats.">
+					status = <"Published">
+					dc_id = <"16106">
+					detail_docref = <"data_elements/NEHTA-16106-Number_of_this_Dispense-Data_Element.xml">
+					version = <"2.0">
+				>
+				["at0025"] = <
+					text = <"Claim Category Type">
+					description = <"Indicates the category of pharmaceutical benefits applicable to the item being dispensed.">
+					status = <"Published">
+					dc_id = <"16060">
+					detail_docref = <"data_elements/NEHTA-16060-Claim_Category_Type-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0026"] = <
+					text = <"Label Instruction">
+					description = <"Dispenser instructions to the subject of care concerning the therapeutic good.">
+					status = <"Published">
+					dc_id = <"16109">
+					detail_docref = <"data_elements/NEHTA-16109-Label_Instruction-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0027"] = <
+					text = <"Batch Identifier">
+					description = <"String assigned by the manufacturer to identify the manufacturing batch of the item.">
+					status = <"Published">
+					dc_id = <"16273">
+					detail_docref = <"data_elements/NEHTA-16273-Batch_Identifier-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0028"] = <
+					text = <"Medical Benefit Category Type">
+					description = <"Indicates the category of subsidy appropriate to the item being prescribed.">
+					status = <"Published">
+					dc_id = <"16095">
+					detail_docref = <"data_elements/NEHTA-16095-Medical_Benefit_Category_Type-Data_Element.xml">
+					version = <"2.0">
+				>
+				["at0029"] = <
+					text = <"Grounds for Concurrent Supply">
+					description = <"Indicates the grounds which authorise a PBS or RPBS subsidy for the concurrent supply of an item specified in a prescription and all of its repeats.">
+					status = <"Published">
+					dc_id = <"16139">
+					detail_docref = <"data_elements/NEHTA-16139-Grounds_for_Concurrent_Supply-Data_Element.xml">
+					version = <"2.0">
+				>
+				["at0030"] = <
+					text = <"PBS/RPBS Authority Approval Number">
+					description = <"An identification number obtained by the prescriber and included in the prescription to show that the prescription meets agreed prescribing requirements and has authority to prescribe the medication and/or the quantity of the medication.">
+					status = <"Published">
+					dc_id = <"10159">
+					detail_docref = <"data_elements/NEHTA-10159-PBS_RPBS_Authority_Approval_Number-Data_Element.xml">
+					version = <"3.0">
+				>
+				["at0031"] = <
+					text = <"State Authority Number">
+					description = <"An identification number issued by an Australian state or territory health authority as proof that the prescriber has obtained written authority to prescribe drugs of dependence for a drug-dependent person, or for the treatment of a person with drug addiction for a period in accordance with State or Territory regulations.">
+					status = <"Published">
+					dc_id = <"16018">
+					detail_docref = <"data_elements/NEHTA-16018-State_Authority_Number-Data_Element.xml">
+					version = <"2.1">
+				>
+				["at0032"] = <
+					text = <"Medication Item Reviewer">
+					description = <"The healthcare provider who authorised for this item to be added to the Current Medications list, and the role they played in the patient’s healthcare (e.g.  ‘Pharmacist’).">
+					status = <"Published">
+					dc_id = <"10296.32.1">
+					detail_docref = <"data_groups/NEHTA-10296-Medication_Item_Reviewer-Data_Group.xml">
+					version = <"2.0">
+				>
+				["at0033"] = <
+					text = <"Additional Comments">
+					description = <"Any additional information that may be needed to ensure the continuity of supply, proper use, or appropriate medication management.">
+					status = <"Published">
+					dc_id = <"16044">
+					detail_docref = <"data_elements/NEHTA-16044-Additional_Comments-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0034"] = <
+					text = <"Therapeutic Good Use History">
+					description = <"Details of the history of the use of this therapeutic good by the subject of care.">
+					status = <"Published">
+					dc_id = <"16117">
+					detail_docref = <"data_groups/NEHTA-16117-Therapeutic_Good_Use_History-Data_Group.xml">
+					version = <"2.0">
+				>
+				["at0035"] = <
+					text = <"Item Status">
+					description = <"The status of the medication item at a specific point in time, e.g.  at discharge.">
+					status = <"Published">
+					dc_id = <"16001">
+					detail_docref = <"data_elements/NEHTA-16001-Item_Status-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0036"] = <
+					text = <"Change Detail">
+					description = <"Describes information about any relevant changes made to the medication item during the patient’s healthcare encounter, and the reason for that change.">
+					status = <"Published">
+					dc_id = <"10128">
+					detail_docref = <"data_groups/NEHTA-10128-Change_Detail-Data_Group.xml">
+					version = <"1.0">
+				>
+				["at0037"] = <
+					text = <"Changes Made">
+					description = <"Description of any change made during the healthcare encounter where the change is intended to continue after the end of the healthcare encounter.">
+					status = <"Published">
+					dc_id = <"10176">
+					detail_docref = <"data_elements/NEHTA-10176-Changes_Made-Data_Element.xml">
+					version = <"2.0">
+				>
+				["at0038"] = <
+					text = <"Follow Up Required">
+					description = <"Describes instructions for subsequent follow-up of the subject of care (patient) after changes are made to the therapeutic good administration.">
+					status = <"Published">
+					dc_id = <"16009">
+					detail_docref = <"data_elements/NEHTA-16009-Follow_Up_Required-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0039"] = <
+					text = <"Reason for Change">
+					description = <"The justification for the stated change in medication.">
+					status = <"Published">
+					dc_id = <"10177">
+					detail_docref = <"data_elements/NEHTA-10177-Reason_for_Change-Data_Element.xml">
+					version = <"2.0">
+				>
+				["at0040"] = <
+					text = <"Reason for Therapeutic Good">
+					description = <"The clinical justification (e.g.  specific therapeutic effect intended) for this subject of care’s use of the therapeutic good.">
+					status = <"Published">
+					dc_id = <"10141">
+					detail_docref = <"data_elements/NEHTA-10141-Reason_for_Therapeutic_Good-Data_Element.xml">
+					version = <"2.0">
+				>
+				["at0041"] = <
+					text = <"Medication Duration">
+					description = <"The time period that the patient has taken or will take the prescribed medication.">
+					status = <"Published">
+					dc_id = <"10143">
+					detail_docref = <"data_elements/NEHTA-10143-Medication_Duration-Data_Element.xml">
+					version = <"3.0">
+				>
+				["at0042"] = <
+					text = <"Delivery Compliance Aid Description">
+					description = <"The specific identifying description of the method in which the therapeutic good was delivered to the subject of care to assist with therapeutic good compliance.">
+					status = <"Published">
+					dc_id = <"10151">
+					detail_docref = <"data_elements/NEHTA-10151-Delivery_Compliance_Aid_Description-Data_Element.xml">
+					version = <"2.0">
+				>
+				["at0043"] = <
+					text = <"Cautionary Advice">
+					description = <"Cautionary advice for the subject of care (patient) or person administering the therapeutic good when taking/administering the therapeutic good.">
+					status = <"Published">
+					dc_id = <"10166">
+					detail_docref = <"data_elements/NEHTA-10166-Cautionary_Advice-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0044"] = <
+					text = <"Serial Number">
+					description = <"String assigned by the manufacturer to identify the individual item.">
+					status = <"Published">
+					dc_id = <"16275">
+					detail_docref = <"data_elements/NEHTA-16275-Serial_Number-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0045"] = <
+					text = <"DateTime of Expiry">
+					description = <"The date (and optionally time) after which the item is not expected to be usable.">
+					status = <"Published">
+					dc_id = <"16274">
+					detail_docref = <"data_elements/NEHTA-16274-DateTime_of_Expiry-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0046"] = <
+					text = <"Formula">
+					description = <"The recipe for compounding a medicine.">
+					status = <"Published">
+					dc_id = <"16272">
+					detail_docref = <"data_elements/NEHTA-16272-Formula-Data_Element.xml">
+					version = <"1.0">
+				>
+				["at0047"] = <
+					text = <"Instructions for Use">
+					description = <"Directions for the use of a therapeutic good other than a medication.">
+					status = <"Published">
+					dc_id = <"16276">
+					detail_docref = <"data_elements/NEHTA-16276-Instructions_for_Use-Data_Element.xml">
+					version = <"1.0">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["en"] = <
+			items = <
+				["ac0001"] = <
+					text = <"Therapeutic Good Identification Values">
+					description = <"The set of values consists of ConceptIDs and Preferred Terms from AMT (Australian Medicines Terminology) concepts.">
+					status = <"Published">
+					dc_id = <"16115">
+					detail_docref = <"value_domains/NEHTA-16115-Therapeutic_Good_Identification_Values-Value_Domain.xml">
+					version = <"1.0">
+				>
+				["ac0002"] = <
+					text = <"Frequency Values">
+					description = <"The set of values for how often the therapeutic good has to be taken/administered.">
+					status = <"Published">
+					dc_id = <"10153">
+					detail_docref = <"value_domains/NEHTA-10153-Frequency_Values-Value_Domain.xml">
+					version = <"2.0">
+				>
+				["ac0003"] = <
+					text = <"Frequency Qualifier Values">
+					description = <"The set of values for the information provided in addition to the frequency that provides more detail or guidance about the timing of therapeutic good administration.">
+					status = <"Published">
+					dc_id = <"10154">
+					detail_docref = <"value_domains/NEHTA-10154-Frequency_Qualifier_Values-Value_Domain.xml">
+					version = <"2.0">
+				>
+				["ac0004"] = <
+					text = <"Route of Administration Values">
+					description = <"The set of values for the way through which a therapeutic good is administered.">
+					status = <"Published">
+					dc_id = <"10147">
+					detail_docref = <"value_domains/NEHTA-10147-Route_of_Administration_Values-Value_Domain.xml">
+					version = <"1.0">
+				>
+				["ac0005"] = <
+					text = <"Site of Administration Values">
+					description = <"The set of values for the location on or in the body of the subject of care where the therapeutic good was administered.">
+					status = <"Published">
+					dc_id = <"10156">
+					detail_docref = <"value_domains/NEHTA-10156-Site_of_Administration_Values-Value_Domain.xml">
+					version = <"1.0">
+				>
+				["ac0006"] = <
+					text = <"Claim Category Type Values">
+					description = <"The set of values of Claim Category Type.">
+					status = <"Published">
+					dc_id = <"16060">
+					detail_docref = <"value_domains/NEHTA-16060-Claim_Category_Type_Values-Value_Domain.xml">
+					version = <"2.0">
+				>
+				["ac0007"] = <
+					text = <"Medical Benefit Category Type Values">
+					description = <"The set of values of Medical Benefit Category Type.">
+					status = <"Draft">
+					dc_id = <"16095">
+					detail_docref = <"value_domains/NEHTA-16095-Medical_Benefit_Category_Type_Values-Value_Domain.xml">
+					version = <"2.0">
+				>
+				["ac0008"] = <
+					text = <"Grounds for Concurrent Supply Values">
+					description = <"The set of values of Concurrent Supply Grounds.">
+					status = <"Published">
+					dc_id = <"16085">
+					detail_docref = <"value_domains/NEHTA-16085-Grounds_for_Concurrent_Supply_Values-Value_Domain.xml">
+					version = <"1.0">
+				>
+				["ac0009"] = <
+					text = <"Item Status Values">
+					description = <"The values of the status of the medication item at a specific point in time, e.g.  at discharge.">
+					status = <"Published">
+					dc_id = <"16002">
+					detail_docref = <"value_domains/NEHTA-16002-Item_Status_Values-Value_Domain.xml">
+					version = <"1.0">
+				>
+				["ac0010"] = <
+					text = <"Changes Made Values">
+					description = <"Description of any change made during the healthcare encounter where the change is intended to continue.">
+					status = <"Published">
+					dc_id = <"10176">
+					detail_docref = <"value_domains/NEHTA-10176-Changes_Made_Values-Value_Domain.xml">
+					version = <"2.0">
+				>
+				["ac0011"] = <
+					text = <"Delivery Compliance Aid Description Values">
+					description = <"The set of values for the specific identifying description of the method in which the therapeutic good was delivered to the subject of care to assist with therapeutic good compliance.">
+					status = <"Published">
+					dc_id = <"10151">
+					detail_docref = <"value_domains/NEHTA-10151-Delivery_Compliance_Aid_Description_Values-Value_Domain.xml">
+					version = <"2.0">
+				>
+				["ac0012"] = <
+					text = <"Cautionary Advice Values">
+					description = <"Set of allowable values for the cautionary advice for the subject of care or person administering the medication when taking/administering the medication.">
+					status = <"Published">
+					dc_id = <"10166">
+					detail_docref = <"value_domains/NEHTA-10166-Cautionary_Advice_Values-Value_Domain.xml">
+					version = <"1.0">
+				>
+			>
+		>
+	>

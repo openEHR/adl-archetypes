@@ -1,0 +1,125 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.review.v1
+
+concept
+	[at0000]	-- Review
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2013-03-26">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record a review of identified material within the health record.">
+			use = <"Use to record a review of identified material within the health record, for example, that a speicalist has reviewed the test results and clinical interpretation of a test done by another clinician.">
+			keywords = <"review", "opinion">
+			misuse = <"">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"CommitteeDraft">
+	other_contributors = <>
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["MD5-CAM-1.0.1"] = <"2659D0E51A390552CE4D1C3EC0715FEA">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Review
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Material
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Inappropriate for Review
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True}
+							}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..*} matches {	-- Link to Material Reviewed
+						value matches {
+							DV_URI matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Opinion
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0008] occurrences matches {0..*} matches {	-- Details
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Clinical Interpretation
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..*} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Review">
+					description = <"Review of identified original material within the health record.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Material">
+					description = <"Identification of the original material reviewed.">
+					comment = <"For example: test results; or a second opinion of clinical findings in the record.">
+				>
+				["at0003"] = <
+					text = <"Link to Material Reviewed">
+					description = <"The archetype path to the original material reviewed.">
+				>
+				["at0004"] = <
+					text = <"Opinion">
+					description = <"Narrative opnion of the clinical findings at review of the original material.">
+				>
+				["at0005"] = <
+					text = <"Clinical Interpretation">
+					description = <"Single word, phrase or brief description representing a summary of the examination findings.">
+					comment = <"Coding with a terminology is preferred, if possible.">
+				>
+				["at0006"] = <
+					text = <"Inappropriate for Review">
+					description = <"The material is not appropriate for review.">
+				>
+				["at0007"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the review of the material, not captured in other fields.">
+					comment = <"For example, the reason why the material was inappropriate for review.">
+				>
+				["at0008"] = <
+					text = <"Details">
+					description = <"Additional structured details about the material reviewed.">
+					comment = <"For example: examination findings observed from an original digital image.">
+				>
+			>
+		>
+	>

@@ -1,0 +1,152 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-SECTION.antenatal.v1
+
+concept
+	[at0000]	-- Antenatal
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"NT mEHR Project">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"2012-01-03">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To structure antenatal visit records to promote consistency of organisation and aid interpretation.">
+			use = <"In event summaries and consultation records when the person is pregnant.">
+			keywords = <"antenatal", "visit", "prenatal">
+			misuse = <"">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["references"] = <"NT Pregnancy Health Record
+Queensland Government Pregnancy Health Record">
+		["MD5-CAM-1.0.1"] = <"6B622C8E141882C258B9ED31F46909D8">
+	>
+
+definition
+	SECTION[at0000] matches {	-- Antenatal
+		items cardinality matches {1..*; unordered} matches {
+			SECTION[at0001] occurrences matches {0..1} matches {	-- History
+				items cardinality matches {1..*; unordered} matches {
+					allow_archetype ENTRY[at0002] occurrences matches {0..*} matches {	-- Patient's story
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+			SECTION[at0003] occurrences matches {0..1} matches {	-- Findings
+				items cardinality matches {1..*; unordered} matches {
+					allow_archetype OBSERVATION[at0004] occurrences matches {0..1} matches {	-- BP
+						include
+							archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-[a-zA-Z0-9_]+)*\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype EVALUATION[at0005] occurrences matches {0..1} matches {	-- Gestation
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype OBSERVATION[at0007] occurrences matches {0..1} matches {	-- Fetal movement
+						include
+							archetype_id/value matches {/openEHR-EHR-OBSERVATION\.fetal_movement(-[a-zA-Z0-9_]+)*\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype OBSERVATION[at0006] occurrences matches {0..1} matches {	-- Fundal height and presentation
+						include
+							archetype_id/value matches {/openEHR-EHR-OBSERVATION\.exam\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype OBSERVATION[at0008] occurrences matches {0..1} matches {	-- Urinalysis
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+			SECTION[at0011] occurrences matches {0..1} matches {	-- Notes
+				items cardinality matches {1..*; unordered} matches {
+					allow_archetype ENTRY[at0012] occurrences matches {0..*} matches {	-- Assessment
+						include
+							archetype_id/value matches {/openEHR-EHR-EVALUATION\.clinical_synopsis(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+				}
+			}
+			SECTION[at0009] occurrences matches {0..1} matches {	-- Next visit
+				items cardinality matches {1..*; unordered} matches {
+					allow_archetype INSTRUCTION[at0010] occurrences matches {0..*} matches {	-- Followup
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Antenatal">
+					description = <"A section of a record devoted to antenatal assessment.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"Any history that is relevant.">
+				>
+				["at0002"] = <
+					text = <"Patient's story">
+					description = <"Any complaints or concerns expressed by the patient.">
+				>
+				["at0003"] = <
+					text = <"Findings">
+					description = <"Findings at the consultation.">
+				>
+				["at0004"] = <
+					text = <"BP">
+					description = <"Blood pressure measurement(s).">
+				>
+				["at0005"] = <
+					text = <"Gestation">
+					description = <"Estimation of gestation of the pregnancy.">
+				>
+				["at0006"] = <
+					text = <"Fundal height and presentation">
+					description = <"Findings of uterine height and the presentation of the fetus(es).">
+				>
+				["at0007"] = <
+					text = <"Fetal movement">
+					description = <"Observation of fetal movements.">
+				>
+				["at0008"] = <
+					text = <"Urinalysis">
+					description = <"Findings on urinalysis.">
+				>
+				["at0009"] = <
+					text = <"Next visit">
+					description = <"Information about the next visit(s).">
+				>
+				["at0010"] = <
+					text = <"Followup">
+					description = <"Instructions about the next followup.">
+				>
+				["at0011"] = <
+					text = <"Notes">
+					description = <"Other records relating to the visit.">
+				>
+				["at0012"] = <
+					text = <"Assessment">
+					description = <"Findings summarising the clinicians assessment of the situation.">
+				>
+			>
+		>
+	>

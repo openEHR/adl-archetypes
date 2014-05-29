@@ -1,0 +1,324 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-ACTION.procedure.v1
+
+concept
+	[at0000]	-- Procedure
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"24/01/2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record information about the activities required to carry out a procedure, including the planning, scheduling, performance, suspension, cancellation, documentation and completion.">
+			use = <"Use to record information about the activities required to carry out a procedure, including the planning, scheduling, performance, suspension, cancellation, documentation and completion.  This is done by the recording of data against specific activities, as defined by the 'Pathway' care steps in this archetype.
+
+The scope of this archetype encompasses activities for a broad range of clinical procedures performed for therapeutic, evaluative, investigative, screening or diagnostic purposes. Examples range from the relatively simple activities, such as insertion of an intravenous cannula, through to complex surgical operations.
+
+Additional structured and detailed information about the procedure can be captured using purpose-specific archetypes inserted into the 'Procedure detail' slot, where required.
+
+Start date/time is included in the Protocol. If this is recorded against the Scheduled care pathway step, it captures the scheduled start time; if recorded against the Procedure performed step, then it captures the actual start time of the procedure.
+
+End date/time has not been specifically modelled in this archetype as this is the date/time that is recorded (per the reference model) as each action or care pathway step is completed.
+
+Within the context of an Operation Report, this archetype will be used to record only what was done during the procedure . Separate archetypes will be used to record the other required components of the Operation Report, including the taking of tissue specimen samples, use of imaging guidance, operation findings, post-operative instructions and plans for followup.
+
+Within the context of a Problem list or summary, this archetype may be used to represent procedures that have been performed. The EVALUATION.problem_diagnosis will be used to represent the patient's problems and diagnoses.
+
+In practice, many procedures (for example, in ambulatory care) will occur once and not be ordered in advance. The pathway step, ‘Procedure completed’ (or ‘Failed attempt’, or ‘Procedure aborted’) will be recorded and the details added. In some cases a recurring procedure will be ordered, and in this situation data against the ‘Procedure undertaken’ step will be recorded on each occasion, leaving the instruction in the active state. When the last occurrence is recorded the ‘Procedure completed’ action is recorded showing that this order is now in the completed state.
+
+In other situations, such as secondary care, there may be a formal order for a procedure using a corresponding INSTRUCTION archetype. This ACTION archetype can then be used to record the workflow of when and how the order has been carried out.
+
+Recording information using this ACTION archetype indicates that some sort of activity has actually occurred; this will usually be the procedure itself but may be a failed attempt or another activity such as postponing the procedure. If there is a formal order for the procedure, the state of this order is represented by the Pathway step against which the data is recorded. For example, using this archetype the progressing state of a Gastroscopy order may be recorded through separate entries in the EHR progress notes at each 'Pathway' step:
+- record the scheduled Start date/time for the gastroscopy (Procedure scheduled); 
+- record the gastroscopy was attempted but failed (Failed attempt); and
+- record that the gastroscopy procedure has been completed, including information about the procedure details (Procedure completed).">
+			keywords = <"procedure", "intervention", "surgical", "medical", "clinical", "therapeutic", "diagnostic">
+			misuse = <"Not to be used to record details about related activities such as use of imaging guidance during the procedure or collection of tissue samples for analysis - use specific ACTION archetypes for this purpose.
+
+Not to be used to record a whole operation or procedure report.">
+			copyright = <"© 2011 NEHTA">
+		>
+	>
+	lifecycle_state = <"CommitteeDraft">
+	other_contributors = <"Stephen Chu, NEHTA, Australia (Editor)", "David Evans, Queensland Health, Australia", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Andrew Goodchild, NEHTA, Australia", "Megan Hawkins, Mater Health Services, Australia", "Sam Heard, Ocean Informatics, Australia", "Mary Kelaher, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Michael Osborne, Mater Health Services, Australia", "Chris Pearce, Melbourne East GP Network, Australia", "Peter Scott, Australia", "Elizabeth Stanick, Hobart Anaesthetic Group, Australia", "John Taylor, NEHTA, Australia", "Richard Townley-O'Neill, NEHTA, Australia">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"E5A1E33897CAD2386B16AD3AE60D16A0">
+	>
+
+definition
+	ACTION[at0000] matches {	-- Procedure
+		ism_transition matches {
+			ISM_TRANSITION matches {
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::526]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0013]}		-- Procedure planned
+					}
+				}
+			}
+			ISM_TRANSITION matches {
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::527]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0025]}		-- Procedure postponed
+					}
+				}
+			}
+			ISM_TRANSITION matches {
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::528]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0027]}		-- Procedure cancelled
+					}
+				}
+			}
+			ISM_TRANSITION matches {
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::529]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0015]}		-- Procedure scheduled
+					}
+				}
+			}
+			ISM_TRANSITION matches {
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::245]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0017]}		-- Procedure performed
+					}
+				}
+			}
+			ISM_TRANSITION matches {
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::245]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0018]}		-- Failed attempt
+					}
+				}
+			}
+			ISM_TRANSITION matches {
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::530]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0026]}		-- Procedure suspended
+					}
+				}
+			}
+			ISM_TRANSITION matches {
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::531]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0028]}		-- Procedure aborted
+					}
+				}
+			}
+			ISM_TRANSITION matches {
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[openehr::532]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0024]}		-- Procedure completed
+					}
+				}
+			}
+		}
+		description matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Procedure name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..*} matches {	-- Reason
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0034] occurrences matches {0..*} matches {	-- Anatomical location
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+					allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {	-- Procedure detail
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0031] occurrences matches {0..1} matches {	-- Duration
+						value matches {
+							DV_DURATION matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {	-- Multimedia
+						value matches {
+							DV_MULTIMEDIA matches {
+								media_type matches {[openEHR::]}
+							}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0029] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0030] occurrences matches {0..1} matches {	-- Start date/time
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0033] occurrences matches {0..*} matches {	-- Device
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Procedure">
+					description = <"A clinical activity carried out for therapeutic, evaluative, investigative, screening or diagnostic purposes.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Procedure name">
+					description = <"The name of the procedure (to be) performed. Coding of the specific procedure with a terminology is preferred, where possible.">
+				>
+				["at0003"] = <
+					text = <"Reason">
+					description = <"Reason that the activity or care pathway step for the identified procedure was carried out, for example, the reason for the cancellation or suspension of the procedure.">
+				>
+				["at0004"] = <
+					text = <"Description">
+					description = <"Narrative description about the activity or care pathway step for the identified procedure, for example description about the performance and findings from the the procedure, the failed attempt or the cancellation of the procedure.">
+				>
+				["at0005"] = <
+					text = <"Procedure detail">
+					description = <"Structured information about the procedure. Use to capture detailed, structured information about method & technique, equipment used & devices implanted and findings etc.">
+				>
+				["at0009"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the activity or care pathway step not captured in other fields.">
+				>
+				["at0010"] = <
+					text = <"Multimedia">
+					description = <"Multimedia representation of the procedure undertaken, for example, a link to a video of the procedure performed or a drawing of the wound/surgery etc.">
+				>
+				["at0013"] = <
+					text = <"Procedure planned">
+					description = <"The procedure to be undertaken is planned.">
+				>
+				["at0015"] = <
+					text = <"Procedure scheduled">
+					description = <"The procedure has been scheduled.">
+				>
+				["at0017"] = <
+					text = <"Procedure performed">
+					description = <"The procedure has been performed but more actions remain to be completed.">
+				>
+				["at0018"] = <
+					text = <"Failed attempt">
+					description = <"The procedure has been commenced but not completed successfully.">
+				>
+				["at0024"] = <
+					text = <"Procedure completed">
+					description = <"The procedure has been performed and all associated actions completed.">
+				>
+				["at0025"] = <
+					text = <"Procedure postponed">
+					description = <"The procedure has been postponed.">
+				>
+				["at0026"] = <
+					text = <"Procedure suspended">
+					description = <"The procedure has been suspended.">
+				>
+				["at0027"] = <
+					text = <"Procedure cancelled">
+					description = <"The planned procedure has been cancelled prior to commencement.">
+				>
+				["at0028"] = <
+					text = <"Procedure aborted">
+					description = <"The procedure has been aborted.">
+				>
+				["at0029"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0030"] = <
+					text = <"Start date/time">
+					description = <"The start date and/or time for the procedure. This will indicate the scheduled date/time when recorded against the Scheduled care pathway step or the actual Start date/time in the Procedure performed step.">
+				>
+				["at0031"] = <
+					text = <"Duration">
+					description = <"Duration of the procedure, (especially for the Procedure performed pathway step).">
+				>
+				["at0033"] = <
+					text = <"Device">
+					description = <"Structured information about any device used during the procedure.">
+				>
+				["at0034"] = <
+					text = <"Anatomical location">
+					description = <"Structured information about the specific anatomical location of the procedure.">
+				>
+			>
+		>
+	>

@@ -1,0 +1,211 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.tobacco_use_summary.v1
+
+concept
+	[at0000]	-- Tobacco Use Summary
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2009-06-21">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record summary information about the pattern of use of tobacco and tobacco-containing products.">
+			use = <"Use to record summary information about the pattern of use of tobacco and tobacco-containing products.">
+			keywords = <"tobacco", "cigarette", "cigar", "pipe", "snuff", "kretek", "beebi", "bibi", "shisha", "snuff", "snus", "hookah", "gutka", "smoking", "chewing">
+			misuse = <"Not to be used to record event-or period-based information about tobacco use or consumption, such as actual daily use or the average use over a specified period of time - use the OBSERVATION.tobacco_use archetype.">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"CommitteeDraft">
+	other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Rosalie Schultz, Anyinginyi Health Aboriginal Corporation, Australia">
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Tobacco Use Summary draft archetype [Internet]. London: openEHR Clinical Knowledge Manager, openEHR Foundation; 21 Jun 2009 [cited 2011 Jul 15]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.363_1.">
+		["MD5-CAM-1.0.1"] = <"571EB068E586D7E54AEE35C6E26C113C">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Tobacco Use Summary
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Smoking Status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0003, 	-- Current Smoker
+									at0005, 	-- Ex-smoker
+									at0006]	-- Never Smoked
+								}
+							}
+						}
+					}
+					ELEMENT[at0023] occurrences matches {0..1} matches {	-- Typical Cigarette Use
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::382]>
+								list = <
+									["1"] = <
+										units = <"/d">
+										magnitude = <|>=0.0|>
+										precision = <|0|>
+									>
+								>
+							>
+							DV_INTERVAL<DV_QUANTITY> matches {
+								upper matches {
+									C_DV_QUANTITY <
+									>
+								}
+								lower matches {
+									C_DV_QUANTITY <
+										property = <[openehr::382]>
+										list = <
+											["1"] = <
+												units = <"/d">
+											>
+										>
+									>
+								}
+							}
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {	-- Date Commenced
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0016] occurrences matches {0..1} matches {	-- Date Ceased
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0017] occurrences matches {0..1} matches {	-- Pack Years
+						value matches {
+							DV_COUNT matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+					ELEMENT[at0025] occurrences matches {0..1} matches {	-- Number of Cessation Attempts
+						value matches {
+							DV_COUNT matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+					allow_archetype CLUSTER[at0026] occurrences matches {0..*} matches {	-- Cessation Attempts
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.cessation_attempts\.v1/}
+					}
+					ELEMENT[at0024] occurrences matches {0..1} matches {	-- Other Tobacco Use
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0019] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0021] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0022] occurrences matches {0..1} matches {	-- Date Updated
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Tobacco Use Summary">
+					description = <"Summary or persisting information about tobacco use or consumption.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Smoking Status">
+					description = <"Statement about the individual's current smoking activity.">
+				>
+				["at0003"] = <
+					text = <"Current Smoker">
+					description = <"Individual is a current smoker of tobacco.">
+				>
+				["at0005"] = <
+					text = <"Ex-smoker">
+					description = <"Individual is a former or ex-smoker of tobacco.">
+				>
+				["at0006"] = <
+					text = <"Never Smoked">
+					description = <"Individual has never smoked tobacco.">
+				>
+				["at0015"] = <
+					text = <"Date Commenced">
+					description = <"Date that tobacco smoking commenced.">
+					comment = <"Can be a partial date, for example, only a year.">
+				>
+				["at0016"] = <
+					text = <"Date Ceased">
+					description = <"Date that tobacco smoking ceased.">
+					comment = <"Can be a partial date, for example, only a year. May also be known as the 'Quit Date'.">
+				>
+				["at0017"] = <
+					text = <"Pack Years">
+					description = <"Estimate of the cumulative amount of cigarettes smoked, measured in pack years.">
+					comment = <"Commonly used in assessment of cigarette use. It is calculated by multiplying the number of packs of cigarettes smoked per day by the number of years the individual has smoked. One pack year equals 365 packs of cigarettes.">
+				>
+				["at0019"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the smoking pattern not captured in other fields.">
+					comment = <"For example: stopped smoking or reduced amount on becoming pregnant.">
+				>
+				["at0021"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0022"] = <
+					text = <"Date Updated">
+					description = <"The date this tobacco use summary was last updated.">
+				>
+				["at0023"] = <
+					text = <"Typical Cigarette Use">
+					description = <"Estimate of typical cigarette use per day - either as a whole number or a range.">
+					comment = <"This data element allows a rough indication of cigarette use to be recorded, for example a pack a day or 5-10 per day. The period of time is not specified. If exact consumption at specific points in time or averages/maximums over specified intervals of time are required, use the OBSERVATION.tobacco_use archetype.">
+				>
+				["at0024"] = <
+					text = <"Other Tobacco Use">
+					description = <"Narrative description of other tobacco use.">
+					comment = <"For example chewing tobacco.">
+				>
+				["at0025"] = <
+					text = <"Number of Cessation Attempts">
+					description = <"Number of times the individual has attempted to cease smoking tobacco.">
+				>
+				["at0026"] = <
+					text = <"Cessation Attempts">
+					description = <"Details about each attempt to cease  tobacco smoking.">
+				>
+			>
+		>
+	>

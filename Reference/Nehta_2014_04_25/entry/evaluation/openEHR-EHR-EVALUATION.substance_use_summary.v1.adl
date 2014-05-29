@@ -1,0 +1,199 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.substance_use_summary.v1
+
+concept
+	[at0000]	-- Substance Use Summary
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"21/06/2009">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To build up and record an ongoing and persistent summary about the use of a substance by the individual. (with the exception of substances such alcohol and tobacco, for which a specialised version of this archetype has been created).">
+			use = <"Use to record a summary of the pattern of use for any and all forms of a substance, and about multiple episodes of use of the substance over time.">
+			keywords = <"consumption", "substance", "use", "usage", "dependence">
+			misuse = <"Not to be used to record summary information about alcohol or tobacco use - use the specialised archetypes OBSERVATION.substance_use_summary-alcohol and/or OBSERVATION.substance_use_summary-tobacco.
+
+Not to be used to capture event-based information about substance use, such as a Diary of substance use - use the OBSERVATION.substance_use archetype and its specific specialisations.">
+			copyright = <"© 2010 NEHTA">
+		>
+	>
+	lifecycle_state = <"CommitteeDraft">
+	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"6B4981B4607DDBF2DE2AFF2D09C5E6FB">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Substance Use Summary
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- Substance
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Usage Status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0003, 	-- Current User
+									at0004, 	-- Former Regular User
+									at0006, 	-- Former Occasional User
+									at0016]	-- Never Used
+								}
+							}
+						}
+					}
+					CLUSTER[at0007] occurrences matches {0..*} matches {	-- Consumption Summary
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0008] occurrences matches {0..1} matches {	-- Type/Form
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0015] occurrences matches {0..1} matches {	-- Method of use
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {[local::]}
+									}
+								}
+							}
+							ELEMENT[at0009] occurrences matches {0..1} matches {	-- Date commenced
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0010] occurrences matches {0..1} matches {	-- Age commenced
+								value matches {
+									DV_DURATION matches {*}
+								}
+							}
+							ELEMENT[at0011] occurrences matches {0..1} matches {	-- Date ceased
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0012] occurrences matches {0..1} matches {	-- Age ceased
+								value matches {
+									DV_DURATION matches {*}
+								}
+							}
+							ELEMENT[at0017] occurrences matches {0..1} matches {	-- Context of use
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0013] occurrences matches {0..1} matches {	-- Comment
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {	-- Cessation attempts
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.cessation_attempts\.v1/}
+					}
+					ELEMENT[at0018] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Substance Use Summary">
+					description = <"Overview of use or consumption of a defined substance, including caffeine, alcohol, tobacco, volatile substances and illicit drugs.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Usage Status">
+					description = <"Overview of usage of the substance.">
+				>
+				["at0003"] = <
+					text = <"Current User">
+					description = <"Individual is a current user of the substance.">
+				>
+				["at0004"] = <
+					text = <"Former Regular User">
+					description = <"Individual is a former or ex-user of the substance on a regular basis.">
+				>
+				["at0005"] = <
+					text = <"Substance">
+					description = <"Identification of the substance.">
+				>
+				["at0006"] = <
+					text = <"Former Occasional User">
+					description = <"Individual is a former or ex-user of the substance on an occasional basis.">
+				>
+				["at0007"] = <
+					text = <"Consumption Summary">
+					description = <"Summary of the pattern of use for any and all forms of the substance, and for multiple episodes of use over time.">
+				>
+				["at0008"] = <
+					text = <"Type/Form">
+					description = <"Identify the type or form of the substance used or consumed.">
+				>
+				["at0009"] = <
+					text = <"Date commenced">
+					description = <"Date that use of the substance commenced (can be a partial date, such as a year).">
+				>
+				["at0010"] = <
+					text = <"Age commenced">
+					description = <"Age that use of the substance commenced.">
+				>
+				["at0011"] = <
+					text = <"Date ceased">
+					description = <"Date that use of the substance ceased (can be a partial date, such as a year).">
+				>
+				["at0012"] = <
+					text = <"Age ceased">
+					description = <"Age that use of the substance ceased.">
+				>
+				["at0013"] = <
+					text = <"Comment">
+					description = <"Comment on this episode of substance use or consumption.">
+				>
+				["at0014"] = <
+					text = <"Cessation attempts">
+					description = <"Details about attempts to cease use of the substance.">
+				>
+				["at0015"] = <
+					text = <"Method of use">
+					description = <"Method of use or consumption of the substance. For example, smoked or intravenous injection.">
+				>
+				["at0016"] = <
+					text = <"Never Used">
+					description = <"Individual has never used the substance.">
+				>
+				["at0017"] = <
+					text = <"Context of use">
+					description = <"Description about the social, cultural or psychological context that contributed to the substance use.">
+				>
+				["at0018"] = <
+					text = <"Comment">
+					description = <"Overall comment about the individual's use of the substance.">
+				>
+			>
+		>
+	>
