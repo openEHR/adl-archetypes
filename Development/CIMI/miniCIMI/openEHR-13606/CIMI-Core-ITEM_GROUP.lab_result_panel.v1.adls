@@ -1,0 +1,107 @@
+archetype (adl_version=1.5.1)
+	CIMI-Core-ITEM_GROUP.lab_result_panel.v1.0.0
+
+specialise
+	CIMI-Core-ITEM_GROUP.cimi_entry.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"CIMI">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"10/02/2014">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"CIMI Compund Entry that has slots for 'atomic' Entries">
+			copyright = <"© 2014 CIMI">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	ITEM_GROUP[id1.1] matches {	-- Multi-level panel
+		item matches {
+			ELEMENT[id0.2] matches {	-- Requester order id
+				value matches {
+					TEXT[id0.3] 
+				}
+			}
+			ELEMENT[id0.4] matches {	-- Panel status
+				value matches {[ac0.1]}		-- Panel statuses
+			}
+			allow_archetype ITEM_GROUP[id0.8] occurrences matches {0..*} matches {	-- Level 1 Panel item
+				include
+					archetype_id/value matches {/CIMI-Core-ITEM_GROUP\..*\.v1.*/}
+			}
+			ITEM_GROUP[id0.9] matches {	-- Level 2 Panel items
+				item matches {
+					allow_archetype ITEM_GROUP[id0.10] occurrences matches {0..*} matches {	-- Level 2 Panel item
+						include
+							archetype_id/value matches {/CIMI-Core-ITEM_GROUP\..*\.v1.*/}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Multi-level panel">
+				description = <"Multi-level panel">
+			>
+			["id0.2"] = <
+				text = <"Requester order id">
+				description = <"Requester order id">
+			>
+			["id0.4"] = <
+				text = <"Panel status">
+				description = <"Panel status">
+			>
+			["id0.8"] = <
+				text = <"Level 1 Panel item">
+				description = <"Level 1 Panel item">
+			>
+			["id0.9"] = <
+				text = <"Level 2 Panel items">
+				description = <"Level 2 Panel items">
+			>
+			["id0.10"] = <
+				text = <"Level 2 Panel item">
+				description = <"Level 2 Panel item">
+			>
+			["id0.12"] = <
+				text = <"subject">
+				description = <"subject participation">
+			>
+			["ac0.1"] = <
+				text = <"Panel statuses">
+				description = <"Panel statuses">
+			>
+			["at0.1"] = <
+				text = <"Complete">
+				description = <"Panel complete">
+			>
+			["at0.2"] = <
+				text = <"Interim">
+				description = <"Panel in interim state">
+			>
+		>
+	>
+	term_bindings = <
+		["snomedct"] = <
+			["id1.1"] = <http://snomedct.info/id/413139004>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at0.1", "at0.2">
+		>
+	>

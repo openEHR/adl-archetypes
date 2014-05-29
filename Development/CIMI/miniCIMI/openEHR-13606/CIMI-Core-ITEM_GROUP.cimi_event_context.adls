@@ -1,5 +1,5 @@
 archetype (adl_version=1.5.1)
-	CIMI-Core-CLUSTER.openehr_13606_event_context.v1
+	CIMI-Core-ITEM_GROUP.openehr_13606_event_context.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -25,7 +25,7 @@ description
 	>
 
 definition
-	CLUSTER[id1] matches {
+	ITEM_GROUP[id1] matches {
 		item matches {
 			ELEMENT[id2] occurrences matches {1} matches {
 				value matches {

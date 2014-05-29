@@ -1,8 +1,12 @@
 ﻿archetype (adl_version=1.5.1)
-	CIMI-Core-CLUSTER.openehr_13606_section.v1
+	CIMI-Core-ITEM_GROUP.panel.v1.0.0
+
+specialise
+	CIMI-Core-ITEM_GROUP.clinical_data_group.v1
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
@@ -13,25 +17,22 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Pattern archetype for openEHR-13606::SECTION">
+			purpose = <"Pattern archetype for CIMI:panel">
 			keywords = <"Entry", ...>
 			copyright = <"© 2014 CIMI">
 		>
 	>
-	lifecycle_state = <"Draft">
-	other_details = <
-		["model_level"] = <"reference">
-	>
+	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[id1]
+	ITEM_GROUP[id1.1]
 
 ontology
 	term_definitions = <
 		["en"] = <
-			["id1"] = <
-				text = <"SECTION">
-				description = <"SECTION class for openEHR/13606">
+			["id1.1"] = <
+				text = <"Panel">
+				description = <"CIMI panel">
 			>
 		>
 	>

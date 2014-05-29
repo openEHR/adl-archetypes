@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.5.1)
-	CIMI-Core-CLUSTER.openehr_13606_entry.v1
+	CIMI-Core-ITEM_GROUP.cimi_entry.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -13,7 +13,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Pattern archetype for openEHR-13606::ENTRY">
+			purpose = <"Pattern archetype for CIMI::ENTRY">
 			keywords = <"Entry", ...>
 			copyright = <"© 2014 CIMI">
 		>
@@ -24,7 +24,7 @@ description
 	>
 
 definition
-	CLUSTER[id1] matches {	-- ENTRY
+	ITEM_GROUP[id1] matches {	-- ENTRY
 		participation matches {
 			PARTICIPATION[id2] matches {
 				function matches {[at1]}
@@ -40,7 +40,7 @@ ontology
 		["en"] = <
 			["id1"] = <
 				text = <"ENTRY">
-				description = <"ENTRY class for openEHR/13606">
+				description = <"ENTRY class for CIMI">
 			>
 			["id2"] = <
 				text = <"subject">

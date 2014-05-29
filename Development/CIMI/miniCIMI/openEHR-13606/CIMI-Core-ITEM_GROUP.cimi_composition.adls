@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.5.1)
-	CIMI-Core-CLUSTER.openehr_13606_composition.v1
+	CIMI-Core-ITEM_GROUP.cimi_composition.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -13,7 +13,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Pattern archetype for openEHR-13606::COMPOSITION">
+			purpose = <"Pattern archetype for CIMI::COMPOSITION">
 			keywords = <"Entry", ...>
 			copyright = <"© 2014 CIMI">
 		>
@@ -24,20 +24,20 @@ description
 	>
 
 definition
-	CLUSTER[id1] matches {
+	ITEM_GROUP[id1] matches {
 		participation matches {
 			PARTICIPATION[id2] matches {
 				function matches {[at1]}
 			}
 		}
 		item matches {
-			allow_archetype CLUSTER[id3] matches {
+			allow_archetype ITEM_GROUP[id3] matches {
 				include
-					archetype_id/value matches {/CIMI-Core-CLUSTER\.(openehr_13606_section|openehr_13606_entry).*/}
+					archetype_id/value matches {/CIMI-Core-ITEM_GROUP\.(cimi_section|cimi_entry).*/}
 			}
-			allow_archetype CLUSTER[id4] matches {
+			allow_archetype ITEM_GROUP[id4] matches {
 				include
-					archetype_id/value matches {/CIMI-Core-CLUSTER\.openehr_13606_event_context.*/}
+					archetype_id/value matches {/CIMI-Core-ITEM_GROUP\.cimi_event_context.*/}
 			}
 		}
 	}
@@ -47,7 +47,7 @@ ontology
 		["en"] = <
 			["id1"] = <
 				text = <"COMPOSITION">
-				description = <"COMPOSITION class for openEHR/13606">
+				description = <"COMPOSITION class for CIMI">
 			>
 			["id2"] = <
 				text = <"composer">
