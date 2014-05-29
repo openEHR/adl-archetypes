@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5)
+archetype (adl_version=1.5)
 	openEHR-EHR-EVALUATION.diagnosis.v1
 
 specialize
