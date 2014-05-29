@@ -1,0 +1,62 @@
+﻿archetype (adl_version=1.5.1)
+	CIMI-Core-CLUSTER.openehr_13606_entry.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"10/04/2014">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Pattern archetype for openEHR-13606::ENTRY">
+			keywords = <"Entry", ...>
+			copyright = <"© 2014 CIMI">
+		>
+	>
+	lifecycle_state = <"Draft">
+	other_details = <
+		["model_level"] = <"reference">
+	>
+
+definition
+	CLUSTER[id1] matches {	-- ENTRY
+		participation matches {
+			PARTICIPATION[id2] matches {
+				function matches {[at1]}
+			}
+			PARTICIPATION[id3] matches {
+				function matches {[at2]}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"ENTRY">
+				description = <"ENTRY class for openEHR/13606">
+			>
+			["id2"] = <
+				text = <"subject">
+				description = <"subject of Entry">
+			>
+			["id3"] = <
+				text = <"provider">
+				description = <"provider of Entry">
+			>
+			["at1"] = <
+				text = <"subject of Entry">
+				description = <"subject of Entry">
+			>
+			["at2"] = <
+				text = <"provider of information">
+				description = <"provider of information on Entry">
+			>
+		>
+	>
