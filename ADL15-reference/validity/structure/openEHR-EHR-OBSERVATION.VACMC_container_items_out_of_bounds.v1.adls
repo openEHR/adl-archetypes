@@ -1,5 +1,5 @@
 archetype (adl_version=1.5.1)
-	openEHR-EHR-OBSERVATION.VACMC_container_items_out_of_bounds.v1
+	openEHR-EHR-OBSERVATION.WACMCL_container_items_out_of_bounds.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -13,13 +13,13 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VACMCL error, triggered by occurrences of container attributes being outside of cardinality bounds.">
+			purpose = <"Test WACMCL warning, triggered by occurrences of container attributes being outside of cardinality bounds.">
 			copyright = <"copyright 2011 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
 	other_details = <
-		["regression"] = <"VACMCL">
+		["regression"] = <"WACMCL">
 	>
 
 definition
