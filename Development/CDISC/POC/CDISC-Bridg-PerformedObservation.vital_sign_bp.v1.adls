@@ -1,8 +1,8 @@
 ﻿archetype (adl_version=1.5.1)
-	CDISC-Core-PerformedObservation.vital_sign_bp.v1.0.0
+	CDISC-Bridg-PerformedObservation.vital_sign_bp.v1.0.0
 
 specialize
-	CDISC-Core-PerformedObservation.vital_sign.v1.0.0
+	CDISC-Bridg-PerformedObservation.vital_sign.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -25,31 +25,31 @@ description
 	lifecycle_state = <"Draft">
 
 definition
-	PerformedObservation[id1.1] matches {
-		/instantiatedDefinedActivity[id2]/nameCode matches {[ac1.1]}
-		/resultedPerformedObservationResult[id6]/value matches {
-			PQ[id0.1]
+	PerformedObservation[id1.1.1] matches {
+		/instantiatedDefinedActivity[id0.2]/nameCode matches {[ac0.1.1]}
+		/resultedPerformedObservationResult[id0.6]/value matches {
+			PQ[id0.0.1]
 		}
-		/bodyPositionCode matches {[ac2.1]}
-		/approachAnatomicSiteCode matches {[ac3.1]}
+		/bodyPositionCode matches {[ac0.2.1]}
+		/approachAnatomicSiteCode matches {[ac0.3.1]}
 	}
 
 ontology
 	term_definitions = <
 		["en"] = <
-			["id1.1"] = <
+			["id1.1.1"] = <
 				text = <"Blood pressure BRIDG observation">
 				description = <"Blood pressure BRIDG observation">
 			>
-			["ac1.1"] = <
+			["ac0.1.1"] = <
 				text = <"BP measurement type">
 				description = <"BP measurement type">
 			>
-			["ac2.1"] = <
+			["ac0.2.1"] = <
 				text = <"BP measurement position">
 				description = <"BP measurement body position">
 			>
-			["ac3.1"] = <
+			["ac0.3.1"] = <
 				text = <"BP measurement site">
 				description = <"BP measurement site">
 			>
@@ -57,16 +57,16 @@ ontology
 	>
 
 	value_sets = <
-		["ac1.1"] = <
-			id = <"ac1.1">
-			members = <"at100", "at101">
+		["ac0.1.1"] = <
+			id = <"ac0.1.1">
+			members = <"at0.100", "at0.101">
 		>
-		["ac2.1"] = <
-			id = <"ac2.1">
-			members = <"at200", "at201">
+		["ac0.2.1"] = <
+			id = <"ac0.2.1">
+			members = <"at0.200", "at0.201">
 		>
-		["ac3.1"] = <
-			id = <"ac3.1">
-			members = <"at2", "at3", "at4", "at5">
+		["ac0.3.1"] = <
+			id = <"ac0.3.1">
+			members = <"at0.2", "at0.3", "at0.4", "at0.5">
 		>
 	>

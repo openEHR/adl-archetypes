@@ -1,0 +1,131 @@
+archetype (adl_version=1.5.1)
+	CDISC-Bridg-PerformedObservation.allergen_skin_test.v1.0.0
+
+specialize
+	CDISC-Bridg-PerformedObservation.observation.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@oceaninformatics.com>">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Demonstration CDISC archetype based on allergen skin test observation concept">
+			copyright = <"Copyright (c) 2012 openEHR Foundation ">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	PerformedObservation[id1.1] matches {	-- Allergen skin test
+		componentPerformedCompositionRelationship matches {
+			PerformedCompositionRelationship[id0.1] occurrences matches {0..1} 	-- Positive control result
+			PerformedCompositionRelationship[id0.2] occurrences matches {0..1} 	-- Negative control result
+			PerformedCompositionRelationship[id0.3] occurrences matches {1} matches {	-- Test result
+				componentPerformedActivity matches {
+					PerformedObservation[id0.5] matches {
+						componentPerformedCompositionRelationship matches {
+							PerformedCompositionRelationship[id0.6] occurrences matches {0..1} matches {	-- Wheal size result
+								componentPerformedActivity matches {
+									PerformedObservation[id0.7] matches {
+										resultedPerformedObservationResult matches {
+											PerformedObservationResult[id0.9] occurrences matches {1} matches {	-- Wheal size result
+												value matches {
+													PQ[id0.14] 
+												}
+											}
+										}
+									}
+								}
+							}
+							PerformedCompositionRelationship[id0.10] occurrences matches {0..1} matches {	-- Flare assessment
+								componentPerformedActivity matches {
+									PerformedObservation[id0.11] matches {
+										resultedPerformedObservationResult matches {
+											PerformedObservationResult[id0.12] occurrences matches {1} matches {	-- Flare assessment result
+												value matches {
+													PQ[id0.13] 
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		bodyPositionCode matches {
+			CD[id0.4] occurrences matches {1} 	-- Allergen test body location
+		}
+		methodCode matches {
+			CD[id0.8] occurrences matches {1} 	-- Allergen test protocol
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id0.1"] = <
+				text = <"Positive control result">
+				description = <"-">
+			>
+			["id0.10"] = <
+				text = <"Flare assessment">
+				description = <"-">
+			>
+			["id0.12"] = <
+				text = <"Flare assessment result">
+				description = <"-">
+			>
+			["id0.2"] = <
+				text = <"Negative control result">
+				description = <"-">
+			>
+			["id0.3"] = <
+				text = <"Test result">
+				description = <"-">
+			>
+			["id0.4"] = <
+				text = <"Allergen test body location">
+				description = <"-">
+			>
+			["id0.6"] = <
+				text = <"Wheal size result">
+				description = <"-">
+			>
+			["id0.8"] = <
+				text = <"Allergen test protocol">
+				description = <"-">
+			>
+			["id0.9"] = <
+				text = <"Wheal size result">
+				description = <"-">
+			>
+			["id1.1"] = <
+				text = <"Allergen skin test">
+				description = <"Allergen skin test performed observation">
+			>
+		>
+	>
+
+annotations
+	items = <
+		["en"] = <
+			items = <
+				["/involvedSubject[id2]"] = <
+					items = <
+						["xls-ref"] = <"635">
+						["SDTM-domain"] = <"VS">
+						["SDTM-Variable"] = <"USUBJID">
+					>
+				>
+			>
+		>
+	>

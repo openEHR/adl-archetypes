@@ -1,8 +1,8 @@
 ﻿archetype (adl_version=1.5.1)
-	CDISC-Core-PerformedObservation.vital_sign_hr.v1.0.0
+	CDISC-Bridg-PerformedObservation.vital_sign_hr.v1.0.0
 
 specialize
-	CDISC-Core-PerformedObservation.vital_sign.v1.0.0
+	CDISC-Bridg-PerformedObservation.vital_sign.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -25,31 +25,31 @@ description
 	lifecycle_state = <"unmanaged">
 
 definition
-	PerformedObservation[id1.1] matches {
-		/instantiatedDefinedActivity[id2]/nameCode matches {[ac1.1]}
-		/resultedPerformedObservationResult[id6]/value matches {
-			PQ[id0.1]
+	PerformedObservation[id1.1.1] matches {
+		/instantiatedDefinedActivity[id0.2]/nameCode matches {[ac0.1.1]}
+		/resultedPerformedObservationResult[id0.6]/value matches {
+			PQ[id0.0.1]
 		}
-		/bodyPositionCode matches {[ac2.1]}
-		/approachAnatomicSiteCode matches {[ac3.1]}
+		/bodyPositionCode matches {[ac0.2.1]}
+		/approachAnatomicSiteCode matches {[ac0.3.1]}
 	}
 
 ontology
 	term_definitions = <
 		["en"] = <
-			["id1.1"] = <
+			["id1.1.1"] = <
 				text = <"Heart rate BRIDG observation">
 				description = <"Heart rate BRIDG observation">
 			>
-			["ac1.1"] = <
+			["ac0.1.1"] = <
 				text = <"Heart rate measurement type">
 				description = <"Heart rate measurement type">
 			>
-			["ac2.1"] = <
+			["ac0.2.1"] = <
 				text = <"Heart rate measurement position">
 				description = <"Heart rate measurement body position">
 			>
-			["ac3.1"] = <
+			["ac0.3.1"] = <
 				text = <"Heart rate measurement site">
 				description = <"Heart rate measurement site">
 			>
@@ -57,16 +57,16 @@ ontology
 	>
 
 	value_sets = <
-		["ac1.1"] = <
-			id = <"ac1.1">
-			members = <"at103">
+		["ac0.1.1"] = <
+			id = <"ac0.1.1">
+			members = <"at0.103">
 		>
-		["ac2.1"] = <
-			id = <"ac2.1">
-			members = <"at200", "at201", "at202">
+		["ac0.2.1"] = <
+			id = <"ac0.2.1">
+			members = <"at0.200", "at0.201", "at0.202">
 		>
-		["ac3.1"] = <
-			id = <"ac3.1">
-			members = <"at8", "at9", "at7">
+		["ac0.3.1"] = <
+			id = <"ac0.3.1">
+			members = <"at0.8", "at0.9", "at0.7">
 		>
 	>
