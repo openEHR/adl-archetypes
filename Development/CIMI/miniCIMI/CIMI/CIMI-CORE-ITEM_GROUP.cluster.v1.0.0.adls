@@ -1,0 +1,53 @@
+archetype (adl_version=1.5.1; generated)
+	CIMI-CORE-ITEM_GROUP.cluster.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Patrick Langford">
+		["organisation"] = <"Intermountain Healthcare">
+		["email"] = <"patrick@neuronsong.com">
+		["date"] = <"10/06/2014">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Top-level reference archetype for CIMI CLUSTER concept">
+			use = <"Use as a specialisation precursor for CIMI Cluster archetypes.">
+			keywords = <"clinical statement", "cluster">
+			copyright = <"© 2014 CIMI - Clinical Information Modelling Initiative">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Linda Bird <lbi@ihtsdo.org>", "Joey Coyle <joey@xcoyle.com>", "Stan Huff <Stan.Huff@imail.org>", "Harold Solbrig <Solbrig.Harold@mayo.edu>", "Thomas Beale <thomas.beale@oceaninformatics.com>">
+	other_details = <
+		["model_level"] = <"reference">
+	>
+
+definition
+	ITEM_GROUP[id1] matches {	-- Cluster
+		item matches {
+			use_archetype ITEM_GROUP[CIMI-CORE-ITEM_GROUP.cluster.v1] occurrences matches {0..*} 
+			ELEMENT[id2] occurrences matches {0..*} 	-- Element
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Cluster">
+				description = <"Cluster">
+			>
+			["id2"] = <
+				text = <"Element">
+				description = <"Element">
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+		>
+	>
