@@ -1,0 +1,109 @@
+archetype (adl_version=1.5.1)
+	HL7-FHIR-Observation.Observation.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@oceaninformatics.com>">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"FHIR Observation Reference archetype">
+			copyright = <"Copyright (c) 2014 openEHR Foundation ">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["model_level"] = <"reference">
+	>
+
+definition
+	Observation[id1] matches {	-- Observation
+		name matches {
+			CodeableConcept[id2] matches {
+				coding matches {[ac1]}		-- Observation type
+			}
+		}
+		value matches {
+			Quantity[id4]
+			CodeableConcept[id5]
+			Attachment[id6]
+			Ratio[id7]
+			Period[id8]
+			SampledData[id9]
+		}
+		interpretation matches {
+			CodeableConcept[id3] matches {
+				coding matches {[ac2]}		-- Observation type
+			}
+		}
+		method matches {
+			CodeableConcept[id10] matches {
+				coding matches {[ac3]}		-- Observation type
+			}
+		}
+		bodySite matches {
+			CodeableConcept[id11] matches {
+				coding matches {[ac4]}		-- Observation type
+			}
+		}
+		referenceRange matches {
+			ReferenceRange [id12] matches {
+				meaning matches {
+					CodeableConcept[id13] matches {
+						coding matches {[ac5]}		
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Observation">
+				description = <"-">
+			>
+			["id12"] = <
+				text = <"Reference range">
+				description = <"-">
+			>
+			["ac1"] = <
+				text = <"Observation type">
+				description = <"-">
+			>
+			["ac2"] = <
+				text = <"Interpretation">
+				description = <"-">
+			>
+			["ac3"] = <
+				text = <"Observation method">
+				description = <"-">
+			>
+			["ac4"] = <
+				text = <"Body site">
+				description = <"-">
+			>
+			["ac5"] = <
+				text = <"Observation range meaning">
+				description = <"-">
+			>
+		>
+	>
+	term_bindings = <
+		["snomedct"] = <
+			["ac4"] = <http://snomedct.info/resolvedvalueset/sctid:91723000>
+		>
+		["loinc"] = <
+			["ac1"] = <http://loinc.org/>
+		>
+		["fhir"] = <
+			["ac2"] = <http://hl7.org/fhir/v2/0078>
+			["ac5"] = <http://hl7.org/fhir/referencerange-meaning>
+		>
+	>

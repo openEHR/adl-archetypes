@@ -1,0 +1,53 @@
+archetype (adl_version=1.5.1)
+	HL7-FHIR-Observation.blood_pressure.v1.0.0
+
+specialize
+	HL7-FHIR-Observation.Observation.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@oceaninformatics.com>">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+			copyright = <"Copyright (c) 2012 openEHR Foundation ">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	Observation[id1.1] matches {	-- Blood pressure
+		related matches {
+			Related[id0.1] occurrences matches {1} 	-- Data
+			Related[id0.2] occurrences matches {0..1} 	-- State
+			Related[id0.3] occurrences matches {0..1} 	-- Protocol
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Blood pressure">
+				description = <"Blood pressure measurement">
+			>
+			["id0.1"] = <
+				text = <"Data">
+				description = <"-">
+			>
+			["id0.2"] = <
+				text = <"State">
+				description = <"-">
+			>
+			["id0.3"] = <
+				text = <"Protocol">
+				description = <"-">
+			>
+		>
+	>
