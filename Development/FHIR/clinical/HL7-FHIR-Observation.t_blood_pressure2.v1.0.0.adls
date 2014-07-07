@@ -1,0 +1,35 @@
+template (adl_version=1.5.1)
+	HL7-FHIR-Observation.t_blood_pressure2.v1.0.0
+
+specialize
+	HL7-FHIR-Observation.blood_pressure2.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@oceaninformatics.com>">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Version of BP that uses 'contained' to represent substructure inline">
+			copyright = <"Copyright (c) 2012 openEHR Foundation ">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	Observation[id1.1.1]
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1"] = <
+				text = <"Blood pressure containment template">
+				description = <"Blood pressure measurement">
+			>
+		>
+	>

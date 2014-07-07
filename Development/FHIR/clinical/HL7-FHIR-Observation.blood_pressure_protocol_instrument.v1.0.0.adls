@@ -1,0 +1,52 @@
+archetype (adl_version=1.5.1)
+	HL7-FHIR-Observation.blood_pressure_protocol_instrument.v1.0.0
+
+specialize
+	HL7-FHIR-Observation.Observation.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@oceaninformatics.com>">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+			copyright = <"Copyright (c) 2012 openEHR Foundation ">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	Observation[id1.1] matches {	-- BP instrument
+		interpretation existence matches {0} 
+		referenceRange existence matches {0} 
+		contained existence matches {0} 
+		value matches {
+			CodeableConcept[id0.1] 
+		}
+		identifier existence matches {0} 
+		extension existence matches {0} 
+		modifierExtension existence matches {0} 
+		language existence matches {0} 
+		applies existence matches {0} 
+		issued existence matches {0} 
+		subject existence matches {0} 
+		specimen existence matches {0} 
+		performer existence matches {0} 
+		related existence matches {0} 
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"BP instrument">
+				description = <"Blood pressure measurement instrument">
+			>
+		>
+	>

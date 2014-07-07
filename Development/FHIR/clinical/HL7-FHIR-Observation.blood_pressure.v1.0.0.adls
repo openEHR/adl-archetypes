@@ -24,30 +24,59 @@ description
 definition
 	Observation[id1.1] matches {	-- Blood pressure
 		related matches {
-			Related[id0.1] occurrences matches {1} 	-- Data
-			Related[id0.2] occurrences matches {0..1} 	-- State
-			Related[id0.3] occurrences matches {0..1} 	-- Protocol
+			Related[id0.1] matches {	-- Data
+				target matches {
+					ResourceReference<Observation>[id0.4] matches {
+						resolvesTo matches {
+							use_archetype Observation[HL7-FHIR-Observation.blood_pressure_data.v1] occurrences matches {1} 
+						}
+					}
+				}
+			}
+			Related[id0.2] matches {	-- State
+				target matches {
+					ResourceReference<Observation>[id0.5] matches {
+						resolvesTo matches {
+							use_archetype Observation[HL7-FHIR-Observation.blood_pressure_state.v1] occurrences matches {1} 
+						}
+					}
+				}
+			}
+			Related[id0.3] matches {	-- Protocl
+				target matches {
+					ResourceReference<Observation>[id0.6] matches {
+						resolvesTo matches {
+							use_archetype Observation[HL7-FHIR-Observation.blood_pressure_protocol.v1] occurrences matches {1} 
+						}
+					}
+				}
+			}
 		}
+		contained existence matches {0} 
+		value existence matches {0} 
+		issued existence matches {0} 
+		subject existence matches {1} 
+		specimen existence matches {0} 
 	}
 
 terminology
 	term_definitions = <
 		["en"] = <
-			["id1.1"] = <
-				text = <"Blood pressure">
-				description = <"Blood pressure measurement">
-			>
 			["id0.1"] = <
 				text = <"Data">
-				description = <"-">
+				description = <"Blood pressure data">
 			>
 			["id0.2"] = <
 				text = <"State">
-				description = <"-">
+				description = <"Blood pressure state">
 			>
 			["id0.3"] = <
-				text = <"Protocol">
-				description = <"-">
+				text = <"Protocl">
+				description = <"Blood pressure protocol">
+			>
+			["id1.1"] = <
+				text = <"Blood pressure">
+				description = <"Blood pressure measurement">
 			>
 		>
 	>

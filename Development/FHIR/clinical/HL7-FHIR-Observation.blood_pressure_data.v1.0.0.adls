@@ -1,0 +1,79 @@
+archetype (adl_version=1.5.1)
+	HL7-FHIR-Observation.blood_pressure_data.v1.0.0
+
+specialize
+	HL7-FHIR-Observation.Observation.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@oceaninformatics.com>">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+			copyright = <"Copyright (c) 2012 openEHR Foundation ">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	Observation[id1.1] matches {	-- BP data
+		method existence matches {0} 
+		bodySite existence matches {0} 
+		referenceRange existence matches {0} 
+		contained existence matches {0} 
+		related matches {
+			Related[id0.1] matches {	-- systolic resource
+				target matches {
+					ResourceReference<Observation>[id0.4] matches {
+						resolvesTo matches {
+							use_archetype Observation[HL7-FHIR-Observation.blood_pressure_data_systolic.v1] 
+						}
+					}
+				}
+			}
+			Related[id0.2] matches {	-- diastolic resource
+				target matches {
+					ResourceReference<Observation>[id0.5] matches {
+						resolvesTo matches {
+							use_archetype Observation[HL7-FHIR-Observation.blood_pressure_data_diastolic.v1] 
+						}
+					}
+				}
+			}
+		}
+		identifier existence matches {0} 
+		extension existence matches {0} 
+		modifierExtension existence matches {0} 
+		language existence matches {0} 
+		text existence matches {0} 
+		value existence matches {0} 
+		comments existence matches {0} 
+		issued existence matches {0} 
+		subject existence matches {0} 
+		specimen existence matches {0} 
+		performer existence matches {0} 
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id0.1"] = <
+				text = <"systolic resource">
+				description = <"Blood pressure systolic resource">
+			>
+			["id0.2"] = <
+				text = <"diastolic resource">
+				description = <"Blood pressure diastolic resource">
+			>
+			["id1.1"] = <
+				text = <"BP data">
+				description = <"Blood pressure measurement data">
+			>
+		>
+	>

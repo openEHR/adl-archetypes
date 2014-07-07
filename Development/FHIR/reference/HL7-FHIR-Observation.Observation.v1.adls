@@ -28,37 +28,32 @@ definition
 				coding matches {[ac1]}		-- Observation type
 			}
 		}
-		value matches {
-			Quantity[id4]
-			CodeableConcept[id5]
-			Attachment[id6]
-			Ratio[id7]
-			Period[id8]
-			SampledData[id9]
-		}
 		interpretation matches {
 			CodeableConcept[id3] matches {
-				coding matches {[ac2]}		-- Observation type
+				coding matches {[ac2]}		-- Interpretation
 			}
 		}
 		method matches {
 			CodeableConcept[id10] matches {
-				coding matches {[ac3]}		-- Observation type
+				coding matches {[ac3]}		-- Observation method
 			}
 		}
 		bodySite matches {
 			CodeableConcept[id11] matches {
-				coding matches {[ac4]}		-- Observation type
+				coding matches {[ac4]}		-- Body site
 			}
 		}
 		referenceRange matches {
-			ReferenceRange [id12] matches {
+			ReferenceRange[id12] matches {	-- Reference range
 				meaning matches {
 					CodeableConcept[id13] matches {
-						coding matches {[ac5]}		
+						coding matches {[ac5]}		-- Observation range meaning
 					}
 				}
 			}
+		}
+		contained matches {
+			Observation[id14] 	-- Observation item
 		}
 	}
 
@@ -91,6 +86,10 @@ terminology
 			>
 			["ac5"] = <
 				text = <"Observation range meaning">
+				description = <"-">
+			>
+			["id14"] = <
+				text = <"Observation item">
 				description = <"-">
 			>
 		>
