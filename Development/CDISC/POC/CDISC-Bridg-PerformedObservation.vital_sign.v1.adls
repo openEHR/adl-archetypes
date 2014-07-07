@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+﻿archetype (adl_version=1.5.1)
 	CDISC-Bridg-PerformedObservation.vital_sign.v1.0.0
 
 specialize
@@ -22,65 +22,45 @@ description
 			copyright = <"© 2014 CDISC.org">
 		>
 	>
-	lifecycle_state = <"Draft">
+	lifecycle_state = <"unmanaged">
 
 definition
-	PerformedObservation[id1.1] matches {
+	PerformedObservation[id1.1] matches {	-- vital sign BRIDG observation
 		instantiatedDefinedActivity matches {
 			DefinedObservation[id0.2] matches {
-				nameCode matches {[ac0.1]}
+				nameCode matches {[ac0.1]}		-- vital sign measurement type
 			}
 		}
 		instantiatedPlannedActivity matches {
 			PlannedActivity[id0.8] matches {
 				componentPlannedCompositionRelationship matches {
-					PlannedCompositionRelationship[id0.9] matches {
+					PlannedCompositionRelationship[id0.9] matches {	-- Encounter type
 						componentPlannedActivity matches {
-							PlannedSubjectActivityGroup[id0.10] occurrences matches {1}
- 						}
+							PlannedSubjectActivityGroup[id0.10] occurrences matches {1} 
+						}
 					}
 				}
 			}
 		}
 		resultedPerformedObservationResult matches {
-			PerformedObservationResult[id0.4]
-			PerformedObservationResult[id0.5] matches {
+			PerformedObservationResult[id0.4] 	-- Original value
+			PerformedObservationResult[id0.5] matches {	-- Original units
 				value matches {
-					ST[id0.12]
+					ST[id0.12] 
 				}
 			}
-			PerformedObservationResult[id0.6] matches {
-				baselineIndicator existence matches {1}
+			PerformedObservationResult[id0.6] matches {	-- Result value
+				baselineIndicator existence matches {1} 
 			}
 		}
-		bodyPositionCode matches {[ac0.2]}
-		approachAnatomicSiteCode matches {[ac0.3]}
-		dateRange existence matches {1}
+		bodyPositionCode matches {[ac0.2]}		-- vital sign measurement body positions
+		approachAnatomicSiteCode matches {[ac0.3]}		-- vital sign measurement body sites
+		dateRange existence matches {1} 
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			["id1.1"] = <
-				text = <"vital sign BRIDG observation">
-				description = <"vital sign BRIDG observation">
-			>
-			["id0.4"] = <
-				text = <"Original value">
-				description = <"Original measurement value collected or received">
-			>
-			["id0.5"] = <
-				text = <"Original units">
-				description = <"Original measurement units collected or received">
-			>
-			["id0.6"] = <
-				text = <"Result value">
-				description = <"Result value for all findings">
-			>
-			["id0.9"] = <
-				text = <"Encounter type">
-				description = <"Encounter type">
-			>
 			["ac0.1"] = <
 				text = <"vital sign measurement type">
 				description = <"vital sign measurement type">
@@ -93,45 +73,9 @@ ontology
 				text = <"vital sign measurement body sites">
 				description = <"vital sign measurement body sites">
 			>
-			["at0.2"] = <
-				text = <"Left arm">
-				description = <"Left arm">
-			>
-			["at0.3"] = <
-				text = <"Right arm">
-				description = <"Right arm">
-			>
-			["at0.4"] = <
-				text = <"Left thigh">
-				description = <"Left thigh">
-			>
-			["at0.5"] = <
-				text = <"Right thigh">
-				description = <"Right thigh">
-			>
-			["at0.6"] = <
-				text = <"Head">
-				description = <"Head">
-			>
-			["at0.7"] = <
-				text = <"Neck">
-				description = <"Neck">
-			>
-			["at0.8"] = <
-				text = <"Left wrist">
-				description = <"Left wrist">
-			>
-			["at0.9"] = <
-				text = <"Right wrist">
-				description = <"Right wrist">
-			>
 			["at0.10"] = <
 				text = <"Chest">
 				description = <"Chest">
-			>
-			["at0.11"] = <
-				text = <"Abdomen">
-				description = <"Abdomen">
 			>
 			["at0.100"] = <
 				text = <"SYSBP">
@@ -165,6 +109,14 @@ ontology
 				text = <"RESP">
 				description = <"Respiration">
 			>
+			["at0.11"] = <
+				text = <"Abdomen">
+				description = <"Abdomen">
+			>
+			["at0.2"] = <
+				text = <"Left arm">
+				description = <"Left arm">
+			>
 			["at0.200"] = <
 				text = <"SITTING">
 				description = <"Sitting position">
@@ -181,9 +133,56 @@ ontology
 				text = <"INCLINED">
 				description = <"Inclined position">
 			>
+			["at0.3"] = <
+				text = <"Right arm">
+				description = <"Right arm">
+			>
+			["at0.4"] = <
+				text = <"Left thigh">
+				description = <"Left thigh">
+			>
+			["at0.5"] = <
+				text = <"Right thigh">
+				description = <"Right thigh">
+			>
+			["at0.6"] = <
+				text = <"Head">
+				description = <"Head">
+			>
+			["at0.7"] = <
+				text = <"Neck">
+				description = <"Neck">
+			>
+			["at0.8"] = <
+				text = <"Left wrist">
+				description = <"Left wrist">
+			>
+			["at0.9"] = <
+				text = <"Right wrist">
+				description = <"Right wrist">
+			>
+			["id0.4"] = <
+				text = <"Original value">
+				description = <"Original measurement value collected or received">
+			>
+			["id0.5"] = <
+				text = <"Original units">
+				description = <"Original measurement units collected or received">
+			>
+			["id0.6"] = <
+				text = <"Result value">
+				description = <"Result value for all findings">
+			>
+			["id0.9"] = <
+				text = <"Encounter type">
+				description = <"Encounter type">
+			>
+			["id1.1"] = <
+				text = <"vital sign BRIDG observation">
+				description = <"vital sign BRIDG observation">
+			>
 		>
 	>
-
 	value_sets = <
 		["ac0.1"] = <
 			id = <"ac0.1">
@@ -200,10 +199,16 @@ ontology
 	>
 
 annotations
-
 	items = <
 		["en"] = <
 			items = <
+				["/involvedSubject[id2]"] = <
+					items = <
+						["xls-ref"] = <"635">
+						["SDTM-domain"] = <"VS">
+						["SDTM-Variable"] = <"USUBJID">
+					>
+				>
 				["/instantiatedDefinedActivity[id0.2]"] = <
 					items = <
 						["xls-ref"] = <"639">

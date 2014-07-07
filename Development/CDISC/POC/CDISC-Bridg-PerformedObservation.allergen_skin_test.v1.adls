@@ -30,7 +30,7 @@ definition
 				componentPerformedActivity matches {
 					PerformedObservation[id0.5] matches {
 						componentPerformedCompositionRelationship matches {
-							PerformedCompositionRelationship[id0.6] occurrences matches {0..1} matches {	-- Wheal size result
+							PerformedCompositionRelationship[id0.6] occurrences matches {0..1} matches {	-- Wheal size
 								componentPerformedActivity matches {
 									PerformedObservation[id0.7] matches {
 										resultedPerformedObservationResult matches {
@@ -62,7 +62,7 @@ definition
 			}
 		}
 		bodyPositionCode matches {
-			CD[id0.4] occurrences matches {1} 	-- Allergen test body location
+			CD[id0.4] occurrences matches {1} 	-- Allergen test body site
 		}
 		methodCode matches {
 			CD[id0.8] occurrences matches {1} 	-- Allergen test protocol
@@ -93,11 +93,11 @@ terminology
 				description = <"-">
 			>
 			["id0.4"] = <
-				text = <"Allergen test body location">
+				text = <"Allergen test body site">
 				description = <"-">
 			>
 			["id0.6"] = <
-				text = <"Wheal size result">
+				text = <"Wheal size">
 				description = <"-">
 			>
 			["id0.8"] = <
