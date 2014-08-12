@@ -1,0 +1,14 @@
+--
+-- Logical archetype library definition
+--
+-- possible values for type = reference | working
+--
+-- This file is a serialised instance of the type ARCHETYPE_LIBRARY_DEFINITION
+--
+
+name = <"CDISC BRIDG proof of concept library">
+short_name = <"BRIDG POC">
+maintainer = <"openEHR">
+description = <"Archetypes based on CDISC BRIDG, demonstrating archetype approach to representing BRIDG data sets">
+
+

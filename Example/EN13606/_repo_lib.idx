@@ -1,0 +1,10 @@
+--
+-- Logical archetype library definition
+--
+-- This file is a serialised instance of the type ARCHETYPE_LIBRARY_DEFINITION
+--
+
+name = <"ISO 13606 examples archetypes">
+short_name = <"13606 examples">
+maintainer = <"openEHR">
+description = <"Example archetypes based on ISO 13606 RM">

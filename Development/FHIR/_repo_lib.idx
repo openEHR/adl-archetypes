@@ -1,0 +1,8 @@
+--
+-- Logical archetype repository definition
+--
+
+name = <"FHIR POC archetypes">
+short_name = <"FHIR">
+maintainer = <"openEHR">
+description = <"FHIR based archetypes demonstrating profiling via archetyping">

@@ -1,0 +1,8 @@
+--
+-- Logical archetype repository definition
+--
+
+name = <"openEHR LINK">
+short_name = <"LINK">
+maintainer = <"openEHR">
+description = <"openEHR demonstration LINK class archetypes">

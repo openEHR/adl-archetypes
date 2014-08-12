@@ -1,0 +1,10 @@
+--
+-- Logical archetype library definition
+--
+-- This file is a serialised instance of the type ARCHETYPE_LIBRARY_DEFINITION
+--
+
+name = <"CIMI Reference">
+short_name = <"RM 1.0">
+maintainer = <"openEHR">
+description = <"CIMI archetypes based on old RM">

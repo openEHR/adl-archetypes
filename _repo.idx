@@ -1,0 +1,10 @@
+--
+-- Archetype repository definition
+--
+-- This node in the tree is the root of the whole repository; underneath this point 
+-- there may be _repo_lib.adx files, which indicate where libraries are found.
+--
+
+maintainer = <"openEHR">
+name = <"reference repository">
+description = <"Reference repository for test and demonstration archetypes.">

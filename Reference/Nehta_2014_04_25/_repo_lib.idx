@@ -1,0 +1,12 @@
+--
+-- Logical archetype library definition
+--
+
+name = <"Nehta 2014-04-25">
+short_name = <"Nehta">
+maintainer = <"Nehta">
+description = <"Snapshot of Nehta archetypes 2014-04-25">
+remote = <
+	url = <"http://dcm.nehta.org.au/ckm/">
+	custodian = <"National e-Health Transition Authority <http://www.nehta.gov.au/>">
+>

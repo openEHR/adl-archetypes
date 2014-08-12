@@ -1,0 +1,12 @@
+--
+-- Logical archetype library definition
+--
+
+name = <"Spain MoH archetypes">
+short_name = <"MOH_Spain">
+maintainer = <"MOH Spain">
+description = <"Spanish Ministry of Health 13606 archetypes">
+remote = <
+	url = <"https://www.msssi.gob.es/profesionales/hcdsns/areaRecursosSem/Rec_mod_clinico_arquetipos.htm">
+	custodian = <"Ministerio de Sanidad, Servicios Sociales e Igualdad">
+>

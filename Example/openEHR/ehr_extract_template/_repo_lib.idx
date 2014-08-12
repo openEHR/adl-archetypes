@@ -1,0 +1,8 @@
+--
+-- Logical archetype repository definition
+--
+
+name = <"openEHR EHR Extract">
+short_name = <"EHR Extract">
+maintainer = <"openEHR">
+description = <"openEHR EHR Extract archetypes and template, modelling full discharge summary">
