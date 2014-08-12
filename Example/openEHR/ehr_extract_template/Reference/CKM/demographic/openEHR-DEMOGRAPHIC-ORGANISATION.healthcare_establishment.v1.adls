@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1)
+archetype (adl_version=1.5.1)
 	openEHR-DEMOGRAPHIC-ORGANISATION.healthcare_establishment.v1.0.0
 
 language
@@ -34,12 +34,7 @@ definition
 							}
 							ELEMENT[id5] occurrences matches {1..*} matches {	-- Identifier
 								value matches {
-									DV_IDENTIFIER[id8] matches {
-										issuer 
-										id 
-										type 
-										realm 
-									}
+									DV_IDENTIFIER[id8]									}
 								}
 							}
 						}
