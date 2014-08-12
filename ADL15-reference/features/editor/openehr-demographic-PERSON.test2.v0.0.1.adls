@@ -1,0 +1,86 @@
+archetype (adl_version=1.5.1)
+	openehr-demographic-PERSON.test2.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@oceaninformatics.com>">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+			copyright = <"Copyright (c) 2012 openEHR Foundation ">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+
+definition
+	PERSON[id1] matches {	-- -
+		contacts matches {
+			CONTACT[id2] occurrences matches {0..1} matches {	-- home
+				addresses matches {
+					ADDRESS[id7] occurrences matches {0..1} matches {	-- Primary
+						name matches {
+							DV_CODED_TEXT[id8] 
+						}
+					}
+				}
+			}
+			CONTACT[id3] occurrences matches {0..1} matches {	-- work
+				addresses matches {
+					ADDRESS[id4] 	-- Postal
+					allow_archetype ADDRESS[id5] 	-- Delivery
+				}
+			}
+			CONTACT[id6] 	-- Holiday
+		}
+		identities matches {
+			PARTY_IDENTITY[id9] occurrences matches {1} matches {	-- Primary name
+				name matches {
+					DV_CODED_TEXT[id10] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"-">
+				description = <"-">
+			>
+			["id2"] = <
+				text = <"home">
+				description = <"-">
+			>
+			["id3"] = <
+				text = <"work">
+				description = <"-">
+			>
+			["id4"] = <
+				text = <"Postal">
+				description = <"-">
+			>
+			["id5"] = <
+				text = <"Delivery">
+				description = <"-">
+			>
+			["id6"] = <
+				text = <"Holiday">
+				description = <"-">
+			>
+			["id7"] = <
+				text = <"Primary">
+				description = <"-">
+			>
+			["id9"] = <
+				text = <"Primary name">
+				description = <"-">
+			>
+		>
+	>

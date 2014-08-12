@@ -14,8 +14,6 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Parent archetype to test various redefinitions and additions">
-			use = <"">
-			misuse = <"">
 		>
 	>
 	lifecycle_state = <"unmanaged">

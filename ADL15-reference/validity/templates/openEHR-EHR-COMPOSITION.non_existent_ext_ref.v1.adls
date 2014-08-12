@@ -25,7 +25,7 @@ description
 definition
 	COMPOSITION[id1] matches {
 		content matches {
-			use_archetype OBSERVATION[openEHR-EHR-OBSERVATION.doesnt_exist.v1]
+			use_archetype OBSERVATION[id2, openEHR-EHR-OBSERVATION.doesnt_exist.v1]
 		}
 	}
 
@@ -35,6 +35,10 @@ terminology
 			["id1"] = <
 				text = <"Composition">
 				description = <"Composition">
+			>
+			["id2"] = <
+				text = <"Observation">
+				description = <"Observation">
 			>
 		>
 	>

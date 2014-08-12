@@ -1,0 +1,77 @@
+archetype (adl_version=1.5.1)
+	openEHR-EHR-OBSERVATION.ordering_parent-merge_children.v1.0.0
+
+specialize
+	openEHR-EHR-OBSERVATION.ordering_parent.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"07/11/2009">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Chidlen to merge into parent at a specific point">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"initial">
+	other_details = <
+		["regression"] = <"PASS">
+	>
+
+definition
+	OBSERVATION[id1.1] matches {	-- Blood matching
+		/data[id2]/events[id3]/data[id4]/items matches {
+			ELEMENT[id10] 
+			ELEMENT[id10.1] occurrences matches {0..1} matches {	-- Rhesus
+				value matches {
+					DV_TEXT[id0.11] 
+				}
+			}
+			ELEMENT[id10.2] occurrences matches {0..1} matches {	-- ABO
+				value matches {
+					DV_TEXT[id0.12] 
+				}
+			}
+			ELEMENT[id0.1] occurrences matches {0..1} matches {	-- Antibodies detected
+				value matches {
+					DV_BOOLEAN[id0.13]
+				}
+			}
+			before [id12]
+			CLUSTER[id0.2] occurrences matches {0..1} 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Blood matching">
+				description = <"Blood group information including ABO, Rhesus and antibodies etc.">
+			>
+			["id0.1"] = <
+				text = <"Antibodies detected">
+				description = <"Antibodies have been detected.">
+			>
+			["id0.2"] = <
+				text = <"Antibodies">
+				description = <"Group of findings relating to one antibody.">
+			>
+			["id10.1"] = <
+				text = <"Rhesus">
+				description = <"Rhesus blood group information.">
+			>
+			["id10.2"] = <
+				text = <"ABO">
+				description = <"ABO blood group information.">
+			>
+		>
+	>

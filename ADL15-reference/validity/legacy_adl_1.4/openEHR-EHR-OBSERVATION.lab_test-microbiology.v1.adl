@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4)
 	openEHR-EHR-OBSERVATION.lab_test-microbiology.v1
 
 specialise
@@ -18,8 +18,8 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test for anomaly in generation of differential archetype from flat">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			purpose = <"Test for anomaly in generation of differential archetype from flat.">
+			copyright = <"copyright (c) 2010 openEHR Foundation.">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">

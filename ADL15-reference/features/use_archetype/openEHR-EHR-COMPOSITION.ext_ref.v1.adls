@@ -25,8 +25,8 @@ description
 definition
 	COMPOSITION[id1] matches {	-- Composition
 		content matches {
-			use_archetype SECTION[openEHR-EHR-SECTION.section_parent.v1] occurrences matches {0..1} 
-			use_archetype OBSERVATION[openEHR-EHR-OBSERVATION.spec_test_obs.v1] occurrences matches {1} 
+			use_archetype SECTION[id2, openEHR-EHR-SECTION.section_parent.v1] occurrences matches {0..1} 
+			use_archetype OBSERVATION[id3, openEHR-EHR-OBSERVATION.spec_test_obs.v1] occurrences matches {1} 
 		}
 	}
 
@@ -36,6 +36,14 @@ terminology
 			["id1"] = <
 				text = <"Composition">
 				description = <"Composition">
+			>
+			["id2"] = <
+				text = <"Section">
+				description = <"Section">
+			>
+			["id3"] = <
+				text = <"Observation">
+				description = <"Observation">
 			>
 		>
 	>
