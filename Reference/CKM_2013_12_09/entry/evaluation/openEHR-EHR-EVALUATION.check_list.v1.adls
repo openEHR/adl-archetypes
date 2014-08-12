@@ -36,7 +36,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"00558AB8D4C1430C4C73D12BCF9224B1">
 	>

@@ -24,7 +24,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"75E4E6DE863A430A1F1C7ABF3C8DDB9A">
@@ -105,7 +105,7 @@ definition
 							}
 						}
 					}
-					allow_archetype CLUSTER[id0.26] occurrences matches {0..*} matches {	-- Abdominal contents detail
+					allow_archetype CLUSTER[id0.26] matches {	-- Abdominal contents detail
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-a-zA-Z0-9_]+)*\.v1/}
 					}

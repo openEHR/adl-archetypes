@@ -17,7 +17,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"D33F4A1B634C2ED46B16E86164CE843A">
@@ -54,7 +54,7 @@ definition
 									DV_TEXT[id22] 
 								}
 							}
-							ELEMENT[id4] occurrences matches {0..*} matches {	-- Perpetrator
+							ELEMENT[id4] matches {	-- Perpetrator
 								value matches {
 									DV_TEXT[id23] 
 								}
@@ -68,7 +68,7 @@ definition
 					}
 					CLUSTER[id9] occurrences matches {0..1} matches {	-- Preceding symptoms and events
 						items matches {
-							allow_archetype CLUSTER[id17] occurrences matches {0..*} matches {	-- Cluster: Preceding symptoms and events
+							allow_archetype CLUSTER[id17] matches {	-- Cluster: Preceding symptoms and events
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom\.v1|openEHR-EHR-CLUSTER\.health_event\.v1/}
 							}
@@ -76,7 +76,7 @@ definition
 					}
 					CLUSTER[id13] occurrences matches {0..1} matches {	-- Associated symptoms and events
 						items matches {
-							allow_archetype CLUSTER[id18] occurrences matches {0..*} matches {	-- Cluster: Preceding and associated symptoms and events
+							allow_archetype CLUSTER[id18] matches {	-- Cluster: Preceding and associated symptoms and events
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.health_event\.v1|openEHR-EHR-CLUSTER\.symptom-pain\.v1|openEHR-EHR-CLUSTER\.symptom\.v1/}
 							}
@@ -84,7 +84,7 @@ definition
 					}
 					CLUSTER[id14] occurrences matches {0..1} matches {	-- Contributing factors
 						items matches {
-							ELEMENT[id15] occurrences matches {0..*} matches {	-- Contributing factor
+							ELEMENT[id15] matches {	-- Contributing factor
 								value matches {
 									DV_TEXT[id25] 
 								}

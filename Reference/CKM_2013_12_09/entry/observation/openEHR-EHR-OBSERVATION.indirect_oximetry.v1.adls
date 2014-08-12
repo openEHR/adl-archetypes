@@ -71,7 +71,7 @@ definition
 		data matches {
 			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[id3] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id3] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
 								items matches {
@@ -130,11 +130,11 @@ definition
 											}
 										}
 									}
-									allow_archetype CLUSTER[id55] occurrences matches {0..*} matches {	-- Waveform
+									allow_archetype CLUSTER[id55] matches {	-- Waveform
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.waveform(-a-zA-Z0-9_]+)*\.v1/}
 									}
-									ELEMENT[id20] occurrences matches {0..*} matches {	-- Multimedia Image
+									ELEMENT[id20] matches {	-- Multimedia Image
 										value matches {
 											DV_MULTIMEDIA[id66] matches {
 												media_type 
@@ -170,7 +170,7 @@ definition
 											DV_TEXT[id69] 
 										}
 									}
-									ELEMENT[id17] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[id17] matches {	-- Confounding Factors
 										value matches {
 											DV_TEXT[id70] 
 										}
@@ -217,7 +217,7 @@ definition
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}
-					allow_archetype CLUSTER[id57] occurrences matches {0..*} matches {	-- Oxygen Delivery Device
+					allow_archetype CLUSTER[id57] matches {	-- Oxygen Delivery Device
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}

@@ -60,7 +60,7 @@ Not to be used for diagnoses and problems that form part of a persisting Problem
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -111,7 +111,7 @@ definition
 					}
 				}
 			}
-			CLUSTER[id47] occurrences matches {0..*} matches {	-- Intensity
+			CLUSTER[id47] matches {	-- Intensity
 				items matches {
 					ELEMENT[id48] occurrences matches {0..1} matches {	-- Degree
 						value matches {
@@ -175,7 +175,7 @@ definition
 							}
 						}
 					}
-					CLUSTER[id91] occurrences matches {0..*} matches {	-- Previous Episode
+					CLUSTER[id91] matches {	-- Previous Episode
 						items matches {
 							ELEMENT[id143] occurrences matches {0..1} matches {	-- Date / time of previous episode
 								value matches {
@@ -255,7 +255,7 @@ definition
 				items matches {
 					CLUSTER[id19] occurrences matches {0..1} matches {	-- Modifying Factor
 						items matches {
-							ELEMENT[id20] occurrences matches {0..*} matches {	-- Factor
+							ELEMENT[id20] matches {	-- Factor
 								value matches {
 									DV_TEXT[id176] 
 								}
@@ -284,13 +284,13 @@ definition
 					}
 				}
 			}
-			allow_archetype CLUSTER[id64] occurrences matches {0..*} matches {	-- Associated symptoms
+			allow_archetype CLUSTER[id64] matches {	-- Associated symptoms
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom(-a-zA-Z0-9_]+)*\.v1/}
 			}
 			CLUSTER[id62] occurrences matches {0..1} matches {	-- Features not present
 				items matches {
-					ELEMENT[id63] occurrences matches {0..*} matches {	-- Absent feature
+					ELEMENT[id63] matches {	-- Absent feature
 						value matches {
 							DV_TEXT[id179] 
 						}

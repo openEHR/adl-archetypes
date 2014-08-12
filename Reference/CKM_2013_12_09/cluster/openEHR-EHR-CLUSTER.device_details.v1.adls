@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
 		["references"] = <"HL7 International, Implementation Guide for CDA Release 2.0 Personal Healthcare Monitoring Report (PHMR) (International Realm) Draft Standard for Trial Use Release 1. 2008;[cited 2010 Feb 2 ]
@@ -133,7 +133,7 @@ definition
 					DV_DATE_TIME[id47] 
 				}
 			}
-			allow_archetype CLUSTER[id19] occurrences matches {0..*} matches {	-- Serviced by
+			allow_archetype CLUSTER[id19] matches {	-- Serviced by
 				include
 					archetype_id/value matches {/.*/}
 			}
@@ -142,7 +142,7 @@ definition
 					DV_TEXT[id48] 
 				}
 			}
-			CLUSTER[id20] occurrences matches {0..*} matches {	-- Formulae
+			CLUSTER[id20] matches {	-- Formulae
 				items matches {
 					ELEMENT[id21] matches {	-- Formula name
 						value matches {

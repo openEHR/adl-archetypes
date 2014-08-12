@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Merrilyn Curtis, AnalyzeIT, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -64,7 +64,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[id9] occurrences matches {0..*} matches {	-- Comment
+									ELEMENT[id9] matches {	-- Comment
 										value matches {
 											DV_TEXT[id20] 
 										}
@@ -79,7 +79,7 @@ definition
 		protocol matches {
 			ITEM_TREE[id15] matches {
 				items matches {
-					ELEMENT[id8] occurrences matches {0..*} matches {	-- Criterion
+					ELEMENT[id8] matches {	-- Criterion
 						value matches {
 							DV_TEXT[id21] 
 						}

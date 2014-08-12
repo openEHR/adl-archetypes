@@ -38,7 +38,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
 	EVALUATION[id1] matches {	-- Evaluation of risk of condition

@@ -20,7 +20,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
@@ -28,7 +28,7 @@ description
 definition
 	CLUSTER[id1] matches {	-- Sense of smell
 		items matches {
-			CLUSTER[id2] occurrences matches {0..*} matches {	-- Odour tested
+			CLUSTER[id2] matches {	-- Odour tested
 				items matches {
 					ELEMENT[id3] occurrences matches {0..1} matches {	-- Name of odour
 						value matches {

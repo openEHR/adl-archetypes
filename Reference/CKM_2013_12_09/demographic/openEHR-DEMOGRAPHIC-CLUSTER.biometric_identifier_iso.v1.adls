@@ -39,7 +39,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"ISO/TS 22220:2008(E) - Identification of Subject of Care - Technical Specification- International Organization for Standardization">
 	>
@@ -71,7 +71,7 @@ definition
 					DV_TEXT[id14] 
 				}
 			}
-			ELEMENT[id6] occurrences matches {0..*} matches {	-- Location of biometric identifier
+			ELEMENT[id6] matches {	-- Location of biometric identifier
 				value matches {
 					DV_CODED_TEXT[id15] matches {
 						defining_code matches {[ac2]}		-- Localization code

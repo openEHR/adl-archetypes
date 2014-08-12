@@ -57,7 +57,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"3DE9486355CA4A3926F27A8B1E8C5CFB">
@@ -119,7 +119,7 @@ definition
 							}
 						}
 					}
-					allow_archetype CLUSTER[id15] occurrences matches {0..*} matches {	-- Cessation attempts
+					allow_archetype CLUSTER[id15] matches {	-- Cessation attempts
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.cessation_attempts\.v1/}
 					}

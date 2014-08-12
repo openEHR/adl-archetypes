@@ -32,7 +32,7 @@ definition
 		items matches {
 			CLUSTER[id2] occurrences matches {0..1} matches {	-- Normal Statements
 				items matches {
-					ELEMENT[id3] occurrences matches {0..*} matches {	-- Normal statement
+					ELEMENT[id3] matches {	-- Normal statement
 						value matches {
 							DV_CODED_TEXT[id53] matches {
 								defining_code 
@@ -48,7 +48,7 @@ definition
 							DV_TEXT[id54] 
 						}
 					}
-					CLUSTER[id51] occurrences matches {0..*} matches {	-- General test findings
+					CLUSTER[id51] matches {	-- General test findings
 						items matches {
 							ELEMENT[id52] occurrences matches {0..1} matches {	-- Test
 								value matches {
@@ -62,9 +62,9 @@ definition
 							use_node ELEMENT[id58] /items[id4]/items[id6]/items[id42]	-- /items[Findings]/items[Specific test findings]/items[Affected side]
 						}
 					}
-					CLUSTER[id6] occurrences matches {0..*} matches {	-- Specific test findings
+					CLUSTER[id6] matches {	-- Specific test findings
 						items matches {
-							ELEMENT[id9] occurrences matches {0..*} matches {	-- Test
+							ELEMENT[id9] matches {	-- Test
 								value matches {
 									DV_CODED_TEXT[id59] matches {
 										defining_code matches {[ac2]}		-- Test (synthesised)

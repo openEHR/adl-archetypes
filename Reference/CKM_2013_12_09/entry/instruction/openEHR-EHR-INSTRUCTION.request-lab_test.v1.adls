@@ -42,7 +42,7 @@ If there are more specific details about the test and/or specimen include this i
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"18ACD058EF4E112C2C126DFDD4952F3D">
@@ -52,7 +52,7 @@ definition
 	INSTRUCTION[id1.1] matches {	-- Laboratory Test request
 		/activities[id2]/description[id10]/items matches {
 			before [id63]
-			allow_archetype CLUSTER[id0.145] occurrences matches {0..*} matches {	-- Specimen details
+			allow_archetype CLUSTER[id0.145] matches {	-- Specimen details
 				include
 					archetype_id/value matches {/.*/}
 			}

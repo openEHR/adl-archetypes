@@ -22,7 +22,7 @@ Use as a component archetype in the context of a suite of archetypes that make u
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Matt Cordell, NEHTA, Australia", "David Ellis, RCPA, Australia", "Heather Leslie, Ocean Informatics, Australia", "David McKillop, NEHTA, Australia", "Cathy Richardson, NEHTA, Australia">
 	other_details = <
 		["references"] = <"Royal College of Pathologists of Australasia. Primary Cutaneous Melanoma Structured Reporting Protocol (1st Edition 2010). [Internet]. 2010;[cited 2010 Mar 21 ]
@@ -64,7 +64,7 @@ definition
 					}
 				}
 			}
-			allow_archetype CLUSTER[id68] occurrences matches {0..*} matches {	-- Surgical margins 
+			allow_archetype CLUSTER[id68] matches {	-- Surgical margins 
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins(-a-zA-Z0-9_]+)*\.v1/}
 				exclude
@@ -221,7 +221,7 @@ definition
 					}
 				}
 			}
-			allow_archetype CLUSTER[id128] occurrences matches {0..*} matches {	-- Neurotropism
+			allow_archetype CLUSTER[id128] matches {	-- Neurotropism
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion(-a-zA-Z0-9_]+)*\.v1/}
 				exclude
@@ -229,7 +229,7 @@ definition
 			}
 			CLUSTER[id93] occurrences matches {0..1} matches {	-- Associated benign melanocytic lesion(s)
 				items matches {
-					ELEMENT[id45] occurrences matches {0..*} matches {	-- Associated benign melanocytic lesion
+					ELEMENT[id45] matches {	-- Associated benign melanocytic lesion
 						value matches {
 							DV_TEXT[id147] 
 						}

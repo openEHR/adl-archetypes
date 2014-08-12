@@ -107,7 +107,7 @@ definition
 		protocol matches {
 			ITEM_TREE[id19] matches {
 				items matches {
-					allow_archetype CLUSTER[id21] occurrences matches {0..*} matches {	-- Device
+					allow_archetype CLUSTER[id21] matches {	-- Device
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}

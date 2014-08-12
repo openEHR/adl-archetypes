@@ -37,7 +37,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"http://en.wikipedia.org/wiki/Bristol_stool_scale
 Lewis SJ, Heaton KW (1997). \"Stool form scale as a useful guide to intestinal transit time\". Scand. J. Gastroenterol. 32 (9): 920–4.">

@@ -53,7 +53,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
@@ -93,7 +93,7 @@ definition
 		protocol matches {
 			ITEM_TREE[id8] matches {
 				items matches {
-					allow_archetype CLUSTER[id10] occurrences matches {0..*} matches {	-- Device
+					allow_archetype CLUSTER[id10] matches {	-- Device
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}

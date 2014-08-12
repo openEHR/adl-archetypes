@@ -41,7 +41,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", "Hugh Leslie, Ocean Informatics, Australia", "Sam Heard, Ocean Informatics, Australia">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"F683FB4691EC3FFEE37CCEB3166ECD76">

@@ -23,7 +23,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
@@ -40,7 +40,7 @@ definition
 				}
 			}
 			ELEMENT[id4.1] 	-- Assessed risk
-			CLUSTER[id0.2] occurrences matches {0..*} matches {	-- Relative
+			CLUSTER[id0.2] matches {	-- Relative
 				items matches {
 					ELEMENT[id0.30] occurrences matches {0..1} matches {	-- Relationship
 						value matches {
@@ -127,7 +127,7 @@ definition
 					}
 				}
 			}
-			CLUSTER[id0.14] occurrences matches {0..*} matches {	-- Affected ratio
+			CLUSTER[id0.14] matches {	-- Affected ratio
 				items cardinality matches {1..4; ordered} matches {
 					ELEMENT[id0.15] occurrences matches {0..1} matches {	-- Degree
 						value matches {

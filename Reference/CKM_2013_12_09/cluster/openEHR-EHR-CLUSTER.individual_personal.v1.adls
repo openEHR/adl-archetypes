@@ -39,7 +39,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
 		["references"] = <"From NHS Scotland SCI-XML messaging standards http://www.isdscotland.org/isd/files/general-v2-7.xsd NHS Scotland Interoperability Working Group http://www.isdscotland.org/isd/5194.html and based on a  structure for personal data pertaining to a person.  ENV 13606 - 4:2000 7.6.12-14">
@@ -77,21 +77,21 @@ definition
 					DV_TEXT[id24] 
 				}
 			}
-			allow_archetype CLUSTER[id15] occurrences matches {0..*} matches {	-- Address details
+			allow_archetype CLUSTER[id15] matches {	-- Address details
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.address\.v1/}
 			}
-			allow_archetype CLUSTER[id16] occurrences matches {0..*} matches {	-- Telecom details
+			allow_archetype CLUSTER[id16] matches {	-- Telecom details
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.telecom_details\.v1/}
 				exclude
 					archetype_id/value matches {/.*/}
 			}
-			allow_archetype CLUSTER[id19] occurrences matches {0..*} matches {	-- Ethnicity/Indigenous status 
+			allow_archetype CLUSTER[id19] matches {	-- Ethnicity/Indigenous status 
 				include
 					archetype_id/value matches {/.*/}
 			}
-			allow_archetype CLUSTER[id20] occurrences matches {0..*} matches {	-- Entitlements
+			allow_archetype CLUSTER[id20] matches {	-- Entitlements
 				include
 					archetype_id/value matches {/.*/}
 			}

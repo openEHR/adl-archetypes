@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"10EE0F3D29E2ECEB23BA78A7107D52E9">
@@ -32,7 +32,7 @@ definition
 		items matches {
 			CLUSTER[id63] occurrences matches {0..1} matches {	-- Normal Statements
 				items matches {
-					ELEMENT[id62] occurrences matches {0..*} matches {	-- Normal statement
+					ELEMENT[id62] matches {	-- Normal statement
 						value matches {
 							DV_CODED_TEXT[id87] matches {
 								defining_code matches {[ac1]}		-- Normal statement (synthesised)
@@ -116,7 +116,7 @@ definition
 					}
 					CLUSTER[id6] occurrences matches {0..1} matches {	-- Seventh Cranial Nerve
 						items matches {
-							ELEMENT[id34] occurrences matches {0..*} matches {	-- Normal statements
+							ELEMENT[id34] matches {	-- Normal statements
 								value matches {
 									DV_CODED_TEXT[id97] matches {
 										defining_code matches {[ac2]}		-- Normal statements (synthesised)

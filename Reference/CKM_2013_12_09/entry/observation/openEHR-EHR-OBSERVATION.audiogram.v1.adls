@@ -69,7 +69,7 @@ definition
 													}
 												}
 											}
-											CLUSTER[id49] occurrences matches {0..*} matches {	-- Measurement
+											CLUSTER[id49] matches {	-- Measurement
 												items cardinality matches {2; unordered} matches {
 													ELEMENT[id12] matches {	-- Frequency
 														value matches {
@@ -132,7 +132,7 @@ definition
 															}
 														}
 													}
-													ELEMENT[id71] occurrences matches {0..*} matches {	-- Clinical Interpretation
+													ELEMENT[id71] matches {	-- Clinical Interpretation
 														value matches {
 															DV_TEXT[id162] 
 														}
@@ -164,7 +164,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[id122] occurrences matches {0..*} matches {	-- Overall Interpretation
+									ELEMENT[id122] matches {	-- Overall Interpretation
 										value matches {
 											DV_TEXT[id166] 
 										}
@@ -303,11 +303,11 @@ definition
 							}
 						}
 					}
-					allow_archetype CLUSTER[id48] occurrences matches {0..*} matches {	-- Audiometer
+					allow_archetype CLUSTER[id48] matches {	-- Audiometer
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}
-					allow_archetype CLUSTER[id117] occurrences matches {0..*} matches {	-- Earphones
+					allow_archetype CLUSTER[id117] matches {	-- Earphones
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}

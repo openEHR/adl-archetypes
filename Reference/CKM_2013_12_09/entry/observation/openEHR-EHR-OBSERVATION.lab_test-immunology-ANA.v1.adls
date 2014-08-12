@@ -28,7 +28,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"NEHTA, Australia. Pathology Episode v1.0 - Data Group library [Internet]. 2009;[cited 2009 Dec 8 ] Available from: http://www.nehta.gov.au/data-group-library/data-specifications/dgl-pathology
@@ -48,7 +48,7 @@ definition
 			after [id90]
 			CLUSTER[id0.0.102] occurrences matches {0..1} matches {	-- ANA
 				items matches {
-					ELEMENT[id79.2.7] occurrences matches {0..*} matches {	-- Titre
+					ELEMENT[id79.2.7] matches {	-- Titre
 						value matches {
 							DV_PROPORTION[id0.0.111] matches {
 								numerator matches {|>=0.0|}
@@ -56,19 +56,19 @@ definition
 							}
 						}
 					}
-					ELEMENT[id0.95.9] occurrences matches {0..*} matches {	-- Amount
+					ELEMENT[id0.95.9] matches {	-- Amount
 						value matches {
 							DV_QUANTITY[id0.0.112] 
 						}
 					}
-					ELEMENT[id0.96.1] occurrences matches {0..*} matches {	-- Fluorescence pattern
+					ELEMENT[id0.96.1] matches {	-- Fluorescence pattern
 						value matches {
 							DV_CODED_TEXT[id0.0.113] matches {
 								defining_code matches {[ac0.0.1]}		-- Fluorescence pattern (synthesised)
 							}
 						}
 					}
-					ELEMENT[id79.1.6] occurrences matches {0..*} matches {	-- Qualitative result
+					ELEMENT[id79.1.6] matches {	-- Qualitative result
 						value matches {
 							DV_TEXT[id0.0.114] 
 							DV_CODED_TEXT[id0.0.115] matches {
@@ -80,7 +80,7 @@ definition
 			}
 			CLUSTER[id0.0.104] occurrences matches {0..1} matches {	-- anti-dsDNA
 				items matches {
-					ELEMENT[id79.2.6] occurrences matches {0..*} matches {	-- Titre
+					ELEMENT[id79.2.6] matches {	-- Titre
 						value matches {
 							DV_PROPORTION[id0.0.116] matches {
 								numerator matches {|>=0.0|}
@@ -88,19 +88,19 @@ definition
 							}
 						}
 					}
-					ELEMENT[id0.95.3] occurrences matches {0..*} matches {	-- Amount
+					ELEMENT[id0.95.3] matches {	-- Amount
 						value matches {
 							DV_QUANTITY[id0.0.117] 
 						}
 					}
-					ELEMENT[id0.96.3] occurrences matches {0..*} matches {	-- Fluoresence pattern
+					ELEMENT[id0.96.3] matches {	-- Fluoresence pattern
 						value matches {
 							DV_CODED_TEXT[id0.0.118] matches {
 								defining_code matches {[ac0.0.3]}		-- Fluoresence pattern (synthesised)
 							}
 						}
 					}
-					ELEMENT[id79.1.8] occurrences matches {0..*} matches {	-- Qualitative result
+					ELEMENT[id79.1.8] matches {	-- Qualitative result
 						value matches {
 							DV_TEXT[id0.0.119] 
 							DV_CODED_TEXT[id0.0.120] matches {
@@ -112,7 +112,7 @@ definition
 			}
 			CLUSTER[id0.0.103] occurrences matches {0..1} matches {	-- anti-Sm
 				items matches {
-					ELEMENT[id79.2.5] occurrences matches {0..*} matches {	-- Titre
+					ELEMENT[id79.2.5] matches {	-- Titre
 						value matches {
 							DV_PROPORTION[id0.0.121] matches {
 								numerator matches {|>=0.0|}
@@ -120,19 +120,19 @@ definition
 							}
 						}
 					}
-					ELEMENT[id0.95.2] occurrences matches {0..*} matches {	-- Amount
+					ELEMENT[id0.95.2] matches {	-- Amount
 						value matches {
 							DV_QUANTITY[id0.0.122] 
 						}
 					}
-					ELEMENT[id0.96.2] occurrences matches {0..*} matches {	-- Fluoresence pattern
+					ELEMENT[id0.96.2] matches {	-- Fluoresence pattern
 						value matches {
 							DV_CODED_TEXT[id0.0.123] matches {
 								defining_code matches {[ac0.0.5]}		-- Fluoresence pattern (synthesised)
 							}
 						}
 					}
-					ELEMENT[id79.1.5] occurrences matches {0..*} matches {	-- Qualitative result
+					ELEMENT[id79.1.5] matches {	-- Qualitative result
 						value matches {
 							DV_TEXT[id0.0.124] 
 							DV_CODED_TEXT[id0.0.125] matches {
@@ -144,7 +144,7 @@ definition
 			}
 			CLUSTER[id0.0.105] occurrences matches {0..1} matches {	-- SSA
 				items matches {
-					ELEMENT[id79.2.4] occurrences matches {0..*} matches {	-- Titre
+					ELEMENT[id79.2.4] matches {	-- Titre
 						value matches {
 							DV_PROPORTION[id0.0.126] matches {
 								numerator matches {|>=0.0|}
@@ -152,19 +152,19 @@ definition
 							}
 						}
 					}
-					ELEMENT[id0.95.1] occurrences matches {0..*} matches {	-- Amount
+					ELEMENT[id0.95.1] matches {	-- Amount
 						value matches {
 							DV_QUANTITY[id0.0.127] 
 						}
 					}
-					ELEMENT[id0.96.9] occurrences matches {0..*} matches {	-- Fluoresence pattern
+					ELEMENT[id0.96.9] matches {	-- Fluoresence pattern
 						value matches {
 							DV_CODED_TEXT[id0.0.128] matches {
 								defining_code matches {[ac0.0.7]}		-- Fluoresence pattern (synthesised)
 							}
 						}
 					}
-					ELEMENT[id79.1.7] occurrences matches {0..*} matches {	-- Qualitative result
+					ELEMENT[id79.1.7] matches {	-- Qualitative result
 						value matches {
 							DV_TEXT[id0.0.129] 
 							DV_CODED_TEXT[id0.0.130] matches {
@@ -176,7 +176,7 @@ definition
 			}
 			CLUSTER[id0.0.106] occurrences matches {0..1} matches {	-- SSB
 				items matches {
-					ELEMENT[id79.2.3] occurrences matches {0..*} matches {	-- Titre
+					ELEMENT[id79.2.3] matches {	-- Titre
 						value matches {
 							DV_PROPORTION[id0.0.131] matches {
 								numerator matches {|>=0.0|}
@@ -184,19 +184,19 @@ definition
 							}
 						}
 					}
-					ELEMENT[id0.95.4] occurrences matches {0..*} matches {	-- Amount
+					ELEMENT[id0.95.4] matches {	-- Amount
 						value matches {
 							DV_QUANTITY[id0.0.132] 
 						}
 					}
-					ELEMENT[id0.96.5] occurrences matches {0..*} matches {	-- Fluoresence pattern
+					ELEMENT[id0.96.5] matches {	-- Fluoresence pattern
 						value matches {
 							DV_CODED_TEXT[id0.0.133] matches {
 								defining_code matches {[ac0.0.9]}		-- Fluoresence pattern (synthesised)
 							}
 						}
 					}
-					ELEMENT[id79.1.4] occurrences matches {0..*} matches {	-- Qualitative result
+					ELEMENT[id79.1.4] matches {	-- Qualitative result
 						value matches {
 							DV_TEXT[id0.0.134] 
 							DV_CODED_TEXT[id0.0.135] matches {
@@ -208,7 +208,7 @@ definition
 			}
 			CLUSTER[id0.0.107] occurrences matches {0..1} matches {	-- Scl-70 ab.
 				items matches {
-					ELEMENT[id79.2.2] occurrences matches {0..*} matches {	-- Titre
+					ELEMENT[id79.2.2] matches {	-- Titre
 						value matches {
 							DV_PROPORTION[id0.0.136] matches {
 								numerator matches {|>=0.0|}
@@ -216,19 +216,19 @@ definition
 							}
 						}
 					}
-					ELEMENT[id0.95.8] occurrences matches {0..*} matches {	-- Amount
+					ELEMENT[id0.95.8] matches {	-- Amount
 						value matches {
 							DV_QUANTITY[id0.0.137] 
 						}
 					}
-					ELEMENT[id0.96.6] occurrences matches {0..*} matches {	-- Fluoresence pattern
+					ELEMENT[id0.96.6] matches {	-- Fluoresence pattern
 						value matches {
 							DV_CODED_TEXT[id0.0.138] matches {
 								defining_code matches {[ac0.0.11]}		-- Fluoresence pattern (synthesised)
 							}
 						}
 					}
-					ELEMENT[id79.1.3] occurrences matches {0..*} matches {	-- Qualitative result
+					ELEMENT[id79.1.3] matches {	-- Qualitative result
 						value matches {
 							DV_TEXT[id0.0.139] 
 							DV_CODED_TEXT[id0.0.140] matches {
@@ -240,7 +240,7 @@ definition
 			}
 			CLUSTER[id0.0.108] occurrences matches {0..1} matches {	-- Anti-centromere ab.
 				items matches {
-					ELEMENT[id79.2.1] occurrences matches {0..*} matches {	-- Titre
+					ELEMENT[id79.2.1] matches {	-- Titre
 						value matches {
 							DV_PROPORTION[id0.0.141] matches {
 								numerator matches {|>=0.0|}
@@ -248,19 +248,19 @@ definition
 							}
 						}
 					}
-					ELEMENT[id0.95.7] occurrences matches {0..*} matches {	-- Amount
+					ELEMENT[id0.95.7] matches {	-- Amount
 						value matches {
 							DV_QUANTITY[id0.0.142] 
 						}
 					}
-					ELEMENT[id0.96.7] occurrences matches {0..*} matches {	-- Fluoresence pattern
+					ELEMENT[id0.96.7] matches {	-- Fluoresence pattern
 						value matches {
 							DV_CODED_TEXT[id0.0.143] matches {
 								defining_code matches {[ac0.0.13]}		-- Fluoresence pattern (synthesised)
 							}
 						}
 					}
-					ELEMENT[id79.1.2] occurrences matches {0..*} matches {	-- Qualitative result
+					ELEMENT[id79.1.2] matches {	-- Qualitative result
 						value matches {
 							DV_TEXT[id0.0.144] 
 							DV_CODED_TEXT[id0.0.145] matches {
@@ -272,7 +272,7 @@ definition
 			}
 			CLUSTER[id0.0.109] occurrences matches {0..1} matches {	-- Anti-histone ab.
 				items matches {
-					ELEMENT[id79.2.9] occurrences matches {0..*} matches {	-- Titre
+					ELEMENT[id79.2.9] matches {	-- Titre
 						value matches {
 							DV_PROPORTION[id0.0.146] matches {
 								numerator matches {|>=0.0|}
@@ -280,19 +280,19 @@ definition
 							}
 						}
 					}
-					ELEMENT[id0.95.5] occurrences matches {0..*} matches {	-- Amount
+					ELEMENT[id0.95.5] matches {	-- Amount
 						value matches {
 							DV_QUANTITY[id0.0.147] 
 						}
 					}
-					ELEMENT[id0.96.8] occurrences matches {0..*} matches {	-- Fluoresence pattern
+					ELEMENT[id0.96.8] matches {	-- Fluoresence pattern
 						value matches {
 							DV_CODED_TEXT[id0.0.148] matches {
 								defining_code matches {[ac0.0.15]}		-- Fluoresence pattern (synthesised)
 							}
 						}
 					}
-					ELEMENT[id79.1.1] occurrences matches {0..*} matches {	-- Qualitative result
+					ELEMENT[id79.1.1] matches {	-- Qualitative result
 						value matches {
 							DV_TEXT[id0.0.149] 
 							DV_CODED_TEXT[id0.0.150] matches {
@@ -305,7 +305,7 @@ definition
 			before [id0.97]
 			CLUSTER[id0.0.110] occurrences matches {0..1} matches {	-- Anti-RNA ab.
 				items matches {
-					ELEMENT[id79.2.8] occurrences matches {0..*} matches {	-- Titre
+					ELEMENT[id79.2.8] matches {	-- Titre
 						value matches {
 							DV_PROPORTION[id0.0.151] matches {
 								numerator matches {|>=0.0|}
@@ -313,19 +313,19 @@ definition
 							}
 						}
 					}
-					ELEMENT[id0.95.6] occurrences matches {0..*} matches {	-- Amount
+					ELEMENT[id0.95.6] matches {	-- Amount
 						value matches {
 							DV_QUANTITY[id0.0.152] 
 						}
 					}
-					ELEMENT[id0.96.4] occurrences matches {0..*} matches {	-- Fluoresence pattern
+					ELEMENT[id0.96.4] matches {	-- Fluoresence pattern
 						value matches {
 							DV_CODED_TEXT[id0.0.153] matches {
 								defining_code matches {[ac0.0.17]}		-- Fluoresence pattern (synthesised)
 							}
 						}
 					}
-					ELEMENT[id79.1.9] occurrences matches {0..*} matches {	-- Qualitative result
+					ELEMENT[id79.1.9] matches {	-- Qualitative result
 						value matches {
 							DV_TEXT[id0.0.154] 
 							DV_CODED_TEXT[id0.0.155] matches {

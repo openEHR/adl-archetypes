@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", ...>
 	other_details = <
 		["references"] = <"">
@@ -31,7 +31,7 @@ description
 definition
 	CLUSTER[id1] matches {	-- Hydration
 		items matches {
-			ELEMENT[id2] occurrences matches {0..*} matches {	-- Normal statements
+			ELEMENT[id2] matches {	-- Normal statements
 				value matches {
 					DV_TEXT[id27] 
 				}

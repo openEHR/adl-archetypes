@@ -27,7 +27,7 @@ The 'Absent Test Result' element may be used to record circumstances where a tes
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, UK ", ...>
 	other_details = <
 		["current_contact"] = <"Gustavo M Bacelar-Silva, mail@gustavobacelar.com">
@@ -57,7 +57,7 @@ definition
 											DV_TEXT[id79] 
 										}
 									}
-									CLUSTER[id77] occurrences matches {0..*} matches {	-- Test Result
+									CLUSTER[id77] matches {	-- Test Result
 										items matches {
 											ELEMENT[id58] occurrences matches {0..1} matches {	-- Eye
 												value matches {
@@ -94,14 +94,14 @@ definition
 													}
 												}
 											}
-											ELEMENT[id62] occurrences matches {0..*} matches {	-- Clinical Interpretation
+											ELEMENT[id62] matches {	-- Clinical Interpretation
 												value matches {
 													DV_TEXT[id85] 
 												}
 											}
 										}
 									}
-									ELEMENT[id78] occurrences matches {0..*} matches {	-- Overall Interpretation
+									ELEMENT[id78] matches {	-- Overall Interpretation
 										value matches {
 											DV_TEXT[id86] 
 										}
@@ -117,7 +117,7 @@ definition
 						state matches {
 							ITEM_TREE[id8] matches {
 								items matches {
-									ELEMENT[id75] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[id75] matches {	-- Confounding Factors
 										value matches {
 											DV_TEXT[id88] 
 										}

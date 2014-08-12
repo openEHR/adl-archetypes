@@ -53,7 +53,7 @@ definition
 					DV_TEXT[id5] 
 				}
 			}
-			allow_archetype CLUSTER[id4] occurrences matches {0..*} matches {	-- Structured role
+			allow_archetype CLUSTER[id4] matches {	-- Structured role
 				include
 					archetype_id/value matches {/.*/}
 			}

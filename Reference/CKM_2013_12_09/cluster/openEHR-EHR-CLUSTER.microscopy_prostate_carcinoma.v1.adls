@@ -22,7 +22,7 @@ Use as a component archetype in the context of a suite of archetypes that make u
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"David Rowed, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia", "Matt Cordell, NEHTA, Australia", "David McKillop, NEHTA, Australia", "Cathy Richardson, NEHTA, Australia", "Koray Atalag, University of Auckland, New Zealand", "David Ellis, RCPA, Australia">
 	other_details = <
 		["references"] = <"Royal College of Pathologists of Australasia. Prostate Cancer (Radical Prostatectomy) Structured Reporting Protocol (1st Edition 2010). [Internet]. 2010;[cited 2010 Mar 21 ] Available from: http://www.rcpa.edu.au//static/File/Asset%20library/public%20documents/Publications/StructuredReporting/PROSTATE%20CANCER%20RAD%20PROS%20STRUCTURED%20REPORTING%20PROTOCOL%20for%20web.pdf
@@ -172,7 +172,7 @@ definition
 					}
 				}
 			}
-			allow_archetype CLUSTER[id246] occurrences matches {0..*} matches {	-- Tumour invasion
+			allow_archetype CLUSTER[id246] matches {	-- Tumour invasion
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
 				exclude
@@ -180,7 +180,7 @@ definition
 			}
 			CLUSTER[id22] occurrences matches {0..1} matches {	-- Surgical resection margins
 				items matches {
-					CLUSTER[id238] occurrences matches {0..*} matches {	-- Surgical resection margin
+					CLUSTER[id238] matches {	-- Surgical resection margin
 						items cardinality matches {1; unordered} matches {
 							allow_archetype CLUSTER[id85] occurrences matches {0..1} matches {	-- Resection margin detail  
 								include
@@ -231,7 +231,7 @@ definition
 			}
 			CLUSTER[id31] occurrences matches {0..1} matches {	-- Lymph node findings
 				items matches {
-					allow_archetype CLUSTER[id88] occurrences matches {0..*} matches {	-- Lymph node detail 
+					allow_archetype CLUSTER[id88] matches {	-- Lymph node detail 
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.lymph_node_metastases\.v1/}
 						exclude
@@ -248,7 +248,7 @@ definition
 			}
 			CLUSTER[id274] occurrences matches {0..1} matches {	-- Tumour zones
 				items matches {
-					ELEMENT[id275] occurrences matches {0..*} matches {	-- Tumour zone
+					ELEMENT[id275] matches {	-- Tumour zone
 						value matches {
 							DV_CODED_TEXT[id294] matches {
 								defining_code matches {[ac7]}		-- Tumour zone (synthesised)
@@ -259,7 +259,7 @@ definition
 			}
 			CLUSTER[id180] occurrences matches {0..1} matches {	-- Additional findings
 				items matches {
-					ELEMENT[id179] occurrences matches {0..*} matches {	-- Addtional finding
+					ELEMENT[id179] matches {	-- Addtional finding
 						value matches {
 							DV_CODED_TEXT[id295] matches {
 								defining_code matches {[ac8]}		-- Addtional finding (synthesised)

@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", ...>
 	other_details = <
 		["references"] = <"Chemical description of medication, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. NEHTA. Authored: 12 Nov 2010. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.885_2 (accessed 15 May 2013).">
@@ -47,7 +47,7 @@ definition
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-a-zA-Z0-9_]+)*\.v1/}
 			}
-			CLUSTER[id2] occurrences matches {0..*} matches {	-- Ingredient
+			CLUSTER[id2] matches {	-- Ingredient
 				items matches {
 					ELEMENT[id3] matches {	-- Name
 						value matches {

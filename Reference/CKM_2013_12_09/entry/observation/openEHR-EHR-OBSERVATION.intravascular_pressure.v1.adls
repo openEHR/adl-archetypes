@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", ...>
 	other_details = <
 		["references"] = <"">
@@ -33,7 +33,7 @@ definition
 		data matches {
 			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[id3] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id3] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
 								items cardinality matches {1; ordered} matches {
@@ -110,7 +110,7 @@ definition
 							}
 						}
 					}
-					INTERVAL_EVENT[id5] occurrences matches {0..*} matches {	-- Average over heart cycle
+					INTERVAL_EVENT[id5] matches {	-- Average over heart cycle
 						math_function matches {
 							DV_CODED_TEXT[id49] matches {
 								defining_code matches {[at30]}

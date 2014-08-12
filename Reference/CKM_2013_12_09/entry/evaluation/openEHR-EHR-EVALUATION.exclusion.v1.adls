@@ -25,7 +25,7 @@ Exclusion statements can only be considered to be current and accurate at the ti
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Stephen Chu, NEHTA, Australia", "Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Stephen Royce, NEHTA, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -44,7 +44,7 @@ definition
 							DV_TEXT[id9] 
 						}
 					}
-					ELEMENT[id4] occurrences matches {0..*} matches {	-- Specific Object
+					ELEMENT[id4] matches {	-- Specific Object
 						value matches {
 							DV_TEXT[id10] 
 						}

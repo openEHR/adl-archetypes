@@ -30,7 +30,7 @@ Not to be used to record specific diagnosis details that may be required in addi
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, Australia", "Sergio Carmona, Chile", "Sebastian Garde, Ocean Informatics, Germany", "Beatriz de Faria Leão, Brazil", "Omer Hotomaroglu, Turkey", "Sundaresan Jagannathan, Scottish NHS, United Kingdom">
 	other_details = <
 		["references"] = <"openEHR Foundation. openEHR wiki: Reason for Encountrer or Chief Complaint [Internet]. 2008 Feb 13 [cited June 17 2012];  Available at http://www.openehr.org/wiki/display/healthmod/Reason+for+encounter+or+Chief+complaint.">
@@ -47,7 +47,7 @@ definition
 							DV_TEXT[id6] 
 						}
 					}
-					ELEMENT[id5] occurrences matches {0..*} matches {	-- Presenting Problem
+					ELEMENT[id5] matches {	-- Presenting Problem
 						value matches {
 							DV_TEXT[id7] 
 						}

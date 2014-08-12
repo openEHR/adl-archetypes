@@ -39,7 +39,7 @@ Designed to be used within any clinically appropriate ENTRY or CLUSTER archetype
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"6B9BBB28AAAC00757E6DA1E4AC46D01F">

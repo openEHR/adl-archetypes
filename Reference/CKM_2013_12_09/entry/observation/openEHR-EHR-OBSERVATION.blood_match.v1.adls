@@ -96,7 +96,7 @@ definition
 											}
 										}
 									}
-									CLUSTER[id9] occurrences matches {0..*} matches {	-- Antibodies
+									CLUSTER[id9] matches {	-- Antibodies
 										items matches {
 											ELEMENT[id7] occurrences matches {0..1} matches {	-- Antibody
 												value matches {

@@ -17,7 +17,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"69482FB68BEEF75BF428667537909760">
@@ -26,7 +26,7 @@ description
 definition
 	CLUSTER[id1] matches {	-- Free text
 		items matches {
-			ELEMENT[id2] occurrences matches {0..*} matches {	-- Free text
+			ELEMENT[id2] matches {	-- Free text
 				value matches {
 					DV_TEXT[id3] 
 				}

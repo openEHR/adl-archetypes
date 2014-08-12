@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Christian Ghan, Lifehouse, Australia", ...>
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"48199A0696E7E86508042F451325ACCF">

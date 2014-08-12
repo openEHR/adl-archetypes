@@ -53,7 +53,7 @@ Use to record a simple narrative and/or as a container archetype - to provide a 
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatic, Australia", ...>
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -74,7 +74,7 @@ definition
 											DV_TEXT[id8] 
 										}
 									}
-									allow_archetype CLUSTER[id7] occurrences matches {0..*} matches {	-- Details
+									allow_archetype CLUSTER[id7] matches {	-- Details
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.health_event(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.issue(-a-zA-Z0-9_]+)*\.v1/}
 									}

@@ -20,7 +20,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Gustavo Bacelar-Silva, Brazil (Editor)", "Mike Mair, Timaru Eye Clinic, New Zealand", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["current_contact"] = <"Gustavo M Bacelar-Silva, mail@gustavobacelar.com">

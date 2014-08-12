@@ -59,14 +59,14 @@ definition
 							ITEM_TREE[id4] matches {
 								items matches {
 									ELEMENT[id33] occurrences matches {0..1} 	-- Data - Definition
-									CLUSTER[id5] occurrences matches {0..*} matches {	-- Heading1
+									CLUSTER[id5] matches {	-- Heading1
 										items matches {
 											ELEMENT[id6] occurrences matches {0..1} matches {	-- Free Text or Coded
 												value matches {
 													DV_TEXT[id46] 
 												}
 											}
-											ELEMENT[id7] occurrences matches {0..*} matches {	-- Text That Uses Internal Codes
+											ELEMENT[id7] matches {	-- Text That Uses Internal Codes
 												value matches {
 													DV_CODED_TEXT[id47] matches {
 														defining_code matches {[ac5]}		-- Text That Uses Internal Codes (synthesised)
@@ -219,11 +219,11 @@ definition
 									}
 									CLUSTER[id19] occurrences matches {0..1} matches {	-- Heading 2
 										items matches {
-											allow_archetype CLUSTER[id20] occurrences matches {0..*} matches {	-- Slot To Contain Other Cluster Archetypes
+											allow_archetype CLUSTER[id20] matches {	-- Slot To Contain Other Cluster Archetypes
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.device\.v1/}
 											}
-											allow_archetype ELEMENT[id21] occurrences matches {0..*} matches {	-- Slot To Contain Other Element Archetypes
+											allow_archetype ELEMENT[id21] matches {	-- Slot To Contain Other Element Archetypes
 												include
 													archetype_id/value matches {/openEHR-EHR-ELEMENT\.ctg_codes\.v1/}
 												exclude

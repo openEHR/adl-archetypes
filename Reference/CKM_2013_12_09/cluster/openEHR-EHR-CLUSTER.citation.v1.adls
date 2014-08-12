@@ -22,7 +22,7 @@ This archetype is deliberately designed as a CLUSTER class archetype so that the
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"">

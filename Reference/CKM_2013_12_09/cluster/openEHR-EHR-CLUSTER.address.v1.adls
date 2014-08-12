@@ -47,7 +47,7 @@ description
 definition
 	CLUSTER[id1] matches {	-- Address
 		items matches {
-			CLUSTER[id2] occurrences matches {0..*} matches {	-- Address
+			CLUSTER[id2] matches {	-- Address
 				items matches {
 					ELEMENT[id7] matches {	-- Address Type
 						value matches {

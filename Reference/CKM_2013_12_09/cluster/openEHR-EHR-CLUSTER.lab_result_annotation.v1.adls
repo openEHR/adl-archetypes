@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heath Frankel, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"NEHTA, Australia. Pathology Episode v1.0 - Data Group library [Internet]. 2009;[cited 2009 Dec 8 ] Available from: http://www.nehta.gov.au/data-group-library/data-specifications/dgl-pathology
@@ -69,7 +69,7 @@ definition
 					DV_TEXT[id24] 
 				}
 			}
-			allow_archetype CLUSTER[id7] occurrences matches {0..*} matches {	-- Specimen detail 
+			allow_archetype CLUSTER[id7] matches {	-- Specimen detail 
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
 			}
@@ -78,7 +78,7 @@ definition
 					DV_TEXT[id25] 
 				}
 			}
-			allow_archetype CLUSTER[id15] occurrences matches {0..*} matches {	-- Laboratory details
+			allow_archetype CLUSTER[id15] matches {	-- Laboratory details
 				include
 					archetype_id/value matches {/.*/}
 			}

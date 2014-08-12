@@ -54,7 +54,7 @@ It will usually be entered manually, but in some clinical systems it may be auto
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Gustavo Bacelar, Brazil", "Ian McNicoll, Ocean Informatics, UK", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"1CB0558AE05615742E83030544DBE483">

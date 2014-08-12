@@ -24,7 +24,7 @@ Used in combination with CLUSTER.fluid.v1 to describe the bodily substance invol
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"">
@@ -36,7 +36,7 @@ definition
 		data matches {
 			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[id3] occurrences matches {0..*} matches {	-- Timing
+					POINT_EVENT[id3] matches {	-- Timing
 						data matches {
 							ITEM_TREE[id4] matches {
 								items cardinality matches {1..*; unordered} matches {
@@ -76,7 +76,7 @@ definition
 							}
 						}
 					}
-					INTERVAL_EVENT[id7] occurrences matches {0..*} matches {	-- Total
+					INTERVAL_EVENT[id7] matches {	-- Total
 						math_function matches {
 							DV_CODED_TEXT[id43] matches {
 								defining_code matches {[at22]}
@@ -86,7 +86,7 @@ definition
 							use_node ITEM_TREE[id44] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[Timing]/data[id4]
 						}
 					}
-					INTERVAL_EVENT[id8] occurrences matches {0..*} matches {	-- Actual
+					INTERVAL_EVENT[id8] matches {	-- Actual
 						math_function matches {
 							DV_CODED_TEXT[id45] matches {
 								defining_code matches {[at23]}

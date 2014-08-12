@@ -113,7 +113,7 @@ definition
 							DV_TEXT[id28] 
 						}
 					}
-					ELEMENT[id5] occurrences matches {0..*} matches {	-- Middle name
+					ELEMENT[id5] matches {	-- Middle name
 						value matches {
 							DV_CODED_TEXT[id29] matches {
 								defining_code 

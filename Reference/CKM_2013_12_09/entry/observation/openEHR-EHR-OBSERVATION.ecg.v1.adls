@@ -41,7 +41,7 @@ Not to be used for recording Holter monitor results.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Marja Buur, Medisch Centrum Alkmaar/ Code24, Netherlands", "Tamsin Cockayne, Australia", "Marc Cotran, identity vision systems, Canada", "Sam Heard, Ocean Informatics, Australia", "Eugene Igras, IRIS Systems, Inc., Canada", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Raymond Simkus, Brookswood Family Practice, Canada", "Tim Sturgill, United States">
 	other_details = <
 		["references"] = <"Lead descriptions - http://en.wikipedia.org/wiki/Electrocardiography [accessed 22 February, 2010]">
@@ -418,12 +418,12 @@ definition
 											}
 										}
 									}
-									ELEMENT[id10] occurrences matches {0..*} matches {	-- Automatic interpretation
+									ELEMENT[id10] matches {	-- Automatic interpretation
 										value matches {
 											DV_TEXT[id123] 
 										}
 									}
-									ELEMENT[id82] occurrences matches {0..*} matches {	-- Overall interpretation
+									ELEMENT[id82] matches {	-- Overall interpretation
 										value matches {
 											DV_TEXT[id124] 
 										}

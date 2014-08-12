@@ -71,7 +71,7 @@ Information about activities related to the procedure, such as anaesthesia or ad
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"3D7A4FCD75127BBE8C9873FF487C6C44">
@@ -233,12 +233,12 @@ definition
 							DV_TEXT[id84] 
 						}
 					}
-					ELEMENT[id15] occurrences matches {0..*} matches {	-- Reason/s for procedure
+					ELEMENT[id15] matches {	-- Reason/s for procedure
 						value matches {
 							DV_TEXT[id85] 
 						}
 					}
-					ELEMENT[id52] occurrences matches {0..*} matches {	-- Method/Technique
+					ELEMENT[id52] matches {	-- Method/Technique
 						value matches {
 							DV_TEXT[id86] 
 						}
@@ -263,12 +263,12 @@ definition
 									DV_TEXT[id88] 
 								}
 							}
-							ELEMENT[id32] occurrences matches {0..*} matches {	-- Task description
+							ELEMENT[id32] matches {	-- Task description
 								value matches {
 									DV_TEXT[id89] 
 								}
 							}
-							ELEMENT[id33] occurrences matches {0..*} matches {	-- Record of additional task
+							ELEMENT[id33] matches {	-- Record of additional task
 								value matches {
 									DV_EHR_URI[id90] 
 								}
@@ -288,12 +288,12 @@ definition
 						}
 					}
 					ELEMENT[id19] occurrences matches {0..1} 	-- Failed attempts
-					ELEMENT[id16] occurrences matches {0..*} matches {	-- Unplanned event
+					ELEMENT[id16] matches {	-- Unplanned event
 						value matches {
 							DV_TEXT[id93] 
 						}
 					}
-					ELEMENT[id7] occurrences matches {0..*} matches {	-- Complication
+					ELEMENT[id7] matches {	-- Complication
 						value matches {
 							DV_TEXT[id94] 
 						}
@@ -310,7 +310,7 @@ definition
 							DV_TEXT[id96] 
 						}
 					}
-					ELEMENT[id14] occurrences matches {0..*} matches {	-- Multimedia
+					ELEMENT[id14] matches {	-- Multimedia
 						value matches {
 							DV_MULTIMEDIA[id97] matches {
 								media_type 

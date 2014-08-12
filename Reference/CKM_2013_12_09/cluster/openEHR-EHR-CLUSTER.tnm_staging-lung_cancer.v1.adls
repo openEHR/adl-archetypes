@@ -25,7 +25,7 @@ Not to be used for other editions of TNM classification.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie,Ocean Informatics. Australia", "Cathy Richardson, NEHTA, Australia", "David McKillop, NEHTA, Australia", "Koray Atalag, University of Auckland, New Zealand">
 	other_details = <
 		["references"] = <"Greene FL, Page DL, Fleming ID. et al, eds, for the American Joint Committee on Cancer. AJCC Cancer Staging Manual. 6th ed. New York, NY: Springer-Verlag; 2002. 

@@ -20,7 +20,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"DC226C5E1AB99DA1608CBA31771E313B">
@@ -40,7 +40,7 @@ definition
 			after [id8]
 			CLUSTER[id0.20] occurrences matches {0..1} matches {	-- Location of trauma
 				items matches {
-					allow_archetype ELEMENT[id0.21] occurrences matches {0..*} matches {	-- Element: Location of trauma
+					allow_archetype ELEMENT[id0.21] matches {	-- Element: Location of trauma
 						include
 							archetype_id/value matches {/openEHR-EHR-ELEMENT\.body_location(-a-zA-Z0-9_]+)*\.v1/}
 					}

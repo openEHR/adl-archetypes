@@ -27,7 +27,7 @@ The Braden Scale should not be used for children less than  21 days old - use OP
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK, ian.mcnicoll@oceaninformatics.com">
 		["references"] = <"Curley  MAQ, Razmus IS, Roberts KE, Wypij D. Predicting  pressure ulcer risk  in pediatric patients-the Braden Q scale. Nursing Research. 2003; 52(1) 22-31.

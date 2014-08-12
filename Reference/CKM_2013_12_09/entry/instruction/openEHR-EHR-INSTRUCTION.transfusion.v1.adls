@@ -83,7 +83,7 @@ definition
 							}
 							CLUSTER[id8] occurrences matches {0..1} matches {	-- Special requirements
 								items matches {
-									ELEMENT[id6] occurrences matches {0..*} matches {	-- Special requirement
+									ELEMENT[id6] matches {	-- Special requirement
 										value matches {
 											DV_TEXT[id17] 
 										}
@@ -92,7 +92,7 @@ definition
 							}
 							CLUSTER[id9] occurrences matches {0..1} matches {	-- Rate of transfusion
 								items matches {
-									ELEMENT[id7] occurrences matches {0..*} matches {	-- Transfusion duration per unit
+									ELEMENT[id7] matches {	-- Transfusion duration per unit
 										value matches {
 											DV_DURATION[id18] matches {
 												value matches {PTHM}

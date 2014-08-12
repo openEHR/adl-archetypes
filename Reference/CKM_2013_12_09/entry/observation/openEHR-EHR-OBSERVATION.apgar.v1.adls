@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=1.5.1; generated)
 	openEHR-EHR-OBSERVATION.apgar.v1.0.0
 
 language
@@ -170,7 +170,7 @@ Se reconhece que uma ajuda mnemônica para aprender a interpretar o escore Apgar
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Paul Donaldson, Nursing Informatics Australia, Australia", "Sebastian Garde, Ocean Informatics, Germany (Editor)", "Anneke Goossen, Results 4 Care, Netherlands", "Anne Harbison, CPCER, Australia", "Sam Heard, Ocean Informatics, Australia", "Omer Hotomaroglu, Turkey", "Pieter Hummel, Medisch Centrum Alkmaar, Netherlands", "Andrew James, University of Toronto, Canada", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["references"] = <"Apgar V.  A proposal of a New Method of Evaluation of the Newborn Infant. Curr Res Anesth Analg.  1953 Jul-Aug;32(4):260-7.
@@ -305,7 +305,7 @@ definition
 							use_node ITEM_LIST[id53] /data[id3]/events[id4]/data[id2]	-- /data[id3]/events[1 minute]/data[id2]
 						}
 					}
-					EVENT[id38] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id38] matches {	-- Any event
 						data matches {
 							use_node ITEM_LIST[id54] /data[id3]/events[id4]/data[id2]	-- /data[id3]/events[1 minute]/data[id2]
 						}

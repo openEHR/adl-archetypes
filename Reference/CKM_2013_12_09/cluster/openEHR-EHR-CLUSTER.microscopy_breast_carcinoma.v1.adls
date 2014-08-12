@@ -34,15 +34,15 @@ British Columbia Cancer Agency. Synoptic Report Form for Breast Cancer [Internet
 definition
 	CLUSTER[id1] matches {	-- Microscopic findings - Breast cancer
 		items matches {
-			CLUSTER[id34] occurrences matches {0..*} matches {	-- Tumour size and extent
+			CLUSTER[id34] matches {	-- Tumour size and extent
 				items matches {
-					allow_archetype CLUSTER[id37] occurrences matches {0..*} matches {	-- Invasive tumour extent
+					allow_archetype CLUSTER[id37] matches {	-- Invasive tumour extent
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties\.v1/}
 						exclude
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype CLUSTER[id38] occurrences matches {0..*} matches {	-- Total lesion extent
+					allow_archetype CLUSTER[id38] matches {	-- Total lesion extent
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties\.v1/}
 						exclude
@@ -152,7 +152,7 @@ definition
 			}
 			CLUSTER[id55] occurrences matches {0..1} matches {	-- Non-neoplastic cellular changes
 				items matches {
-					ELEMENT[id24] occurrences matches {0..*} matches {	-- Non-neoplastic cellular change
+					ELEMENT[id24] matches {	-- Non-neoplastic cellular change
 						value matches {
 							DV_TEXT[id189] 
 						}
@@ -391,7 +391,7 @@ definition
 			}
 			CLUSTER[id181] occurrences matches {0..1} matches {	-- Non-neoplastic changes
 				items matches {
-					ELEMENT[id182] occurrences matches {0..*} matches {	-- Non-neoplastic change
+					ELEMENT[id182] matches {	-- Non-neoplastic change
 						value matches {
 							DV_CODED_TEXT[id218] matches {
 								defining_code matches {[ac15]}		-- Non-neoplastic change (synthesised)

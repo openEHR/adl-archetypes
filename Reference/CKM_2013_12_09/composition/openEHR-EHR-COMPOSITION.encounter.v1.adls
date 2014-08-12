@@ -69,7 +69,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"10250E3AD051C33DB43D2DA76A272E08">
@@ -87,7 +87,7 @@ definition
 				other_context matches {
 					ITEM_TREE[id2] matches {
 						items matches {
-							allow_archetype CLUSTER[id3] occurrences matches {0..*} matches {	-- Local context
+							allow_archetype CLUSTER[id3] matches {	-- Local context
 								include
 									archetype_id/value matches {/.*/}
 							}

@@ -75,7 +75,7 @@ definition
 		data matches {
 			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[id3] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id3] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
 								items cardinality matches {1; unordered} matches {
@@ -106,7 +106,7 @@ definition
 							}
 						}
 					}
-					INTERVAL_EVENT[id11] occurrences matches {0..*} matches {	-- Chest expansion
+					INTERVAL_EVENT[id11] matches {	-- Chest expansion
 						math_function matches {
 							DV_CODED_TEXT[id15] matches {
 								defining_code matches {[at12]}

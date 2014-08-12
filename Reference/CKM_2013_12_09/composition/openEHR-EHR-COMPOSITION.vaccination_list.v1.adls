@@ -38,15 +38,15 @@ definition
 			}
 		}
 		content cardinality matches {1..*; unordered} matches {
-			allow_archetype ACTION[id2] occurrences matches {0..*} matches {	-- Vaccinations Administered
+			allow_archetype ACTION[id2] matches {	-- Vaccinations Administered
 				include
 					archetype_id/value matches {/openEHR-EHR-ACTION\.medication(-a-zA-Z0-9_]+)*\.v1/}
 			}
-			allow_archetype EVALUATION[id3] occurrences matches {0..*} matches {	-- Exclusion Statement
+			allow_archetype EVALUATION[id3] matches {	-- Exclusion Statement
 				include
 					archetype_id/value matches {/.*/}
 			}
-			allow_archetype EVALUATION[id4] occurrences matches {0..*} matches {	-- Absent Information
+			allow_archetype EVALUATION[id4] matches {	-- Absent Information
 				include
 					archetype_id/value matches {/openEHR-EHR-EVALUATION\.absence(-a-zA-Z0-9_]+)*\.v1/}
 			}

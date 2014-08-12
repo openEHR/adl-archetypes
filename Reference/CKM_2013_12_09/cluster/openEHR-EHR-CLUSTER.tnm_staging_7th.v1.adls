@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie Ocean Informatics Australia", "Sam Heard Ocean Informatics Australia", "Koray Atalag, University of Auckland, New Zealand">
 	other_details = <
 		["references"] = <"Sobin LH. TNM Classification of Malignant Tumours 7th Edition.  John Wiley and Sons; 2009.">
@@ -65,7 +65,7 @@ definition
 			}
 			CLUSTER[id53] occurrences matches {0..1} matches {	-- Descriptors
 				items matches {
-					ELEMENT[id54] occurrences matches {0..*} matches {	-- Descriptor
+					ELEMENT[id54] matches {	-- Descriptor
 						value matches {
 							DV_TEXT[id61] 
 						}

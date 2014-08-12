@@ -24,7 +24,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, United Kingdom", ...>
 	other_details = <
 		["references"] = <"http://www.wwl.nhs.uk/library/foi/clin_pols/cvpprocedures.pdf">
@@ -36,7 +36,7 @@ definition
 		data matches {
 			HISTORY[id2] matches {
 				events matches {
-					EVENT[id3] matches {
+					EVENT[id3] occurrences matches {0..*} matches {
 						data matches {
 							ITEM_TREE[id4] matches {
 								items matches {
@@ -51,6 +51,7 @@ definition
 							}
 						}
 					}
+					INTERVAL_EVENT[id5] occurrences matches {0..*} 
 				}
 			}
 		}

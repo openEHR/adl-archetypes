@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Tim Garden, NTG Department of Health, Australia", "Tanya Gardner, CAAC, Australia", "Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Chunlan Ma, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Rosalie Schultz, Anyinginyi Health Aboriginal Corporation, Australia", "Jo Wright, NT Dept of Health, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -159,12 +159,12 @@ definition
 							DV_TEXT[id42] 
 						}
 					}
-					ELEMENT[id13] occurrences matches {0..*} matches {	-- Identification
+					ELEMENT[id13] matches {	-- Identification
 						value matches {
 							DV_TEXT[id43] 
 						}
 					}
-					ELEMENT[id6] occurrences matches {0..*} matches {	-- Link
+					ELEMENT[id6] matches {	-- Link
 						value matches {
 							DV_URI[id44] 
 						}

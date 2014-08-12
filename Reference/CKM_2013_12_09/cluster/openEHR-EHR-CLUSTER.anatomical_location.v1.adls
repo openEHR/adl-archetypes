@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"Use cases:
 
@@ -78,7 +78,7 @@ definition
 					}
 				}
 			}
-			CLUSTER[id21] occurrences matches {0..*} matches {	-- Relative location
+			CLUSTER[id21] matches {	-- Relative location
 				items matches {
 					ELEMENT[id22] occurrences matches {0..1} matches {	-- Identified landmark
 						value matches {
@@ -102,17 +102,17 @@ definition
 					}
 				}
 			}
-			ELEMENT[id24] occurrences matches {0..*} matches {	-- Description
+			ELEMENT[id24] matches {	-- Description
 				value matches {
 					DV_TEXT[id62] 
 				}
 			}
-			ELEMENT[id54] occurrences matches {0..*} matches {	-- Visual markings/orientation
+			ELEMENT[id54] matches {	-- Visual markings/orientation
 				value matches {
 					DV_TEXT[id63] 
 				}
 			}
-			ELEMENT[id53] occurrences matches {0..*} matches {	-- Image
+			ELEMENT[id53] matches {	-- Image
 				value matches {
 					DV_MULTIMEDIA[id64] matches {
 						media_type 

@@ -35,7 +35,7 @@ definition
 						data matches {
 							ITEM_TREE[id4] matches {
 								items matches {
-									CLUSTER[id8] occurrences matches {0..*} matches {	-- Oral intake
+									CLUSTER[id8] matches {	-- Oral intake
 										items matches {
 											ELEMENT[id6] occurrences matches {0..1} matches {	-- Fluid
 												value matches {

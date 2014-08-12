@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll Ocean Informatics", ...>
 	other_details = <
 		["references"] = <"Weed LL. Medical records that guide and teach. New Engl J Med: 1987; 278:593-9 and 278:652-657
@@ -37,7 +37,7 @@ definition
 		items matches {
 			SECTION[id2] occurrences matches {0..1} matches {	-- S
 				items matches {
-					allow_archetype OBSERVATION[id7] occurrences matches {0..*} matches {	-- Story and reports from the person and others 
+					allow_archetype OBSERVATION[id7] matches {	-- Story and reports from the person and others 
 						include
 							archetype_id/value matches {/.*/}
 						exclude
@@ -51,7 +51,7 @@ definition
 			}
 			SECTION[id3] occurrences matches {0..1} matches {	-- O
 				items matches {
-					allow_archetype OBSERVATION[id9] occurrences matches {0..*} matches {	-- Observations and physical exam 
+					allow_archetype OBSERVATION[id9] matches {	-- Observations and physical exam 
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -63,7 +63,7 @@ definition
 			}
 			SECTION[id4] occurrences matches {0..1} matches {	-- A
 				items matches {
-					allow_archetype EVALUATION[id11] occurrences matches {0..*} matches {	-- Assessment, summary and diagnoses 
+					allow_archetype EVALUATION[id11] matches {	-- Assessment, summary and diagnoses 
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -75,15 +75,15 @@ definition
 			}
 			SECTION[id5] occurrences matches {0..1} matches {	-- P
 				items matches {
-					allow_archetype INSTRUCTION[id13] occurrences matches {0..*} matches {	-- Planned actions 
+					allow_archetype INSTRUCTION[id13] matches {	-- Planned actions 
 						include
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype ACTION[id14] occurrences matches {0..*} matches {	-- Actions taken
+					allow_archetype ACTION[id14] matches {	-- Actions taken
 						include
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype ADMIN_ENTRY[id16] occurrences matches {0..*} matches {	-- Administrative notes
+					allow_archetype ADMIN_ENTRY[id16] matches {	-- Administrative notes
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -95,11 +95,11 @@ definition
 			}
 			SECTION[id6] occurrences matches {0..1} matches {	-- E
 				items matches {
-					allow_archetype INSTRUCTION[id17] occurrences matches {0..*} matches {	-- Planned educational activities 
+					allow_archetype INSTRUCTION[id17] matches {	-- Planned educational activities 
 						include
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype ACTION[id18] occurrences matches {0..*} matches {	-- Educational activities
+					allow_archetype ACTION[id18] matches {	-- Educational activities
 						include
 							archetype_id/value matches {/.*/}
 					}

@@ -71,7 +71,7 @@ INSTRUCTION.medication is suggested as the best archetype to represent a Medicat
 definition
 	SECTION[id1] matches {	-- Medication Order List
 		items matches {
-			allow_archetype ENTRY[id5] occurrences matches {0..*} matches {	-- Medication inclusions/exclusions
+			allow_archetype ENTRY[id5] matches {	-- Medication inclusions/exclusions
 				include
 					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.medication(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-medication(-a-zA-Z0-9_]+)*\.v1/}
 			}

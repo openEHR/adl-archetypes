@@ -80,7 +80,7 @@ definition
 							}
 						}
 					}
-					CLUSTER[id16] occurrences matches {0..*} matches {	-- Detailed Examination
+					CLUSTER[id16] matches {	-- Detailed Examination
 						items matches {
 							ELEMENT[id17] occurrences matches {0..1} matches {	-- Pinna Structure
 								value matches {
@@ -113,13 +113,13 @@ definition
 									}
 								}
 							}
-							allow_archetype CLUSTER[id22] occurrences matches {0..*} matches {	-- Related Examination Detail
+							allow_archetype CLUSTER[id22] matches {	-- Related Examination Detail
 								include
 									archetype_id/value matches {/.*/}
 							}
 						}
 					}
-					allow_archetype CLUSTER[id3] occurrences matches {0..*} matches {	-- Related Examination Detail
+					allow_archetype CLUSTER[id3] matches {	-- Related Examination Detail
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -130,7 +130,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[id4] occurrences matches {0..*} matches {	-- Clinical Interpretation
+					ELEMENT[id4] matches {	-- Clinical Interpretation
 						value matches {
 							DV_TEXT[id34] 
 						}

@@ -95,7 +95,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[id82] occurrences matches {0..*} matches {	-- Reason For Non-completion
+									ELEMENT[id82] matches {	-- Reason For Non-completion
 										value matches {
 											DV_TEXT[id95] 
 										}
@@ -106,7 +106,7 @@ definition
 						state matches {
 							ITEM_TREE[id5] matches {
 								items matches {
-									ELEMENT[id65] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[id65] matches {	-- Confounding Factors
 										value matches {
 											DV_TEXT[id96] 
 										}
@@ -173,7 +173,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[id89] occurrences matches {0..*} matches {	-- Reason For More Than Two Attempts
+					ELEMENT[id89] matches {	-- Reason For More Than Two Attempts
 						value matches {
 							DV_TEXT[id107] 
 						}

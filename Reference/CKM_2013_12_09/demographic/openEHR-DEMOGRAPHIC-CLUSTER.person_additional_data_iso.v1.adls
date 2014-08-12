@@ -39,7 +39,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"ISO/TS 22220:2008(E) - Identification of Subject of Care - Technical Specification - International Organization for Standardization">
 	>
@@ -47,19 +47,19 @@ description
 definition
 	CLUSTER[id1] occurrences matches {0..1} matches {	-- ISO: Dados demográficos adicionais de uma pessoa
 		items matches {
-			ELEMENT[id2] occurrences matches {0..*} matches {	-- sexo
+			ELEMENT[id2] matches {	-- sexo
 				value matches {
 					DV_CODED_TEXT[id5] matches {
 						defining_code matches {[ac1]}		-- sexo (synthesised)
 					}
 				}
 			}
-			ELEMENT[id3] occurrences matches {0..*} matches {	-- Sobrenome da Mãe
+			ELEMENT[id3] matches {	-- Sobrenome da Mãe
 				value matches {
 					DV_TEXT[id6] 
 				}
 			}
-			ELEMENT[id4] occurrences matches {0..*} matches {	-- Comentários de identificação
+			ELEMENT[id4] matches {	-- Comentários de identificação
 				value matches {
 					DV_TEXT[id7] 
 				}

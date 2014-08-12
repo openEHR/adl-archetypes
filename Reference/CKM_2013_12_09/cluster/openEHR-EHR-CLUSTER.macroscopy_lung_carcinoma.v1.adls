@@ -22,7 +22,7 @@ Use as a component archetype in the context of a suite of archetypes that make u
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"The Royal College of Pathologists. Dataset for lung cancer histopathology reports [Internet]. 2007 Sep ;[cited 2009 Jul 27 ] 
 Available from: http://www.rcpath.org/index.asp?PageID=1159
@@ -42,31 +42,31 @@ definition
 					}
 				}
 			}
-			allow_archetype CLUSTER[id4] occurrences matches {0..*} matches {	-- Tumour site
+			allow_archetype CLUSTER[id4] matches {	-- Tumour site
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
 				exclude
 					archetype_id/value matches {/.*/}
 			}
-			allow_archetype CLUSTER[id2] occurrences matches {0..*} matches {	-- Tumour dimensions
+			allow_archetype CLUSTER[id2] matches {	-- Tumour dimensions
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1/}
 				exclude
 					archetype_id/value matches {/.*/}
 			}
-			allow_archetype CLUSTER[id5] occurrences matches {0..*} matches {	-- Direct spread of tumour
+			allow_archetype CLUSTER[id5] matches {	-- Direct spread of tumour
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion(-a-zA-Z0-9_]+)*\.v1/}
 				exclude
 					archetype_id/value matches {/.*/}
 			}
-			allow_archetype CLUSTER[id6] occurrences matches {0..*} matches {	-- Tumour resection margin 
+			allow_archetype CLUSTER[id6] matches {	-- Tumour resection margin 
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins(-a-zA-Z0-9_]+)*\.v1/}
 				exclude
 					archetype_id/value matches {/.*/}
 			}
-			allow_archetype CLUSTER[id7] occurrences matches {0..*} matches {	-- Lymph node involvement
+			allow_archetype CLUSTER[id7] matches {	-- Lymph node involvement
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.lymph_node_metastases(-a-zA-Z0-9_]+)*\.v1/}
 				exclude

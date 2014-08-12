@@ -23,7 +23,7 @@ For common use cases, it may be appropriate to specialise this archetype specifi
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, UK">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"5483D9756B2D4BEBB4848989509F89DC">
@@ -47,14 +47,14 @@ definition
 					DV_TEXT[id22] 
 				}
 			}
-			ELEMENT[id17] occurrences matches {0..*} matches {	-- Size
+			ELEMENT[id17] matches {	-- Size
 				value matches {
 					DV_COUNT[id23] 
 					DV_QUANTITY[id24] 
 					DV_TEXT[id25] 
 				}
 			}
-			allow_archetype CLUSTER[id18] occurrences matches {0..*} matches {	-- Dimensions
+			allow_archetype CLUSTER[id18] matches {	-- Dimensions
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-a-zA-Z0-9_]+)*\.v1/}
 			}
@@ -78,7 +78,7 @@ definition
 					DV_DATE_TIME[id29] 
 				}
 			}
-			CLUSTER[id14] occurrences matches {0..*} matches {	-- Safety feature
+			CLUSTER[id14] matches {	-- Safety feature
 				items matches {
 					ELEMENT[id15] occurrences matches {0..1} matches {	-- Type of feature
 						value matches {
@@ -97,11 +97,11 @@ definition
 					DV_TEXT[id32] 
 				}
 			}
-			allow_archetype ITEM[id10] occurrences matches {0..*} matches {	-- Additional Details
+			allow_archetype ITEM[id10] matches {	-- Additional Details
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.device_details(-a-zA-Z0-9_]+)*\.v1/}
 			}
-			allow_archetype CLUSTER[id19] occurrences matches {0..*} matches {	-- Components
+			allow_archetype CLUSTER[id19] matches {	-- Components
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 			}

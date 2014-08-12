@@ -195,7 +195,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[id23] occurrences matches {0..*} matches {	-- Surface Features
+					ELEMENT[id23] matches {	-- Surface Features
 						value matches {
 							DV_CODED_TEXT[id197] matches {
 								defining_code matches {[ac20]}		-- Surface Features (synthesised)
@@ -241,7 +241,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[id35] occurrences matches {0..*} matches {	-- Location of Tympanosclerosis
+					ELEMENT[id35] matches {	-- Location of Tympanosclerosis
 						value matches {
 							DV_TEXT[id205] 
 						}
@@ -258,7 +258,7 @@ definition
 							DV_TEXT[id207] 
 						}
 					}
-					allow_archetype CLUSTER[id45] occurrences matches {0..*} matches {	-- Retraction Grade
+					allow_archetype CLUSTER[id45] matches {	-- Retraction Grade
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.sade_classification(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.tos_classification(-a-zA-Z0-9_]+)*\.v1/}
 					}
@@ -290,7 +290,7 @@ definition
 									}
 								}
 							}
-							allow_archetype CLUSTER[id71] occurrences matches {0..*} matches {	-- Measurement
+							allow_archetype CLUSTER[id71] matches {	-- Measurement
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-a-zA-Z0-9_]+)*\.v1/}
 							}
@@ -324,14 +324,14 @@ definition
 					}
 				}
 			}
-			ELEMENT[id173] occurrences matches {0..*} matches {	-- Image
+			ELEMENT[id173] matches {	-- Image
 				value matches {
 					DV_MULTIMEDIA[id216] matches {
 						media_type matches {[ac28]}		-- Image (synthesised)
 					}
 				}
 			}
-			ELEMENT[id106] occurrences matches {0..*} matches {	-- Clinical Interpretation
+			ELEMENT[id106] matches {	-- Clinical Interpretation
 				value matches {
 					DV_TEXT[id217] 
 				}

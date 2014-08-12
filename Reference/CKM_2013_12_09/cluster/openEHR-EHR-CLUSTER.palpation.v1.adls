@@ -34,7 +34,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"6997D54D3789258C693D939FAFFB0CEE">
@@ -45,7 +45,7 @@ definition
 		items matches {
 			CLUSTER[id60] occurrences matches {0..1} matches {	-- Normal statements
 				items matches {
-					ELEMENT[id13] occurrences matches {0..*} matches {	-- Normal statement
+					ELEMENT[id13] matches {	-- Normal statement
 						value matches {
 							DV_CODED_TEXT[id86] matches {
 								defining_code matches {[ac1]}		-- Normal statement (synthesised)
@@ -61,7 +61,7 @@ definition
 			}
 			CLUSTER[id81] occurrences matches {0..1} matches {	-- Findings
 				items matches {
-					CLUSTER[id20] occurrences matches {0..*} matches {	-- Tenderness
+					CLUSTER[id20] matches {	-- Tenderness
 						items matches {
 							ELEMENT[id3] occurrences matches {0..1} matches {	-- Depth of palpation
 								value matches {
@@ -112,7 +112,7 @@ definition
 							}
 						}
 					}
-					CLUSTER[id11] occurrences matches {0..*} matches {	-- Localised palpation
+					CLUSTER[id11] matches {	-- Localised palpation
 						items matches {
 							ELEMENT[id12] matches {	-- Body site
 								value matches {
@@ -151,7 +151,7 @@ definition
 									}
 								}
 							}
-							ELEMENT[id55] occurrences matches {0..*} matches {	-- Features
+							ELEMENT[id55] matches {	-- Features
 								value matches {
 									DV_CODED_TEXT[id100] matches {
 										defining_code matches {[ac10]}		-- Features (synthesised)

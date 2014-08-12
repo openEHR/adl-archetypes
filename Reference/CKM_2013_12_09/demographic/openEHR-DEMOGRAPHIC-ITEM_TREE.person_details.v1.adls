@@ -39,7 +39,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
 	ITEM_TREE[id1] occurrences matches {0..1} matches {	-- Dados da pessoa
@@ -51,7 +51,7 @@ definition
 							DV_DATE[id50] 
 						}
 					}
-					ELEMENT[id12] occurrences matches {0..*} matches {	-- Indicador de seguimento da data de nascimento
+					ELEMENT[id12] matches {	-- Indicador de seguimento da data de nascimento
 						value matches {
 							DV_BOOLEAN[id51] 
 						}
@@ -93,7 +93,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[id18] occurrences matches {0..*} matches {	-- sexo
+					ELEMENT[id18] matches {	-- sexo
 						value matches {
 							DV_TEXT[id59] 
 							DV_CODED_TEXT[id60] matches {
@@ -181,7 +181,7 @@ definition
 							DV_TEXT[id74] 
 						}
 					}
-					ELEMENT[id46] occurrences matches {0..*} matches {	-- Localização do identificador
+					ELEMENT[id46] matches {	-- Localização do identificador
 						value matches {
 							DV_TEXT[id75] 
 							DV_CODED_TEXT[id76] matches {
@@ -206,7 +206,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[id32] occurrences matches {0..*} matches {	-- Gênero
+			ELEMENT[id32] matches {	-- Gênero
 				value matches {
 					DV_TEXT[id80] 
 					DV_CODED_TEXT[id81] matches {
@@ -214,12 +214,12 @@ definition
 					}
 				}
 			}
-			ELEMENT[id33] occurrences matches {0..*} matches {	-- Sobrenome da Mãe
+			ELEMENT[id33] matches {	-- Sobrenome da Mãe
 				value matches {
 					DV_TEXT[id82] 
 				}
 			}
-			ELEMENT[id34] occurrences matches {0..*} matches {	-- Estado Civil
+			ELEMENT[id34] matches {	-- Estado Civil
 				value matches {
 					DV_TEXT[id83] 
 					DV_CODED_TEXT[id84] matches {
@@ -227,7 +227,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[id35] occurrences matches {0..*} matches {	-- Etnia
+			ELEMENT[id35] matches {	-- Etnia
 				value matches {
 					DV_TEXT[id85] 
 					DV_CODED_TEXT[id86] matches {
@@ -235,12 +235,12 @@ definition
 					}
 				}
 			}
-			ELEMENT[id36] occurrences matches {0..*} matches {	-- Comentários de identificação
+			ELEMENT[id36] matches {	-- Comentários de identificação
 				value matches {
 					DV_TEXT[id87] 
 				}
 			}
-			allow_archetype CLUSTER[id6] occurrences matches {0..*} matches {	-- Identificadores da pessoa
+			allow_archetype CLUSTER[id6] matches {	-- Identificadores da pessoa
 				include
 					archetype_id/value matches {/(person_identifier)a-zA-Z0-9_-]*\.v1/}
 			}

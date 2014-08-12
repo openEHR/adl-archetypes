@@ -47,7 +47,7 @@ Do not use for microbiology - use OBSERVATION.lab_test-microbiology.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie AEG / Ocean Infomatics", "Sam Heard Ocean Informatics">
 	other_details = <
 		["references"] = <"">
@@ -64,7 +64,7 @@ definition
 							after [id66]
 							CLUSTER[id0.86] occurrences matches {0..1} matches {	-- Macroscopic findings
 								items matches {
-									CLUSTER[id0.76] occurrences matches {0..*} matches {	-- Macroscopic finding
+									CLUSTER[id0.76] matches {	-- Macroscopic finding
 										items matches {
 											ELEMENT[id0.90] occurrences matches {0..1} matches {	-- Tissue present
 												value matches {
@@ -73,13 +73,13 @@ definition
 													}
 												}
 											}
-											allow_archetype CLUSTER[id0.78] occurrences matches {0..*} matches {	-- Macroscopic specimen detail 
+											allow_archetype CLUSTER[id0.78] matches {	-- Macroscopic specimen detail 
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
 												exclude
 													archetype_id/value matches {/.*/}
 											}
-											allow_archetype CLUSTER[id0.79] occurrences matches {0..*} matches {	-- Structured macroscopic detail  
+											allow_archetype CLUSTER[id0.79] matches {	-- Structured macroscopic detail  
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.macroscopy_colorectal_carcinoma(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.macroscopy_lung_carcinoma(-a-zA-Z0-9_]+)*\.v1/}
 											}
@@ -99,28 +99,28 @@ definition
 							}
 							CLUSTER[id0.87] occurrences matches {0..1} matches {	-- Microscopic findings
 								items matches {
-									CLUSTER[id0.81] occurrences matches {0..*} matches {	-- Microscopic finding
+									CLUSTER[id0.81] matches {	-- Microscopic finding
 										items matches {
 											ELEMENT[id79.2] occurrences matches {0..1} matches {	-- Histopathological result
 												value matches {
 													DV_TEXT[id0.104] 
 												}
 											}
-											allow_archetype CLUSTER[id0.98] occurrences matches {0..*} matches {	-- Location
+											allow_archetype CLUSTER[id0.98] matches {	-- Location
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location-precise\.v1/}
 											}
-											allow_archetype CLUSTER[id0.97] occurrences matches {0..*} matches {	-- Size
+											allow_archetype CLUSTER[id0.97] matches {	-- Size
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties\.v1/}
 											}
-											allow_archetype CLUSTER[id0.83] occurrences matches {0..*} matches {	-- Microscopic specimen detail 
+											allow_archetype CLUSTER[id0.83] matches {	-- Microscopic specimen detail 
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
 												exclude
 													archetype_id/value matches {/.*/}
 											}
-											allow_archetype CLUSTER[id0.84] occurrences matches {0..*} matches {	-- Structured microscopic detail   
+											allow_archetype CLUSTER[id0.84] matches {	-- Structured microscopic detail   
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.microscopy_lymphoma(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_melanoma(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_lung_carcinoma(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_breast_carcinoma(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_colorectal_carcinoma(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_prostate_carcinoma(-a-zA-Z0-9_]+)*\.v1/}
 											}
@@ -138,7 +138,7 @@ definition
 									}
 								}
 							}
-							allow_archetype CLUSTER[id0.95] occurrences matches {0..*} matches {	-- Pathological Staging 
+							allow_archetype CLUSTER[id0.95] matches {	-- Pathological Staging 
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.tnm_staging(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.tumour_colorectal_staging_non_tnm(-a-zA-Z0-9_]+)*\.v1/}
 							}

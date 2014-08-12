@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"0D3EB32A8DA29FFC98EE7ABEE6F7BE81">
@@ -30,7 +30,7 @@ description
 definition
 	CLUSTER[id1] matches {	-- Cessation attempts
 		items matches {
-			CLUSTER[id3] occurrences matches {0..*} matches {	-- Attempt details
+			CLUSTER[id3] matches {	-- Attempt details
 				items matches {
 					ELEMENT[id2] occurrences matches {0..1} matches {	-- Location
 						value matches {
@@ -47,7 +47,7 @@ definition
 							DV_TEXT[id14] 
 						}
 					}
-					CLUSTER[id6] occurrences matches {0..*} matches {	-- Therapeutic intervention
+					CLUSTER[id6] matches {	-- Therapeutic intervention
 						items matches {
 							ELEMENT[id7] occurrences matches {0..1} matches {	-- Agent
 								value matches {

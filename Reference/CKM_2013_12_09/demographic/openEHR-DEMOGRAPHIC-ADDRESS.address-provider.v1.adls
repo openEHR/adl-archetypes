@@ -42,7 +42,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sebastian Garde, Ocean Informatics, Germany (Editor)", "Omer Hotomaroglu, Turkey (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)">
 	other_details = <
 		["references"] = <"ISO/DTS 27527:2007(E) - Provider Identification - Draft Technnical Specification - International Organization for Standardization">
@@ -57,7 +57,7 @@ definition
 					DV_BOOLEAN[id0.4] 
 				}
 			}
-			ELEMENT[id0.3] occurrences matches {0..*} matches {	-- Healthcare provider identifier
+			ELEMENT[id0.3] matches {	-- Healthcare provider identifier
 				value matches {
 					DV_TEXT[id0.5] 
 				}

@@ -64,11 +64,11 @@ definition
 											DV_TEXT[id13] 
 										}
 									}
-									allow_archetype CLUSTER[id6] occurrences matches {0..*} matches {	-- Examination Detail
+									allow_archetype CLUSTER[id6] matches {	-- Examination Detail
 										include
 											archetype_id/value matches {/.*/}
 									}
-									ELEMENT[id7] occurrences matches {0..*} matches {	-- Interpretation
+									ELEMENT[id7] matches {	-- Interpretation
 										value matches {
 											DV_TEXT[id14] 
 										}
@@ -84,7 +84,7 @@ definition
 						state matches {
 							ITEM_TREE[id10] matches {
 								items matches {
-									ELEMENT[id9] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[id9] matches {	-- Confounding Factors
 										value matches {
 											DV_TEXT[id16] 
 										}
@@ -99,7 +99,7 @@ definition
 		protocol matches {
 			ITEM_TREE[id8] matches {
 				items matches {
-					allow_archetype CLUSTER[id11] occurrences matches {0..*} matches {	-- Device Details
+					allow_archetype CLUSTER[id11] matches {	-- Device Details
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}

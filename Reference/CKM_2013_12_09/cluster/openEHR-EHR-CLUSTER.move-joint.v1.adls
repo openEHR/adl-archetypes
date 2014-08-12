@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"95163F18290F91409530D7901DF344FA">
@@ -43,7 +43,7 @@ definition
 		/items[id37]/items matches {
 			CLUSTER[id0.14] occurrences matches {0..1} matches {	-- Abnormal movement
 				items matches {
-					CLUSTER[id0.16] occurrences matches {0..*} matches {	-- Ligament testing
+					CLUSTER[id0.16] matches {	-- Ligament testing
 						items matches {
 							ELEMENT[id0.15] occurrences matches {0..1} matches {	-- Name
 								value matches {

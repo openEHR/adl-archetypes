@@ -194,7 +194,7 @@ Este arquetipo no debe usarse para registrar la temperatura de una parte del cue
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Knut Bernstein", "Sebastian Garde", "Ian McNicoll", "Omer Hotomaroglu", "Sundaresan Jaganathan", "Heather Leslie", "Shahla Foozonkhah">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"5E2257CC252B591F41714621C597C910">
@@ -205,7 +205,7 @@ definition
 		data matches {
 			HISTORY[id3] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[id4] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id4] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id2] matches {
 								items cardinality matches {1; unordered} matches {

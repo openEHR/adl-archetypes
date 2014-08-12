@@ -39,7 +39,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Rong Chen, Cambio Healthcare Systems, Sweden", "Ricardo Correia, SBIM/FMUP, Portugal", "Rigoleta Dutra, Ministry of Defense, Brazil (Editor)", "Shahla Foozonakah, Ocean Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia", "Sergio Freire, State University of Rio de Janeiro, Brazil (Editor)", "Heather Grain, Llewelyn Grain Informatics, Australia", "Grahame Grieve, Australia", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["references"] = <"ISO/TS 22220:2008(E) - Identification of Subject of Care - Technical Specification - International Organization for Standardization.">
@@ -56,7 +56,7 @@ definition
 		details matches {
 			ITEM_TREE[id2] occurrences matches {0..1} matches {	-- Items
 				items matches {
-					CLUSTER[id3] occurrences matches {0..*} matches {	-- Address lines
+					CLUSTER[id3] matches {	-- Address lines
 						items matches {
 							ELEMENT[id22] occurrences matches {0..1} matches {	-- Building/complex sub-unit type—abbreviation
 								value matches {

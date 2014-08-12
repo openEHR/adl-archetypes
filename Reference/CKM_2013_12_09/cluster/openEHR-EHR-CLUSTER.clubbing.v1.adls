@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"046FE5DB0717AD9C4B140CDCB1509DC3">
@@ -63,7 +63,7 @@ definition
 							DV_TEXT[id17] 
 						}
 					}
-					allow_archetype ELEMENT[id13] occurrences matches {0..*} matches {	-- Body location
+					allow_archetype ELEMENT[id13] matches {	-- Body location
 						include
 							archetype_id/value matches {/openEHR-EHR-ELEMENT\.body_location(-a-zA-Z0-9_]+)*\.v1/}
 					}

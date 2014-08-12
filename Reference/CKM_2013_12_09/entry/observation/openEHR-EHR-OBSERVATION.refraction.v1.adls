@@ -23,7 +23,7 @@ The 'Description' data element can be used to record simple narrative summary or
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Gustavo M Bacelar-Silva, Brazil", ...>
 	other_details = <
 		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK, ian.mcnicoll@oceaninformatics.com">
@@ -72,14 +72,14 @@ definition
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.refraction_details(-a-zA-Z0-9_]+)*\.v1/}
 											}
-											ELEMENT[id67] occurrences matches {0..*} matches {	-- Interpretation
+											ELEMENT[id67] matches {	-- Interpretation
 												value matches {
 													DV_TEXT[id144] 
 												}
 											}
 										}
 									}
-									ELEMENT[id55] occurrences matches {0..*} matches {	-- Overall Interpretation
+									ELEMENT[id55] matches {	-- Overall Interpretation
 										value matches {
 											DV_TEXT[id145] 
 										}
@@ -95,12 +95,12 @@ definition
 						state matches {
 							ITEM_TREE[id42] matches {
 								items matches {
-									ELEMENT[id113] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[id113] matches {	-- Confounding Factors
 										value matches {
 											DV_TEXT[id147] 
 										}
 									}
-									ELEMENT[id43] occurrences matches {0..*} matches {	-- Refractive Correction
+									ELEMENT[id43] matches {	-- Refractive Correction
 										value matches {
 											DV_CODED_TEXT[id148] matches {
 												defining_code matches {[ac2]}		-- Refractive Correction (synthesised)

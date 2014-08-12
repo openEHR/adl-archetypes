@@ -69,7 +69,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[id7] occurrences matches {0..*} matches {	-- Reasons For Non-completion
+									ELEMENT[id7] matches {	-- Reasons For Non-completion
 										value matches {
 											DV_TEXT[id24] 
 										}
@@ -80,7 +80,7 @@ definition
 						state matches {
 							ITEM_TREE[id10] matches {
 								items matches {
-									ELEMENT[id11] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[id11] matches {	-- Confounding Factors
 										value matches {
 											DV_TEXT[id25] 
 										}
@@ -103,7 +103,7 @@ definition
 		protocol matches {
 			ITEM_TREE[id12] matches {
 				items matches {
-					ELEMENT[id13] occurrences matches {0..*} matches {	-- Unilateral Assistive Device
+					ELEMENT[id13] matches {	-- Unilateral Assistive Device
 						value matches {
 							DV_CODED_TEXT[id28] matches {
 								defining_code matches {[ac1]}		-- Unilateral Assistive Device (synthesised)
@@ -111,7 +111,7 @@ definition
 							DV_TEXT[id29] 
 						}
 					}
-					ELEMENT[id21] occurrences matches {0..*} matches {	-- Bilateral Assistive Device
+					ELEMENT[id21] matches {	-- Bilateral Assistive Device
 						value matches {
 							DV_CODED_TEXT[id30] matches {
 								defining_code matches {[ac2]}		-- Bilateral Assistive Device (synthesised)
@@ -126,7 +126,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[id19] occurrences matches {0..*} matches {	-- Reasons For More Than Two Attempts
+					ELEMENT[id19] matches {	-- Reasons For More Than Two Attempts
 						value matches {
 							DV_TEXT[id33] 
 						}

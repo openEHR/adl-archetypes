@@ -52,7 +52,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"97D5CFBB64F80F587B48F6D6AD2B3BE1">
@@ -129,7 +129,7 @@ definition
 									DV_TEXT[id118] 
 								}
 							}
-							CLUSTER[id37] occurrences matches {0..*} matches {	-- Number of fetuses
+							CLUSTER[id37] matches {	-- Number of fetuses
 								items matches {
 									ELEMENT[id21] matches {	-- Number of fetuses
 										value matches {
@@ -155,7 +155,7 @@ definition
 									DV_TEXT[id122] 
 								}
 							}
-							CLUSTER[id39] occurrences matches {0..*} matches {	-- Labour or delivery
+							CLUSTER[id39] matches {	-- Labour or delivery
 								items matches {
 									ELEMENT[id43] occurrences matches {0..1} matches {	-- Comments
 										value matches {
@@ -206,7 +206,7 @@ definition
 											}
 										}
 									}
-									CLUSTER[id50] occurrences matches {0..*} matches {	-- Augmentation
+									CLUSTER[id50] matches {	-- Augmentation
 										items matches {
 											ELEMENT[id51] occurrences matches {0..1} matches {	-- Type
 												value matches {
@@ -234,7 +234,7 @@ definition
 											}
 										}
 									}
-									CLUSTER[id12] occurrences matches {0..*} matches {	-- Offspring
+									CLUSTER[id12] matches {	-- Offspring
 										items matches {
 											ELEMENT[id81] occurrences matches {0..1} matches {	-- Outcome
 												value matches {
@@ -299,7 +299,7 @@ definition
 											}
 											CLUSTER[id104] occurrences matches {0..1} matches {	-- Interventions
 												items matches {
-													CLUSTER[id61] occurrences matches {0..*} matches {	-- Intervention
+													CLUSTER[id61] matches {	-- Intervention
 														items matches {
 															ELEMENT[id62] occurrences matches {0..1} matches {	-- Type
 																value matches {
@@ -390,7 +390,7 @@ definition
 											}
 											CLUSTER[id88] occurrences matches {0..1} matches {	-- Fetal or Neontal complications
 												items matches {
-													CLUSTER[id89] occurrences matches {0..*} matches {	-- Fetal or Neonatal complication
+													CLUSTER[id89] matches {	-- Fetal or Neonatal complication
 														items matches {
 															ELEMENT[id90] occurrences matches {0..1} matches {	-- Date of onset
 																value matches {
@@ -412,7 +412,7 @@ definition
 							}
 							CLUSTER[id54] occurrences matches {0..1} matches {	-- Complications
 								items matches {
-									CLUSTER[id55] occurrences matches {0..*} matches {	-- Complication
+									CLUSTER[id55] matches {	-- Complication
 										items matches {
 											ELEMENT[id56] occurrences matches {0..1} matches {	-- Date of onset
 												value matches {

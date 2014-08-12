@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"DA19482778F9F4C2701B1EC0E330677D">
@@ -32,7 +32,7 @@ definition
 		items matches {
 			CLUSTER[id2] occurrences matches {0..1} matches {	-- Normal Statements
 				items matches {
-					ELEMENT[id3] occurrences matches {0..*} matches {	-- Normal Statement
+					ELEMENT[id3] matches {	-- Normal Statement
 						value matches {
 							DV_TEXT[id65] 
 						}
@@ -65,7 +65,7 @@ definition
 							}
 							CLUSTER[id63] occurrences matches {0..1} matches {	-- Day of cycle
 								items matches {
-									allow_archetype ELEMENT[id64] occurrences matches {0..*} matches {	-- Cluster: Day of cycle
+									allow_archetype ELEMENT[id64] matches {	-- Cluster: Day of cycle
 										include
 											archetype_id/value matches {/openEHR-EHR-ELEMENT\.menstrual_cycle_day\.v1/}
 									}
@@ -137,7 +137,7 @@ definition
 									}
 									CLUSTER[id47] occurrences matches {0..1} matches {	-- Use of Sanitary products
 										items matches {
-											ELEMENT[id48] occurrences matches {0..*} matches {	-- Type of Sanitary product
+											ELEMENT[id48] matches {	-- Type of Sanitary product
 												value matches {
 													DV_CODED_TEXT[id77] matches {
 														defining_code matches {[ac4]}		-- Type of Sanitary product (synthesised)

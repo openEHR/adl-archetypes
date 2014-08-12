@@ -26,7 +26,7 @@ The ECOG Performance Status is in the public domain therefore available for publ
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Cailin Lowry, Lifehouse, Australia", ...>
 	other_details = <
 		["references"] = <"Oken, M.M., Creech, R.H., Tormey, D.C., Horton, J., Davis, T.E., McFadden, E.T., Carbone, P.P.: Toxicity And Response Criteria Of The Eastern Cooperative Oncology Group. Am J Clin Oncol 5:649-655, 1982.

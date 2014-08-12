@@ -73,7 +73,7 @@ definition
 						exclude
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype CLUSTER[id239] occurrences matches {0..*} matches {	-- Direct tissue invasion
+					allow_archetype CLUSTER[id239] matches {	-- Direct tissue invasion
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
 						exclude
@@ -125,7 +125,7 @@ definition
 			}
 			CLUSTER[id290] occurrences matches {0..1} matches {	-- Other resection margin findings
 				items matches {
-					allow_archetype CLUSTER[id291] occurrences matches {0..*} matches {	-- Other resection margin
+					allow_archetype CLUSTER[id291] matches {	-- Other resection margin
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v1/}
 					}
@@ -149,7 +149,7 @@ definition
 			}
 			CLUSTER[id31] occurrences matches {0..1} matches {	-- Lymph node findings
 				items matches {
-					allow_archetype CLUSTER[id88] occurrences matches {0..*} matches {	-- Lymph node details
+					allow_archetype CLUSTER[id88] matches {	-- Lymph node details
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.lymph_node_metastases\.v1/}
 						exclude
@@ -159,7 +159,7 @@ definition
 			}
 			CLUSTER[id180] occurrences matches {0..1} matches {	-- Additional findings
 				items matches {
-					ELEMENT[id251] occurrences matches {0..*} matches {	-- Additional finding
+					ELEMENT[id251] matches {	-- Additional finding
 						value matches {
 							DV_CODED_TEXT[id298] matches {
 								defining_code matches {[ac5]}		-- Additional finding (synthesised)
@@ -167,7 +167,7 @@ definition
 							DV_TEXT[id299] 
 						}
 					}
-					ELEMENT[id221] occurrences matches {0..*} matches {	-- Description
+					ELEMENT[id221] matches {	-- Description
 						value matches {
 							DV_TEXT[id300] 
 						}

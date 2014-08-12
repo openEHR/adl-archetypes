@@ -24,7 +24,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"215A2C17D4B48244C07F9920C844CEA4">
@@ -95,7 +95,7 @@ definition
 					}
 					CLUSTER[id0.17] occurrences matches {0..1} matches {	-- Signs of increased effort
 						items matches {
-							ELEMENT[id0.18] occurrences matches {0..*} matches {	-- Sign
+							ELEMENT[id0.18] matches {	-- Sign
 								value matches {
 									DV_CODED_TEXT[id0.46] matches {
 										defining_code matches {[ac0.3]}		-- Sign (synthesised)
@@ -134,7 +134,7 @@ definition
 			before [id10]
 			CLUSTER[id0.27] occurrences matches {0..1} matches {	-- Lymph nodes
 				items matches {
-					allow_archetype CLUSTER[id0.38] occurrences matches {0..*} matches {	-- Lymph node detail
+					allow_archetype CLUSTER[id0.38] matches {	-- Lymph node detail
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic-lymphnode(-a-zA-Z0-9_]+)*\.v1/}
 					}

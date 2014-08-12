@@ -39,19 +39,19 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 
 definition
 	CLUSTER[id1] occurrences matches {0..1} matches {	-- Dados demográficos adicionais da pessoa
 		items matches {
-			ELEMENT[id2] occurrences matches {0..*} matches {	-- Estado Civil
+			ELEMENT[id2] matches {	-- Estado Civil
 				value matches {
 					DV_CODED_TEXT[id4] matches {
 						defining_code matches {[ac2]}		-- Códigos para Estado Civil
 					}
 				}
 			}
-			ELEMENT[id3] occurrences matches {0..*} matches {	-- Etnia
+			ELEMENT[id3] matches {	-- Etnia
 				value matches {
 					DV_CODED_TEXT[id5] matches {
 						defining_code matches {[ac3]}		-- Códigos para grupos étnicos

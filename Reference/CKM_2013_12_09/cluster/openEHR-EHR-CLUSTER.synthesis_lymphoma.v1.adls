@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"Royal College of Pathologists of Australasia. Tumours of haematopoietic and lymphoid tissue, Structured Reporting Protocol (1st Edition 2010). [Internet]. 2010;[cited 2010 Mar 21 ] Available from: http://www.rcpa.edu.au//static/File/Asset%20library/public%20documents/Publications/StructuredReporting/TUMOURS%20OF%20HAEMATOPOIETIC%20AND%20LYMPHOID%20TISSUE%20STRUCTURED%20REPORTING%20PROTOCOL.pdf
 

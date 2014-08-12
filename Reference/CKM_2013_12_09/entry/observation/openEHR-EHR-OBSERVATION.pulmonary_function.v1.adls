@@ -38,7 +38,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Valeria Lecca, Sardegna Ricerche, Italia", "Derek Corrigan, Royal College of Surgeons in Ireland, Ireland", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"Lung volumes [Internet]. [date unknown];[cited 2010 Aug 25 ] Available from: http://en.wikipedia.org/wiki/Lung_volumes
@@ -58,7 +58,7 @@ definition
 						data matches {
 							ITEM_TREE[id4] matches {
 								items matches {
-									CLUSTER[id128] occurrences matches {0..*} matches {	-- Result Details
+									CLUSTER[id128] matches {	-- Result Details
 										items matches {
 											CLUSTER[id53] occurrences matches {0..1} matches {	-- Pulmonary Volume Result
 												items matches {
@@ -222,7 +222,7 @@ definition
 													DV_TEXT[id148] 
 												}
 											}
-											ELEMENT[id100] occurrences matches {0..*} matches {	-- Interpretation
+											ELEMENT[id100] matches {	-- Interpretation
 												value matches {
 													DV_TEXT[id149] 
 												}
@@ -269,7 +269,7 @@ definition
 													DV_TEXT[id155] 
 												}
 											}
-											allow_archetype CLUSTER[id94] occurrences matches {0..*} matches {	-- Agent detail
+											allow_archetype CLUSTER[id94] matches {	-- Agent detail
 												include
 													archetype_id/value matches {/.*/}
 											}

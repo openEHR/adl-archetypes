@@ -58,7 +58,7 @@ definition
 									DV_TEXT[id27] 
 								}
 							}
-							allow_archetype CLUSTER[id9] occurrences matches {0..*} matches {	-- Details
+							allow_archetype CLUSTER[id9] matches {	-- Details
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.consent_details(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.procedure_details(-a-zA-Z0-9_]+)*\.v1/}
 							}
@@ -85,15 +85,15 @@ definition
 							DV_TEXT[id30] 
 						}
 					}
-					allow_archetype CLUSTER[id14] occurrences matches {0..*} matches {	-- Responsible Provider
+					allow_archetype CLUSTER[id14] matches {	-- Responsible Provider
 						include
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype CLUSTER[id15] occurrences matches {0..*} matches {	-- Proposed Requester
+					allow_archetype CLUSTER[id15] matches {	-- Proposed Requester
 						include
 							archetype_id/value matches {/.*/}
 					}
-					CLUSTER[id20] occurrences matches {0..*} matches {	-- Patient Information
+					CLUSTER[id20] matches {	-- Patient Information
 						items matches {
 							ELEMENT[id21] occurrences matches {0..1} matches {	-- Name
 								value matches {

@@ -20,13 +20,13 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"1351DFBF3BC922AE4F857D9D036FD8C0">
 	>
 
 definition
-	ITEM_TREE[id1] occurrences matches {0..*} matches {	-- Follow up
+	ITEM_TREE[id1] matches {	-- Follow up
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[id3] occurrences matches {0..1} matches {	-- Service
 				value matches {

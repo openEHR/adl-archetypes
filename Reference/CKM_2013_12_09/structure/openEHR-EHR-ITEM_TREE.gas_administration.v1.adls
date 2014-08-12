@@ -45,7 +45,7 @@ description
 	>
 
 definition
-	ITEM_TREE[id1] occurrences matches {0..*} matches {	-- Gas administration
+	ITEM_TREE[id1] matches {	-- Gas administration
 		items matches {
 			ELEMENT[id15] occurrences matches {0..1} matches {	-- Gas
 				value matches {

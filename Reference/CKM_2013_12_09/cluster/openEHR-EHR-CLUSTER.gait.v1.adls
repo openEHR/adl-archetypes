@@ -20,7 +20,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"565A89C42C577DDEE05340DFBD44C2E6">
@@ -29,7 +29,7 @@ description
 definition
 	CLUSTER[id1] matches {	-- Gait
 		items matches {
-			CLUSTER[id2] occurrences matches {0..*} matches {	-- Normal Statements
+			CLUSTER[id2] matches {	-- Normal Statements
 				items matches {
 					ELEMENT[id3] occurrences matches {0..1} matches {	-- Normal statement
 						value matches {

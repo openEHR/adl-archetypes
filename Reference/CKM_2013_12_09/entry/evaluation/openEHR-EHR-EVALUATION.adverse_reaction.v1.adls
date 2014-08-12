@@ -211,14 +211,14 @@ definition
 							DV_TEXT[id54] 
 						}
 					}
-					CLUSTER[id10] occurrences matches {0..*} matches {	-- Reaction Event
+					CLUSTER[id10] matches {	-- Reaction Event
 						items matches {
 							ELEMENT[id11] occurrences matches {0..1} matches {	-- Specific Substance/Agent
 								value matches {
 									DV_TEXT[id55] 
 								}
 							}
-							ELEMENT[id12] occurrences matches {0..*} matches {	-- Manifestation
+							ELEMENT[id12] matches {	-- Manifestation
 								value matches {
 									DV_TEXT[id56] 
 								}
@@ -250,7 +250,7 @@ definition
 									DV_DURATION[id61] 
 								}
 							}
-							allow_archetype CLUSTER[id30] occurrences matches {0..*} matches {	-- Additional Reaction Detail
+							allow_archetype CLUSTER[id30] matches {	-- Additional Reaction Detail
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
 							}
@@ -269,7 +269,7 @@ definition
 									DV_DURATION[id64] 
 								}
 							}
-							allow_archetype CLUSTER[id20] occurrences matches {0..*} matches {	-- Additional Exposure Detail
+							allow_archetype CLUSTER[id20] matches {	-- Additional Exposure Detail
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.amount(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.medication_admin(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.timing(-a-zA-Z0-9_]+)*\.v1/}
 							}
@@ -278,12 +278,12 @@ definition
 									DV_TEXT[id65] 
 								}
 							}
-							ELEMENT[id32] occurrences matches {0..*} matches {	-- Multimedia
+							ELEMENT[id32] matches {	-- Multimedia
 								value matches {
 									DV_MULTIMEDIA[id66] 
 								}
 							}
-							allow_archetype CLUSTER[id42] occurrences matches {0..*} matches {	-- Reporting Details
+							allow_archetype CLUSTER[id42] matches {	-- Reporting Details
 								include
 									archetype_id/value matches {/.*/}
 							}
@@ -312,7 +312,7 @@ definition
 							DV_TEXT[id69] 
 						}
 					}
-					ELEMENT[id46] occurrences matches {0..*} matches {	-- Adverse Reaction Report
+					ELEMENT[id46] matches {	-- Adverse Reaction Report
 						value matches {
 							DV_URI[id70] 
 						}

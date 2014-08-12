@@ -106,7 +106,7 @@ definition
 		data matches {
 			HISTORY[id3] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[id4] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id4] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id2] matches {
 								items matches {
@@ -139,7 +139,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[id1031] occurrences matches {0..*} matches {	-- Character
+									ELEMENT[id1031] matches {	-- Character
 										value matches {
 											DV_TEXT[id1043] 
 										}
@@ -149,7 +149,7 @@ definition
 											DV_TEXT[id1044] 
 										}
 									}
-									ELEMENT[id1024] occurrences matches {0..*} matches {	-- Clinical Interpretation
+									ELEMENT[id1024] matches {	-- Clinical Interpretation
 										value matches {
 											DV_TEXT[id1045] 
 										}
@@ -172,7 +172,7 @@ definition
 											DV_TEXT[id1047] 
 										}
 									}
-									allow_archetype CLUSTER[id1018] occurrences matches {0..*} matches {	-- Exertion
+									allow_archetype CLUSTER[id1018] matches {	-- Exertion
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
 									}

@@ -60,7 +60,7 @@ definition
 		data matches {
 			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[id3] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id3] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
 								items cardinality matches {0..1; ordered} matches {
@@ -76,7 +76,7 @@ definition
 									}
 									CLUSTER[id7] occurrences matches {0..1} matches {	-- Internal examination
 										items matches {
-											ELEMENT[id8] occurrences matches {0..*} matches {	-- System
+											ELEMENT[id8] matches {	-- System
 												name matches {
 													DV_CODED_TEXT[id21] matches {
 														defining_code matches {[ac1]}		-- System (synthesised)
@@ -90,7 +90,7 @@ definition
 									}
 									CLUSTER[id17] occurrences matches {0..1} matches {	-- Microscopic examination
 										items matches {
-											ELEMENT[id18] occurrences matches {0..*} matches {	-- Organ
+											ELEMENT[id18] matches {	-- Organ
 												name matches {
 													DV_CODED_TEXT[id23] matches {
 														defining_code matches {[ac2]}		-- Organ (synthesised)

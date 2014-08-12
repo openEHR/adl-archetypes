@@ -17,7 +17,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
@@ -60,7 +60,7 @@ definition
 											}
 										}
 									}
-									CLUSTER[id38] occurrences matches {0..*} matches {	-- Operative details
+									CLUSTER[id38] matches {	-- Operative details
 										items matches {
 											ELEMENT[id37] occurrences matches {0..1} matches {	-- Overall Technique
 												value matches {
@@ -97,9 +97,9 @@ definition
 													}
 												}
 											}
-											CLUSTER[id43] occurrences matches {0..*} matches {	-- Haemostasis
+											CLUSTER[id43] matches {	-- Haemostasis
 												items matches {
-													ELEMENT[id44] occurrences matches {0..*} matches {	-- Method
+													ELEMENT[id44] matches {	-- Method
 														value matches {
 															DV_TEXT[id67] 
 														}
@@ -113,7 +113,7 @@ definition
 													}
 												}
 											}
-											CLUSTER[id53] occurrences matches {0..*} matches {	-- Operation-specific details
+											CLUSTER[id53] matches {	-- Operation-specific details
 												items matches {
 													allow_archetype CLUSTER[id56] occurrences matches {0..1} matches {	-- Any operation-specific details
 														include
@@ -140,7 +140,7 @@ definition
 													DV_COUNT[id71] 
 												}
 											}
-											CLUSTER[id17] occurrences matches {0..*} matches {	-- Layer closure detail
+											CLUSTER[id17] matches {	-- Layer closure detail
 												items matches {
 													ELEMENT[id18] occurrences matches {0..1} matches {	-- Layer
 														value matches {

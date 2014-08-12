@@ -46,11 +46,11 @@ definition
 					DV_TEXT[id8] 
 				}
 			}
-			allow_archetype CLUSTER[id3] occurrences matches {0..*} matches {	-- Examination Detail
+			allow_archetype CLUSTER[id3] matches {	-- Examination Detail
 				include
 					archetype_id/value matches {/.*/}
 			}
-			ELEMENT[id4] occurrences matches {0..*} matches {	-- Clinical Interpretation
+			ELEMENT[id4] matches {	-- Clinical Interpretation
 				value matches {
 					DV_TEXT[id9] 
 				}

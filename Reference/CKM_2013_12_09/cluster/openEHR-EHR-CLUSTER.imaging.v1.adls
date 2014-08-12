@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"">
@@ -44,13 +44,13 @@ definition
 					DV_TEXT[id19] 
 				}
 			}
-			allow_archetype CLUSTER[id8] occurrences matches {0..*} matches {	-- Anatomical location
+			allow_archetype CLUSTER[id8] matches {	-- Anatomical location
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location-precise(-a-zA-Z0-9_]+)*\.v1/}
 				exclude
 					archetype_id/value matches {/.*/}
 			}
-			CLUSTER[id12] occurrences matches {0..*} matches {	-- View
+			CLUSTER[id12] matches {	-- View
 				items matches {
 					ELEMENT[id13] occurrences matches {0..1} matches {	-- View name
 						value matches {

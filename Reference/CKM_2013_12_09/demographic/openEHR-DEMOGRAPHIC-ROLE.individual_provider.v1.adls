@@ -39,7 +39,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sebastian Garde, Ocean Informatics, Germany (Editor)", "Omer Hotomaroglu, Turkey (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)">
 
 definition
@@ -51,13 +51,13 @@ definition
 			}
 		}
 		capabilities matches {
-			allow_archetype CAPABILITY[id3] occurrences matches {0..*} matches {	-- Capacitação
+			allow_archetype CAPABILITY[id3] matches {	-- Capacitação
 				include
 					archetype_id/value matches {/(individual_credentials)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		contacts matches {
-			CONTACT[id4] occurrences matches {0..*} matches {	-- Contato
+			CONTACT[id4] matches {	-- Contato
 				addresses matches {
 					allow_archetype ADDRESS[id31] occurrences matches {1} matches {	-- Endereço
 						include
@@ -68,7 +68,7 @@ definition
 			}
 		}
 		relationships matches {
-			PARTY_RELATIONSHIP[id5] occurrences matches {0..*} matches {	-- Relacionamento com uma fonte pagadora
+			PARTY_RELATIONSHIP[id5] matches {	-- Relacionamento com uma fonte pagadora
 				details matches {
 					ITEM_TREE[id41] occurrences matches {0..1} matches {	-- Detalhes
 						items cardinality matches {1; unordered; unique} matches {
@@ -80,7 +80,7 @@ definition
 					}
 				}
 			}
-			PARTY_RELATIONSHIP[id6] occurrences matches {0..*} matches {	-- Relacionamento empregador/empregado
+			PARTY_RELATIONSHIP[id6] matches {	-- Relacionamento empregador/empregado
 				details matches {
 					ITEM_TREE[id51] occurrences matches {0..1} matches {	-- Detalhes
 						items cardinality matches {1..*; ordered} matches {

@@ -179,7 +179,7 @@ definition
 							DV_TEXT[id60] 
 						}
 					}
-					allow_archetype CLUSTER[id4] occurrences matches {0..*} matches {	-- Details
+					allow_archetype CLUSTER[id4] matches {	-- Details
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.consent_details(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.procedure_details(-a-zA-Z0-9_]+)*\.v1/}
 					}
@@ -205,7 +205,7 @@ definition
 							DV_DATE_TIME[id64] 
 						}
 					}
-					ELEMENT[id11] occurrences matches {0..*} matches {	-- Caveat
+					ELEMENT[id11] matches {	-- Caveat
 						value matches {
 							DV_TEXT[id65] 
 						}
@@ -233,15 +233,15 @@ definition
 							DV_DATE_TIME[id68] 
 						}
 					}
-					allow_archetype CLUSTER[id29] occurrences matches {0..*} matches {	-- Consent Requester
+					allow_archetype CLUSTER[id29] matches {	-- Consent Requester
 						include
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype CLUSTER[id30] occurrences matches {0..*} matches {	-- Consent Provider
+					allow_archetype CLUSTER[id30] matches {	-- Consent Provider
 						include
 							archetype_id/value matches {/.*/}
 					}
-					CLUSTER[id34] occurrences matches {0..*} matches {	-- Patient Information
+					CLUSTER[id34] matches {	-- Patient Information
 						items matches {
 							ELEMENT[id33] occurrences matches {0..1} matches {	-- Name
 								value matches {
@@ -253,7 +253,7 @@ definition
 									DV_TEXT[id70] 
 								}
 							}
-							ELEMENT[id35] occurrences matches {0..*} matches {	-- Multimedia Representation
+							ELEMENT[id35] matches {	-- Multimedia Representation
 								value matches {
 									DV_MULTIMEDIA[id71] matches {
 										media_type matches {[ac4]}		-- Multimedia Representation (synthesised)

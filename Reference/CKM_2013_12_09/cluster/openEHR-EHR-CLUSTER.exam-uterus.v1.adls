@@ -24,7 +24,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"8DC03436AB8E13BDA1F013485E53C77E">
@@ -97,7 +97,7 @@ definition
 			}
 			CLUSTER[id0.18] occurrences matches {0..1} matches {	-- Fetus
 				items matches {
-					allow_archetype CLUSTER[id0.30] occurrences matches {0..*} matches {	-- Fetal detail
+					allow_archetype CLUSTER[id0.30] matches {	-- Fetal detail
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-fetus\.v1/}
 					}

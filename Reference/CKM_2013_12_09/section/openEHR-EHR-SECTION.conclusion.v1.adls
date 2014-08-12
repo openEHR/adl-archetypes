@@ -39,7 +39,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
@@ -47,7 +47,7 @@ description
 definition
 	SECTION[id1] matches {	-- Conclusion
 		items matches {
-			allow_archetype EVALUATION[id2] occurrences matches {0..*} matches {	-- Evaluation of a problem, diagnosis etc.
+			allow_archetype EVALUATION[id2] matches {	-- Evaluation of a problem, diagnosis etc.
 				include
 					archetype_id/value matches {/openEHR-EHR-EVALUATION\.differential_diagnosis\.v1|openEHR-EHR-EVALUATION\.problem\.v1|openEHR-EHR-EVALUATION\.problem-diagnosis\.v1/}
 			}

@@ -28,7 +28,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"NEHTA, Australia. Pathology Episode v1.0 - Data Group library [Internet]. 2009;[cited 2009 Dec 8 ] Available from: http://www.nehta.gov.au/data-group-library/data-specifications/dgl-pathology
@@ -51,9 +51,9 @@ definition
 						items matches {
 							ELEMENT[id79] 
 							before [id58]
-							CLUSTER[id0.97] occurrences matches {0..*} matches {	-- Immunology result
+							CLUSTER[id0.97] matches {	-- Immunology result
 								items matches {
-									ELEMENT[id79.2] occurrences matches {0..*} matches {	-- Titre
+									ELEMENT[id79.2] matches {	-- Titre
 										value matches {
 											DV_PROPORTION[id0.98] matches {
 												numerator matches {|>=0.0|}
@@ -63,19 +63,19 @@ definition
 											}
 										}
 									}
-									ELEMENT[id0.95] occurrences matches {0..*} matches {	-- Amount
+									ELEMENT[id0.95] matches {	-- Amount
 										value matches {
 											DV_QUANTITY[id0.99] 
 										}
 									}
-									ELEMENT[id0.96] occurrences matches {0..*} matches {	-- Fluoresence pattern
+									ELEMENT[id0.96] matches {	-- Fluoresence pattern
 										value matches {
 											DV_CODED_TEXT[id0.100] matches {
 												defining_code matches {[ac0.1]}		-- Fluoresence pattern (synthesised)
 											}
 										}
 									}
-									ELEMENT[id79.1] occurrences matches {0..*} matches {	-- Qualitative result
+									ELEMENT[id79.1] matches {	-- Qualitative result
 										value matches {
 											DV_TEXT[id0.101] 
 											DV_CODED_TEXT[id0.102] matches {

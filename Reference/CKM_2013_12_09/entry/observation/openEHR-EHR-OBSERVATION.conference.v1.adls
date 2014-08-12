@@ -33,7 +33,7 @@ definition
 		data matches {
 			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[id3] occurrences matches {0..*} matches {	-- Time
+					POINT_EVENT[id3] matches {	-- Time
 						data matches {
 							ITEM_TREE[id4] matches {
 								items matches {
@@ -58,7 +58,7 @@ definition
 							}
 						}
 					}
-					INTERVAL_EVENT[id7] occurrences matches {0..*} matches {	-- Recording
+					INTERVAL_EVENT[id7] matches {	-- Recording
 						math_function matches {
 							DV_CODED_TEXT[id12] matches {
 								defining_code matches {[at1]}

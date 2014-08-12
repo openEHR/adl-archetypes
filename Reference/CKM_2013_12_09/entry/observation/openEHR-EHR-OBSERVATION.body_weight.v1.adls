@@ -203,7 +203,7 @@ definition
 		data matches {
 			HISTORY[id3] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[id4] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id4] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id2] matches {
 								items cardinality matches {1..*; unordered} matches {
@@ -236,7 +236,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[id26] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[id26] matches {	-- Confounding Factors
 										value matches {
 											DV_TEXT[id30] 
 										}

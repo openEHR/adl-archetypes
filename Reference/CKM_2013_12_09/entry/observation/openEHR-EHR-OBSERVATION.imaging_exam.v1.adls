@@ -64,7 +64,7 @@ definition
 											DV_TEXT[id45] 
 										}
 									}
-									allow_archetype CLUSTER[id7] occurrences matches {0..*} matches {	-- Anatomical site
+									allow_archetype CLUSTER[id7] matches {	-- Anatomical site
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
 									}
@@ -92,23 +92,23 @@ definition
 									}
 									CLUSTER[id16] occurrences matches {0..1} matches {	-- Result group
 										items matches {
-											CLUSTER[id17] occurrences matches {0..*} matches {	-- Result
+											CLUSTER[id17] matches {	-- Result
 												items matches {
 													ELEMENT[id18] occurrences matches {0..1} 	-- Result value
-													ELEMENT[id19] occurrences matches {0..*} matches {	-- Result comment
+													ELEMENT[id19] matches {	-- Result comment
 														value matches {
 															DV_TEXT[id50] 
 														}
 													}
 												}
 											}
-											allow_archetype CLUSTER[id20] occurrences matches {0..*} matches {	-- Anatomical site
+											allow_archetype CLUSTER[id20] matches {	-- Anatomical site
 												include
 													archetype_id/value matches {/.*/}
 											}
 										}
 									}
-									ELEMENT[id21] occurrences matches {0..*} matches {	-- Radiological diagnosis
+									ELEMENT[id21] matches {	-- Radiological diagnosis
 										value matches {
 											DV_TEXT[id51] 
 										}
@@ -118,7 +118,7 @@ definition
 											DV_TEXT[id52] 
 										}
 									}
-									ELEMENT[id23] occurrences matches {0..*} matches {	-- Examination result representation
+									ELEMENT[id23] matches {	-- Examination result representation
 										value matches {
 											DV_MULTIMEDIA[id53] matches {
 												media_type matches {[ac2]}		-- Examination result representation (synthesised)
@@ -140,23 +140,23 @@ definition
 		protocol matches {
 			ITEM_TREE[id26] matches {
 				items matches {
-					allow_archetype CLUSTER[id27] occurrences matches {0..*} matches {	-- Receiving imaging service
+					allow_archetype CLUSTER[id27] matches {	-- Receiving imaging service
 						include
 							archetype_id/value matches {/.*/}
 					}
-					CLUSTER[id28] occurrences matches {0..*} matches {	-- Examination request details
+					CLUSTER[id28] matches {	-- Examination request details
 						items matches {
 							ELEMENT[id29] occurrences matches {0..1} matches {	-- Requester order identifier
 								value matches {
 									DV_IDENTIFIER[id55] 
 								}
 							}
-							ELEMENT[id30] occurrences matches {0..*} matches {	-- Examination requested name
+							ELEMENT[id30] matches {	-- Examination requested name
 								value matches {
 									DV_TEXT[id56] 
 								}
 							}
-							allow_archetype CLUSTER[id31] occurrences matches {0..*} matches {	-- Requester
+							allow_archetype CLUSTER[id31] matches {	-- Requester
 								include
 									archetype_id/value matches {/.*/}
 							}
@@ -175,7 +175,7 @@ definition
 									DV_IDENTIFIER[id59] 
 								}
 							}
-							CLUSTER[id35] occurrences matches {0..*} matches {	-- Image details
+							CLUSTER[id35] matches {	-- Image details
 								items matches {
 									ELEMENT[id36] occurrences matches {0..1} matches {	-- Image identifier
 										value matches {
@@ -213,11 +213,11 @@ definition
 							}
 						}
 					}
-					allow_archetype CLUSTER[id42] occurrences matches {0..*} matches {	-- Examination procedure
+					allow_archetype CLUSTER[id42] matches {	-- Examination procedure
 						include
 							archetype_id/value matches {/.*/}
 					}
-					CLUSTER[id43] occurrences matches {0..*} matches {	-- Compared image details
+					CLUSTER[id43] matches {	-- Compared image details
 						items matches {
 							use_node ELEMENT[id66] occurrences matches {0..1} /protocol[id26]/items[id28]/items[id29]	-- /protocol[id26]/items[Examination request details]/items[Requester order identifier]
 							use_node ELEMENT[id67] occurrences matches {0..1} /protocol[id26]/items[id28]/items[id33]	-- /protocol[id26]/items[Examination request details]/items[DICOM study identifier]

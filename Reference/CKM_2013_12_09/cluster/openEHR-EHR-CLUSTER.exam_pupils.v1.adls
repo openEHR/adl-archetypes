@@ -43,7 +43,7 @@ Specifically designed to be used within the OBSERVATION.exam archetype, but may 
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Gustavo M Bacelar-Silva, Brazil">
 	other_details = <
 		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK, ian.mcnicoll@oceaninformatics.com">
@@ -140,7 +140,7 @@ definition
 							DV_TEXT[id89] 
 						}
 					}
-					ELEMENT[id71] occurrences matches {0..*} matches {	-- Image
+					ELEMENT[id71] matches {	-- Image
 						value matches {
 							DV_MULTIMEDIA[id90] matches {
 								media_type matches {[ac9]}		-- Image (synthesised)
@@ -149,12 +149,12 @@ definition
 					}
 				}
 			}
-			ELEMENT[id69] occurrences matches {0..*} matches {	-- Interpretation
+			ELEMENT[id69] matches {	-- Interpretation
 				value matches {
 					DV_TEXT[id91] 
 				}
 			}
-			ELEMENT[id78] occurrences matches {0..*} matches {	-- Image
+			ELEMENT[id78] matches {	-- Image
 				value matches {
 					DV_MULTIMEDIA[id92] matches {
 						media_type matches {[ac10]}		-- Image (synthesised)

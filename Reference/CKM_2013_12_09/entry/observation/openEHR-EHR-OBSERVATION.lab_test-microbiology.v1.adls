@@ -29,7 +29,7 @@ Specific tests will gnerally require further specialisation or templating constr
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie AEG / Ocean Infomatics", "Sam Heard Ocean Informatics">
 	other_details = <
 		["references"] = <"">
@@ -40,7 +40,7 @@ definition
 	OBSERVATION[id1.1] matches {	-- Microbiolology
 		/data[id2]/events[id3]/data[id4]/items matches {
 			after [id66]
-			CLUSTER[id0.25] occurrences matches {0..*} matches {	-- Macroscopic findings
+			CLUSTER[id0.25] matches {	-- Macroscopic findings
 				items matches {
 					ELEMENT[id0.14] occurrences matches {0..1} matches {	-- Colony count
 						value matches {
@@ -49,7 +49,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[id79.3] occurrences matches {0..*} matches {	-- Macroscopic result
+					ELEMENT[id79.3] matches {	-- Macroscopic result
 						value matches {
 							DV_TEXT[id0.40] 
 						}
@@ -61,7 +61,7 @@ definition
 					}
 				}
 			}
-			CLUSTER[id0.26] occurrences matches {0..*} matches {	-- Microscopic findings
+			CLUSTER[id0.26] matches {	-- Microscopic findings
 				items matches {
 					ELEMENT[id0.18] occurrences matches {0..1} matches {	-- Field count
 						value matches {
@@ -70,12 +70,12 @@ definition
 							}
 						}
 					}
-					ELEMENT[id79.6] occurrences matches {0..*} matches {	-- Gram smear result
+					ELEMENT[id79.6] matches {	-- Gram smear result
 						value matches {
 							DV_TEXT[id0.43] 
 						}
 					}
-					ELEMENT[id79.4] occurrences matches {0..*} matches {	-- Microscopic result
+					ELEMENT[id79.4] matches {	-- Microscopic result
 						value matches {
 							DV_TEXT[id0.44] 
 						}
@@ -118,9 +118,9 @@ definition
 					}
 				}
 			}
-			CLUSTER[id0.27] occurrences matches {0..*} matches {	-- Culture findings
+			CLUSTER[id0.27] matches {	-- Culture findings
 				items matches {
-					ELEMENT[id0.24] occurrences matches {0..*} matches {	-- Culture method
+					ELEMENT[id0.24] matches {	-- Culture method
 						value matches {
 							DV_TEXT[id0.49] 
 						}
@@ -130,12 +130,12 @@ definition
 							DV_TEXT[id0.50] 
 						}
 					}
-					ELEMENT[id79.7] occurrences matches {0..*} matches {	-- Beta lactamase
+					ELEMENT[id79.7] matches {	-- Beta lactamase
 						value matches {
 							DV_TEXT[id0.51] 
 						}
 					}
-					ELEMENT[id79.8] occurrences matches {0..*} matches {	-- Culture result
+					ELEMENT[id79.8] matches {	-- Culture result
 						value matches {
 							DV_TEXT[id0.52] 
 						}
@@ -145,7 +145,7 @@ definition
 							DV_TEXT[id0.53] 
 						}
 					}
-					CLUSTER[id0.20] occurrences matches {0..*} matches {	-- Microbial findings
+					CLUSTER[id0.20] matches {	-- Microbial findings
 						items matches {
 							ELEMENT[id79.1] occurrences matches {0..1} matches {	-- Organism
 								value matches {
@@ -157,13 +157,13 @@ definition
 									DV_TEXT[id0.55] 
 								}
 							}
-							ELEMENT[id79.10] occurrences matches {0..*} 	-- Microbial result
+							ELEMENT[id79.10] 	-- Microbial result
 							ELEMENT[id0.21] occurrences matches {0..1} matches {	-- Description
 								value matches {
 									DV_TEXT[id0.56] 
 								}
 							}
-							CLUSTER[id0.7] occurrences matches {0..*} matches {	-- Therapeutic sensitivities
+							CLUSTER[id0.7] matches {	-- Therapeutic sensitivities
 								items matches {
 									ELEMENT[id0.30] occurrences matches {0..1} matches {	-- Agent
 										value matches {
@@ -200,7 +200,7 @@ definition
 					}
 				}
 			}
-			allow_archetype CLUSTER[id0.28] occurrences matches {0..*} matches {	-- Notifications
+			allow_archetype CLUSTER[id0.28] matches {	-- Notifications
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.notifiable_condition(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.outbreak_identification(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.case_identification(-a-zA-Z0-9_]+)*\.v1/}
 			}

@@ -37,7 +37,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"E1D2406529BB9CBF04E676AD427F7183">
@@ -60,7 +60,7 @@ definition
 									DV_TEXT[id147] 
 								}
 							}
-							allow_archetype CLUSTER[id133] occurrences matches {0..*} matches {	-- Specific details
+							allow_archetype CLUSTER[id133] matches {	-- Specific details
 								include
 									archetype_id/value matches {/.*/}
 							}
@@ -108,7 +108,7 @@ definition
 									DV_TEXT[id155] 
 								}
 							}
-							allow_archetype CLUSTER[id117] occurrences matches {0..*} matches {	-- Patient requirements
+							allow_archetype CLUSTER[id117] matches {	-- Patient requirements
 								include
 									archetype_id/value matches {/.*/}
 							}
@@ -125,7 +125,7 @@ definition
 							DV_TEXT[id156] 
 						}
 					}
-					allow_archetype CLUSTER[id142] occurrences matches {0..*} matches {	-- Requestor
+					allow_archetype CLUSTER[id142] matches {	-- Requestor
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -134,7 +134,7 @@ definition
 							DV_TEXT[id157] 
 						}
 					}
-					allow_archetype CLUSTER[id143] occurrences matches {0..*} matches {	-- Receiver
+					allow_archetype CLUSTER[id143] matches {	-- Receiver
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -143,11 +143,11 @@ definition
 							DV_TEXT[id158] 
 						}
 					}
-					allow_archetype CLUSTER[id129] occurrences matches {0..*} matches {	-- Distribution list for response
+					allow_archetype CLUSTER[id129] matches {	-- Distribution list for response
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.distribution\.v1/}
 					}
-					allow_archetype CLUSTER[id113] occurrences matches {0..*} matches {	-- Localisation
+					allow_archetype CLUSTER[id113] matches {	-- Localisation
 						include
 							archetype_id/value matches {/.*/}
 					}

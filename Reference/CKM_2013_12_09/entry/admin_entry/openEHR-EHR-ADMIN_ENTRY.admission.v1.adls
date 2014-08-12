@@ -36,7 +36,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sistine Barretto", ...>
 	other_details = <
 		["references"] = <"">
@@ -190,7 +190,7 @@ definition
 							use_node ELEMENT[id156] /data[id2]/items[id74]/items[id104]	-- /data[id2]/items[Assigned patient location]/items[Location description]
 						}
 					}
-					CLUSTER[id99] occurrences matches {0..*} matches {	-- Attending doctor
+					CLUSTER[id99] matches {	-- Attending doctor
 						items matches {
 							ELEMENT[id100] occurrences matches {0..1} matches {	-- ID
 								value matches {
@@ -216,7 +216,7 @@ definition
 							use_node ELEMENT[id162] /data[id2]/items[id99]/items[id121]	-- /data[id2]/items[Attending doctor]/items[Last name]
 						}
 					}
-					CLUSTER[id122] occurrences matches {0..*} matches {	-- Consulting doctor
+					CLUSTER[id122] matches {	-- Consulting doctor
 						items matches {
 							use_node ELEMENT[id163] /data[id2]/items[id99]/items[id100]	-- /data[id2]/items[Attending doctor]/items[ID]
 							use_node ELEMENT[id164] /data[id2]/items[id99]/items[id101]	-- /data[id2]/items[Attending doctor]/items[Family name]

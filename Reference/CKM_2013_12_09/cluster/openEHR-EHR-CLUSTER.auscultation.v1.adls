@@ -33,7 +33,7 @@ definition
 		items matches {
 			CLUSTER[id2] occurrences matches {0..1} matches {	-- Normal Statements
 				items matches {
-					ELEMENT[id4] occurrences matches {0..*} matches {	-- Normal Statement
+					ELEMENT[id4] matches {	-- Normal Statement
 						value matches {
 							DV_CODED_TEXT[id94] matches {
 								defining_code matches {[ac1]}		-- Normal Statement (synthesised)
@@ -51,7 +51,7 @@ definition
 				items matches {
 					CLUSTER[id10] occurrences matches {0..1} matches {	-- Bowel sounds
 						items matches {
-							ELEMENT[id75] occurrences matches {0..*} matches {	-- Specific Findings
+							ELEMENT[id75] matches {	-- Specific Findings
 								value matches {
 									DV_CODED_TEXT[id96] matches {
 										defining_code matches {[ac2]}		-- Specific Findings (synthesised)
@@ -90,7 +90,7 @@ definition
 							use_node ELEMENT[id102] /items[id3]/items[id11]/items[id31]	-- /items[Findings]/items[Vessel bruit]/items[Maximal Location]
 						}
 					}
-					CLUSTER[id87] occurrences matches {0..*} matches {	-- Localised auscultation
+					CLUSTER[id87] matches {	-- Localised auscultation
 						items matches {
 							ELEMENT[id88] matches {	-- Site or region
 								value matches {

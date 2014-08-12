@@ -25,7 +25,7 @@ Detailed, structured visual acuity results are preferred and are generally recor
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Gustavo Bacelar-Silva, Brazil", ...>
 	other_details = <
 		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK, ian.mcnicoll@oceaninformatics.com">
@@ -118,7 +118,7 @@ definition
 													}
 												}
 											}
-											ELEMENT[id10] occurrences matches {0..*} matches {	-- Clinical Interpretation
+											ELEMENT[id10] matches {	-- Clinical Interpretation
 												value matches {
 													DV_TEXT[id49] 
 												}
@@ -148,7 +148,7 @@ definition
 						state matches {
 							ITEM_TREE[id23] matches {
 								items matches {
-									ELEMENT[id24] occurrences matches {0..*} matches {	-- Confounding Factors
+									ELEMENT[id24] matches {	-- Confounding Factors
 										value matches {
 											DV_TEXT[id53] 
 										}

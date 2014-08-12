@@ -35,7 +35,7 @@ Not to be used to record ordering of blood products, implants or major devices s
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"John Bennett, NEHTA, Australia", "Sharmila Biswas, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Sarah Gaunt, NEHTA, Australia", "Trina Gregory, cpc, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Mary Kelaher, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Susan McIndoe, Royal District Nursing Service, Australia", "David McKillop, NEHTA, Australia", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Chris Pearce, Melbourne East GP Network, Australia", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Margaret Prichard, NEHTA, Australia", "Cathy Richardson, NEHTA, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "John Taylor, NEHTA, Australia", "Richard Townley-O'Neill, NEHTA, Australia (Editor)", "Kylie Young, The Royal Australian College of General Practitioners, Australia", "Ian McNicoll, Ocean Informatics. UK">
 	other_details = <
 		["references"] = <"Medication instruction, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. NEHTA. Authored: 12 Nov 2010. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.838_15 (accessed 15 May 2013).
@@ -65,7 +65,7 @@ definition
 									DV_TEXT[id50] 
 								}
 							}
-							allow_archetype CLUSTER[id5] occurrences matches {0..*} matches {	-- Ingredients and form
+							allow_archetype CLUSTER[id5] matches {	-- Ingredients and form
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_ingredients(-a-zA-Z0-9_]+)*\.v1/}
 							}
@@ -92,7 +92,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[id12] occurrences matches {0..*} matches {	-- Start criterion
+									ELEMENT[id12] matches {	-- Start criterion
 										value matches {
 											DV_TEXT[id54] 
 										}
@@ -102,7 +102,7 @@ definition
 											DV_DATE_TIME[id55] 
 										}
 									}
-									ELEMENT[id17] occurrences matches {0..*} matches {	-- Stop criterion
+									ELEMENT[id17] matches {	-- Stop criterion
 										value matches {
 											DV_TEXT[id56] 
 										}
@@ -135,28 +135,28 @@ definition
 									}
 								}
 							}
-							ELEMENT[id45] occurrences matches {0..*} matches {	-- Additional instruction
+							ELEMENT[id45] matches {	-- Additional instruction
 								value matches {
 									DV_TEXT[id61] 
 								}
 							}
-							ELEMENT[id19] occurrences matches {0..*} matches {	-- Clinical indication
+							ELEMENT[id19] matches {	-- Clinical indication
 								value matches {
 									DV_TEXT[id62] 
 								}
 							}
-							allow_archetype CLUSTER[id44] occurrences matches {0..*} matches {	-- Administration details
+							allow_archetype CLUSTER[id44] matches {	-- Administration details
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_admin(-a-zA-Z0-9_]+)*\.v1/}
 							}
-							ELEMENT[id36] occurrences matches {0..*} matches {	-- Comment
+							ELEMENT[id36] matches {	-- Comment
 								value matches {
 									DV_TEXT[id63] 
 								}
 							}
 							CLUSTER[id24] occurrences matches {0..1} matches {	-- Dispensing
 								items matches {
-									allow_archetype CLUSTER[id46] occurrences matches {0..*} matches {	-- Quantity
+									allow_archetype CLUSTER[id46] matches {	-- Quantity
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-a-zA-Z0-9_]+)*\.v1/}
 									}
@@ -194,12 +194,12 @@ definition
 		protocol matches {
 			ITEM_TREE[id32] matches {
 				items matches {
-					ELEMENT[id39] occurrences matches {0..*} matches {	-- Indication for authorised use
+					ELEMENT[id39] matches {	-- Indication for authorised use
 						value matches {
 							DV_TEXT[id68] 
 						}
 					}
-					ELEMENT[id33] occurrences matches {0..*} matches {	-- Medication Instruction Id
+					ELEMENT[id33] matches {	-- Medication Instruction Id
 						value matches {
 							DV_IDENTIFIER[id69] 
 						}

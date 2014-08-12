@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
@@ -28,7 +28,7 @@ definition
 		items matches {
 			CLUSTER[id2] occurrences matches {0..1} matches {	-- Normal statements
 				items matches {
-					ELEMENT[id3] occurrences matches {0..*} matches {	-- Normal statement
+					ELEMENT[id3] matches {	-- Normal statement
 						value matches {
 							DV_TEXT[id54] 
 						}
@@ -49,7 +49,7 @@ definition
 					}
 					CLUSTER[id6] occurrences matches {0..1} matches {	-- Location
 						items matches {
-							ELEMENT[id23] occurrences matches {0..*} matches {	-- Description
+							ELEMENT[id23] matches {	-- Description
 								value matches {
 									DV_CODED_TEXT[id57] matches {
 										defining_code 

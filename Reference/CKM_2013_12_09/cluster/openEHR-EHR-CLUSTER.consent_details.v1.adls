@@ -52,7 +52,7 @@ definition
 					DV_TEXT[id12] 
 				}
 			}
-			ELEMENT[id8] occurrences matches {0..*} matches {	-- Alternative Options
+			ELEMENT[id8] matches {	-- Alternative Options
 				value matches {
 					DV_TEXT[id13] 
 				}

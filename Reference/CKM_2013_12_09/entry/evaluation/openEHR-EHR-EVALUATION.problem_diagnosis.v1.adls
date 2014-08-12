@@ -112,7 +112,7 @@ Some examples:
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Steve Bentley, NHS CfH, United Kingdom", "Ian Bull, ACT Health, Australia", "Sergio Carmona, Chile", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NeHTA, Australia", "Ed Conley, Cardiff University", "Paul Donaldson, Nursing Informatics Australia, Australia", "Anneke Goossen, Results 4 Care, Netherlands", "Heather Grain, Llewelyn Grain Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "Eugene Igras, IRIS Systems, Inc., Canada", "Eizen Kimura, Ehime Univ., Japan", "Shinji Kobayashi, Ehime University, Japan", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rohan Martin, Ambulance Victoria, Australia", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Jörg Niggemann, compugroup, Germany", "Andrej Orel, Marand d.o.o., Slovenia">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"2CD426CD82409C217348260593A062A2">
@@ -197,7 +197,7 @@ definition
 							}
 						}
 					}
-					CLUSTER[id28] occurrences matches {0..*} matches {	-- Related Item
+					CLUSTER[id28] matches {	-- Related Item
 						items matches {
 							ELEMENT[id30] occurrences matches {0..1} matches {	-- Relationship Type
 								value matches {
@@ -233,7 +233,7 @@ definition
 						include
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype CLUSTER[id44] occurrences matches {0..*} matches {	-- Clinical Stage/Grade
+					allow_archetype CLUSTER[id44] matches {	-- Clinical Stage/Grade
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -243,12 +243,12 @@ definition
 		protocol matches {
 			ITEM_TREE[id33] matches {
 				items matches {
-					ELEMENT[id36] occurrences matches {0..*} matches {	-- Supporting clinical evidence
+					ELEMENT[id36] matches {	-- Supporting clinical evidence
 						value matches {
 							DV_EHR_URI[id64] 
 						}
 					}
-					allow_archetype CLUSTER[id47] occurrences matches {0..*} matches {	-- Status
+					allow_archetype CLUSTER[id47] matches {	-- Status
 						include
 							archetype_id/value matches {/.*/}
 					}

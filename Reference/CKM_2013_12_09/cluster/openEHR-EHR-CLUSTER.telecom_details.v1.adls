@@ -39,7 +39,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
 		["references"] = <"Telephone, facsimile or similar telecommunications type/number for a patient.  ENV 13606 - 4:2000 7.11.14 From NHS Scotland SCI-XML messaging standards http://www.isdscotland.org/isd/files/general-v2-7.xsd NHS Scotland Interoperability Working Group http://www.isdscotland.org/isd/5194.html.">
@@ -49,14 +49,14 @@ description
 definition
 	CLUSTER[id1] matches {	-- Telecom details
 		items matches {
-			ELEMENT[id11] occurrences matches {0..*} matches {	-- Mode
+			ELEMENT[id11] matches {	-- Mode
 				value matches {
 					DV_CODED_TEXT[id21] matches {
 						defining_code matches {[ac1]}		-- Mode (synthesised)
 					}
 				}
 			}
-			CLUSTER[id2] occurrences matches {0..*} matches {	-- Telecoms
+			CLUSTER[id2] matches {	-- Telecoms
 				items matches {
 					ELEMENT[id5] matches {	-- Telecoms type
 						value matches {
@@ -96,7 +96,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[id10] occurrences matches {0..*} matches {	-- Email address
+			ELEMENT[id10] matches {	-- Email address
 				value matches {
 					DV_TEXT[id28] 
 				}

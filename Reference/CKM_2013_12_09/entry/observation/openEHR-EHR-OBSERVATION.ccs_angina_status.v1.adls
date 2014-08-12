@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"Canadian Cardiovascular Society grading of angina pectoris
 Available from: http://www.ccs.ca/download/position_statements/Grading%20of%20Angina.pdf

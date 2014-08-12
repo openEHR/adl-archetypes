@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"65F238CF42B15F844C74B4F3B90DDEE3">
@@ -50,7 +50,7 @@ definition
 							use_node ELEMENT[id43] /items[id37]/items[id5]/items[id20]	-- /items[Findings]/items[Specific movement]/items[Associated pain]
 						}
 					}
-					CLUSTER[id5] occurrences matches {0..*} matches {	-- Specific movement
+					CLUSTER[id5] matches {	-- Specific movement
 						items matches {
 							ELEMENT[id12] occurrences matches {0..1} matches {	-- Type of movement
 								value matches {

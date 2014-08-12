@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"Davis N, Newland R. The reporting of colorectal cancer: The Australian clinico-pathological staging system. ANZ Journal of Surgery. 1982 ;52(4):395-397.
 

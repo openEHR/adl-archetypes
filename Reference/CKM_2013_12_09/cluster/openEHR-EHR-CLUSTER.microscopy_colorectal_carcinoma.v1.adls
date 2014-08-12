@@ -23,7 +23,7 @@ i.e. OBSERVATION.lab_test.histopathology and CLUSTER.macroscopy.colorectal_carci
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Matt Cordell, NEHTA, Australia", "David McKillop, NEHTA, Australia", "Cathy Richardson, NEHTA, Australia", "David Rowed, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"College of American Pathologists. Protocol for the Examination of Specimens from Patients with Primary Carcinomas of the Colon and Rectum [Internet]. 2009 Mar ;[cited 2009 Jul 28 ]
@@ -88,7 +88,7 @@ definition
 			}
 			CLUSTER[id245] occurrences matches {0..1} matches {	-- Surgical resection margins
 				items matches {
-					allow_archetype CLUSTER[id247] occurrences matches {0..*} matches {	-- Surgical resection margin
+					allow_archetype CLUSTER[id247] matches {	-- Surgical resection margin
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v1/}
 						exclude
@@ -149,19 +149,19 @@ definition
 			}
 			CLUSTER[id279] occurrences matches {0..1} matches {	-- Local tissue invasion
 				items matches {
-					allow_archetype CLUSTER[id278] occurrences matches {0..*} matches {	-- Venous (large vessel) invasion
+					allow_archetype CLUSTER[id278] matches {	-- Venous (large vessel) invasion
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
 						exclude
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype CLUSTER[id280] occurrences matches {0..*} matches {	-- Lymphatic (small vessel) invasion
+					allow_archetype CLUSTER[id280] matches {	-- Lymphatic (small vessel) invasion
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
 						exclude
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype CLUSTER[id287] occurrences matches {0..*} matches {	-- Perineural invasion
+					allow_archetype CLUSTER[id287] matches {	-- Perineural invasion
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
 					}
@@ -202,7 +202,7 @@ definition
 							}
 						}
 					}
-					allow_archetype CLUSTER[id288] occurrences matches {0..*} matches {	-- Sites 
+					allow_archetype CLUSTER[id288] matches {	-- Sites 
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location-precise\.v1/}
 						exclude
@@ -245,7 +245,7 @@ definition
 			}
 			CLUSTER[id180] occurrences matches {0..1} matches {	-- Additional findings
 				items matches {
-					ELEMENT[id251] occurrences matches {0..*} matches {	-- Additional finding
+					ELEMENT[id251] matches {	-- Additional finding
 						value matches {
 							DV_CODED_TEXT[id393] matches {
 								defining_code matches {[ac9]}		-- Additional finding (synthesised)

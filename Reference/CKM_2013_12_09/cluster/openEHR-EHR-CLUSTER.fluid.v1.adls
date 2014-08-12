@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sebastian Garde, Ocean Informatics, Germany (Editor)", "Omer Hotomaroglu, Turkey (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)">
 	other_details = <
 		["references"] = <"">
@@ -41,7 +41,7 @@ definition
 					DV_TEXT[id86] 
 				}
 			}
-			ELEMENT[id4] occurrences matches {0..*} matches {	-- Normal statements
+			ELEMENT[id4] matches {	-- Normal statements
 				value matches {
 					DV_TEXT[id87] 
 				}
@@ -168,7 +168,7 @@ definition
 					}
 				}
 			}
-			CLUSTER[id33] occurrences matches {0..*} matches {	-- Contained substances
+			CLUSTER[id33] matches {	-- Contained substances
 				items matches {
 					allow_archetype CLUSTER[id84] occurrences matches {0..1} matches {	-- Contained substance detail
 						include

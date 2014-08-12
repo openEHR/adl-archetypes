@@ -315,21 +315,21 @@ definition
 							}
 						}
 					}
-					ELEMENT[id34] occurrences matches {0..*} matches {	-- Instructions
+					ELEMENT[id34] matches {	-- Instructions
 						value matches {
 							DV_TEXT[id87] 
 						}
 					}
-					allow_archetype CLUSTER[id24] occurrences matches {0..*} matches {	-- Ingredients and form
+					allow_archetype CLUSTER[id24] matches {	-- Ingredients and form
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.chemical_description(-a-zA-Z0-9_]+)*\.v1/}
 					}
-					ELEMENT[id22] occurrences matches {0..*} matches {	-- Reason
+					ELEMENT[id22] matches {	-- Reason
 						value matches {
 							DV_TEXT[id88] 
 						}
 					}
-					allow_archetype CLUSTER[id23] occurrences matches {0..*} matches {	-- Quantity
+					allow_archetype CLUSTER[id23] matches {	-- Quantity
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.amount\.v1/}
 					}
@@ -343,7 +343,7 @@ definition
 							DV_COUNT[id90] 
 						}
 					}
-					allow_archetype CLUSTER[id28] occurrences matches {0..*} matches {	-- Administration
+					allow_archetype CLUSTER[id28] matches {	-- Administration
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_admin(-a-zA-Z0-9_]+)*\.v1/}
 					}

@@ -43,11 +43,11 @@ definition
 					DV_TEXT[id7] 
 				}
 			}
-			allow_archetype CLUSTER[id3] occurrences matches {0..*} matches {	-- Examination Detail
+			allow_archetype CLUSTER[id3] matches {	-- Examination Detail
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam_pinna\.v1|openEHR-EHR-CLUSTER\.exam_tympanic_membrane\.v1/}
 			}
-			ELEMENT[id4] occurrences matches {0..*} matches {	-- Clinical Interpretation
+			ELEMENT[id4] matches {	-- Clinical Interpretation
 				value matches {
 					DV_TEXT[id8] 
 				}

@@ -226,7 +226,7 @@ definition
 											DV_TEXT[id103] 
 										}
 									}
-									ELEMENT[id21] occurrences matches {0..*} matches {	-- Test Result Image
+									ELEMENT[id21] matches {	-- Test Result Image
 										value matches {
 											DV_MULTIMEDIA[id104] matches {
 												media_type matches {[ac4]}		-- Test Result Image (synthesised)
@@ -351,7 +351,7 @@ definition
 							}
 						}
 					}
-					allow_archetype CLUSTER[id54] occurrences matches {0..*} matches {	-- Tympanometer
+					allow_archetype CLUSTER[id54] matches {	-- Tympanometer
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 					}

@@ -53,7 +53,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[id8] occurrences matches {0..*} matches {	-- Comment
+					ELEMENT[id8] matches {	-- Comment
 						value matches {
 							DV_TEXT[id12] 
 						}

@@ -25,7 +25,7 @@ Specific tests will gnerally require further specialisation or templating constr
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie AEG / Ocean Infomatics", "Sam Heard Ocean Informatics">
 	other_details = <
 		["references"] = <"">

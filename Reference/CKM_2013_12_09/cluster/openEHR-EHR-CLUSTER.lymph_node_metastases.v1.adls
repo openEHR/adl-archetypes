@@ -123,7 +123,7 @@ definition
 					DV_TEXT[id65] 
 				}
 			}
-			allow_archetype CLUSTER[id46] occurrences matches {0..*} matches {	-- Lymph node details
+			allow_archetype CLUSTER[id46] matches {	-- Lymph node details
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.lymph_node_metastases\.v1/}
 				exclude

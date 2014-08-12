@@ -25,7 +25,7 @@ Some centres expect only a total to be recorded for a whole category in which ca
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["current_contact"] = <"Dr Ian McNicoll, Ocean Informatics, United Kingdom, ian.mcnicoll@oceaninformatics.com">
 		["references"] = <"The Waterlow Score [Internet];[cited 2011 Aug 1] Available from: http://www.judy-waterlow.co.uk/waterlow_score.htm
@@ -414,7 +414,7 @@ definition
 						state matches {
 							ITEM_TREE[id72] matches {
 								items matches {
-									ELEMENT[id73] occurrences matches {0..*} matches {	-- Confounding factors
+									ELEMENT[id73] matches {	-- Confounding factors
 										value matches {
 											DV_TEXT[id188] 
 										}
@@ -719,8 +719,8 @@ terminology
 				description = <"The subject has not recently lost weight.">
 			>
 			["ac10"] = <
-				text = <"Paraplegia (synthesised)">
-				description = <"The subject has a paraplegia. (synthesised)">
+				text = <"Dry (synthesised)">
+				description = <"The skin is dry. (synthesised)">
 			>
 			["id134"] = <
 				text = <"Score version">
@@ -875,42 +875,94 @@ terminology
 				description = <"Risk conferred by the subject's appetite and eating habit. (synthesised)">
 			>
 			["ac8"] = <
+				text = <"Healthy (synthesised)">
+				description = <"The skin appears healthy. (synthesised)">
+			>
+			["ac9"] = <
+				text = <"Tissue-paper (synthesised)">
+				description = <"The skin has a tissue-paper quality. (synthesised)">
+			>
+			["ac11"] = <
+				text = <"Oedematous (synthesised)">
+				description = <"The skin is oedematous. (synthesised)">
+			>
+			["ac12"] = <
+				text = <"Clammy, pyrexia (synthesised)">
+				description = <"The aptient appears clammy or pyrexic. (synthesised)">
+			>
+			["ac13"] = <
+				text = <"Discoloured - Stage 1 (synthesised)">
+				description = <"The skin is dicoloured - Pressure sore - Grade 1. (synthesised)">
+			>
+			["ac14"] = <
+				text = <"Pressure ulcer - Stage 2-4 (synthesised)">
+				description = <"The skin has a frank pressure sore - Stage 2-4. (synthesised)">
+			>
+			["ac15"] = <
+				text = <"Terminal cachexia (synthesised)">
+				description = <"The subject is terminally-ill and shows significant weight-loss. (synthesised)">
+			>
+			["ac16"] = <
+				text = <"Single organ failure (synthesised)">
+				description = <"The patent has single organ/system failure e.g. respiratory, cardiac, liver, renal. (synthesised)">
+			>
+			["ac17"] = <
+				text = <"Multiple organ failure (synthesised)">
+				description = <"The subject has multiple organ/system failure. (synthesised)">
+			>
+			["ac18"] = <
+				text = <"Peripheral vascular disease (synthesised)">
+				description = <"The subject has peripheral vascular disease. (synthesised)">
+			>
+			["ac19"] = <
+				text = <"Anaemia (Hb < 8 g/dl) (synthesised)">
+				description = <"The subject is significantly anaemic. Hb less than 8 mg/dl. (synthesised)">
+			>
+			["ac20"] = <
+				text = <"Smoking (synthesised)">
+				description = <"The subject is a smoker. (synthesised)">
+			>
+			["ac21"] = <
 				text = <"Diabetes, MS, CVA (synthesised)">
 				description = <"The subject has diabetes, multiple sclerosis or has had a stroke. (synthesised)">
 			>
-			["ac9"] = <
+			["ac22"] = <
 				text = <"Motor / sensory deficit (synthesised)">
 				description = <"The subject has a motor or sensory deficit. (synthesised)">
 			>
-			["ac11"] = <
+			["ac23"] = <
+				text = <"Paraplegia (synthesised)">
+				description = <"The subject has a paraplegia. (synthesised)">
+			>
+			["ac24"] = <
 				text = <"Combined neurological deficit (synthesised)">
 				description = <"An overall estimate of neurological deficit. Should not be used if individual neurological deficit risks are recorded. (synthesised)">
 			>
-			["ac12"] = <
+			["ac25"] = <
 				text = <"Orthopaedic /spinal (synthesised)">
 				description = <"Risks related to orthopaedic or spinal surgery. (synthesised)">
 			>
-			["ac13"] = <
+			["ac26"] = <
 				text = <"Duration of surgery (synthesised)">
 				description = <"Risks imparted by length of surgery. (synthesised)">
 			>
-			["ac14"] = <
+			["ac27"] = <
 				text = <"Cytotoxics (synthesised)">
 				description = <"The subject is receiving cytotoxic medication. (synthesised)">
 			>
-			["ac15"] = <
+			["ac28"] = <
 				text = <"Steroids (synthesised)">
 				description = <"The subject is receiving high-dose or long-term steroid medication. (synthesised)">
 			>
-			["ac16"] = <
+			["ac29"] = <
 				text = <"Anti-inflammatories (synthesised)">
 				description = <"The subject is receiving anti-inflammatory medication. (synthesised)">
 			>
-			["ac17"] = <
+			["ac30"] = <
 				text = <"Combined medication risk (synthesised)">
 				description = <"Overall pressure ulcer risk related to medication. Should not be recorded if individual medication risks are used. (synthesised)">
 			>
-			["ac18"] = <
+			["ac31"] = <
 				text = <"Overall risk grade (synthesised)">
 				description = <"Overall Waterlow Score. (synthesised)">
 			>
@@ -947,46 +999,98 @@ terminology
 		>
 		["ac8"] = <
 			id = <"ac8">
-			members = <"at137", "at138", "at139", "at140">
+			members = <"at117", ...>
 		>
 		["ac9"] = <
 			id = <"ac9">
-			members = <"at137", "at138", "at139", "at140">
+			members = <"at118", ...>
 		>
 		["ac10"] = <
 			id = <"ac10">
-			members = <"at137", "at138", "at139", "at140">
+			members = <"at119", ...>
 		>
 		["ac11"] = <
 			id = <"ac11">
-			members = <"at137", "at138", "at139", "at140">
+			members = <"at120", ...>
 		>
 		["ac12"] = <
 			id = <"ac12">
-			members = <"at154", "at144">
+			members = <"at121", ...>
 		>
 		["ac13"] = <
 			id = <"ac13">
-			members = <"at155", "at146", "at147">
+			members = <"at122", ...>
 		>
 		["ac14"] = <
 			id = <"ac14">
-			members = <"at142", "at143">
+			members = <"at123", ...>
 		>
 		["ac15"] = <
 			id = <"ac15">
-			members = <"at142", "at143">
+			members = <"at124", ...>
 		>
 		["ac16"] = <
 			id = <"ac16">
-			members = <"at142", "at143">
+			members = <"at125", ...>
 		>
 		["ac17"] = <
 			id = <"ac17">
-			members = <"at142", "at143">
+			members = <"at126", ...>
 		>
 		["ac18"] = <
 			id = <"ac18">
+			members = <"at127", ...>
+		>
+		["ac19"] = <
+			id = <"ac19">
+			members = <"at128", ...>
+		>
+		["ac20"] = <
+			id = <"ac20">
+			members = <"at129", ...>
+		>
+		["ac21"] = <
+			id = <"ac21">
+			members = <"at137", "at138", "at139", "at140">
+		>
+		["ac22"] = <
+			id = <"ac22">
+			members = <"at137", "at138", "at139", "at140">
+		>
+		["ac23"] = <
+			id = <"ac23">
+			members = <"at137", "at138", "at139", "at140">
+		>
+		["ac24"] = <
+			id = <"ac24">
+			members = <"at137", "at138", "at139", "at140">
+		>
+		["ac25"] = <
+			id = <"ac25">
+			members = <"at154", "at144">
+		>
+		["ac26"] = <
+			id = <"ac26">
+			members = <"at155", "at146", "at147">
+		>
+		["ac27"] = <
+			id = <"ac27">
+			members = <"at142", "at143">
+		>
+		["ac28"] = <
+			id = <"ac28">
+			members = <"at142", "at143">
+		>
+		["ac29"] = <
+			id = <"ac29">
+			members = <"at142", "at143">
+		>
+		["ac30"] = <
+			id = <"ac30">
+			members = <"at142", "at143">
+		>
+		["ac31"] = <
+			id = <"ac31">
 			members = <"at17", "at18", "at19">
 		>
 	>

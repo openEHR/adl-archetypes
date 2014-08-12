@@ -54,7 +54,7 @@ definition
 									DV_TEXT[id46] 
 								}
 							}
-							allow_archetype CLUSTER[id39] occurrences matches {0..*} matches {	-- Patient
+							allow_archetype CLUSTER[id39] matches {	-- Patient
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.individual_personal(-a-zA-Z0-9_]+)*\.v1/}
 							}

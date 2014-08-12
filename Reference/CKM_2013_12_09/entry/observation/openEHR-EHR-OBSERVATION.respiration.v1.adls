@@ -150,7 +150,7 @@ Niet te gebruiken voor de registratie van details, als de persoon beademing onde
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Marja Buur, Medisch Centrum Alkmaar/ Code24, Netherlands", "Gregory Caulton, PatientOS Inc., United States", "Stephen Chu, NeHTA, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Anne Harbison, CPCER, Australia", "Sam Heard, Ocean Informatics, Australia", "Omer Hotomaroglu, Turkey", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Andrew James, University of Toronto, Canada", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore">
 	other_details = <
 		["references"] = <"Braun RB.  Respiratory Rate and Pattern. In: Walker HK, Hall WD, Hurst JW. Clinical methods: the history, physical, and laboratory examinations. [Internet] 3rd ed. Stoneham (MA): Butterworth Publishers; c1990 [cited 2009 Jul 21] 
@@ -175,7 +175,7 @@ definition
 		data matches {
 			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[id3] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id3] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
 								items matches {
@@ -226,7 +226,7 @@ definition
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.ambient_oxygen(-a-zA-Z0-9_]+)*\.v1/}
 									}
-									ELEMENT[id57] occurrences matches {0..*} matches {	-- Confounding factors
+									ELEMENT[id57] matches {	-- Confounding factors
 										value matches {
 											DV_TEXT[id64] 
 										}

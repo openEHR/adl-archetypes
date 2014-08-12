@@ -68,7 +68,7 @@ definition
 													}
 												}
 											}
-											CLUSTER[id49] occurrences matches {0..*} matches {	-- Stimulus Response
+											CLUSTER[id49] matches {	-- Stimulus Response
 												items cardinality matches {2..*; unordered} matches {
 													ELEMENT[id12] matches {	-- Frequency
 														value matches {
@@ -175,11 +175,11 @@ definition
 							}
 						}
 					}
-					allow_archetype CLUSTER[id48] occurrences matches {0..*} matches {	-- Test Device
+					allow_archetype CLUSTER[id48] matches {	-- Test Device
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device-hearing_test(-a-zA-Z0-9_]+)*\.v1/}
 					}
-					allow_archetype CLUSTER[id117] occurrences matches {0..*} matches {	-- Earphones
+					allow_archetype CLUSTER[id117] matches {	-- Earphones
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device-earphones(-a-zA-Z0-9_]+)*\.v1/}
 					}
@@ -195,7 +195,7 @@ definition
 							}
 						}
 					}
-					CLUSTER[id103] occurrences matches {0..*} matches {	-- Screening Assessment Pass Criteria
+					CLUSTER[id103] matches {	-- Screening Assessment Pass Criteria
 						items matches {
 							ELEMENT[id108] occurrences matches {0..1} matches {	-- Screening Frequency
 								value matches {

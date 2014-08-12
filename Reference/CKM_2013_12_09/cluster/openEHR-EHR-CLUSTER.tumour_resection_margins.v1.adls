@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"D1C5FF9647E00C3B138D02C481F779C1">
@@ -35,7 +35,7 @@ definition
 					DV_TEXT[id22] 
 				}
 			}
-			allow_archetype CLUSTER[id20] occurrences matches {0..*} matches {	-- Margin location
+			allow_archetype CLUSTER[id20] matches {	-- Margin location
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location-precise\.v1/}
 				exclude

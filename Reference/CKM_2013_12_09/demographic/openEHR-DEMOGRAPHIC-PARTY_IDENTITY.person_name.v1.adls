@@ -39,7 +39,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNiccol, Ocean Informatics, Scotland", "Rong Chen, Cambio Healthcare Systems, Sweden", "Ricardo Correia, SBIM/FMUP, Portugal", "Grahame Grieve, Australia", "Heather Grain, Llewelyn Grain Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"ISO/TS 22220:2008(E) - Identification of Subject of Care - Technical Specification- International Organization for Standardization.">
@@ -56,22 +56,22 @@ definition
 		details matches {
 			ITEM_TREE[id2] occurrences matches {0..1} matches {	-- Componentes do nome
 				items cardinality matches {1..*; ordered} matches {
-					ELEMENT[id3] occurrences matches {0..*} matches {	-- Nome atribuído
+					ELEMENT[id3] matches {	-- Nome atribuído
 						value matches {
 							DV_TEXT[id26] 
 						}
 					}
-					ELEMENT[id4] occurrences matches {0..*} matches {	-- Sobrenome
+					ELEMENT[id4] matches {	-- Sobrenome
 						value matches {
 							DV_TEXT[id27] 
 						}
 					}
-					ELEMENT[id5] occurrences matches {0..*} matches {	-- Título do nome
+					ELEMENT[id5] matches {	-- Título do nome
 						value matches {
 							DV_TEXT[id28] 
 						}
 					}
-					ELEMENT[id6] occurrences matches {0..*} matches {	-- Sufixo do nome
+					ELEMENT[id6] matches {	-- Sufixo do nome
 						value matches {
 							DV_TEXT[id29] 
 						}

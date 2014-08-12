@@ -35,7 +35,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
@@ -45,7 +45,7 @@ definition
 		data matches {
 			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[id3] occurrences matches {0..*} matches {	-- Timing
+					POINT_EVENT[id3] matches {	-- Timing
 						data matches {
 							ITEM_TREE[id4] matches {
 								items matches {
@@ -91,7 +91,7 @@ definition
 							}
 						}
 					}
-					INTERVAL_EVENT[id7] occurrences matches {0..*} matches {	-- Total
+					INTERVAL_EVENT[id7] matches {	-- Total
 						math_function matches {
 							DV_CODED_TEXT[id22] matches {
 								defining_code matches {[at16]}
@@ -101,7 +101,7 @@ definition
 							use_node ITEM_TREE[id23] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[Timing]/data[id4]
 						}
 					}
-					INTERVAL_EVENT[id8] occurrences matches {0..*} matches {	-- Actual
+					INTERVAL_EVENT[id8] matches {	-- Actual
 						math_function matches {
 							DV_CODED_TEXT[id24] matches {
 								defining_code matches {[at17]}

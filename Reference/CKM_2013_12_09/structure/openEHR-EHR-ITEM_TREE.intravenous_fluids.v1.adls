@@ -36,13 +36,13 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"112FBC941E04AB8FA7705B45628F958E">
 	>
 
 definition
-	ITEM_TREE[id1] occurrences matches {0..*} matches {	-- Intravenous fluids
+	ITEM_TREE[id1] matches {	-- Intravenous fluids
 		items matches {
 			ELEMENT[id3] occurrences matches {0..1} matches {	-- Fluid type
 				value matches {
@@ -86,7 +86,7 @@ definition
 							DV_DATE_TIME[id35] 
 						}
 					}
-					ELEMENT[id29] occurrences matches {0..*} matches {	-- Commencement instruction
+					ELEMENT[id29] matches {	-- Commencement instruction
 						value matches {
 							DV_TEXT[id36] 
 						}

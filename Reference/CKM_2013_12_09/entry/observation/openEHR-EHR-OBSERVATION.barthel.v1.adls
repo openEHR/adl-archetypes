@@ -73,7 +73,7 @@ Permission is required to modify the Barthel Index or to use it for commercial p
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["references"] = <"Mahoney FI, Barthel D. Functional evaluation: the Barthel Index. Maryland State Med Journal 1965;14:56-61.">
@@ -85,7 +85,7 @@ definition
 		data matches {
 			HISTORY[id3] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[id4] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id4] matches {	-- Any event
 						data matches {
 							ITEM_LIST[id2] matches {
 								items matches {

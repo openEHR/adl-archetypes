@@ -24,7 +24,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"4C3FA1F70C90356DC3CA61F87EDAD866">
@@ -49,7 +49,7 @@ definition
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation-external_ear(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection-external_ear(-a-zA-Z0-9_]+)*\.v1/}
 							}
-							allow_archetype CLUSTER[id0.77] occurrences matches {0..*} matches {	-- Auditory canal detail
+							allow_archetype CLUSTER[id0.77] matches {	-- Auditory canal detail
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection-ear_canal(-a-zA-Z0-9_]+)*\.v1/}
 							}
@@ -78,11 +78,11 @@ definition
 							}
 						}
 					}
-					allow_archetype CLUSTER[id10] occurrences matches {0..*} matches {
+					allow_archetype CLUSTER[id10] matches {
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1/}
 					}
-					ELEMENT[id7] occurrences matches {0..*} matches {
+					ELEMENT[id7] matches {
 						value matches {
 							DV_MULTIMEDIA[id0.82] matches {
 								media_type matches {[ac0.3]}		-- Image (synthesised)
@@ -115,7 +115,7 @@ definition
 							}
 						}
 					}
-					allow_archetype CLUSTER[id0.78] occurrences matches {0..*} matches {	-- Detail
+					allow_archetype CLUSTER[id0.78] matches {	-- Detail
 						include
 							archetype_id/value matches {/.*/}
 					}

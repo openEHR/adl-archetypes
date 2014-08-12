@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie Ocean Informatics Australia", "Sam Heard Ocean Informatics Australia", "Koray Atalag, University of Auckland, New Zealand">
 	other_details = <
 		["references"] = <"American Joint Committee on Cancer. TNM schema files [Internet]. [cited 2009 Jul 27 ] 

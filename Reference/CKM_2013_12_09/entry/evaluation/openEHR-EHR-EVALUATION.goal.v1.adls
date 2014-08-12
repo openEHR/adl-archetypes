@@ -37,7 +37,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"7E02F7728771D9FDEB9DE3809A92D38C">
@@ -73,7 +73,7 @@ definition
 							DV_TEXT[id19] 
 						}
 					}
-					CLUSTER[id6] occurrences matches {0..*} matches {	-- Specific Target
+					CLUSTER[id6] matches {	-- Specific Target
 						items cardinality matches {1..4; ordered} matches {
 							ELEMENT[id11] occurrences matches {0..1} matches {	-- Target
 								value matches {

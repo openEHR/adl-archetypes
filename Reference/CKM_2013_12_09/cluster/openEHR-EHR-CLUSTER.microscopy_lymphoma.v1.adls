@@ -23,7 +23,7 @@ Not designed to be used to record microscopic findings for leukaemias.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Matt Cordell, NEHTA, Australia", "David Ellis, RCPA, Australia", "Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia", "David McKillop, NEHTA, Australia", "Cathy Richardson, NEHTA, Australia">
 	other_details = <
 		["references"] = <"Royal College of Pathologists of Australasia. Tumours of haematopoietic and lymphoid tissue, Structured Reporting Protocol (1st Edition 2010). [Internet]. 2010;[cited 2010 Mar 21 ] Available from: http://www.rcpa.edu.au//static/File/Asset%20library/public%20documents/Publications/StructuredReporting/TUMOURS%20OF%20HAEMATOPOIETIC%20AND%20LYMPHOID%20TISSUE%20STRUCTURED%20REPORTING%20PROTOCOL.pdf
@@ -58,7 +58,7 @@ definition
 				items matches {
 					CLUSTER[id132] occurrences matches {0..1} matches {	-- Cytomorphology findings
 						items matches {
-							ELEMENT[id82] occurrences matches {0..*} matches {	-- Generic features
+							ELEMENT[id82] matches {	-- Generic features
 								value matches {
 									DV_CODED_TEXT[id142] matches {
 										defining_code matches {[ac2]}		-- Generic features (synthesised)
@@ -66,7 +66,7 @@ definition
 									DV_TEXT[id143] 
 								}
 							}
-							ELEMENT[id83] occurrences matches {0..*} matches {	-- Specific features
+							ELEMENT[id83] matches {	-- Specific features
 								value matches {
 									DV_CODED_TEXT[id144] matches {
 										defining_code matches {[ac3]}		-- Specific features (synthesised)
@@ -87,7 +87,7 @@ definition
 			}
 			CLUSTER[id76] occurrences matches {0..1} matches {	-- Host cell/tissue reactions
 				items matches {
-					ELEMENT[id77] occurrences matches {0..*} matches {	-- Host cell reaction
+					ELEMENT[id77] matches {	-- Host cell reaction
 						value matches {
 							DV_CODED_TEXT[id147] matches {
 								defining_code matches {[ac5]}		-- Host cell reaction (synthesised)
@@ -95,7 +95,7 @@ definition
 							DV_TEXT[id148] 
 						}
 					}
-					ELEMENT[id78] occurrences matches {0..*} matches {	-- Host tissue reaction
+					ELEMENT[id78] matches {	-- Host tissue reaction
 						value matches {
 							DV_CODED_TEXT[id149] matches {
 								defining_code matches {[ac6]}		-- Host tissue reaction (synthesised)

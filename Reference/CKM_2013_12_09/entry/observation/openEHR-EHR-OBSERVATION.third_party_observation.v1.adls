@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
@@ -54,7 +54,7 @@ definition
 									}
 									CLUSTER[id14] occurrences matches {0..1} matches {	-- Third Party details
 										items matches {
-											allow_archetype CLUSTER[id15] occurrences matches {0..*} matches {	-- Cluster: Third Party details
+											allow_archetype CLUSTER[id15] matches {	-- Cluster: Third Party details
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.individual_personal\.v1/}
 											}

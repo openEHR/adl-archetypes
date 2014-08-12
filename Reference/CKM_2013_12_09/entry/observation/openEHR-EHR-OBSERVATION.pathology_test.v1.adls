@@ -54,7 +54,7 @@ This archetype has been designed to support clinical pathology and may not be ap
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Sharmila Biswas, Dr Sharmila Biswas GP, Australia", "Doug Chesher, PaLMS, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Andre de Wolf, NeHTA, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia", "Grahame Grieve, Health Intersections Pyty Ltd, Australia (Editor)", "Sam Heard, Ocean Informatics, Australia", "Mary Kelaher, NEHTA, Australia", "Michael Legg, Michael Legg & associates, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Andrew McIntyre, Medical-Objects, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Michael Osborne, Mater Health Services, Australia", "Kyle Shore, Charm Health, Australia", "Michael Thompson, Queensland Health, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia", "David Rowed, VAMC Clinic, Australia (Editor)", "Mona Saleh (Translator)">
 	other_details = <
 		["references"] = <"Pathology (Data Specifications) Version 1.0 [Internet]. Sydney, Australia: National E-Health Transition Authority; 2007 May 29 [cited 2011 Jul 11]; Available at http://www.nehta.gov.au/component/docman/doc_download/962-pathology-v10.
@@ -70,7 +70,7 @@ definition
 		data matches {
 			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[id3] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id3] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
 								items cardinality matches {2..*; unordered} matches {
@@ -84,7 +84,7 @@ definition
 											DV_TEXT[id113] 
 										}
 									}
-									allow_archetype CLUSTER[id66] occurrences matches {0..*} matches {	-- Specimen Detail
+									allow_archetype CLUSTER[id66] matches {	-- Specimen Detail
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
 									}
@@ -105,18 +105,18 @@ definition
 											DV_TEXT[id116] 
 										}
 									}
-									CLUSTER[id96] occurrences matches {0..*} matches {	-- Result Group
+									CLUSTER[id96] matches {	-- Result Group
 										name matches {
 											DV_TEXT[id117] 
 										}
 										items matches {
-											CLUSTER[id97] occurrences matches {0..*} matches {	-- Result
+											CLUSTER[id97] matches {	-- Result
 												name matches {
 													DV_TEXT[id118] 
 												}
 												items matches {
 													ELEMENT[id79] occurrences matches {0..1} 	-- Result Value
-													ELEMENT[id103] occurrences matches {0..*} matches {	-- Result Comment
+													ELEMENT[id103] matches {	-- Result Comment
 														value matches {
 															DV_TEXT[id119] 
 														}
@@ -146,12 +146,12 @@ definition
 											DV_TEXT[id122] 
 										}
 									}
-									ELEMENT[id99] occurrences matches {0..*} matches {	-- Pathological Diagnosis
+									ELEMENT[id99] matches {	-- Pathological Diagnosis
 										value matches {
 											DV_TEXT[id123] 
 										}
 									}
-									ELEMENT[id11] occurrences matches {0..*} matches {	-- Test Result Representation
+									ELEMENT[id11] matches {	-- Test Result Representation
 										value matches {
 											DV_MULTIMEDIA[id124] matches {
 												media_type matches {[ac3]}		-- Test Result Representation (synthesised)
@@ -177,14 +177,14 @@ definition
 						include
 							archetype_id/value matches {/.*/}
 					}
-					CLUSTER[id95] occurrences matches {0..*} matches {	-- Test Request Details
+					CLUSTER[id95] matches {	-- Test Request Details
 						items matches {
 							ELEMENT[id63] occurrences matches {0..1} matches {	-- Requester Order Identifier
 								value matches {
 									DV_IDENTIFIER[id126] 
 								}
 							}
-							ELEMENT[id107] occurrences matches {0..*} matches {	-- Test Requested Name
+							ELEMENT[id107] matches {	-- Test Requested Name
 								value matches {
 									DV_TEXT[id127] 
 								}
@@ -193,7 +193,7 @@ definition
 								include
 									archetype_id/value matches {/.*/}
 							}
-							allow_archetype CLUSTER[id36] occurrences matches {0..*} matches {	-- Copied Provider
+							allow_archetype CLUSTER[id36] matches {	-- Copied Provider
 								include
 									archetype_id/value matches {/.*/}
 							}
@@ -209,7 +209,7 @@ definition
 							}
 						}
 					}
-					allow_archetype CLUSTER[id111] occurrences matches {0..*} matches {	-- Test Procedure
+					allow_archetype CLUSTER[id111] matches {	-- Test Procedure
 						include
 							archetype_id/value matches {/.*/}
 					}

@@ -39,7 +39,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"ISO/DTS 27527:2007(E) - Provider Identification - Draft Technnical Specification - International Organization for Standardization">
 	>
@@ -71,7 +71,7 @@ definition
 					}
 				}
 			}
-			CLUSTER[id6] occurrences matches {0..*} matches {	-- Resolução de duplicidade
+			CLUSTER[id6] matches {	-- Resolução de duplicidade
 				items cardinality matches {3..*; ordered} matches {
 					ELEMENT[id21] occurrences matches {0..1} matches {	-- Não é duplicata de
 						value matches {
@@ -100,7 +100,7 @@ definition
 					}
 				}
 			}
-			allow_archetype CLUSTER[id7] occurrences matches {0..*} matches {	-- Outros dados
+			allow_archetype CLUSTER[id7] matches {	-- Outros dados
 				include
 					archetype_id/value matches {/(identifier)a-zA-Z0-9_-]*\.v1/}
 			}

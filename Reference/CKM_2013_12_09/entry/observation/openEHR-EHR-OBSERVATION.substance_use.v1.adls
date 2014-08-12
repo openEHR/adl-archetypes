@@ -63,7 +63,7 @@ definition
 													}
 												}
 											}
-											ELEMENT[id13] occurrences matches {0..*} 	-- Amount
+											ELEMENT[id13] 	-- Amount
 										}
 									}
 									ELEMENT[id14] occurrences matches {0..1} matches {	-- Triggers
@@ -71,7 +71,7 @@ definition
 											DV_TEXT[id24] 
 										}
 									}
-									allow_archetype CLUSTER[id15] occurrences matches {0..*} matches {	-- Readiness for change
+									allow_archetype CLUSTER[id15] matches {	-- Readiness for change
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.change\.v1/}
 									}

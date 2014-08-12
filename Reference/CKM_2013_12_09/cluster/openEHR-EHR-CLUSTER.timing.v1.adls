@@ -85,26 +85,26 @@ definition
 					}
 				}
 			}
-			ELEMENT[id5] occurrences matches {0..*} matches {	-- Specific time
+			ELEMENT[id5] matches {	-- Specific time
 				value matches {
 					DV_TIME[id31] 
 				}
 			}
-			ELEMENT[id7] occurrences matches {0..*} matches {	-- Day of week
+			ELEMENT[id7] matches {	-- Day of week
 				value matches {
 					DV_CODED_TEXT[id32] matches {
 						defining_code matches {[ac1]}		-- Day of week (synthesised)
 					}
 				}
 			}
-			ELEMENT[id6] occurrences matches {0..*} matches {	-- Day of month
+			ELEMENT[id6] matches {	-- Day of month
 				value matches {
 					DV_COUNT[id33] matches {
 						magnitude matches {|1..31|}
 					}
 				}
 			}
-			ELEMENT[id19] occurrences matches {0..*} matches {	-- Specific date
+			ELEMENT[id19] matches {	-- Specific date
 				value matches {
 					DV_DATE[id34] 
 				}

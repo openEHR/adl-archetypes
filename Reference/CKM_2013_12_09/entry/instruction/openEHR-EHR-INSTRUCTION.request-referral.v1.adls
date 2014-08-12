@@ -24,7 +24,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
 		["references"] = <"">
@@ -35,7 +35,7 @@ definition
 	INSTRUCTION[id1.1] matches {	-- Referral request
 		/protocol[id9]/items matches {
 			after [id129]
-			allow_archetype CLUSTER[id0.5] occurrences matches {0..*} matches {	-- Contacts
+			allow_archetype CLUSTER[id0.5] matches {	-- Contacts
 				include
 					archetype_id/value matches {/.*/}
 			}

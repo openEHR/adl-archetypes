@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, UK">
 	other_details = <
 		["references"] = <"">
@@ -37,7 +37,7 @@ definition
 						data matches {
 							ITEM_TREE[id4] matches {
 								items matches {
-									ELEMENT[id65] occurrences matches {0..*} matches {	-- Normal statements
+									ELEMENT[id65] matches {	-- Normal statements
 										value matches {
 											DV_TEXT[id131] 
 										}
@@ -49,7 +49,7 @@ definition
 									}
 									CLUSTER[id90] occurrences matches {0..1} matches {	-- Skin complexion
 										items matches {
-											ELEMENT[id45] occurrences matches {0..*} matches {	-- Complexion
+											ELEMENT[id45] matches {	-- Complexion
 												value matches {
 													DV_CODED_TEXT[id133] matches {
 														defining_code matches {[ac1]}		-- Complexion (synthesised)
@@ -82,7 +82,7 @@ definition
 													}
 												}
 											}
-											ELEMENT[id47] occurrences matches {0..*} matches {	-- Physique
+											ELEMENT[id47] matches {	-- Physique
 												value matches {
 													DV_CODED_TEXT[id136] matches {
 														defining_code matches {[ac3]}		-- Physique (synthesised)
@@ -155,7 +155,7 @@ definition
 											}
 										}
 									}
-									CLUSTER[id93] occurrences matches {0..*} matches {	-- Smells of
+									CLUSTER[id93] matches {	-- Smells of
 										items cardinality matches {1; unordered} matches {
 											ELEMENT[id96] occurrences matches {0..1} matches {	-- Smell
 												value matches {
@@ -188,7 +188,7 @@ definition
 											}
 										}
 									}
-									allow_archetype CLUSTER[id106] occurrences matches {0..*} matches {	-- Obvious abnormality on inspection
+									allow_archetype CLUSTER[id106] matches {	-- Obvious abnormality on inspection
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.gait(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.issue(-a-zA-Z0-9_]+)*\.v1/}
 									}
