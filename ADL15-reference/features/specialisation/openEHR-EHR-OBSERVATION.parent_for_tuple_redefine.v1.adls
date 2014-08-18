@@ -19,6 +19,7 @@ description
 		>
 	>
 	lifecycle_state = <"unmanaged">
+	other_details = <
 		["regression"] = <"PASS">
 	>
 

@@ -2,8 +2,8 @@
 -- Logical archetype library definition
 --
 
-name = <"Nehta 2014-04-25">
-short_name = <"Nehta">
+name = <"Nehta 2014-04-25 snapshot">
+short_name = <"Nehta 2014-04-25">
 maintainer = <"Nehta">
 description = <"Snapshot of Nehta archetypes 2014-04-25">
 remote = <

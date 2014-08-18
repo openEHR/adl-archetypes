@@ -16,7 +16,7 @@ description
 			purpose = <"Test OBSERVATION specialisation parent archetype">
 		>
 	>
-	lifecycle_state = <"unstable">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
