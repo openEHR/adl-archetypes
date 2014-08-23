@@ -36,7 +36,9 @@ definition
 										resultedPerformedObservationResult matches {
 											PerformedObservationResult[id0.9] occurrences matches {1} matches {	-- Wheal size result
 												value matches {
-													PQ[id0.14] 
+													PQ[id0.14]  matches {
+														value matches {|0.5..10.0|}
+													}
 												}
 											}
 										}
