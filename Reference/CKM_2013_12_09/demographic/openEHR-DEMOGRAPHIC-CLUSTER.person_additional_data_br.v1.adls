@@ -42,19 +42,19 @@ description
 	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[id1] occurrences matches {0..1} matches {	-- Dados demográficos adicionais da pessoa
+	CLUSTER[id1] occurrences matches {0..1} matches {	-- Extended personal demographics
 		items matches {
-			ELEMENT[id2] matches {	-- Estado Civil
+			ELEMENT[id2] matches {	-- Marital status
 				value matches {
 					DV_CODED_TEXT[id4] matches {
-						defining_code matches {[ac2]}		-- Códigos para Estado Civil
+						defining_code matches {[ac2]}		-- Marital status codes
 					}
 				}
 			}
-			ELEMENT[id3] matches {	-- Etnia
+			ELEMENT[id3] matches {	-- Ethnic background
 				value matches {
 					DV_CODED_TEXT[id5] matches {
-						defining_code matches {[ac3]}		-- Códigos para grupos étnicos
+						defining_code matches {[ac3]}		-- Ethnic background codes
 					}
 				}
 			}

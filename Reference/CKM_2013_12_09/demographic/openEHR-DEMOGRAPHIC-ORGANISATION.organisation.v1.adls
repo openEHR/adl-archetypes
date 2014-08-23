@@ -46,11 +46,11 @@ description
 	>
 
 definition
-	ORGANISATION[id1] matches {	-- Organização
+	ORGANISATION[id1] matches {	-- Organisation
 		details matches {
-			ITEM_TREE[id2] matches {	-- Documentos
+			ITEM_TREE[id2] matches {	-- Identifiers
 				items cardinality matches {1..*; ordered} matches {
-					allow_archetype CLUSTER[id11] matches {	-- Documento
+					allow_archetype CLUSTER[id11] matches {	-- Identifier
 						include
 							archetype_id/value matches {/(provider_identifier)a-zA-Z0-9_-]*\.v1/}
 					}
@@ -58,15 +58,15 @@ definition
 			}
 		}
 		identities cardinality matches {1..*; ordered} matches {
-			allow_archetype PARTY_IDENTITY[id3] occurrences matches {1..*} matches {	-- Nome
+			allow_archetype PARTY_IDENTITY[id3] occurrences matches {1..*} matches {	-- Name
 				include
 					archetype_id/value matches {/(organisation_name)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		contacts matches {
-			CONTACT[id4] matches {	-- Contatos
+			CONTACT[id4] matches {	-- Contacts
 				addresses matches {
-					allow_archetype ADDRESS[id31] matches {	-- Endereço
+					allow_archetype ADDRESS[id31] matches {	-- Address
 						include
 							archetype_id/value matches {/(address)a-zA-Z0-9_-]*\.v1/}
 							archetype_id/value matches {/(electronic_communication)a-zA-Z0-9_-]*\.v1/}
@@ -75,15 +75,15 @@ definition
 			}
 		}
 		relationships matches {
-			PARTY_RELATIONSHIP[id5] matches {	-- Relacionamentos
+			PARTY_RELATIONSHIP[id5] matches {	-- Relationship
 				details matches {
-					ITEM_TREE[id41] matches {	-- Detalhes
+					ITEM_TREE[id41] matches {	-- Details
 						items cardinality matches {1..*; ordered} matches {
 							ELEMENT[id42] occurrences matches {0..1} matches {	-- Type of relationship
 								value matches {
 									DV_TEXT[id43] 
 									DV_CODED_TEXT[id44] matches {
-										defining_code matches {[ac1]}		-- Códigos do tipo de relacionamento
+										defining_code matches {[ac1]}		-- Codes for type of relationship
 									}
 								}
 							}

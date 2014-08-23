@@ -46,74 +46,74 @@ description
 	>
 
 definition
-	PARTY_IDENTITY[id1] matches {	-- Nome da pessoa
+	PARTY_IDENTITY[id1] matches {	-- Person name
 		name matches {
 			DV_TEXT[id24] 
 			DV_CODED_TEXT[id25] matches {
-				defining_code matches {[ac1]}		-- Nome da pessoa (synthesised)
+				defining_code matches {[ac1]}		-- Person name (synthesised)
 			}
 		}
 		details matches {
-			ITEM_TREE[id2] occurrences matches {0..1} matches {	-- Componentes do nome
+			ITEM_TREE[id2] occurrences matches {0..1} matches {	-- Name
 				items cardinality matches {1..*; ordered} matches {
-					ELEMENT[id3] matches {	-- Nome atribuído
+					ELEMENT[id3] matches {	-- Given name
 						value matches {
 							DV_TEXT[id26] 
 						}
 					}
-					ELEMENT[id4] matches {	-- Sobrenome
+					ELEMENT[id4] matches {	-- Family name
 						value matches {
 							DV_TEXT[id27] 
 						}
 					}
-					ELEMENT[id5] matches {	-- Título do nome
+					ELEMENT[id5] matches {	-- Title
 						value matches {
 							DV_TEXT[id28] 
 						}
 					}
-					ELEMENT[id6] matches {	-- Sufixo do nome
+					ELEMENT[id6] matches {	-- Suffix
 						value matches {
 							DV_TEXT[id29] 
 						}
 					}
-					ELEMENT[id20] occurrences matches {0..1} matches {	-- Intervalo de utilização
+					ELEMENT[id20] occurrences matches {0..1} matches {	-- Usage interval
 						value matches {
 							DV_INTERVAL<DV_DATE>[id30] 
 						}
 					}
-					ELEMENT[id21] occurrences matches {0..1} matches {	-- Identificador usado
+					ELEMENT[id21] occurrences matches {0..1} matches {	-- Usage identifier
 						value matches {
 							DV_IDENTIFIER[id31] 
 						}
 					}
-					CLUSTER[id8] occurrences matches {0..1} matches {	-- Representação alternativa do nome
+					CLUSTER[id8] occurrences matches {0..1} matches {	-- Alternative name representations
 						items matches {
-							ELEMENT[id22] occurrences matches {1} matches {	-- Uso da representação
+							ELEMENT[id22] occurrences matches {1} matches {	-- Representation usage
 								value matches {
 									DV_TEXT[id32] 
 								}
 							}
-							ELEMENT[id23] occurrences matches {1} matches {	-- Representação alternativa do nome
+							ELEMENT[id23] occurrences matches {1} matches {	-- Alternative representation
 								value matches {
 									DV_TEXT[id33] 
 								}
 							}
 						}
 					}
-					ELEMENT[id9] occurrences matches {1} matches {	-- Nome preferencial
+					ELEMENT[id9] occurrences matches {1} matches {	-- Preferred name
 						value matches {
 							DV_BOOLEAN[id34] 
 						}
 					}
-					ELEMENT[id10] occurrences matches {0..1} matches {	-- Indicador de acurácia/segurança
+					ELEMENT[id10] occurrences matches {0..1} matches {	-- Issues of accuracy and privacy
 						value matches {
 							DV_TEXT[id35] 
 							DV_CODED_TEXT[id36] matches {
-								defining_code matches {[ac2]}		-- Indicador de acurácia/segurança (synthesised)
+								defining_code matches {[ac2]}		-- Issues of accuracy and privacy (synthesised)
 							}
 						}
 					}
-					ELEMENT[id11] occurrences matches {0..1} matches {	-- Nome completo
+					ELEMENT[id11] occurrences matches {0..1} matches {	-- Full Name
 						value matches {
 							DV_TEXT[id37] 
 						}

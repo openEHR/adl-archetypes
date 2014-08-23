@@ -46,22 +46,22 @@ description
 	>
 
 definition
-	PARTY_IDENTITY[id1] matches {	-- Nome da organização
+	PARTY_IDENTITY[id1] matches {	-- Organisation name
 		name matches {
 			DV_TEXT[id13] 
 			DV_CODED_TEXT[id14] matches {
-				defining_code matches {[ac1]}		-- Nome da organização (synthesised)
+				defining_code matches {[ac1]}		-- Organisation name (synthesised)
 			}
 		}
 		details matches {
-			ITEM_TREE[id2] matches {	-- Itens
+			ITEM_TREE[id2] matches {	-- Items
 				items cardinality matches {2; ordered} matches {
-					ELEMENT[id11] occurrences matches {1} matches {	-- Nome
+					ELEMENT[id11] occurrences matches {1} matches {	-- Name
 						value matches {
 							DV_TEXT[id15] 
 						}
 					}
-					ELEMENT[id12] occurrences matches {1} matches {	-- Identificador
+					ELEMENT[id12] occurrences matches {1} matches {	-- Identifier
 						value matches {
 							DV_TEXT[id16] 
 						}

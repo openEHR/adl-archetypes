@@ -46,23 +46,23 @@ description
 	>
 
 definition
-	PERSON[id1] matches {	-- Dados da pessoa
+	PERSON[id1] matches {	-- Person
 		details matches {
-			allow_archetype ITEM_TREE[id2] occurrences matches {1} matches {	-- Detalhes
+			allow_archetype ITEM_TREE[id2] occurrences matches {1} matches {	-- Demographic details
 				include
 					archetype_id/value matches {/(person_details)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		identities matches {
-			allow_archetype PARTY_IDENTITY[id3] occurrences matches {1} matches {	-- Nome
+			allow_archetype PARTY_IDENTITY[id3] occurrences matches {1} matches {	-- Name
 				include
 					archetype_id/value matches {/(person_name)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		contacts matches {
-			CONTACT[id4] occurrences matches {1} matches {	-- Contatos
+			CONTACT[id4] occurrences matches {1} matches {	-- Contacts
 				addresses matches {
-					allow_archetype ADDRESS[id31] occurrences matches {1} matches {	-- Endereço
+					allow_archetype ADDRESS[id31] occurrences matches {1} matches {	-- Addresses
 						include
 							archetype_id/value matches {/(address)(a-zA-Z0-9_-]+)*\.v1/}
 							archetype_id/value matches {/(electronic_communication)a-zA-Z0-9_-]*\.v1/}
@@ -71,15 +71,15 @@ definition
 			}
 		}
 		relationships matches {
-			PARTY_RELATIONSHIP[id5] matches {	-- Relacionamentos
+			PARTY_RELATIONSHIP[id5] matches {	-- Relationships
 				details matches {
 					ITEM_TREE[id42] matches {
 						items matches {
-							ELEMENT[id41] matches {	-- Grau de parentesco
+							ELEMENT[id41] matches {	-- Relationship type
 								value matches {
 									DV_TEXT[id43] 
 									DV_CODED_TEXT[id44] matches {
-										defining_code matches {[ac1]}		-- Códigos para tipo de parentesco
+										defining_code matches {[ac1]}		-- Codes for type of relationship
 									}
 								}
 							}

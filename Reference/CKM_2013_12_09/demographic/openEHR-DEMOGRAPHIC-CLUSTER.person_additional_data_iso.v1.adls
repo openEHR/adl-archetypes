@@ -45,21 +45,21 @@ description
 	>
 
 definition
-	CLUSTER[id1] occurrences matches {0..1} matches {	-- ISO: Dados demográficos adicionais de uma pessoa
+	CLUSTER[id1] occurrences matches {0..1} matches {	-- Person additional demographic data
 		items matches {
-			ELEMENT[id2] matches {	-- sexo
+			ELEMENT[id2] matches {	-- Sex
 				value matches {
 					DV_CODED_TEXT[id5] matches {
-						defining_code matches {[ac1]}		-- sexo (synthesised)
+						defining_code matches {[ac1]}		-- Sex (synthesised)
 					}
 				}
 			}
-			ELEMENT[id3] matches {	-- Sobrenome da Mãe
+			ELEMENT[id3] matches {	-- Mother's family name
 				value matches {
 					DV_TEXT[id6] 
 				}
 			}
-			ELEMENT[id4] matches {	-- Comentários de identificação
+			ELEMENT[id4] matches {	-- Identification comment
 				value matches {
 					DV_TEXT[id7] 
 				}

@@ -43,23 +43,23 @@ description
 	other_contributors = <"Sebastian Garde, Ocean Informatics, Germany (Editor)", "Omer Hotomaroglu, Turkey (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)">
 
 definition
-	ROLE[id1] matches {	-- Profissional de saúde
+	ROLE[id1] matches {	-- Individual healthcare provider
 		identities matches {
-			allow_archetype PARTY_IDENTITY[id2] occurrences matches {1} matches {	-- Nome do profissional
+			allow_archetype PARTY_IDENTITY[id2] occurrences matches {1} matches {	-- Name
 				include
 					archetype_id/value matches {/(person_name)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		capabilities matches {
-			allow_archetype CAPABILITY[id3] matches {	-- Capacitação
+			allow_archetype CAPABILITY[id3] matches {	-- Capability
 				include
 					archetype_id/value matches {/(individual_credentials)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		contacts matches {
-			CONTACT[id4] matches {	-- Contato
+			CONTACT[id4] matches {	-- Contact
 				addresses matches {
-					allow_archetype ADDRESS[id31] occurrences matches {1} matches {	-- Endereço
+					allow_archetype ADDRESS[id31] occurrences matches {1} matches {	-- Address
 						include
 							archetype_id/value matches {/(address)(a-zA-Z0-9_]+)*\.v1/}
 							archetype_id/value matches {/(electronic_communication)a-zA-Z0-9_-]*\.v1/}
@@ -68,11 +68,11 @@ definition
 			}
 		}
 		relationships matches {
-			PARTY_RELATIONSHIP[id5] matches {	-- Relacionamento com uma fonte pagadora
+			PARTY_RELATIONSHIP[id5] matches {	-- Relationship with a third-party payer
 				details matches {
-					ITEM_TREE[id41] occurrences matches {0..1} matches {	-- Detalhes
+					ITEM_TREE[id41] occurrences matches {0..1} matches {	-- Relationship details
 						items cardinality matches {1; unordered; unique} matches {
-							allow_archetype CLUSTER[id42] occurrences matches {1} matches {	-- Documento de Identificação
+							allow_archetype CLUSTER[id42] occurrences matches {1} matches {	-- Identifier
 								include
 									archetype_id/value matches {/(provider_identifier)a-zA-Z0-9_-]*\.v1/}
 							}
@@ -80,15 +80,15 @@ definition
 					}
 				}
 			}
-			PARTY_RELATIONSHIP[id6] matches {	-- Relacionamento empregador/empregado
+			PARTY_RELATIONSHIP[id6] matches {	-- Employer/employee relationship
 				details matches {
-					ITEM_TREE[id51] occurrences matches {0..1} matches {	-- Detalhes
+					ITEM_TREE[id51] occurrences matches {0..1} matches {	-- Details
 						items cardinality matches {1..*; ordered} matches {
-							allow_archetype CLUSTER[id52] occurrences matches {1} matches {	-- Documento de Identificação
+							allow_archetype CLUSTER[id52] occurrences matches {1} matches {	-- Identifier
 								include
 									archetype_id/value matches {/(provider_identifier)a-zA-Z0-9_-]*\.v1/}
 							}
-							ELEMENT[id53] occurrences matches {0..1} matches {	-- Função
+							ELEMENT[id53] occurrences matches {0..1} matches {	-- Employment role
 								value matches {
 									DV_TEXT[id54] 
 								}

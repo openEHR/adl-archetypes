@@ -42,19 +42,19 @@ description
 	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[id1] matches {	-- Outros detalhes do registro profissional
+	CLUSTER[id1] matches {	-- Other provider registration data
 		items matches {
-			ELEMENT[id2] occurrences matches {0..1} matches {	-- Estado
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- State
 				value matches {
 					DV_CODED_TEXT[id4] matches {
-						defining_code matches {[ac2]}		-- Códigos de estados
+						defining_code matches {[ac2]}		-- State codes
 					}
 				}
 			}
-			ELEMENT[id3] occurrences matches {1} matches {	-- País
+			ELEMENT[id3] occurrences matches {1} matches {	-- Country
 				value matches {
 					DV_CODED_TEXT[id5] matches {
-						defining_code matches {[ac3]}		-- Códigos de países
+						defining_code matches {[ac3]}		-- Country codes
 					}
 				}
 			}

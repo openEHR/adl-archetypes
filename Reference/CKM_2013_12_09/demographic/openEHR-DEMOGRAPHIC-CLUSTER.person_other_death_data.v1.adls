@@ -42,30 +42,30 @@ description
 	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[id1] matches {	-- Dados adicionais do óbito
+	CLUSTER[id1] matches {	-- Death additional data
 		items matches {
-			ELEMENT[id2] occurrences matches {0..1} matches {	-- País
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Country
 				value matches {
 					DV_CODED_TEXT[id6] matches {
-						defining_code matches {[ac1]}		-- Códigos de países
+						defining_code matches {[ac1]}		-- Country codes
 					}
 				}
 			}
-			ELEMENT[id3] occurrences matches {0..1} matches {	-- Estado/território/província
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- State/territory/province
 				value matches {
 					DV_CODED_TEXT[id7] matches {
-						defining_code matches {[ac2]}		-- Códigos de estados
+						defining_code matches {[ac2]}		-- State codes
 					}
 				}
 			}
-			ELEMENT[id4] occurrences matches {0..1} matches {	-- Cidade/localidade
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- City/town/locality
 				value matches {
 					DV_CODED_TEXT[id8] matches {
-						defining_code matches {[ac3]}		-- Códigos de cidades
+						defining_code matches {[ac3]}		-- City codes
 					}
 				}
 			}
-			ELEMENT[id5] occurrences matches {0..1} matches {	-- Número do certificado
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Death certificate number
 				value matches {
 					DV_TEXT[id9] 
 				}

@@ -42,19 +42,19 @@ description
 	lifecycle_state = <"unmanaged">
 
 definition
-	ROLE[id1] matches {	-- Consumidor em saúde
+	ROLE[id1] matches {	-- Healthcare consumer
 		identities cardinality matches {1..*; ordered} matches {
-			allow_archetype PARTY_IDENTITY[id2] matches {	-- Nome do consumidor
+			allow_archetype PARTY_IDENTITY[id2] matches {	-- Consumer name
 				include
 					archetype_id/value matches {/(person_name)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		relationships cardinality matches {1..*; ordered} matches {
-			PARTY_RELATIONSHIP[id3] matches {	-- Beneficiário
+			PARTY_RELATIONSHIP[id3] matches {	-- Consumer-Third party payer
 				details matches {
-					ITEM_TREE[id21] matches {	-- Identificações do beneficiário
+					ITEM_TREE[id21] matches {	-- Healthcare consumer identifiers
 						items cardinality matches {1..*; ordered} matches {
-							allow_archetype CLUSTER[id22] matches {	-- Identificação do beneficiário
+							allow_archetype CLUSTER[id22] matches {	-- Healthcare consumer identifier
 								include
 									archetype_id/value matches {/(person_identifier)a-zA-Z0-9_-]*\.v1/}
 							}
@@ -62,11 +62,11 @@ definition
 					}
 				}
 			}
-			PARTY_RELATIONSHIP[id4] matches {	-- Paciente
+			PARTY_RELATIONSHIP[id4] matches {	-- Patient
 				details matches {
-					ITEM_TREE[id31] matches {	-- Identificações no prestador
+					ITEM_TREE[id31] matches {	-- Patient identifiers
 						items cardinality matches {1..*; ordered} matches {
-							allow_archetype CLUSTER[id32] matches {	-- Identificação no prestador
+							allow_archetype CLUSTER[id32] matches {	-- Patient identifier
 								include
 									archetype_id/value matches {/(person_identifier)a-zA-Z0-9_-]*\.v1/}
 							}

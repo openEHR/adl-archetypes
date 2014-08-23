@@ -42,11 +42,11 @@ description
 	lifecycle_state = <"unstable">
 
 definition
-	ROLE[id1] matches {	-- Fonte pagadora
+	ROLE[id1] matches {	-- Third-party payer
 		details matches {
-			ITEM_TREE[id2] occurrences matches {0..1} matches {	-- Documentos de Identificação
+			ITEM_TREE[id2] occurrences matches {0..1} matches {	-- Identifiers
 				items cardinality matches {1..*; unordered; unique} matches {
-					allow_archetype CLUSTER[id11] occurrences matches {1..*} matches {	-- Documento de Identificação
+					allow_archetype CLUSTER[id11] occurrences matches {1..*} matches {	-- Identifier
 						include
 							archetype_id/value matches {/(provider_identifier)a-zA-Z0-9_-]*\.v1/}
 					}
@@ -54,7 +54,7 @@ definition
 			}
 		}
 		identities cardinality matches {1..*; ordered} matches {
-			allow_archetype PARTY_IDENTITY[id3] occurrences matches {1..*} matches {	-- Nome
+			allow_archetype PARTY_IDENTITY[id3] occurrences matches {1..*} matches {	-- Name
 				include
 					archetype_id/value matches {/(organisation_name)a-zA-Z0-9_-]*\.v1/}
 			}

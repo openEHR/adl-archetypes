@@ -48,22 +48,22 @@ description
 	>
 
 definition
-	PERSON[id1.1] matches {	-- Dados do paciente
+	PERSON[id1.1] matches {	-- Patient
 		/identities matches {
-			allow_archetype PARTY_IDENTITY[id3.1] matches {	-- Nome
+			allow_archetype PARTY_IDENTITY[id3.1] matches {	-- Name
 				include
 					archetype_id/value matches {/(person_name)a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		contacts matches {
-			CONTACT[id4.1] 	-- Contatos
+			CONTACT[id4.1] 	-- Contacts
 		}
 		/relationships matches {
-			PARTY_RELATIONSHIP[id0.2] matches {	-- Fonte pagadora
+			PARTY_RELATIONSHIP[id0.2] matches {	-- Third party payer
 				details matches {
-					ITEM_TREE[id0.20] matches {	-- Identificações do beneficiário
+					ITEM_TREE[id0.20] matches {	-- Patient identifiers
 						items matches {
-							allow_archetype CLUSTER[id0.21] matches {	-- Identificação do beneficiário
+							allow_archetype CLUSTER[id0.21] matches {	-- Healthcare consumer identifier.
 								include
 									archetype_id/value matches {/(person_identifier)a-zA-Z0-9_-]*\.v1/}
 							}
@@ -71,11 +71,11 @@ definition
 					}
 				}
 			}
-			PARTY_RELATIONSHIP[id0.3] matches {	-- Serviço de saúde/Profissional de saúde
+			PARTY_RELATIONSHIP[id0.3] matches {	-- Healthcare provider/Health professional
 				details matches {
-					ITEM_TREE[id0.30] matches {	-- Identificações no prestador
+					ITEM_TREE[id0.30] matches {	-- Patient identifiers
 						items matches {
-							allow_archetype CLUSTER[id0.31] matches {	-- Identificação no prestador
+							allow_archetype CLUSTER[id0.31] matches {	-- Patient identifier
 								include
 									archetype_id/value matches {/(person_identifier)a-zA-Z0-9_-]*\.v1/}
 							}
@@ -85,7 +85,7 @@ definition
 			}
 		}
 		/relationships[id5.1]/details matches {
-			ITEM_TREE[id0.40] matches {	-- Personal relationships
+			ITEM_TREE[id0.40] matches {	-- Personal relationship
 				items matches {
 					ELEMENT[id41] matches {
 						value matches {

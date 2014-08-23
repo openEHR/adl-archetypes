@@ -48,40 +48,40 @@ description
 	>
 
 definition
-	CLUSTER[id1.1] matches {	-- Identificador de um prestador de assistência à saúde
+	CLUSTER[id1.1] matches {	-- Healthcare provider identifier
 		/items matches {
 			after [id7]
-			ELEMENT[id0.2] occurrences matches {1..*} matches {	-- Uso da identificação
+			ELEMENT[id0.2] occurrences matches {1..*} matches {	-- Identifier Usage
 				value matches {
 					DV_TEXT[id0.35] 
 					DV_CODED_TEXT[id0.36] matches {
-						defining_code matches {[ac1.1]}		-- Código de uso do identificador.
+						defining_code matches {[ac1.1]}		-- Identifier usage code
 					}
 				}
 			}
-			CLUSTER[id0.3] matches {	-- Resolução de duplicidade
+			CLUSTER[id0.3] matches {	-- Duplicate resolution
 				items cardinality matches {3..*; ordered} matches {
-					ELEMENT[id0.30] occurrences matches {0..1} matches {	-- Não é duplicata de
+					ELEMENT[id0.30] occurrences matches {0..1} matches {	-- Not a duplicate of
 						value matches {
 							DV_TEXT[id0.37] 
 						}
 					}
-					ELEMENT[id0.31] occurrences matches {0..1} matches {	-- Duplicata de
+					ELEMENT[id0.31] occurrences matches {0..1} matches {	-- Duplicate of
 						value matches {
 							DV_TEXT[id0.38] 
 						}
 					}
-					ELEMENT[id0.32] occurrences matches {1..*} matches {	-- Confirmado pela organização
+					ELEMENT[id0.32] occurrences matches {1..*} matches {	-- Confirmed by organisation
 						value matches {
 							DV_TEXT[id0.39] 
 						}
 					}
-					ELEMENT[id0.33] occurrences matches {1..*} matches {	-- Data da confirmação
+					ELEMENT[id0.33] occurrences matches {1..*} matches {	-- Date confirmed
 						value matches {
 							DV_DATE[id0.40] 
 						}
 					}
-					ELEMENT[id0.34] occurrences matches {1..*} matches {	-- Identificador desativado
+					ELEMENT[id0.34] occurrences matches {1..*} matches {	-- Retired identifider
 						value matches {
 							DV_TEXT[id0.41] 
 						}

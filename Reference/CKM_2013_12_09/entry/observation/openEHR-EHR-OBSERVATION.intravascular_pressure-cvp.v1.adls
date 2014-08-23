@@ -36,7 +36,7 @@ definition
 		data matches {
 			HISTORY[id2] matches {
 				events matches {
-					EVENT[id3] occurrences matches {0..*} matches {
+					EVENT[id3] matches {
 						data matches {
 							ITEM_TREE[id4] matches {
 								items matches {
@@ -51,7 +51,6 @@ definition
 							}
 						}
 					}
-					INTERVAL_EVENT[id5] occurrences matches {0..*} 
 				}
 			}
 		}

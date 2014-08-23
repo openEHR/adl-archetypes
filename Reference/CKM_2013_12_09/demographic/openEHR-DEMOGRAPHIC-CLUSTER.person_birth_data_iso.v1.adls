@@ -45,40 +45,40 @@ description
 	>
 
 definition
-	CLUSTER[id1] matches {	-- Dados do nascimento
+	CLUSTER[id1] matches {	-- Birth data
 		items matches {
-			ELEMENT[id2] occurrences matches {1} matches {	-- Data do nascimento
+			ELEMENT[id2] occurrences matches {1} matches {	-- Birth date
 				value matches {
 					DV_DATE[id8] 
 				}
 			}
-			ELEMENT[id3] occurrences matches {0..1} matches {	-- país de nascimento
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Country of birth
 				value matches {
 					DV_CODED_TEXT[id9] matches {
-						defining_code matches {[ac1]}		-- Códigos de países
+						defining_code matches {[ac1]}		-- Country codes
 					}
 				}
 			}
-			ELEMENT[id4] occurrences matches {0..1} matches {	-- Nascimento multiplo
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Birth plurality
 				value matches {
 					DV_CODED_TEXT[id10] matches {
-						defining_code matches {[ac2]}		-- Códigos para nascimento múltiplo
+						defining_code matches {[ac2]}		-- Birth plurality codes
 					}
 				}
 			}
-			ELEMENT[id5] occurrences matches {0..1} matches {	-- Ordem de Nascimento
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Birth order
 				value matches {
 					DV_CODED_TEXT[id11] matches {
-						defining_code matches {[ac3]}		-- Códigos para ordem de nascimento
+						defining_code matches {[ac3]}		-- Birth order codes
 					}
 				}
 			}
-			ELEMENT[id6] matches {	-- Indicador de seguimento da data de nascimento
+			ELEMENT[id6] matches {	-- Date of birth follow-up indicator
 				value matches {
 					DV_BOOLEAN[id12] 
 				}
 			}
-			allow_archetype CLUSTER[id7] occurrences matches {0..1} matches {	-- Dados específicos de um país
+			allow_archetype CLUSTER[id7] occurrences matches {0..1} matches {	-- Country specific data
 				include
 					archetype_id/value matches {/(person_other_birth_data)a-zA-Z0-9_-]*\.v1/}
 			}

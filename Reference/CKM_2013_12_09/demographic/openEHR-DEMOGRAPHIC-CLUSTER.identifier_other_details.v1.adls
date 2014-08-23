@@ -42,30 +42,30 @@ description
 	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[id1] matches {	-- Dados adicionais de um identificador
+	CLUSTER[id1] matches {	-- Additional identifier data
 		items matches {
-			ELEMENT[id2] occurrences matches {0..1} matches {	-- Município
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- City
 				value matches {
 					DV_CODED_TEXT[id6] matches {
-						defining_code matches {[ac1]}		-- Códigos de cidades
+						defining_code matches {[ac1]}		-- City codes
 					}
 				}
 			}
-			ELEMENT[id3] occurrences matches {0..1} matches {	-- Estado
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- State
 				value matches {
 					DV_CODED_TEXT[id7] matches {
-						defining_code matches {[ac2]}		-- Códigos de estados
+						defining_code matches {[ac2]}		-- State codes
 					}
 				}
 			}
-			ELEMENT[id4] occurrences matches {0..1} matches {	-- País
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Country
 				value matches {
 					DV_CODED_TEXT[id8] matches {
-						defining_code matches {[ac3]}		-- Códigos de países
+						defining_code matches {[ac3]}		-- Country codes
 					}
 				}
 			}
-			ELEMENT[id5] occurrences matches {0..1} matches {	-- Validade da identificação
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Time validity
 				value matches {
 					DV_INTERVAL<DV_DATE>[id9] matches {
 						upper matches {

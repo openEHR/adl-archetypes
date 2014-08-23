@@ -42,205 +42,205 @@ description
 	lifecycle_state = <"unmanaged">
 
 definition
-	ITEM_TREE[id1] occurrences matches {0..1} matches {	-- Dados da pessoa
+	ITEM_TREE[id1] occurrences matches {0..1} matches {	-- Person data
 		items cardinality matches {1..*; ordered} matches {
-			CLUSTER[id2] matches {	-- Dados do nascimento
+			CLUSTER[id2] matches {	-- Birth data
 				items matches {
-					ELEMENT[id11] occurrences matches {1} matches {	-- Data do nascimento
+					ELEMENT[id11] occurrences matches {1} matches {	-- Birth date
 						value matches {
 							DV_DATE[id50] 
 						}
 					}
-					ELEMENT[id12] matches {	-- Indicador de seguimento da data de nascimento
+					ELEMENT[id12] matches {	-- Date of birth follow-up indicator
 						value matches {
 							DV_BOOLEAN[id51] 
 						}
 					}
-					ELEMENT[id13] occurrences matches {0..1} matches {	-- país de nascimento
+					ELEMENT[id13] occurrences matches {0..1} matches {	-- Country of birth
 						value matches {
 							DV_CODED_TEXT[id52] matches {
-								defining_code matches {[ac2]}		-- Códigos de países
+								defining_code matches {[ac2]}		-- Country codes
 							}
 						}
 					}
-					ELEMENT[id14] occurrences matches {0..1} matches {	-- Estado/território/província
+					ELEMENT[id14] occurrences matches {0..1} matches {	-- State/territory/province
 						value matches {
 							DV_CODED_TEXT[id53] matches {
-								defining_code matches {[ac3]}		-- Códigos de estados
+								defining_code matches {[ac3]}		-- State codes
 							}
 						}
 					}
-					ELEMENT[id15] occurrences matches {0..1} matches {	-- Cidade/localidade
+					ELEMENT[id15] occurrences matches {0..1} matches {	-- City/town/locality
 						value matches {
 							DV_CODED_TEXT[id54] matches {
-								defining_code matches {[ac4]}		-- Códigos de cidades
+								defining_code matches {[ac4]}		-- City codes
 							}
 						}
 					}
-					ELEMENT[id16] occurrences matches {0..1} matches {	-- Nascimento multiplo
+					ELEMENT[id16] occurrences matches {0..1} matches {	-- Birth plurality
 						value matches {
 							DV_TEXT[id55] 
 							DV_CODED_TEXT[id56] matches {
-								defining_code matches {[ac5]}		-- Códigos para nascimento múltiplo
+								defining_code matches {[ac5]}		-- Birth plurality codes
 							}
 						}
 					}
-					ELEMENT[id17] occurrences matches {0..1} matches {	-- Ordem de Nascimento
+					ELEMENT[id17] occurrences matches {0..1} matches {	-- Birth order
 						value matches {
 							DV_TEXT[id57] 
 							DV_CODED_TEXT[id58] matches {
-								defining_code matches {[ac6]}		-- Códigos para ordem de nascimento
+								defining_code matches {[ac6]}		-- Birth order codes
 							}
 						}
 					}
-					ELEMENT[id18] matches {	-- sexo
+					ELEMENT[id18] matches {	-- Sex
 						value matches {
 							DV_TEXT[id59] 
 							DV_CODED_TEXT[id60] matches {
-								defining_code matches {[ac10]}		-- sexo (synthesised)
+								defining_code matches {[ac10]}		-- Sex (synthesised)
 							}
 						}
 					}
-					ELEMENT[id19] matches {	-- Cartório
+					ELEMENT[id19] matches {	-- Registry
 						value matches {
 							DV_TEXT[id61] 
 						}
 					}
-					allow_archetype CLUSTER[id7] occurrences matches {0..1} matches {	-- Dados específicos de nascimento de um país
+					allow_archetype CLUSTER[id7] occurrences matches {0..1} matches {	-- Country specific birth data
 						include
 							archetype_id/value matches {/(birth_data_additional_detail)a-zA-Z0-9_-]*\.v1/}
 					}
 				}
 			}
-			CLUSTER[id3] matches {	-- Dados do óbito
+			CLUSTER[id3] matches {	-- Death data
 				items matches {
-					ELEMENT[id22] occurrences matches {1} matches {	-- Data do óbito
+					ELEMENT[id22] occurrences matches {1} matches {	-- Death date
 						value matches {
 							DV_DATE[id62] 
 						}
 					}
-					ELEMENT[id23] occurrences matches {0..1} matches {	-- Fonte da notificação
+					ELEMENT[id23] occurrences matches {0..1} matches {	-- Source of notification
 						value matches {
 							DV_TEXT[id63] 
 							DV_CODED_TEXT[id64] matches {
-								defining_code matches {[ac11]}		-- Fonte da notificação (synthesised)
+								defining_code matches {[ac11]}		-- Source of notification (synthesised)
 							}
 						}
 					}
-					ELEMENT[id24] occurrences matches {0..1} matches {	-- País
+					ELEMENT[id24] occurrences matches {0..1} matches {	-- Country
 						value matches {
 							DV_CODED_TEXT[id65] matches {
-								defining_code matches {[ac2]}		-- Códigos de países
+								defining_code matches {[ac2]}		-- Country codes
 							}
 						}
 					}
-					ELEMENT[id25] occurrences matches {0..1} matches {	-- Estado/território/província
+					ELEMENT[id25] occurrences matches {0..1} matches {	-- State/territory/province
 						value matches {
 							DV_CODED_TEXT[id66] matches {
-								defining_code matches {[ac3]}		-- Códigos de estados
+								defining_code matches {[ac3]}		-- State codes
 							}
 						}
 					}
-					ELEMENT[id26] occurrences matches {0..1} matches {	-- Cidade/localidade
+					ELEMENT[id26] occurrences matches {0..1} matches {	-- City/town/locality
 						value matches {
 							DV_TEXT[id67] 
 							DV_CODED_TEXT[id68] matches {
-								defining_code matches {[ac4]}		-- Códigos de cidades
+								defining_code matches {[ac4]}		-- City codes
 							}
 						}
 					}
-					ELEMENT[id27] occurrences matches {0..1} matches {	-- Número do certificado
+					ELEMENT[id27] occurrences matches {0..1} matches {	-- Death certificate number
 						value matches {
 							DV_TEXT[id69] 
 						}
 					}
 				}
 			}
-			CLUSTER[id5] matches {	-- Identificador biométrico
+			CLUSTER[id5] matches {	-- Biometric identifier
 				items matches {
-					ELEMENT[id42] occurrences matches {1} matches {	-- Tipo
+					ELEMENT[id42] occurrences matches {1} matches {	-- Type of biometric
 						value matches {
 							DV_TEXT[id70] 
 							DV_CODED_TEXT[id71] matches {
-								defining_code matches {[ac12]}		-- Tipo (synthesised)
+								defining_code matches {[ac12]}		-- Type of biometric (synthesised)
 							}
 						}
 					}
-					ELEMENT[id43] occurrences matches {0..1} matches {	-- Template do identificador
+					ELEMENT[id43] occurrences matches {0..1} matches {	-- Biometric data template
 						value matches {
 							DV_TEXT[id72] 
 						}
 					}
-					ELEMENT[id44] occurrences matches {0..1} matches {	-- Qualidade do registro biométrico
+					ELEMENT[id44] occurrences matches {0..1} matches {	-- Biometric enrolment quality
 						value matches {
 							DV_PROPORTION[id73] 
 						}
 					}
-					ELEMENT[id45] occurrences matches {0..1} matches {	-- Autoridade criadora
+					ELEMENT[id45] occurrences matches {0..1} matches {	-- Biometric creating authority
 						value matches {
 							DV_TEXT[id74] 
 						}
 					}
-					ELEMENT[id46] matches {	-- Localização do identificador
+					ELEMENT[id46] matches {	-- Location of biometric identifier
 						value matches {
 							DV_TEXT[id75] 
 							DV_CODED_TEXT[id76] matches {
-								defining_code matches {[ac9]}		-- Localização do objeto biométrico
+								defining_code matches {[ac9]}		-- Localization code
 							}
 						}
 					}
-					ELEMENT[id47] occurrences matches {0..1} matches {	-- Identificação do equipamento biométrico
+					ELEMENT[id47] occurrences matches {0..1} matches {	-- Biometric device identification
 						value matches {
 							DV_TEXT[id77] 
 						}
 					}
-					ELEMENT[id48] occurrences matches {0..1} matches {	-- Versão do processo
+					ELEMENT[id48] occurrences matches {0..1} matches {	-- Biometric version
 						value matches {
 							DV_TEXT[id78] 
 						}
 					}
-					ELEMENT[id49] occurrences matches {0..1} matches {	-- Data de criação
+					ELEMENT[id49] occurrences matches {0..1} matches {	-- Biometric date of creation
 						value matches {
 							DV_DATE[id79] 
 						}
 					}
 				}
 			}
-			ELEMENT[id32] matches {	-- Gênero
+			ELEMENT[id32] matches {	-- Gender
 				value matches {
 					DV_TEXT[id80] 
 					DV_CODED_TEXT[id81] matches {
-						defining_code matches {[ac13]}		-- Gênero (synthesised)
+						defining_code matches {[ac13]}		-- Gender (synthesised)
 					}
 				}
 			}
-			ELEMENT[id33] matches {	-- Sobrenome da Mãe
+			ELEMENT[id33] matches {	-- Mother's family name
 				value matches {
 					DV_TEXT[id82] 
 				}
 			}
-			ELEMENT[id34] matches {	-- Estado Civil
+			ELEMENT[id34] matches {	-- Marital status
 				value matches {
 					DV_TEXT[id83] 
 					DV_CODED_TEXT[id84] matches {
-						defining_code matches {[ac7]}		-- Códigos para Estado Civil
+						defining_code matches {[ac7]}		-- Marital status codes
 					}
 				}
 			}
-			ELEMENT[id35] matches {	-- Etnia
+			ELEMENT[id35] matches {	-- Ethnic background
 				value matches {
 					DV_TEXT[id85] 
 					DV_CODED_TEXT[id86] matches {
-						defining_code matches {[ac8]}		-- Códigos para grupos étnicos
+						defining_code matches {[ac8]}		-- Ethnic background codes
 					}
 				}
 			}
-			ELEMENT[id36] matches {	-- Comentários de identificação
+			ELEMENT[id36] matches {	-- Identification comment
 				value matches {
 					DV_TEXT[id87] 
 				}
 			}
-			allow_archetype CLUSTER[id6] matches {	-- Identificadores da pessoa
+			allow_archetype CLUSTER[id6] matches {	-- Other person identifiers
 				include
 					archetype_id/value matches {/(person_identifier)a-zA-Z0-9_-]*\.v1/}
 			}

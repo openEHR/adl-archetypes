@@ -42,38 +42,38 @@ description
 	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[id1] matches {	-- Outros dados da certidão de nascimento
+	CLUSTER[id1] matches {	-- Other birth certificate data
 		items matches {
-			ELEMENT[id2] occurrences matches {0..1} matches {	-- Estado/território/província
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- State/territory/province
 				value matches {
 					DV_CODED_TEXT[id8] matches {
-						defining_code matches {[ac2]}		-- Códigos de estados
+						defining_code matches {[ac2]}		-- State codes
 					}
 				}
 			}
-			ELEMENT[id3] occurrences matches {0..1} matches {	-- Cidade/localidade
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- City/town/locality
 				value matches {
 					DV_CODED_TEXT[id9] matches {
-						defining_code matches {[ac3]}		-- Códigos de cidades
+						defining_code matches {[ac3]}		-- City codes
 					}
 				}
 			}
-			ELEMENT[id4] matches {	-- Cartório
+			ELEMENT[id4] matches {	-- Registry
 				value matches {
 					DV_TEXT[id10] 
 				}
 			}
-			ELEMENT[id5] matches {	-- Livro
+			ELEMENT[id5] matches {	-- Book number
 				value matches {
 					DV_TEXT[id11] 
 				}
 			}
-			ELEMENT[id6] matches {	-- Folha
+			ELEMENT[id6] matches {	-- Page number
 				value matches {
 					DV_TEXT[id12] 
 				}
 			}
-			ELEMENT[id7] matches {	-- Termo
+			ELEMENT[id7] matches {	-- Section
 				value matches {
 					DV_TEXT[id13] 
 				}
