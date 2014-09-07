@@ -1,0 +1,408 @@
+﻿archetype (adl_version=1.5.1; generated)
+	openEHR-EHR-OBSERVATION.pathology_test.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"2009-11-07">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the findings and interpretation of pathology tests performed on tissues and body fluids. This is typically done in a laboratory but may be done in other environments such as at the point of care.">
+			use = <"Use to record any pathology test result, including the result of a test on a specimen taken as part of a composite procedure or operation.
+
+Multi-analyte panels can be represented using templates or specialised archetypes.
+ 
+More complex tests such as histopathology or microbiology should be represented using specialised archetypes where additional report content is required.
+
+Will normally be reported back to the requesting clinician as one component within the context of an overall COMPOSITION-based report.">
+			keywords = <"lab", "pathology", "biochemistry", "haematology", "microbiology", "immunology", "laboratory", "anatomical", "chemical", "clinical", "immunopathology", "cytology", "histopathology", "test", "biopsy", "specimen", "forensic", "genetic">
+			misuse = <"Not to be used for reporting on non-pathology test results e.g. diagnostic imaging, ECG or respiratory function tests.
+
+Not to be used to represent an entire cumulative report. This Pathology test result archetype represents only one of the result sets that is usually viewed as a vertical in a cumulative test report. A cumulative report is a view that is constructed from the results represented by multiple OBSERVATION archetypes.
+
+Not to be used to record an Autopsy report, although tests on some specimens that are taken at autopsy may be represented using this archetype.
+
+This archetype is suitable for representation of general pathology test results, but not intended to cover full synoptic reports. For these, additional specialising archetypes are required to represent the data.
+
+This archetype has been designed to support clinical pathology and may not be appropriate for other kinds of pathology use.">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Sharmila Biswas, Dr Sharmila Biswas GP, Australia", "Doug Chesher, PaLMS, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Andre de Wolf, NeHTA, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia", "Grahame Grieve, Health Intersections Pyty Ltd, Australia (Editor)", "Sam Heard, Ocean Informatics, Australia", "Mary Kelaher, NEHTA, Australia", "Michael Legg, Michael Legg & associates, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Andrew McIntyre, Medical-Objects, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Michael Osborne, Mater Health Services, Australia", "Kyle Shore, Charm Health, Australia", "Michael Thompson, Queensland Health, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia">
+	other_details = <
+		["references"] = <"Pathology (Data Specifications) Version 1.0 [Internet]. Sydney, Australia: National E-Health Transition Authority; 2007 May 29 [cited 2011 Jul 11]; Available at http://www.nehta.gov.au/component/docman/doc_download/962-pathology-v10.
+
+Laboratory Technical Framework, Volume 3: Content, Revision 3.0 [Internet]. USA: IHE International; 2011 May 19; [cited 2011 Jul 11]. Available from: http://www.ihe.net/Technical_Framework/index.cfm#laboratory.">
+		["responsible_organisation"] = <"NEHTA CTI Team, National E-Health Transition Authority, clinicalinfo@nehta.gov.au">
+		["original_publisher"] = <"National E-Health Transition Authority, Australia">
+		["MD5-CAM-1.0.1"] = <"94BA5388DCDE3EF2E3DDB61238DE1B1B">
+	>
+
+definition
+	OBSERVATION[id1] matches {	-- Pathology Test Result
+		data matches {
+			HISTORY[id2] matches {
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[id3] matches {	-- Any event
+						data matches {
+							ITEM_TREE[id4] matches {
+								items cardinality matches {2..*; unordered} matches {
+									ELEMENT[id6] matches {	-- Test Result Name
+										value matches {
+											DV_TEXT[id112] 
+										}
+									}
+									ELEMENT[id78] occurrences matches {0..1} matches {	-- Diagnostic Service
+										value matches {
+											DV_TEXT[id113] 
+										}
+									}
+									allow_archetype CLUSTER[id66] matches {	-- Specimen Detail
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
+									}
+									ELEMENT[id74] matches {	-- Overall Test Result Status
+										value matches {
+											DV_CODED_TEXT[id114] matches {
+												defining_code matches {[ac1]}		-- Overall Test Result Status (synthesised)
+											}
+										}
+									}
+									ELEMENT[id100] occurrences matches {0..1} matches {	-- DateTime Result Issued
+										value matches {
+											DV_DATE_TIME[id115] 
+										}
+									}
+									ELEMENT[id101] occurrences matches {0..1} matches {	-- Clinical Information Provided
+										value matches {
+											DV_TEXT[id116] 
+										}
+									}
+									CLUSTER[id96] matches {	-- Result Group
+										name matches {
+											DV_TEXT[id117] 
+										}
+										items matches {
+											CLUSTER[id97] matches {	-- Result
+												name matches {
+													DV_TEXT[id118] 
+												}
+												items matches {
+													ELEMENT[id79] occurrences matches {0..1} 	-- Result Value
+													ELEMENT[id103] matches {	-- Result Comment
+														value matches {
+															DV_TEXT[id119] 
+														}
+													}
+													ELEMENT[id104] occurrences matches {0..1} matches {	-- Reference Range Guidance
+														value matches {
+															DV_TEXT[id120] 
+														}
+													}
+													ELEMENT[id109] occurrences matches {0..1} matches {	-- Result Value Status
+														value matches {
+															DV_CODED_TEXT[id121] matches {
+																defining_code matches {[ac2]}		-- Result Value Status (synthesised)
+															}
+														}
+													}
+												}
+											}
+											allow_archetype CLUSTER[id98] occurrences matches {0..1} matches {	-- Specimen Detail
+												include
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
+											}
+										}
+									}
+									ELEMENT[id58] occurrences matches {0..1} matches {	-- Conclusion
+										value matches {
+											DV_TEXT[id122] 
+										}
+									}
+									ELEMENT[id99] matches {	-- Pathological Diagnosis
+										value matches {
+											DV_TEXT[id123] 
+										}
+									}
+									ELEMENT[id11] matches {	-- Test Result Representation
+										value matches {
+											DV_MULTIMEDIA[id124] matches {
+												media_type matches {[ac3]}		-- Test Result Representation (synthesised)
+											}
+										}
+									}
+									ELEMENT[id102] occurrences matches {0..1} matches {	-- Test Comment
+										value matches {
+											DV_TEXT[id125] 
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[id5] matches {
+				items matches {
+					allow_archetype CLUSTER[id18] occurrences matches {0..1} matches {	-- Receiving Laboratory
+						include
+							archetype_id/value matches {/.*/}
+					}
+					CLUSTER[id95] matches {	-- Test Request Details
+						items matches {
+							ELEMENT[id63] occurrences matches {0..1} matches {	-- Requester Order Identifier
+								value matches {
+									DV_IDENTIFIER[id126] 
+								}
+							}
+							ELEMENT[id107] matches {	-- Test Requested Name
+								value matches {
+									DV_TEXT[id127] 
+								}
+							}
+							allow_archetype CLUSTER[id91] occurrences matches {0..1} matches {	-- Requester
+								include
+									archetype_id/value matches {/.*/}
+							}
+							allow_archetype CLUSTER[id36] matches {	-- Copied Provider
+								include
+									archetype_id/value matches {/.*/}
+							}
+							ELEMENT[id64] occurrences matches {0..1} matches {	-- Receiver Order Identifier
+								value matches {
+									DV_IDENTIFIER[id128] 
+								}
+							}
+							ELEMENT[id69] occurrences matches {0..1} matches {	-- Laboratory Test Result Identifier
+								value matches {
+									DV_IDENTIFIER[id129] 
+								}
+							}
+						}
+					}
+					allow_archetype CLUSTER[id111] matches {	-- Test Procedure
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Pathology Test Result">
+				description = <"The findings and interpretation of pathology tests performed on patient-related specimens.">
+			>
+			["id3"] = <
+				text = <"Any event">
+				description = <"Any event.">
+			>
+			["id6"] = <
+				text = <"Test Result Name">
+				description = <"Identification of the pathology test performed, sometimes including specimen type and patient state.">
+			>
+			["id78"] = <
+				text = <"Diagnostic Service">
+				description = <"The diagnostic service that performs the examination.">
+			>
+			["id66"] = <
+				text = <"Specimen Detail">
+				description = <"Details about the specimen if all individual test results are derived from the same specimen. If the specimen type is sufficiently specified with a code in the Test result name, then this additional data is not required.  If there are multiple specimens, these may be represented per 'Result group'.">
+			>
+			["id74"] = <
+				text = <"Overall Test Result Status">
+				description = <"The publication status of the entire pathology test result.">
+			>
+			["at108"] = <
+				text = <"Registered">
+				description = <"No result yet available.">
+			>
+			["at38"] = <
+				text = <"Interim">
+				description = <"This is an initial or interim result: data may be missing or verification not been performed.">
+			>
+			["at39"] = <
+				text = <"Final">
+				description = <"The result is complete and verified by the responsible pathologist.">
+			>
+			["at41"] = <
+				text = <"Amended">
+				description = <"The result has been modified subsequent to being Final, and is complete and verified by the responsible pathologist.">
+			>
+			["at75"] = <
+				text = <"Cancelled/Aborted">
+				description = <"The result is unavailable because the test was not started or not completed.">
+			>
+			["id101"] = <
+				text = <"Clinical Information Provided">
+				description = <"Description of clinical information available at the time of interpretation of results, which may include a link to the original clinical information provided in the test request.">
+			>
+			["id96"] = <
+				text = <"Result Group">
+				description = <"A group of results.">
+			>
+			["id97"] = <
+				text = <"Result">
+				description = <"Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation.">
+			>
+			["id79"] = <
+				text = <"Result Value">
+				description = <"Actual value of the result.">
+			>
+			["id103"] = <
+				text = <"Result Comment">
+				description = <"Comment about the Result.">
+			>
+			["id104"] = <
+				text = <"Reference Range Guidance">
+				description = <"Additional advice on the applicability of the reference range.">
+			>
+			["id109"] = <
+				text = <"Result Value Status">
+				description = <"The status of the result value.">
+			>
+			["id98"] = <
+				text = <"Specimen Detail">
+				description = <"Details about the individual specimen to which these ‘Result group’ test results refer, where testing of multiple specimens is required.">
+			>
+			["id99"] = <
+				text = <"Pathological Diagnosis">
+				description = <"Single word, phrase or brief description representing the narrative in the 'Conclusion'.">
+			>
+			["id58"] = <
+				text = <"Conclusion">
+				description = <"Concise and clinically contextualised narrative interpretation of the pathology test results.">
+			>
+			["id11"] = <
+				text = <"Test Result Representation">
+				description = <"Rich text representation of the entire result as issued by the diagnostic service.">
+			>
+			["id102"] = <
+				text = <"Test Comment">
+				description = <"Additional narrative about the test not captured in other fields.">
+			>
+			["id100"] = <
+				text = <"DateTime Result Issued">
+				description = <"The date and/or time that the entire result was issued for the recorded ‘Overall Test result status’.">
+			>
+			["id18"] = <
+				text = <"Receiving Laboratory">
+				description = <"Demographic details of the laboratory with responsibility for the pathology test.">
+			>
+			["id95"] = <
+				text = <"Test Request Details">
+				description = <"Details concerning a single pathology test requested.">
+			>
+			["id63"] = <
+				text = <"Requester Order Identifier">
+				description = <"The local ID assigned to the order by the order requester.">
+			>
+			["id107"] = <
+				text = <"Test Requested Name">
+				description = <"Identification of pathology test requested, where the test requested differs from the test actually performed.">
+			>
+			["id91"] = <
+				text = <"Requester">
+				description = <"Details of the clinician or organisation requesting the pathology test result.">
+			>
+			["id64"] = <
+				text = <"Receiver Order Identifier">
+				description = <"The local ID assigned to the test order by the order filler, usually by the Laboratory Information System (LIS).">
+			>
+			["id69"] = <
+				text = <"Laboratory Test Result Identifier">
+				description = <"The identifier given to the laboratory test result of a pathology investigation.">
+			>
+			["id111"] = <
+				text = <"Test Procedure">
+				description = <"Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
+			>
+			["id36"] = <
+				text = <"Copied Provider">
+				description = <"Details of the clinician or organisation who will receive a copy of the pathology test result.">
+			>
+			["at109"] = <
+				text = <"text/html">
+				description = <"text/html">
+			>
+			["at110"] = <
+				text = <"text/plain">
+				description = <"text/plain">
+			>
+			["at111"] = <
+				text = <"text/rtf">
+				description = <"text/rtf">
+			>
+			["at112"] = <
+				text = <"application/msword">
+				description = <"application/msword">
+			>
+			["at113"] = <
+				text = <"application/pdf">
+				description = <"application/pdf">
+			>
+			["at114"] = <
+				text = <"application/rtf">
+				description = <"application/rtf">
+			>
+			["at115"] = <
+				text = <"application/vnd.oasis.opendocument.text">
+				description = <"application/vnd.oasis.opendocument.text">
+			>
+			["at116"] = <
+				text = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+				description = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+			>
+			["ac1"] = <
+				text = <"Overall Test Result Status (synthesised)">
+				description = <"The publication status of the entire pathology test result. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Result Value Status (synthesised)">
+				description = <"The status of the result value. (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Test Result Representation (synthesised)">
+				description = <"Rich text representation of the entire result as issued by the diagnostic service. (synthesised)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at109"] = <http://openehr.org/id/417>
+			["at110"] = <http://openehr.org/id/418>
+			["at111"] = <http://openehr.org/id/419>
+			["at112"] = <http://openehr.org/id/517>
+			["at113"] = <http://openehr.org/id/518>
+			["at114"] = <http://openehr.org/id/519>
+			["at115"] = <http://openehr.org/id/682>
+			["at116"] = <http://openehr.org/id/683>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at108", "at38", "at39", "at41", "at75">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at108", "at38", "at39", "at41", "at75">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at109", "at110", "at111", "at112", "at113", "at114", "at115", "at116">
+		>
+	>
