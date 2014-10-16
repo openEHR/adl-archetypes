@@ -1,3 +1,5 @@
 *.stackdump
 *.gz
 *.tar
+
+*.adlf
