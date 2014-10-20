@@ -45,11 +45,11 @@ definition
 				item_type_version existence matches {1} 
 				creation_time existence matches {1} 
 				author existence matches {1} 
+				item matches {
+					use_archetype COMPOSITION[id104, openEHR-EHR-COMPOSITION.t_clinical_info_ds.v1] 
+					allow_archetype COMPOSITION[id104.1] closed 	-- Patient discharge data slot - closed
+				}
 			}
-		}
-		/chapters[id2]/items[id7]/item matches {
-			use_archetype COMPOSITION[id104, openEHR-EHR-COMPOSITION.t_clinical_info_ds.v1] 
-			allow_archetype COMPOSITION[id104.1] closed 	-- Patient discharge data slot - closed
 		}
 	}
 
