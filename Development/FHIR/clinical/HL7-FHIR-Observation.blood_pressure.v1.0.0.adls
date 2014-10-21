@@ -28,7 +28,7 @@ definition
 				target matches {
 					ResourceReference<Observation>[id0.4] matches {
 						resolvesTo matches {
-							use_archetype Observation[HL7-FHIR-Observation.blood_pressure_data.v1] occurrences matches {1} 
+							use_archetype Observation[id0.4, HL7-FHIR-Observation.blood_pressure_data.v1] occurrences matches {1} 
 						}
 					}
 				}
@@ -37,7 +37,7 @@ definition
 				target matches {
 					ResourceReference<Observation>[id0.5] matches {
 						resolvesTo matches {
-							use_archetype Observation[HL7-FHIR-Observation.blood_pressure_state.v1] occurrences matches {1} 
+							use_archetype Observation[id0.5, HL7-FHIR-Observation.blood_pressure_state.v1] occurrences matches {1} 
 						}
 					}
 				}
@@ -46,7 +46,7 @@ definition
 				target matches {
 					ResourceReference<Observation>[id0.6] matches {
 						resolvesTo matches {
-							use_archetype Observation[HL7-FHIR-Observation.blood_pressure_protocol.v1] occurrences matches {1} 
+							use_archetype Observation[id0.6, HL7-FHIR-Observation.blood_pressure_protocol.v1] occurrences matches {1} 
 						}
 					}
 				}

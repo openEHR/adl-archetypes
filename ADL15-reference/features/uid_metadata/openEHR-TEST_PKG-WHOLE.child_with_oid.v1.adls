@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; uid=2.4.34.666.7.2)
+archetype (adl_version=2.0.0; uid=2.4.34.666.7.2)
 	openehr-TEST_PKG-WHOLE.child_with_oid.v1.0.0
 
 specialize

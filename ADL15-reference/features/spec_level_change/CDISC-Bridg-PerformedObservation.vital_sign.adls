@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.0)
 	CDISC-Bridg-PerformedObservation.vital_sign.v1.0.0
 
 language
@@ -19,43 +19,43 @@ description
 			copyright = <"© 2014 CDISC.org">
 		>
 	>
-	lifecycle_state = <"Draft">
+	lifecycle_state = <"unmanaged">
 
 definition
-	PerformedObservation[id1] matches {
+	PerformedObservation[id1] matches {	-- vital sign BRIDG observation
 		instantiatedDefinedActivity matches {
 			DefinedObservation[id2] matches {
-				nameCode matches {[ac1]}
+				nameCode matches {[ac1]}		-- vital sign measurement type
 			}
 		}
 		instantiatedPlannedActivity matches {
 			PlannedActivity[id8] matches {
 				componentPlannedCompositionRelationship matches {
-					PlannedCompositionRelationship[id9] matches {
+					PlannedCompositionRelationship[id9] matches {	-- Encounter type
 						componentPlannedActivity matches {
-							PlannedSubjectActivityGroup[id10] occurrences matches {1}
- 						}
+							PlannedSubjectActivityGroup[id10] occurrences matches {1} 
+						}
 					}
 				}
 			}
 		}
 		resultedPerformedObservationResult matches {
-			PerformedObservationResult[id4]
-			PerformedObservationResult[id5] matches {
+			PerformedObservationResult[id4] 	-- Original value
+			PerformedObservationResult[id5] matches {	-- Original units
 				value matches {
-					ST[id12]
+					ST[id12] 
 				}
 			}
-			PerformedObservationResult[id6] matches {
-				baselineIndicator existence matches {1}
+			PerformedObservationResult[id6] matches {	-- Result value
+				baselineIndicator existence matches {1} 
 			}
 		}
-		bodyPositionCode matches {[ac2]}
-		approachAnatomicSiteCode matches {[ac3]}
-		dateRange existence matches {1}
+		bodyPositionCode matches {[ac2]}		-- vital sign measurement body positions
+		approachAnatomicSiteCode matches {[ac3]}		-- vital sign measurement body sites
+		dateRange existence matches {1} 
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
 			["id1"] = <
@@ -180,7 +180,6 @@ ontology
 			>
 		>
 	>
-
 	value_sets = <
 		["ac1"] = <
 			id = <"ac1">
@@ -197,7 +196,6 @@ ontology
 	>
 
 annotations
-
 	items = <
 		["en"] = <
 			items = <

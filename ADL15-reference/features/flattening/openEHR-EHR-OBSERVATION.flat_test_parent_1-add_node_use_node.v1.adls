@@ -1,8 +1,8 @@
-archetype (adl_version=1.5.1; generated)
-	openEHR-EHR-OBSERVATION.path_test-add_new.v1.0.0
+archetype (adl_version=1.5.1)
+	openEHR-EHR-OBSERVATION.flat_test_parent_1-add_node_use_node.v1.0.0
 
 specialize
-	openEHR-EHR-OBSERVATION.path_test.v1
+	openEHR-EHR-OBSERVATION.flat_test_parent_1.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -17,7 +17,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test flattening with add new node">
+			purpose = <"Flattening test: test differential path containing terminal attribute not in parent ('state'); test internal references to path in flat parent and path in current archetype.">
 		>
 	>
 	lifecycle_state = <"unmanaged">

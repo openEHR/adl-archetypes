@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1)
-	openEHR-EHR-OBSERVATION.rules_sum.v1
+archetype (adl_version=2.0.0)
+	openEHR-EHR-OBSERVATION.rules_sum.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -15,9 +15,10 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Test sum statement in rules section">
-			copyright = <"� 2011 openEHR Foundation">
+			copyright = <"© 2011 openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
@@ -25,24 +26,24 @@ description
 definition
 	OBSERVATION[id1] matches {	-- Apgar score
 		data matches {
-			HISTORY[id3] matches {	-- history
+			HISTORY[id3] matches {
 				events cardinality matches {1..*; unordered} matches {
 					POINT_EVENT[id4] occurrences matches {0..1} matches {	-- 1 minute
 						offset matches {
-							DV_DURATION[id38] matches {
-								value matches {|PT1M|}
+							DV_DURATION[id38] matches {	-- Any event
+								value matches {PT1M}
 							}
 						}
 						data matches {
-							ITEM_LIST[id2] matches {	-- structure
+							ITEM_LIST[id2] matches {
 								items cardinality matches {1..6; ordered} matches {
 									ELEMENT[id10] occurrences matches {0..1} matches {	-- Respiratory effort
 										value matches {
 											DV_ORDINAL[id39] matches {
 												[value, symbol] matches {
-													[{0}, {[local::at10]}], 	-- Absent
-													[{1}, {[local::at11]}], 	-- Weak or irregular
-													[{2}, {[local::at12]}]  	-- Normal
+													[{0}, {[at10]}],
+													[{1}, {[at11]}],
+													[{2}, {[at12]}]
 												}
 											}
 										}
@@ -51,9 +52,9 @@ definition
 										value matches {
 											DV_ORDINAL[id40] matches {
 												[value, symbol] matches {
-													[{0}, {[local::at6]}], 	-- Absent
-													[{1}, {[local::at7]}], 	-- <100 beats per minute
-													[{2}, {[local::at8]}]  	-- ≥100 beats per minute
+													[{0}, {[at6]}],
+													[{1}, {[at7]}],
+													[{2}, {[at8]}]
 												}
 											}
 										}
@@ -62,9 +63,9 @@ definition
 										value matches {
 											DV_ORDINAL[id41] matches {
 												[value, symbol] matches {
-													[{0}, {[local::at14]}], 	-- Limp or flaccid
-													[{1}, {[local::at15]}], 	-- Reduced tone
-													[{2}, {[local::at16]}]  	-- Normal tone
+													[{0}, {[at14]}],
+													[{1}, {[at15]}],
+													[{2}, {[at16]}]
 												}
 											}
 										}
@@ -73,9 +74,9 @@ definition
 										value matches {
 											DV_ORDINAL[id42] matches {
 												[value, symbol] matches {
-													[{0}, {[local::at18]}], 	-- No response
-													[{1}, {[local::at19]}], 	-- Reduced response
-													[{2}, {[local::at20]}]  	-- Normal response
+													[{0}, {[at18]}],
+													[{1}, {[at19]}],
+													[{2}, {[at20]}]
 												}
 											}
 										}
@@ -84,9 +85,9 @@ definition
 										value matches {
 											DV_ORDINAL[id43] matches {
 												[value, symbol] matches {
-													[{0}, {[local::at22]}], 	-- Completely blue
-													[{1}, {[local::at23]}], 	-- Body pink; extremities blue
-													[{2}, {[local::at24]}]  	-- Completely pink
+													[{0}, {[at22]}],
+													[{1}, {[at23]}],
+													[{2}, {[at24]}]
 												}
 											}
 										}
@@ -105,57 +106,57 @@ definition
 					POINT_EVENT[id27] occurrences matches {0..1} matches {	-- 2 minute
 						offset matches {
 							DV_DURATION[id45] matches {
-								value matches {|PT2M|}
+								value matches {PT2M}
 							}
 						}
 						data matches {
-							use_node ITEM_LIST[id46] /data[id3]/events[id4]/data[id2]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[id46] /data[id3]/events[id4]/data[id2]	-- /data[id3]/events[1 minute]/data[id2]
 						}
 					}
 					POINT_EVENT[id28] occurrences matches {0..1} matches {	-- 3 minute
 						offset matches {
 							DV_DURATION[id47] matches {
-								value matches {|PT3M|}
+								value matches {PT3M}
 							}
 						}
 						data matches {
-							use_node ITEM_LIST[id48] /data[id3]/events[id4]/data[id2]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[id48] /data[id3]/events[id4]/data[id2]	-- /data[id3]/events[1 minute]/data[id2]
 						}
 					}
 					POINT_EVENT[id29] occurrences matches {0..1} matches {	-- 5 minute
 						offset matches {
 							DV_DURATION[id49] matches {
-								value matches {|PT5M|}
+								value matches {PT5M}
 							}
 						}
 						data matches {
-							use_node ITEM_LIST[id50] /data[id3]/events[id4]/data[id2]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[id50] /data[id3]/events[id4]/data[id2]	-- /data[id3]/events[1 minute]/data[id2]
 						}
 					}
 					POINT_EVENT[id32] occurrences matches {0..1} matches {	-- 10 minute
 						offset matches {
 							DV_DURATION[id51] matches {
-								value matches {|PT10M|}
+								value matches {PT10M}
 							}
 						}
 						data matches {
-							use_node ITEM_LIST[id52] /data[id3]/events[id4]/data[id2]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[id52] /data[id3]/events[id4]/data[id2]	-- /data[id3]/events[1 minute]/data[id2]
 						}
 					}
 					EVENT[id38] occurrences matches {0..*} matches {	-- Any event
 						data matches {
-							use_node ITEM_LIST[id53] /data[id3]/events[id4]/data[id2]	-- /data[history]/events[1 minute]/data[structure]
+							use_node ITEM_LIST[id53] /data[id3]/events[id4]/data[id2]	-- /data[id3]/events[1 minute]/data[id2]
 						}
 					}
 				}
 			}
 		}
 		protocol matches {
-			ITEM_LIST[id30] matches {	-- List
+			ITEM_LIST[id30] matches {
 				items matches {
 					ELEMENT[id31] occurrences matches {0..1} matches {	-- Notes on measurement
 						value matches {
-							DV_TEXT[id54] matches {*}
+							DV_TEXT[id54] 
 						}
 					}
 				}
@@ -163,17 +164,10 @@ definition
 		}
 	}
 
-invariant
-	score_sum: 
-		/data[id3]/events[id4]/data[id2]/items[id26]/value[id44]/magnitude =
-		/data[id3]/events[id4]/data[id2]/items[id6]/value[id40]/value + 
-		/data[id3]/events[id4]/data[id2]/items[id10]/value[id39]/value +
-		/data[id3]/events[id4]/data[id2]/items[id14]/value[id41]/value + 
-		/data[id3]/events[id4]/data[id2]/items[id18]/value[id42]/value + 
-		/data[id3]/events[id4]/data[id2]/items[id22]/value[id43]/value
+rules
+	score_sum: /data[id3]/events[id4]/data[id2]/items[id26]/value[id44]/magnitude = /data[id3]/events[id4]/data[id2]/items[id6]/value[id40]/value + /data[id3]/events[id4]/data[id2]/items[id10]/value[id39]/value + /data[id3]/events[id4]/data[id2]/items[id14]/value[id41]/value + /data[id3]/events[id4]/data[id2]/items[id18]/value[id42]/value + /data[id3]/events[id4]/data[id2]/items[id22]/value[id43]/value
 
-
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
 			["id1"] = <
@@ -241,7 +235,7 @@ ontology
 				description = <"Heart rate less than 100 beats per minute.">
 			>
 			["at8"] = <
-				text = <"≥100 beats per minute">
+				text = <"â¥100 beats per minute">
 				description = <"Heart rate greater than or equal to 100 beats per minute.">
 			>
 			["at10"] = <
@@ -292,5 +286,47 @@ ontology
 				text = <"Completely pink">
 				description = <"Body and extremities are pink; no cyanosis.">
 			>
+			["ac1"] = <
+				text = <"Respiratory effort (synthesised)">
+				description = <"Observation of the infant's respiratory effort. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Heart Rate (synthesised)">
+				description = <"Recording of the infant's heart rate. (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Muscle tone (synthesised)">
+				description = <"Observation of the infant's muscle tone. (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Reflex irritability (synthesised)">
+				description = <"Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter. (synthesised)">
+			>
+			["ac5"] = <
+				text = <"Skin colour (synthesised)">
+				description = <"Observation of the skin colour of the infant. (synthesised)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at10", "at11", "at12">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at6", "at7", "at8">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at14", "at15", "at16">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at18", "at19", "at20">
+		>
+		["ac5"] = <
+			id = <"ac5">
+			members = <"at22", "at23", "at24">
 		>
 	>

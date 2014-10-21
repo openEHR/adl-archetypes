@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1)
+﻿archetype (adl_version=2.0.0)
 	CDISC-Bridg-PerformedObservation.vital_sign_hr.v1.0.0
 
 specialize
@@ -25,16 +25,16 @@ description
 	lifecycle_state = <"unmanaged">
 
 definition
-	PerformedObservation[id1.1] matches {
-		/instantiatedDefinedActivity[id2]/nameCode matches {[ac1.1]}
+	PerformedObservation[id1.1] matches {	-- Heart rate BRIDG observation
+		/instantiatedDefinedActivity[id2]/nameCode matches {[ac1.1]}		-- Heart rate measurement type
 		/resultedPerformedObservationResult[id6]/value matches {
-			PQ[id0.1]
+			PQ[id0.1] 
 		}
-		/bodyPositionCode matches {[ac2.1]}
-		/approachAnatomicSiteCode matches {[ac3.1]}
+		/bodyPositionCode matches {[ac2.1]}		-- Heart rate measurement position
+		/approachAnatomicSiteCode matches {[ac3.1]}		-- Heart rate measurement site
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
 			["id1.1"] = <
@@ -55,11 +55,10 @@ ontology
 			>
 		>
 	>
-
 	value_sets = <
 		["ac1.1"] = <
 			id = <"ac1.1">
-			members = <"at103">
+			members = <"at103", ...>
 		>
 		["ac2.1"] = <
 			id = <"ac2.1">

@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.0)
 	org.openehr::openEHR-EHR-OBSERVATION.full_id_1.v1.0.4
 
 language

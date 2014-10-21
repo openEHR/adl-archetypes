@@ -32,7 +32,7 @@ definition
 				target matches {
 					ResourceReference<Observation>[id0.4] matches {
 						resolvesTo matches {
-							use_archetype Observation[HL7-FHIR-Observation.blood_pressure_protocol_instrument.v1] 
+							use_archetype Observation[id0.2, HL7-FHIR-Observation.blood_pressure_protocol_instrument.v1] 
 						}
 					}
 				}

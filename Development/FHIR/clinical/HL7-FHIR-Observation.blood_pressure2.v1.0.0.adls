@@ -27,9 +27,9 @@ definition
 		bodySite existence matches {0} 
 		referenceRange existence matches {0} 
 		/contained matches {
-			use_archetype Observation[HL7-FHIR-Observation.blood_pressure_protocol2.v1] 
-			use_archetype Observation[HL7-FHIR-Observation.blood_pressure_state2.v1] 
-			use_archetype Observation[HL7-FHIR-Observation.blood_pressure_data2.v1] occurrences matches {1} 
+			use_archetype Observation[id14.1, HL7-FHIR-Observation.blood_pressure_protocol2.v1] 
+			use_archetype Observation[id14.2, HL7-FHIR-Observation.blood_pressure_state2.v1] 
+			use_archetype Observation[id14.3, HL7-FHIR-Observation.blood_pressure_data2.v1] occurrences matches {1} 
 		}
 		value existence matches {0} 
 		issued existence matches {0} 

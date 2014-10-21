@@ -1,7 +1,7 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.0)
 	openEHR-EHR-OBSERVATION.tuple_redefine_to_single.v1.0.0
 
-specialise
+specialize
 	openEHR-EHR-OBSERVATION.parent_for_tuple_redefine.v1
 
 language
@@ -22,11 +22,9 @@ description
 		>
 	>
 	lifecycle_state = <"unmanaged">
-		["regression"] = <"PASS">
-	>
 
 definition
-	OBSERVATION[id1.1] matches {	-- Intravascular pressure
+	OBSERVATION[id1.1] matches {	-- Intravascular pressure redefined
 		/data[id2]/events[id3]/data[id4]/items[id6]/value matches {
 			DV_QUANTITY[id42] matches {
 				[magnitude, units, precision] matches {

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1)
+﻿archetype (adl_version=2.0.0)
 	openEHR-EHR-SECTION.slot_include_any_exclude_non_any.v1.0.0
 
 language
@@ -17,7 +17,7 @@ description
 			purpose = <"Test slot with any include and non-any exclude">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>

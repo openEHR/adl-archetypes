@@ -1,8 +1,9 @@
-archetype (adl_version=1.5)
-	openehr-TEST_PKG-SOME_TYPE.dv_quantity_magnitude_type_conv.v1
+archetype (adl_version=2.0.0)
+	openehr-TEST_PKG-SOME_TYPE.dv_quantity_magnitude_type_conv.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
+
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
@@ -15,16 +16,16 @@ description
 			copyright = <"copyright (c) 2005 The openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"unstable">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	lifecycle_state = <"draft">
 
 definition
-	SOME_TYPE[at0000] matches {	-- root item
+	SOME_TYPE[id1] matches {	-- root item
 		clinical_quantity_attr_1 matches {
-			DV_QUANTITY matches {
-				property matches {[openehr::127]}
+			DV_QUANTITY[id2] matches {
+				property matches {[at1]}
 				[units, magnitude] matches {
 					[{"C"}, {|>=0|}],
 					[{"F"}, {|>=0|}]
@@ -33,14 +34,21 @@ definition
 		}
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					description = <"xxxx">
-					text = <"root item">
-				>
+			["id1"] = <
+				text = <"root item">
+				description = <"xxxx">
 			>
+			["at1"] = <
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at1"] = <http://openehr.org/id/127>
 		>
 	>

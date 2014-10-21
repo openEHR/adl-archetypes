@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.0)
 	openEHR-DEMOGRAPHIC-ORGANISATION.rm_same_cardinality.v1.0.0
 
 language
@@ -18,14 +18,14 @@ description
 			keywords = <"test", "RM checking">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
 
 definition
 	ORGANISATION[id1] matches {	-- An organisation
-		identities cardinality matches {0..*; ordered} matches {
+		identities matches {
 			PARTY_IDENTITY[id2] occurrences matches {1..*} 	-- A party identity
 		}
 	}

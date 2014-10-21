@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.0)
 	openEHR-EHR-OBSERVATION.apgar.v1.0.0
 
 language
@@ -149,7 +149,7 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_LIST[id30] matches {	-- List
+			ITEM_LIST[id30] matches {
 				items matches {
 					ELEMENT[id31] occurrences matches {0..1} matches {	-- Notes on measurement
 						value matches {
@@ -268,10 +268,6 @@ terminology
 				text = <"5 minute">
 				description = <"Apgar score 5 minutes after birth.">
 			>
-			["id30"] = <
-				text = <"List">
-				description = <"@ internal @">
-			>
 			["id31"] = <
 				text = <"Notes on measurement">
 				description = <"Notes on measurement of the Apgar score.">
@@ -284,5 +280,47 @@ terminology
 				text = <"Any event">
 				description = <"Apgar score at any additional time, as required.">
 			>
+			["ac1"] = <
+				text = <"Respiratory effort (synthesised)">
+				description = <"Observation of the infant's respiratory effort. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Heart Rate (synthesised)">
+				description = <"Recording of the infant's heart rate. (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Muscle tone (synthesised)">
+				description = <"Observation of the infant's muscle tone. (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Reflex irritability (synthesised)">
+				description = <"Observation of the response of the infant to an irritant stimulation, for example, suctioning the oropharynx and nares with a soft rubber catheter. (synthesised)">
+			>
+			["ac5"] = <
+				text = <"Skin colour (synthesised)">
+				description = <"Observation of the skin colour of the infant. (synthesised)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at11", "at12", "at13">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at7", "at8", "at9">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at15", "at16", "at17">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at19", "at20", "at21">
+		>
+		["ac5"] = <
+			id = <"ac5">
+			members = <"at23", "at24", "at25">
 		>
 	>

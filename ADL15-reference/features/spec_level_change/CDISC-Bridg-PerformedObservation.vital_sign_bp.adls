@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1)
+﻿archetype (adl_version=2.0.0)
 	CDISC-Bridg-PerformedObservation.vital_sign_bp.v1.0.0
 
 specialize
@@ -22,19 +22,19 @@ description
 			copyright = <"© 2014 CDISC.org">
 		>
 	>
-	lifecycle_state = <"Draft">
+	lifecycle_state = <"unmanaged">
 
 definition
-	PerformedObservation[id1.1] matches {
-		/instantiatedDefinedActivity[id2]/nameCode matches {[ac1.1]}
+	PerformedObservation[id1.1] matches {	-- Blood pressure BRIDG observation
+		/instantiatedDefinedActivity[id2]/nameCode matches {[ac1.1]}		-- BP measurement type
 		/resultedPerformedObservationResult[id6]/value matches {
-			PQ[id0.1]
+			PQ[id0.1] 
 		}
-		/bodyPositionCode matches {[ac2.1]}
-		/approachAnatomicSiteCode matches {[ac3.1]}
+		/bodyPositionCode matches {[ac2.1]}		-- BP measurement position
+		/approachAnatomicSiteCode matches {[ac3.1]}		-- BP measurement site
 	}
 
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
 			["id1.1"] = <
@@ -55,7 +55,6 @@ ontology
 			>
 		>
 	>
-
 	value_sets = <
 		["ac1.1"] = <
 			id = <"ac1.1">

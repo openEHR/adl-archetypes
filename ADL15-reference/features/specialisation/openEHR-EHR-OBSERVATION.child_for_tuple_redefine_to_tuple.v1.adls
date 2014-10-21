@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.0)
 	openEHR-EHR-OBSERVATION.child_for_tuple_redefine_to_tuple.v1.0.0
 
 specialize
@@ -43,5 +43,15 @@ terminology
 				text = <"Intravascular pressure redefined">
 				description = <"The pressure in a specific location, blood vessel or heart cavity, at a specific phase of the heart or an average over the heart cycle.">
 			>
+			["ac0.1"] = <
+				text = <"Intravascular pressure redefined (synthesised)">
+				description = <"The pressure in a specific location, blood vessel or heart cavity, at a specific phase of the heart or an average over the heart cycle. (synthesised)">
+			>
+		>
+	>
+	value_sets = <
+		["ac0.1"] = <
+			id = <"ac0.1">
+			members = <"at17", "at20", "at21">
 		>
 	>

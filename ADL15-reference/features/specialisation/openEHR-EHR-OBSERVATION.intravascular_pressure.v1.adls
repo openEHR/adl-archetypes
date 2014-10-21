@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.0; generated)
 	openEHR-EHR-OBSERVATION.intravascular_pressure.v1.0.0
 
 language
@@ -249,6 +249,10 @@ terminology
 				text = <"Relative pressure">
 				description = <"The pressure in relative terms.">
 			>
+			["ac3"] = <
+				text = <"Relative pressure (synthesised)">
+				description = <"The pressure in relative terms. (synthesised)">
+			>
 		>
 	>
 	term_bindings = <
@@ -264,6 +268,10 @@ terminology
 		>
 		["ac2"] = <
 			id = <"ac2">
+			members = <"at17", "at18", "at19", "at20", "at21">
+		>
+		["ac3"] = <
+			id = <"ac3">
 			members = <"at17", "at18", "at19", "at20", "at21">
 		>
 	>

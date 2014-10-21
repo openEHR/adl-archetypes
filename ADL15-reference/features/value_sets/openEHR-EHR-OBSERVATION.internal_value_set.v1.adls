@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.0)
 	openEHR-EHR-OBSERVATION.internal_value_set.v1.0.0
 
 language
@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
@@ -30,7 +30,7 @@ definition
 				events cardinality matches {1..*; unordered} matches {
 					EVENT[id7] occurrences matches {0..*} matches {	-- any event
 						state matches {
-							ITEM_TREE[id8] matches {	-- state structure
+							ITEM_TREE[id8] matches {
 								items matches {
 									ELEMENT[id9] occurrences matches {0..1} matches {	-- Position
 										value matches {
@@ -129,10 +129,6 @@ terminology
 			["id7"] = <
 				text = <"any event">
 				description = <"Default event">
-			>
-			["id8"] = <
-				text = <"state structure">
-				description = <"@ internal @">
 			>
 			["id9"] = <
 				text = <"Position">

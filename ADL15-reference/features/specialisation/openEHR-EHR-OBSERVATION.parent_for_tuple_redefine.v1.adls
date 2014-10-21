@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.0)
 	openEHR-EHR-OBSERVATION.parent_for_tuple_redefine.v1.0.0
 
 language
@@ -43,7 +43,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[id16] occurrences matches {0..1} matches {	-- Relative pressure
+									ELEMENT[id16] occurrences matches {0..1} matches {	-- Ordinal
 										value matches {
 											DV_ORDINAL[id43] matches {
 												[value, symbol] matches {
@@ -108,10 +108,20 @@ terminology
 				text = <"Pressure">
 				description = <"Pressure">
 			>
+			["ac1"] = <
+				text = <"Ordinal (synthesised)">
+				description = <"Ordinal value. (synthesised)">
+			>
 		>
 	>
 	term_bindings = <
 		["openehr"] = <
 			["at29"] = <http://openehr.org/id/125>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at17", "at18", "at19", "at20", "at21">
 		>
 	>

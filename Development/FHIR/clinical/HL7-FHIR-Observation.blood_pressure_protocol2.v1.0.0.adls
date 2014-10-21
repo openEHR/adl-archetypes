@@ -23,8 +23,8 @@ description
 
 definition
 	Observation[id1.1] matches {	-- BP protocol
-		contained matches {
-			use_archetype Observation[HL7-FHIR-Observation.blood_pressure_protocol_instrument.v1] 
+		/contained matches {
+			use_archetype Observation[id14, HL7-FHIR-Observation.blood_pressure_protocol_instrument.v1] 
 		}
 		identifier existence matches {0} 
 		extension existence matches {0} 

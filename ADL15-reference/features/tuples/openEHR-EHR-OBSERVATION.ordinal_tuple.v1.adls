@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.0)
 	openEHR-EHR-OBSERVATION.ordinal_tuple.v1.0.0
 
 language
@@ -83,11 +83,19 @@ terminology
 				text = <"Respiratory effort">
 				description = <"Observation of the infant's respiratory effort.">
 			>
+			["ac2"] = <
+				text = <"Respiratory effort (synthesised)">
+				description = <"Observation of the infant's respiratory effort. (synthesised)">
+			>
 		>
 	>
 	value_sets = <
 		["ac1"] = <
 			id = <"ac1">
+			members = <"at11", "at12", "at13">
+		>
+		["ac2"] = <
+			id = <"ac2">
 			members = <"at11", "at12", "at13">
 		>
 	>

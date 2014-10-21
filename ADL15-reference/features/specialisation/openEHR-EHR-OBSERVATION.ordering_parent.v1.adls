@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.0)
 	openEHR-EHR-OBSERVATION.ordering_parent.v1.0.0
 
 language
@@ -18,7 +18,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
@@ -155,7 +155,6 @@ This archetype also acts as the parent for specialisations appropriate for more 
 			>
 		>
 	>
-
 	value_sets = <
 		["ac1"] = <
 			id = <"ac1">

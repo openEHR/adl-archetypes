@@ -1,5 +1,5 @@
-archetype (adl_version=2.0.0; generated)
-	openEHR-EHR-CLUSTER.laboratory_test_panel.v1.0.0
+archetype (adl_version=2.0.0)
+	openEHR-EHR-CLUSTER.lab_test_panel.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -14,16 +14,13 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record laboratory test results as a single value or in a panel/battery format common to clinical pathology testing such as biochemistry, haematology and immunology.">
-			use = <"To record laboratory test results as a single value or in a panel/battery format common to clinical pathology testing such as biochemistry, haematology and immunology. Normally used in conjunction with a parent Laboratory Test Result (Observation) archetype.">
-			keywords = <"laboratory", "pathology", "panel", "battery">
-			misuse = <"Should not be used to record Anatomical pathology macroscopic/microscopic findings.">
-			copyright = <"">
+			purpose = <"Parent for flattening tests on lab-style archetypes">
+			copyright = <"(c) 2014 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"2D727347D3FCCC466CADC619EB0908DD">
+		["regression"] = <"PASS">
 	>
 
 definition

@@ -1,5 +1,5 @@
 archetype (adl_version=1.5.1)
-	openEHR-EHR-OBSERVATION.path_test.v1.0.0
+	openEHR-EHR-OBSERVATION.flat_test_parent_1.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -14,7 +14,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test flattening with new subtree">
+			purpose = <"Parent of archetypes for flattening tests">
 			copyright = <"© openEHR Foundation">
 		>
 	>

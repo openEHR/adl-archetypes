@@ -14,7 +14,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"This is a generic archetype used to record details of the use of any and all substances. ">
+			purpose = <"Overwrite parent 'matches-any' node (id13) with 2 child nodes.">
 			copyright = <"© openEHR Foundation">
 		>
 	>

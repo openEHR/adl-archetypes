@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.0)
 	openEHR-EHR-EVALUATION.spec_test_eval1.v1.0.0
 
 language
@@ -22,9 +22,9 @@ description
 	>
 
 definition
-	EVALUATION[id1] matches {	-- Observation
+	EVALUATION[id1] matches {	-- Evaluation
 		data matches {
-			ITEM_TREE[id2] occurrences matches {1}
+			ITEM_TREE[id2] occurrences matches {1} 
 		}
 	}
 

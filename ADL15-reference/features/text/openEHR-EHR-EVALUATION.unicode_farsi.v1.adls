@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1)
+﻿archetype (adl_version=2.0.0)
 	openEHR-EHR-EVALUATION.unicode_farsi.v1.0.0
 
 language
@@ -375,6 +375,10 @@ terminology
 				text = <"Severity">
 				description = <"The severity of the condition for this relative">
 			>
+			["ac6"] = <
+				text = <"Severity (synthesised)">
+				description = <"The severity of the condition for this relative (synthesised)">
+			>
 		>
 		["fa"] = <
 			["id102"] = <
@@ -557,6 +561,10 @@ terminology
 				text = <"*Severity(en)">
 				description = <"*The severity of the condition for this relative(en)">
 			>
+			["ac6"] = <
+				text = <"شدت (synthesised)">
+				description = <"شدت شرایط این اقوام (synthesised)">
+			>
 		>
 	>
 	term_bindings = <
@@ -580,6 +588,10 @@ terminology
 		>
 		["ac5"] = <
 			id = <"ac5">
+			members = <"at110", "at111", "at112">
+		>
+		["ac6"] = <
+			id = <"ac6">
 			members = <"at110", "at111", "at112">
 		>
 	>

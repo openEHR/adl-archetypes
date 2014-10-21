@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.0)
 	openEHR-EHR-EVALUATION.mixed_types.v1.0.0
 
 language
@@ -18,7 +18,7 @@ description
 			copyright = <"copyright (c) 2010 The openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"unstable">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>

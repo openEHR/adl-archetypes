@@ -32,7 +32,7 @@ definition
 				target matches {
 					ResourceReference<Observation>[id0.4] matches {
 						resolvesTo matches {
-							use_archetype Observation[HL7-FHIR-Observation.blood_pressure_data_systolic.v1] 
+							use_archetype Observation[id0.3, HL7-FHIR-Observation.blood_pressure_data_systolic.v1] 
 						}
 					}
 				}
@@ -41,7 +41,7 @@ definition
 				target matches {
 					ResourceReference<Observation>[id0.5] matches {
 						resolvesTo matches {
-							use_archetype Observation[HL7-FHIR-Observation.blood_pressure_data_diastolic.v1] 
+							use_archetype Observation[id0.4, HL7-FHIR-Observation.blood_pressure_data_diastolic.v1] 
 						}
 					}
 				}
