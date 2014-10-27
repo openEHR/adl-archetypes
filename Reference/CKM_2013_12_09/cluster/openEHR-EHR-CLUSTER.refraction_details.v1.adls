@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-CLUSTER.refraction_details.v1.0.0
 
 language
@@ -197,14 +197,14 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id5"] = <http://snomedct.info/id/251795007>
-			["id6"] = <http://snomedct.info/id/251797004>
-			["id7"] = <http://snomedct.info/id/251799001>
-			["id8"] = <http://snomedct.info/id/251762001>
-			["id9"] = <http://snomedct.info/id/246223004>
-			["id15"] = <http://snomedct.info/id/397282003>
-			["id16"] = <http://snomedct.info/id/251802005>
-			["id17"] = <http://snomedct.info/id/397258008>
+			["id5"] = <http://snomed.info/id/251795007>
+			["id6"] = <http://snomed.info/id/251797004>
+			["id7"] = <http://snomed.info/id/251799001>
+			["id8"] = <http://snomed.info/id/251762001>
+			["id9"] = <http://snomed.info/id/246223004>
+			["id15"] = <http://snomed.info/id/397282003>
+			["id16"] = <http://snomed.info/id/251802005>
+			["id17"] = <http://snomed.info/id/397258008>
 		>
 		["openehr"] = <
 			["at15"] = <http://openehr.org/id/685>

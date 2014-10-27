@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-OBSERVATION.body_mass_index.v1.0.0
 
 language
@@ -477,7 +477,7 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id5"] = <http://snomedct.info/id/60621009>
+			["id5"] = <http://snomed.info/id/60621009>
 		>
 		["LOINC"] = <
 			["id5"] = <http://loinc.org/id/39156-5>

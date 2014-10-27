@@ -530,12 +530,12 @@ terminology
 				description = <"The test was performed without visual aid.">
 			>
 			["at141"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Qualified real">
+				description = <"Qualified real">
 			>
 			["at142"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Length">
+				description = <"Length">
 			>
 			["ac1"] = <
 				text = <"Test Name (synthesised)">

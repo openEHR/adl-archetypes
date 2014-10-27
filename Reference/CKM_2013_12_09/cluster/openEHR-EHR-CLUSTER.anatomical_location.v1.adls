@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-CLUSTER.anatomical_location.v1.0.0
 
 language
@@ -349,9 +349,9 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id3"] = <http://snomedct.info/id/272741003>
-			["at4"] = <http://snomedct.info/id/419161000>
-			["at5"] = <http://snomedct.info/id/419465000>
+			["id3"] = <http://snomed.info/id/272741003>
+			["at4"] = <http://snomed.info/id/419161000>
+			["at5"] = <http://snomed.info/id/419465000>
 		>
 		["openehr"] = <
 			["at53"] = <http://openehr.org/id/122>

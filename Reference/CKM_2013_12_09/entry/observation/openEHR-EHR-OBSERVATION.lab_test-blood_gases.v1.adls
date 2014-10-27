@@ -236,12 +236,12 @@ terminology
 				description = <"The relative excess of alkaline.">
 			>
 			["at0.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Pressure">
+				description = <"Pressure">
 			>
 			["at0.2"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Concentration">
+				description = <"Concentration">
 			>
 		>
 		["es-ar"] = <
@@ -302,12 +302,12 @@ terminology
 				description = <"El exceso de base relativo.">
 			>
 			["at0.1"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
+				text = <"*Pressure (en)">
+				description = <"*Pressure (en)">
 			>
 			["at0.2"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
+				text = <"*Concentration (en)">
+				description = <"*Concentration (en)">
 			>
 		>
 	>

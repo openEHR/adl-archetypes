@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-OBSERVATION.nyha_heart_failure_score.v1.0.0
 
 language
@@ -145,12 +145,12 @@ terminology
 	>
 	term_bindings = <
 		["Snomed"] = <
-			["id1"] = <http://Snomed.org/id/420816009>
-			["id5"] = <http://Snomed.org/id/420816009>
-			["at6"] = <http://Snomed.org/id/420300004>
-			["at7"] = <http://Snomed.org/id/421704003>
-			["at8"] = <http://Snomed.org/id/420913000>
-			["at9"] = <http://Snomed.org/id/421704003>
+			["id1"] = <http://snomed.info/id/420816009>
+			["id5"] = <http://snomed.info/id/420816009>
+			["at6"] = <http://snomed.info/id/420300004>
+			["at7"] = <http://snomed.info/id/421704003>
+			["at8"] = <http://snomed.info/id/420913000>
+			["at9"] = <http://snomed.info/id/421704003>
 		>
 		["openehr"] = <
 			["at10"] = <http://openehr.org/id/253>

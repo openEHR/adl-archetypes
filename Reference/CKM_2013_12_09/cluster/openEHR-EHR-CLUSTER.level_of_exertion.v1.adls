@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-CLUSTER.level_of_exertion.v1.0.0
 
 language
@@ -218,10 +218,10 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["at7"] = <http://snomedct.info/id/128975004>
-			["at8"] = <http://snomedct.info/id/128976003>
-			["at9"] = <http://snomedct.info/id/128978002>
-			["id11"] = <http://snomedct.info/id/251894003>
+			["at7"] = <http://snomed.info/id/128975004>
+			["at8"] = <http://snomed.info/id/128976003>
+			["at9"] = <http://snomed.info/id/128978002>
+			["id11"] = <http://snomed.info/id/251894003>
 		>
 		["openehr"] = <
 			["at17"] = <http://openehr.org/id/130>

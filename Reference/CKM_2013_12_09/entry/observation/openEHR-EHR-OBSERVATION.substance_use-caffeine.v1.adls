@@ -126,12 +126,12 @@ terminology
 				description = <"Consumption of caffeine-containing soft drink by volume">
 			>
 			["at0.25"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Frequency">
+				description = <"Frequency">
 			>
 			["at0.26"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Flow rate, volume">
+				description = <"Flow rate, volume">
 			>
 			["ac0.1"] = <
 				text = <"Form (synthesised)">

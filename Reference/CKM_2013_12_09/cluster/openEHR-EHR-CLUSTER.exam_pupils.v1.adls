@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-CLUSTER.exam_pupils.v1.0.0
 
 language
@@ -962,10 +962,10 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id3"] = <http://snomedct.info/id/363953003>
-			["id4"] = <http://snomedct.info/id/113147002>
-			["id21"] = <http://snomedct.info/id/363953003>
-			["id72"] = <http://snomedct.info/id/363955005>
+			["id3"] = <http://snomed.info/id/363953003>
+			["id4"] = <http://snomed.info/id/113147002>
+			["id21"] = <http://snomed.info/id/363953003>
+			["id72"] = <http://snomed.info/id/363955005>
 		>
 		["openehr"] = <
 			["at75"] = <http://openehr.org/id/122>

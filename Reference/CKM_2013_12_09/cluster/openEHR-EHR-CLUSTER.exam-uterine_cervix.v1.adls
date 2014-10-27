@@ -327,8 +327,8 @@ terminology
 				description = <"Clinical findings.">
 			>
 			["at0.48"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Length">
+				description = <"Length">
 			>
 			["ac0.1"] = <
 				text = <"Position (synthesised)">
@@ -525,8 +525,8 @@ terminology
 				description = <"*Clinical findings.(en)">
 			>
 			["at0.48"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
+				text = <"*Length (en)">
+				description = <"*Length (en)">
 			>
 			["ac0.1"] = <
 				text = <"Posición (synthesised)">

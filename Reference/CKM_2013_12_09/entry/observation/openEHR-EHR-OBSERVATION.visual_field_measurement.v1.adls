@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-OBSERVATION.visual_field_measurement.v1.0.0
 
 language
@@ -362,13 +362,13 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["at17"] = <http://snomedct.info/id/252806005>
-			["at18"] = <http://snomedct.info/id/392017002>
-			["id28"] = <http://snomedct.info/id/423083007>
-			["id35"] = <http://snomedct.info/id/422859007>
-			["id36"] = <http://snomedct.info/id/421362004>
-			["id38"] = <http://snomedct.info/id/421140005>
-			["at41"] = <http://snomedct.info/id/392132006>
+			["at17"] = <http://snomed.info/id/252806005>
+			["at18"] = <http://snomed.info/id/392017002>
+			["id28"] = <http://snomed.info/id/423083007>
+			["id35"] = <http://snomed.info/id/422859007>
+			["id36"] = <http://snomed.info/id/421362004>
+			["id38"] = <http://snomed.info/id/421140005>
+			["at41"] = <http://snomed.info/id/392132006>
 		>
 		["openehr"] = <
 			["at42"] = <http://openehr.org/id/123>

@@ -192,8 +192,8 @@ terminology
 				description = <"A recording about a poisoning or overdose.">
 			>
 			["at0.23"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Mass">
+				description = <"Mass">
 			>
 			["ac0.1"] = <
 				text = <"Route (synthesised)">
@@ -238,8 +238,8 @@ terminology
 				description = <"Un registro acerca de envenenamiento o sobredosis o intoxicación">
 			>
 			["at0.23"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
+				text = <"*Mass (en)">
+				description = <"*Mass (en)">
 			>
 			["ac0.1"] = <
 				text = <"Ruta (synthesised)">
@@ -284,8 +284,8 @@ terminology
 				description = <"تسجيل حول التسمم أو فرط الجرعة">
 			>
 			["at0.23"] = <
-				text = <"*(added by post-parse processor)(en)">
-				description = <"*(added by post-parse processor)(en)">
+				text = <"*Mass (en)">
+				description = <"*Mass (en)">
 			>
 			["ac0.1"] = <
 				text = <"الطريق (synthesised)">
