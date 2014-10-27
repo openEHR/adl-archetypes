@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-CLUSTER.microscopy_prostate_carcinoma.v1.0.0
 
 language
@@ -660,10 +660,10 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id167"] = <http://snomedct.info/id/384994009>
-			["id183"] = <http://snomedct.info/id/384995005>
-			["id184"] = <http://snomedct.info/id/385002007>
-			["id198"] = <http://snomedct.info/id/372278000>
+			["id167"] = <http://snomed.info/id/384994009>
+			["id183"] = <http://snomed.info/id/384995005>
+			["id184"] = <http://snomed.info/id/385002007>
+			["id198"] = <http://snomed.info/id/372278000>
 		>
 	>
 	value_sets = <

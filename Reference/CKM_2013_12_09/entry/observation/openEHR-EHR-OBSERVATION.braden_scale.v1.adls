@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-OBSERVATION.braden_scale.v1.0.0
 
 language
@@ -347,7 +347,7 @@ terminology
 	>
 	term_bindings = <
 		["Snomed"] = <
-			["id23"] = <http://Snomed.org/id/443428004>
+			["id23"] = <http://snomed.info/id/443428004>
 		>
 		["LOINC"] = <
 			["id5"] = <http://loinc.org/id/38222-6>

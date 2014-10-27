@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-OBSERVATION.ccs_angina_status.v1.0.0
 
 language
@@ -105,12 +105,12 @@ terminology
 	>
 	term_bindings = <
 		["Snomed"] = <
-			["id1"] = <http://Snomed.org/id/134438001>
-			["id5"] = <http://Snomed.org/id/134438001>
-			["at7"] = <http://Snomed.org/id/61490001>
-			["at8"] = <http://Snomed.org/id/41334000>
-			["at9"] = <http://Snomed.org/id/85284003>
-			["at10"] = <http://Snomed.org/id/89323001>
+			["id1"] = <http://snomed.info/id/134438001>
+			["id5"] = <http://snomed.info/id/134438001>
+			["at7"] = <http://snomed.info/id/61490001>
+			["at8"] = <http://snomed.info/id/41334000>
+			["at9"] = <http://snomed.info/id/85284003>
+			["at10"] = <http://snomed.info/id/89323001>
 		>
 	>
 	value_sets = <

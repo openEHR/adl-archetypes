@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-CLUSTER.free_text.v1.0.0
 
 language

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-CLUSTER.symptom.v1.0.0
 
 language
@@ -1163,27 +1163,27 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id1"] = <http://snomedct.info/id/19019007>
-			["id2"] = <http://snomedct.info/id/19019007>
-			["id3"] = <http://snomedct.info/id/162408000>
-			["id15"] = <http://snomedct.info/id/57465006>
-			["id16"] = <http://snomedct.info/id/57465006>
-			["id17"] = <http://snomedct.info/id/68027008>
-			["id22"] = <http://snomedct.info/id/162465004>
-			["at24"] = <http://snomedct.info/id/162468002>
-			["at25"] = <http://snomedct.info/id/162469005>
-			["at26"] = <http://snomedct.info/id/162470006>
-			["id27"] = <http://snomedct.info/id/273903006>
-			["id29"] = <http://snomedct.info/id/162442009>
-			["id34"] = <http://snomedct.info/id/260908002>
-			["at39"] = <http://snomedct.info/id/385633008>
-			["at40"] = <http://snomedct.info/id/260371004>
-			["at41"] = <http://snomedct.info/id/58158008>
-			["at42"] = <http://snomedct.info/id/260369004>
-			["at43"] = <http://snomedct.info/id/230993007>
-			["at44"] = <http://snomedct.info/id/370996005>
-			["at45"] = <http://snomedct.info/id/162466003>
-			["at46"] = <http://snomedct.info/id/162471005>
+			["id1"] = <http://snomed.info/id/19019007>
+			["id2"] = <http://snomed.info/id/19019007>
+			["id3"] = <http://snomed.info/id/162408000>
+			["id15"] = <http://snomed.info/id/57465006>
+			["id16"] = <http://snomed.info/id/57465006>
+			["id17"] = <http://snomed.info/id/68027008>
+			["id22"] = <http://snomed.info/id/162465004>
+			["at24"] = <http://snomed.info/id/162468002>
+			["at25"] = <http://snomed.info/id/162469005>
+			["at26"] = <http://snomed.info/id/162470006>
+			["id27"] = <http://snomed.info/id/273903006>
+			["id29"] = <http://snomed.info/id/162442009>
+			["id34"] = <http://snomed.info/id/260908002>
+			["at39"] = <http://snomed.info/id/385633008>
+			["at40"] = <http://snomed.info/id/260371004>
+			["at41"] = <http://snomed.info/id/58158008>
+			["at42"] = <http://snomed.info/id/260369004>
+			["at43"] = <http://snomed.info/id/230993007>
+			["at44"] = <http://snomed.info/id/370996005>
+			["at45"] = <http://snomed.info/id/162466003>
+			["at46"] = <http://snomed.info/id/162471005>
 		>
 	>
 	value_sets = <

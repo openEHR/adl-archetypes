@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-OBSERVATION.refraction.v1.0.0
 
 language
@@ -217,14 +217,14 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id1"] = <http://snomedct.info/id/252886007>
-			["id40"] = <http://snomedct.info/id/117364006>
-			["id41"] = <http://snomedct.info/id/117364006>
-			["id55"] = <http://snomedct.info/id/366060000>
-			["id67"] = <http://snomedct.info/id/366060000>
-			["at72"] = <http://snomedct.info/id/50121007>
-			["at73"] = <http://snomedct.info/id/57368009>
-			["at76"] = <http://snomedct.info/id/397524001>
+			["id1"] = <http://snomed.info/id/252886007>
+			["id40"] = <http://snomed.info/id/117364006>
+			["id41"] = <http://snomed.info/id/117364006>
+			["id55"] = <http://snomed.info/id/366060000>
+			["id67"] = <http://snomed.info/id/366060000>
+			["at72"] = <http://snomed.info/id/50121007>
+			["at73"] = <http://snomed.info/id/57368009>
+			["at76"] = <http://snomed.info/id/397524001>
 		>
 	>
 	value_sets = <
