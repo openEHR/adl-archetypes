@@ -29,9 +29,9 @@ description
 definition
 	CLUSTER[id1.1] matches {	-- Lipid studies panel
 		/items matches {
-			CLUSTER[id3.4] matches {	-- LDL
+			CLUSTER[id3.1] matches {	-- LDL
 				items matches {
-					ELEMENT[id2.4] matches {	-- LDL
+					ELEMENT[id2.1] matches {	-- LDL
 						value matches {
 							DV_QUANTITY[id0.1] matches {
 								property matches {[at0.1]}
@@ -42,9 +42,9 @@ definition
 					}
 				}
 			}
-			CLUSTER[id3.5] matches {	-- HDL
+			CLUSTER[id3.2] matches {	-- HDL
 				items matches {
-					ELEMENT[id2.4] matches {	-- LDL
+					ELEMENT[id2.2] matches {	-- LDL
 						value matches {
 							DV_QUANTITY[id0.2] matches {
 								property matches {[at0.1]}
@@ -55,9 +55,9 @@ definition
 					}
 				}
 			}
-			CLUSTER[id3.1] matches {	-- Cholesterol Result
+			CLUSTER[id3.3] matches {	-- Cholesterol Result
 				items matches {
-					ELEMENT[id2.1] matches {	-- Cholesterol
+					ELEMENT[id2.3] matches {	-- Cholesterol
 						value matches {
 							DV_QUANTITY[id0.3] matches {
 								property matches {[at0.1]}
@@ -68,9 +68,9 @@ definition
 					}
 				}
 			}
-			CLUSTER[id3.2] matches {	-- Triglyceride Result
+			CLUSTER[id3.4] matches {	-- Triglyceride Result
 				items matches {
-					ELEMENT[id2.2] matches {	-- Triglyceride
+					ELEMENT[id2.4] matches {	-- Triglyceride
 						value matches {
 							DV_QUANTITY[id0.4] matches {
 								property matches {[at0.1]}
@@ -81,9 +81,9 @@ definition
 					}
 				}
 			}
-			CLUSTER[id3.3] matches {	-- LDL Cholesterol Result
+			CLUSTER[id3.5] matches {	-- LDL Cholesterol Result
 				items matches {
-					ELEMENT[id2.3] matches {	-- LDL Cholesterol
+					ELEMENT[id2.5] matches {	-- LDL Cholesterol
 						value matches {
 							DV_QUANTITY[id0.5] matches {
 								property matches {[at0.1]}
@@ -106,39 +106,43 @@ terminology
 				description = <"Laboratory test results as a single value or in a panel/battery format common to clinical pathology testing.!">
 			>
 			["id2.1"] = <
-				text = <"Cholesterol">
-				description = <"Actual value of the result.">
-			>
-			["id2.2"] = <
-				text = <"Triglyceride">
-				description = <"Actual value of the result.">
-			>
-			["id2.3"] = <
 				text = <"LDL Cholesterol">
 				description = <"Actual value of the result.">
 			>
+			["id2.2"] = <
+				text = <"HDL Cholesterol">
+				description = <"Actual value of the result.">
+			>
+			["id2.3"] = <
+				text = <"Ratio">
+				description = <"Actual value of the result.">
+			>
 			["id2.4"] = <
-				text = <"LDL">
+				text = <"Triglyceride">
+				description = <"Actual value of the result.">
+			>
+			["id2.5"] = <
+				text = <"Total cholesterol">
 				description = <"Actual value of the result.">
 			>
 			["id3.1"] = <
-				text = <"Cholesterol Result">
-				description = <"Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation.">
-			>
-			["id3.2"] = <
-				text = <"Triglyceride Result">
-				description = <"Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation.">
-			>
-			["id3.3"] = <
 				text = <"LDL Cholesterol Result">
 				description = <"Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation.">
 			>
+			["id3.2"] = <
+				text = <"HDL Cholesterol Result">
+				description = <"Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation.">
+			>
+			["id3.3"] = <
+				text = <"Ratio Result">
+				description = <"Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation.">
+			>
 			["id3.4"] = <
-				text = <"LDL">
+				text = <"Triglyceride Result">
 				description = <"Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation.">
 			>
 			["id3.5"] = <
-				text = <"HDL">
+				text = <"Total Result">
 				description = <"Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation.">
 			>
 			["id3.6"] = <
