@@ -1,4 +1,4 @@
-﻿template (adl_version=1.5.1)
+template (adl_version=1.5.1)
 	openEHR-EHR_EXTRACT-EXTRACT.t_basic_discharge_summary.v1.0.0
 
 specialize
@@ -26,16 +26,16 @@ description
 definition
 	EXTRACT[id1.1] matches {	-- Discharge summary
 		/chapters[id3]/items[id4]/item matches {
-			use_archetype PERSON[id101, openEHR-DEMOGRAPHIC-PERSON.t_patient_ds.v1] 
-			allow_archetype PERSON[id101.1] closed 	-- Patient demographics slot - closed
+			use_archetype PERSON[id101.1, openEHR-DEMOGRAPHIC-PERSON.t_patient_ds.v1] 
+			allow_archetype PERSON[id101] closed 	-- Patient demographics slot - closed
 		}
 		/chapters[id3]/items[id5]/item matches {
-			use_archetype ORGANISATION[id102, openEHR-DEMOGRAPHIC-ORGANISATION.healthcare_establishment.v1] 
-			allow_archetype ORGANISATION[id102.1] closed 	-- Healthcare establishment demographics slot - closed
+			use_archetype ORGANISATION[id102.1, openEHR-DEMOGRAPHIC-ORGANISATION.healthcare_establishment.v1] 
+			allow_archetype ORGANISATION[id102] closed 	-- Healthcare establishment demographics slot - closed
 		}
 		/chapters[id3]/items[id6]/item matches {
-			use_archetype PERSON[id103, openEHR-DEMOGRAPHIC-PERSON.healthcare_professional.v1] 
-			allow_archetype PERSON[id103.1] closed 	-- Healthcare individual provider demographics slot - closed
+			use_archetype PERSON[id103.1, openEHR-DEMOGRAPHIC-PERSON.healthcare_professional.v1] 
+			allow_archetype PERSON[id103] closed 	-- Healthcare individual provider demographics slot - closed
 		}
 		/chapters[id2]/items matches {
 			GENERIC_CONTENT_ITEM[id7.1] matches {	-- Clinical data
@@ -46,8 +46,8 @@ definition
 				creation_time existence matches {1} 
 				author existence matches {1} 
 				item matches {
-					use_archetype COMPOSITION[id104, openEHR-EHR-COMPOSITION.t_clinical_info_ds.v1] 
-					allow_archetype COMPOSITION[id104.1] closed 	-- Patient discharge data slot - closed
+					use_archetype COMPOSITION[id104.1, openEHR-EHR-COMPOSITION.t_clinical_info_ds.v1] 
+					allow_archetype COMPOSITION[id104] closed 	-- Patient discharge data slot - closed
 				}
 			}
 		}
@@ -63,22 +63,6 @@ terminology
 			["id7.1"] = <
 				text = <"Clinical data">
 				description = <"Clinical discharge data for patient">
-			>
-			["id101.1"] = <
-				text = <"Patient demographics slot - closed">
-				description = <"Patient demographics slot - closed">
-			>
-			["id102.1"] = <
-				text = <"Healthcare establishment demographics slot - closed">
-				description = <"Healthcare establishment demographics slot - closed">
-			>
-			["id103.1"] = <
-				text = <"Healthcare individual provider demographics slot - closed">
-				description = <"Healthcare individual provider demographics slot - closed">
-			>
-			["id104.1"] = <
-				text = <"Patient discharge data slot - closed">
-				description = <"Patient discharge data slot - closed">
 			>
 		>
 	>

@@ -27,7 +27,7 @@ definition
 		items cardinality matches {1..*; unordered} matches {
 			allow_archetype OBSERVATION[id2] occurrences matches {0..1} matches {	-- Vital signs
 				include
-					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.body_temperature(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.heart_rate(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.indirect_oximetry(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.respiration(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure([a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.body_temperature([a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.heart_rate([a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.indirect_oximetry([a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.respiration([a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
