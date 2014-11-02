@@ -1,0 +1,74 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-EVALUATION.exclusion-problem_diagnosis.v1.0.0
+
+specialize
+	openEHR-EHR-EVALUATION.exclusion.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2010-03-02">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record positive statement/s about the absence or exclusion of problems or diagnoses within the health record at a specific point in time.">
+			use = <"Use to record positive statement/s about the absence or exclusion of problems or diagnoses within the health record at a specific point in time. For example: to record that the subject has not ever had any significant problems or diagnoses; or that the subject has never been diagnosed with diabetes.
+
+This detailed clinical model (DCM) has specifically been designed to avoid the need to use flags or terminology to express negation about any problems or diagnoses within the health record. 
+
+Exclusion statements can only be considered to be current and accurate at the time of recording.  For example: recording an exclusion of the previous diagnosis of diabetes during a consultation is only relevant at the time and is effectively obsolete after if the results of a blood glucose test is above diagnostic levels.">
+			keywords = <"exclusion", "problem", "diagnosis">
+			misuse = <"Not to be used to record exclusion statements about adverse reactions, medications, family history or procedures - use other specific specialisations of the EVALUATION.exclusion archetype for these purposes.">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia", "Stephen Chu, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Exclusion Statement - Problems and Diagnoses, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 02 Mar 2010. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.620_1 (accessed 31 July 2013).">
+		["MD5-CAM-1.0.1"] = <"4870E682932FE7CB2245F3A64ADD60D4">
+	>
+
+definition
+	EVALUATION[id1.1] matches {	-- Exclusion of a Problem/Diagnosis
+		/data[id2]/items matches {
+			ELEMENT[id3.1] 	-- Exclusion Statement
+			ELEMENT[id4.1] occurrences matches {0..1} matches {	-- Problem/Diagnosis
+				value matches {
+					DV_CODED_TEXT[id6.1] matches {
+						defining_code matches {[ac0.1]}		-- Problem or Diagnosis
+					}
+					DV_TEXT[id6] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Exclusion of a Problem/Diagnosis">
+				description = <"Positive statement/s about the absence or exclusion of problems or diagnoses within the health record at a specific point in time.">
+			>
+			["id3.1"] = <
+				text = <"Exclusion Statement">
+				description = <"A statement about absence or exclusion of a known problems or diagnoses in the health record.">
+			>
+			["id4.1"] = <
+				text = <"Problem/Diagnosis">
+				description = <"Identification of a specific problem/diagnosis to which the Exclusion Statement applies.">
+			>
+			["ac0.1"] = <
+				text = <"Problem or Diagnosis">
+				description = <"All possible problems or diagnoses.">
+			>
+		>
+	>

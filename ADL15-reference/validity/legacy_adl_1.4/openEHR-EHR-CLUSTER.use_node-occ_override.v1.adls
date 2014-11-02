@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-CLUSTER.use_node-occ_override.v1.0.0
 
 specialize
@@ -38,7 +38,7 @@ definition
 							}
 						}
 					}
-					use_node ELEMENT[id2.2] occurrences matches {0..*} /items[id3]/items[id4]	-- /items[id3]/items[id4]
+					use_node ELEMENT[id2.2] /items[id3]/items[id4]	-- /items[id3]/items[id4]
 				}
 			}
 		}

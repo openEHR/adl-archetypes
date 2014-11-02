@@ -1,0 +1,152 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-CLUSTER.level_of_exertion.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2008-10-27">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Record information about the amount of energy expenditure that has been, or is being, experienced by the patient.">
+			use = <"Record information about phase and levels of exertion - to provide state/context information within OBSERVATIONS such as Blood Pressure.">
+			keywords = <"exercise", "work", "exertion", "activity", "energy">
+			misuse = <"Not to be used to record actual exercise activities and measurements which should be recorded as OBSERVATIONS in their own right.">
+			copyright = <"© openEHR">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Level of Exertion, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 27 Oct 2008. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.297 (accessed 21 Feb 3013).">
+		["MD5-CAM-1.0.1"] = <"362DEDF06B3E63F1CD7D4E24BCCEB2D9">
+	>
+
+definition
+	CLUSTER[id1] matches {	-- Level of Exertion
+		items matches {
+			CLUSTER[id11] occurrences matches {0..1} matches {	-- Exercise intensity
+				items matches {
+					ELEMENT[id17] occurrences matches {0..1} matches {	-- Description
+						value matches {
+							DV_TEXT[id18] 
+						}
+					}
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Intensity
+						value matches {
+							DV_CODED_TEXT[id19] matches {
+								defining_code matches {[ac1]}		-- Intensity (synthesised)
+							}
+						}
+					}
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Measured
+						value matches {
+							DV_QUANTITY[id20] matches {
+								property matches {[at17]}
+								magnitude matches {|0.0..1000.0|}
+								units matches {"J/min"}
+							}
+						}
+					}
+				}
+			}
+			ELEMENT[id10] occurrences matches {0..1} matches {	-- Phase
+				value matches {
+					DV_CODED_TEXT[id21] matches {
+						defining_code matches {[ac2]}		-- Phase (synthesised)
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Level of Exertion">
+				description = <"Record information about level of exertion undertaken during an observation, such as blood pressure or pulse.">
+			>
+			["id6"] = <
+				text = <"Measured">
+				description = <"The measured level of exertion.">
+			>
+			["at7"] = <
+				text = <"At rest">
+				description = <"The person is at rest, prior to undertaking exercise.">
+			>
+			["at8"] = <
+				text = <"During exertion">
+				description = <"The person is exerting themselves at the time.">
+			>
+			["at9"] = <
+				text = <"Post-exertion">
+				description = <"Measurement is taken after exertion has ceased.">
+			>
+			["id10"] = <
+				text = <"Phase">
+				description = <"The phase or context of exercise.">
+			>
+			["id11"] = <
+				text = <"Exercise intensity">
+				description = <"Amount of work being done during exercise.">
+			>
+			["id12"] = <
+				text = <"Intensity">
+				description = <"Semiquantitative description of the intensity of exercise undertaken.">
+			>
+			["at13"] = <
+				text = <"Low Intensity">
+				description = <"Up to 80% Maximal Heart Rate.">
+			>
+			["at14"] = <
+				text = <"Medium Intensity">
+				description = <"80-85% of Maximal Heart Rate.">
+			>
+			["at15"] = <
+				text = <"High Intensity">
+				description = <"85-90% Maximal Heart Rate.">
+			>
+			["at16"] = <
+				text = <"Flat Out">
+				description = <"90-100% Maximal Heart Rate.">
+			>
+			["id17"] = <
+				text = <"Description">
+				description = <"Description of the exertion.">
+			>
+			["at17"] = <
+				text = <"Work">
+				description = <"Work">
+			>
+			["ac1"] = <
+				text = <"Intensity (synthesised)">
+				description = <"Semiquantitative description of the intensity of exercise undertaken. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Phase (synthesised)">
+				description = <"The phase or context of exercise. (synthesised)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at17"] = <http://openehr.org/id/130>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at13", "at14", "at15", "at16">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at7", "at8", "at9">
+		>
+	>

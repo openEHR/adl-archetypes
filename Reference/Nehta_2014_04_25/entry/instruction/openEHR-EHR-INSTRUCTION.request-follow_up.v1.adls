@@ -1,0 +1,68 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-INSTRUCTION.request-follow_up.v1.0.0
+
+specialize
+	openEHR-EHR-INSTRUCTION.request.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Dr Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"2009-12-08">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To request a follow-up clinical assessement and convey supporting clinical details.">
+			use = <"Use to record a request for a follow-up clinical assessment, usually after a clinical event such as an initial consultation, a hospitalisation or a procedure, to ensure ongoing clinical oversight or management. 
+
+This archetype has been modelled specifically to ensure that requests for clinical follow-up can be semantically distinguished from other healthcare service requests in order support monitoring within the context of a care plan or similar care pathway.">
+			keywords = <"request", "refer", "order", "service", "provide", "follow", "follow-up", "recall">
+			misuse = <"">
+			copyright = <"© Northern Territory Department of Health, Australia">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["MD5-CAM-1.0.1"] = <"30081125A2D45E89874A8EB1A9E4F818">
+	>
+
+definition
+	INSTRUCTION[id1.1] matches {	-- Follow Up Request
+		activities matches {
+			ACTIVITY[id2] matches {
+				description matches {
+					ITEM_TREE[id10] matches {
+						items matches {
+							ELEMENT[id122.1] 	-- Follow up Service Requested
+							ELEMENT[id136.1] 	-- Description of Follow Up
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Follow Up Request">
+				description = <"Generic request for a follow-up clinical assessment.">
+			>
+			["id122.1"] = <
+				text = <"Follow up Service Requested">
+				description = <"Identification of the follow up service requested. This is often coded with an external terminology.">
+			>
+			["id136.1"] = <
+				text = <"Description of Follow Up">
+				description = <"A detailed narrative description of the follow-up service requested.">
+			>
+		>
+	>

@@ -1,0 +1,74 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-EVALUATION.exclusion-adverse_reaction.v1.0.0
+
+specialize
+	openEHR-EHR-EVALUATION.exclusion.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2010-03-02">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record positive statement/s about the absence or exclusion of adverse reactions within the health record at a specific point in time.">
+			use = <"Use to record positive statement/s about the absence or exclusion of adverse reactions within the health record at a specific point in time. For example: to record that the subject has not ever had any significant adverse reactions; or that the subject has never had a reaction to penicillin.
+
+This detailed clinical model (DCM) has specifically been designed to avoid the need to use flags or terminology to express negation about any adverse reactions within the health record. 
+
+Exclusion statements can only be considered to be current and accurate at the time of recording. For example: recording an exclusion of a reaction to penicillin during a consultation is only relevant at the time of recording and may be effectively obsolete immediately after first administration of penicillin if there is an adverse reaction.">
+			keywords = <"exclusion", "adverse", "reaction", "allergy", "intolerance", "hypersensitivity">
+			misuse = <"Not to be used to record exclusion statements about use of medications, procedures, family history, or problems or diagnoses - use other specific specialisations of the EVALUATION.exclusion archetype for these purposes.">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia", "Stephen Chu, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Exclusion Statement - Adverse Reaction, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 02 Mar 2010. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.618_1 (accessed 31 July 2013).">
+		["MD5-CAM-1.0.1"] = <"780A2E0A1727006FD512BF735248C815">
+	>
+
+definition
+	EVALUATION[id1.1] matches {	-- Exclusion of an Adverse Reaction
+		/data[id2]/items matches {
+			ELEMENT[id3.1] 	-- Exclusion Statement
+			ELEMENT[id4.1] occurrences matches {0..1} matches {	-- Substance/Agent
+				value matches {
+					DV_CODED_TEXT[id6.1] matches {
+						defining_code matches {[ac0.1]}		-- Substances or Agents
+					}
+					DV_TEXT[id6] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Exclusion of an Adverse Reaction">
+				description = <"Positive statement/s about the absence or exclusion of adverse reactions within the health record at a specific point in time.">
+			>
+			["id3.1"] = <
+				text = <"Exclusion Statement">
+				description = <"A statement about absence or exclusion of known adverse reactions in the health record.">
+			>
+			["id4.1"] = <
+				text = <"Substance/Agent">
+				description = <"Identification of a specific substance or agent to which the Exclusion Statement applies.">
+			>
+			["ac0.1"] = <
+				text = <"Substances or Agents">
+				description = <"All substances or agents that may be responsible for an adverse reaction.">
+			>
+		>
+	>

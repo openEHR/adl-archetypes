@@ -1,0 +1,63 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-EVALUATION.exclusion-family_history.v1.0.0
+
+specialize
+	openEHR-EHR-EVALUATION.exclusion.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2010-03-02">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record positive statement/s about the absence or exclusion of family history information within the health record at a specific point in time.">
+			use = <"Use to record positive statement/s about the absence or exclusion of family history information within the health record at a specific point in time. For example: to record that the subject does not have any significant family history; or that the subject has no family members with heart disease.
+
+This detailed clinical model (DCM) has specifically been designed to avoid the need to use flags or terminology to express negation about any family history within the health record. 
+
+Exclusion statements can only be considered to be current and accurate at the time of recording. For example: recording an exclusion is only relevant at the time of recording and may be effectively obsolete immediately after the record is made if new information is discovered.">
+			keywords = <"exclusion", "family", "history", "pedigree">
+			misuse = <"Not to be used to record the exclusion or absence of adverse reactions, medication use, procedures, problems or diagnoses in the subject - use specific specialisations of this archetype for this purpose.">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia", "Stephen Chu, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Exclusion Statement - Family History, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 02 Mar 2010. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.625_1 (accessed 31 July 2013).">
+		["MD5-CAM-1.0.1"] = <"6BFB19553DEB7D37E129006B7E716DB4">
+	>
+
+definition
+	EVALUATION[id1.1] matches {	-- Exclusion of Family History
+		/data[id2]/items matches {
+			ELEMENT[id3.1] 	-- Exclusion Statement
+			ELEMENT[id4.1] occurrences matches {0..1} 	-- Diagnosis, Problem or Issue
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Exclusion of Family History">
+				description = <"Positive statement/s about the absence or exclusion of family history information within the health record at a specific point in time.">
+			>
+			["id3.1"] = <
+				text = <"Exclusion Statement">
+				description = <"A statement about an exclusion about diagnoses, problems or issues in relatives or family members in the health record.">
+			>
+			["id4.1"] = <
+				text = <"Diagnosis, Problem or Issue">
+				description = <"Identification of a specific diagnosis, problem or issue to which the Exclusion Statement applies.">
+			>
+		>
+	>

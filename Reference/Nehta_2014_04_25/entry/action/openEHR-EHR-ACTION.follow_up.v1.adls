@@ -1,0 +1,447 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-ACTION.follow_up.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2013-07-05">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the activity related to carrying out a follow-up service request from a requesting healthcare provider to a receiving healthcare provider for the subject to receive a specific service, advice or care.
+
+To record the activity related to a service request by a subject/patient to a healthcare provider to receive a specific service, advice, or care provision.">
+			use = <"Use to record the activity related to carrying out a follow-up service request from a requesting healthcare provider to a receiving healthcare provider for the subject to receive a specific service, advice or care. For example, request for a follow up appointment with the same or a different healthcare provider.
+
+Use to record the activity related to a service request by a subject/patient to a healthcare provider to receive a specific service, advice, or care provision.">
+			keywords = <"referral", "visit", "encounter", "follow-up", "follow", "review", "recall">
+			misuse = <"">
+			copyright = <"© N© Northern Territory Department of Health, Australia">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", ...>
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["MD5-CAM-1.0.1"] = <"C34FBDD40813CE8E7EC5E16DD097C0AA">
+	>
+
+definition
+	ACTION[id1] matches {	-- Follow up Service
+		ism_transition matches {
+			ISM_TRANSITION[id3] matches {	-- Service Planned
+				current_state matches {
+					DV_CODED_TEXT[id29] matches {
+						defining_code matches {[at26]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id30] matches {
+						defining_code matches {[at3]}
+					}
+				}
+			}
+			ISM_TRANSITION[id9] matches {	-- Service Postponed
+				current_state matches {
+					DV_CODED_TEXT[id31] matches {
+						defining_code matches {[at27]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id32] matches {
+						defining_code matches {[at9]}
+					}
+				}
+			}
+			ISM_TRANSITION[id10] matches {	-- Service Cancelled
+				current_state matches {
+					DV_CODED_TEXT[id33] matches {
+						defining_code matches {[at28]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id34] matches {
+						defining_code matches {[at10]}
+					}
+				}
+			}
+			ISM_TRANSITION[id4] matches {	-- Appointment Scheduled
+				current_state matches {
+					DV_CODED_TEXT[id35] matches {
+						defining_code matches {[at29]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id36] matches {
+						defining_code matches {[at4]}
+					}
+				}
+			}
+			ISM_TRANSITION[id5] matches {	-- Service Provided
+				current_state matches {
+					DV_CODED_TEXT[id37] matches {
+						defining_code matches {[at30]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id38] matches {
+						defining_code matches {[at5]}
+					}
+				}
+			}
+			ISM_TRANSITION[id25] matches {	-- Service Not Provided
+				current_state matches {
+					DV_CODED_TEXT[id39] matches {
+						defining_code matches {[at30]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id40] matches {
+						defining_code matches {[at25]}
+					}
+				}
+			}
+			ISM_TRANSITION[id11] matches {	-- Service Suspended
+				current_state matches {
+					DV_CODED_TEXT[id41] matches {
+						defining_code matches {[at31]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id42] matches {
+						defining_code matches {[at11]}
+					}
+				}
+			}
+			ISM_TRANSITION[id7] matches {	-- Service Terminated
+				current_state matches {
+					DV_CODED_TEXT[id43] matches {
+						defining_code matches {[at32]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id44] matches {
+						defining_code matches {[at7]}
+					}
+				}
+			}
+			ISM_TRANSITION[id24] matches {	-- Referral Expired
+				current_state matches {
+					DV_CODED_TEXT[id45] matches {
+						defining_code matches {[at32]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id46] matches {
+						defining_code matches {[at24]}
+					}
+				}
+			}
+			ISM_TRANSITION[id6] matches {	-- Service Episode Complete
+				current_state matches {
+					DV_CODED_TEXT[id47] matches {
+						defining_code matches {[at33]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id48] matches {
+						defining_code matches {[at6]}
+					}
+				}
+			}
+		}
+		description matches {
+			ITEM_TREE[id2] matches {
+				items matches {
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Service
+						value matches {
+							DV_TEXT[id49] 
+						}
+					}
+					ELEMENT[id15] occurrences matches {0..1} matches {	-- Service Type
+						value matches {
+							DV_TEXT[id50] 
+						}
+					}
+					ELEMENT[id13] occurrences matches {0..1} matches {	-- Reason
+						value matches {
+							DV_TEXT[id51] 
+						}
+					}
+					ELEMENT[id14] occurrences matches {0..1} matches {	-- Description
+						value matches {
+							DV_TEXT[id52] 
+						}
+					}
+					ELEMENT[id27] occurrences matches {0..1} matches {	-- Absolute Due Date
+						value matches {
+							DV_DATE_TIME[id53] 
+						}
+					}
+					ELEMENT[id28] occurrences matches {0..1} matches {	-- Relative Due Date
+						value matches {
+							DV_INTERVAL<DV_DATE_TIME>[id54] matches {
+								upper matches {
+									DV_DATE_TIME[id55] 
+								}
+								lower matches {
+									DV_DATE_TIME[id56] 
+								}
+							}
+							DV_INTERVAL<DV_QUANTITY>[id57] matches {
+								upper matches {
+									DV_QUANTITY[id58] matches {
+										property matches {[at34]}
+										units matches {"h", "d", "wk", "mo", "a"}
+									}
+								}
+								lower matches {
+									DV_QUANTITY[id59] matches {
+										property matches {[at34]}
+										[units, precision] matches {
+											[{"d"}, {|>=0|}],
+											[{"wk"}, {|>=0|}],
+											[{"a"}, {|>=0|}],
+											[{"h"}, {|>=0|}],
+											[{"mo"}, {0}]
+										}
+									}
+								}
+							}
+							DV_QUANTITY[id60] matches {
+								property matches {[at34]}
+								units matches {"min", "h", "d", "wk", "mo", "a"}
+							}
+						}
+					}
+					ELEMENT[id26] occurrences matches {0..1} matches {	-- Scheduled Date
+						value matches {
+							DV_DATE_TIME[id61] 
+						}
+					}
+					ELEMENT[id23] occurrences matches {0..1} matches {	-- Duration
+						value matches {
+							DV_DURATION[id62] 
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[id16] matches {
+				items matches {
+					ELEMENT[id17] occurrences matches {0..1} matches {	-- Requestor Identifier
+						value matches {
+							DV_IDENTIFIER[id63] 
+						}
+					}
+					allow_archetype CLUSTER[id18] matches {	-- Requestor
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[id19] occurrences matches {0..1} matches {	-- Receiver Identifier
+						value matches {
+							DV_IDENTIFIER[id64] 
+						}
+					}
+					allow_archetype CLUSTER[id20] matches {	-- Receiver
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Follow up Service">
+				description = <"Activity regarding a follow-up service request from a clinician, or self-referral by a subject.">
+			>
+			["id3"] = <
+				text = <"Service Planned">
+				description = <"Provision of a healthcare service is planned.">
+			>
+			["id4"] = <
+				text = <"Appointment Scheduled">
+				description = <"Appointment for a service has been made.">
+			>
+			["id5"] = <
+				text = <"Service Provided">
+				description = <"The provider has provided the service.">
+			>
+			["id6"] = <
+				text = <"Service Episode Complete">
+				description = <"All service activities have been completed and person returned for ongoing care.">
+			>
+			["id7"] = <
+				text = <"Service Terminated">
+				description = <"The provision of the service has been terminated before the service has been completed.">
+			>
+			["id9"] = <
+				text = <"Service Postponed">
+				description = <"The planned service has been postponed.">
+			>
+			["id10"] = <
+				text = <"Service Cancelled">
+				description = <"The planned provision of service has been cancelled prior to commencement.">
+			>
+			["id11"] = <
+				text = <"Service Suspended">
+				description = <"The provision of service has been suspended without completion.">
+			>
+			["id12"] = <
+				text = <"Service">
+				description = <"Identification of the clinical service to be/being carried out.">
+			>
+			["id13"] = <
+				text = <"Reason">
+				description = <"Reason for activity, for example reason service was stopped early or reason service was performed.">
+			>
+			["id14"] = <
+				text = <"Description">
+				description = <"Description of the service provided.">
+			>
+			["id15"] = <
+				text = <"Service Type">
+				description = <"Type of service to be carried out or being carried out.">
+			>
+			["id17"] = <
+				text = <"Requestor Identifier">
+				description = <"The local ID assigned to the order by the healthcare provider or organisation requesting the service. This is also referred to as Placer Order Identifier.">
+			>
+			["id18"] = <
+				text = <"Requestor">
+				description = <"Details about the healthcare provider or organisation requesting the service.">
+			>
+			["id19"] = <
+				text = <"Receiver Identifier">
+				description = <"The ID assigned to the order by the healthcare provider or organisation receiving the request for service. This is also referred to as Filler Order Identifier.">
+			>
+			["id20"] = <
+				text = <"Receiver">
+				description = <"Details about the healthcare provider or organisation receiving the request for service.">
+			>
+			["id23"] = <
+				text = <"Duration">
+				description = <"Duration of service or care, recorded at the completion of a course of follow up.">
+			>
+			["id24"] = <
+				text = <"Referral Expired">
+				description = <"The service request has expired before the service episode has been completed.">
+			>
+			["id25"] = <
+				text = <"Service Not Provided">
+				description = <"The service was scheduled but not provided.">
+			>
+			["id26"] = <
+				text = <"Scheduled Date">
+				description = <"The scheduled appointment for the service.">
+			>
+			["id27"] = <
+				text = <"Absolute Due Date">
+				description = <"The date by which the follow up should be completed.">
+			>
+			["id28"] = <
+				text = <"Relative Due Date">
+				description = <"The approximate time or timeframe by which the follow up should be completed.">
+			>
+			["at3"] = <
+				text = <"Service Planned">
+				description = <"Provision of a healthcare service is planned.">
+			>
+			["at9"] = <
+				text = <"Service Postponed">
+				description = <"The planned service has been postponed.">
+			>
+			["at10"] = <
+				text = <"Service Cancelled">
+				description = <"The planned provision of service has been cancelled prior to commencement.">
+			>
+			["at4"] = <
+				text = <"Appointment Scheduled">
+				description = <"Appointment for a service has been made.">
+			>
+			["at5"] = <
+				text = <"Service Provided">
+				description = <"The provider has provided the service.">
+			>
+			["at25"] = <
+				text = <"Service Not Provided">
+				description = <"The service was scheduled but not provided.">
+			>
+			["at11"] = <
+				text = <"Service Suspended">
+				description = <"The provision of service has been suspended without completion.">
+			>
+			["at7"] = <
+				text = <"Service Terminated">
+				description = <"The provision of the service has been terminated before the service has been completed.">
+			>
+			["at24"] = <
+				text = <"Referral Expired">
+				description = <"The service request has expired before the service episode has been completed.">
+			>
+			["at6"] = <
+				text = <"Service Episode Complete">
+				description = <"All service activities have been completed and person returned for ongoing care.">
+			>
+			["at26"] = <
+				text = <"planned">
+				description = <"planned">
+			>
+			["at27"] = <
+				text = <"postponed">
+				description = <"postponed">
+			>
+			["at28"] = <
+				text = <"cancelled">
+				description = <"cancelled">
+			>
+			["at29"] = <
+				text = <"scheduled">
+				description = <"scheduled">
+			>
+			["at30"] = <
+				text = <"active">
+				description = <"active">
+			>
+			["at31"] = <
+				text = <"suspended">
+				description = <"suspended">
+			>
+			["at32"] = <
+				text = <"aborted">
+				description = <"aborted">
+			>
+			["at33"] = <
+				text = <"complete">
+				description = <"complete">
+			>
+			["at34"] = <
+				text = <"Time">
+				description = <"Time">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at26"] = <http://openehr.org/id/526>
+			["at27"] = <http://openehr.org/id/527>
+			["at28"] = <http://openehr.org/id/528>
+			["at29"] = <http://openehr.org/id/529>
+			["at30"] = <http://openehr.org/id/245>
+			["at31"] = <http://openehr.org/id/530>
+			["at32"] = <http://openehr.org/id/531>
+			["at33"] = <http://openehr.org/id/532>
+			["at34"] = <http://openehr.org/id/128>
+		>
+	>

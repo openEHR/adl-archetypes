@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-OBSERVATION.upgrade_parent.v1.0.0
 
 language
@@ -43,7 +43,7 @@ Will normally be reported back to the requesting clinician within the context of
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Heath Frankel, Ocean Informatics, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "David Rowed, VAMC Clinic, Australia (Editor)", "Mona Saleh (Translator)">
 	other_details = <
 		["references"] = <"NEHTA, Australia. Pathology Episode v1.0 - Data Group library [Internet]. 2009;[cited 2009 Dec 8 ] Available from: http://www.nehta.gov.au/data-group-library/data-specifications/dgl-pathology
@@ -57,7 +57,7 @@ definition
 		data matches {
 			HISTORY[id2] matches {
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[id3] occurrences matches {0..*} matches {	-- Any event
+					EVENT[id3] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
 								items matches {
@@ -78,14 +78,14 @@ definition
 											}
 										}
 									}
-									allow_archetype CLUSTER[id66] occurrences matches {0..*} matches {	-- Specimen detail
+									allow_archetype CLUSTER[id66] matches {	-- Specimen detail
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen\.v1/}
 										exclude
 											archetype_id/value matches {/.*/}
 									}
-									ELEMENT[id79] occurrences matches {0..*} 	-- Result
-									allow_archetype CLUSTER[id90] occurrences matches {0..*} matches {	-- Per-result annotation
+									ELEMENT[id79] 	-- Result
+									allow_archetype CLUSTER[id90] matches {	-- Per-result annotation
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.lab_result_annotation(-a-zA-Z0-9_]+)*\.v1/}
 										exclude
@@ -96,7 +96,7 @@ definition
 											DV_TEXT[id95] 
 										}
 									}
-									ELEMENT[id11] occurrences matches {0..*} matches {	-- Multimedia representation
+									ELEMENT[id11] matches {	-- Multimedia representation
 										value matches {
 											DV_MULTIMEDIA[id96] 
 										}
@@ -116,7 +116,7 @@ definition
 							DV_TEXT[id97] 
 						}
 					}
-					allow_archetype CLUSTER[id91] occurrences matches {0..*} matches {	-- Requestor
+					allow_archetype CLUSTER[id91] matches {	-- Requestor
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -125,7 +125,7 @@ definition
 							DV_TEXT[id98] 
 						}
 					}
-					allow_archetype CLUSTER[id18] occurrences matches {0..*} matches {	-- Receiving laboratory
+					allow_archetype CLUSTER[id18] matches {	-- Receiving laboratory
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v1/}
 						exclude

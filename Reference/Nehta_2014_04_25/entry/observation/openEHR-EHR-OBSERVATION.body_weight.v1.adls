@@ -1,0 +1,556 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-OBSERVATION.body_weight.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Sebastian Garde, Jasmin Buck">
+				["organisation"] = <"Ocean Informatics, University of Heidelberg">
+			>
+		>
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			author = <
+				["name"] = <"Igor Lizunov">
+				["email"] = <"i.lizunov@infinnity.ru">
+			>
+		>
+		["nl"] = <
+			language = <[ISO_639-1::nl]>
+			author = <
+				["name"] = <"Marja Buur">
+				["organisation"] = <"Medisch Centrum Alkmaar, Nederland">
+				["email"] = <"m.buur-krom@mca.nl">
+			>
+			accreditation = <"Nurse informatics">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			author = <
+				["name"] = <"Marco Borges">
+				["organisation"] = <"P2D">
+				["email"] = <"marco.borges@p2d.com.br">
+			>
+			accreditation = <"P2D Health Advisor Council">
+		>
+	>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"2006-03-09">
+	>
+	details = <
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Para registrar o peso corporal de um indivíduo - tanto real como aproximado.">
+			use = <"Usado para gravar a medição real de peso corporal, inclusive quando o indivíduo tem faltando uma parte do corpo devido a uma causa congênita ou após a remoção cirúrgica. A indicação da imperfeição física do corpo pode ser registrada no elemento 'fatores de erro', se necessário.
+Este é o arquétipo para ser utilizado para uma medição típica de peso, por exemplo, auto-medido pelo indivíduo em casa, uma medida médico em uma clínica / hospital, ou um instrutor de fitness em um ginásio. 
+
+Também pode ser usado para a gravar uma aproximação da medição do peso corporal em um cenário clínico no qual não é possível medir com precisão o peso do corpo - por exemplo, pesar uma criança inquieta, ou estimar o peso de um feto (quando 'sujeito' é um feto e a gravação ocorre no registro da saúde da mãe). Isso não é modelado explicitamente no arquétipo como o modelo de referência da openEHR permite que o atributo de aproximação para qualquer tipo de dados quantitativos. Na execução, por exemplo, uma interface de usuário do aplicativo pode permitir que os clínicos para selecionar uma caixa de seleção devidamente setados junto ao campo de dados de peso, indicando que o peso verificado é uma aproximação, ao invés de reais. 
+
+Usada para gravar a mudança de peso, ou seja, qualquer perda ou ganho de peso. Pode ser modelado por restringir a 'qualquer evento' a um intervalo associado com funções matemáticas de aumentar ou diminuir, conforme o caso.">
+			keywords = <"*weight(en)", "*gain(en)", "*loss(en)", "*increase(en)", "*decrease(en)", "*mass(en)", "*estimate(en)", "*actual(en)">
+			misuse = <"Não deve ser utilizado para gravar o primeiro peso de um bebê logo após o nascimento, que é designado como o seu 'peso' - use a especialização de seu nascimento arquétipo OBSERVATION.body_weight-birth.
+Não deve ser usado para registrar o peso do corpo ajustado por exemplo, um cálculo do peso de corpo inteiro de uma pessoa com amputação de membros, com base em medições de outro corpo e um algoritmo -OBSERVATION.body_weight-adjusted.
+Não deve ser usado para registrar o peso de um objeto ou parte do corpo.">
+			copyright = <"© National E-Health Transition Authority">
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Dokumentation des Gewichtes eines Individuums, sowohl exakt als auch ungefähr.">
+			use = <"Zur Dokumentation des tatsächlichen Körpergewichts, auch wenn das Individuum einen Körperteil (angeboren oder später amputiert) vermisst. Sofern benötigt, kann dies im Datenelement 'Störfaktoren' dokumentiert werden. Dies ist der Archetyp, der gewöhnlicherweise für eine typische Gewichtsmessung benutzt werden sollte, z.B. bei Selbstmessung durch das Individuum zu Hause, durch einen Kliniker im Krankenhaus, oder einen Fitness-Trainer in einem Fitness-Center.
+
+Der Archetyp kann auch benutzt werden, um eine Schätzung des Körpergewichts zu dokumentieren, wenn es nicht möglich ist, das Gewicht genau zu bestimmen - z.B. bei der Messung des Gewichts eines nicht kooperativen Kindes, oder bei einem ungeborenen Fötus (hier ist das 'Subjekt der Daten' der Fötus und die Dokumentation erfolgt in der Akte der Mutter). Dass es sich um eine Schätzung handelt wird in diesem Archetyp nicht explizit modelliert, da das openEHR Referenzmodell dies direkt für 'Quantity'-Datentypen unterstützt. In einer konkreten klinischen Anwendung könnte die Benutzerschnittstelle es dem Kliniker z.B. über eine Checkbox ermöglichen, zu dokumentieren, dass es sich um eine Schätzung handelt.">
+			keywords = <"Gewicht", "Zunahme", "Verlust", "Masse", "Schätzung">
+			misuse = <"Nicht zur Dokumentation des ersten Gewichts eines Neugeboren (Geburtsgewicht) - benutzen Sie hierzu den spezialisierten Archetyp OBSERVATION.body_weight-birth.
+Nicht zur Dokumentation des angepassten Körpergewichts, z.B. eine Berechnung des vollständigen Körpergewichts bei einer Person mit amputierter Extremität auf Basis der anderen Körperteile und eines Algorithmus - benutzen Sie OBSERVATION.body_weight-adjusted.
+Nicht zur Dokumentation eines Objekts oder eines Teils des Körpers.">
+			copyright = <"© National E-Health Transition Authority">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the body weight of an individual - both actual and approximate.">
+			use = <"To be used for recording the actual measurement of body weight, including when the individual is missing a body part due to a congenital cause or after surgical removal.   A statement identifying the physical incompleteness of the body can be recorded in the 'Confounding factors' data element, if required. This is the usual archetype to be used for a typical measurement of weight, for example self-measured by the individual at home, a clinician measurement in a clinic/hospital, or a fitness instructor in a gymnasium.  
+
+Can also be used for recording an approximation of body weight measurement in a clinical scenario where it is not possible to accurately measure body weight - for example, weighing an uncooperative child, or estimating the weight of an unborn fetus (where the 'subject of data' is the Fetus and recording occurs within the mother's health record).  This is not modelled explicitly in the archetype as the openEHR Reference model allows the attribute of Approximation for any Quantity data type.  At implementation, for example, an application user interface could allow clinicians to select an appropriately labelled check box adjacent to the Weight data field to indicate that the recorded weight is an approximation, rather than actual.
+
+To be used for recording weight change, that is, either weight loss or weight gain.  This can currently be modelled by constraining the 'any event' to an interval with associated mathematical function of increase or decrease, as appropriate.
+
+Birthweight (that is the first weight measured in close proximity to the time of birth) can be specifically identified by recording the weight measurement using the 'Birth' point in time event.">
+			keywords = <"weight", "gain", "loss", "increase", "decrease", "mass", "estimate", "actual">
+			misuse = <"Not to be used to record the first weight of an infant soon after birth which is designated as their 'birth weight' - use the specialisation of this archetype OBSERVATION.body_weight-birth.
+Not to be used to record the adjusted body weight eg a calculation of the full body weight of a person with limb amputation, based on other body part measurements and an algorithm - use OBSERVATION.body_weight-adjusted.
+Not to be used to record the weight of an object or body part.">
+			copyright = <"© openEHR">
+		>
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"Для записи массы тела человека: фактической или приблизительной.">
+			use = <"Использовать для записи фактического измерения массы тела, включая случаи отсутсвия части(-ей) тела, врожденное или после хирургического удаления. Отметка о физической неполноте тела может быть зарегистрирована в элементе данных \"стохастическая погрешность\", если требуется. Это - обычный архетип, используемый для типичного измерения веса, например самоизмеренного человеком дома, измерение клинициста в клинике/больнице, или фитнес-инструктором в гимнастическом зале. 
+
+Может также использоваться для записи примерного измерения массы тела в клиническом сценарии, где не возможно взвешивание - например, сопротивляющийся ребёнок, или для оценики веса внутриутробного плода (где 'предметом данных' является плод, и регистрация происходит в пределах записи о состоянии здоровья матери). Это не оформлено явно в архетипе, поскольку модель openEHR позволяет атрибут «приблизительно» для любого типа данных «количество». При работе, например, прикладной пользовательский интерфейс позволяет клиницистам выбирать соответствующую отметку, смежную с полем данных «вес», чтобы указать, что зарегистрированный вес - приблизительный, а не фактический. 
+
+Использовать для записи изменения веса, то есть, потери веса или увеличения веса.
+Это может в настоящее время моделироваться, привязывая 'каждый случай' к интервалу со связанной математической функцией увеличения или уменьшения, соответственно.">
+			keywords = <"вес", "масса тела", "прибавка", "потеря", "увеличение", "уменьшение", "оценка", "актуально">
+			misuse = <"Не использовать для записи первого веса младенца после рождение, которое обозначено как 'вес при рождении' - использовать специализацию этого архетипа OBSERVATION.body_weight-birth. 
+Не использовать для записи массы тела человека с протезами / приспособлениями для вычисление полной массы тела человека с ампутацией, основанной на других измерениях и алгоритме  - использовать архетип OBSERVATION.body_weight-adjusted.
+Не использовать, чтобы сделать запись веса части тела или объекта.">
+			copyright = <"© National E-Health Transition Authority">
+		>
+		["nl"] = <
+			language = <[ISO_639-1::nl]>
+			purpose = <"Om het lichaamsgewicht van een persoon te registreren - zowel exact als geschat gewicht.">
+			use = <"Registreren van een actuele meting van het lichaamsgewicht, ook als deze persoon een lichaamsdeel mist, door een geboorteafwijking of na een chirurgische ingreep. Een verklaring over de fysieke inclompleetheid van het lichaam, kan zo nodig opgeslagen worden in het data element 'beïnvloedende factoren'. Dit is het gebruikelijke archetype voor gewichtmetingen, bij voorbeeld thuis gemeten door de persoon zelf, een klinische meting in een kliniek/ziekenhuis, of door een fitness instructeur in een sportschool.
+
+Kan ook gebruikt worden om een geschat lichaamsgewicht te registreren in een klinische setting als het niet mogelijk is om het exacte lichaamsgewicht te meten - bijvoorbeeld, het wegen van een tegenwerkend kind, of een schatting van het gewicht van een ongeboren kind (waar het onderwerp van de gegevens de foetus is en de opslag in het patiënten dossier van de moeder plaatsvindt). Dit is niet expliciet gemodelleerd in het archetype, omdat het openEHR Referentie model een schatting in ieder kwantitatief data type toestaat. Bij de uitvoering, bijvoorbeeld, zou een applicatie gebruikersinterface, clinici een adequaat geëtiketteerd selectievakje kunnen aanbieden, naast de gegevens over het gewicht, waarin door selecteren aangegeven kan worden dat het opgenomen gewicht een schatting is, in plaats van het werkelijke gewicht.
+
+Dient te worden gebruikt om gewichtsverandering op te slaan, zowel gewichtsverlies als gewichtstoename.  Dit kan gemodelleerd worden door 'any event' - elke gebeurtenis - in voorkomende gevallen, te beperken tot een interval met met bijbehorende rekenkundige functie van stijging of daling.">
+			keywords = <"gewicht", "stijging", "verlies", "toename", "daling", "massa", "schatting", "werkelijk", "afname">
+			misuse = <"Dient niet te worden gebruikt voor het registreren van het eerste gewicht van een kind, na geboorte, welke wordt aangewezen als geboortegewicht. Gebruik hiervoor de specialisatie van dit archetype, OBSERVATION.body_weight-birth (OBSERVATION.lichaamsgewicht-geboorte.
+Dient niet te worden gebruikt voor het registreren van het aangepaste lichaamsgewicht, bijvoorbeeld een berekening van het volledige lichaamsgewicht van een persoon met een amputatie van ledematen, gebaseerd op metingen van lichaamsdelen en een algoritme - gebruik hiervoor OBSERVATION.body_weight-adjusted. (OBSERVATION.lichaamsgewicht-aangepast).
+Dient niet te worden gebruikt voor het vastleggen van het gewicht van een object of lichaamsdeel.">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Sheryl Alexander, NT Department of Health, Australia", "Rita Apelt, Department of Health,NT, Australia", "Marja Buur-Krom, Medisch Centrum Alkmaar, Netherlands", "Margaret Campbell, Queensland Health, Australia", "Stephen Chu, NEHTA, Australia", "Margaret Cotter, AMSANT, Australia", "Hans Demski, Helmholtz Zentrum München, Germany", "Paul Donaldson, Queensland Health, Australia", "Michelle Dowden, Miwatj Health Ngalkanbuy Health, Australia", "Tim Garden, NTG Department of Health, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Tanya Gardner, CAAC, Australia", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore", "Heather Grain, Llewellyn Informatics, Australia", "Anne Harbison, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Andrew James, University of Toronto, Canada", "Bernadette Lack, Department of Health, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Jeremy Oats, NT Health, Australia", "Steven Schatz, Department of Health (Northern Territory), Australia", "Cherie Whitbread, Royal Darwin Hospital, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
+	other_details = <
+		["references"] = <"Siemer J, Peter W, Zollver H, Hart N, Müller A, Meurer B, Goecke T, Schild RL. How good is fetal weight estimation using volumetric methods? Ultraschall Med. 2008 Aug;29(4):377-82. Epub 2008 May 15. PubMed PMID: 18484061.
+
+openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Published OBSERVATION archetype] Body Weight; [authored 2006 Mar 09, cited 2011 Aug 19]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.132_11.">
+		["MD5-CAM-1.0.1"] = <"0E55BCBA9A89E127038C1A2B7FB38E77">
+	>
+
+definition
+	OBSERVATION[id1] matches {	-- Body Weight
+		data matches {
+			HISTORY[id3] matches {
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[id4] matches {	-- Any event
+						data matches {
+							ITEM_TREE[id2] matches {
+								items cardinality matches {1; unordered} matches {
+									ELEMENT[id5] matches {	-- Weight
+										value matches {
+											DV_QUANTITY[id30] matches {
+												property matches {[at19]}
+												[magnitude, units] matches {
+													[{|0.0..1000.0|}, {"kg"}],
+													[{|0.0..2000.0|}, {"lb"}]
+												}
+											}
+										}
+									}
+									ELEMENT[id25] occurrences matches {0..1} matches {	-- Comment
+										value matches {
+											DV_TEXT[id31] 
+										}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[id9] matches {
+								items matches {
+									ELEMENT[id10] occurrences matches {0..1} matches {	-- State of Dress
+										value matches {
+											DV_CODED_TEXT[id32] matches {
+												defining_code matches {[ac1; at12]}		-- State of Dress (synthesised)
+											}
+										}
+									}
+									ELEMENT[id29] occurrences matches {0..1} matches {	-- Pregnant?
+										value matches {
+											DV_BOOLEAN[id33] matches {
+												value matches {True, False; False}
+											}
+										}
+									}
+									ELEMENT[id26] occurrences matches {0..1} matches {	-- Confounding Factors
+										value matches {
+											DV_TEXT[id34] 
+										}
+									}
+								}
+							}
+						}
+					}
+					POINT_EVENT[id27] occurrences matches {0..1} matches {	-- Birth
+						data matches {
+							use_node ITEM_TREE[id35] /data[id3]/events[id4]/data[id2]	-- /data[id3]/events[Any event]/data[id2]
+						}
+						state matches {
+							use_node ITEM_TREE[id36] /data[id3]/events[id4]/state[id9]	-- /data[id3]/events[Any event]/state[id9]
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[id16] matches {
+				items matches {
+					allow_archetype CLUSTER[id21] occurrences matches {0..1} matches {	-- Device
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+					}
+					ELEMENT[id28] occurrences matches {0..1} matches {	-- Weight Estimation Formula
+						value matches {
+							DV_TEXT[id37] 
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["nl"] = <
+			["id1"] = <
+				text = <"Lichaamsgewicht">
+				description = <"Meting van het lichaamsgewicht van een individu.">
+			>
+			["id4"] = <
+				text = <"Elke gebeurtenis">
+				description = <"Elke gebeurtenis.">
+			>
+			["id5"] = <
+				text = <"Gewicht">
+				description = <"Het gewicht van het individu.">
+			>
+			["id10"] = <
+				text = <"Hoeveelheid kleding">
+				description = <"Beschrijving van de hoeveelheid kleding van de persoon, op het moment van wegen.">
+			>
+			["at11"] = <
+				text = <"Volledig gekleed, inclusief schoenen">
+				description = <"Kleren die een significante bijdrage hebben aan het gewicht, inclusief schoenen.">
+			>
+			["at12"] = <
+				text = <"Lichte kleding/ondergoed">
+				description = <"Kleding die niet significant het gewicht beÏnvloedt.">
+			>
+			["at14"] = <
+				text = <"Naakt">
+				description = <"Zonder kleding.">
+			>
+			["at18"] = <
+				text = <"Luier">
+				description = <"Individu draagt alleen een luier - zou significant aan het gewicht kunnen bijdragen.">
+			>
+			["id21"] = <
+				text = <"Apparaat">
+				description = <"Details over het weeginstrument.">
+			>
+			["id25"] = <
+				text = <"Opmerking">
+				description = <"Opmerking over de gewichts meting.">
+			>
+			["id26"] = <
+				text = <"BeÏnvloedende factoren">
+				description = <"Registreer eventuele problemen of factoren die van invloed kunnen zijn op de meting van het lichaamsgewicht bijvoorbeeld timing in de menstruele cyclus, timing van de recente stoelgang of het noteren van een amputatie.">
+			>
+			["id27"] = <
+				text = <"*Any event(en)">
+				description = <"**(en)">
+			>
+			["id28"] = <
+				text = <"*New element(en)">
+				description = <"**(en)">
+			>
+			["id29"] = <
+				text = <"*New element(en)">
+				description = <"**(en)">
+			>
+			["at19"] = <
+				text = <"*Mass (en)">
+				description = <"*Mass (en)">
+			>
+			["ac1"] = <
+				text = <"Hoeveelheid kleding (synthesised)">
+				description = <"Beschrijving van de hoeveelheid kleding van de persoon, op het moment van wegen. (synthesised)">
+			>
+		>
+		["en"] = <
+			["id1"] = <
+				text = <"Body Weight">
+				description = <"Measurement of the body weight of an individual.">
+			>
+			["id4"] = <
+				text = <"Any event">
+				description = <"Any event.">
+			>
+			["id5"] = <
+				text = <"Weight">
+				description = <"The weight of the individual.">
+			>
+			["id10"] = <
+				text = <"State of Dress">
+				description = <"Description of the state of dress of the person at the time of weighing.">
+			>
+			["at11"] = <
+				text = <"Fully clothed, including shoes">
+				description = <"Clothing which may add significantly to weight, including shoes.">
+			>
+			["at12"] = <
+				text = <"Lightly clothed/underwear">
+				description = <"Clothing which will not add to weight significantly.">
+			>
+			["at14"] = <
+				text = <"Naked">
+				description = <"Without any clothes.">
+			>
+			["at18"] = <
+				text = <"Nappy/diaper">
+				description = <"Wearing only a nappy - can add significant weight.">
+			>
+			["id21"] = <
+				text = <"Device">
+				description = <"Details about the weighing device.">
+			>
+			["id25"] = <
+				text = <"Comment">
+				description = <"Comment about the measurement of weight.">
+			>
+			["id26"] = <
+				text = <"Confounding Factors">
+				description = <"Record any issues or factors that may impact on the measurement of body weight eg timing in menstrual cycle, timing of recent bowel motion or noting of amputation.">
+			>
+			["id27"] = <
+				text = <"Birth">
+				description = <"First weight recorded after birth.">
+			>
+			["id28"] = <
+				text = <"Weight Estimation Formula">
+				description = <"Formula used to calculate the estimated weight.">
+			>
+			["id29"] = <
+				text = <"Pregnant?">
+				description = <"Is the woman pregnant at time of measurement?">
+			>
+			["at19"] = <
+				text = <"Mass">
+				description = <"Mass">
+			>
+			["ac1"] = <
+				text = <"State of Dress (synthesised)">
+				description = <"Description of the state of dress of the person at the time of weighing. (synthesised)">
+			>
+		>
+		["de"] = <
+			["id1"] = <
+				text = <"Körpergewicht">
+				description = <"Messung des Körpergewichts eines Individuums.">
+			>
+			["id4"] = <
+				text = <"*Any event(en)">
+				description = <"*Any event(en)">
+			>
+			["id5"] = <
+				text = <"Gewicht">
+				description = <"Das Gewicht eines Individuums.">
+			>
+			["id10"] = <
+				text = <"Bekleidung">
+				description = <"Beschreibung der Bekleidung zum Zeitpunkt der Messung.">
+			>
+			["at11"] = <
+				text = <"Voll bekleidet, mit Schuhen">
+				description = <"Bekleidung, die signifikant zum Gewicht beiträgt, mit Schuhen.">
+			>
+			["at12"] = <
+				text = <"Leicht bekleidet / Unterwäsche">
+				description = <"Bekleidung, die nicht signifikant zum Gewicht beiträgt.">
+			>
+			["at14"] = <
+				text = <"Unbekleidet">
+				description = <"Ohne Kleidung.">
+			>
+			["at18"] = <
+				text = <"Windel">
+				description = <"Trägt Windel; kann signifikant zum Gewicht beitragen.">
+			>
+			["id21"] = <
+				text = <"Gerät">
+				description = <"Details über die benutzte Waage.">
+			>
+			["id25"] = <
+				text = <"Kommentar">
+				description = <"Kommentar über die Messung des Gewichts.">
+			>
+			["id26"] = <
+				text = <"Störfaktoren">
+				description = <"Zur Dokumentation von Faktoren, die einen Einfluss auf die Messung des Körpergewichts haben können, z.B. Zeitpunkt in der Menstruationsperiode, Zeitpunkt des letzten Stuhlgangs, durchgeführte Amputationen.">
+			>
+			["id27"] = <
+				text = <"*Any event(en)">
+				description = <"**(en)">
+			>
+			["id28"] = <
+				text = <"*New element(en)">
+				description = <"**(en)">
+			>
+			["id29"] = <
+				text = <"*New element(en)">
+				description = <"**(en)">
+			>
+			["at19"] = <
+				text = <"*Mass (en)">
+				description = <"*Mass (en)">
+			>
+			["ac1"] = <
+				text = <"Bekleidung (synthesised)">
+				description = <"Beschreibung der Bekleidung zum Zeitpunkt der Messung. (synthesised)">
+			>
+		>
+		["pt-br"] = <
+			["id1"] = <
+				text = <"Peso corporal">
+				description = <"A medição do peso corporal de um indivíduo.">
+			>
+			["id4"] = <
+				text = <"Qualquer evento">
+				description = <"Qualquer evento.">
+			>
+			["id5"] = <
+				text = <"Peso">
+				description = <"O peso do indivíduo.">
+			>
+			["id10"] = <
+				text = <"Vestuário">
+				description = <"Descrição do vestuário da pessoa na hora da pesagem.">
+			>
+			["at11"] = <
+				text = <"Totalmente vestida, incluindo sapatos">
+				description = <"Roupas que podem aumentar significativamente o peso, incluindo sapatos.">
+			>
+			["at12"] = <
+				text = <"Levemente vestido / roupa íntimas">
+				description = <"Roupas que não irão acrescentar ao peso de forma significativa.">
+			>
+			["at14"] = <
+				text = <"Despido">
+				description = <"Sem nenhuma roupa.">
+			>
+			["at18"] = <
+				text = <"Fralda">
+				description = <"Vestindo apenas uma fralda - pode adicionar peso significativo.">
+			>
+			["id21"] = <
+				text = <"Dispositivo">
+				description = <"Detalhes sobre o dispositivo de pesagem.">
+			>
+			["id25"] = <
+				text = <"Comentário">
+				description = <"Comentário sobre a medição do peso.">
+			>
+			["id26"] = <
+				text = <"Fatores de erro">
+				description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição de peso corporal, por exemplo, no momento do ciclo menstrual, o ciclo intestinal ou anotando amputação.">
+			>
+			["id27"] = <
+				text = <"*Any event(en)">
+				description = <"**(en)">
+			>
+			["id28"] = <
+				text = <"*New element(en)">
+				description = <"**(en)">
+			>
+			["id29"] = <
+				text = <"*New element(en)">
+				description = <"**(en)">
+			>
+			["at19"] = <
+				text = <"*Mass (en)">
+				description = <"*Mass (en)">
+			>
+			["ac1"] = <
+				text = <"Vestuário (synthesised)">
+				description = <"Descrição do vestuário da pessoa na hora da pesagem. (synthesised)">
+			>
+		>
+		["ru"] = <
+			["id1"] = <
+				text = <"Масса тела">
+				description = <"Взвешивание пациента.">
+			>
+			["id4"] = <
+				text = <"Любое событие">
+				description = <"Любое событие.">
+			>
+			["id5"] = <
+				text = <"Вес">
+				description = <"Вес пациента.">
+			>
+			["id10"] = <
+				text = <"Наличие и характер одежды">
+				description = <"Описание наличия и характера одежды пациента во время взвешивания.">
+			>
+			["at11"] = <
+				text = <"В одежде без обуви">
+				description = <"Одежда может добавить значительный вес.">
+			>
+			["at12"] = <
+				text = <"В лёгкой одежде или раздевшись до белья">
+				description = <"Одежда, не добавляющая значительный вес.">
+			>
+			["at14"] = <
+				text = <"Обнажен">
+				description = <"Без какой-либо одежды и белья.">
+			>
+			["at18"] = <
+				text = <"В памперсе">
+				description = <"Одет(а) только в памперс - может добавить значительный вес.">
+			>
+			["id21"] = <
+				text = <"Устройство">
+				description = <"Весы (устройство, на котором производилось взвешивание): информация.">
+			>
+			["id25"] = <
+				text = <"Комментарии">
+				description = <"Комментарии к взвешиванию.">
+			>
+			["id26"] = <
+				text = <"Стохастическая погрешность">
+				description = <"Фиксация любых фактов, могущих повлиять на результат взвешивания: фаза менструального цикла, давность опорожнения кишечника, сведения об ампутации и др.">
+			>
+			["id27"] = <
+				text = <"*Any event(en)">
+				description = <"**(en)">
+			>
+			["id28"] = <
+				text = <"*New element(en)">
+				description = <"**(en)">
+			>
+			["id29"] = <
+				text = <"*New element(en)">
+				description = <"**(en)">
+			>
+			["at19"] = <
+				text = <"*Mass (en)">
+				description = <"*Mass (en)">
+			>
+			["ac1"] = <
+				text = <"Наличие и характер одежды (synthesised)">
+				description = <"Описание наличия и характера одежды пациента во время взвешивания. (synthesised)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at19"] = <http://openehr.org/id/124>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at12", "at14", "at11", "at18">
+		>
+	>

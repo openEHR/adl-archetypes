@@ -1,0 +1,149 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-OBSERVATION.fluid_balance.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2013-02-22">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the cumulative or total amounts of fluid input and output, plus an estimation of the fluid balance status of a subject over specified intervals of time.">
+			use = <"Use to record cumulative or total amounts of fluid input and output, plus an estimation of the fluid balance status of a subject over specified periods of time.
+
+A fluid balance chart will typically require a combination of OBSERVATION.fluid_input, OBSERVATION.fluid_output and this archetype to capture all the required components.">
+			keywords = <"fluid", "balance", "input", "output", "loss", "sweat", "insensible", "evaporation", "sweat">
+			misuse = <"Not to be used to record individual measurements of fluid input or output. Use OBSERVATION.fluid_input or OBSERVATION.fluid_output for these purposes.">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Ian McNicoll, Ocean Informatics, United Kingdom", ...>
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["MD5-CAM-1.0.1"] = <"7A984FCE536F529CAA9D5B19447C82BF">
+	>
+
+definition
+	OBSERVATION[id1] matches {	-- Fluid Balance
+		data matches {
+			HISTORY[id2] matches {
+				events cardinality matches {1..*; unordered} matches {
+					INTERVAL_EVENT[id3] occurrences matches {0..1} matches {	-- Any Interval Total
+						math_function matches {
+							DV_CODED_TEXT[id10] matches {
+								defining_code matches {[at1]}
+							}
+						}
+						data matches {
+							ITEM_TREE[id4] matches {
+								items matches {
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Insensible Loss
+										value matches {
+											DV_QUANTITY[id11] matches {
+												property matches {[at2]}
+												units matches {"ml", "cc", "l", "fl oz"}
+											}
+										}
+									}
+									ELEMENT[id6] occurrences matches {0..1} matches {	-- Total Input
+										value matches {
+											DV_QUANTITY[id12] matches {
+												property matches {[at2]}
+												units matches {"ml", "cc", "l", "fl oz"}
+											}
+										}
+									}
+									ELEMENT[id7] occurrences matches {0..1} matches {	-- Total Output
+										value matches {
+											DV_QUANTITY[id13] matches {
+												property matches {[at2]}
+												units matches {"ml", "cc", "l", "fl oz"}
+											}
+										}
+									}
+									ELEMENT[id8] occurrences matches {0..1} matches {	-- Fluid Balance
+										value matches {
+											DV_QUANTITY[id14] matches {
+												property matches {[at2]}
+												units matches {"ml", "cc", "l", "fl oz"}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					INTERVAL_EVENT[id9] occurrences matches {0..1} matches {	-- 24 Hour Total
+						math_function matches {
+							DV_CODED_TEXT[id15] matches {
+								defining_code matches {[at1]}
+							}
+						}
+						width matches {
+							DV_DURATION[id16] matches {
+								value matches {PT24H}
+							}
+						}
+						data matches {
+							use_node ITEM_TREE[id17] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[Any Interval Total]/data[id4]
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Fluid Balance">
+				description = <"Estimation of the fluid balance status of a subject by subtracting the total fluid output plus insensible loss from the total fluid input.">
+			>
+			["id3"] = <
+				text = <"Any Interval Total">
+				description = <"The total amount representing the total over a specified interval of time, or a cumulative total to a specified time.">
+			>
+			["id5"] = <
+				text = <"Insensible Loss">
+				description = <"Estimation of the amount of fluid loss from water lost by evaporation from the skin and respiratory tract.">
+			>
+			["id6"] = <
+				text = <"Total Input">
+				description = <"The total amount of fluid input, for a specified interval of time.">
+			>
+			["id7"] = <
+				text = <"Total Output">
+				description = <"The total amount of fluid output for a specified interval of time.">
+			>
+			["id8"] = <
+				text = <"Fluid Balance">
+				description = <"Overall fluid balance for a specified period of time, calculated by subtracting the total fluid output plus insensible loss from the total fluid input.">
+			>
+			["id9"] = <
+				text = <"24 Hour Total">
+				description = <"The total amount over a specified 24 hour period.">
+			>
+			["at1"] = <
+				text = <"total">
+				description = <"total">
+			>
+			["at2"] = <
+				text = <"Volume">
+				description = <"Volume">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at1"] = <http://openehr.org/id/148>
+			["at2"] = <http://openehr.org/id/129>
+		>
+	>

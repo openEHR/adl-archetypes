@@ -1,0 +1,229 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-EVALUATION.obstetric_summary.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"2011-02-24">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record an overview about the obstetric history of a woman for purposes of: providing a snapshot of her obstetric history, reporting to statutory bodies or supporting clinical decision support.">
+			use = <"Use to record an overview of the obstetric history of a woman, including a summary of all pregnancies and the associated outcomes or interventions. 
+
+Use this summary as the basis of statutory reporting regarding births.
+
+Use to record the TPAL overview of an obstetric history, if required - the numbers of Term Births (T), Preterm Births (P), Abortions (A) and Living Children (L). Some variations add Gravidity (G) and number of Multiple Births (M).
+
+Some data may be calculated or derived from individual pregnancy records if these are available.">
+			keywords = <"obstetric", "pregnancy", "parity", "gravida", "para", "terminations", "miscarriages", "abortions", "spontaneous", "live", "births", "stillbirths", "caesarean", "ectopic", "neonatal", "tubal", "living", "multiple", "neonatal death">
+			misuse = <"Not for recording summary information about a specific pregnancy - use EVALUATION. pregnancy_summary for this purpose.
+
+Not for recording detailed information about each of the individual pregnancies, miscarriages, terminations, or deliveries. This information will be recorded using other specific archetypes as event-based data.">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Sheryl Alexander, NT Department of Health, Australia", "Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia", "Margaret Cotter, AMSANT, Australia", "Michelle Dowden, Miwatj Health Ngalkanbuy Health, Australia", "Tim Garden, NTG Department of Health, Australia", "Tanya Gardner, CAAC, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Oliver Hosking, Remote Health NT, Australia", "Michelle Kealy, Australia", "Bernadette Lack, Department of Health, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Chunlan Ma, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Steven Schatz, Department of Health (Northern Territory), Australia", "Rosalie Schultz, Anyinginyi Health Aboriginal Corporation, Australia", "Gary Sinclair, NT DoH, Australia", "Cherie Whitbread, Royal Darwin Hospital, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"5861E68BB323792892A45055A9EC5EDC">
+	>
+
+definition
+	EVALUATION[id1] matches {	-- Obstetric summary
+		data matches {
+			ITEM_TREE[id2] matches {
+				items matches {
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Pregnancies
+						value matches {
+							DV_COUNT[id22] matches {
+								magnitude matches {|0..<100|}
+							}
+						}
+					}
+					ELEMENT[id4] occurrences matches {0..1} matches {	-- Births
+						value matches {
+							DV_COUNT[id23] matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+					ELEMENT[id16] occurrences matches {0..1} matches {	-- Term Births
+						value matches {
+							DV_COUNT[id24] 
+						}
+					}
+					ELEMENT[id17] occurrences matches {0..1} matches {	-- Preterm Births
+						value matches {
+							DV_COUNT[id25] 
+						}
+					}
+					ELEMENT[id19] occurrences matches {0..1} matches {	-- Multiple Births
+						value matches {
+							DV_COUNT[id26] 
+						}
+					}
+					ELEMENT[id18] occurrences matches {0..1} matches {	-- Abortions
+						value matches {
+							DV_COUNT[id27] 
+						}
+					}
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Miscarriages
+						value matches {
+							DV_COUNT[id28] matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Terminations
+						value matches {
+							DV_COUNT[id29] matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Ectopic Pregnancies
+						value matches {
+							DV_COUNT[id30] 
+						}
+					}
+					ELEMENT[id11] occurrences matches {0..1} matches {	-- Caesarean Sections
+						value matches {
+							DV_COUNT[id31] matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+					ELEMENT[id13] occurrences matches {0..1} matches {	-- Stillborn
+						value matches {
+							DV_COUNT[id32] 
+						}
+					}
+					ELEMENT[id7] occurrences matches {0..1} matches {	-- Liveborn
+						value matches {
+							DV_COUNT[id33] matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+					ELEMENT[id8] occurrences matches {0..1} matches {	-- Living Children
+						value matches {
+							DV_COUNT[id34] matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+					ELEMENT[id21] occurrences matches {0..1} matches {	-- Adopted Children
+						value matches {
+							DV_COUNT[id35] 
+						}
+					}
+					ELEMENT[id20] occurrences matches {0..1} matches {	-- Clinical Description
+						value matches {
+							DV_TEXT[id36] 
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[id9] matches {
+				items matches {
+					ELEMENT[id10] occurrences matches {0..1} matches {	-- Date Updated
+						value matches {
+							DV_DATE_TIME[id37] 
+						}
+					}
+					ELEMENT[id14] occurrences matches {0..1} matches {	-- Stillbirth Definition
+						value matches {
+							DV_TEXT[id38] 
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Obstetric summary">
+				description = <"An overview of the obstetric history of a woman, including a summary of all pregnancies and the associated outcomes or interventions.">
+			>
+			["id3"] = <
+				text = <"Pregnancies">
+				description = <"Number of times a woman has been pregnant, including a current pregnancy. May also be referred to as Gravidity.">
+			>
+			["id4"] = <
+				text = <"Births">
+				description = <"Number of times a woman has given birth after 20 weeks gestation, to one or more babies. May also be referred to as Parity.">
+			>
+			["id5"] = <
+				text = <"Miscarriages">
+				description = <"Number of times a woman has had a spontaneous miscarriage at less than 20 weeks of gestation.">
+			>
+			["id6"] = <
+				text = <"Terminations">
+				description = <"Number of times a woman has had an induced pregnancy termination, regardless of gestation.">
+			>
+			["id7"] = <
+				text = <"Liveborn">
+				description = <"Number of liveborn babies from all birth events.">
+			>
+			["id8"] = <
+				text = <"Living Children">
+				description = <"Number of children who remain alive at the time of data recording.">
+			>
+			["id10"] = <
+				text = <"Date Updated">
+				description = <"The date this summary was last updated.">
+			>
+			["id11"] = <
+				text = <"Caesarean Sections">
+				description = <"Number of Caesarean sections performed.">
+			>
+			["id12"] = <
+				text = <"Ectopic Pregnancies">
+				description = <"Number of ectopic pregnancies.">
+			>
+			["id13"] = <
+				text = <"Stillborn">
+				description = <"Number of stillborn babies from all birth events.">
+			>
+			["id14"] = <
+				text = <"Stillbirth Definition">
+				description = <"Definition of stillbirth.">
+			>
+			["id16"] = <
+				text = <"Term Births">
+				description = <"Number of birth events in which the babies are born on or after 37 weeks of gestation.">
+			>
+			["id17"] = <
+				text = <"Preterm Births">
+				description = <"Number of birth events in which the babies are born at less than 37 weeks of gestation.">
+			>
+			["id18"] = <
+				text = <"Abortions">
+				description = <"Number of non-viable pregnancies from all causes and at any gestation, including spontaneous miscarriages, induced terminations and ectopic pregnancies.">
+			>
+			["id19"] = <
+				text = <"Multiple Births">
+				description = <"Number of birth events in which more than one baby has been born.">
+			>
+			["id20"] = <
+				text = <"Clinical Description">
+				description = <"Narrative description about the obstetric history, including significant aspects that might be useful for sharing or for triggering further investigation.">
+			>
+			["id21"] = <
+				text = <"Adopted Children">
+				description = <"Number of children who have been adopted.">
+			>
+		>
+	>

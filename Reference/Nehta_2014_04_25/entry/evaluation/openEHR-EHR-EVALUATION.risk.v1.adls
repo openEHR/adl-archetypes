@@ -1,0 +1,186 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-EVALUATION.risk.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Jasmin Buck, Sebastian Garde">
+				["organisation"] = <"University of Heidelberg, Cental Queensland University">
+			>
+		>
+	>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"2006-04-23">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Dokumentation des Vorhandenseins eines Risikos mit möglichen Auswirkungen jetzt oder in der Zukunft">
+			use = <"">
+			keywords = <"Einschätzung", ...>
+			misuse = <"">
+			copyright = <"© National E-Health Transition Authority">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record known risk factors for an identified disease, condition, or other potentially adverse health issue , and/or an evaluation of the likelihood of the subject experiencing it in the future.">
+			use = <"Use to record known risk factors for an identified disease, condition, or other potentially adverse health issue , and/or an evaluation of the likelihood of the subject experiencing it in the future.">
+			keywords = <"assessment", "risk", "evaluation">
+			misuse = <"">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Evaluation of Risk of Condition, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 23 Apr 2006. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.176_1 (accessed 05 Apr 2013).">
+		["MD5-CAM-1.0.1"] = <"B9BBB477E18D173E98717653D9FFC6DC">
+	>
+
+definition
+	EVALUATION[id1] matches {	-- Health Risk
+		data matches {
+			ITEM_TREE[id2] matches {
+				items cardinality matches {1..*; ordered} matches {
+					ELEMENT[id3] matches {	-- Risk
+						value matches {
+							DV_TEXT[id15] 
+						}
+					}
+					ELEMENT[id14] matches {	-- Risk Factor
+						value matches {
+							DV_TEXT[id16] 
+						}
+					}
+					ELEMENT[id13] matches {	-- Link to Evidence
+						value matches {
+							DV_URI[id17] 
+						}
+					}
+					ELEMENT[id4] occurrences matches {0..1} matches {	-- Category
+						value matches {
+							DV_CODED_TEXT[id18] matches {
+								defining_code matches {[ac1]}		-- Category (synthesised)
+							}
+						}
+					}
+					ELEMENT[id5] matches {	-- Rationale
+						value matches {
+							DV_TEXT[id19] 
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["de"] = <
+			["id1"] = <
+				text = <"*Health Risk(en)">
+				description = <"*Record of known risk factors for an identified disease, condition, or other potentially adverse health issue , and/or an evaluation of the likelihood of the subject experiencing it in the future.(en)">
+			>
+			["id3"] = <
+				text = <"*Risk(en)">
+				description = <"*Identified disease, condition or health issue.(en)">
+			>
+			["id4"] = <
+				text = <"*Category(en)">
+				description = <"*The likelihood that this person will be affected by this disease, condition or health issue in the future.(en)">
+			>
+			["id5"] = <
+				text = <"*Rationale(en)">
+				description = <"*Justification for this risk assessment.(en)">
+			>
+			["at7"] = <
+				text = <"*Not significant(en)">
+				description = <"*The person is assessed as being at no higher risk than the general population.(en)">
+			>
+			["at8"] = <
+				text = <"*Minimally Significant(en)">
+				description = <"*The person is assessed as being at slightly higher risk than the general population.(en)">
+			>
+			["at9"] = <
+				text = <"*Significant(en)">
+				description = <"*The person is assessed as being at significantly higher risk than the general population.(en)">
+			>
+			["at10"] = <
+				text = <"*Highly Significant(en)">
+				description = <"*The person is assessed as being at considerably higher risk than the general population.(en)">
+			>
+			["id13"] = <
+				text = <"*Link to Evidence(en)">
+				description = <"*Identification of the path to the archetype or data node for the evidence of risk.(en)">
+			>
+			["id14"] = <
+				text = <"*Risk Factor(en)">
+				description = <"*Known risk factor that may contribute to the evaluation of risk.(en)">
+			>
+			["ac1"] = <
+				text = <"*Category(en) (synthesised)">
+				description = <"*The likelihood that this person will be affected by this disease, condition or health issue in the future.(en) (synthesised)">
+			>
+		>
+		["en"] = <
+			["id1"] = <
+				text = <"Health Risk">
+				description = <"Record of known risk factors for an identified disease, condition, or other potentially adverse health issue , and/or an evaluation of the likelihood of the subject experiencing it in the future.">
+			>
+			["id3"] = <
+				text = <"Risk">
+				description = <"Identified disease, condition or health issue.">
+			>
+			["id4"] = <
+				text = <"Category">
+				description = <"The likelihood that this person will be affected by this disease, condition or health issue in the future.">
+			>
+			["id5"] = <
+				text = <"Rationale">
+				description = <"Justification for this risk assessment.">
+			>
+			["at7"] = <
+				text = <"Not significant">
+				description = <"The person is assessed as being at no higher risk than the general population.">
+			>
+			["at8"] = <
+				text = <"Minimally Significant">
+				description = <"The person is assessed as being at slightly higher risk than the general population.">
+			>
+			["at9"] = <
+				text = <"Significant">
+				description = <"The person is assessed as being at significantly higher risk than the general population.">
+			>
+			["at10"] = <
+				text = <"Highly Significant">
+				description = <"The person is assessed as being at considerably higher risk than the general population.">
+			>
+			["id13"] = <
+				text = <"Link to Evidence">
+				description = <"Identification of the path to the archetype or data node for the evidence of risk.">
+			>
+			["id14"] = <
+				text = <"Risk Factor">
+				description = <"Known risk factor that may contribute to the evaluation of risk.">
+			>
+			["ac1"] = <
+				text = <"Category (synthesised)">
+				description = <"The likelihood that this person will be affected by this disease, condition or health issue in the future. (synthesised)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at7", "at8", "at9", "at10">
+		>
+	>

@@ -1,0 +1,360 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-ACTION.referral.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"9/03/2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the activity related to carrying out a referral from a requesting healthcare provider to a receiving healthcare provider for the patient to receive a specific service, advice or care.
+
+To record the activity related to a self-referral by a patient to a healthcare provider to receive a specific service, advice, or care provision.">
+			use = <"Use to record the activity related to carrying out a referral from a requesting healthcare provider to a receiving healthcare provider for the patient to receive a specific service, advice or care. For example, referral to a specialist by a GP.
+
+Use to record the activity related to a self-referral by a patient to a healthcare provider to receive a specific service, advice, or care provision. For example, a checkup visit to a dentist for preventive care, or a series of visits to a physiotherapist for management of a musculoskeletal strain.">
+			keywords = <"referral", "visit", "encounter">
+			misuse = <"">
+			copyright = <"© 2011 NEHTA">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"B04BBB697FB2AE5C582E0488D822C287">
+	>
+
+definition
+	ACTION[id1] matches {	-- Referral
+		ism_transition matches {
+			ISM_TRANSITION[id24] matches {
+				current_state matches {
+					DV_CODED_TEXT[id25] matches {
+						defining_code matches {[at26]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id26] matches {
+						defining_code matches {[at3]}
+					}
+				}
+			}
+			ISM_TRANSITION[id27] matches {
+				current_state matches {
+					DV_CODED_TEXT[id28] matches {
+						defining_code matches {[at27]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id29] matches {
+						defining_code matches {[at9]}
+					}
+				}
+			}
+			ISM_TRANSITION[id30] matches {
+				current_state matches {
+					DV_CODED_TEXT[id31] matches {
+						defining_code matches {[at28]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id32] matches {
+						defining_code matches {[at10]}
+					}
+				}
+			}
+			ISM_TRANSITION[id33] matches {
+				current_state matches {
+					DV_CODED_TEXT[id34] matches {
+						defining_code matches {[at29]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id35] matches {
+						defining_code matches {[at4]}
+					}
+				}
+			}
+			ISM_TRANSITION[id36] matches {
+				current_state matches {
+					DV_CODED_TEXT[id37] matches {
+						defining_code matches {[at30]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id38] matches {
+						defining_code matches {[at5]}
+					}
+				}
+			}
+			ISM_TRANSITION[id39] matches {
+				current_state matches {
+					DV_CODED_TEXT[id40] matches {
+						defining_code matches {[at30]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id41] matches {
+						defining_code matches {[at25]}
+					}
+				}
+			}
+			ISM_TRANSITION[id42] matches {
+				current_state matches {
+					DV_CODED_TEXT[id43] matches {
+						defining_code matches {[at31]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id44] matches {
+						defining_code matches {[at11]}
+					}
+				}
+			}
+			ISM_TRANSITION[id45] matches {
+				current_state matches {
+					DV_CODED_TEXT[id46] matches {
+						defining_code matches {[at32]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id47] matches {
+						defining_code matches {[at7]}
+					}
+				}
+			}
+			ISM_TRANSITION[id48] matches {
+				current_state matches {
+					DV_CODED_TEXT[id49] matches {
+						defining_code matches {[at32]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id50] matches {
+						defining_code matches {[at24]}
+					}
+				}
+			}
+			ISM_TRANSITION[id51] matches {
+				current_state matches {
+					DV_CODED_TEXT[id52] matches {
+						defining_code matches {[at33]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id53] matches {
+						defining_code matches {[at6]}
+					}
+				}
+			}
+		}
+		description matches {
+			ITEM_TREE[id2] matches {
+				items matches {
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Referred service
+						value matches {
+							DV_TEXT[id54] 
+						}
+					}
+					ELEMENT[id15] occurrences matches {0..1} matches {	-- Service type
+						value matches {
+							DV_TEXT[id55] 
+						}
+					}
+					ELEMENT[id13] occurrences matches {0..1} matches {	-- Reason
+						value matches {
+							DV_TEXT[id56] 
+						}
+					}
+					ELEMENT[id14] occurrences matches {0..1} matches {	-- Description
+						value matches {
+							DV_TEXT[id57] 
+						}
+					}
+					ELEMENT[id23] occurrences matches {0..1} matches {	-- Duration
+						value matches {
+							DV_DURATION[id58] 
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[id16] matches {
+				items matches {
+					ELEMENT[id17] occurrences matches {0..1} matches {	-- Requestor identifier
+						value matches {
+							DV_IDENTIFIER[id59] 
+						}
+					}
+					allow_archetype CLUSTER[id18] matches {	-- Requestor
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[id19] occurrences matches {0..1} matches {	-- Receiver identifier
+						value matches {
+							DV_IDENTIFIER[id60] 
+						}
+					}
+					allow_archetype CLUSTER[id20] matches {	-- Receiver
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[id22] occurrences matches {0..1} matches {	-- Sequence number
+						value matches {
+							DV_COUNT[id61] 
+						}
+					}
+					ELEMENT[id21] occurrences matches {0..1} matches {	-- Total number of services
+						value matches {
+							DV_COUNT[id62] 
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Referral">
+				description = <"Activity regarding a referral from a clinician, or self-referral by a patient, for the patient to receive a specific service, advice or care from an expert healthcare provider.">
+			>
+			["at3"] = <
+				text = <"Referral planned">
+				description = <"Referral to healthcare provider is planned.">
+			>
+			["at4"] = <
+				text = <"Appoinment scheduled">
+				description = <"Appointment for a healthcare provider service has been made.">
+			>
+			["at5"] = <
+				text = <"Service provided">
+				description = <"The healthcare provider has provided the service.">
+			>
+			["at6"] = <
+				text = <"Referral episode complete">
+				description = <"All service activities have been completed and person returned for ongoing care.">
+			>
+			["at7"] = <
+				text = <"Referral terminated">
+				description = <"The referral has been ceased before the service has been completed.">
+			>
+			["at9"] = <
+				text = <"Referral postponed">
+				description = <"The planned referral has been postponed.">
+			>
+			["at10"] = <
+				text = <"Referral cancelled">
+				description = <"The planned referral for a service has been cancelled prior to commencement.">
+			>
+			["at11"] = <
+				text = <"Referral suspended">
+				description = <"The referral has been suspended without completion.">
+			>
+			["id12"] = <
+				text = <"Referred service">
+				description = <"Identification of the clinical service to be/being carried out. This is often coded with an external terminology.">
+			>
+			["id13"] = <
+				text = <"Reason">
+				description = <"Reason for activity, for example reason referral was stopped early or reason referral was performed.">
+			>
+			["id14"] = <
+				text = <"Description">
+				description = <"Description of the service provided.">
+			>
+			["id15"] = <
+				text = <"Service type">
+				description = <"Type of service to be carried out or being carried out.">
+			>
+			["id17"] = <
+				text = <"Requestor identifier">
+				description = <"The local ID assigned to the order by the healthcare provider or organisation requesting the service. This is also referred to as Placer Order Identifier.">
+			>
+			["id18"] = <
+				text = <"Requestor">
+				description = <"Details about the healthcare provider or organisation requesting the service.">
+			>
+			["id19"] = <
+				text = <"Receiver identifier">
+				description = <"The ID assigned to the order by the healthcare provider or organisation receiving the request for referral. This is also referred to as Filler Order Identifier.">
+			>
+			["id20"] = <
+				text = <"Receiver">
+				description = <"Details about the healthcare provider or organisation receiving the request for referral.">
+			>
+			["id21"] = <
+				text = <"Total number of services">
+				description = <"The total number of services to be undertaken.">
+			>
+			["id22"] = <
+				text = <"Sequence number">
+				description = <"The sequence of a particular clinical service.">
+			>
+			["id23"] = <
+				text = <"Duration">
+				description = <"Duration of service or care provided.">
+			>
+			["at24"] = <
+				text = <"Referral expired">
+				description = <"The referral has expired before the referral episode has been completed.">
+			>
+			["at25"] = <
+				text = <"Service not provided">
+				description = <"The service was scheduled but not provided.">
+			>
+			["at26"] = <
+				text = <"planned">
+				description = <"planned">
+			>
+			["at27"] = <
+				text = <"postponed">
+				description = <"postponed">
+			>
+			["at28"] = <
+				text = <"cancelled">
+				description = <"cancelled">
+			>
+			["at29"] = <
+				text = <"scheduled">
+				description = <"scheduled">
+			>
+			["at30"] = <
+				text = <"active">
+				description = <"active">
+			>
+			["at31"] = <
+				text = <"suspended">
+				description = <"suspended">
+			>
+			["at32"] = <
+				text = <"aborted">
+				description = <"aborted">
+			>
+			["at33"] = <
+				text = <"complete">
+				description = <"complete">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at26"] = <http://openehr.org/id/526>
+			["at27"] = <http://openehr.org/id/527>
+			["at28"] = <http://openehr.org/id/528>
+			["at29"] = <http://openehr.org/id/529>
+			["at30"] = <http://openehr.org/id/245>
+			["at31"] = <http://openehr.org/id/530>
+			["at32"] = <http://openehr.org/id/531>
+			["at33"] = <http://openehr.org/id/532>
+		>
+	>

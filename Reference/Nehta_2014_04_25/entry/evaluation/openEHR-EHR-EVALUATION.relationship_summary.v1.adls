@@ -1,0 +1,162 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-EVALUATION.relationship_summary.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"17/12/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record a summary about the key people with which the individual has a relationship or connectedness, including but not limited to family members, friends and community members.">
+			use = <"Use to record information about the relationships that the individual has with key people  - family members, support or community networks.">
+			keywords = <"relationship", "family", "friend", "social", "netword", "community", "marital", "contact">
+			misuse = <"">
+			copyright = <"© 2010 NEHTA">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Stephen Chu, NEHTA, Australia", ...>
+	other_details = <
+		["references"] = <"Australian Institute of Health and Welfare, METeOR repository - http://meteor.aihw.gov.au.">
+		["MD5-CAM-1.0.1"] = <"E19950DEEE5D16535C494A26378D36DA">
+	>
+
+definition
+	EVALUATION[id1] matches {	-- Relationship Summary
+		data matches {
+			ITEM_TREE[id2] matches {
+				items matches {
+					ELEMENT[id9] occurrences matches {0..1} matches {	-- Social marital status
+						value matches {
+							DV_TEXT[id21] 
+						}
+					}
+					ELEMENT[id17] occurrences matches {0..1} matches {	-- Number of dependants
+						value matches {
+							DV_COUNT[id22] 
+						}
+					}
+					CLUSTER[id3] matches {	-- Social relationship
+						items matches {
+							ELEMENT[id4] occurrences matches {0..1} matches {	-- Label
+								value matches {
+									DV_TEXT[id23] 
+								}
+							}
+							ELEMENT[id5] occurrences matches {0..1} matches {	-- Name
+								value matches {
+									DV_TEXT[id24] 
+								}
+							}
+							ELEMENT[id6] occurrences matches {0..1} matches {	-- Relationship type
+								value matches {
+									DV_TEXT[id25] 
+								}
+							}
+							allow_archetype CLUSTER[id11] matches {	-- Person details
+								include
+									archetype_id/value matches {/.*/}
+							}
+							ELEMENT[id7] occurrences matches {0..1} matches {	-- Comment
+								value matches {
+									DV_TEXT[id26] 
+								}
+							}
+						}
+					}
+					CLUSTER[id18] matches {	-- Contact
+						items matches {
+							ELEMENT[id14] matches {	-- Nominated contact
+								value matches {
+									DV_TEXT[id27] 
+								}
+							}
+							ELEMENT[id19] occurrences matches {0..1} matches {	-- Contact type
+								value matches {
+									DV_TEXT[id28] 
+								}
+							}
+							allow_archetype CLUSTER[id20] matches {	-- Contact details
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+					ELEMENT[id13] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT[id29] 
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Relationship Summary">
+				description = <"Summary of connection between the individual and other individuals, or the individual with a group of people. These relationships reflect the social connectedness of an individual and may indicate sources of  social support.">
+			>
+			["id3"] = <
+				text = <"Social relationship">
+				description = <"Identified social relationship with another individual. Not limited only to family members.">
+			>
+			["id4"] = <
+				text = <"Label">
+				description = <"Label to identify the related individual, without using personal information, for example, sister #1.">
+			>
+			["id5"] = <
+				text = <"Name">
+				description = <"Name of related individual.">
+			>
+			["id6"] = <
+				text = <"Relationship type">
+				description = <"Type of relationship with the related individual.">
+			>
+			["id7"] = <
+				text = <"Comment">
+				description = <"Comment about the related individual.">
+			>
+			["id9"] = <
+				text = <"Social marital status">
+				description = <"An individual's relationship status in terms of a couple relationship with another person. Not limited to registered marital status.">
+			>
+			["id11"] = <
+				text = <"Person details">
+				description = <"Details about the related individual.">
+			>
+			["id13"] = <
+				text = <"Comment">
+				description = <"Comment about the individual's relationships and social connectedness.">
+			>
+			["id14"] = <
+				text = <"Nominated contact">
+				description = <"Name of nominated contact person.">
+			>
+			["id17"] = <
+				text = <"Number of dependants">
+				description = <"Total number of persons for whom the individual is responsible.">
+			>
+			["id18"] = <
+				text = <"Contact">
+				description = <"Details about a contact person.">
+			>
+			["id19"] = <
+				text = <"Contact type">
+				description = <"Type of contact, for example spouse or next of kin.">
+			>
+			["id20"] = <
+				text = <"Contact details">
+				description = <"Further details about the contact person.">
+			>
+		>
+	>

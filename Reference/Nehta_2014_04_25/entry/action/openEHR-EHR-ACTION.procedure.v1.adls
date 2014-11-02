@@ -1,0 +1,356 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-ACTION.procedure.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"24/01/2011">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record information about the activities required to carry out a procedure, including the planning, scheduling, performance, suspension, cancellation, documentation and completion.">
+			use = <"Use to record information about the activities required to carry out a procedure, including the planning, scheduling, performance, suspension, cancellation, documentation and completion.  This is done by the recording of data against specific activities, as defined by the 'Pathway' care steps in this archetype.
+
+The scope of this archetype encompasses activities for a broad range of clinical procedures performed for therapeutic, evaluative, investigative, screening or diagnostic purposes. Examples range from the relatively simple activities, such as insertion of an intravenous cannula, through to complex surgical operations.
+
+Additional structured and detailed information about the procedure can be captured using purpose-specific archetypes inserted into the 'Procedure detail' slot, where required.
+
+Start date/time is included in the Protocol. If this is recorded against the Scheduled care pathway step, it captures the scheduled start time; if recorded against the Procedure performed step, then it captures the actual start time of the procedure.
+
+End date/time has not been specifically modelled in this archetype as this is the date/time that is recorded (per the reference model) as each action or care pathway step is completed.
+
+Within the context of an Operation Report, this archetype will be used to record only what was done during the procedure . Separate archetypes will be used to record the other required components of the Operation Report, including the taking of tissue specimen samples, use of imaging guidance, operation findings, post-operative instructions and plans for followup.
+
+Within the context of a Problem list or summary, this archetype may be used to represent procedures that have been performed. The EVALUATION.problem_diagnosis will be used to represent the patient's problems and diagnoses.
+
+In practice, many procedures (for example, in ambulatory care) will occur once and not be ordered in advance. The pathway step, ‘Procedure completed’ (or ‘Failed attempt’, or ‘Procedure aborted’) will be recorded and the details added. In some cases a recurring procedure will be ordered, and in this situation data against the ‘Procedure undertaken’ step will be recorded on each occasion, leaving the instruction in the active state. When the last occurrence is recorded the ‘Procedure completed’ action is recorded showing that this order is now in the completed state.
+
+In other situations, such as secondary care, there may be a formal order for a procedure using a corresponding INSTRUCTION archetype. This ACTION archetype can then be used to record the workflow of when and how the order has been carried out.
+
+Recording information using this ACTION archetype indicates that some sort of activity has actually occurred; this will usually be the procedure itself but may be a failed attempt or another activity such as postponing the procedure. If there is a formal order for the procedure, the state of this order is represented by the Pathway step against which the data is recorded. For example, using this archetype the progressing state of a Gastroscopy order may be recorded through separate entries in the EHR progress notes at each 'Pathway' step:
+- record the scheduled Start date/time for the gastroscopy (Procedure scheduled); 
+- record the gastroscopy was attempted but failed (Failed attempt); and
+- record that the gastroscopy procedure has been completed, including information about the procedure details (Procedure completed).">
+			keywords = <"procedure", "intervention", "surgical", "medical", "clinical", "therapeutic", "diagnostic">
+			misuse = <"Not to be used to record details about related activities such as use of imaging guidance during the procedure or collection of tissue samples for analysis - use specific ACTION archetypes for this purpose.
+
+Not to be used to record a whole operation or procedure report.">
+			copyright = <"© 2011 NEHTA">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Stephen Chu, NEHTA, Australia (Editor)", "David Evans, Queensland Health, Australia", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Andrew Goodchild, NEHTA, Australia", "Megan Hawkins, Mater Health Services, Australia", "Sam Heard, Ocean Informatics, Australia", "Mary Kelaher, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Michael Osborne, Mater Health Services, Australia", "Chris Pearce, Melbourne East GP Network, Australia", "Peter Scott, Australia", "Elizabeth Stanick, Hobart Anaesthetic Group, Australia", "John Taylor, NEHTA, Australia", "Richard Townley-O'Neill, NEHTA, Australia">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"E5A1E33897CAD2386B16AD3AE60D16A0">
+	>
+
+definition
+	ACTION[id1] matches {	-- Procedure
+		ism_transition matches {
+			ISM_TRANSITION[id36] matches {
+				current_state matches {
+					DV_CODED_TEXT[id37] matches {
+						defining_code matches {[at30]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id38] matches {
+						defining_code matches {[at14]}
+					}
+				}
+			}
+			ISM_TRANSITION[id39] matches {
+				current_state matches {
+					DV_CODED_TEXT[id40] matches {
+						defining_code matches {[at31]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id41] matches {
+						defining_code matches {[at26]}
+					}
+				}
+			}
+			ISM_TRANSITION[id42] matches {
+				current_state matches {
+					DV_CODED_TEXT[id43] matches {
+						defining_code matches {[at32]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id44] matches {
+						defining_code matches {[at28]}
+					}
+				}
+			}
+			ISM_TRANSITION[id45] matches {
+				current_state matches {
+					DV_CODED_TEXT[id46] matches {
+						defining_code matches {[at33]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id47] matches {
+						defining_code matches {[at16]}
+					}
+				}
+			}
+			ISM_TRANSITION[id48] matches {
+				current_state matches {
+					DV_CODED_TEXT[id49] matches {
+						defining_code matches {[at34]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id50] matches {
+						defining_code matches {[at18]}
+					}
+				}
+			}
+			ISM_TRANSITION[id51] matches {
+				current_state matches {
+					DV_CODED_TEXT[id52] matches {
+						defining_code matches {[at34]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id53] matches {
+						defining_code matches {[at19]}
+					}
+				}
+			}
+			ISM_TRANSITION[id54] matches {
+				current_state matches {
+					DV_CODED_TEXT[id55] matches {
+						defining_code matches {[at35]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id56] matches {
+						defining_code matches {[at27]}
+					}
+				}
+			}
+			ISM_TRANSITION[id57] matches {
+				current_state matches {
+					DV_CODED_TEXT[id58] matches {
+						defining_code matches {[at36]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id59] matches {
+						defining_code matches {[at29]}
+					}
+				}
+			}
+			ISM_TRANSITION[id60] matches {
+				current_state matches {
+					DV_CODED_TEXT[id61] matches {
+						defining_code matches {[at37]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id62] matches {
+						defining_code matches {[at25]}
+					}
+				}
+			}
+		}
+		description matches {
+			ITEM_TREE[id2] matches {
+				items matches {
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Procedure name
+						value matches {
+							DV_TEXT[id63] 
+						}
+					}
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Description
+						value matches {
+							DV_TEXT[id64] 
+						}
+					}
+					ELEMENT[id4] matches {	-- Reason
+						value matches {
+							DV_TEXT[id65] 
+						}
+					}
+					allow_archetype CLUSTER[id35] matches {	-- Anatomical location
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+					}
+					allow_archetype CLUSTER[id6] matches {	-- Procedure detail
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[id32] occurrences matches {0..1} matches {	-- Duration
+						value matches {
+							DV_DURATION[id66] 
+						}
+					}
+					ELEMENT[id11] occurrences matches {0..1} matches {	-- Multimedia
+						value matches {
+							DV_MULTIMEDIA[id67] matches {
+								media_type 
+							}
+						}
+					}
+					ELEMENT[id10] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT[id68] 
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[id30] matches {
+				items matches {
+					ELEMENT[id31] occurrences matches {0..1} matches {	-- Start date/time
+						value matches {
+							DV_DATE_TIME[id69] 
+						}
+					}
+					allow_archetype CLUSTER[id34] matches {	-- Device
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Procedure">
+				description = <"A clinical activity carried out for therapeutic, evaluative, investigative, screening or diagnostic purposes.">
+			>
+			["id3"] = <
+				text = <"Procedure name">
+				description = <"The name of the procedure (to be) performed. Coding of the specific procedure with a terminology is preferred, where possible.">
+			>
+			["id4"] = <
+				text = <"Reason">
+				description = <"Reason that the activity or care pathway step for the identified procedure was carried out, for example, the reason for the cancellation or suspension of the procedure.">
+			>
+			["id5"] = <
+				text = <"Description">
+				description = <"Narrative description about the activity or care pathway step for the identified procedure, for example description about the performance and findings from the the procedure, the failed attempt or the cancellation of the procedure.">
+			>
+			["id6"] = <
+				text = <"Procedure detail">
+				description = <"Structured information about the procedure. Use to capture detailed, structured information about method & technique, equipment used & devices implanted and findings etc.">
+			>
+			["id10"] = <
+				text = <"Comment">
+				description = <"Additional narrative about the activity or care pathway step not captured in other fields.">
+			>
+			["id11"] = <
+				text = <"Multimedia">
+				description = <"Multimedia representation of the procedure undertaken, for example, a link to a video of the procedure performed or a drawing of the wound/surgery etc.">
+			>
+			["at14"] = <
+				text = <"Procedure planned">
+				description = <"The procedure to be undertaken is planned.">
+			>
+			["at16"] = <
+				text = <"Procedure scheduled">
+				description = <"The procedure has been scheduled.">
+			>
+			["at18"] = <
+				text = <"Procedure performed">
+				description = <"The procedure has been performed but more actions remain to be completed.">
+			>
+			["at19"] = <
+				text = <"Failed attempt">
+				description = <"The procedure has been commenced but not completed successfully.">
+			>
+			["at25"] = <
+				text = <"Procedure completed">
+				description = <"The procedure has been performed and all associated actions completed.">
+			>
+			["at26"] = <
+				text = <"Procedure postponed">
+				description = <"The procedure has been postponed.">
+			>
+			["at27"] = <
+				text = <"Procedure suspended">
+				description = <"The procedure has been suspended.">
+			>
+			["at28"] = <
+				text = <"Procedure cancelled">
+				description = <"The planned procedure has been cancelled prior to commencement.">
+			>
+			["at29"] = <
+				text = <"Procedure aborted">
+				description = <"The procedure has been aborted.">
+			>
+			["id31"] = <
+				text = <"Start date/time">
+				description = <"The start date and/or time for the procedure. This will indicate the scheduled date/time when recorded against the Scheduled care pathway step or the actual Start date/time in the Procedure performed step.">
+			>
+			["id32"] = <
+				text = <"Duration">
+				description = <"Duration of the procedure, (especially for the Procedure performed pathway step).">
+			>
+			["id34"] = <
+				text = <"Device">
+				description = <"Structured information about any device used during the procedure.">
+			>
+			["id35"] = <
+				text = <"Anatomical location">
+				description = <"Structured information about the specific anatomical location of the procedure.">
+			>
+			["at30"] = <
+				text = <"planned">
+				description = <"planned">
+			>
+			["at31"] = <
+				text = <"postponed">
+				description = <"postponed">
+			>
+			["at32"] = <
+				text = <"cancelled">
+				description = <"cancelled">
+			>
+			["at33"] = <
+				text = <"scheduled">
+				description = <"scheduled">
+			>
+			["at34"] = <
+				text = <"active">
+				description = <"active">
+			>
+			["at35"] = <
+				text = <"suspended">
+				description = <"suspended">
+			>
+			["at36"] = <
+				text = <"aborted">
+				description = <"aborted">
+			>
+			["at37"] = <
+				text = <"complete">
+				description = <"complete">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at30"] = <http://openehr.org/id/526>
+			["at31"] = <http://openehr.org/id/527>
+			["at32"] = <http://openehr.org/id/528>
+			["at33"] = <http://openehr.org/id/529>
+			["at34"] = <http://openehr.org/id/245>
+			["at35"] = <http://openehr.org/id/530>
+			["at36"] = <http://openehr.org/id/531>
+			["at37"] = <http://openehr.org/id/532>
+		>
+	>

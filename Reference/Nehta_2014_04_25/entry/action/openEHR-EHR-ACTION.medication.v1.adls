@@ -1,0 +1,624 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-ACTION.medication.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"NEHTA">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"9/11/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"The recording of activities undertaken with regard to a medicine, vaccine or other therapeutic good and linking to the instruction if appropriate.">
+			use = <"For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
+
+Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
+
+There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.">
+			keywords = <"medication", "prescibe", "dispense", "administration", "cessation", "therapeutic good", "supply">
+			misuse = <"Use when recording an instruction or order (use INSTRUCTION.medication).">
+			copyright = <"© 2011 NEHTA">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Stephen Chu, NEHTA, Australia (Editor)", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Jude Michel, Queensland Health, Australia", "Chris Mitchell, RACGP, Australia", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia (Editor)", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
+	other_details = <
+		["references"] = <"NEHTA Therapeutic Good Use Datagroup http://nehta.gov.au/data-group-library/data-specifications/dgl-therapeutic-good-action
+openEHR Medication Action archetype http://openehr.org/knowledge">
+		["MD5-CAM-1.0.1"] = <"4DDF2F7915943B33274665A3A074D7A3">
+	>
+
+definition
+	ACTION[id1] matches {	-- Medication action
+		ism_transition matches {
+			ISM_TRANSITION[id42] matches {
+				current_state matches {
+					DV_CODED_TEXT[id43] matches {
+						defining_code matches {[at41]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id44] matches {
+						defining_code matches {[at2]}
+					}
+				}
+			}
+			ISM_TRANSITION[id45] matches {
+				current_state matches {
+					DV_CODED_TEXT[id46] matches {
+						defining_code matches {[at42]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id47] matches {
+						defining_code matches {[at14]}
+					}
+				}
+			}
+			ISM_TRANSITION[id48] matches {
+				current_state matches {
+					DV_CODED_TEXT[id49] matches {
+						defining_code matches {[at43]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id50] matches {
+						defining_code matches {[at13]}
+					}
+				}
+			}
+			ISM_TRANSITION[id51] matches {
+				current_state matches {
+					DV_CODED_TEXT[id52] matches {
+						defining_code matches {[at44]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id53] matches {
+						defining_code matches {[at17]}
+					}
+				}
+			}
+			ISM_TRANSITION[id54] matches {
+				current_state matches {
+					DV_CODED_TEXT[id55] matches {
+						defining_code matches {[ac3]}		-- Medication action (synthesised)
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id56] matches {
+						defining_code matches {[at3]}
+					}
+				}
+			}
+			ISM_TRANSITION[id57] matches {
+				current_state matches {
+					DV_CODED_TEXT[id58] matches {
+						defining_code matches {[ac4]}		-- Medication action (synthesised)
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id59] matches {
+						defining_code matches {[at4]}
+					}
+				}
+			}
+			ISM_TRANSITION[id60] matches {
+				current_state matches {
+					DV_CODED_TEXT[id61] matches {
+						defining_code matches {[at45]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id62] matches {
+						defining_code matches {[at5]}
+					}
+				}
+			}
+			ISM_TRANSITION[id63] matches {
+				current_state matches {
+					DV_CODED_TEXT[id64] matches {
+						defining_code matches {[at45]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id65] matches {
+						defining_code matches {[at6]}
+					}
+				}
+			}
+			ISM_TRANSITION[id66] matches {
+				current_state matches {
+					DV_CODED_TEXT[id67] matches {
+						defining_code matches {[at45]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id68] matches {
+						defining_code matches {[at7]}
+					}
+				}
+			}
+			ISM_TRANSITION[id69] matches {
+				current_state matches {
+					DV_CODED_TEXT[id70] matches {
+						defining_code matches {[at45]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id71] matches {
+						defining_code matches {[at11]}
+					}
+				}
+			}
+			ISM_TRANSITION[id72] matches {
+				current_state matches {
+					DV_CODED_TEXT[id73] matches {
+						defining_code matches {[at45]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id74] matches {
+						defining_code matches {[at19]}
+					}
+				}
+			}
+			ISM_TRANSITION[id75] matches {
+				current_state matches {
+					DV_CODED_TEXT[id76] matches {
+						defining_code matches {[at45]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id77] matches {
+						defining_code matches {[at20]}
+					}
+				}
+			}
+			ISM_TRANSITION[id78] matches {
+				current_state matches {
+					DV_CODED_TEXT[id79] matches {
+						defining_code matches {[ac5]}		-- Medication action (synthesised)
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id80] matches {
+						defining_code matches {[at36]}
+					}
+				}
+			}
+			ISM_TRANSITION[id81] matches {
+				current_state matches {
+					DV_CODED_TEXT[id82] matches {
+						defining_code matches {[at46]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id83] matches {
+						defining_code matches {[at9]}
+					}
+				}
+			}
+			ISM_TRANSITION[id84] matches {
+				current_state matches {
+					DV_CODED_TEXT[id85] matches {
+						defining_code matches {[at46]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id86] matches {
+						defining_code matches {[at10]}
+					}
+				}
+			}
+			ISM_TRANSITION[id87] matches {
+				current_state matches {
+					DV_CODED_TEXT[id88] matches {
+						defining_code matches {[at46]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id89] matches {
+						defining_code matches {[at12]}
+					}
+				}
+			}
+			ISM_TRANSITION[id90] matches {
+				current_state matches {
+					DV_CODED_TEXT[id91] matches {
+						defining_code matches {[at47]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id92] matches {
+						defining_code matches {[at16]}
+					}
+				}
+			}
+			ISM_TRANSITION[id93] matches {
+				current_state matches {
+					DV_CODED_TEXT[id94] matches {
+						defining_code matches {[at47]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id95] matches {
+						defining_code matches {[at15]}
+					}
+				}
+			}
+			ISM_TRANSITION[id96] matches {
+				current_state matches {
+					DV_CODED_TEXT[id97] matches {
+						defining_code matches {[at47]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id98] matches {
+						defining_code matches {[at40]}
+					}
+				}
+			}
+			ISM_TRANSITION[id99] matches {
+				current_state matches {
+					DV_CODED_TEXT[id100] matches {
+						defining_code matches {[at48]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id101] matches {
+						defining_code matches {[at8]}
+					}
+				}
+			}
+		}
+		description matches {
+			ITEM_TREE[id18] matches {
+				items cardinality matches {2..*; unordered} matches {
+					ELEMENT[id21] matches {	-- Medicine
+						value matches {
+							DV_CODED_TEXT[id102] matches {
+								defining_code matches {[ac2]}		-- Medicines Terminology
+							}
+						}
+					}
+					ELEMENT[id34] matches {	-- Instructions
+						value matches {
+							DV_TEXT[id103] 
+						}
+					}
+					allow_archetype CLUSTER[id24] matches {	-- Ingredients and form
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.chemical_description(-a-zA-Z0-9_]+)*\.v1/}
+					}
+					ELEMENT[id22] matches {	-- Reason
+						value matches {
+							DV_TEXT[id104] 
+						}
+					}
+					allow_archetype CLUSTER[id23] matches {	-- Quantity
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.amount\.v1/}
+					}
+					ELEMENT[id25] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT[id105] 
+						}
+					}
+					ELEMENT[id26] occurrences matches {0..1} matches {	-- Sequence number
+						value matches {
+							DV_COUNT[id106] 
+						}
+					}
+					allow_archetype CLUSTER[id28] matches {	-- Administration
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_admin(-a-zA-Z0-9_]+)*\.v1/}
+					}
+					ELEMENT[id37] occurrences matches {0..1} matches {	-- Brand substituted
+						value matches {
+							DV_BOOLEAN[id107] matches {
+								value matches {True, False}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[id31] matches {
+				items matches {
+					ELEMENT[id27] occurrences matches {0..1} matches {	-- BatchID
+						value matches {
+							DV_TEXT[id108] 
+						}
+					}
+					ELEMENT[id41] occurrences matches {0..1} matches {	-- Expiry date
+						value matches {
+							DV_DATE[id109] 
+						}
+					}
+					ELEMENT[id32] occurrences matches {0..1} matches {	-- Dispensed to
+						value matches {
+							DV_TEXT[id110] 
+						}
+					}
+					ELEMENT[id38] occurrences matches {0..1} matches {	-- Number of times dispensed
+						value matches {
+							DV_COUNT[id111] 
+						}
+					}
+					ELEMENT[id33] occurrences matches {0..1} matches {	-- Remaining repeats
+						value matches {
+							DV_COUNT[id112] matches {
+								magnitude matches {|>=0|}
+							}
+						}
+					}
+					ELEMENT[id39] occurrences matches {0..1} matches {	-- Claim category
+						value matches {
+							DV_TEXT[id113] 
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Medication action">
+				description = <"Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician.">
+			>
+			["at2"] = <
+				text = <"Plan medication">
+				description = <"The medication is planned but no execution has taken place.">
+			>
+			["at3"] = <
+				text = <"Issue prescription for medication">
+				description = <"The instruction has issued as an item on a prescription.">
+			>
+			["at4"] = <
+				text = <"Dispense medication">
+				description = <"The medication has been dispensed.">
+			>
+			["at5"] = <
+				text = <"Commence medication">
+				description = <"The medication has been taken by the patient for the first time.">
+			>
+			["at6"] = <
+				text = <"Review medication">
+				description = <"The medication has been reviewed.">
+			>
+			["at7"] = <
+				text = <"Administer medication">
+				description = <"A single administration of the medication has taken place.">
+			>
+			["at8"] = <
+				text = <"Complete medication">
+				description = <"The medication has been completed as instructed.">
+			>
+			["at9"] = <
+				text = <"Delay medication supply">
+				description = <"The medication has not been dispensed as supply is not yet available.">
+			>
+			["at10"] = <
+				text = <"Suspend administration">
+				description = <"The administration of the  medication has been suspended.">
+			>
+			["at11"] = <
+				text = <"Re-issue prescription for medication">
+				description = <"The medication has been re-prescribed for an existing instruction.">
+			>
+			["at12"] = <
+				text = <"Suspend re-issue of prescription">
+				description = <"Reissuing of this prescription is not available without some intervention.">
+			>
+			["at13"] = <
+				text = <"Cancel medication plan">
+				description = <"The planned administration has been cancelled prior to any administration.">
+			>
+			["at14"] = <
+				text = <"Suspend medication plan">
+				description = <"The plan to order medication has been suspended.">
+			>
+			["at15"] = <
+				text = <"Reverse prescription for medication">
+				description = <"The prescription has been cancelled but administration or dispensing may have occurred.">
+			>
+			["at16"] = <
+				text = <"Cease administration">
+				description = <"The administration of this medication has been ceased before anticipated completion.">
+			>
+			["at17"] = <
+				text = <"Set medication start date">
+				description = <"The time to start this medication has been set.">
+			>
+			["at19"] = <
+				text = <"Withhold medication">
+				description = <"The administration of a medication has been withheld and not given.">
+			>
+			["at20"] = <
+				text = <"Medication declined">
+				description = <"An administration of the medication was refused by the subject of care (patient).">
+			>
+			["id21"] = <
+				text = <"Medicine">
+				description = <"The medicine, vaccine or other therapeutic good which was the focus of the action.">
+			>
+			["id22"] = <
+				text = <"Reason">
+				description = <"The reason(s) the specific action or step was carried out. Note: This is not the reason for the medication instruction, rather the specific reason e.g. for administration or for ceasing the medication.">
+			>
+			["id23"] = <
+				text = <"Quantity">
+				description = <"The quantity of medicine, vaccine or other therapeutic good.">
+			>
+			["id24"] = <
+				text = <"Ingredients and form">
+				description = <"Detailed information about the ingredient(s) including form and strength.">
+			>
+			["id25"] = <
+				text = <"Comment">
+				description = <"A comment on the action taken.">
+			>
+			["id26"] = <
+				text = <"Sequence number">
+				description = <"The sequence number specific to the action being recorded.">
+			>
+			["id27"] = <
+				text = <"BatchID">
+				description = <"Assigned by the manufacturer to identify the manufacturing batch of the item.">
+			>
+			["id28"] = <
+				text = <"Administration">
+				description = <"Details about the administration of the medicine, vaccine or other therapeutic good.">
+			>
+			["id32"] = <
+				text = <"Dispensed to">
+				description = <"The name of the person to whom this was dispensed, if not the subject of care.">
+			>
+			["id33"] = <
+				text = <"Remaining repeats">
+				description = <"The number of times the medicine, vaccine or other therapeutic good may still be dispensed without re-issue of a prescription or order. Note: This is the information required by the subject of care and prescriber.">
+			>
+			["id34"] = <
+				text = <"Instructions">
+				description = <"Any instructions given to the subject of care or carer at the time of the action.">
+			>
+			["at36"] = <
+				text = <"Return medication">
+				description = <"A dispensed medication is returned or not collected without use.">
+			>
+			["id37"] = <
+				text = <"Brand substituted">
+				description = <"A different brand of the same medicine, vaccine or other therapeutic good was substituted for the one nominated in the order.">
+			>
+			["id38"] = <
+				text = <"Number of times dispensed">
+				description = <"The number of times this order has been dispensed. The sum of this number minus one and the remaining repeats provides the number of repeats on the original order.">
+			>
+			["id39"] = <
+				text = <"Claim category">
+				description = <"The category of reimbursement or subsidy sought for the item.">
+			>
+			["at40"] = <
+				text = <"Change dose or timing">
+				description = <"A new instruction with changed dose or timing has been created that replaces this one.">
+			>
+			["id41"] = <
+				text = <"Expiry date">
+				description = <"The expiry date of the medicine administered as documented by the manufacturer.">
+			>
+			["ac2"] = <
+				text = <"Medicines Terminology">
+				description = <"A Medicinal Product Unit of Use (MPUU), a Medicinal Product Pack (MPP), a Trade Product Pack (TPP) or a Containered Trade Product Pack (CTPP).">
+			>
+			["at41"] = <
+				text = <"initial">
+				description = <"initial">
+			>
+			["at42"] = <
+				text = <"postponed">
+				description = <"postponed">
+			>
+			["at43"] = <
+				text = <"cancelled">
+				description = <"cancelled">
+			>
+			["at44"] = <
+				text = <"scheduled">
+				description = <"scheduled">
+			>
+			["at45"] = <
+				text = <"active">
+				description = <"active">
+			>
+			["at46"] = <
+				text = <"suspended">
+				description = <"suspended">
+			>
+			["at47"] = <
+				text = <"aborted">
+				description = <"aborted">
+			>
+			["at48"] = <
+				text = <"complete">
+				description = <"complete">
+			>
+			["at49"] = <
+				text = <"active">
+				description = <"active">
+			>
+			["at50"] = <
+				text = <"initial">
+				description = <"initial">
+			>
+			["at51"] = <
+				text = <"active">
+				description = <"active">
+			>
+			["at52"] = <
+				text = <"initial">
+				description = <"initial">
+			>
+			["at53"] = <
+				text = <"active">
+				description = <"active">
+			>
+			["at54"] = <
+				text = <"initial">
+				description = <"initial">
+			>
+			["ac3"] = <
+				text = <"Medication action (synthesised)">
+				description = <"Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician. (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Medication action (synthesised)">
+				description = <"Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician. (synthesised)">
+			>
+			["ac5"] = <
+				text = <"Medication action (synthesised)">
+				description = <"Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician. (synthesised)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at41"] = <http://openehr.org/id/524>
+			["at42"] = <http://openehr.org/id/527>
+			["at43"] = <http://openehr.org/id/528>
+			["at44"] = <http://openehr.org/id/529>
+			["at45"] = <http://openehr.org/id/245>
+			["at46"] = <http://openehr.org/id/530>
+			["at47"] = <http://openehr.org/id/531>
+			["at48"] = <http://openehr.org/id/532>
+			["at49"] = <http://openehr.org/id/245>
+			["at50"] = <http://openehr.org/id/524>
+			["at51"] = <http://openehr.org/id/245>
+			["at52"] = <http://openehr.org/id/524>
+			["at53"] = <http://openehr.org/id/245>
+			["at54"] = <http://openehr.org/id/524>
+		>
+	>
+	value_sets = <
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at49", "at50">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at51", "at52">
+		>
+		["ac5"] = <
+			id = <"ac5">
+			members = <"at53", "at54">
+		>
+	>

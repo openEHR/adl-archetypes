@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-OBSERVATION.lab_test.v1.0.0
 
 language
@@ -14,11 +14,11 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test for anomaly in generation of differential archetype from flat">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
+			purpose = <"Test for anomaly in generation of differential archetype from flat.">
+			copyright = <"copyright (c) 2010 openEHR Foundation.">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>

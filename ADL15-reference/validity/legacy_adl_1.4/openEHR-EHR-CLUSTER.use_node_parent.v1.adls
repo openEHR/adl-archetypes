@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-CLUSTER.use_node_parent.v1.0.0
 
 language
@@ -23,10 +23,10 @@ description
 definition
 	CLUSTER[id1] matches {	-- Laboratory test panel
 		items matches {
-			CLUSTER[id3] occurrences matches {0..*} matches {	-- Laboratory Result
+			CLUSTER[id3] matches {	-- Laboratory Result
 				items matches {
 					ELEMENT[id2] occurrences matches {0..1} 	-- Result Value
-					ELEMENT[id4] occurrences matches {0..*} matches {	-- Result Comment
+					ELEMENT[id4] matches {	-- Result Comment
 						value matches {
 							DV_TEXT[id8] 
 						}

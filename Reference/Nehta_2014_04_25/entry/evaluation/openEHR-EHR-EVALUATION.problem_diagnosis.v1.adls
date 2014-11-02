@@ -1,0 +1,302 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-EVALUATION.problem_diagnosis.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"23/04/2006">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details about a problem or diagnosis by a clinician.">
+			use = <"Use to record detailed information about problems or diagnoses recognised by a clinician. There are many uses including: recording a Diagnosis during an Encounter; populating a Problem List or a Summary Statement, such as a Discharge Summary.
+
+Use to record all problems or diagnoses, including those with context-specific qualifiers such as past/present, primary/secondary, active/inactive etc. These qualifiers can be archetyped separately and included in the ‘Status’ slot, because their use varies in different settings.">
+			keywords = <"issue", "condition", "problem", "concern", "diagnosis", "criteria", "illness", "disease", "disorder">
+			misuse = <"Not to be used to record 'Differential Diagnoses' - use the EVALUATION.differential diagnosis archetype.
+
+Not to be used to record 'Reason for Encounter' - use the EVALUATION.reason_for_encounter archetype.
+
+Not to be used to record 'Presenting Complaint' - which is information captured early in the encounter, usually prior to full assessment and will be represented using a separate EVALUATION archetype.
+
+Not to be used to record procedures - use the ACTION.Procedure_undertaken archetype.
+
+Not to be used to record symptoms or signs - these should be recorded as part of a patient story or history.  A problem such as 'Chest pain' may masquerade as a symptom, however in this context we are recording it as a problem the person has.">
+			copyright = <"© 2011 NEHTA">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "John Bennett, NEHTA, Australia", "Steve Bentley, NHS CfH, United Kingdom", "Ian Bull, ACT Health, Australia", "Sergio Carmona, Chile", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NEHTA, Australia (Editor)", "Ed Conley, Cardiff University, United Kingdom", "Matthew Cordell, NEHTA, Australia", "Paul Donaldson, Nursing Informatics Australia, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Peter Garcia-Webb, Australia", "Andrew Goodchild, NEHTA, Australia", "Anneke Goossen, Results4Care, Netherlands", "Heather Grain, Llewelyn Grain Consulting, Australia", "Trina Gregory, cpc, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "Eugene Igras, IRIS Systems Inc, Canada", "Mary Kelaher, NEHTA, Australia", "Eizen Kimura, Ehime University, Japan", "Shinji Kobayashi, Ehime University, Japan", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Hugh Leslie, Ocean Informatics, Australia (Editor)", "Rohan Martin, Ambulance Victoria, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Jörg Niggeman, Compugroup, Germany", "Andrej Orel, Marand d.o.o., Slovenia", "Chris Pearce, Melbourne East GP Network, Australia", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Margaret Prichard, NEHTA, Australia", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "Cathy Richardson, NEHTA, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "Thilo Schuler, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia", "Donna Truran, ACCTI-UoW, Australia", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
+	other_details = <
+		["references"] = <"NEHTA Clinical data groups - Problem/Diagnosis V2.0 http://www.nehta.gov.au/data-group-library/data-specifications/dgl-problem-diagnosis.
+Australian Standard AS 4700.6-2006 Implementation of Health Level Seven version 2.4 - Part 6: Referral, discharge and health record messaging.
+CEN/TC 251/WGII  prEN 13940-2:2009.3- Health informatics – System of concepts to support Continuity of care – Part 2: Health care process and workflow.
+BS_EN_13940-1_2007 - British Standard.  Health informatics - System of concepts to support continuity of care - Part 1: Basic concepts.
+Swedish National Process model.
+IHE Technical Framework Supplement – Patient Plan of Care (PPOC).
+Royal Australian College of General Practitioners - Fact Sheet: Medical History
+Mosby's Pocket Dictionary of Medicine, Nursing and Health Professional, 6th Edition, Mosby Elsevier, 2010">
+		["MD5-CAM-1.0.1"] = <"5AB451990B6E294D6A916A6072C5AFEE">
+	>
+
+definition
+	EVALUATION[id1] matches {	-- Problem/Diagnosis
+		data matches {
+			ITEM_TREE[id2] matches {
+				items cardinality matches {1..*; ordered} matches {
+					ELEMENT[id3] matches {	-- Problem/Diagnosis
+						value matches {
+							DV_TEXT[id84] 
+						}
+					}
+					ELEMENT[id10] occurrences matches {0..1} matches {	-- Clinical description
+						value matches {
+							DV_TEXT[id85] 
+						}
+					}
+					ELEMENT[id83] occurrences matches {0..1} matches {	-- Severity
+						value matches {
+							DV_TEXT[id86] 
+						}
+					}
+					ELEMENT[id11] occurrences matches {0..1} matches {	-- Date of onset
+						value matches {
+							DV_DATE_TIME[id87] 
+						}
+					}
+					ELEMENT[id38] occurrences matches {0..1} matches {	-- Age at onset
+						value matches {
+							DV_DURATION[id88] 
+						}
+					}
+					allow_archetype CLUSTER[id45] matches {	-- Anatomical location
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+					}
+					CLUSTER[id19] occurrences matches {0..1} matches {	-- Occurrence summary
+						items matches {
+							ELEMENT[id26] occurrences matches {0..1} matches {	-- Number
+								value matches {
+									DV_COUNT[id89] matches {
+										magnitude matches {|>=1|}
+									}
+								}
+							}
+							ELEMENT[id20] occurrences matches {0..1} matches {	-- Frequency
+								value matches {
+									DV_QUANTITY[id90] matches {
+										property matches {[at83]}
+										units matches {"/min", "/h", "/d", "/wk", "/mo", "/yr"}
+									}
+								}
+							}
+							ELEMENT[id21] occurrences matches {0..1} matches {	-- Latest occurrence
+								value matches {
+									DV_DATE[id91] 
+								}
+							}
+							ELEMENT[id73] occurrences matches {0..1} matches {	-- Description
+								value matches {
+									DV_TEXT[id92] 
+								}
+							}
+							ELEMENT[id74] matches {	-- Link to occurrence details
+								value matches {
+									DV_URI[id93] 
+								}
+							}
+						}
+					}
+					CLUSTER[id27] matches {	-- Related items
+						items matches {
+							ELEMENT[id29] matches {	-- Related item
+								value matches {
+									DV_TEXT[id94] 
+								}
+							}
+							ELEMENT[id57] occurrences matches {0..1} matches {	-- Relationship type
+								value matches {
+									DV_CODED_TEXT[id95] matches {
+										defining_code matches {[ac1]}		-- Relationship type (synthesised)
+									}
+								}
+							}
+						}
+					}
+					ELEMENT[id31] occurrences matches {0..1} matches {	-- Date of resolution/remission
+						value matches {
+							DV_DATE[id96] 
+						}
+					}
+					ELEMENT[id32] occurrences matches {0..1} matches {	-- Age at resolution/remission
+						value matches {
+							DV_DURATION[id97] 
+						}
+					}
+					allow_archetype CLUSTER[id55] matches {	-- Diagnostic criteria
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[id56] matches {	-- Clinical stage/grade
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[id70] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT[id98] 
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[id75] matches {
+				items matches {
+					ELEMENT[id76] occurrences matches {0..1} matches {	-- Link to supporting clinical evidence
+						value matches {
+							DV_URI[id99] 
+						}
+					}
+					allow_archetype CLUSTER[id77] matches {	-- Status
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Problem/Diagnosis">
+				description = <"Any health care condition which may impact on the physical, mental and/or social well-being of an individual, that may require diagnostic, therapeutic or educational action, and which has been determined by a clinician. A diagnosis is based on scientific evaluation of physical signs, symptoms, history, laboratory tests results, and procedures.">
+			>
+			["id3"] = <
+				text = <"Problem/Diagnosis">
+				description = <"Identification of the problem or diagnosis. Coding of the problem or diagnosis with a terminology is preferred, where possible.">
+			>
+			["id10"] = <
+				text = <"Clinical description">
+				description = <"Narrative description or comments about clinical aspects of the problem/diagnosis.">
+			>
+			["id11"] = <
+				text = <"Date of onset">
+				description = <"Estimated or actual date the problem/diagnosis began, in the opinion of the clinician.">
+			>
+			["id19"] = <
+				text = <"Occurrence summary">
+				description = <"Summary information about occurrences or exacerbations. 
+Note: Detailed information about each occurrence or exacerbation is likely to be held in other parts of the health record.">
+			>
+			["id20"] = <
+				text = <"Frequency">
+				description = <"The frequency or estimated frequency of occurrences or exacerbations of the problem/diagnosis.">
+			>
+			["id21"] = <
+				text = <"Latest occurrence">
+				description = <"The date of the last occurrence or exacerbation of the problem/diagnosis.">
+			>
+			["id26"] = <
+				text = <"Number">
+				description = <"Cumulative number of occurrences or exacerbations of the problem/diagnosis.">
+			>
+			["id27"] = <
+				text = <"Related items">
+				description = <"Further problems, diagnoses, procedures or events that are related in some way to this problem/diagnosis.">
+			>
+			["id29"] = <
+				text = <"Related item">
+				description = <"Identification of a related problem, diagnosis, procedure, or event as text, coded text or link within the health record. Note: It is desirable that this field should be coded using terminology, wherever possible.">
+			>
+			["id31"] = <
+				text = <"Date of resolution/remission">
+				description = <"The date or estimated date that the problem/diagnosis resolved or went into remission.">
+			>
+			["id32"] = <
+				text = <"Age at resolution/remission">
+				description = <"The age of the person at the time of resolution or remission of the problem/diagnosis. 
+Note: May be important in situations where approximations of age based on calculations are not accurate enough, eg in infants under one year.">
+			>
+			["id38"] = <
+				text = <"Age at onset">
+				description = <"The estimated or actual age of the individual when the clinician assesses that the problem/diagnosis began. 
+Note: May be important in situations where approximations of age based on calculations are not accurate enough, eg in infants under one year.">
+			>
+			["id45"] = <
+				text = <"Anatomical location">
+				description = <"Slot to contain detailed and structured anatomical location details.">
+			>
+			["id55"] = <
+				text = <"Diagnostic criteria">
+				description = <"The criteria on which the problem/diagnosis is based.">
+			>
+			["id56"] = <
+				text = <"Clinical stage/grade">
+				description = <"Clinical stage or grade of a problem/diagnosis.   
+Note: May include formal severity assessments.">
+			>
+			["id57"] = <
+				text = <"Relationship type">
+				description = <"The type of relationship that this problem/diagnosis has to the related item.">
+			>
+			["id70"] = <
+				text = <"Comment">
+				description = <"Additional narrative about the problem or diagnosis not captured in other fields.">
+			>
+			["id73"] = <
+				text = <"Description">
+				description = <"A narrative description, including outcomes and other key details, about occurrences or exacerbations of the problem/diagnosis.">
+			>
+			["id74"] = <
+				text = <"Link to occurrence details">
+				description = <"Link to further information about past occurrences or exacerbations of the problem/diagnosis that exist elsewhere in the health record.">
+			>
+			["id76"] = <
+				text = <"Link to supporting clinical evidence">
+				description = <"Links to other relevant information, including pathology reports.">
+			>
+			["id77"] = <
+				text = <"Status">
+				description = <"Descriptor for context- or use-case specific label or workflow-related aspect of the diagnostic process which may not be safe to exchange between systems or use in a shared environment. Examples include: active/inactive; primary/secondary; preliminary/provisional/working/final.">
+			>
+			["at81"] = <
+				text = <"Caused by">
+				description = <"This concept identifies the direct cause or causative agent of a Problem/Diagnosis.  The concept includes the idea of ‘complications’, ‘causative agent’ and ‘due to’.  Note: Where no causality or sequence of events is known, this relationship type should be left blank.">
+			>
+			["at82"] = <
+				text = <"Following">
+				description = <"This value identifies the sequence of events between the related items, but does not assert causality.  This can be used for sequelae or late effects.  Note: Where no causality or sequence of events is known, this relationship type should be left blank.">
+			>
+			["id83"] = <
+				text = <"Severity">
+				description = <"A subjective assessment of the severity of the Problem/Diagnosis as evaluated by the clinician. Coding of the severity with a terminology is preferred, where possible.">
+			>
+			["at83"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["ac1"] = <
+				text = <"Relationship type (synthesised)">
+				description = <"The type of relationship that this problem/diagnosis has to the related item. (synthesised)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at83"] = <http://openehr.org/id/382>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at81", "at82">
+		>
+	>

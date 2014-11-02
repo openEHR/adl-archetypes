@@ -1,0 +1,205 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-CLUSTER.skin.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2012-11-01">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For recording the examination findings from the physical examination of an explicitly identified area of skin.">
+			use = <"Use to record the examination findings from the physical examination of an explicitly identified area of skin. 
+
+This archetype is designed to be used in SLOTs within clinically appropriate OBSERVATION or other CLUSTER archetypes as part of recording the findings on clinical examination - for example nested within OBSERVATION.exam or CLUSTER.pinna_mastoid.
+
+Inspection of the skin is assumed to be done using direct visualisation. If a device is used, it should be recorded as part of the method of examination in the ENTRY archetype - for example, the OBSERVATION.exam family of archetypes.">
+			misuse = <"">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Kerrie Lee", ...>
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Direct communications with clinical domain experts.">
+		["MD5-CAM-1.0.1"] = <"B01EE71FA3E00BFDA06A04F994729EA9">
+	>
+
+definition
+	CLUSTER[id1] matches {	-- Skin
+		items matches {
+			ELEMENT[id4] matches {	-- Anatomical Location
+				value matches {
+					DV_TEXT[id11] 
+				}
+			}
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Clinical Description
+				value matches {
+					DV_TEXT[id12] 
+				}
+			}
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Erythema
+				value matches {
+					DV_TEXT[id13] 
+				}
+			}
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Swelling
+				value matches {
+					DV_TEXT[id14] 
+				}
+			}
+			ELEMENT[id8] occurrences matches {0..1} matches {	-- Tenderness
+				value matches {
+					DV_TEXT[id15] 
+				}
+			}
+			allow_archetype CLUSTER[id7] matches {	-- Details
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.scar(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+			}
+			ELEMENT[id3] matches {	-- Clinical Interpretation
+				value matches {
+					DV_TEXT[id16] 
+				}
+			}
+			ELEMENT[id10] occurrences matches {0..1} matches {	-- Multimedia Representation
+				value matches {
+					DV_MULTIMEDIA[id17] matches {
+						media_type matches {[ac1]}		-- Multimedia Representation (synthesised)
+					}
+				}
+			}
+			ELEMENT[id9] occurrences matches {0..1} matches {	-- Comment
+				value matches {
+					DV_TEXT[id18] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Skin">
+				description = <"Physical examination of an explicitly identified area of skin.">
+			>
+			["id2"] = <
+				text = <"Clinical Description">
+				description = <"Narrative description of the skin of the skin.">
+			>
+			["id3"] = <
+				text = <"Clinical Interpretation">
+				description = <"Single word, phrase or brief description representing a summary of the findings of the region of skin being examined.">
+			>
+			["id4"] = <
+				text = <"Anatomical Location">
+				description = <"Identification of the anatomical location of the skin being examined.">
+			>
+			["id5"] = <
+				text = <"Erythema">
+				description = <"Narrative description of any observed erythema or redness in the skin.">
+			>
+			["id6"] = <
+				text = <"Swelling">
+				description = <"Narrative description of any observed swelling in the skin.">
+			>
+			["id7"] = <
+				text = <"Details">
+				description = <"Detailed structured examination findings.">
+			>
+			["id8"] = <
+				text = <"Tenderness">
+				description = <"Narrative description of any tenderness noted on palpation of the skin.">
+			>
+			["id9"] = <
+				text = <"Comment">
+				description = <"Additional narrative comment about the examination, not captured in other structured data fields.">
+			>
+			["id10"] = <
+				text = <"Multimedia Representation">
+				description = <"Digital image, video or diagram of the skin.">
+			>
+			["at1"] = <
+				text = <"video/BT656">
+				description = <"video/BT656">
+			>
+			["at2"] = <
+				text = <"video/CelB">
+				description = <"video/CelB">
+			>
+			["at3"] = <
+				text = <"video/H261">
+				description = <"video/H261">
+			>
+			["at4"] = <
+				text = <"video/H263">
+				description = <"video/H263">
+			>
+			["at5"] = <
+				text = <"video/H263-1998">
+				description = <"video/H263-1998">
+			>
+			["at6"] = <
+				text = <"video/H263-2000">
+				description = <"video/H263-2000">
+			>
+			["at7"] = <
+				text = <"video/quicktime">
+				description = <"video/quicktime">
+			>
+			["at8"] = <
+				text = <"image/cgm">
+				description = <"image/cgm">
+			>
+			["at9"] = <
+				text = <"image/gif">
+				description = <"image/gif">
+			>
+			["at10"] = <
+				text = <"image/png">
+				description = <"image/png">
+			>
+			["at11"] = <
+				text = <"image/tiff">
+				description = <"image/tiff">
+			>
+			["at12"] = <
+				text = <"image/jpeg">
+				description = <"image/jpeg">
+			>
+			["ac1"] = <
+				text = <"Multimedia Representation (synthesised)">
+				description = <"Digital image, video or diagram of the skin. (synthesised)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at1"] = <http://openehr.org/id/401>
+			["at2"] = <http://openehr.org/id/402>
+			["at3"] = <http://openehr.org/id/404>
+			["at4"] = <http://openehr.org/id/405>
+			["at5"] = <http://openehr.org/id/406>
+			["at6"] = <http://openehr.org/id/407>
+			["at7"] = <http://openehr.org/id/414>
+			["at8"] = <http://openehr.org/id/425>
+			["at9"] = <http://openehr.org/id/426>
+			["at10"] = <http://openehr.org/id/427>
+			["at11"] = <http://openehr.org/id/428>
+			["at12"] = <http://openehr.org/id/429>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8", "at9", "at10", "at11", "at12">
+		>
+	>

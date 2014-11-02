@@ -1,0 +1,103 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-INSTRUCTION.care_plan.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sistine Barretto-Daniels">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"Sistine.Barretto-Daniels@oceaninformatics.com">
+		["date"] = <"2010-07-28">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the order or instruction regarding the planning, initiation and carrying out of a single care plan as a whole.">
+			use = <"Use to record the order or instruction for the planning, initiation and carrying out of a single care plan as a whole.">
+			keywords = <"care", "plan">
+			misuse = <"">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["MD5-CAM-1.0.1"] = <"9570E35B6E75B2D8D2709AF99405A9CF">
+	>
+
+definition
+	INSTRUCTION[id1] matches {	-- Care Plan
+		activities matches {
+			ACTIVITY[id2] occurrences matches {0..1} matches {	-- Activity
+				action_archetype_id matches {/openEHR-EHR-ACTION\\.care_plan\\.v1/}
+				description matches {
+					ITEM_TREE[id5] matches {
+						items matches {
+							ELEMENT[id18] occurrences matches {0..1} matches {	-- Care Plan Name
+								value matches {
+									DV_TEXT[id21] 
+								}
+							}
+							ELEMENT[id8] occurrences matches {0..1} matches {	-- Description
+								value matches {
+									DV_TEXT[id22] 
+								}
+							}
+							ELEMENT[id12] occurrences matches {0..1} matches {	-- Indication
+								value matches {
+									DV_TEXT[id23] 
+								}
+							}
+							ELEMENT[id19] occurrences matches {0..1} matches {	-- Date of Onset
+								value matches {
+									DV_DATE_TIME[id24] 
+								}
+							}
+							ELEMENT[id20] occurrences matches {0..1} matches {	-- Comment
+								value matches {
+									DV_TEXT[id25] 
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Care Plan">
+				description = <"Order or instruction for the creation and sequence of activities to achieve a specified management goal or treatment outcome, carried out by health professionals and/or the subject.">
+			>
+			["id2"] = <
+				text = <"Activity">
+				description = <"Current Activity.">
+			>
+			["id8"] = <
+				text = <"Description">
+				description = <"Description of the care plan scope, intent and proposed activities.">
+			>
+			["id12"] = <
+				text = <"Indication">
+				description = <"Indication for the care plan.">
+			>
+			["id18"] = <
+				text = <"Care Plan Name">
+				description = <"Identification of the care plan.">
+			>
+			["id19"] = <
+				text = <"Date of Onset">
+				description = <"Date of onset for the care plan.">
+			>
+			["id20"] = <
+				text = <"Comment">
+				description = <"Additional narrative about the care plan order not captured in other fields.">
+			>
+		>
+	>

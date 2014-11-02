@@ -1,0 +1,154 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-EVALUATION.employment_summary.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"17/12/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record a persisting and evolving summary about the employment background of the individual.">
+			use = <"Use to record an employment summary about the individual, including identification of exposure to occupational health and safety risks.">
+			keywords = <"employment", "employer", "job", "occupation", "risk", "safety">
+			misuse = <"">
+			copyright = <"© 2010 NEHTA">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"7BB6835077BF5C6CBE71B6DF453E1B1C">
+	>
+
+definition
+	EVALUATION[id1] matches {	-- Employment Summary
+		data matches {
+			ITEM_TREE[id2] matches {
+				items matches {
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Employment status
+						value matches {
+							DV_TEXT[id15] 
+						}
+					}
+					CLUSTER[id4] occurrences matches {0..1} matches {	-- Employment details
+						items matches {
+							ELEMENT[id5] occurrences matches {0..1} matches {	-- Employer name
+								value matches {
+									DV_TEXT[id16] 
+								}
+							}
+							allow_archetype CLUSTER[id6] matches {	-- Employer details
+								include
+									archetype_id/value matches {/.*/}
+							}
+							ELEMENT[id7] occurrences matches {0..1} matches {	-- Title/Role
+								value matches {
+									DV_TEXT[id17] 
+								}
+							}
+							ELEMENT[id14] occurrences matches {0..1} matches {	-- Occupation type
+								value matches {
+									DV_TEXT[id18] 
+								}
+							}
+							ELEMENT[id8] occurrences matches {0..1} matches {	-- Date commenced
+								value matches {
+									DV_DATE_TIME[id19] 
+								}
+							}
+							ELEMENT[id9] occurrences matches {0..1} matches {	-- Date ceased
+								value matches {
+									DV_DATE_TIME[id20] 
+								}
+							}
+							ELEMENT[id10] occurrences matches {0..1} matches {	-- Duration of employment
+								value matches {
+									DV_DURATION[id21] matches {
+										value matches {PYMWD}
+									}
+								}
+							}
+							CLUSTER[id11] matches {	-- Occupational Risk
+								items matches {
+									ELEMENT[id12] matches {	-- Risk
+										value matches {
+											DV_TEXT[id22] 
+										}
+									}
+									ELEMENT[id13] occurrences matches {0..1} matches {	-- Description
+										value matches {
+											DV_TEXT[id23] 
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Employment Summary">
+				description = <"Summary of the employment background of the individual.">
+			>
+			["id3"] = <
+				text = <"Employment status">
+				description = <"Current employment status eg employed, unemployed, student, retired, etc. Coding with a terminology is desirable, where possible.">
+			>
+			["id4"] = <
+				text = <"Employment details">
+				description = <"Details of each episode of employment.">
+			>
+			["id5"] = <
+				text = <"Employer name">
+				description = <"Identification of employer - company, organisation or individual.">
+			>
+			["id6"] = <
+				text = <"Employer details">
+				description = <"Further detail about the Employer.">
+			>
+			["id7"] = <
+				text = <"Title/Role">
+				description = <"Job title or role undertaken with employer.">
+			>
+			["id8"] = <
+				text = <"Date commenced">
+				description = <"Date employment commenced with employer.">
+			>
+			["id9"] = <
+				text = <"Date ceased">
+				description = <"Date employment ceased with employer.">
+			>
+			["id10"] = <
+				text = <"Duration of employment">
+				description = <"Period of time employed.">
+			>
+			["id11"] = <
+				text = <"Occupational Risk">
+				description = <"Identification of occupational health and safety risks in this role/occupation type for this employer.">
+			>
+			["id12"] = <
+				text = <"Risk">
+				description = <"Identification of occupational health & safety risk exposure.">
+			>
+			["id13"] = <
+				text = <"Description">
+				description = <"Description of risk.">
+			>
+			["id14"] = <
+				text = <"Occupation type">
+				description = <"Type of occupation.">
+			>
+		>
+	>

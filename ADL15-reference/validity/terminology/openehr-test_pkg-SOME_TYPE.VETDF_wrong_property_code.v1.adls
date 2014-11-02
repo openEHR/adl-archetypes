@@ -11,14 +11,14 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Verify VETDF error, caused by a code ('temperature') that does not exist in an available terminology (('openehr')">
+			purpose = <"Verify VETDF warning, caused by a code ('temperature') that does not exist in an available terminology (('openehr')">
 			keywords = <"ADL", "test", "terminology">
 			copyright = <"copyright (c) 2005 The openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unstable">
 	other_details = <
-		["regression"] = <"WETDF">
+		["regression"] = <"VETDF">
 	>
 
 definition

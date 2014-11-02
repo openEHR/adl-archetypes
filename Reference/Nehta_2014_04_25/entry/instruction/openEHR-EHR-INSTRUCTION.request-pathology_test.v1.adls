@@ -1,0 +1,81 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-INSTRUCTION.request-pathology_test.v1.0.0
+
+specialize
+	openEHR-EHR-INSTRUCTION.request.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"08/12/2009">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To request a pathology test to be performed and convey supporting clinical details.">
+			use = <"Use in most requests for a pathology test to be conducted on a patient.
+If there are more specific details about the test and/or specimen include this information in more detailed CLUSTER archetypes appropriate for the purpose.">
+			keywords = <"request", "refer", "order", "service", "provide", "laboratory", "pathology", "microbiology", "haematology", "diagnostic">
+			misuse = <"">
+			copyright = <"© openEHR">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"43C7B3E22BF23A6BB8F11BDE74E32BE5">
+	>
+
+definition
+	INSTRUCTION[id1.1] matches {	-- PathologyTest Request
+		/activities[id2]/description[id10]/items[id122.1]/name matches {
+			DV_TEXT[id0.146] 
+		}
+		/activities[id2]/description[id10]/items[id136.1]/name matches {
+			DV_TEXT[id0.147] 
+		}
+		/activities[id2]/description[id10]/items matches {
+			before [id63]
+			allow_archetype CLUSTER[id0.145] matches {	-- Specimen details
+				include
+					archetype_id/value matches {/.*/}
+			}
+			ELEMENT[id41.1] 	-- DateTime test preferred
+			ELEMENT[id145.1] 	-- Latest DateTime test required
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id0.145"] = <
+				text = <"Specimen details">
+				description = <"Structured detail defining the specimen.">
+			>
+			["id1.1"] = <
+				text = <"PathologyTest Request">
+				description = <"Generic request for a pathology request.">
+			>
+			["id41.1"] = <
+				text = <"DateTime test preferred">
+				description = <"The preferred date and time by which the service should be performed or completed.">
+			>
+			["id122.1"] = <
+				text = <"Pathology Test Requested">
+				description = <"Identification of the pathology test requested. This is often coded with an external terminology.">
+			>
+			["id136.1"] = <
+				text = <"Description of Test">
+				description = <"A detailed narrative description of the pathology test requested.">
+			>
+			["id145.1"] = <
+				text = <"Latest DateTime test required">
+				description = <"The latest date that is acceptable for the service to be completed.">
+			>
+		>
+	>

@@ -1,0 +1,118 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-EVALUATION.social_support_summary.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"17/12/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record a summary of available social supports and social integration/connectedness of the individual.">
+			use = <"Use to record information about social support and social integration/connectedness of the individual.">
+			keywords = <"social", "support", "integration", "service">
+			misuse = <"Not to be used to record detailed information about orders or instructions for provision of specific social support services such as cleaning or transport assistance - use specific INSTRUCTION archetypes.">
+			copyright = <"© 2010 NEHTA">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Stephen Chu, NEHTA, Australia", ...>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"5EE03FAA22CA69898140A1196675FA16">
+	>
+
+definition
+	EVALUATION[id1] matches {	-- Social Support Summary
+		data matches {
+			ITEM_TREE[id2] matches {
+				items matches {
+					ELEMENT[id7] occurrences matches {0..1} matches {	-- Social activity status
+						value matches {
+							DV_TEXT[id13] 
+						}
+					}
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Description
+						value matches {
+							DV_TEXT[id14] 
+						}
+					}
+					CLUSTER[id3] matches {	-- Support service provided
+						items matches {
+							ELEMENT[id4] matches {	-- Service provider
+								value matches {
+									DV_TEXT[id15] 
+								}
+							}
+							ELEMENT[id5] occurrences matches {0..1} matches {	-- Description
+								value matches {
+									DV_TEXT[id16] 
+								}
+							}
+							ELEMENT[id9] occurrences matches {0..1} matches {	-- Contact Name
+								value matches {
+									DV_TEXT[id17] 
+								}
+							}
+							ELEMENT[id10] occurrences matches {0..1} matches {	-- Title/Role
+								value matches {
+									DV_TEXT[id18] 
+								}
+							}
+							allow_archetype CLUSTER[id12] matches {	-- Service provider details
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Social Support Summary">
+				description = <"Physical and emotional comfort, support and resources provided by family, friends, co-workers and the broader community.">
+			>
+			["id3"] = <
+				text = <"Support service provided">
+				description = <"Summary information about a support service provided for the individual. Detailed information about each service will be kept elsewhere in the record.">
+			>
+			["id4"] = <
+				text = <"Service provider">
+				description = <"Name of service provider.">
+			>
+			["id5"] = <
+				text = <"Description">
+				description = <"Description of service provided.">
+			>
+			["id6"] = <
+				text = <"Description">
+				description = <"Description of available social supports.">
+			>
+			["id7"] = <
+				text = <"Social activity status">
+				description = <"Description of level of social activity, for example, well supported by family and friends, or socially isolated. Coding with a terminology is desirable, where possible.">
+			>
+			["id9"] = <
+				text = <"Contact Name">
+				description = <"Name of support service contact person.">
+			>
+			["id10"] = <
+				text = <"Title/Role">
+				description = <"Title or role of the support service contact, for example Case Manager.">
+			>
+			["id12"] = <
+				text = <"Service provider details">
+				description = <"Further details about the Support service provider or contact.">
+			>
+		>
+	>

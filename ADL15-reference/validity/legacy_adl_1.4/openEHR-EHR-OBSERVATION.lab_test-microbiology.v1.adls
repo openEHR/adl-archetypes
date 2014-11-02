@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-OBSERVATION.lab_test-microbiology.v1.0.0
 
 specialize
@@ -21,7 +21,7 @@ description
 			copyright = <"copyright (c) 2010 openEHR Foundation.">
 		>
 	>
-	lifecycle_state = <"initial">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>

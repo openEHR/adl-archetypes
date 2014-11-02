@@ -1,0 +1,223 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-ITEM_TREE.requested_service.v3.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"">
+		["organisation"] = <"NEHTA">
+		["email"] = <"clinicalinfo@nehta.gov.au">
+		["date"] = <"30-Mar-2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Describes the types of service requested for, or provided to, the subject of care.">
+			use = <"">
+			misuse = <"Used to specify medication prescriptions or diagnostic test requests.">
+			copyright = <"© 2010 National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Eric Browne", "Stephen Chu", "Eleanor Royle", "Ning Pan", "Robert L'egan", "Don Stewart", "Stephen Royce">
+	other_details = <
+		["references"] = <"">
+		["base_exist_collection"] = <"/db/nehta/ndsm/dev/data/requested_service_structure/v3_0/draft_007">
+	>
+
+definition
+	ITEM_TREE[id1] matches {	-- Requested Service
+		items cardinality matches {2..*; unordered} matches {
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Reason for Service
+				value matches {
+					DV_CODED_TEXT[id21] matches {
+						defining_code matches {[ac2]}		-- Reason for Service Values
+					}
+					DV_TEXT[id22] 
+				}
+			}
+			ELEMENT[id3] matches {	-- Requested Service Description
+				value matches {
+					DV_CODED_TEXT[id23] matches {
+						defining_code matches {[ac3]}		-- Requested Service Description Values
+					}
+					DV_TEXT[id24] 
+				}
+			}
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Intent of Request
+				value matches {
+					DV_TEXT[id25] 
+				}
+			}
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Request Urgency
+				value matches {
+					DV_CODED_TEXT[id26] matches {
+						defining_code matches {[ac4]}		-- Request Urgency Values
+					}
+				}
+			}
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- DateTime Service Scheduled
+				value matches {
+					DV_DATE_TIME[id27] 
+				}
+			}
+			ELEMENT[id7] occurrences matches {0..1} matches {	-- Service Commencement Window
+				value matches {
+					DV_INTERVAL<DV_DATE_TIME>[id28] matches {
+						upper matches {
+							DV_DATE_TIME[id29] 
+						}
+						lower matches {
+							DV_DATE_TIME[id30] 
+						}
+					}
+				}
+			}
+			ELEMENT[id8] matches {	-- Service Booking Status
+				value matches {
+					DV_CODED_TEXT[id31] matches {
+						defining_code matches {[ac5]}		-- Service Booking Status Values
+					}
+				}
+			}
+			ELEMENT[id9] occurrences matches {0..1} matches {	-- Supplementary Information to Follow
+				value matches {
+					DV_BOOLEAN[id32] matches {
+						value matches {True, False}
+					}
+				}
+			}
+			ELEMENT[id10] occurrences matches {0..1} matches {	-- Supplementary Information Expected
+				value matches {
+					DV_TEXT[id33] 
+				}
+			}
+			ELEMENT[id11] matches {	-- Subject of Care Instruction Description
+				value matches {
+					DV_TEXT[id34] 
+				}
+			}
+			CLUSTER[id12] occurrences matches {0..1} matches {	-- Protocol
+				items matches {
+					allow_archetype CLUSTER[id13] matches {	-- Distribution List
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.participation\.v3/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[id14] occurrences matches {0..1} matches {	-- Service Requester
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.participation\.v3/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[id17] occurrences matches {0..1} matches {	-- Service Provider
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.participation\.v3/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[id20] occurrences matches {0..1} matches {	-- Request Validity Period
+						value matches {
+							DV_INTERVAL<DV_DATE_TIME>[id35] matches {
+								upper matches {
+									DV_DATE_TIME[id36] 
+								}
+								lower matches {
+									DV_DATE_TIME[id37] 
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Requested Service">
+				description = <"Describes the types of service requested for, or provided to, the subject of care.">
+			>
+			["id2"] = <
+				text = <"Reason for Service">
+				description = <"Describes a clinical reason for a service being requested or received.">
+			>
+			["id3"] = <
+				text = <"Requested Service Description">
+				description = <"Describes the service arranged for, or provided to the patient.">
+			>
+			["id4"] = <
+				text = <"Intent of Request">
+				description = <"*">
+			>
+			["id5"] = <
+				text = <"Request Urgency">
+				description = <"*">
+			>
+			["id6"] = <
+				text = <"DateTime Service Scheduled">
+				description = <"The datetime at which the arranged service is scheduled to be provided to the subject of care (patient).">
+			>
+			["id7"] = <
+				text = <"Service Commencement Window">
+				description = <"The datetime or date range at/during which the arranged service is scheduled to be provided to the subject of care (patient).">
+			>
+			["id8"] = <
+				text = <"Service Booking Status">
+				description = <"An indication of the booking status of the arranged service.">
+			>
+			["id9"] = <
+				text = <"Supplementary Information to Follow">
+				description = <"An flag indicating whether or not there will be any further information sent in support of this request.  True indicates that additional information has been identified and will be forwarded when available eg incomplete pathology test results.">
+			>
+			["id10"] = <
+				text = <"Supplementary Information Expected">
+				description = <"Details of the nature of supplementary information that is to follow e.g name of laboratory results.">
+			>
+			["id11"] = <
+				text = <"Subject of Care Instruction Description">
+				description = <"Describes the instructions/advice and information that have been given to the subject of care from a healthcare provider in relation to the requested service.">
+			>
+			["id12"] = <
+				text = <"Protocol">
+				description = <"Information that is not critical to but may add value to the interpretation of a measurement.">
+			>
+			["id13"] = <
+				text = <"Distribution List">
+				description = <"The requester (individual or organisation) that has arranged the provision of the service.">
+			>
+			["id14"] = <
+				text = <"Service Requester">
+				description = <"The provider (individual or organisation) that has been arranged to provide the service.">
+			>
+			["id17"] = <
+				text = <"Service Provider">
+				description = <"The provider (individual or organisation) that has been arranged to provide the service.">
+			>
+			["id20"] = <
+				text = <"Request Validity Period">
+				description = <"The period over which the request is valid.  This may be open-ended and, if missing, the default is 12 months from the DateTime Service Scheduled.  (***** SR: This default is a guess; it needs to be verified.  *****)">
+			>
+			["ac2"] = <
+				text = <"Reason for Service Values">
+				description = <"The set of values for the clinical reason for a service being requested or received.">
+			>
+			["ac3"] = <
+				text = <"Requested Service Description Values">
+				description = <"The set of values for the service arranged for, or provided to the patient.">
+			>
+			["ac4"] = <
+				text = <"Request Urgency Values">
+				description = <"The set of values to describe the various states of urgency of a request.">
+			>
+			["ac5"] = <
+				text = <"Service Booking Status Values">
+				description = <"The set of values for an indication of the booking status of the arranged service.">
+			>
+		>
+	>

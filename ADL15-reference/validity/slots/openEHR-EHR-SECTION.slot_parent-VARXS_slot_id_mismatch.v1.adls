@@ -28,7 +28,7 @@ description
 definition
 	SECTION[id1.1] matches {	-- Filled slot section
 		/items matches {
-			use_archetype OBSERVATION[id2, openEHR-EHR-OBSERVATION.rm_correct_generic.v1] 
+			use_archetype OBSERVATION[id2.1, openEHR-EHR-OBSERVATION.rm_correct_generic.v1] 
 		}
 	}
 
@@ -38,6 +38,10 @@ terminology
 			["id1.1"] = <
 				text = <"Filled slot section">
 				description = <"Filled slot section">
+			>
+			["id2.1"] = <
+				text = <"Slot filler">
+				description = <"Slot filler">
 			>
 		>
 	>

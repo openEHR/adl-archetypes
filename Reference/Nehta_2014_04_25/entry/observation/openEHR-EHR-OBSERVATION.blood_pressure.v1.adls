@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; generated)
 	openEHR-EHR-OBSERVATION.blood_pressure.v1.0.0
 
 language
@@ -2107,10 +2107,10 @@ terminology
 	>
 	term_bindings = <
 		["SNOMED-CT"] = <
-			["id1"] = <http://snomedct.info/id/163020007>
-			["id5"] = <http://snomedct.info/id/163030003>
-			["id6"] = <http://snomedct.info/id/163031004>
-			["id14"] = <http://snomedct.info/id/246153002>
+			["id1"] = <http://snomed.info/id/163020007>
+			["id5"] = <http://snomed.info/id/163030003>
+			["id6"] = <http://snomed.info/id/163031004>
+			["id14"] = <http://snomed.info/id/246153002>
 		>
 		["openehr"] = <
 			["at1055"] = <http://openehr.org/id/125>

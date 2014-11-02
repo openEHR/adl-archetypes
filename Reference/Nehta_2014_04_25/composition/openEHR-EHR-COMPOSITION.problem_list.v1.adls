@@ -1,0 +1,101 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-COMPOSITION.problem_list.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics, Australia">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"2013-02-19">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record a persistent and managed list of diagnoses identified or problems experienced by the subject, or previous procedures performed, that may influence clinical decision-making and care provision.">
+			use = <"Use to record a persistent and managed list of diagnoses identified or problems experienced by the subject, or previous procedures performed, that may influence clinical decision-making and care provision. 
+
+This list can be utilised as a source of up-to-date problem list data for exchange or as the basis for decision support. 
+
+This list can be comprised of three types of archetype:
+- statements about the positive presence of problems, diagnoses or previous procedures are recorded using the EVALUATION.problem_diagnosis and/or ACTION.procedure archetypes; OR
+- a statement about the positive exclusion of medication use can be recorded using the specific EVALUATION.exclusion-problem_diagnosis or EVALUATION.exclusion-procedure archetypes - for example: \"No significant problems or diagnoses\" or No history of significant operations or procedures\"; OR
+- a statement about no information being available - neither a positive presence of a problem, diagnosis or procedure performed nor a positive exclusion - can be recorded using the EVALUATION.absence archetype.
+
+In order for this list to be accurate and safe to use as the basis for decision support activities and for exchange, this Problem List should ideally be curated by a clinician responsible for the health record, rather than managed automatically by the clinical system through business rules alone.">
+			keywords = <"problem", "list", "diagnosis", "diagnoses", "procedure">
+			misuse = <"">
+			copyright = <"© openeEHR">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Heather Leslie, Ocean Informatics, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia">
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Problem List, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 19 Feb 2013. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.287_4 (accessed 14 Mar 2013).">
+		["MD5-CAM-1.0.1"] = <"BFA848F52FAB6BB43DD1E6A9249D11DF">
+	>
+
+definition
+	COMPOSITION[id1] matches {	-- Problem List
+		category matches {
+			DV_CODED_TEXT[id7] matches {
+				defining_code matches {[at1]}
+			}
+		}
+		content cardinality matches {1..*; unordered} matches {
+			allow_archetype EVALUATION[id3] matches {	-- Problems or Diagnoses
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.problem_diagnosis(-a-zA-Z0-9_]+)*\.v1/}
+			}
+			allow_archetype ACTION[id4] matches {	-- Procedures
+				include
+					archetype_id/value matches {/openEHR-EHR-ACTION\.procedure(-a-zA-Z0-9_]+)*\.v1/}
+			}
+			allow_archetype EVALUATION[id5] matches {	-- Exclusion Statements
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-problem_diagnosis(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-procedure(-a-zA-Z0-9_]+)*\.v1/}
+			}
+			allow_archetype EVALUATION[id6] matches {	-- Absent Information
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.absence(-a-zA-Z0-9_]+)*\.v1/}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Problem List">
+				description = <"A persistent and managed list of diagnoses identified or problems experienced by the subject, or procedures performed, that may influence clinical decision-making and care provision.">
+			>
+			["id3"] = <
+				text = <"Problems or Diagnoses">
+				description = <"Details about identified problems or diagnoses.">
+			>
+			["id4"] = <
+				text = <"Procedures">
+				description = <"Details about identified procedures that have been performed.">
+			>
+			["id5"] = <
+				text = <"Exclusion Statements">
+				description = <"Positive statement about the known exclusion of known problems or diagnoses and procedures performed.">
+			>
+			["id6"] = <
+				text = <"Absent Information">
+				description = <"Positive statement that no information is available about identification of problems or diagnoses, nor procedures performed.">
+			>
+			["at1"] = <
+				text = <"persistent">
+				description = <"persistent">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at1"] = <http://openehr.org/id/431>
+		>
+	>

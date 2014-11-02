@@ -1,0 +1,197 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-ADMIN_ENTRY.australian_organ_donor_registry.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2011-09-29">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record information about an individual's organ and tissue donation decisions within the Australian Organ Donor Register (AODR).">
+			use = <"Use to record or update information about an individual's organ and tissue donation decisions within the Australian Organ Donor Register (AODR).">
+			keywords = <"organ", "donation", "register", "tissue">
+			misuse = <"">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"98D3E4B591FBE2275D5063724E7246E8">
+	>
+
+definition
+	ADMIN_ENTRY[id1] matches {	-- Australian Organ Donor Registration
+		data matches {
+			ITEM_TREE[id2] matches {
+				items matches {
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Date of Initial Registration
+						value matches {
+							DV_DATE_TIME[id17] 
+						}
+					}
+					ELEMENT[id4] occurrences matches {0..1} matches {	-- Donor End Date
+						value matches {
+							DV_DATE_TIME[id18] 
+						}
+					}
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Donor Nominations Exist
+						value matches {
+							DV_BOOLEAN[id19] matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[id6] occurrences matches {0..1} matches {	-- Donors Consent
+						value matches {
+							DV_BOOLEAN[id20] matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[id7] occurrences matches {0..1} matches {	-- Donors Intent
+						value matches {
+							DV_BOOLEAN[id21] matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[id8] occurrences matches {0..1} matches {	-- Bone Tissue Indicator
+						value matches {
+							DV_BOOLEAN[id22] matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[id9] occurrences matches {0..1} matches {	-- Eye Tissue Indicator
+						value matches {
+							DV_BOOLEAN[id23] matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[id10] occurrences matches {0..1} matches {	-- Heart Indicator
+						value matches {
+							DV_BOOLEAN[id24] matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[id11] occurrences matches {0..1} matches {	-- Heart Valve Indicator
+						value matches {
+							DV_BOOLEAN[id25] matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[id12] occurrences matches {0..1} matches {	-- Kidney Indicator
+						value matches {
+							DV_BOOLEAN[id26] matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[id13] occurrences matches {0..1} matches {	-- Liver Indicator
+						value matches {
+							DV_BOOLEAN[id27] matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[id14] occurrences matches {0..1} matches {	-- Lungs Indicator
+						value matches {
+							DV_BOOLEAN[id28] matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[id15] occurrences matches {0..1} matches {	-- Pancreas Indicator
+						value matches {
+							DV_BOOLEAN[id29] matches {
+								value matches {True, False}
+							}
+						}
+					}
+					ELEMENT[id16] occurrences matches {0..1} matches {	-- Skin Tissue Indicator
+						value matches {
+							DV_BOOLEAN[id30] matches {
+								value matches {True, False}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Australian Organ Donor Registration">
+				description = <"Information about an individual's organ and tissue donation decisions, for use within the Australian Organ Donor Register (AODR).">
+			>
+			["id3"] = <
+				text = <"Date of Initial Registration">
+				description = <"Date the Healthcare Individual registered in the AODR.">
+			>
+			["id4"] = <
+				text = <"Donor End Date">
+				description = <"Date the Healthcare Individual ended their nomination in the AODR.">
+			>
+			["id5"] = <
+				text = <"Donor Nominations Exist">
+				description = <"An indicator showing that the Healthcare Individual has a valid donor nomination.">
+			>
+			["id6"] = <
+				text = <"Donors Consent">
+				description = <"The donors consent regarding their donor intention.">
+			>
+			["id7"] = <
+				text = <"Donors Intent">
+				description = <"The donors actual intention.">
+			>
+			["id8"] = <
+				text = <"Bone Tissue Indicator">
+				description = <"An indicator (Yes/No) which describes the individuals bone tissue donation status.">
+			>
+			["id9"] = <
+				text = <"Eye Tissue Indicator">
+				description = <"An indicator (Yes/No) which describes the individuals eye tissue (cornea) donation status.">
+			>
+			["id10"] = <
+				text = <"Heart Indicator">
+				description = <"An indicator (Yes/No) which describes the individuals heart donation status.">
+			>
+			["id11"] = <
+				text = <"Heart Valve Indicator">
+				description = <"An indicator (Yes/No) which describes the individuals heart valve donation status.">
+			>
+			["id12"] = <
+				text = <"Kidney Indicator">
+				description = <"An indicator (Yes/No) which describes the individuals kidney donation status.">
+			>
+			["id13"] = <
+				text = <"Liver Indicator">
+				description = <"An indicator (Yes/No) which describes the individuals liver donation status.">
+			>
+			["id14"] = <
+				text = <"Lungs Indicator">
+				description = <"An indicator (Yes/No) which describes the individuals lung donation status.">
+			>
+			["id15"] = <
+				text = <"Pancreas Indicator">
+				description = <"An indicator (Yes/No) which describes the individuals pancreas donation status.">
+			>
+			["id16"] = <
+				text = <"Skin Tissue Indicator">
+				description = <"An indicator (Yes/No) which describes the individuals skin tissue donation status.">
+			>
+		>
+	>

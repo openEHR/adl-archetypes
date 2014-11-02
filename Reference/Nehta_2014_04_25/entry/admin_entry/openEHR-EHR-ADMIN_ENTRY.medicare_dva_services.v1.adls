@@ -1,0 +1,91 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-ADMIN_ENTRY.medicare_dva_services.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2011-09-30">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To provide information held by Medicare Australia about Medicare and DVA funded services provided to an individual.">
+			use = <"Use to display or share information about Medicare and DVA funded services provided to an individual for use in the PCEHR and related applications.">
+			keywords = <"medicare", "DVA", "services", "hospical">
+			misuse = <"">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Stephen Chu, NEHTA, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Kate Lazarenko, NEHTA, Australia", "Richard Townley-O'Neill, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"9B3AB45579DDCB78E9A04E3005DDD869">
+	>
+
+definition
+	ADMIN_ENTRY[id1] matches {	-- Medicare/DVA Services
+		data matches {
+			ITEM_TREE[id2] matches {
+				items matches {
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Date of Service
+						value matches {
+							DV_DATE_TIME[id6] 
+						}
+					}
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Medicare MBS Item
+						value matches {
+							DV_TEXT[id7] 
+						}
+					}
+					ELEMENT[id4] occurrences matches {0..1} matches {	-- Service in Hospital Indicator
+						value matches {
+							DV_BOOLEAN[id8] matches {
+								value matches {True, False}
+							}
+						}
+						null_flavour matches {
+							DV_CODED_TEXT[id9] matches {
+								defining_code matches {[at1]}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Medicare/DVA Services">
+				description = <"Information held by Medicare Australia about Medicare and DVA funded services provided to an individual.">
+			>
+			["id3"] = <
+				text = <"Date of Service">
+				description = <"The recorded date the service was supplied.">
+			>
+			["id4"] = <
+				text = <"Service in Hospital Indicator">
+				description = <"Indicator to show if the service was provided in a hospital.">
+			>
+			["id5"] = <
+				text = <"Medicare MBS Item">
+				description = <"The Medicare item number & short description of the service provided.">
+			>
+			["at1"] = <
+				text = <"not applicable">
+				description = <"not applicable">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at1"] = <http://openehr.org/id/273>
+		>
+	>

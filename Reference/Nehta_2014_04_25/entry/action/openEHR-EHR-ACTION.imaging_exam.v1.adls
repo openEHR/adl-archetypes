@@ -1,0 +1,337 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-ACTION.imaging_exam.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"17/04/2006">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record activity regarding the performance of imaging examinations.">
+			use = <"Use to record activity regarding the performance of imaging examinations.">
+			keywords = <"Radiology", "Ultrasound", "MRI", "CT", "scan", "tomography">
+			misuse = <"">
+			copyright = <"© 2011 NEHTA">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"B0B81B487EFAE113C50A83795C834E0D">
+	>
+
+definition
+	ACTION[id1] matches {	-- Imaging examination
+		ism_transition matches {
+			ISM_TRANSITION[id24] matches {
+				current_state matches {
+					DV_CODED_TEXT[id25] matches {
+						defining_code matches {[at16]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id26] matches {
+						defining_code matches {[at3]}
+					}
+				}
+			}
+			ISM_TRANSITION[id27] matches {
+				current_state matches {
+					DV_CODED_TEXT[id28] matches {
+						defining_code matches {[at16]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id29] matches {
+						defining_code matches {[at4]}
+					}
+				}
+			}
+			ISM_TRANSITION[id30] matches {
+				current_state matches {
+					DV_CODED_TEXT[id31] matches {
+						defining_code matches {[at17]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id32] matches {
+						defining_code matches {[at10]}
+					}
+				}
+			}
+			ISM_TRANSITION[id33] matches {
+				current_state matches {
+					DV_CODED_TEXT[id34] matches {
+						defining_code matches {[at18]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id35] matches {
+						defining_code matches {[at12]}
+					}
+				}
+			}
+			ISM_TRANSITION[id36] matches {
+				current_state matches {
+					DV_CODED_TEXT[id37] matches {
+						defining_code matches {[at19]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id38] matches {
+						defining_code matches {[at5]}
+					}
+				}
+			}
+			ISM_TRANSITION[id39] matches {
+				current_state matches {
+					DV_CODED_TEXT[id40] matches {
+						defining_code matches {[at19]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id41] matches {
+						defining_code matches {[at6]}
+					}
+				}
+			}
+			ISM_TRANSITION[id42] matches {
+				current_state matches {
+					DV_CODED_TEXT[id43] matches {
+						defining_code matches {[at20]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id44] matches {
+						defining_code matches {[at9]}
+					}
+				}
+			}
+			ISM_TRANSITION[id45] matches {
+				current_state matches {
+					DV_CODED_TEXT[id46] matches {
+						defining_code matches {[at20]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id47] matches {
+						defining_code matches {[at15]}
+					}
+				}
+			}
+			ISM_TRANSITION[id48] matches {
+				current_state matches {
+					DV_CODED_TEXT[id49] matches {
+						defining_code matches {[at21]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id50] matches {
+						defining_code matches {[at11]}
+					}
+				}
+			}
+			ISM_TRANSITION[id51] matches {
+				current_state matches {
+					DV_CODED_TEXT[id52] matches {
+						defining_code matches {[at22]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id53] matches {
+						defining_code matches {[at13]}
+					}
+				}
+			}
+			ISM_TRANSITION[id54] matches {
+				current_state matches {
+					DV_CODED_TEXT[id55] matches {
+						defining_code matches {[at23]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id56] matches {
+						defining_code matches {[at8]}
+					}
+				}
+			}
+		}
+		description matches {
+			ITEM_TREE[id2] matches {
+				items matches {
+					ELEMENT[id18] occurrences matches {0..1} matches {	-- Examination name
+						value matches {
+							DV_TEXT[id57] 
+						}
+					}
+					ELEMENT[id19] occurrences matches {0..1} matches {	-- Description
+						value matches {
+							DV_TEXT[id58] 
+						}
+					}
+					ELEMENT[id20] occurrences matches {0..1} matches {	-- Reason
+						value matches {
+							DV_TEXT[id59] 
+						}
+					}
+					allow_archetype CLUSTER[id23] matches {	-- Anatomical location
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+					}
+					allow_archetype CLUSTER[id22] matches {	-- Examination detail
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[id21] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT[id60] 
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[id16] matches {
+				items matches {
+					ELEMENT[id17] occurrences matches {0..1} matches {	-- Start date/time
+						value matches {
+							DV_DATE_TIME[id61] 
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Imaging examination">
+				description = <"Clinical activity about performing an imaging examination.">
+			>
+			["at3"] = <
+				text = <"Examination planned">
+				description = <"Imaging examination is planned.">
+			>
+			["at4"] = <
+				text = <"Examination requested">
+				description = <"Imaging examination has been requested.">
+			>
+			["at5"] = <
+				text = <"Appointment scheduled">
+				description = <"Imaging examination appointment has been made.">
+			>
+			["at6"] = <
+				text = <"Appointment rescheduled">
+				description = <"Appointment for imaging examination has been rescheduled.">
+			>
+			["at8"] = <
+				text = <"Examination complete">
+				description = <"The imaging examination has been performed and all associated activities completed.">
+			>
+			["at9"] = <
+				text = <"Examination performed">
+				description = <"The examation was performed but related activities not completed.">
+			>
+			["at10"] = <
+				text = <"Examination postponed">
+				description = <"The examination has been postponed.">
+			>
+			["at11"] = <
+				text = <"Examination suspended">
+				description = <"The examination has been suspended.">
+			>
+			["at12"] = <
+				text = <"Examination cancelled">
+				description = <"The planned examination has been cancelled prior to commencement.">
+			>
+			["at13"] = <
+				text = <"Examination aborted">
+				description = <"The examination has been aborted.">
+			>
+			["at15"] = <
+				text = <"Failed attempt">
+				description = <"The examation was commenced but not completed successfully.">
+			>
+			["id17"] = <
+				text = <"Start date/time">
+				description = <"The start date and/or time for the procedure. This will indicate the scheduled date/time when recorded against the 'Appointment scheduled' care pathway step or the actual Start date/time in the 'Examination performed' step.">
+			>
+			["id18"] = <
+				text = <"Examination name">
+				description = <"The name of the examination (to be) performed. Coding of the specific procedure with a terminology is preferred, where possible.">
+			>
+			["id19"] = <
+				text = <"Description">
+				description = <"Narrative description about the activity or care pathway step for the identified examination, for example description about the performance and findings from the the examination, the failed attempt or the cancellation of the examination.">
+			>
+			["id20"] = <
+				text = <"Reason">
+				description = <"Reason that the activity or care pathway step for the identified examination was carried out, for example, the reason for the cancellation or suspension of the examination.">
+			>
+			["id21"] = <
+				text = <"Comment">
+				description = <"Additional narrative about the activity or care pathway step not captured in other fields.">
+			>
+			["id22"] = <
+				text = <"Examination detail">
+				description = <"Structured information about the examination. Use to capture detailed, structured information about method & technique etc.">
+			>
+			["id23"] = <
+				text = <"Anatomical location">
+				description = <"Structured information about the specific anatomical location of the examination.">
+			>
+			["at16"] = <
+				text = <"planned">
+				description = <"planned">
+			>
+			["at17"] = <
+				text = <"postponed">
+				description = <"postponed">
+			>
+			["at18"] = <
+				text = <"cancelled">
+				description = <"cancelled">
+			>
+			["at19"] = <
+				text = <"scheduled">
+				description = <"scheduled">
+			>
+			["at20"] = <
+				text = <"active">
+				description = <"active">
+			>
+			["at21"] = <
+				text = <"suspended">
+				description = <"suspended">
+			>
+			["at22"] = <
+				text = <"aborted">
+				description = <"aborted">
+			>
+			["at23"] = <
+				text = <"complete">
+				description = <"complete">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at16"] = <http://openehr.org/id/526>
+			["at17"] = <http://openehr.org/id/527>
+			["at18"] = <http://openehr.org/id/528>
+			["at19"] = <http://openehr.org/id/529>
+			["at20"] = <http://openehr.org/id/245>
+			["at21"] = <http://openehr.org/id/530>
+			["at22"] = <http://openehr.org/id/531>
+			["at23"] = <http://openehr.org/id/532>
+		>
+	>

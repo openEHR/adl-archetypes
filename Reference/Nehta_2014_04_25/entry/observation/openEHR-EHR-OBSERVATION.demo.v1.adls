@@ -1,0 +1,742 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-OBSERVATION.demo.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2008-12-23">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To provide an overview of the display of each of the datatypes available in an openEHR archetype, and of the Data, State, Event and Protocol models within the context of a HTML display and associated ADL.">
+			use = <"To provide a visual overview of archetype data types and archetype components to potential and current clinical content reviewers in the openEHR Clinical Knowledge Manager.">
+			keywords = <"demonstration", "test", "prototype", "datatypes", "state", "protocol", "event", "data">
+			misuse = <"Not to carry any real clinical data.">
+			copyright = <"© National E-Health Transition Authority">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Individual A, Argentina", "Individual B, Belgium", "Individual C, Canada (Editor)">
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"openEHR website:  http://www.openehr.org/home.html
+CKM:  http://www.openehr.org/knowledge/">
+		["MD5-CAM-1.0.1"] = <"AEA1AE0BC2466A2D122B5A13AC957AB3">
+	>
+
+definition
+	OBSERVATION[id1] matches {	-- Demonstration
+		data matches {
+			HISTORY[id2] matches {
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[id3] occurrences matches {0..1} matches {	-- Any Event
+						data matches {
+							ITEM_TREE[id4] matches {
+								items matches {
+									ELEMENT[id33] occurrences matches {0..1} 	-- Data - Definition
+									CLUSTER[id5] matches {	-- Heading1
+										items matches {
+											ELEMENT[id6] occurrences matches {0..1} matches {	-- Free Text or Coded
+												value matches {
+													DV_TEXT[id46] 
+												}
+											}
+											ELEMENT[id7] matches {	-- Text That Uses Internal Codes
+												value matches {
+													DV_CODED_TEXT[id47] matches {
+														defining_code matches {[ac5]}		-- Text That Uses Internal Codes (synthesised)
+													}
+												}
+											}
+											ELEMENT[id12] matches {	-- Text That is Sourced From an External Terminology
+												value matches {
+													DV_CODED_TEXT[id48] matches {
+														defining_code matches {[ac2]}		-- SubsetA
+													}
+												}
+											}
+											ELEMENT[id13] occurrences matches {0..1} matches {	-- Quantity
+												value matches {
+													DV_QUANTITY[id49] matches {
+														property matches {[at45]}
+														[magnitude, units, precision] matches {
+															[{|0.0..100.0|}, {"cm"}, {1}],
+															[{|>=0.0|}, {"mm"}, {|>=0|}],
+															[{|>=0.0|}, {"in"}, {|>=0|}],
+															[{|>=0.0|}, {"ft"}, {|>=0|}]
+														}
+													}
+												}
+											}
+											ELEMENT[id24] occurrences matches {0..1} matches {	-- Interval of Quantity
+												value matches {
+													DV_INTERVAL<DV_QUANTITY>[id50] matches {
+														upper matches {
+															DV_QUANTITY[id51] matches {
+																property matches {[at45]}
+																units matches {"cm", "m", "in", "ft"}
+															}
+														}
+														lower matches {
+															DV_QUANTITY[id52] matches {
+																property matches {[at45]}
+																units matches {"cm", "m", "in", "ft"}
+															}
+														}
+													}
+												}
+											}
+											ELEMENT[id14] occurrences matches {0..1} matches {	-- Count
+												value matches {
+													DV_COUNT[id53] matches {
+														magnitude matches {|>=0|}
+													}
+												}
+											}
+											ELEMENT[id23] occurrences matches {0..1} matches {	-- Interval of Integer
+												value matches {
+													DV_INTERVAL<DV_COUNT>[id54] matches {
+														upper matches {
+															DV_COUNT[id55] 
+														}
+														lower matches {
+															DV_COUNT[id56] 
+														}
+													}
+												}
+											}
+											ELEMENT[id29] occurrences matches {0..1} matches {	-- Proportion
+												value matches {
+													DV_PROPORTION[id57] matches {
+														is_integral matches {True}
+														type matches {0, 2, 3, 4}
+													}
+												}
+											}
+											ELEMENT[id15] occurrences matches {0..1} matches {	-- Date/Time
+												value matches {
+													DV_DATE_TIME[id58] 
+												}
+											}
+											ELEMENT[id25] occurrences matches {0..1} matches {	-- Interval of Date
+												value matches {
+													DV_INTERVAL<DV_DATE_TIME>[id59] matches {
+														upper matches {
+															DV_DATE_TIME[id60] 
+														}
+														lower matches {
+															DV_DATE_TIME[id61] 
+														}
+													}
+												}
+											}
+											ELEMENT[id22] occurrences matches {0..1} matches {	-- Duration
+												value matches {
+													DV_DURATION[id62] 
+												}
+											}
+											ELEMENT[id16] occurrences matches {0..1} matches {	-- Ordinal
+												value matches {
+													DV_ORDINAL[id63] matches {
+														[value, symbol] matches {
+															[{0}, {[at39]}],
+															[{1}, {[at40]}],
+															[{2}, {[at41]}],
+															[{5}, {[at42]}],
+															[{9}, {[at43]}],
+															[{10}, {[at44]}]
+														}
+													}
+												}
+											}
+											ELEMENT[id17] occurrences matches {0..1} matches {	-- Boolean
+												value matches {
+													DV_BOOLEAN[id64] matches {
+														value matches {True, False}
+													}
+												}
+												null_flavour matches {
+													DV_CODED_TEXT[id65] matches {
+														defining_code matches {[ac6]}		-- Boolean (synthesised)
+													}
+												}
+											}
+											ELEMENT[id18] occurrences matches {0..1} 	-- Any
+											ELEMENT[id26] occurrences matches {0..1} matches {	-- Choice
+												value matches {
+													DV_QUANTITY[id66] matches {
+														property matches {[at46]}
+														units matches {"gm", "oz(avdp)"}
+													}
+													DV_CODED_TEXT[id67] matches {
+														defining_code matches {[ac4]}		-- SubsetB
+													}
+												}
+											}
+											ELEMENT[id27] occurrences matches {0..1} matches {	-- Multimedia
+												value matches {
+													DV_MULTIMEDIA[id68] matches {
+														media_type matches {[ac7]}		-- Multimedia (synthesised)
+													}
+												}
+											}
+											ELEMENT[id28] occurrences matches {0..1} matches {	-- URI - resource identifier
+												value matches {
+													DV_URI[id69] 
+												}
+											}
+											ELEMENT[id45] occurrences matches {0..1} matches {	-- Identifier
+												value matches {
+													DV_IDENTIFIER[id70] 
+												}
+											}
+										}
+									}
+									CLUSTER[id19] occurrences matches {0..1} matches {	-- Heading 2
+										items matches {
+											allow_archetype CLUSTER[id20] matches {	-- Slot To Contain Other Cluster Archetypes
+												include
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.device\.v1/}
+											}
+											allow_archetype ELEMENT[id21] matches {	-- Slot To Contain Other Element Archetypes
+												include
+													archetype_id/value matches {/openEHR-EHR-ELEMENT\.ctg_codes\.v1/}
+												exclude
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[id31] matches {
+								items matches {
+									ELEMENT[id32] occurrences matches {0..1} 	-- State - Definition
+								}
+							}
+						}
+					}
+					POINT_EVENT[id34] occurrences matches {0..1} matches {	-- Named Point In Time
+						data matches {
+							use_node ITEM_TREE[id71] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[Any Event]/data[id4]
+						}
+						state matches {
+							use_node ITEM_TREE[id72] /data[id2]/events[id3]/state[id31]	-- /data[id2]/events[Any Event]/state[id31]
+						}
+					}
+					INTERVAL_EVENT[id35] occurrences matches {0..1} matches {	-- Named Interval
+						math_function matches {
+							DV_CODED_TEXT[id73] matches {
+								defining_code matches {[at47]}
+							}
+						}
+						data matches {
+							use_node ITEM_TREE[id74] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[Any Event]/data[id4]
+						}
+						state matches {
+							use_node ITEM_TREE[id75] /data[id2]/events[id3]/state[id31]	-- /data[id2]/events[Any Event]/state[id31]
+						}
+					}
+					POINT_EVENT[id36] occurrences matches {0..1} matches {	-- Offset Point In Time
+						offset matches {
+							DV_DURATION[id76] matches {
+								value matches {PT5M}
+							}
+						}
+						data matches {
+							use_node ITEM_TREE[id77] /data[id2]/events[id3]/data[id4]	-- /data[id2]/events[Any Event]/data[id4]
+						}
+						state matches {
+							use_node ITEM_TREE[id78] /data[id2]/events[id3]/state[id31]	-- /data[id2]/events[Any Event]/state[id31]
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[id37] matches {
+				items matches {
+					ELEMENT[id38] occurrences matches {0..1} 	-- Protocol - Definition
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Demonstration">
+				description = <"Demonstration archetype with descriptions and explanations.">
+			>
+			["id3"] = <
+				text = <"Any Event">
+				description = <"All archetypes of the OBSERVATION class contain a HISTORY or EVENT model which contains information about the timing of the observation and the 'width' of the information - either a point in time or an interval.  The default is 'Any event' and it is not specified if this is a Point in time or an Interval.">
+			>
+			["id5"] = <
+				text = <"Heading1">
+				description = <"This is a symbol for a cluster which can have other elements 'nested' within it.">
+			>
+			["id6"] = <
+				text = <"Free Text or Coded">
+				description = <"Text data type in which free text can be entered or coding can be incorporated either in the template or at run time.">
+			>
+			["id7"] = <
+				text = <"Text That Uses Internal Codes">
+				description = <"Text data type which can use an internal vocabulary.  Each of these 'internal codes' can be bound to a terminology code.">
+			>
+			["at8"] = <
+				text = <"Lying">
+				description = <"Patient is lying supine.">
+			>
+			["at9"] = <
+				text = <"Reclining">
+				description = <"Patient is reclining, propped up on one medium pillow.">
+			>
+			["at10"] = <
+				text = <"Sitting">
+				description = <"Patient is sitting on a chair.">
+			>
+			["at11"] = <
+				text = <"Standing">
+				description = <"Patient is standing.">
+			>
+			["id12"] = <
+				text = <"Text That is Sourced From an External Terminology">
+				description = <"Text data type utilising codes derived from an external terminology source eg a SNOMED-CT, LOINC or ICD subset.">
+			>
+			["id13"] = <
+				text = <"Quantity">
+				description = <"A quantity data type used to record a measurement associated with its' appropriate units.  These are derived from ISO standards and the Reference model enables conversion between these units. The example shown here is length.">
+			>
+			["id14"] = <
+				text = <"Count">
+				description = <"Count data types are composed of an integer with no units eg for recording the number of children - in this example the minimum is set at 0 and the maximum not specified.">
+			>
+			["id15"] = <
+				text = <"Date/Time">
+				description = <"Date/Time datatype allows recording of a date and/or time, including partial dates such as year only or month and year only.  Allow all is the default - so all forms of date/time are permitted.">
+			>
+			["id16"] = <
+				text = <"Ordinal">
+				description = <"Ordinal datatypes pair a number and text - in this way scores can be calculated in software, or progression can be assessed eg if used in a pain score.">
+			>
+			["id17"] = <
+				text = <"Boolean">
+				description = <"Boolean datatype that allows for true or false answers.">
+			>
+			["id18"] = <
+				text = <"Any">
+				description = <"The datatype for this 'any' element can be specified or constrained in a template or at run-time, but is not explicitly modelled in the archetype.">
+			>
+			["id19"] = <
+				text = <"Heading 2">
+				description = <"This is a symbol for a cluster which can have other elements 'nested' within it.">
+			>
+			["id20"] = <
+				text = <"Slot To Contain Other Cluster Archetypes">
+				description = <"List of CLUSTER archetypes allowed to be included or excluded within this OBSERVATION archetype.">
+			>
+			["id21"] = <
+				text = <"Slot To Contain Other Element Archetypes">
+				description = <"List of ELEMENT archetypes allowed to be included or excluded within this OBSERVATION archetype.">
+			>
+			["id22"] = <
+				text = <"Duration">
+				description = <"Duration datatype allows recording of the duration of clinical concepts.  'Allow all time units' is the default, although specific time units can be explicitly modelled.  Maximum and minum values can be set for each time unit.">
+			>
+			["id23"] = <
+				text = <"Interval of Integer">
+				description = <"Interval of integer datatype allows for recording of a range of counts eg 1-2 tablets prescribed.  Maximum and minimum values can be set for the lower count and the upper count.">
+			>
+			["id24"] = <
+				text = <"Interval of Quantity">
+				description = <"Interval of quantity datatypes allow for the recording of a range of measurements in association with appropriate units eg 1-2cm (prescribed amount of cream for a rash).">
+			>
+			["id25"] = <
+				text = <"Interval of Date">
+				description = <"Interval of integer datatype allows for recording of a range of dates eg between September 1, 2008 and September 8, 2008.">
+			>
+			["id26"] = <
+				text = <"Choice">
+				description = <"Choice datatype allows for a number of types of element to be specified simultaneously and which can constrained or selected within a template or at run-time.  In this example, a text datatype set to Free text or Coded and another that is constrained to Terminology record data about the same data element.">
+			>
+			["id27"] = <
+				text = <"Multimedia">
+				description = <"Multimedia datatypes allow for the recording of many types of multimedia files to be captured.  All available types have been explicitly selected in this example.">
+			>
+			["id28"] = <
+				text = <"URI - resource identifier">
+				description = <"URI datatypes allow for recording of relationships from this data to data recorded elsewhere.  These links can be within the same EHR, or external eg to a  URL.">
+			>
+			["id29"] = <
+				text = <"Proportion">
+				description = <"Proportion datatypes allow for ratios, percent, fractions and proportions to be modelled.">
+			>
+			["id32"] = <
+				text = <"State - Definition">
+				description = <"All archetypes of the OBSERVATION class can  contain a STATE model which contains information about the subject of data at the time the information was collected, and this information is required for safe clinical interpretation of the core information. An example is the position of the patient at the time of measuring a blood pressure.  Datatypes are identical to those explained in the Data model, above.">
+			>
+			["id33"] = <
+				text = <"Data - Definition">
+				description = <"All archetypes of the OBSERVATION class contain a DATA model  which contains the core information e.g. the systolic and diastolic pressures when measuring a blood pressure.">
+			>
+			["id34"] = <
+				text = <"Named Point In Time">
+				description = <"An event that is both named (eg Birth) and constrained as a Point in time event records the data elements in relation to a specified point in time eg Weight at Birth.">
+			>
+			["id35"] = <
+				text = <"Named Interval">
+				description = <"An event that is both named and constrained as an Interval event records the data elements in relation to a period of time eg Weight Loss over time.  The interval can be fixed or left unspecified.  In addition there are mathematical functions that can be specified to capture concepts such as change, decrease, increase, maximum, minimum, mean etc.">
+			>
+			["id36"] = <
+				text = <"Offset Point In Time">
+				description = <"Offset Point in time records data at a point in time with a fixed offset of 5 minutes from another specified event eg recording a 2 minute Apgar reading at 2 minutes offset from Birth.">
+			>
+			["id38"] = <
+				text = <"Protocol - Definition">
+				description = <"All archetypes of the OBSERVATION class can contain a PROTOCOL model which records information on how the information was gathered or measured, and any other information that is not required for safe clinical interpretation of the core Data. Datatypes are identical to those explained in the Data model, above.">
+			>
+			["at39"] = <
+				text = <"No pain">
+				description = <"No pain at all.">
+			>
+			["at40"] = <
+				text = <"Slight pain">
+				description = <"Pain level rated as 1 out of a possible maximum score of 10.">
+			>
+			["at41"] = <
+				text = <"Mild pain">
+				description = <"Pain level rated as 2 out of a possible maximum score of 10.">
+			>
+			["at42"] = <
+				text = <"Moderate pain">
+				description = <"Pain level rated as 5 out of a possible maximum score of 10.">
+			>
+			["at43"] = <
+				text = <"Severe pain">
+				description = <"Pain level rated as 9 out of a possible maximum score of 10.">
+			>
+			["at44"] = <
+				text = <"Most severe pain imaginable">
+				description = <"Pain level rated as 10 out of a possible maximum score of 10.">
+			>
+			["id45"] = <
+				text = <"Identifier">
+				description = <"Identifier datatypes enable recording of formal data identifiers.">
+			>
+			["ac2"] = <
+				text = <"SubsetA">
+				description = <"Terminology subset derived from XXX">
+			>
+			["ac4"] = <
+				text = <"SubsetB">
+				description = <"XYZ codes from Terminology 123">
+			>
+			["at45"] = <
+				text = <"Length">
+				description = <"Length">
+			>
+			["at46"] = <
+				text = <"Mass">
+				description = <"Mass">
+			>
+			["at47"] = <
+				text = <"change">
+				description = <"change">
+			>
+			["at48"] = <
+				text = <"no information">
+				description = <"no information">
+			>
+			["at49"] = <
+				text = <"masked">
+				description = <"masked">
+			>
+			["at50"] = <
+				text = <"not applicable">
+				description = <"not applicable">
+			>
+			["at51"] = <
+				text = <"unknown">
+				description = <"unknown">
+			>
+			["at52"] = <
+				text = <"audio/DVI4">
+				description = <"audio/DVI4">
+			>
+			["at53"] = <
+				text = <"audio/G722">
+				description = <"audio/G722">
+			>
+			["at54"] = <
+				text = <"audio/G723">
+				description = <"audio/G723">
+			>
+			["at55"] = <
+				text = <"audio/G726-16">
+				description = <"audio/G726-16">
+			>
+			["at56"] = <
+				text = <"audio/G726-24">
+				description = <"audio/G726-24">
+			>
+			["at57"] = <
+				text = <"audio/G726-32">
+				description = <"audio/G726-32">
+			>
+			["at58"] = <
+				text = <"audio/G726-40">
+				description = <"audio/G726-40">
+			>
+			["at59"] = <
+				text = <"audio/G728">
+				description = <"audio/G728">
+			>
+			["at60"] = <
+				text = <"audio/L8">
+				description = <"audio/L8">
+			>
+			["at61"] = <
+				text = <"audio/L16">
+				description = <"audio/L16">
+			>
+			["at62"] = <
+				text = <"audio/LPC">
+				description = <"audio/LPC">
+			>
+			["at63"] = <
+				text = <"audio/G729">
+				description = <"audio/G729">
+			>
+			["at64"] = <
+				text = <"audio/G729D">
+				description = <"audio/G729D">
+			>
+			["at65"] = <
+				text = <"audio/G729E">
+				description = <"audio/G729E">
+			>
+			["at66"] = <
+				text = <"audio/mpeg">
+				description = <"audio/mpeg">
+			>
+			["at67"] = <
+				text = <"audio/mpeg4-generic">
+				description = <"audio/mpeg4-generic">
+			>
+			["at68"] = <
+				text = <"audio/L20">
+				description = <"audio/L20">
+			>
+			["at69"] = <
+				text = <"audio/L24">
+				description = <"audio/L24">
+			>
+			["at70"] = <
+				text = <"audio/telephone-event">
+				description = <"audio/telephone-event">
+			>
+			["at71"] = <
+				text = <"image/cgm">
+				description = <"image/cgm">
+			>
+			["at72"] = <
+				text = <"image/gif">
+				description = <"image/gif">
+			>
+			["at73"] = <
+				text = <"image/png">
+				description = <"image/png">
+			>
+			["at74"] = <
+				text = <"image/tiff">
+				description = <"image/tiff">
+			>
+			["at75"] = <
+				text = <"image/jpeg">
+				description = <"image/jpeg">
+			>
+			["at76"] = <
+				text = <"text/calendar">
+				description = <"text/calendar">
+			>
+			["at77"] = <
+				text = <"text/directory">
+				description = <"text/directory">
+			>
+			["at78"] = <
+				text = <"text/html">
+				description = <"text/html">
+			>
+			["at79"] = <
+				text = <"text/plain">
+				description = <"text/plain">
+			>
+			["at80"] = <
+				text = <"text/rtf">
+				description = <"text/rtf">
+			>
+			["at81"] = <
+				text = <"text/sgml">
+				description = <"text/sgml">
+			>
+			["at82"] = <
+				text = <"text/tab-separated-values">
+				description = <"text/tab-separated-values">
+			>
+			["at83"] = <
+				text = <"text/uri-list">
+				description = <"text/uri-list">
+			>
+			["at84"] = <
+				text = <"text/xml">
+				description = <"text/xml">
+			>
+			["at85"] = <
+				text = <"text/xml-external-parsed-entity">
+				description = <"text/xml-external-parsed-entity">
+			>
+			["at86"] = <
+				text = <"video/BT656">
+				description = <"video/BT656">
+			>
+			["at87"] = <
+				text = <"video/CelB">
+				description = <"video/CelB">
+			>
+			["at88"] = <
+				text = <"video/H261">
+				description = <"video/H261">
+			>
+			["at89"] = <
+				text = <"video/H263">
+				description = <"video/H263">
+			>
+			["at90"] = <
+				text = <"video/H263-1998">
+				description = <"video/H263-1998">
+			>
+			["at91"] = <
+				text = <"video/H263-2000">
+				description = <"video/H263-2000">
+			>
+			["at92"] = <
+				text = <"video/quicktime">
+				description = <"video/quicktime">
+			>
+			["at93"] = <
+				text = <"application/msword">
+				description = <"application/msword">
+			>
+			["at94"] = <
+				text = <"application/pdf">
+				description = <"application/pdf">
+			>
+			["at95"] = <
+				text = <"application/rtf">
+				description = <"application/rtf">
+			>
+			["at96"] = <
+				text = <"application/dicom">
+				description = <"application/dicom">
+			>
+			["ac5"] = <
+				text = <"Text That Uses Internal Codes (synthesised)">
+				description = <"Text data type which can use an internal vocabulary.  Each of these 'internal codes' can be bound to a terminology code. (synthesised)">
+			>
+			["ac6"] = <
+				text = <"Boolean (synthesised)">
+				description = <"Boolean datatype that allows for true or false answers. (synthesised)">
+			>
+			["ac7"] = <
+				text = <"Multimedia (synthesised)">
+				description = <"Multimedia datatypes allow for the recording of many types of multimedia files to be captured.  All available types have been explicitly selected in this example. (synthesised)">
+			>
+			["ac8"] = <
+				text = <"Ordinal (synthesised)">
+				description = <"Ordinal datatypes pair a number and text - in this way scores can be calculated in software, or progression can be assessed eg if used in a pain score. (synthesised)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at45"] = <http://openehr.org/id/122>
+			["at46"] = <http://openehr.org/id/124>
+			["at47"] = <http://openehr.org/id/147>
+			["at48"] = <http://openehr.org/id/271>
+			["at49"] = <http://openehr.org/id/272>
+			["at50"] = <http://openehr.org/id/273>
+			["at51"] = <http://openehr.org/id/253>
+			["at52"] = <http://openehr.org/id/387>
+			["at53"] = <http://openehr.org/id/388>
+			["at54"] = <http://openehr.org/id/389>
+			["at55"] = <http://openehr.org/id/390>
+			["at56"] = <http://openehr.org/id/391>
+			["at57"] = <http://openehr.org/id/392>
+			["at58"] = <http://openehr.org/id/393>
+			["at59"] = <http://openehr.org/id/394>
+			["at60"] = <http://openehr.org/id/395>
+			["at61"] = <http://openehr.org/id/396>
+			["at62"] = <http://openehr.org/id/397>
+			["at63"] = <http://openehr.org/id/398>
+			["at64"] = <http://openehr.org/id/399>
+			["at65"] = <http://openehr.org/id/400>
+			["at66"] = <http://openehr.org/id/409>
+			["at67"] = <http://openehr.org/id/410>
+			["at68"] = <http://openehr.org/id/411>
+			["at69"] = <http://openehr.org/id/412>
+			["at70"] = <http://openehr.org/id/413>
+			["at71"] = <http://openehr.org/id/425>
+			["at72"] = <http://openehr.org/id/426>
+			["at73"] = <http://openehr.org/id/427>
+			["at74"] = <http://openehr.org/id/428>
+			["at75"] = <http://openehr.org/id/429>
+			["at76"] = <http://openehr.org/id/415>
+			["at77"] = <http://openehr.org/id/416>
+			["at78"] = <http://openehr.org/id/417>
+			["at79"] = <http://openehr.org/id/418>
+			["at80"] = <http://openehr.org/id/419>
+			["at81"] = <http://openehr.org/id/420>
+			["at82"] = <http://openehr.org/id/421>
+			["at83"] = <http://openehr.org/id/422>
+			["at84"] = <http://openehr.org/id/423>
+			["at85"] = <http://openehr.org/id/424>
+			["at86"] = <http://openehr.org/id/401>
+			["at87"] = <http://openehr.org/id/402>
+			["at88"] = <http://openehr.org/id/404>
+			["at89"] = <http://openehr.org/id/405>
+			["at90"] = <http://openehr.org/id/406>
+			["at91"] = <http://openehr.org/id/407>
+			["at92"] = <http://openehr.org/id/414>
+			["at93"] = <http://openehr.org/id/517>
+			["at94"] = <http://openehr.org/id/518>
+			["at95"] = <http://openehr.org/id/519>
+			["at96"] = <http://openehr.org/id/637>
+		>
+	>
+	value_sets = <
+		["ac5"] = <
+			id = <"ac5">
+			members = <"at8", "at9", "at10", "at11">
+		>
+		["ac6"] = <
+			id = <"ac6">
+			members = <"at48", "at49", "at50", "at51">
+		>
+		["ac7"] = <
+			id = <"ac7">
+			members = <"at52", "at53", "at54", "at55", "at56", "at57", "at58", "at59", "at60", "at61", "at62", "at63", "at64", "at65", "at66", "at67", "at68", "at69", "at70", "at71", "at72", "at73", "at74", "at75", "at76", "at77", "at78", "at79", "at80", "at81", "at82", "at83", "at84", "at85", "at86", "at87", "at88", "at89", "at90", "at91", "at92", "at93", "at94", "at95", "at96">
+		>
+		["ac8"] = <
+			id = <"ac8">
+			members = <"at39", "at40", "at41", "at42", "at43", "at44">
+		>
+	>

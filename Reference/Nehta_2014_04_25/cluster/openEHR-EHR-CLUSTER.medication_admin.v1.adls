@@ -1,0 +1,92 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-CLUSTER.medication_admin.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"NEHTA">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"10/11/2010">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To describe how a medication should be administered or was actually administered.">
+			use = <"To be used in INSTRUCTION.medication and ACTION.medication to describe the administration.">
+			keywords = <"medication administration", "injection">
+			misuse = <"Not to be used for administration of anything other than medication.">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"E4C32401F630923CC4B5EE13124F1BAA">
+	>
+
+definition
+	CLUSTER[id1] matches {	-- Medication administration
+		items matches {
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Route
+				value matches {
+					DV_CODED_TEXT[id7] matches {
+						defining_code matches {[ac2]}		-- RouteOfAdministration
+					}
+				}
+			}
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Site
+				value matches {
+					DV_TEXT[id8] 
+				}
+			}
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Delivery method
+				value matches {
+					DV_TEXT[id9] 
+				}
+			}
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Dose duration
+				value matches {
+					DV_DURATION[id10] 
+				}
+			}
+			allow_archetype CLUSTER[id6] matches {	-- Intravenous details
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Medication administration">
+				description = <"Information about the future or actual administration of medication.">
+			>
+			["id2"] = <
+				text = <"Route">
+				description = <"The route by which the medication is administered (e.g. oral, sublingual etc).">
+			>
+			["id3"] = <
+				text = <"Site">
+				description = <"A description of the site of administration.">
+			>
+			["id4"] = <
+				text = <"Delivery method">
+				description = <"The method of delivery if this should be specified (e.g. via a nebuliser or spacer).">
+			>
+			["id5"] = <
+				text = <"Dose duration">
+				description = <"The length of time over which to administer each dose (e.g. an intravenous administration may have to be over a period of 5 minutes).">
+			>
+			["id6"] = <
+				text = <"Intravenous details">
+				description = <"Details of intravenous administration.">
+			>
+			["ac2"] = <
+				text = <"RouteOfAdministration">
+				description = <"A list of all possible routes of administration of medication.">
+			>
+		>
+	>

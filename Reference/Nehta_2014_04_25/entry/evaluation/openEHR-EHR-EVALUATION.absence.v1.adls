@@ -1,0 +1,68 @@
+archetype (adl_version=2.0.5; generated)
+	openEHR-EHR-EVALUATION.absence.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2013-03-12">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record an explicit statement that there is no information available in the health record - neither a positive presence or positive exclusion of information.">
+			use = <"Use to record an explicit statement that there is no information available in the health record. This does not indicate why there is no information, only that there is neither a positive presence of related information nor a positive statement about known exclusion of information. 
+
+Absence statements can only be considered to be current and accurate at the time of recording.
+
+This archetype has been designed specifically to avoid the need to use of flags to express negation about any item within the health record.
+
+Examples of use include: 'No known information about adverse reactions' within a curated, persistent Adverse Reaction List; or 'No known information about significant problems or diagnoses'/'No known information about past procedures or operations' within a curated, persistent, Problem List. The use of null flavours in this situation is not appropriate.
+
+This archetype is not usually required in stand-alone clinical systems, where the clinical system can determine when there is no archetyped data recording the positive presence or the positive absence - in this situation the system can simply generate a notification such as 'No known information about xyz'. However in a situation where health information is being exchanged, it becomes important to explicitly represent that there is no information available to the receiving system.
+
+So, in a persistent list within a clinical system and if there is no information available - for example if the subject refuses to answer or is unconscious - use this EVALUATION.absent_information to explicitly record the health information that is missing or absent. If it is clinically determined that there is a positive absence of information - for example if the subject has never had an adverse reaction or significant diagnosis - then use the EVALUATION.exclusion family of archetypes. And finally, if it is clinically determined that there is known clinical information that needs to be recorded - then use the appropriate archetypes ie EVALUATION.adverse_reaction or EVALUATION.problem_diagnosis.">
+			keywords = <"absence", "missing", "unknown", "absent", "information", "adverse", "reaction", "problem", "diagnosis", "medication", "procedure", "vaccination", "family history">
+			misuse = <"Not to be used to record the exclusion of adverse reactions, medication use, procedures, problems or diagnoses - use specific specialisations of the EVALUATION.exclusion archetype for this purpose.">
+			copyright = <"© openEHR">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["references"] = <"Absence of Information, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 12 Mar 2013. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.1427_1 (accessed 14 Mar 2013).">
+		["MD5-CAM-1.0.1"] = <"A2EC2D29F6EECA084B9FA3F37BF18460">
+	>
+
+definition
+	EVALUATION[id1] matches {	-- Absence of Information
+		data matches {
+			ITEM_TREE[id2] matches {
+				items matches {
+					ELEMENT[id3] occurrences matches {0..1} matches {	-- Absence Statement
+						value matches {
+							DV_TEXT[id4] 
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Absence of Information">
+				description = <"Statement that there is no relevant information available, neither a positive presence nor a positive exclusion.">
+			>
+			["id3"] = <
+				text = <"Absence Statement">
+				description = <"Statement explicitly expressing the absence of available information.">
+			>
+		>
+	>
