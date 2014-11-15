@@ -40,7 +40,6 @@ description
 			use = <"لتجميع حرز استقلالية الأشخاص - حتى في دار المسنين.">
 			keywords = <"الحرز", "المعامل", "الأنشطة", "الحياة اليومية", "الاعتمادية">
 			misuse = <"لا يستخدم لتسجيل خصائص الأفراد.">
-			copyright = <"© openEHR Foundation">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -48,7 +47,6 @@ description
 			use = <"For scoring people's independence - often in a nursing home.">
 			keywords = <"score", "index", "activities", "daily living", "dependency">
 			misuse = <"Not to be used to record individual features.">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -62,7 +60,6 @@ Maryland State Med Journal 1965;14:56-61.  Used with permission.
 Permission is required to modify the Barthel Index or to use it for commercial purposes.">
 			keywords = <"score", "index", "activities", "daily living", "dependency">
 			misuse = <"Not to be used to record individual features.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -70,7 +67,6 @@ Permission is required to modify the Barthel Index or to use it for commercial p
 			use = <"Для оценки независимости от посторонней помощи. Часто в доме престарелых.">
 			keywords = <"баллы", "индекс", "активность", "независимость", "повседневная жизнь">
 			misuse = <"Не использовать для описания индивидуальных особенностей.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -79,6 +75,7 @@ Permission is required to modify the Barthel Index or to use it for commercial p
 		["references"] = <"Mahoney FI, Barthel D. Functional evaluation: the Barthel Index. Maryland State Med Journal 1965;14:56-61.">
 		["MD5-CAM-1.0.1"] = <"150D442B7140E3D655217AB30559BD09">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Barthel Index

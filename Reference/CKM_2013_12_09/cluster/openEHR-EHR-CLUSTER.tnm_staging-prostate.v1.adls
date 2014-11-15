@@ -22,7 +22,6 @@ description
 			keywords = <"tumour", "TNM", "malignancy", "cancer", "staging", "classification", "grade", "grading", "stage", "lymph node", "metastasis", "prostate">
 			misuse = <"Not to be used for other editions of TNM classification.
 Not to be to stage transitional cell carcinoma of the prostate.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -36,6 +35,7 @@ Greene FL, Page DL, Fleming ID. et al, eds, for the American Joint Committee on 
 ">
 		["MD5-CAM-1.0.1"] = <"C01843F6E3EA9FAE62C779D985320584">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- TNM staging - Prostate cancer (Sixth edition)

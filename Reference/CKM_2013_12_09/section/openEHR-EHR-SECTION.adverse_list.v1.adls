@@ -37,7 +37,6 @@ description
 Поскольку в ограничения слота включены архетипы СУЖДЕНИЕ.побочная_реакция [ EVALUATION.adverse] и СУЖДЕНИЕ.отсутствие_побочных_реакций [EVALUATION.exclusion-adverse] со своими спецификациями, то другие архетипы явно не указываются. Это означает, что при необходимости сюда могут быть включены и другие архетипы, например, если вы хотите включить краткий обзор (эпикриз), то в слот можно вставить и использовать архетип СУЖДЕНИЕ.эпикриз [EVALUATION.clinical_synopsis]    ">
 			keywords = <"список", "реакция", "побочная", "известная", "исключение", "осложнение", "неблагоприятная">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -53,7 +52,6 @@ It is possible to represent both positive statements about identified adverse re
 While EVALUATION.adverse and EVALUATION.exclusion-adverse archetypes and their specialisations have been explicitly included in the slot constraints, other archetypes have not been explicitly excluded. This means that any other archetypes can also be included here, if needed - for example, where structured data is not available or there is a need to provide a synopis, the EVALUATION.clinical_synopsis can be inserted and used.">
 			keywords = <"adverse", "reaction", "exclusion", "absence", "known", "list">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -61,6 +59,7 @@ While EVALUATION.adverse and EVALUATION.exclusion-adverse archetypes and their s
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"144A5A5C4BBBB881891ABF650F443DD2">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	SECTION[id1] matches {	-- Adverse Reaction List

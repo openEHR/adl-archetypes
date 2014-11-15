@@ -14,7 +14,6 @@ description
 			purpose = <"To record details about a health related event.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -22,6 +21,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"D33F4A1B634C2ED46B16E86164CE843A">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Health event

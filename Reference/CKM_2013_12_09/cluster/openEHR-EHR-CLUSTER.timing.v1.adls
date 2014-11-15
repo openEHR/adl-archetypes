@@ -18,7 +18,6 @@ description
 			use = <"For use with medication orders and other instructions where timing is complex and needs to be computable.">
 			keywords = <"timing", "administration", "dosing", "frequency">
 			misuse = <"Not to be used for specific timing but for scheduling of tasks that need repeating.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"Timing, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. : NEHTA. Authored: 21 Nov 2010. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.886_4 (accessed 15 May 2013).">
 		["MD5-CAM-1.0.1"] = <"EFBA7E8A2D9F5834E80C40F5A2E119E1">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Timing

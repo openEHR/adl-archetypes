@@ -22,7 +22,6 @@ Some categories have overall limits e.g.  although mutiple Neurological deficits
 Some centres expect only a total to be recorded for a whole category in which case, individual risk elements should not be captured.">
 			keywords = <"pressure", "ulcer", "risk", "sore", "scale", "skin">
 			misuse = <"The Waterlow score is Copyright Protected © 2005-2007 judy-waterlow.co.uk and should not be used outside the terms of the copyright.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -33,6 +32,7 @@ The Waterlow Score Card [Internet];[cited 2011 Aug 1] Available from: http://www
 Ferguson ML, Bauer J, Gallagher B,Capra S, Christie DRH, Mason BR. Validation of a malnutrition screening tool for patients receiving radiotherapy. Australasian Radiology. 1999;43:325–327">
 		["MD5-CAM-1.0.1"] = <"5648B8340272B1AC66E333AEFDA11A94">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Waterlow score

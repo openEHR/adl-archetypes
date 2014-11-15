@@ -31,7 +31,6 @@ There is consensus in the literature that women with scores
 consistently ≥13 have a 60-100% probability of meeting diagnostic criteria for depression.">
 			keywords = <"childbirth", "score">
 			misuse = <"Should not be used to assess depression in general population.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -44,6 +43,7 @@ Queensland Health Department. Edinburgh Postnatal Depression Scale. http://www.h
 Beyond Blue. The Edinburgh Postnatal Depression Scale: A Health Professional's Guide, http://docent.gplearning.com.au/docent/cds/default_shared/GPEA/modules/g03/EPDS_GP.pdf">
 		["MD5-CAM-1.0.1"] = <"DEAD9E5896B6EC693250EB9D120FFD3B">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Edinburgh Postnatal Depression Scale

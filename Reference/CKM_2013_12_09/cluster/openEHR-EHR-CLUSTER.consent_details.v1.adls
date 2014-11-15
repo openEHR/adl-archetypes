@@ -20,7 +20,6 @@ description
 Use to optionally record additional details about the status of the request for consent  by optionally nesting this archetype within the ACTION.informed_consent.">
 			keywords = <"informed", "consent", "request", "risk", "benefit", "intent">
 			misuse = <"Not to be used to record the actual request for informed consent or the status of the request for informed consent - use the INSTRUCTION.informed_consent or ACTION.informed_consent for this purpose.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -28,6 +27,7 @@ Use to optionally record additional details about the status of the request for 
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"8FACDB29B39387099465938301E66EC8">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Informed Consent Details

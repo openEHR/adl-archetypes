@@ -31,14 +31,12 @@ description
 			purpose = <"*To record a narrative description of the clinical history, as told to a clinician or recorded directly by an individual/patient, and to provide a framework in which to nest detailed CLUSTER archetypes, each of which will describe the various aspects of the clinical history in further detail.(en)">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
 			purpose = <"*To record a narrative description of the clinical history, as told to a clinician or recorded directly by an individual/patient, and to provide a framework in which to nest detailed CLUSTER archetypes, each of which will describe the various aspects of the clinical history in further detail.(en)">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -50,7 +48,6 @@ Use to incorporate the narrative descriptions of clinical history within existin
 Use to record a simple narrative and/or as a container archetype - to provide a common, queryable ENTRY archetype framework which can be extended by the inclusion of additional, specific and detailed CLUSTER archetypes, each of which will describe the various aspects of the clinical history. Examples of history-related CLUSTER archetypes include CLUSTER.symptom or CLUSTER.health_event.">
 			keywords = <"history", "presenting", "complaint", "story">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -59,6 +56,7 @@ Use to record a simple narrative and/or as a container archetype - to provide a 
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"CC7485F0AECA743E8ED57C71FF8850F5">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Story/History

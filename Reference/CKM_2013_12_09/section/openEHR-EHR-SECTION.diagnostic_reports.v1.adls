@@ -28,7 +28,6 @@ description
 			use = <"Use to support the representation of diagnostic reports that have been recorded.">
 			keywords = <"diagnostic", "report", "laboratory", "imaging", "radiology", "pathology", "list">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -36,7 +35,6 @@ description
 			use = <"Используется для поддержки представления списка обоснований диагноза">
 			keywords = <"диагностический", "список", "обоснование", "уточненный", "лаборатория", "визуализация", "радиология", "патоморфология", "диагноз", "окончательный", "предварительный", "рабочий">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -45,6 +43,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"EE922E416EC2C85EE6DF568D33B963CB">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	SECTION[id1] matches {	-- Diagnostic Reports

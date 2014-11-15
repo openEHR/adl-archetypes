@@ -18,7 +18,6 @@ description
 			use = <"Used to measure or calculate the surface area of the human body to support clinical decision-making for example determining an appropriate doses of drugs with narrow therapeutic index like many chemotherapy medications and other clinical applications such as calculating cardiac index.">
 			keywords = <"body", "surface", "area", "BSA">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"48199A0696E7E86508042F451325ACCF">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Body Surface Area

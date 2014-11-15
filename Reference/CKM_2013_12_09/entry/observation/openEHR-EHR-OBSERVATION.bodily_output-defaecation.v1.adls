@@ -23,7 +23,6 @@ Use in combination with CLUSTER.fluid.v1
 Supercedes OBSERVATION.faeces.v1">
 			keywords = <"production", "output", "fluid", "fluid balance", "input output", "io", "stool", "faeces", "bowel">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -32,6 +31,7 @@ Supercedes OBSERVATION.faeces.v1">
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"2518B85AC2439AC20297F5D89D940B2A">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Defaecation

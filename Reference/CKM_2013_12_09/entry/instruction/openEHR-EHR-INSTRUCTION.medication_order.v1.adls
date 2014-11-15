@@ -32,7 +32,6 @@ The content is potentially complex. Where the content is re-usable in other cont
 			misuse = <"Not to be used to record administration, use or dispensing. (For those use ACTION.medication)
 
 Not to be used to record ordering of blood products, implants or major devices such as pacemakers and defibrillators, etc.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -44,6 +43,7 @@ Intermountain Healthcare Medication order model, Personal Communication to Sam H
 Royal Australian College of General Practitioners. Fact Sheet: Medicines List. 2010.">
 		["MD5-CAM-1.0.1"] = <"CBE33FEAE95392609314DC2F209BE166">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	INSTRUCTION[id1] matches {	-- Medication order

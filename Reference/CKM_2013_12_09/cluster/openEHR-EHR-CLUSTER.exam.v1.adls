@@ -18,7 +18,6 @@ description
 			use = <"">
 			keywords = <"examination", "physical">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"7A4C2ADCBED13A3BACDF8182872F37C0">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Examination

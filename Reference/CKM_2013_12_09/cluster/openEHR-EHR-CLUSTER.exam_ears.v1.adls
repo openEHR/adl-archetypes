@@ -26,7 +26,6 @@ Use as a container archetype - to provide a common, queryable ENTRY archetype in
 			misuse = <"Not to be used for recording the clinical history - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom.
 
 Not to be used to record stand-alone clinical observations or measurements - use specific OBSERVATION archetypes. For example OBSERVATION.blood_pressure, OBSERVATION.body_weight, or OBSERVATION.height.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -34,6 +33,7 @@ Not to be used to record stand-alone clinical observations or measurements - use
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"FEDB468EB9F5EE04B228A3E8F2B7749A">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Examination Findings - Ears

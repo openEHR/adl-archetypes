@@ -33,7 +33,6 @@ Specimen slots are available in a number of positions to reflect the variation i
 			keywords = <"lab", "pathology", "laboratory", "histopathology", "anatomic pathology", "surgical pathology">
 			misuse = <"Do not use for standard itemised value-driven lab tests such as haematology and biochemistry- use OBSERVATION.lab_test.
 Do not use for microbiology - use OBSERVATION.lab_test-microbiology.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -44,7 +43,6 @@ Do not use for microbiology - use OBSERVATION.lab_test-microbiology.">
 			misuse = <"لا يستخدم للاختبارات ذات القيمة العيارية المحددة مثل اختبارات الدموية و الكيمياء الحيوية. استخدم بدلا منه نموذج ملاحظة. اختبار معملي. 
 
 لا يستخدم للميكروبيولوجيا, استخدم بدلا منه: ملاحظة اختبار معملي ميكروبيولوجي.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -53,6 +51,7 @@ Do not use for microbiology - use OBSERVATION.lab_test-microbiology.">
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"3B124686FC94085D4B39B870E80C9CD4">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Histopathology

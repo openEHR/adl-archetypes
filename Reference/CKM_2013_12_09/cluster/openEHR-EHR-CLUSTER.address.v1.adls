@@ -27,7 +27,6 @@ description
 			use = <"">
 			keywords = <"address", ...>
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -35,7 +34,6 @@ description
 			use = <"">
 			keywords = <"Adresse", ...>
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -43,6 +41,7 @@ description
 		["references"] = <"From NHS Scotland SCI-XML messaging standards http://www.isdscotland.org/isd/files/general-v2-7.xsd NHS Scotland Interoperability Working Group http://www.isdscotland.org/isd/5194.htm originally based on: Postal address of person.  ENV 13606 - 4:2000 7.11.13">
 		["MD5-CAM-1.0.1"] = <"CD4E0D86020F35378BB03F30F08B56B4">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Address

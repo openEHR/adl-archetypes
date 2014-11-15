@@ -18,7 +18,6 @@ description
 			use = <"Psudo-clubbing should be reported as not present and document in the clinical description.">
 			keywords = <"clubbing", "hypertrophic osteopathy", "drumstick", "spongy", "nail">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"046FE5DB0717AD9C4B140CDCB1509DC3">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Clubbing

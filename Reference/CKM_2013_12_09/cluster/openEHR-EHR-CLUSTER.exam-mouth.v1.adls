@@ -21,7 +21,6 @@ description
 			use = <"Use in conjunction with separate archetype/s for dental examinations when developed.">
 			keywords = <"examination", "physical", "mouth", "tongue", "lips", "tonsils">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -29,6 +28,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"639DFF0410427A8C48E1FDF83F6C7071">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Examination of mouth

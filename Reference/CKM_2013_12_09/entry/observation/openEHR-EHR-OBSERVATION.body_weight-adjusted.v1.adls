@@ -37,7 +37,6 @@ description
 			misuse = <"Не использовать для записи фактического веса человека, или прибавки / потери массы - использовать для этого архетип OBSERVATION.body_weight.
 Не использовать для записи первого вес ребенка вскоре после рождения - использовать для этого архетип OBSERVATION.body_weight.
 Не использовать для записи веса предмета или части тела(ru)">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -47,7 +46,6 @@ description
 			misuse = <"Not to be used to record the actual weight of an individual, or weight gain/loss - use OBSERVATION.body_weight.
 Not to be used to record the first weight of an infant soon after birth - use the specialisation of this archetype OBSERVATION.body_weight-birth.
 Not to be used to record the weight of an object or body part.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -57,7 +55,6 @@ Not to be used to record the weight of an object or body part.">
 			misuse = <"لا يستخدم لتسجيل الوزن الفعلي للشخص, أو زيادة/نقص الوزن - استخدم لذلك نموذج ملاحظة.وزن الجسم.
 لا يستخدم لتسجيل الوزن الأول لحديث الولادة بعد ولادته بفترة قليلة - استخدم لذلك تخصيص النموذج ملاحظة.وزن الجسم عند الولادة.
 لا يستخدم لتسجيل وزن شيء ما أو جزء من الجسم.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -65,6 +62,7 @@ Not to be used to record the weight of an object or body part.">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"AF62FBF366185210E9EC1A9C0D8F6927">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Adjusted Body weight

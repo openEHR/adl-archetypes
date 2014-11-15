@@ -25,7 +25,6 @@ description
 			use = <"To assess hearing thresholds of patients with developmental age between seven months and 18 months of age">
 			keywords = <"hearing", "warble", "tones">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -33,13 +32,13 @@ description
 			use = <"لتقييم العتبات السمعية للمرضى الذين تترواح أعمارهم ما بين سبعة أشهر و ثمانية عشرا شهرا">
 			keywords = <"السماع", "اللُّحمَوية", "النغمات">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Warble Tones Hearing Test

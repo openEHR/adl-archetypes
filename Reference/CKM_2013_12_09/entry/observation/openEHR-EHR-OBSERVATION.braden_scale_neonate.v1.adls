@@ -23,7 +23,6 @@ It should be noted that although the purpose of the scale is similar to that of 
 			misuse = <"Do not use for pressure sore risk assessment in children aged over 21 days.
 Use the Braden-Q scale for children between 21 days and 5 years of age - OPEN-EHR-EHR-OBSERVATION.braden_child.v1
 Use the adult Braden Scale for children over 5 years of age and adults - OPEN-EHR-OBSERVATION.braden_scale.v1">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -32,6 +31,7 @@ Use the adult Braden Scale for children over 5 years of age and adults - OPEN-EH
 		["references"] = <"Huffines B, Logsdon MC. The neonatal skin risk assessment scale for predicting skin breakdown in neonates. Issues in Comprehensive Pediatric Nursing 1997;20(2):103-114.">
 		["MD5-CAM-1.0.1"] = <"81DFA726CC9BF96D198F7FEFB30B5895">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Neonatal Braden scale (NSRAS)

@@ -22,7 +22,6 @@ This archetype has been deliberately kept simple and open in order to capture si
 Exclusion statements can only be considered to be current and accurate at the time of recording.">
 			keywords = <"exclusion", ...>
 			misuse = <"Not to be used to record the exclusion or absence of adverse reactions, medication use, procedures, problems or diagnoses - use specific specialisations of this archetype for this purpose.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -33,6 +32,7 @@ Exclusion statements can only be considered to be current and accurate at the ti
 http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1301_2 (accessed 3 Sept 2013)">
 		["MD5-CAM-1.0.1"] = <"8E2040F19D49D3C6E050BA080C7CC766">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Exclusion Statement

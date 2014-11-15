@@ -18,7 +18,6 @@ description
 			use = <"">
 			keywords = <"referral", "request">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"6DB82589E80219EF8BA863CAFC2C8EC9">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	COMPOSITION[id1] matches {	-- Referral document

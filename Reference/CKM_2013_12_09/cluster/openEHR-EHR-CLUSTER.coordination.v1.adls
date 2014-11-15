@@ -18,7 +18,6 @@ description
 			use = <"For use as a part of an examination OBSERVATION.">
 			keywords = <"coordination", "cerebellum", "dysdiadokinesis", "finger-nose", "heel-shin", "tapping">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"90DDD94651394097265F022758826941">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Coordination

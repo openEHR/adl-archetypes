@@ -27,7 +27,6 @@ Will normally be reported back to the requesting clinician as one component with
 Not to be used to record details about any parallel procedure undertaken. Use the specific procedure-related archetypes, for example ACTION.procedure.
 
 Not to be used to record details about medications administered during the imaging test. Use specific medication-related archetypes, for example ACTION.medication.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -44,6 +43,7 @@ Diagnostic Imaging data specifications; NEHTA, version 1.0, 2007 Jun 29.
 Imaging examination result, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. London: NEHTA. Authored: 11 Feb 2007. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.943_6 (accessed 16 Sep 2013).">
 		["MD5-CAM-1.0.1"] = <"E115450A8DA092A0431A3D9777634573">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Imaging examination result

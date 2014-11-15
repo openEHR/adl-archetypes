@@ -21,7 +21,6 @@ description
 			use = <"To recording findings on physical examination of the nose, generally within an OBSERVATION archetype.">
 			keywords = <"examination", "physical", "nose", "turbinates", "smell">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"DEC6EFA2C01EDB9C9BBDB2F812AAC7B5">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Examination of nose

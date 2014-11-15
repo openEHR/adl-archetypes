@@ -55,7 +55,6 @@ description
 			use = <"Messung des Gewichts zum Zeitpunkt der Geburt ohne Kleidung">
 			keywords = <"Neugeborenes", "Geburt">
 			misuse = <"Nur für das Geburtsgewicht - für alle anderen Messungen ist OBSERVATION.weight zu benutzen ">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-cl"] = <
 			language = <[ISO_639-1::es-cl]>
@@ -67,7 +66,6 @@ description
 
 
 ">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -75,7 +73,6 @@ description
 			use = <"Naked birth weight measurement.">
 			keywords = <"neonate", "birth", "weight">
 			misuse = <"Only for weight at birth - use OBSERVATION.weight for all other measurements.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -84,7 +81,6 @@ description
 			use = <"Измерение БЕЗ одежды, пеленок и памперсов.">
 			keywords = <"новорожденный", "рождение">
 			misuse = <"Только для веса при рождении. Для других измерений использовать observation.body_weight.v1">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -92,7 +88,6 @@ description
 			use = <"قياس الوزن عند الولادة في حالة أن الطفل لا يزال مُعَرَّى">
 			keywords = <"حديث الولادة", "الولادة/ الوضع", "الوزن">
 			misuse = <"يستخدم فقط لقياس الوزن عند الولادة - استخدم نموذج ملاحظة.الوزن لجميع القياسات الأخرى">
-			copyright = <"© openEHR Foundation">
 		>
 		["hu"] = <
 			language = <[ISO_639-1::hu]>
@@ -100,7 +95,6 @@ description
 			use = <"Meztelen test születési súlyának mérésére.">
 			keywords = <"*újszülött", "*születés", "*súly">
 			misuse = <"Csak a születési súly feljegyzésére - használja az OBSERVATION.weight archetípust minden más méréshez.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -108,6 +102,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"EC6662EA9DCEA40574E00E7F55C52876">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] occurrences matches {0..1} matches {	-- Body weight at birth

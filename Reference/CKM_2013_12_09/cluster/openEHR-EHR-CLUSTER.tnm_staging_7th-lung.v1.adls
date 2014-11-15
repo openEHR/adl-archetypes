@@ -22,7 +22,6 @@ description
 			keywords = <"tumour", "TNM", "malignancy", "cancer", "staging", "classification", "grade", "grading", "stage", "lymph node", "metastasis", "lung", "bronchial">
 			misuse = <"Not to be used for pleural mesothelioma, sarcoma or other rare lung tumours.
 Not to be used for other editions of TNM classification.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -31,6 +30,7 @@ Not to be used for other editions of TNM classification.">
 		["references"] = <"Sobin LH. TNM Classification of Malignant Tumours 7th Edition.  John Wiley and Sons; 2009.">
 		["MD5-CAM-1.0.1"] = <"E8744BA45A466468F8CDBAD835B53AE5">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Tumour - Lung cancer TNM staging 7th Edition

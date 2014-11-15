@@ -25,7 +25,6 @@ This archetype has specifically been designed to avoid the need to use flags or 
 Exclusion statements can only be considered to be current and accurate at the time of recording. For example: recording an exclusion of a reaction to penicillin during a consultation is only relevant at the time of recording and may be effectively obsolete immediately after first administration of penicillin if there is an adverse reaction.">
 			keywords = <"exclusion", "adverse", "reaction", "allergy", "intolerance", "hypersensitivity">
 			misuse = <"Not to be used to record exclusion statements about use of medications, procedures, problems or diagnoses - use other specific specialisations of the EVALUATION.exclusion archetype for these purposes.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -36,6 +35,7 @@ Exclusion statements can only be considered to be current and accurate at the ti
  http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1302_3 (accessed 3 Sept 2013)">
 		["MD5-CAM-1.0.1"] = <"E16FAA97344C551556B200E2559F9CC7">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1.1] matches {	-- Exclusion of an Adverse Reaction

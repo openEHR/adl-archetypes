@@ -26,7 +26,6 @@ description
 			use = <"To record a classification of characteristics of faeces according to the Bristol Stool Scale/Score.">
 			keywords = <"stool", "faeces", "Bristol", "Meyers">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["sl"] = <
 			language = <[ISO_639-1::sl]>
@@ -34,7 +33,6 @@ description
 			use = <"*To record a classification of characteristics of faeces according to the Bristol Stool Scale/Score.(en)">
 			keywords = <"*stool(en)", "*faeces(en)", "*Bristol(en)", "*Meyers(en)">
 			misuse = <"*(en)">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -43,6 +41,7 @@ description
 Lewis SJ, Heaton KW (1997). \"Stool form scale as a useful guide to intestinal transit time\". Scand. J. Gastroenterol. 32 (9): 920–4.">
 		["MD5-CAM-1.0.1"] = <"DCC80A3C1D47C6D79DE0C2AA618943B6">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Bristol stool scale

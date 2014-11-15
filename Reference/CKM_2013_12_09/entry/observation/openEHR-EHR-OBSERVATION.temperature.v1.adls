@@ -35,7 +35,6 @@ description
 			use = <"Used for recording the specific temperature of an identified object.">
 			keywords = <"temperature", ...>
 			misuse = <"This temperature is not to be used to record the body temperature, which is a surrogate for the whole body temperature of the subject - use OBSERVATION.body_temperature instead in this situation.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -43,20 +42,19 @@ description
 			use = <"يستخدم لتسجيل درجة الحرارة النوعية لشيئ معين">
 			keywords = <"درجة الحرارة", ...>
 			misuse = <"لا تستخدم درجة الحرارة هذه لتسجيل درجة حرارة الجسم, التي هي بديل عن درجة حرارة الجسم الكلية لشخص معين. استخدم نموذج ملاحظة. درجة حرارة الجسم, في تلك الحالة">
-			copyright = <"© openEHR Foundation">
 		>
 		["eu"] = <
 			language = <[ISO_639-1::eu]>
 			purpose = <"Identifikatutako objektuaren neurturiko tenperatura gordetzea.">
 			use = <"*Used for recording the specific temperature of an identified object.(en)">
 			misuse = <"*This temperature is not to be used to record the body temperature, which is a surrogate for the whole body temperature of the subject - use OBSERVATION.body_temperature instead in this situation.(en)">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Temperature

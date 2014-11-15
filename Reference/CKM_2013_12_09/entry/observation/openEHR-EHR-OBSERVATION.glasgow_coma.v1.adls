@@ -34,7 +34,6 @@ If any one of the eye, motor or verbal responses cannot be assessed - for exampl
 Clinical Decision support should be based upon each of the specific records of eye, motor and verbal responses and the explicit statements that a response cannot be assessed, rather than the derived and composite EMV score.">
 			keywords = <"response", "motor", "verbal", "eye", "stimulus", "glasgow", "coma", "scale", "neurological", "responsiveness", "EMV", "conscious">
 			misuse = <"Not to be used for assessing infants & young children - use the OBSERVATION.glasgow_coma-paediatric.v1.adl to ensure that the eye, motor and verbal response choices are appropriate for the age and ability of the child.">
-			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -48,7 +47,6 @@ Se qualquer abertura ocular, ou respostas verbais não podem ser avaliadas - por
 As Clínica de apoio devem basear sua decisão em cada um dos registros específicos das respostas de abertura ocular, motora e verbais e nas justificativas explícitas do por que uma resposta não pode ser avaliada, ao invés das pontuações ECG derivadas e compostas.">
 			keywords = <"resposta", "motora", "verbal", "visual", "estímulo", "glasgow", "coma", "escala", "neurológicas", "responsividade", "ECG", "consciência">
 			misuse = <"Não deve ser utilizado para avaliar recém nascidos e e crianças de colo - para tal, utilizar OBSERVATION.glasgow_coma-paediatric.v1.adl para garantir respostas apropriados para a idade e capacidade da criança.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -57,6 +55,7 @@ As Clínica de apoio devem basear sua decisão em cada um dos registros específ
 Teasdale GM, Murray L. Revisiting the Glasgow Coma Scale and Coma Score. Intensive Care Medicine. 2000; 26: 153-154.">
 		["MD5-CAM-1.0.1"] = <"BEC05942DDC81A3CCA708956DC2D6383">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Glasgow Coma Scale

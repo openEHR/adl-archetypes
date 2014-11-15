@@ -92,7 +92,6 @@ Named events have been limited to average over a 24 hour period, however templat
 			misuse = <"Not to be used for intravenous pressure.
 Not to be used for the measurement of arterial blood pressure which is NOT a surrogate for arterial pressure in the systemic circulation eg specific measurement of right Pulmonary artery pressure.  
 Use OBSERVATION.intravascular_pressure and related specialisations in both of these situations.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ja"] = <
 			language = <[ISO_639-1::ja]>
@@ -100,7 +99,6 @@ Use OBSERVATION.intravascular_pressure and related specialisations in both of th
 			use = <"このアーキタイプを使って測定されるすべての血圧が記録される。運動負荷心電図やティルト台での測定にも利用できる豊かなステートモデルがある。">
 			keywords = <"観察", "血圧", "測定">
 			misuse = <"血管内圧のためには使用されない">
-			copyright = <"© openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -112,7 +110,6 @@ Benannte Ereignisse wurden auf den 24-stündigen Durchschnitt beschränkt, jedoc
 			misuse = <"Nicht benutzen zur Dokumentation des intravenösen Drucks.
 Nicht benutzen zur Dokumentation des arteriellen Blutdrucks, welcher KEIN Surrogat für den arteriellen Druck in der systemischen Zirkluation ist, z.B. die spezifische Messung des rechten pulmonaren Arteriendrucks.
 In diesem Fall sollte der OBSERVATION.intravascular_pressure Archetyp bzw. dessen Spezialisierungen verwendet werden.">
-			copyright = <"© openEHR Foundation">
 		>
 		["zh-cn"] = <
 			language = <[ISO_639-1::zh-cn]>
@@ -120,7 +117,6 @@ In diesem Fall sollte der OBSERVATION.intravascular_pressure Archetyp bzw. desse
 			use = <"*All blood pressure measurements are recorded using this archetype. There is a rich state model for use with exercise ECGs and Tilt Table measurements.(en)">
 			keywords = <"*observations(en)", "*blood pressure(en)", "*measurement(en)">
 			misuse = <"*Not to be used for intravascular pressure.(en)">
-			copyright = <"© openEHR Foundation">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -133,7 +129,6 @@ Genoemde gebeurtenissen zijn gelimiteerd tot een gemiddelde over een periode van
 			misuse = <"Niet te gebruiken voor intraveneuze druk.
 Niet te gebruiken voor de meting van de arteriele bloeddruk welke geen surrogaat is voor de arteriele druk in de systemische circulatie, bv de specifieke meting van de rechter arterie pulmonalis druk.
 Gebruik OBSERVATION.intravascular_pressure en gerelateerde specialisaties in beide situaties.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -146,7 +141,6 @@ Gebruik OBSERVATION.intravascular_pressure en gerelateerde specialisaties in bei
 Не следует использовать для измерения артериального давления, которое не является суррогатом артериального давления в системном кровотоке, например, конкретные измерения давления в легочной артерии.
 Использовать OBSERVATION.intravascular_pressure и смежных специальностей в обоих этих ситуациях.
 ">
-			copyright = <"© openEHR Foundation">
 		>
 		["fa"] = <
 			language = <[ISO_639-1::fa]>
@@ -162,7 +156,6 @@ Gebruik OBSERVATION.intravascular_pressure en gerelateerde specialisaties in bei
  و تخصص های مربوطه برای موارد بالا بکار رود\"OBSERVATION.intravascular_pressure\"
  
 ">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -178,7 +171,6 @@ Gebruik OBSERVATION.intravascular_pressure en gerelateerde specialisaties in bei
 			misuse = <"لا يستخدم لتسجيل الضغط داخل الوريد.
 لا يستخدم لقياس ضغط الدم الشرياني الذي لا يحل بديلا عن ضغط الدم الشرياني في الدورة الجهازية مثل قياسات معينة لضغط الشريان الرئوي الأيمن.
 استخدم نموذج ملاحظة. الضغط داخل الأوعية الدموية , و التخصيصات المتعلقة في كل من هذين الموقفين.">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -193,7 +185,6 @@ Los eventos se han limitado a promediarse sobre un intervalo de 24 horas, sin em
 No debe usarse para la medida de la presión arterial que NO deriva de la presión arterial de la circulación sistémica ej: la medida específica de la presión de la arteria Pulmonar (presión capilar)
 Usen Observación.presión_intravascular y especializaciones relacionadas para estas dos situaciones en particular.
 ">
-			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -205,7 +196,6 @@ Eventos nomeados têm sido limitados em médica a um período de 24 horas, entre
 			misuse = <"Não deve ser usada para registrar pressão intravenosa.
 Não deve ser usada para medida da pressão arterial que NÃO é um substituto da pressão arterial na circulação sistêmica, por exemplo, medida específica da pressão da artéria Pulmonar direita.
 Em ambas situações use OBSERVATION.intravascular_pressure e especializações relacionadas.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -217,6 +207,7 @@ Perloff D, Grim C, Flack J, Frohlich ED, Hill M, McDonald M, Morgenstern BZ. Hum
 ">
 		["MD5-CAM-1.0.1"] = <"31406F8DDAF6C4DD73C174EE7C1B03C6">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Blood Pressure

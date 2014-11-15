@@ -24,7 +24,6 @@ description
 			use = <"Use the HISTORY class to record the period of time and totals if required.">
 			keywords = <"wee", "urine", "production", "output">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -32,13 +31,13 @@ description
 			use = <"استخدم فئة (التاريخ) لتسجيل الفترة الزمنية و إجمالي الكميات عند الحاجة">
 			keywords = <"البول", "الإنتاج", "النتاج">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Urine output

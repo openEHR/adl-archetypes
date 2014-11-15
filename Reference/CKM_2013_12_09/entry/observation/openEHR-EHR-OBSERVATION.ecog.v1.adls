@@ -23,7 +23,6 @@ description
 The ECOG Performance Status is in the public domain therefore available for public use. For more information, contact the Eastern Cooperative Oncology Group, Robert Comis M.D., Group Chair - http://www.ecog.org/general/perf_stat.html.">
 			keywords = <"performance", "status", "oncology">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -36,6 +35,7 @@ http://www.ecog.org/general/perf_stat.html.
 http://en.wikipedia.org/wiki/Performance_status.">
 		["MD5-CAM-1.0.1"] = <"34BA504BCFCDD91A83BA0B3D4BD2F9B5">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- ECOG Performance Status

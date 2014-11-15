@@ -24,7 +24,6 @@ description
 			use = <"">
 			keywords = <"nicht-medikamentös", "Sauerstoff">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -32,13 +31,13 @@ description
 			use = <"">
 			keywords = <"non-drug", "oxygen">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	INSTRUCTION[id1] matches {	-- Non-drug therapy

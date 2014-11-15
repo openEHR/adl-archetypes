@@ -17,13 +17,13 @@ description
 			use = <"">
 			keywords = <"smell", "odour">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Sense of smell

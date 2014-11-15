@@ -18,7 +18,6 @@ description
 			use = <"Normally used in the context of medication INSRUCTION or ACTION archetypes.">
 			keywords = <"amount", "dose", "dosing", "quantity", "strength">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"1EF02B6F5C5B360A198D9B5A3C4E5158">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Medication amount

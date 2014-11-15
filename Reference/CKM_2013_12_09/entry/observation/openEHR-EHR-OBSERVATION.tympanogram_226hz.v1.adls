@@ -28,7 +28,6 @@ description
 
 السمع">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -40,7 +39,6 @@ Use to record the interpretation all measurements to infer middle ear function f
 All of the data elements are recorded using a single method or protocol. If, during the test, any of the protocol parameters need to be modified, then the subsequent part of the test will need to be recorded within a separate instance of the test data, using the updated protocol parameters.">
 			keywords = <"tympanogram", "tympanometry", "tympanometer", "admittance", "pressure", "compliance", "immittance", "static">
 			misuse = <"Not to be used to record other hearing tests. Use other archetypes as appropriate, for example OBSERVATION.audiogram.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -64,6 +62,7 @@ Margolis, R. H., Bass-Ringdahl, S., Hanks, W. D., Holte, K., & Zapala, D. A. (20
 Onusko, E. (2004). Tympanometry. American Family Physician, 70 (9), 1713 – 1720.">
 		["MD5-CAM-1.0.1"] = <"1755CBEA9429D7DC5413EFD66487A491">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Tympanogram Result

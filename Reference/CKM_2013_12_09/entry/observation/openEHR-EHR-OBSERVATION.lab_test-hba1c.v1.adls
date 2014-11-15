@@ -25,7 +25,6 @@ description
 			use = <"Normally used within a Lab report composition">
 			keywords = <"lab", "pathology", "biochemistry", "laboratory", "hba1c", "glycosylated Hb", "haemaglobin", "haemoglobin">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -34,6 +33,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"FE9160C7BB22849E31917CD148E9E957">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Haemoglobin A1c

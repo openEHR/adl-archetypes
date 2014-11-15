@@ -18,7 +18,6 @@ description
 			use = <"To be embedded in an openEHR-EHR-OBSERVATION.exam cluster to express findings determined by auscultation.">
 			keywords = <"auscultate", "listen", "auscultation", "listening", "bruit", "bowel sounds", "sounds">
 			misuse = <"Not for use in any other context at present.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"C66B38E8B00A3C982EC70C9B7C514266">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Auscultation

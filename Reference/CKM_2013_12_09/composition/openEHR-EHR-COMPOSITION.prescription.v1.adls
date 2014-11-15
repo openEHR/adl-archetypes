@@ -18,13 +18,13 @@ description
 			use = <"This composition is only required for transfer of medications to the pharmacy.">
 			keywords = <"medication", "prescribe", "order">
 			misuse = <"Medication orders, as instructions, have a prescribe action that records prescription and communication to the pharmacy. This composition is only required if the medication orders are required to be transmitted within openEHR to the pharmacy.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	COMPOSITION[id1] matches {	-- Prescription

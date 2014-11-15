@@ -18,7 +18,6 @@ description
 			use = <"For use within OBSERVATION. request, ACTION.imaging and OBSERVATION.imaging or similar archetypes.">
 			keywords = <"imaging", "radiology">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"6C979D0838CD95F091660A7BDC9184B8">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Imaging details

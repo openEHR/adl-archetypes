@@ -24,7 +24,6 @@ This archetype has been designed to trigger decision support and therapeutic pre
 			misuse = <"Not to be used to record the positive exclusion of pregnancy or breast feeding - use specific EVALUATION.exclusion archetypes for this purpose.
 
 Not to be used to record details about a specific pregnancy - use EVALUATION.pregnancy for this purpose.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -33,6 +32,7 @@ Not to be used to record details about a specific pregnancy - use EVALUATION.pre
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"F75369554F8AD6EB3F65CE785F9E9350">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Pregnancy/Breast Feeding Status

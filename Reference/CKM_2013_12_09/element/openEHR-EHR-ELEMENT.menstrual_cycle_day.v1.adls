@@ -18,13 +18,13 @@ description
 			use = <"To reuse within multiple archetypes - for example, the cluster recording the details about menstrual cycles, plus use in the temperature observation">
 			keywords = <"menstrual", "cycle", "menstruation", "day", "woman", "female">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	ELEMENT[id1] matches {	-- Current Day of Menstrual cycle

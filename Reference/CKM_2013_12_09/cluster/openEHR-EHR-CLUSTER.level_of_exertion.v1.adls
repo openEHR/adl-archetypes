@@ -26,7 +26,6 @@ description
 			use = <"Record information about phase and levels of exertion - to provide state/context information within OBSERVATIONS such as Blood Pressure.">
 			keywords = <"exercise", "work", "exertion", "activity", "energy">
 			misuse = <"Not to be used to record actual exercise activities and measurements which should be recorded as OBSERVATIONS in their own right.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -34,7 +33,6 @@ description
 			use = <"لتسجيل معلومات حول طور و مستويات المجهود - للإمداد بمعلومات حول السياق/الحالة في داخل الملاحظات مثل ضغط الدم.">
 			keywords = <"التمرين", "العمل", "المجهود", "النشاط", "الطاقة">
 			misuse = <"لا يستخدم لتسجيل نشاطات التمرين الفعلي و القياسات التي ينبغي تسجيلها على هيئة ملاحظات منفردة بذاتها">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -42,6 +40,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"5B4CD4A76BD05982A2A9A6A0339D4465">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Level of exertion

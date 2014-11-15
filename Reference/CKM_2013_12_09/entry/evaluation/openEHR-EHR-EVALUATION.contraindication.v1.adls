@@ -25,7 +25,6 @@ This contraindication may be identified in a number of ways, for example:
 Clinical decision support for prescribing should include checking of both known adverse reactions to the proposed medicine (EVALUATION.adverse_reaction) plus known contraindications using this archetype.">
 			keywords = <"contraindication", "prevent", "avoid", "adverse event">
 			misuse = <"Not to be used to record the occurrence of an adverse reaction to a substance or agent - use EVALUATION.adverse_reaction for this purpose.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -34,6 +33,7 @@ Clinical decision support for prescribing should include checking of both known 
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"14A229FEE6973A30307A27331D8B80E7">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Contraindication

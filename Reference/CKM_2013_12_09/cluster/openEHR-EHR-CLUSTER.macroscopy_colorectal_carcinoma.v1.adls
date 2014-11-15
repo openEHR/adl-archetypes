@@ -19,7 +19,6 @@ description
 Use as a component archetype in the context of a suite of archetypes that make up a histopathology report ie OBSERVATION.lab_test.histopathology and CLUSTER.microscopy_colorectal_carcinoma.">
 			keywords = <"histopathology", "cancer", "laboratory", "lab", "malignancy", "pathology", "colonic", "rectal", "anal", "GI", "gastrointestinal", "bowel">
 			misuse = <"Not designed to be used within any other archetype other than OBSERVATION.lab_test.histopathology.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -44,6 +43,7 @@ Available from: http://www.rcpa.edu.au//static/File/Asset%20library/public%20doc
 ">
 		["MD5-CAM-1.0.1"] = <"4243B86239E008CE0500331D107393A5">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Macroscopic findings - Colorectal cancer

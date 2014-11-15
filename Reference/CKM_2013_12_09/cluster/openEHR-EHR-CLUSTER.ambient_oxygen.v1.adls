@@ -35,7 +35,6 @@ description
 			use = <"Puede ser usado dentro de un arquetipo ACTION para especificar oxígenoterapia o dentro de arquetipos OBSERVATION tales como Gases arteriales o Respiraciones, como parte del estado del paciente, donde el conocimiento de la concentración de oxígeno ambiental es crítica para la interpretación de la observación.">
 			keywords = <"respirando", "oxígeno", "ambiental", "FiO2">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -43,7 +42,6 @@ description
 			use = <"May be used within an ACTION archetype to specificy oxygen therapy , or within OBSERVATION archetypes such as Blood gases or Respirations, as part of patient state, where knowledge of ambient oxygen status is critical to interpretation of the observation.">
 			keywords = <"breathing", "oxygen">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -51,6 +49,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"23473D680886AF1FA9E8AD07B63DAAFC">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Ambient oxygen

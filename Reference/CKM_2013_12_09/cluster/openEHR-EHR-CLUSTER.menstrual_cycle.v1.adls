@@ -18,7 +18,6 @@ description
 			use = <"For inclusion within Menstrual cycle OBSERVATION.">
 			keywords = <"menstruation", "menses", "menstrual cycle", "bleeding">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"DA19482778F9F4C2701B1EC0E330677D">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Menstrual cycle

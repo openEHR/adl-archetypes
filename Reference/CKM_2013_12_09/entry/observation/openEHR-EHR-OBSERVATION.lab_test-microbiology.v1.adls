@@ -26,7 +26,6 @@ description
 Specific tests will gnerally require further specialisation or templating constraint.">
 			keywords = <"lab", "pathology", "microbiology", "laboratory">
 			misuse = <"Do not use for standard value-driven lab tests such as haematology and biochemistry tests.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -35,6 +34,7 @@ Specific tests will gnerally require further specialisation or templating constr
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"73BF9F7DB57062C7EB14FCAACCA54D40">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Microbiolology

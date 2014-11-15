@@ -68,7 +68,6 @@ Not to be used to record adverse events, including failures of clinical process,
 Not to be used for recording alerts.
 
 Not to be used for recording failed therapy.(en)">
-			copyright = <"© openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -110,7 +109,6 @@ Not to be used to record adverse events, including failures of clinical process,
 Not to be used for recording alerts.
 
 Not to be used for recording failed therapy.(en)">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -152,7 +150,6 @@ Not to be used to record adverse events, including failures of clinical process,
 Not to be used for recording alerts.
 
 Not to be used for recording failed therapy.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -183,6 +180,7 @@ Royal Australian College of General Practitioners. Fact Sheet: Allergies & Adver
 Thien FC. Drug hypersensitivity. Med J Aust. 2006 Sep 18;185(6):333-8. Review. PubMed PMID: 16999678.">
 		["MD5-CAM-1.0.1"] = <"260699D2EFDE4F7C7BC3C6C501A51A61">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Adverse Reaction

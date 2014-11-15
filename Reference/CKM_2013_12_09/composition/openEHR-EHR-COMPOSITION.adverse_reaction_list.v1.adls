@@ -27,7 +27,6 @@ This list can be comprised of three types of archetype:
 In order for this list to be accurate and safe to use as the basis for decision support activities and for exchange, this list should ideally be curated by a clinician responsible for the health record, rather than managed automatically by the clinical system through business rules alone.">
 			keywords = <"adverse", "reaction", "allergy", "intolerance", "effect", "hypersensitivity", "list", "side">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -36,6 +35,7 @@ In order for this list to be accurate and safe to use as the basis for decision 
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"7C6282FE2D669F7DF0CC7CA4958E4A57">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	COMPOSITION[id1] matches {	-- Adverse Reaction List

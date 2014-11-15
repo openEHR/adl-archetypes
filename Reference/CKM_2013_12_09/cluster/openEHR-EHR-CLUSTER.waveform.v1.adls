@@ -24,7 +24,6 @@ May be used to assess the quality of a measurement, as using a pulse plesmythogr
 May also be used as part of a direct patient assessment, e.g. using a pulse plesmythography waveform for cardiac output estimation.">
 			keywords = <"oximeter", "plesmythography", "plesmythogram", "pulse", "oximetry">
 			misuse = <"Should not normally be used other than within an OBSERVATION archetype.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -38,6 +37,7 @@ Available from: http://ccforum.com
 HL7 International, Implementation Guide for CDA Release 2.0 Personal Healthcare Monitoring Report (PHMR) (International Realm) Draft Standard for Trial Use Release 1. 2008;[cited 2010 Feb 2 ]">
 		["MD5-CAM-1.0.1"] = <"A7326D84EBA5023C116B56686DECE598">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Waveform

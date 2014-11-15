@@ -26,7 +26,6 @@ description
 			use = <"">
 			keywords = <"lab", "pathology", "biochemistry", "laboratory", "lipids", "cholesterol">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -35,6 +34,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"D30C6F81A33A45CA197A287B096B48EA">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Lipid studies

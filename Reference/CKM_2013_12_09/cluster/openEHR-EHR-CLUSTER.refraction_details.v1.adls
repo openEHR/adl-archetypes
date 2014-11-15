@@ -17,7 +17,6 @@ description
 			use = <"This archetype is normally used within the OBSERVATION.visual_acuity archetype to record a refraction applied as part of measurement or within INSTRUCTION and ACTION archetypes where a prescription order and supply process is being modelled.">
 			keywords = <"eye", "correction">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -33,6 +32,7 @@ CfH, UK. Do Once & Share - Glaucoma [Internet]. [cited 2012 Sep 26]. Available f
 DICOM Supplement 30 [Internet]. [cited 2012 Sep 26]. Available from: http://medical.nema.org/">
 		["MD5-CAM-1.0.1"] = <"4B259AEE31FB4F6D8630D61477395668">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Refraction Details

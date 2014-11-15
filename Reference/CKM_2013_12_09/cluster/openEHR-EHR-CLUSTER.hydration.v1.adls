@@ -18,7 +18,6 @@ description
 			use = <"To be used to capture clinical assessment of hydration.">
 			keywords = <"hydration", "fluid", "turgor">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"72E1C3A8C97E9B37A008400021899189">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Hydration

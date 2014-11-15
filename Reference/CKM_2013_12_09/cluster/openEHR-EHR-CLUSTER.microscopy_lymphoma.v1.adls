@@ -20,7 +20,6 @@ Use as a component archetype in the context of a suite of archetypes that make u
 			keywords = <"lab", "pathology", "laboratory", "lymphoma", "haematopoietic", "malignancy", "haematology", "hodgkin", "histopathology", "cancer", "non-hodgkin">
 			misuse = <"Not designed to be used within any other archetype other than OBSERVATION.lab_test.histopathology.
 Not designed to be used to record microscopic findings for leukaemias.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -33,6 +32,7 @@ Available from: http://www.cap.org/apps/docs/committees/cancer/cancer_protocols/
 ">
 		["MD5-CAM-1.0.1"] = <"D043F085224476623B5D3D1F274898D7">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] occurrences matches {0..1} matches {	-- Microscopic findings - Lymphoma

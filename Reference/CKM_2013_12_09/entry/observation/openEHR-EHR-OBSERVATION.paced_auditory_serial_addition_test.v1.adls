@@ -30,7 +30,6 @@ description
 Verwendung des MSFC-Handbuchs für detaillierte Testanleitungen. Vor der Aufzeichnung des eigentlichen Tests muss wenigstens ein Probelauf durchgeführt werden (diese Übungssequenz ist Bestandteil des PASAT). Wenn dabei weniger als drei richtige Antworten gegeben werden, sollte die Übungssequenz wiederholt werden (max. drei Mal). Wenn mehr als zwei korrekte Antworten gegeben wurden, kann mit dem PASAT-3'' fortgefahren werden (der Patient sollte die Aufgabe hinreichend verstanden haben). Um zusätzliche Informationen über die kognitiven Funktionen zu erhalten, kann der PASAT-2'' optional im Anschluss an den 3''-Test durchgeführt werden. Die Tests sollte nur von einer entsprechend geschulten Person durchgeführt werden.">
 			keywords = <"PASAT", "Multiple Sclerosis Functional Composite", "MSFC", "Multiple Sklerose", "MS", "Neurologie">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -40,7 +39,6 @@ Verwendung des MSFC-Handbuchs für detaillierte Testanleitungen. Vor der Aufzeic
 Use the MSFC Manual for detailed administration instructions. Prior to the recording of the actual tests at least one practice trial has to be performed (this training sequence is part of the PASAT). If less than three correct answers were given, the practice trial should be repeated (up to three times). If more than two correct answers were given, the PASAT-3'' can be administered (the patient should have understood the task sufficiently). To obtain additional information about the cognitive functions, the PASAT-2'' can be performed optionally after the 3'' test. The tests should only be administered by a suitably trained person.">
 			keywords = <"PASAT", "Multiple Sclerosis Functional Composite", "MSFC", "Multiple Sclerosis", "MS", "Neurology">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -51,6 +49,7 @@ Use the MSFC Manual for detailed administration instructions. Prior to the recor
 Tombaugh TN. A comprehensive review of the Paced Auditory Serial Addition Test (PASAT). Arch Clin Neuropsychol 2006;21(1):53–76.">
 		["MD5-CAM-1.0.1"] = <"4A376958A6434A49CA40592071FC7E2D">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Paced Auditory Serial Addition Test

@@ -18,7 +18,6 @@ description
 			use = <"Use to record details about health education intervention, such as advice or physical material, provided to the subject, including links to the information itself. For example, a record of fact sheets provided to the patient about the risks of a vasectomy.">
 			keywords = <"information", "education">
 			misuse = <"Not to be used to record consent - for example consent to a vasectomy after provision of a fact sheet about vasectomy.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -28,6 +27,7 @@ description
 		["references"] = <"Health Education (ACTION), draft archetype, NEHTA Clinical Knowledge Manager [Internet]. Sydney: National eHealth Transition Authority. Authored: 24May 2011. Available at: http://dcm.nehta.org.au/ckm/OKM.html#showarchetype_1013.1.1005_2 (accessed 26 Feb 2013).">
 		["MD5-CAM-1.0.1"] = <"41FABA666F88DB81EBB0D143689C1D98">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	ACTION[id1] matches {	-- Health Education

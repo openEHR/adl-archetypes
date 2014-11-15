@@ -21,13 +21,13 @@ description
 			use = <"For use with the exam clusters for recording findings on inspection">
 			keywords = <"inspect", "visual", "joint">
 			misuse = <"Should only be used in the exam observation">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Inspection of joint

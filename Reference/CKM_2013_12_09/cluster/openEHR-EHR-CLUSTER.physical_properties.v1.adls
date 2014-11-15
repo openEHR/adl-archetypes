@@ -26,7 +26,6 @@ description
 			use = <"To record physical details of a body part, device, device, lesion or specimen.">
 			keywords = <"specimen", "laboratory", "sample", "pathology", "object", "device", "implant">
 			misuse = <"Do not use to record whole body weight / height whether actual or adjusted or other overall estimates of bidy size such as waist/ girth measurement.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -34,7 +33,6 @@ description
 			use = <"لتسجيل التفاصيل الفيزيائية لجزء من الجسم, جهيزة, آفة أو عينة.">
 			keywords = <"العينة/النموذج", "المعمل/المختبر", "العينة", "الباثولوجيا/المرضية", "شيئ", "جهيزة", "الغِرْسة">
 			misuse = <"لا يستخدم لتسجيل الوزن أو الطول الكلي للجسم سواء أكان حقيقيا أو مُصحَّحا أو تقديرات أخرى كلية لحجم الجسم, مثل قياسات الخصر/موضع الحزام ">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -43,6 +41,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"1A5EE93B47AD014E912E965591773181">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Physical properties of an object

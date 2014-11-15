@@ -35,7 +35,6 @@ description
 			use = <"">
 			keywords = <"OD", "drug", "overdose", "poisoning">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -43,7 +42,6 @@ description
 			use = <"">
 			keywords = <"sobredosis", "intoxicación", "medicamento", "envenenamiento", "tóxico">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -51,7 +49,6 @@ description
 			use = <"">
 			keywords = <"فرط الجرعة", "الدواء/العقار", "فرط الجرعة", "التسمم">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -59,6 +56,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"E988C9E50A92CBB75C5785820EF014A1">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Poisoning or overdose

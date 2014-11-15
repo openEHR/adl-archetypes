@@ -18,7 +18,6 @@ description
 			use = <"Use history class to record maximum and minimum durations of bleeding - uses the menstruation cluster for details of a specific or typical cycle">
 			keywords = <"LMP", "menstruation">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Menstruation

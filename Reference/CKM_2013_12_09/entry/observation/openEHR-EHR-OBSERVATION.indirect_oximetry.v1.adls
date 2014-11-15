@@ -27,7 +27,6 @@ description
 			use = <"*">
 			keywords = <"Sauerstoff", "Behandlung mit Sauerstoff", "Pulsoxymeter", "Pulsoxymetrie">
 			misuse = <"*">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -45,7 +44,6 @@ Waveforms should be recorded here when used to document quality of the blood gas
 			misuse = <"Not to be used to record any peripheral blood gas measurement that involves direct contact with blood. For example, PaO2, PaCO2 should be recorded using the OBSERVATION.pathology_test archetype suitable for recording blood gases.
 
 Not to be used to record invasive blood gas measurement. For example, arterial (SaO2), venous (SvO2) oxygen saturation or Oxygen content (CaOC) which are usually determined by invasive methods such as laboratory blood gases or vascular catheter devices. These should also be recorded within the OBSERVATION.lab_test-blood_gases archetype.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -65,6 +63,7 @@ Hanning CD, Alexander-Williams JM. Pulse oximetry: a practical review. BMJ. 1995
 Jubran A. Pulse oximetry. Crit Care. 1999;3(2):R11-R17. PubMed PMID: 11094477; PubMed Central PMCID: PMC137227. Available from: http://ccforum.com/content/3/2/R11 (accessed 2013 Feb 26).">
 		["MD5-CAM-1.0.1"] = <"A8E360D3AC064246EA4006A22D8F3499">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Indirect Oximetry

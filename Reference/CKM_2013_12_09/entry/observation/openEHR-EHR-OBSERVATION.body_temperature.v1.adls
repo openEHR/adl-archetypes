@@ -83,7 +83,6 @@ Please Note: The site and method of recording may need to be displayed to the en
 			keywords = <"temperature", "body", "core", "fever", "hypothermia", "hyperthermia">
 			misuse = <"This archetype is not to be used to record the temperature of any other object.
 This archetype is not to be used to record the temperature of a part of the body in isolation e.g. temperature of the sole of the foot as a part of chronic diabetes management.">
-			copyright = <"© openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -103,7 +102,6 @@ Bitte beachten: Die Stelle und Methode der Messung muss ggf. dem Endverbraucher 
 
 
 Dieser Archetyp soll nicht benutzt werden, um die Temperatur eines Körperteils isoliert zu messen, z. B. die Temperatur an der Fußsohle im Rahmen des Managements von chronischem Diabetes.">
-			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -115,7 +113,6 @@ Observação: O local e método de gravação podem precisar de ser exibidos ao 
 			keywords = <"temperatura", "corpo", "febre", "hipotermia", "hipertermia">
 			misuse = <"Esse arquétipo não pode ser usado para registrar a temperatura de qualquer outro objeto.
 Esse arquétipo não pode ser usado para registrar a temperatura de uma parte do corpo isoladamente, por exemplo, temperatura da sola do pé, como parte do controle de diabetes crônica.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -126,7 +123,6 @@ Esse arquétipo não pode ser usado para registrar a temperatura de uma parte do
 			keywords = <"температура", "лихорадка", "жар", "гипертермия", "гипотермия">
 			misuse = <"Этот архетип не следует использовать для записи температуры любого другого объекта.
 Этот архетип не следует использовать для записи температуры части тела, например, отдельного измерения температуры ступни в лечении больных с диабетической стопой.">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -137,7 +133,6 @@ Tener en cuenta: El sitio y el método del registro quizás sea necesario mostra
 			keywords = <"temperatura", "cuerpo", "central", "fiebre", "hipotermia", "hipertermia">
 			misuse = <"Este arquetipo no debe usarse para registrar la temperatura de cualquier otro objeto.
 Este arquetipo no debe usarse para registrar la temperatura de una parte del cuerpo aislado por ej: la temperatura de la planta del pie como parte del manejo de la diabetes crónica.">
-			copyright = <"© openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -157,7 +152,6 @@ Arketypen skal ikke brukes for å registrerer en isolert del av kroppen, som for
 
 *This archetype is not to be used to record the temperature of any other object.
 This archetype is not to be used to record the temperature of a part of the body in isolation e.g. temperature of the sole of the foot as a part of chronic diabetes management.(en)">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -168,7 +162,6 @@ This archetype is not to be used to record the temperature of a part of the body
 			keywords = <"الحرارة", "الجسم", "اللُّب", "الحمى", "انخفاض الحرارة", "فرط الحرارة">
 			misuse = <"هذا النموذج لا يستخدم لتسجيل حرارة أي شيئ آخر.
 هذا النموذج لا يستخدم لتسجيل الحرارة لجزء معزول من الجسم, مثلا حرارة أخمص القدم كجزء من التدبير العلاجي لمرض السكري المزمن.">
-			copyright = <"© openEHR Foundation">
 		>
 		["fa"] = <
 			language = <[ISO_639-1::fa]>
@@ -180,7 +173,6 @@ This archetype is not to be used to record the temperature of a part of the body
 این الگو ساز جهت ثبت دمای بخشهایی از بدن -
 به عنوان مثال دمای کف پا به عنوان بخشی از پایش دیابت مزمن- بصورت جداگانه استفاده نمی شود
    ">
-			copyright = <"© openEHR Foundation">
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
@@ -191,7 +183,6 @@ Tener en cuenta: El sitio y el método del registro quizás sea necesario mostra
 			keywords = <"temperatura", "cuerpo", "central", "fiebre", "hipotermia", "hipertermia">
 			misuse = <"Este arquetipo no debe usarse para registrar la temperatura de cualquier otro objeto.
 Este arquetipo no debe usarse para registrar la temperatura de una parte del cuerpo aislado por ej: la temperatura de la planta del pie como parte del manejo de la diabetes crónica.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -199,6 +190,7 @@ Este arquetipo no debe usarse para registrar la temperatura de una parte del cue
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"5E2257CC252B591F41714621C597C910">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Body temperature

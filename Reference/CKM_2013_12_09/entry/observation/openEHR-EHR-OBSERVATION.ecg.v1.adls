@@ -28,7 +28,6 @@ description
 			keywords = <"مُخَطَّط كهربية القلب", "عملية تخطيط كهربية القلب", "12 اتجاه">
 			misuse = <"لا يستخدم لتسجيل الاتجهات غير العيارية لتخطيط كهربية القلب.
 لا يستخدم لتسجيل مِرقَب /مِنطَر هولتر.">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -38,7 +37,6 @@ Use to record details of ECGs performed during exercise conditions and stress te
 			keywords = <"electrocardiograph", "ECG", "EKG", "electrocardiogram", "electrocardiography", "12 lead">
 			misuse = <"Not to be used for recordings with non-standard ECG leads.
 Not to be used for recording Holter monitor results.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -47,6 +45,7 @@ Not to be used for recording Holter monitor results.">
 		["references"] = <"Lead descriptions - http://en.wikipedia.org/wiki/Electrocardiography [accessed 22 February, 2010]">
 		["MD5-CAM-1.0.1"] = <"DFCED3C93DE237C3B8DF90FD6F552C6C">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- ECG recording

@@ -37,7 +37,6 @@ This list can be comprised of three types of archetype:
 In order for this list to be accurate and safe to use as the basis for decision support activities and for exchange, this Problem List should ideally be curated by a clinician responsible for the health record, rather than managed automatically by the clinical system through business rules alone.">
 			keywords = <"problem", "list", "diagnosis", "diagnoses", "procedure">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ko"] = <
 			language = <[ISO_639-1::ko]>
@@ -57,7 +56,6 @@ In order for this list to be accurate and safe to use as the basis for decision 
 이 목록이 의사결정과 교환의 근거로서 정확하고 안전하게 사용되기 위해서는 이 문제목록은 비즈니스 규칙들에 따라 임상시스템에 의해서 자동적으로 관리되기 보다는 이상적으로 기록에 책임이 있는 임상의에 의해 관리되어야 한다.">
 			keywords = <"*problem(en)", "*list(en)", "*diagnosis(en)", "*diagnoses(en)", "*procedure(en)">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -66,6 +64,7 @@ In order for this list to be accurate and safe to use as the basis for decision 
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"BFA848F52FAB6BB43DD1E6A9249D11DF">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	COMPOSITION[id1] matches {	-- Problem List

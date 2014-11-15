@@ -20,7 +20,6 @@ This archetype is designed to provide the basis for a structured representation 
 For common use cases, it may be appropriate to specialise this archetype specifically eg intravascular catheter or urinary catheter.">
 			keywords = <"device", "machine", "implant", "appliance", "catheter", "prosthesis", "aid", "biomedical", "instrument", "equipment", "meter", "monitor", "physical", "object">
 			misuse = <"Not to be used to record products such as medications or vaccinations or similar, that are used for therapeutic or metabolic means.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -28,6 +27,7 @@ For common use cases, it may be appropriate to specialise this archetype specifi
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"5483D9756B2D4BEBB4848989509F89DC">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Device

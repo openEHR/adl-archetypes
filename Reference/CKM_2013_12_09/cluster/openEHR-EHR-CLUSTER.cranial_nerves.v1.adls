@@ -18,7 +18,6 @@ description
 			use = <"As a cluster within an examination archetype.">
 			keywords = <"cranial nerves", "CNS", "examination">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"10EE0F3D29E2ECEB23BA78A7107D52E9">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Cranial Nerves

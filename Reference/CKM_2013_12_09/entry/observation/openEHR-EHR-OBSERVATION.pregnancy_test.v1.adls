@@ -18,11 +18,11 @@ description
 			use = <"For use with a commercial product">
 			keywords = <"pregnancy", "test", "confirmation">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie", ...>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Pregnancy test

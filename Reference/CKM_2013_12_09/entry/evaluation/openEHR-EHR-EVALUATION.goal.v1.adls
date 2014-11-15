@@ -26,7 +26,6 @@ description
 			use = <"">
 			keywords = <"الهدف", ...>
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -34,7 +33,6 @@ description
 			use = <"Use to record overall goals, along with one or more specific measurable targets towards the goal.">
 			keywords = <"target", "goal", "plan">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -42,6 +40,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"7E02F7728771D9FDEB9DE3809A92D38C">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Goal

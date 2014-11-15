@@ -27,7 +27,6 @@ Chief Complaint is another phrase in common usage. In effect it is probably a ty
 			keywords = <"presentation", "presenting complaint", "reason for encounter", "reason", "chief complaint", "visit", "reason for visit">
 			misuse = <"Not to be used to record specific details of the patient's story or history of symptoms. Use OBSERVATION.story to capture the narrative and the related nested CLUSTER archetypes for structured content eg CLUSTER.symptom, CLUSTER.event and CLUSTER.issue.
 Not to be used to record specific diagnosis details that may be required in addition to a Reason for Encounter eg Admission or Pre-operative Diagnosis as part of admission for a hospital procedure. Use the EVALUATION.problem_diagnosis (and related specialisations) for this purpose.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -36,6 +35,7 @@ Not to be used to record specific diagnosis details that may be required in addi
 		["references"] = <"openEHR Foundation. openEHR wiki: Reason for Encountrer or Chief Complaint [Internet]. 2008 Feb 13 [cited June 17 2012];  Available at http://www.openehr.org/wiki/display/healthmod/Reason+for+encounter+or+Chief+complaint.">
 		["MD5-CAM-1.0.1"] = <"A7AD709820469E3A79A0E3ADCB9082C7">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Reason for Encounter

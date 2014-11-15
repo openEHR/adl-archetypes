@@ -22,7 +22,6 @@ description
 A typical use would be to record usage in an caffeine consumption diary.  ">
 			keywords = <"substance", "addiction", "consumption", "use", "caffeine", "coffee">
 			misuse = <"Not to be used for recording persistent and summary details about the use of caffeine - this should be captured using the EVALUATION.substance_use_summary-caffeine archetype.  ">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -31,6 +30,7 @@ A typical use would be to record usage in an caffeine consumption diary.  ">
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"21247F693D79FCEFFCAADBFA8F40FA32">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Caffeine consumption

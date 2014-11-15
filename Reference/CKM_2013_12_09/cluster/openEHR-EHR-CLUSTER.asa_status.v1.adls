@@ -20,7 +20,6 @@ description
 This archetype has been designed to be used within a variety of ENTRY archetypes - for example an EVALUATION for a pre-operative anaesthetic assessment or an infection control investigation.">
 			keywords = <"ASA", "pre-operative", "surgery">
 			misuse = <"Not intended for use as a measure to predict operative risk.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ This archetype has been designed to be used within a variety of ENTRY archetypes
 Cleveland Clinic (provided examples of each state): http://my.clevelandclinic.org/services/Anesthesia/hic_ASA_Physical_Classification_System.aspx">
 		["MD5-CAM-1.0.1"] = <"76575A6A3B720EDD812A00380EC8810B">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- ASA Physical Status Classification

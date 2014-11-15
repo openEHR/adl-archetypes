@@ -34,7 +34,6 @@ description
 			use = <"This is a generic archetype used to record an ongoing and persistent summary of the use of any and all substances that have not had specific specialisation archetypes created. The typical use will be related to a summary of use or consumption of substances.">
 			keywords = <"consumption", "substance", "use", "usage", "dependence">
 			misuse = <"Do not use this archeytpe for recording actual details about the use of the substance and event-related data - this should be captured using the OBSERVATION.substance_use archetype.  Do not use this archetype for recording use or consumption histories for common substances such as tobacco smoking and alcohol.  As substances such as tobacco and alcohol are so commonly consumed, data should be recorded using detailed and specific specialisations of this archetype.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -46,7 +45,6 @@ description
 
 لا تستخدم هذا النموذج لتسجيل تاريخ استخدام أو استهلاك التبغ أو الكحول. 
 و حيث إن المواد مثل التبغ أو الكحول هي من المواد المألوفة الاستعمال, فإنه ينبغي تسجيل البيانات الخاصة بها باستخدام تخصيصات تفصيلية و معينة مشتقة من هذا النموذج">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -54,7 +52,6 @@ description
 			use = <"Este es un arquetipo genérico que se utiliza para registrar un resumen en curso y persistente de la utilización de cualquier sustancia, para la cual no se ha creado ningún arquetipo específico de especialización. El uso típico se relaciona con un resumen de su uso o consumo de sustancias.">
 			keywords = <"consumo", "sustancia", "uso", "dependencia">
 			misuse = <"No utilice este arquetipo para el registro de detalles actuales sobre el uso de la sustancia y los datos relacionados con eventos. Esto debe ser capturado usando el arquetipo OBSERVATION.substance_use. No utilice este arquetipo para registro de la historia de uso o consumo de las sustancias comunes como el tabaco y el alcohol. Como estas son tan comúnmente consumidas, estos datos deben ser registrados con los arquetipos específicos para ellas.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -62,6 +59,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"3DE9486355CA4A3926F27A8B1E8C5CFB">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Substance Use Summary

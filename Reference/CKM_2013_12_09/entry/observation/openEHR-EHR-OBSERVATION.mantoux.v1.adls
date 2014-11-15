@@ -18,7 +18,6 @@ description
 			use = <"Use to record the clinical examination findings after administration of the TST, and the clinical interpretation.">
 			keywords = <"TB", "Mantoux", "reaction", "tuburculin", "TST">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"E84780319A498FC940D6AC7662721E2B">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Mantoux Test Result

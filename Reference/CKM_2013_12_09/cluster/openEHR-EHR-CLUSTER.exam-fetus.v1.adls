@@ -21,7 +21,6 @@ description
 			use = <"">
 			keywords = <"foetus", "fetal", "foetal">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"1D56F36C0F32C4A5D74F92289474005F">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Examination of the fetus

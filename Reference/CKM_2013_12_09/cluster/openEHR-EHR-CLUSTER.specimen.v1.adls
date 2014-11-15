@@ -20,7 +20,6 @@ It will finally be used within a laboratory result archetype to describe the spe
 			use = <"Generally used within OBSERVATION. Laboratory and other laboratory related Instruction and Action archetypes">
 			keywords = <"specimen", "laboratory", "sample", "collection">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -29,6 +28,7 @@ It will finally be used within a laboratory result archetype to describe the spe
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"9E72A5809331E0ABD21D83D6DB95E799">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Specimen

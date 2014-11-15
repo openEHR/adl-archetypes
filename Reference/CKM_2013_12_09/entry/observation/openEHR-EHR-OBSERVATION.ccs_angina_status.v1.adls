@@ -18,7 +18,6 @@ description
 			use = <"Use to record a classification of patient angina on the basis of reported chest pain based on the CCS Angina Status Score.">
 			keywords = <"discomfort", "pain", "cardiac", "angina">
 			misuse = <"Note that Class 0 is not defined in the formal Canadian Cardiovascular Society (CCS) Angina Status score.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ CANADIAN CARDIOVASCULAR SOCIETY ANGINA GRADE 0 – A CLINICALLY USEFUL ADDITION
 Available from: http://www.pulsus.com/ccc2003/abs/a853.htm">
 		["MD5-CAM-1.0.1"] = <"14E7DD51D9D86C6E70246884717DB767">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Angina symptom Classification (CCS)

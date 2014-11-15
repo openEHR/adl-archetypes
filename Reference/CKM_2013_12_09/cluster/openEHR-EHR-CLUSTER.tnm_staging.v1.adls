@@ -18,7 +18,6 @@ description
 			use = <"May be specialised or template-constrained for each particular tumour. e.g. TNM classification for bronchial carcinoma">
 			keywords = <"tumour", "TNM", "malignancy", "cancer", "staging", "classification", "grade", "grading", "stage", "lymph node", "metastasis">
 			misuse = <"Should not normally be used for TNM classification without specialisation or template-constraints">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -32,6 +31,7 @@ Greene FL, Page DL, Fleming ID. et al, eds, for the American Joint Committee on 
 ">
 		["MD5-CAM-1.0.1"] = <"8CBC0E9AFBB0603DA802A38BEC1D0FA6">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Tumour - TNM Cancer staging

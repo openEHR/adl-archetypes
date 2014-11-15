@@ -32,7 +32,6 @@ Use to incorporate the narrative descriptions of clinical findings within existi
 Specifically designed to be used within the OBSERVATION.exam archetype, but may be used within any clinically appropriate ENTRY or CLUSTER archetype.">
 			keywords = <"eye", "pupil", "reflex", "PERL", "PERLA", "inspection", "examination">
 			misuse = <"Not to be used to record findings of the physical examination of other parts of the eye, such as the retina - use other specific archetypes for this purpose.">
-			copyright = <"© openEHR Foundation">
 		>
 		["sl"] = <
 			language = <[ISO_639-1::sl]>
@@ -40,7 +39,6 @@ Specifically designed to be used within the OBSERVATION.exam archetype, but may 
 			use = <"Uporablja se za opazovanje zenic v ZN">
 			keywords = <"zenice", "refleks", "oči">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -58,6 +56,7 @@ Eye Color [Internet]. Wikipedia. Available from: http://en.wikipedia.org/wiki/Ey
 Pupillary abnormalities [Internet], openEyes Project.  Available from: http://www.openeyes.org.uk/elements/pupil/pupil.html">
 		["MD5-CAM-1.0.1"] = <"F8EBFE74B0D3BD7F9F74F74692E06C0B">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Examination Findings  - Pupils

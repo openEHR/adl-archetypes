@@ -25,7 +25,6 @@ description
 ">
 			keywords = <"lab", "pathology", "biochemistry", "immunology", "laboratory", "serology">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -41,6 +40,7 @@ IHE. IHE, Laboratory Technical Framework, Volume 3 Content [Internet]. 2008;Avai
 ">
 		["MD5-CAM-1.0.1"] = <"C876F773375779E2E192D99B596FC5A6">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Immunology titres

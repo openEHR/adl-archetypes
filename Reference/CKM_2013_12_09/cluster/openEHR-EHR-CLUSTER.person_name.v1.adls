@@ -41,7 +41,6 @@ description
 			use = <"Zur Dokumentation der Namensangaben einer Person">
 			keywords = <"Familenname", "Vorname", "Name">
 			misuse = <"Nicht zur Erstaufzeichnung des Patientennamens zu benutzen. Nicht zur Identifikation von Individuen zu benutzen, die eindeutig Registern mit demografischen Daten zugeordnet werden können (z.B. einer elektronischen Krankenakte, einem Master Patient Index, etc.).">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -49,7 +48,6 @@ description
 			use = <"Utilizar para registrar detalles del nombre de un individuo.">
 			keywords = <"apellido", "nombre de pila", "primer nombre">
 			misuse = <"No utilizar para el registro primario del nombre del paciente. No utilizar para identificar individuos que pueden ser unívocamente referenciados desde registros de datos demográficos. ej.: dentro del registro de salud electrónico, índices maestros de pacientes, etc.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -57,7 +55,6 @@ description
 			use = <"لتسجيل تفاصيل الاسم حول شخص ما.">
 			keywords = <"اسم العائلة/اللقب", "الاسم الشخصي", "الاسم الأول">
 			misuse = <"لا يستخدم للتسجيل الأولي لاسم المريض. لا يستخدم لتعريف الأفراد الذين يمكن الرجوع إليهم في سجلات التفاصيل الديموغرافية, مثلا: السجل الطبي الإلكتروني و فهرس المرضى الرئيسي.">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -65,7 +62,6 @@ description
 			use = <"Use to record name details about an individual.">
 			keywords = <"surname", "forename", "first name">
 			misuse = <"Not to be used for primary recording of patient name. Not to be used to identify the individuals who can be uniquely referenced from registers of demographic details eg within the electronic health record, master patient indexes etc.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -78,6 +74,7 @@ Aligned with openEHR-DEMOGRAPHICS-person_name.v1 http://www.openehr.org/ckm/#sho
 ISO/TS 22220:2008(E) - Identification of Subject of Care - Technical Specification- International Organization for Standardization.">
 		["MD5-CAM-1.0.1"] = <"2D8CF370D3AEC6DDC6F9847963051B89">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Person name

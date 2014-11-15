@@ -38,7 +38,6 @@ description
 			use = <"Записывает лаборатория переливания крови.">
 			keywords = <"группа", "переливание">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -46,7 +45,6 @@ description
 			use = <"Dokumentiert von einem Bluttransfusion-Labor.">
 			keywords = <"Gruppe", "Transfusion">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -54,7 +52,6 @@ description
 			use = <"Reporting by blood transfusion laboratory.">
 			keywords = <"group", "transfusion">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -62,13 +59,13 @@ description
 			use = <"يتم استخدامها كتقرير من معمل نقل الدم">
 			keywords = <"المجموعة", "نقل الدم">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"820A60C343A1184BF368CC94822B084E">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Blood matching

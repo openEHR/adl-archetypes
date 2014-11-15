@@ -33,21 +33,18 @@ description
 			purpose = <"لتسجيل تفاصيل حول فعل تم تنفيذه كجزء من المتابعة.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
 			purpose = <"Para registrar detalles acerca de una acción tomada como parte del seguimiento clínico.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record details about an action taken as part of a follow up.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -55,6 +52,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"0B865193F1E6B2BD5FE6E91EC9380C2A">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	ACTION[id1] matches {	-- Follow up action

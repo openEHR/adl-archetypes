@@ -25,7 +25,6 @@ This archetype has specifically been designed to avoid the need to use flags or 
 Exclusion statements can only be considered to be current and accurate at the time of recording. For example: exclusion of use of coumarin on admission to hospital is only relevant at the time of recording, and is effectively obsolete if the subsequent diagnosis is deep venous thrombosis and the subject is commenced on heparin or coumarin.">
 			keywords = <"exclusion", "medicine", "medication">
 			misuse = <"Not to be used to record exclusion statements about adverse reactions, procedures, problems or diagnoses - use other specific specialisations of the EVALUATION.exclusion archetype for these purposes.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -36,6 +35,7 @@ Exclusion statements can only be considered to be current and accurate at the ti
 http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1303_2 (accessed 3 Sep 2013)">
 		["MD5-CAM-1.0.1"] = <"20AE44E213800D8CCFE164F6B7515D8F">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1.1] matches {	-- Exclusion of a Medication

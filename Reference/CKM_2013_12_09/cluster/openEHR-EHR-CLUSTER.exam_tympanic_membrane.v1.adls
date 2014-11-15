@@ -22,7 +22,6 @@ Specifically designed to be used within the OBSERVATION.exam-ear archetype, but 
 Please note: this archetype has been designed specifically to reflect current practice within the NT Hearing Health program. It is recognised that this is not currently reflecting a maximal dataset and may need to be extended in future revisions as more specific requirements are identified.">
 			keywords = <"inspection", "ear", "tympanic", "perforation", "drum", "canal", "otoscopic", "exam", "examination", "pneumatic", "otoscopy", "membrane">
 			misuse = <"Not to be used to record findings of the physical examination of other parts of the ear, such as pinna and mastoid region - use other purpose-built archetypes for this purpose.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -39,6 +38,7 @@ Northern Territory Government, Department of Health: Northern Territory Hearing 
 OATSIH:  The Recommendations for Clinical Care Guidelines on the Management of Otitis Media in Aboriginal and Torres Strait Islander Populations (2010). Available at: http://www.health.gov.au/internet/publications/publishing.nsf/Content/CA2578620005D57ACA25792800821BE8?OpenDocument.">
 		["MD5-CAM-1.0.1"] = <"8F6D4152A87D3B1BC1640C989B5CC83C">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Examination of External Auditory Canal and Tympanic Membrane

@@ -18,7 +18,6 @@ description
 			use = <"To re-use within multiple archetypes - for example the State within the temperature archetype.">
 			keywords = <"humidity", "temperature", "ambient", "thermal stress", "wind", "chill", "wet bulb globe">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"9F993D7F0E7F0C39E3E133E47FF63171">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Environmental conditions

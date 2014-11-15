@@ -19,7 +19,6 @@ description
 Use as a component archetype in the context of a suite of archetypes that make up a histopathology report ie OBSERVATION.lab_test.histopathology.">
 			keywords = <"histopathology", "cancer", "laboratory", "prostate", "histology", "malignancy", "lab", "pathology">
 			misuse = <"Not designed to be used within any other archetype other than OBSERVATION.lab_test.histopathology.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -35,6 +34,7 @@ Available from: http://www.cap.org/apps/docs/committees/cancer/cancer_protocols/
 ">
 		["MD5-CAM-1.0.1"] = <"5BA821FA7297FF624106274BD2C3C326">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Microscopic findings - Prostate cancer

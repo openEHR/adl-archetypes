@@ -34,7 +34,6 @@ description
 			use = <"To be included in an entry archetype that identifies the object of examination.">
 			keywords = <"oedema", "swelling">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -42,7 +41,6 @@ description
 			use = <"ينبغي أن يدخل كجزء من نموذج يتم فيه إدخال بيانات لتعريف الشخص محل الفحص.">
 			keywords = <"الوذمة", "الانتفاخ">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -50,7 +48,6 @@ description
 			use = <"Следует включать в архетип описывающий объект обследования">
 			keywords = <"Отек", "Отечность", "Водянка", "Асцит">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -58,6 +55,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"D136402F2831A67B401B289AD52ED788">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Oedema

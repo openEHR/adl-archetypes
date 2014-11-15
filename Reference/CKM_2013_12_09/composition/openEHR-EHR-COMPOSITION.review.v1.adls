@@ -18,7 +18,6 @@ description
 			use = <"Use to record the details of a formal review of a subject's clinical situation or any specific aspect of their clinical care. For example: use to record Medicines reviews; or Case Coordinator reviews.">
 			keywords = <"review", "assessment", "medicine", "clinical", "case", "file">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"2DC12B7D97D991644135FB1F47C6C102">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	COMPOSITION[id1] matches {	-- Review

@@ -14,13 +14,13 @@ description
 			purpose = <"To recrod details about an instruction to follow up.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	INSTRUCTION[id1] matches {	-- Follow up instruction

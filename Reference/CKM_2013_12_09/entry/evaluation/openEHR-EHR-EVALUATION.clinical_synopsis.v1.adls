@@ -60,7 +60,6 @@ For example, a Clinical Synopsis can communicate a succinct summary of the patie
 			keywords = <"summary", "conclusion", "outline", "precis", "abstract", "assessment", "synopsis", "epicrisis", "comment", "note">
 			misuse = <"Not to be used to record specific and structured health information. For example, detailed information about Problems, Diagnoses, and Test Results should be recorded using the specific relevant archetypes EVALUATION.problem, EVALUATION.problem-diagnosis, and laboratory or radiology results in OBSERVATIONs. The Clinical Synopsis may convey some critical and selected numerical results from these structured details when judged important for completeness of the Synopsis but is NOT the primary recording site for them.
 The term “Clinical Synopsis” can sometimes refer to complex and comprehensive documents, such as a Discharge Summary or a Report. In openEHR these documents should be represented as aggregations of constrained archetypes, that is, a Discharge Summary template or a Report template, comprising a number of separate archetypes, of which this Clinical Synopsis archetype may be one.">
-			copyright = <"© openEHR Foundation">
 		>
 		["fa"] = <
 			language = <[ISO_639-1::fa]>
@@ -72,7 +71,6 @@ The term “Clinical Synopsis” can sometimes refer to complex and comprehensiv
 			misuse = <"برای ثبت اطلاعات سلامت خاص و ساختار مند استفاده نمی شود. برای مثال اطلاعات جزیی درباره مشکلات ، تشخیصها و نتایج تست باید با استفاده از الگو ساز خاص ومربوطه .....و نتایج آزمایشگاهی یا رادیولوژی در ....ثبت شود. خلاصه بالینی ممکن است شامل برخی نتایج عددی حیاتی و انتخاب شده  از  جزییات ساختار مند باشد زمانی که برای تکمیل خلاصه مهم باشدامااین الگو ساز محل اولیه ثبت این موارد نیست
 واژه \"خلاصه بالینی \"کاهی به اسناد پیچیده و جامع اشاره می کند نظیر خلاصه ترخیص یا گزارش. در ... اسناد باید به عنوان توده ای از الگوسازهای محدود شده ارایه شود ، الگوی خلاصه ترخیص یا  الگوی گزارش شامل تعدادی از الگوسازهای جداگانه می باشد که الگوساز خلاصه بالینی یکی از این الگوسازها می باشد    
   ">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -87,7 +85,6 @@ The term “Clinical Synopsis” can sometimes refer to complex and comprehensiv
 
 قد يشير اللفظ (المختصر السريري) أحيانا إلى وثائق مركبة و شاملة, مثل ملخص الخروج أو تقرير ما.
 و ينبغي التعبير عن هذه الوثائق في نماذج مقيدة, و التي هي قالب ملخص الخروج و قالب التقرير, وسط مجموعة من النماذج يعتبر المختصر السريري واحدا منها.">
-			copyright = <"© openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -99,7 +96,6 @@ Beispielsweise kann eine Clinical Synopsis eine kurze Zusammenfassung der Aufnah
 			misuse = <"Nicht zu benutzen um genaue und strukturierte Informationen aufzunehmen. Beispielsweise sollten detaillierte Informationen über Probleme, Diagnosen und Testergebnisse durch die entsprechend relevanten Archetypen EVALUATION.problem, EVALUATION.problem-diagnosis und OBSERVATION-Archetypen für Labpr- oder radiologische Ergebnisse aufgenommen werden. Die Clinical Synopsis darf manche kritische bzw. ausgewählte numerische Ergebnisse aus diesen strukturierten Details überbringen, wenn diese als wichtig für die Vollständigkeit der Synopsis beurteilt werden; sie ist jedoch NICHT die primäre Stelle zur Aufnahme solcher Informationen.
 Der Begriff \"Klinische Synopsis\" kann sich manchmal auf komplexe und umfangreiche Dokumente beziehen, z. B. eine Epikrise (Discharge Summary) oder ein Bericht (Report). In openEHR sollten diese Dokumente als Aggregationen eingeschränkter Archetypen dargestellt werden (sprich openEHR \"templates\"), d. h. eine Epikrise- oder Bericht-Vorlage, die aus mehreren einzelnen Archetypen besteht, wovon der Clinical Synopsis-Archetyp einer sein könnte.
 ">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -110,7 +106,6 @@ Por ejemplo, una Sinopsis Clínica puede comunicar un sumario sucinto de una int
 			keywords = <"sumario", "conclusión", "visión global", "resumen", "extracto", "evaluación", "sinopsis", "epicrisis", "comentario", "nota">
 			misuse = <"No debe usarse para registrar información de salud estructurada y específica. Por ejemplo, información detallada relacionada con Problemas, Diagnósticos y Resultados de Estudios debería ser registrada usando los arquetipos específicos y relevantes EVALUATION.problem, EVALUATION.problem-diagnosis y resultados de laboratorio o imágenes en OBSERVATIONs. La Sinopsis Clínica puede expresar algunos resultados numéricos seleccionados críticos (presentes en secciones estructuradas específicas), cuando sean juzgados importantes para la completitud de la Sinopsis pero NO es el sitio primario de registro para esta información.
 El término “Sinopsis Clínica” puede referirse a veces a documentos complejos y detallados tales como Epicrisis o Reportes. En openEHR, estos documentos deberían ser representados como agregaciones de arquetipos restringidos. Por ejemplo, una plantilla de Epicrisis o de Reporte deberían estar compuestos por un grupo de arquetipos (entre los que se encontraría la Sinopsis Clínica).">
-			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -121,7 +116,6 @@ For example, a Clinical Synopsis can communicate a succinct summary of the patie
 			keywords = <"sumário", "conclusão", "esboço", "resumo", "abstrato", "avaliação", "sinopse", "epícrise", "comentário", "anotações">
 			misuse = <"*Not to be used to record specific and structured health information. For example, detailed information about Problems, Diagnoses, and Test Results should be recorded using the specific relevant archetypes EVALUATION.problem, EVALUATION.problem-diagnosis, and laboratory or radiology results in OBSERVATIONs. The Clinical Synopsis may convey some critical and selected numerical results from these structured details when judged important for completeness of the Synopsis but is NOT the primary recording site for them.
 The term “Clinical Synopsis” can sometimes refer to complex and comprehensive documents, such as a Discharge Summary or a Report. In openEHR these documents should be represented as aggregations of constrained archetypes, that is, a Discharge Summary template or a Report template, comprising a number of separate archetypes, of which this Clinical Synopsis archetype may be one.(en)">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -130,6 +124,7 @@ The term “Clinical Synopsis” can sometimes refer to complex and comprehensiv
 		["references"] = <"Clinical Synopsis (Data Specifications) Version 1.0 [Internet]. Sydney, Australia: National E-Health Transition Authority; 2007 Jun 29 [cited 2009 Oct 12]; Available at http://www.nehta.gov.au/DGL/Resources/Downloads/Clinical%20Synopsis%20v1.0.pdf">
 		["MD5-CAM-1.0.1"] = <"CF72CCEE8648EEE9BFBA5D12E9FC9BDF">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Clinical Synopsis

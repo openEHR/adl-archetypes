@@ -18,7 +18,6 @@ description
 			use = <"Use to record a suggestion, advice or proposal for current healthcare management, or for future action.">
 			keywords = <"advice", "proposal", "suggestion">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"CDA21DA21BC8B9BF99463E34378CA613">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Recommendation

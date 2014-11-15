@@ -18,7 +18,6 @@ description
 			use = <"For recording issues as presented to the clinician by a patient or their advocate. This archetype has been designed to complement capturing information about the reason for attending a clinician other than recording a symptom or information about an event">
 			keywords = <"issue", ...>
 			misuse = <"Not for recording symptoms or events - use the specific archetypes for this purpose">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"7BB46BA6BD3DEBEF2C76BDAC72FB8A5A">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Issue presented by a person

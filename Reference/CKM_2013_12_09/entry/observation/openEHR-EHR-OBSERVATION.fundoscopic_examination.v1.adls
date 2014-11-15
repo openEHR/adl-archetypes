@@ -27,14 +27,12 @@ description
 			purpose = <"To record details about clinical findings on fundoscopy of eyes.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			purpose = <"Para registrar detalhes sobre o resultados clínicos do exame fundoscopia dos olhos.">
 			use = <"*">
 			misuse = <"*">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -42,6 +40,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"2A64A8FDB455A13CD40A3237E21FAE06">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Fundoscopic examination of eyes

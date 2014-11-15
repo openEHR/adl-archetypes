@@ -26,20 +26,19 @@ description
 			purpose = <"Dient der Dokumentation von Fragen und Antworten, ermöglicht strukturierte Aufzeichnung. ">
 			use = <"">
 			misuse = <"Tatsächliche Befunde werden in anderen Strukturen aufgezeichnet.">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record questions and answers to allow structured recording.">
 			use = <"">
 			misuse = <"Do not use for actual findings; these are recorded in other structures.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"00558AB8D4C1430C4C73D12BCF9224B1">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- A health oriented check list

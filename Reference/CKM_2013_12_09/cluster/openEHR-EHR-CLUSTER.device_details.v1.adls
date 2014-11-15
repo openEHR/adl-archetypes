@@ -18,7 +18,6 @@ description
 			use = <"Use to record additional details required to supplement the generic CLUSTER.device or specicalisation archetypes. The focus of this archetype is on capturing the details related maintenance, servicing, cleaning, calibration and specific details about components of the device.">
 			keywords = <"calibration", "maintenance", "sterilization", "cleaned", "service", "device">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ IEEE. Guidelines for 64-bit Global Identifier (EUI-64) Registration Authority [I
 Available from: http://standards.ieee.org/regauth/oui/tutorials/EUI64.html">
 		["MD5-CAM-1.0.1"] = <"ABFCDBD4FEB5A92D17BBB76F3E1099F9">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Device details

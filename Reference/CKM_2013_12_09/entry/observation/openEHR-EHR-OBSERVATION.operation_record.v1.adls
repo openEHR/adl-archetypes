@@ -14,13 +14,13 @@ description
 			purpose = <"To record details pertaining to open or keyhole operation performed">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Operation Record

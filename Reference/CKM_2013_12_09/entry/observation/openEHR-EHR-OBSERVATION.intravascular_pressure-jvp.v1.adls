@@ -20,7 +20,6 @@ description
 			use = <"">
 			keywords = <"pressure", "intravascular", "jugular">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -28,6 +27,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"8040656E2759ADB319CE3FB12B7E5E64">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Jugular venous pressure

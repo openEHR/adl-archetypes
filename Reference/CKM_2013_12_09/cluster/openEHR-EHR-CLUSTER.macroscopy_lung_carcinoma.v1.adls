@@ -19,7 +19,6 @@ description
 Use as a component archetype in the context of a suite of archetypes that make up a histopathology report ie OBSERVATION.lab_test.histopathology and CLUSTER.microscopy_lung_carcinoma.">
 			keywords = <"histopathology", "cancer", "laboratory", "lab", "malignancy", "pathology", "lung", "bronchial">
 			misuse = <"Not designed to be used within any other archetype other than OBSERVATION.lab_test.histopathology.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -31,6 +30,7 @@ College of American Pathologists. Histopathology Lung protocol [Internet]. [cite
 Available from: http://www.cap.org/apps/docs/committees/cancer/cancer_protocols/2005/lung05_pw.pdf">
 		["MD5-CAM-1.0.1"] = <"F480BB8ACB657D26D643D21541AE52D5">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Macroscopic findings - Lung cancer

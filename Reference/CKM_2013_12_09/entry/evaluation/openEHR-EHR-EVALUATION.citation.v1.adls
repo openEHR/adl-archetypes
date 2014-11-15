@@ -18,7 +18,6 @@ description
 			use = <"Use as the shell ENTRY archetype to contain the CLUSTER.citation archetype when a citation is required to occur as a stand-alone instance of information. The actual data elements are fully detailed within CLUSTER.citation, which is able to be inserted within a slot in this EVALUATION or as part of the fuller context of any other archetype, as required.">
 			keywords = <"citation", "reference">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"D371F261D964C649EE5CDC90E440C3C2">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Citation

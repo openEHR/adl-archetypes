@@ -21,7 +21,6 @@ description
 			use = <"">
 			keywords = <"tumour", "TNM", "malignancy", "cancer", "staging", "classification", "grade", "grading", "stage", "lymph node", "metastasis", "prostate">
 			misuse = <"Should not normally be used for TNM classification without specialisation or template-constraints">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ description
 		["references"] = <"Sobin LH. TNM Classification of Malignant Tumours 7th Edition.  John Wiley and Sons; 2009.">
 		["MD5-CAM-1.0.1"] = <"E533BECCE960A42F8E540AA1534A4963">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Tumour - Prostate Cancer TNM staging 7th Edition

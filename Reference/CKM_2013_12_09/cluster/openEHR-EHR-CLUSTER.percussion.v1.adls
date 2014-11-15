@@ -26,7 +26,6 @@ description
 			use = <"">
 			keywords = <"percussion", "resonant">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -34,7 +33,6 @@ description
 			use = <"">
 			keywords = <"القرع", "رنَّان">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -42,6 +40,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"C875A0673DB70F75D60899389A45D45E">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Percussion

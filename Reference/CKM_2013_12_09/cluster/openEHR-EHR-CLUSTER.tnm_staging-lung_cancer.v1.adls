@@ -22,7 +22,6 @@ description
 			keywords = <"tumour", "TNM", "malignancy", "cancer", "staging", "classification", "lung", "bronchial", "lymph node", "metastasis">
 			misuse = <"Not to be used for pleural mesothelioma, sarcoma or other rare lung tumours.
 Not to be used for other editions of TNM classification.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -35,6 +34,7 @@ Available from: http://www.cancerstaging.org/education/tnmschema/tnmschema.html
 ">
 		["MD5-CAM-1.0.1"] = <"E03215CDA1A9A90A2730E3949D0B36F7">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- TNM staging - Lung cancer (Sixth Edition)

@@ -21,7 +21,6 @@ description
 			use = <"">
 			keywords = <"lab", "pathology", "biochemistry", "laboratory", "metabolic", "U & E">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"76A51397784E0FFBED908F1F31E85669">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Urea and electrolytes

@@ -17,7 +17,6 @@ description
 			purpose = <"To record details about the identification of a case.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 ">
 		["MD5-CAM-1.0.1"] = <"2FEB0E4952D5ADF9B30101F47D213876">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Case Identification

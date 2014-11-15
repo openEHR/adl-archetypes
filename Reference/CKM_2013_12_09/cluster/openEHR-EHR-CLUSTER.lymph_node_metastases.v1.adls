@@ -19,7 +19,6 @@ description
 Use as a component archetype in the context of a suite of archetypes that make up a histopathology report ie OBSERVATION.lab_test.histopathology.">
 			keywords = <"tumour", "lymph node", "metastases", "pathology", "histopathology", "cancer", "malignancy">
 			misuse = <"Not designed to be used within any other archetype other than OBSERVATION.lab_test.histopathology.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ Use as a component archetype in the context of a suite of archetypes that make u
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"D90E73A53BAC2504891ADC7C748B3DF4">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Tumour- Lymph node metastases

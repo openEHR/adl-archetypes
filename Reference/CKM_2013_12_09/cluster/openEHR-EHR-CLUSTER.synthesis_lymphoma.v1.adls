@@ -18,7 +18,6 @@ description
 			use = <"To be used within a Histopathology lab test archetype, within Diagnostic overview.">
 			keywords = <"lymphoma", "tumour", "hodgkin", "cancer", "synthesis", "lineage">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -29,6 +28,7 @@ College of American Pathologists. Lymphoma and Hodkgin disease - Full protocol [
 Available from: http://www.cap.org/apps/docs/committees/cancer/cancer_protocols/2005/lymphnonhodg05_pw.pdf">
 		["MD5-CAM-1.0.1"] = <"C850239A03DAA97F83C485A058317236">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Diagnostic synthesis - lymphoma

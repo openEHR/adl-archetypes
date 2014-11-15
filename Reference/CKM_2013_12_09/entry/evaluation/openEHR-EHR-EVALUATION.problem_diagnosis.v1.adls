@@ -56,7 +56,6 @@ Alguns exemplos:
 - Problemas de relacionamento com membro familiar">
 			keywords = <"caso", "circunstância", "problema", "obstáculo">
 			misuse = <"Não deve ser usado para registro de diagnósticos formais - usar a especialização deste arquétipo, EVALUATION.problem-diagnosis.">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -71,7 +70,6 @@ Algunos ejemplos:
 -Problema de relación con un miembro de la familia.">
 			keywords = <"asunto", "condición", "problema", "obstáculo">
 			misuse = <"No utilizar para registrar Diagnósticos formales - utilizar la especialización de este arquetipo, EVALUATION.problem-diagnosis.">
-			copyright = <"© openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -79,7 +77,6 @@ Algunos ejemplos:
 			use = <"Zur Dokumentation eines ehemaligen oder aktuellen Problems - also zur Dokumentation ehemaliger Entwicklungen, sowie derzeitiger Probleme.  Mit wechselndem 'Subjekt der Daten' zur Dokumentation von Problemen Verwandter, und somit für die Familienanamnese.">
 			keywords = <"Sachverhalt", "Zustand">
 			misuse = <"Spezialisierungen 'openEHR-EHR-EVALUATION.problem-diagnosis' für medizinische Diagnosen und 'openEHR-EHR-EVALUATION.problem-diagnosis-histological' für histologische Diagnosen benutzen.">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -94,7 +91,6 @@ Some examples:
 - Relationship problem with family member.">
 			keywords = <"issue", "condition", "problem", "obstacle", "diagnosis", "nursing diagnosis">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -109,7 +105,6 @@ Some examples:
 - مشكلة في العلاقة مع أحد أفراد العائلة">
 			keywords = <"القضية", "الظرف الصحي", "المشكلة", "العقبة">
 			misuse = <"لا يستخدم لتسجيل التشخيصات المؤكدة. استخدم بدلا من ذلك النموذج المخصص من هذا النموذج, تقييم.المشكلة - التشخيص">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -117,6 +112,7 @@ Some examples:
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"2CD426CD82409C217348260593A062A2">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Problem/Diagnosis

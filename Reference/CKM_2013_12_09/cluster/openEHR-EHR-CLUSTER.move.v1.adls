@@ -15,7 +15,6 @@ description
 			use = <"">
 			keywords = <"movement", ...>
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -23,6 +22,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"65F238CF42B15F844C74B4F3B90DDEE3">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Movement

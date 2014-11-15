@@ -28,7 +28,6 @@ description
 			use = <"">
 			keywords = <"diagnosis", "differential diagnosis">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -36,13 +35,13 @@ description
 			use = <"">
 			keywords = <"диагностика", "диагноз", "дифдиагноз", "дифференциальный", "заключение", "вывод">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	SECTION[id1] matches {	-- Conclusion

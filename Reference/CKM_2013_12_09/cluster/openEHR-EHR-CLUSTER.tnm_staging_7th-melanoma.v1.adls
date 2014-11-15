@@ -21,7 +21,6 @@ description
 			use = <"">
 			keywords = <"tumour", "TNM", "malignancy", "cancer", "staging", "classification", "grade", "grading", "stage", "lymph node", "metastasis", "melanoma", "skin">
 			misuse = <"Should not normally be used for TNM classification without specialisation or template-constraints">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ description
 		["references"] = <"Sobin LH. TNM Classification of Malignant Tumours 7th Edition.  John Wiley and Sons; 2009.">
 		["MD5-CAM-1.0.1"] = <"75D8F12E6FB9FE95344103349517DBEC">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Tumour - Primary Cutaneous Melanoma TNM staging 7th Edition

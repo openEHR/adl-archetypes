@@ -18,7 +18,6 @@ description
 			use = <"Use to document evidence of interactions between healthcare providers that support the record of health care. For example, use to record phone or online chat conversations between remote healthcare providers; or audio- and video-conference recordings that record aspects of telemedicine consultations or case conferences.">
 			keywords = <"chat", "videoconference", "audioconference", "conversation", "discussion">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"FCAFE7909562C91A72B5900CF0682B59">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Conference

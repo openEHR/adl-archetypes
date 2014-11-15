@@ -29,7 +29,6 @@ description
 			use = <"To provide a visual overview of archetype data types and archetype components to potential and current clinical content reviewers in the openEHR Clinical Knowledge Manager.">
 			keywords = <"demonstration", "test", "prototype", "datatypes", "state", "protocol", "event", "data">
 			misuse = <"Not to carry any real clinical data.">
-			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -37,7 +36,6 @@ description
 			use = <"Para fornecer uma visualisação geral dos tipos de dados e componetes dos arquétipos para atuais e potenciais revisores de conteúdo clínico no Gestor de Conhecimento Clínico openEHR, o CKM.">
 			keywords = <"demonstração", "teste", "protótipo(s)", "tipo(s) de dado(s)", "estado", "protocolo(s)", "evento(s)", "dado(s)">
 			misuse = <"Não apropriado para carregar nenhum dado clínico real.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -48,6 +46,7 @@ description
 CKM:  http://www.openehr.org/knowledge/">
 		["MD5-CAM-1.0.1"] = <"AEA1AE0BC2466A2D122B5A13AC957AB3">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Demonstration

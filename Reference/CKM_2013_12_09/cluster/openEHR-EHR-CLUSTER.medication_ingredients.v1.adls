@@ -18,7 +18,6 @@ description
 			use = <"Use to add detail to a medication order or administration record and in conjunction with medication_amount for quantity and strength of medication ingredients.">
 			keywords = <"composition", "generic", "ingredient", "medication", "chemical">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"Chemical description of medication, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. NEHTA. Authored: 12 Nov 2010. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.885_2 (accessed 15 May 2013).">
 		["MD5-CAM-1.0.1"] = <"C4AFB245015FC6A74D6E08C5517B7B58">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Medication ingredients

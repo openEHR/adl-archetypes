@@ -32,7 +32,6 @@ description
 يتم بعد ذلك تقديم التقرير للطبيب السريري الذي قام بطلب الاختبار في سياق تقرير معملي متكامل.">
 			keywords = <"المعمل - المختبر", "الباثولوجيا - المرضية", "الكيمياء الحيوية", "الدمويات", "الميكروبيولوجيا", "المناعيات - علم المناعة">
 			misuse = <"قد تكون التخصيصات أكثر مناسبة للتقارير المركبة مثل حالات الميكروبيولوجيا أو الهيستوباثولوجيا.">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -46,7 +45,6 @@ This archetype has been designed to enable the health record to:
 Will normally be reported back to the requesting clinician as one component within the context of an overall COMPOSITION-based report.">
 			keywords = <"lab", "pathology", "biochemistry", "laboratory", "chemical", "clinical", "test", "specimen">
 			misuse = <"Not to be used to represent an entire cumulative report. This Pathology test result archetype represents only one of the result sets that is usually viewed as a vertical in a cumulative test report. A cumulative report is a view that is constructed from the results represented by multiple OBSERVATION archetypes.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -59,6 +57,7 @@ Laboratory Technical Framework, Volume 3: Content, Revision 3.0 [Internet]. USA:
 Based on NEHTA 'Pathology Test' archetype. Available from: http://dcm.nehta.org.au/ckm/OKM.html#showarchetype_1013.1.839_8">
 		["MD5-CAM-1.0.1"] = <"EA0226685900390F0FB3F0F3594CF579">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Lipid Studies Test Result

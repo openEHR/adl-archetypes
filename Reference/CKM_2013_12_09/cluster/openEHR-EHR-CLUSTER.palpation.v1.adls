@@ -23,7 +23,6 @@ description
 			use = <"To be embedded in the openEHR-EHR-OBSERVATION.exam cluster to express findings determined by palpation.">
 			keywords = <"palpate", ...>
 			misuse = <"Not for use in any other context at present.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -31,7 +30,6 @@ description
 			use = <"يتم إدماجه كعنقود في نموذج ملاحظة.فحص, للتعبير عن الموجودات التي يتم تحديدها بالجس.">
 			keywords = <"يجس", ...>
 			misuse = <"لا تستخدم في أي سياق آخر في الوقت الحالي.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -39,6 +37,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"6997D54D3789258C693D939FAFFB0CEE">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Palpation

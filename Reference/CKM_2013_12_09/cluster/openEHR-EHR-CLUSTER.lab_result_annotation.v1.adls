@@ -18,7 +18,6 @@ description
 			use = <"To be used within a lab_test archetype.">
 			keywords = <"lab test", "comment">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -33,6 +32,7 @@ IHE. IHE, Laboratory Technical Framework, Volume 3 Content [Internet]. 2008;Avai
 ">
 		["MD5-CAM-1.0.1"] = <"A8AAEEF10625E6C432BA59922321ED22">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Laboratory result annotation

@@ -20,7 +20,6 @@ description
 The 'Description' data element can be used to record simple narrative summary or as a means to integrate legacy data.">
 			keywords = <"eye", "sight", "vision", "ophthalmic", "visual", "refraction", "refraction", "correction">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -43,6 +42,7 @@ Practical Ophthalmology: A Manual for Beginning Residents, 6th Edition [Paperbac
 American Academy Of Ophthalmology (Author), Fred M. Wilson II (Editor), MD (Editor)">
 		["MD5-CAM-1.0.1"] = <"1FC072ECEFE11FA70A8F99BAEC6B2282">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Refraction assessment

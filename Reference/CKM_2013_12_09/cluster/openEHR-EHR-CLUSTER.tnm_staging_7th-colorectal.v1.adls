@@ -21,7 +21,6 @@ description
 			use = <"">
 			keywords = <"tumour", "TNM", "malignancy", "cancer", "staging", "classification", "grade", "grading", "stage", "lymph node", "metastasis", "colorectal">
 			misuse = <"Use only for TNM 7th Edition colorecal cancer staging.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ description
 		["references"] = <"Sobin LH. TNM Classification of Malignant Tumours 7th Edition.  John Wiley and Sons; 2009.">
 		["MD5-CAM-1.0.1"] = <"AD3C9868BD585A9611A94C812D64EDFD">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Tumour - Colorectal Cancer TNM staging 7th Edition

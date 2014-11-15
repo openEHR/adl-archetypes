@@ -34,7 +34,6 @@ description
 			use = <"">
 			keywords = <"triage", "evaluation", "assessment">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -42,7 +41,6 @@ description
 			use = <"">
 			keywords = <"الفرز", "التقييم", "التقدير">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -50,13 +48,13 @@ description
 			use = <"">
 			keywords = <"triage", "evaluación", "priorización">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Triage evaluation

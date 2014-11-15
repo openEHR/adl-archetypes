@@ -34,7 +34,6 @@ description
 			use = <"">
 			keywords = <"Xray", "ultrasound", "MRI", "magnetic resonance", "CT", "scan", "tomography">
 			misuse = <"Not used for recording the findings of the investigation; use openEHR-EHR-OBSERVATION.imaging for the findings.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -42,7 +41,6 @@ description
 			use = <"">
 			keywords = <"الأشعة السينية", "الموجات فوق الصوتية", "التصوير بالرنين المغناطيسي", "الرنين المغناطيسي", "التصوير الطبقي المُحوسَب", "التفريسة", "التصوير المقطعي">
 			misuse = <"لا يستخدم لتسجيل الموجودات عند إجراء الاستقصاء, استخدم بدلا من ذلك نموذج الملاحظة.التصوير.">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -50,7 +48,6 @@ description
 			use = <"">
 			keywords = <"Radiografía", "Ecografía", "RNM", "Resonancia magnética nuclear", "TC", "Escaneo", "Tomografía">
 			misuse = <"No usado para registrar los hallazgos de la investigación; use openEHR-EHR-OBSERVATION.imaging para registrar los hallazgos.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -58,6 +55,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"9D90363C64106C2ECBFA61F52066CB98">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	ACTION[id1] matches {	-- Imaging investigation

@@ -39,7 +39,6 @@ While INSTRUCTION.medication and EVALUATION.exclusion-medication and their speci
 INSTRUCTION.medication is suggested as the best archetype to represent a Medication list in this instance as it generally provides the best representation of a local Current Medication List. Clinicians can enter patient-administered medications or 'over the counter' medications into a Prescribing system as INSTRUCTIONs, which in turn can enable adverse reaction checking against all INSTRUCTIONS, whether prescribed/printed or not. So Current Medication lists can effectively contain all orders for medications, given by both the recording clinician, other clinicians and the patient. A Medication list comprising only ACTIONs will represent only those medication that have been prescribed/printed by the recording clinician.">
 			keywords = <"medication", "exclusion", "absence", "current", "list">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -58,7 +57,6 @@ INSTRUCTION.medication is suggested as the best archetype to represent a Medicat
 ">
 			keywords = <"лекарство", "медикамент", "препарат", "текущий", "список", "лист", "назначений", "отмена">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -67,6 +65,7 @@ INSTRUCTION.medication is suggested as the best archetype to represent a Medicat
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"82E4B8168F16BCAA49A33B9E10910F8A">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	SECTION[id1] matches {	-- Medication Order List

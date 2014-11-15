@@ -28,7 +28,6 @@ description
 			use = <"Use to qualify an EVALUATION.problem_diagnosis.v1 archetype, adding context and state specific information.  These qualifiers should be used with care as they are variably used in practice and interopaerablility cannot be assured unless usage is clearly defined within the community of sharing.">
 			keywords = <"problem", "active", "inactive", "status">
 			misuse = <"It should not be assumed that these qualifiers are safely interoperable unless further definition and alignment is agreed between all sharing parties. A problem which has been defined as 'Inactive' during a hospital admission cannot be assumed to be regarded as 'Inactive' in a primary care setting , where a much longer term perspective is being taken. Similarly terms such as Initial, Interim and Final, whilst helpful to the human observer are unlikely to be precisely enough defined to be safely computable e.g. for decision support.">
-			copyright = <"© openEHR Foundation">
 		>
 		["sl"] = <
 			language = <[ISO_639-1::sl]>
@@ -38,7 +37,6 @@ description
 			use = <"Za dodeljevanje pravic EVALUATION.problem_diagnosis.v1 archetype, dodaja informacije za povezovanje. ">
 			keywords = <"problem", "aktiven", "ni aktiven">
 			misuse = <"It should not be assumed that these qualifiers are safely interoperable unless further definition and alignment is agreed between all sharing parties. A problem which has been defined as 'Inactive' during a hospital admission cannot be assumed to be regarded as 'Inactive' in a primary care setting , where a much longer term perspective is being taken. Similarly terms such as Initial, Interim and Final, whilst helpful to the human observer are unlikely to be precisely enough defined to be safely computable e.g. for decision support. ">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -46,6 +44,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"F683FB4691EC3FFEE37CCEB3166ECD76">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Problem context qualifiers

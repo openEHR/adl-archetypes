@@ -27,7 +27,6 @@ description
 
 السمع">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -47,7 +46,6 @@ All of the data elements are recorded using a single method or protocol. If, dur
 			misuse = <"Not to be used to record other hearing tests. Use other archetypes as appropriate, for example OBSERVATION.audiogram.
 
 Not to be used to record 226Hz tympanometry. Use the OBSERVATION.tympanogram_226Hz archetype instead.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -75,6 +73,7 @@ Liden G. The scope and application of current audiometric tests. J Laryngol Otol
 Vanhuyse VJ, Creten WL, Van Camp KJ. On the W-notching of tympanograms. Scand Audiol 1975;4.">
 		["MD5-CAM-1.0.1"] = <"96D0C536EEABAC8913C4ACB0826A98EA">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Tympanogram Result - High Frequency

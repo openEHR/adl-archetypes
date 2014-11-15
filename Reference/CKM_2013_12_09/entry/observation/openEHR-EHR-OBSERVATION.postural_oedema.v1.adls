@@ -18,13 +18,13 @@ description
 			use = <"">
 			keywords = <"postural oedema", "oedema", "postural">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Postural oedema

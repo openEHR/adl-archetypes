@@ -25,7 +25,6 @@ description
 			purpose = <"(en) The recording of activities undertaken with regard to a medicine, vaccine or other therapeutic good and linking to the instruction if appropriate.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -37,7 +36,6 @@ Such a record may be made to indicate the administration of a dose, dispensing o
 There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.">
 			keywords = <"medication", "prescibe", "dispense", "administration", "cessation", "therapeutic good", "supply", "medicine", "drug">
 			misuse = <"Do not use when recording an instruction or order (use INSTRUCTION.medication).">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -47,6 +45,7 @@ There is a date and time at which this ACTION took place (as there is for all AC
 NEHTA Therapeutic Good Use Datagroup http://nehta.gov.au/data-group-library/data-specifications/dgl-therapeutic-good-action">
 		["MD5-CAM-1.0.1"] = <"689A4BBC04FD62F27C45C7D28EB1AFE9">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	ACTION[id1] matches {	-- Medication action

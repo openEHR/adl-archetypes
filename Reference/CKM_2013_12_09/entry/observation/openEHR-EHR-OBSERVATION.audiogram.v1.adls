@@ -33,7 +33,6 @@ Other audiology tests which capture different results will need to be recorded i
 - Behavioural Observation Audiometry (BOA);
 - Most Comfortable Listening Level (MCL) and Uncomfortable Listening Level (UCL); and
 - Auditory Brainstem Response (ABR) for diagnostic purposes.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -45,6 +44,7 @@ Other audiology tests which capture different results will need to be recorded i
 Sabini P, Sclafani AP. Efficacy of serologic testing in asymmetric sensorineural hearing loss. Otolaryngol Head Neck Surg. 2000 Apr;122(4):469-76. PubMed PMID: 10740163.">
 		["MD5-CAM-1.0.1"] = <"6DDC246E7DEA7CC301A982FB0EF24AA3">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Audiogram Result

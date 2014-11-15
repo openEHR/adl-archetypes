@@ -18,7 +18,6 @@ description
 			use = <"Generally used within a CLUSTER.specimen archetype.">
 			keywords = <"specimen", "laboratory", "sample", "histopathology", "histology", "pathology">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -31,6 +30,7 @@ IHE Anatomic Pathology Technical Framework Volume 1 (PAT TF-1) Revision 1.2 – 
 November 24, 2008 ">
 		["MD5-CAM-1.0.1"] = <"C60D15BE23A7EBCA43402617561C5189">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Specimen preparation

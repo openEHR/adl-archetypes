@@ -19,7 +19,6 @@ description
 Use as a component archetype in the context of a suite of archetypes that make up a histopathology report i.e. OBSERVATION.lab_test.histopathology.">
 			keywords = <"histopathology", "cancer", "laboratory", "lung", "lab", "malignancy", "bronchial", "pathology", "respiratory">
 			misuse = <"Not designed to be used within any other archetype other than OBSERVATION.lab_test.histopathology.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -37,6 +36,7 @@ Available from: http://www.rcpa.edu.au//static/File/Asset%20library/public%20doc
 ">
 		["MD5-CAM-1.0.1"] = <"86AF8B0C42DE41792B2F647581EAC4A2">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Microscopic findings - Lung cancer

@@ -42,7 +42,6 @@ description
 			use = <"">
 			keywords = <"التقدم", "ملاحظة", "المقابلة">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -50,7 +49,6 @@ description
 			use = <"">
 			keywords = <"Evolucion", "Notas", "Encuentro", "Consulta">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -58,7 +56,6 @@ description
 			use = <"">
 			keywords = <"progress", "note", "encounter">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ko"] = <
 			language = <[ISO_639-1::ko]>
@@ -66,7 +63,6 @@ description
 			use = <"">
 			keywords = <"*외래기록(ko)", "*경과기록(ko)", "*간호기록(ko)", "*노트(ko)">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -74,6 +70,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"10250E3AD051C33DB43D2DA76A272E08">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	COMPOSITION[id1] matches {	-- Encounter

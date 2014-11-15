@@ -21,7 +21,6 @@ description
 			use = <"">
 			keywords = <"pressure", "intravascular", "cvp">
 			misuse = <"Not to be used for systemic blood pressure. Use 'observation.blood_pressure' for this.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ description
 		["references"] = <"http://www.wwl.nhs.uk/library/foi/clin_pols/cvpprocedures.pdf">
 		["MD5-CAM-1.0.1"] = <"5762C17AA1DFA8C7EAA58148E1730121">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] occurrences matches {0..1} matches {	-- Central venous pressure

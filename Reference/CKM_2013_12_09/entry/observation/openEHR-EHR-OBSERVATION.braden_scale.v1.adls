@@ -22,7 +22,6 @@ Use this archetype in accordance with the copyright requirements found at: http:
 			misuse = <"The Braden Scale should not be used unless the terms of copyright have been observed -see http://bradenscale.com/copyright.htm for details.
 The Braden Scale should not be used for children between 21 days and 5 years - use OPENEHR-EHR-OBSERVATION.braden_scale-child.v1.
 The Braden Scale should not be used for children aged less than 21 days - use OPENEHR-EHR-OBSERVATION.braden_scale_neonate.v1.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -41,6 +40,7 @@ Braden Scale for Predicting Pressure Score Risk [Internet]. [date unknown];[cite
 Braden Scale for Predicting Pressure Score Risk in Home Care [Internet]. [date unknown];[cited 2011 Aug 1] Available from: http://bradenscale.com/images/bschome.pdf">
 		["MD5-CAM-1.0.1"] = <"A8BAE53955F71D1FC96BF37DF70005A0">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Braden Scale

@@ -21,7 +21,6 @@ description
 			use = <"">
 			keywords = <"examination", "physical">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -29,6 +28,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"75E4E6DE863A430A1F1C7ABF3C8DDB9A">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Examination of the abdomen

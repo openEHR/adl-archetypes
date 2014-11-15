@@ -25,7 +25,6 @@ This archetype has specifically been designed to avoid the need to use flags or 
 Exclusion statements can only be considered to be current and accurate at the time of recording. For example: recording an exclusion of the previous diagnosis of diabetes during a consultation is only relevant at the time and is effectively obsolete after if the results of a blood glucose test is above diagnostic levels.">
 			keywords = <"exclusion", "problem", "diagnosis">
 			misuse = <"Not to be used to record exclusion statements about adverse reactions, medications or procedures - use other specific specialisations of the EVALUATION.exclusion archetype for this purpose.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -36,6 +35,7 @@ Exclusion statements can only be considered to be current and accurate at the ti
 http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1304_2(accessed 3 Sept 2013)">
 		["MD5-CAM-1.0.1"] = <"4C8CAFC70D510CF617DD5B580BFDA8F6">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1.1] matches {	-- Exclusion of a Problem/Diagnosis

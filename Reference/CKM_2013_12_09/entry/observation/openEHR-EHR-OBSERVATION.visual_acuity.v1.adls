@@ -28,7 +28,6 @@ The 'Absent Test Result' element may be used to record circumstances where a tes
 When performing visual acuity testing it is customary to record a series of tests sharing a common charting methodology but with different phases of corrective refraction e.g. Unaided, Usual correction, Best corrected visual acuity etc. Each of these phases should be recorded using a separate Entry record, with the name of the test phase carried in 'Test Name'. Further specific details of the exact correction applied (which may involve applying multiple refractions) may be captured in 'Refractive Correction' and 'Refraction Details'  the latter making use of separate Cluster archetypes, one for each eye.">
 			keywords = <"eye", "sight", "vision", "ophthalmic", "visual", "refraction">
 			misuse = <"Where details of methodology carried under protocol change between phases of the visual acuity test, a new Entry must be created at run-time.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -54,6 +53,7 @@ Practical Ophthalmology: A Manual for Beginning Residents, 6th Edition [Paperbac
 American Academy Of Ophthalmology (Author), Fred M. Wilson II (Editor), MD (Editor)">
 		["MD5-CAM-1.0.1"] = <"C49A0A66AB60A25B4DB64B675810B486">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Visual acuity

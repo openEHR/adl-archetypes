@@ -18,7 +18,6 @@ description
 			use = <"">
 			keywords = <"microbiology", "public health">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 		["references"] = <"IHE, Laboratory Technical Framework, Volume 3 Content [Internet]. 2008;Available from: http://www.ihe.net/Technical_Framework/upload/ihe_lab_TF_rel2_1-Vol-3_FT_2008-08-08.pdf">
 		["MD5-CAM-1.0.1"] = <"8A7C34AF1AEB9C97D7CD69C51BCDEC8C">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Notifiable condition

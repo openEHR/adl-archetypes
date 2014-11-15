@@ -83,7 +83,6 @@ Usada para gravar a mudança de peso, ou seja, qualquer perda ou ganho de peso. 
 			misuse = <"Não deve ser utilizado para gravar o primeiro peso de um bebê logo após o nascimento, que é designado como o seu 'peso' - use a especialização de seu nascimento arquétipo OBSERVATION.body_weight-birth.
 Não deve ser usado para registrar o peso do corpo ajustado por exemplo, um cálculo do peso de corpo inteiro de uma pessoa com amputação de membros, com base em medições de outro corpo e um algoritmo -OBSERVATION.body_weight-adjusted.
 Não deve ser usado para registrar o peso de um objeto ou parte do corpo.">
-			copyright = <"© openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -95,7 +94,6 @@ Der Archetyp kann auch benutzt werden, um eine Schätzung des Körpergewichts zu
 			misuse = <"Nicht zur Dokumentation des ersten Gewichts eines Neugeboren (Geburtsgewicht) - benutzen Sie hierzu den spezialisierten Archetyp OBSERVATION.body_weight-birth.
 Nicht zur Dokumentation des angepassten Körpergewichts, z.B. eine Berechnung des vollständigen Körpergewichts bei einer Person mit amputierter Extremität auf Basis der anderen Körperteile und eines Algorithmus - benutzen Sie OBSERVATION.body_weight-adjusted.
 Nicht zur Dokumentation eines Objekts oder eines Teils des Körpers.">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -109,7 +107,6 @@ To be used for recording weight change, that is, either weight loss or weight ga
 			misuse = <"Not to be used to record the first weight of an infant soon after birth which is designated as their 'birth weight' - use the specialisation of this archetype OBSERVATION.body_weight-birth.
 Not to be used to record the adjusted body weight eg a calculation of the full body weight of a person with limb amputation, based on other body part measurements and an algorithm - use OBSERVATION.body_weight-adjusted.
 Not to be used to record the weight of an object or body part.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -124,7 +121,6 @@ Not to be used to record the weight of an object or body part.">
 			misuse = <"Не использовать для записи первого веса младенца после рождение, которое обозначено как 'вес при рождении' - использовать специализацию этого архетипа OBSERVATION.body_weight-birth. 
 Не использовать для записи массы тела человека с протезами / приспособлениями для вычисление полной массы тела человека с ампутацией, основанной на других измерениях и алгоритме  - использовать архетип OBSERVATION.body_weight-adjusted.
 Не использовать, чтобы сделать запись веса части тела или объекта.">
-			copyright = <"© openEHR Foundation">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -138,7 +134,6 @@ Dient te worden gebruikt om gewichtsverandering op te slaan, zowel gewichtsverli
 			misuse = <"Dient niet te worden gebruikt voor het registreren van het eerste gewicht van een kind, na geboorte, welke wordt aangewezen als geboortegewicht. Gebruik hiervoor de specialisatie van dit archetype, OBSERVATION.body_weight-birth (OBSERVATION.lichaamsgewicht-geboorte.
 Dient niet te worden gebruikt voor het registreren van het aangepaste lichaamsgewicht, bijvoorbeeld een berekening van het volledige lichaamsgewicht van een persoon met een amputatie van ledematen, gebaseerd op metingen van lichaamsdelen en een algoritme - gebruik hiervoor OBSERVATION.body_weight-adjusted. (OBSERVATION.lichaamsgewicht-aangepast).
 Dient niet te worden gebruikt voor het vastleggen van het gewicht van een object of lichaamsdeel.">
-			copyright = <"© openEHR Foundation">
 		>
 		["fa"] = <
 			language = <[ISO_639-1::fa]>
@@ -156,7 +151,6 @@ OBSERVATION.weight-adjusted
 استفاده کنید.
 برای ثبت وزن یک شی یا بخشهایی از بدن استفاده نکنید
 ">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -177,7 +171,6 @@ openEHR
 لا يستخدم لتسجيل وزن الجسم المُصحَّح مثل قياس الوزن الكلي للجسم لشخص يعاني من بتر في أحد الأطراف, بناءا على قياسات أخرى من الجسم باستخدام خُوارزمية - استخدم بدلا من ذلك نموذج ملاحظة.وزن الجسم المُصحَّح.
 
 لا يستخدم لتسجيل وزن شيئ أو جزء من أجزاء الجسم.">
-			copyright = <"© openEHR Foundation">
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
@@ -189,7 +182,6 @@ Se usará para reflejar el cambio de registro de peso, es decir, aumento o pérd
 			misuse = <"No debe ser usado para grabar el primer registro de peso de un recién nacido (\"el peso al nacer\") que cuenta con su propio arquetipo.
 No debe ser usado para registrar el peso corporal ajustado mediante algoritmos.
 No debe ser usado para registrar el peso de un objeto o parte del cuerpo.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -197,6 +189,7 @@ No debe ser usado para registrar el peso de un objeto o parte del cuerpo.">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"98C6C1BFC287FD7414477A390E9E8926">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Body weight

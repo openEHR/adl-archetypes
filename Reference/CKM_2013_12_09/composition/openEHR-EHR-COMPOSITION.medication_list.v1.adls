@@ -44,7 +44,6 @@ In order for this list to be accurate and safe to use as the basis for decision 
 			misuse = <"Not to be used to record non-persisting Medication Lists.
 
 Not to be used to record vaccinations administered.">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -68,7 +67,6 @@ Con la finalidad que esta lista sea precisa y segura de usar como base de activi
 			misuse = <"No debe ser utilizado para el registro de Listado de Medicamentos no persistentes
 
 No debe ser utilizado para registrar vacunaciones administradas.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -77,6 +75,7 @@ No debe ser utilizado para registrar vacunaciones administradas.">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"97B6899EA00EBED30CCE883E100CBFD4">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	COMPOSITION[id1] matches {	-- Medication List

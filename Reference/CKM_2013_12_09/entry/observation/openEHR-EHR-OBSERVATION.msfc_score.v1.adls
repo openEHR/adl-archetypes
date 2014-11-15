@@ -32,7 +32,6 @@ Der MSFC-Wert ist eine aus den gemittelten Ergebnissen der einzelnen Tests berec
 Siehe MSFC-Handbuch für weitere Auswertungsanweisungen, Formeln und Hintergrundinformationen.">
 			keywords = <"Multiple Sclerosis Functional Composite", "MSFC", "Multiple Sklerose", "MS", "Neurologie">
 			misuse = <"Nicht verwenden zur Aufzeichnung der Messergebnisse der drei einzelnen Tests des MSFC. Jeder Test sollte den speziell zutreffenden Archetyp verwenden: openEHR-EHR-OBSERVATION.timed_25_foot_walk.v1.adl, openEHR-EHR-OBSERVATION.nine_hole_peg_test.v1.adl und openEHR-EHR-OBSERVATION.paced_auditory_serial_addition_test.v1.adl.">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -44,7 +43,6 @@ The MSFC Score is a computed value based on the average of each test result, adj
 Use the MSFC Manual for further scoring instructions, formulas and background information.">
 			keywords = <"Multiple Sclerosis Functional Composite", "MSFC", "Multiple Sclerosis", "MS", "Neurology">
 			misuse = <"Not to be used to record the result of the three individual tests of the MSFC. Each test should use the correct specific archetype: openEHR-EHR-OBSERVATION.timed_25_foot_walk.v1.adl, openEHR-EHR-OBSERVATION.nine_hole_peg_test.v1.adl, and openEHR-EHR-OBSERVATION.paced_auditory_serial_addition_test.v1.adl.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -54,6 +52,7 @@ Use the MSFC Manual for further scoring instructions, formulas and background in
 		["references"] = <"Fischer JS, Jak AJ, Kniker JE, Rudick RA, Cutter G. Multiple Sclerosis Functional Composite (MSFC), Administration and Scoring Manual: National Multiple Sclerosis Society; 2001.">
 		["MD5-CAM-1.0.1"] = <"7FFADBBF329A7D225D8A1D800A08AE5E">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- MSFC Score

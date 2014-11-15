@@ -72,7 +72,6 @@ Idealiter wordt de hoogte(NL: lengte) gemeten, staand op beide voeten met het ge
 Wordt gebruikt voor het registreren van groei en verlies van lengte. Dit kan, in voorkomend geval, momenteel worden gemodelleerd, door het beperken van een 'any event', tot een interval in een template met bijbehorende rekenkundige functie van de groei of krimp.">
 			keywords = <"krimp", "groeien", "verlies", "lengte", "hoogte">
 			misuse = <"Niet te gebruiken ter registratie van de eerste lengte van een kind, spoedig na de geboorte, welke gekenmerkd wordt als de geboortelengte - gebruik hiervoor de specialisatie van dit archetype - zie OBSERVATION.height-birth.(OBSERVATION.lengte-geboorte).">
-			copyright = <"© openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -86,7 +85,6 @@ Der Archetyp wird auch benutzt, um eine Zunahme/Abnahme der Körpergröße/-län
 Nicht zur Dokumentation der angepassten Größe oder Körperlänge - z.B. der geschätzten vollen Größe einer Person mit Kontraktur der Extremitäten, basierend auf der Messung anderer Körperteile und/oder einem Algorithmus - hier sollte der spezialisierte Archetyp OBSERVATION.height-adjusted verwendet werden.
 Nicht zur Dokumentation von Wachstumsgeschwindigkeit.
 Nicht zur Dokumentation der Länge eines Objekts oder spezifischen Körperteils.">
-			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -104,7 +102,6 @@ Use para registar um crescimento e perda de altura. Isso pode ser modelado por r
 Não deve ser utilizado para registrar a altura ajustada ou comprimento do corpo por exemplo, um cálculo da altura estimada completo de uma pessoa com contraturas dos membros, com base em medições outro corpo e / ou um algoritmo - use OBSERVATION.height-adjusted.
 Não deve ser usado para registrar a velocidade de crescimento.
 Não deve ser utilizado para gravar o tamanho de um objeto ou parte específica do corpo.">
-			copyright = <"© openEHR Foundation">
 		>
 		["fa"] = <
 			language = <[ISO_639-1::fa]>
@@ -125,7 +122,6 @@ OBSERVATION.height-adjusted
 برای ثبت رشد قد استفاده نکنید
 برای ثبت طول یک شی یا بخشهایی از بدن استفاده نکنید
 ">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -149,7 +145,6 @@ OBSERVATION.height-adjusted
 لا يستخدم لتسجيل الطول أو الارتفاع المُصَحَّح مثل الطول الكلي التقديري للفرد الذي يعاني من تقلصات الأطراف, بناء على قياسات أجزاء أخرى من الجسم و / أو لوغاريتم - استخدم بدلا من ذلك نموذج ملاحظة . الطول المصحح. 
 لا يستخدم لقياس سرعة النمو.
 لا يستخدم لتسجيل طول شيئ ما أو جزء معين من الجسم.">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -171,7 +166,6 @@ No usar para registrar la altura o la longitud corporal ajustados (Ej. el calcul
 No usar para registrar velocidad de crecimiento.
 
 No usar para registrar la longitud de un objeto o de una parte del cuerpo específica.">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -186,7 +180,6 @@ Use to record growth and loss of height.  This can currently be modelled by cons
 Not to be used to record the adjusted height or body length eg a calculation of the estimated full height of a person with limb contractures, based on other body part measurements and/or an algorithm - use OBSERVATION.height-adjusted.
 Not to be used to record growth velocity.
 Not to be used to record the length of an object or specific body part.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -195,6 +188,7 @@ Not to be used to record the length of an object or specific body part.">
 		["references"] = <"Wilks Z, Bryan S, Mead V and Davies EH. Clinical guideline: Height, measuring a child [Internet]. London, United Kingdom: UCL Institute of Child Health; 2008 Apr 01 [cited 2009 Jul 28 ]. Available from: http://www.ich.ucl.ac.uk/clinical_information/clinical_guidelines/cpg_guideline_00060">
 		["MD5-CAM-1.0.1"] = <"D85CD579475783F0738EAFCF4BC9E4B5">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Height/Length

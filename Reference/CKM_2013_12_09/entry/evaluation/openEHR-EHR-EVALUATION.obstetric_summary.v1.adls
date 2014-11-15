@@ -26,7 +26,6 @@ Some data may be calculated or derived from individual pregnancy records if thes
 			misuse = <"Not for recording summary information about a single pregnancy - use EVALUATION. pregnancy_summary for this purpose.
 
 Not for recording detailed information about each of the individual pregnancies, miscarriages, terminations, or deliveries. This information will be recorded using other specific archetypes as event-based data.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -35,6 +34,7 @@ Not for recording detailed information about each of the individual pregnancies,
 		["references"] = <"NEHTA Clinical Knowledge Manager [Internet]. Australia: National eHealth Transition Authority. [Draft EVALUATION archetype] Obstetric Summary; [authored 2011 Feb 24, cited 2011 Aug 17]. Available from http://dcm.nehta.org.au/ckm/OKM.html#showArchetype_1013.1.971_4.">
 		["MD5-CAM-1.0.1"] = <"FF7DCD652C6FF29279A87DCDABEB391D">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Obstetric summary

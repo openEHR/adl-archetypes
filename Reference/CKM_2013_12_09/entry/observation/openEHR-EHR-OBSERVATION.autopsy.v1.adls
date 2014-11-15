@@ -33,27 +33,25 @@ description
 			purpose = <"Zur Dokumentation von Befunden der Autopsie mittels strukturiertem Text">
 			use = <"">
 			misuse = <"Zur Dokumentation von Diagnosen sollte der EVALUATION.problem-diagnosis Archetyp benutzt werden">
-			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
 			purpose = <"Для записи результатов вскрытия, используя структурированный текст.">
 			use = <"*(en)">
 			misuse = <"Диагноз должен быть записан с использованием the EVALUATION.problem-diagnosis archetype.">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"For recording findings at autopsy using structured text.">
 			use = <"">
 			misuse = <"Diagnoses should be recorded using the EVALUATION.problem-diagnosis archetype.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"14F3AC36DA31136DF70679A61C93C15D">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Autopsy examination

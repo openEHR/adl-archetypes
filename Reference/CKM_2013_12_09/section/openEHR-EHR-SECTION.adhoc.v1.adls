@@ -26,7 +26,6 @@ description
 			purpose = <"A generic section header which is normally renamed locally at template level.">
 			use = <"To construct and name a section within a local template.">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -34,13 +33,13 @@ description
 			use = <"используется для создания и именования разделов в локальных шаблонах">
 			keywords = <"раздел", "шаблон", "заготовка", "название", "образец">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"6FD3128A583EB7081153D0265245E1FA">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	SECTION[id1] 	-- Adhoc heading

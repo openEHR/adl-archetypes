@@ -26,7 +26,6 @@ description
 			use = <"">
 			keywords = <"توازن", ...>
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -36,7 +35,6 @@ description
 Designed to be used within any clinically appropriate ENTRY or CLUSTER archetype.">
 			keywords = <"Balance", "Romberg", "Heel-toe">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -44,6 +42,7 @@ Designed to be used within any clinically appropriate ENTRY or CLUSTER archetype
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"6B9BBB28AAAC00757E6DA1E4AC46D01F">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Examination Findings - Balance

@@ -21,7 +21,6 @@ description
 			use = <"">
 			keywords = <"examination", "physical", "thyroid">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"6ED5C67E1F46CB5E70804B6A2E0F311C">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Examination of thyroid

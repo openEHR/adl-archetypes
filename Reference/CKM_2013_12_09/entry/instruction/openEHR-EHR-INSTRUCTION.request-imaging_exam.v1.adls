@@ -23,7 +23,6 @@ description
 If there are more details about the examination required, include this information in more detailed CLUSTER archetypes appropriate for the purpose in the 'Specific details' SLOT.">
 			keywords = <"request", "refer", "order", "service", "provide", "imaging", "service", "radiology">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -31,6 +30,7 @@ If there are more details about the examination required, include this informati
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"2E517B75340791AD423C40BFA0A8C4BD">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	INSTRUCTION[id1.1] matches {	-- Imaging Examination Request

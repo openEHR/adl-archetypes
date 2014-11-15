@@ -20,7 +20,6 @@ description
 This archetype does not presume any particular schedule or protocol for vaccination.">
 			keywords = <"vaccination", "immunisation", "immunization", "summary", "primary", "course", "booster">
 			misuse = <"Not to be used to record a status of the subject's possible immune status. Immune status and need for ongoing vaccination or booster will be a clinical decision determined by a number of factors - clinical evidence of previous infection; vaccination status; vaccination history; serology results; contraindications; adverse reactions; and the clinical trigger eg a needle stab injury or exposure to an infectious disease/agent.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -29,6 +28,7 @@ This archetype does not presume any particular schedule or protocol for vaccinat
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"252D262E3AD5452A4EADF46B46666452">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Vaccination Summary

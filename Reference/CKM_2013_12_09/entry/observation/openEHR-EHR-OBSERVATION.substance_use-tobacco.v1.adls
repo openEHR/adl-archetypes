@@ -23,7 +23,6 @@ Other types of tobacco use are not included here, but may be added added as a re
 A typical use would be to record usage in an tobacco usage diary.">
 			keywords = <"substance", "addiction", "consumption", "use", "tobacco", "cigarette", "cigar", "smoking", "chewing", "pipe">
 			misuse = <"Not to be used for recording persistent and summary details about the use of the substance - this should be captured using the EVALUATION.substance_use_summary-tobacco archetype.  ">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -32,6 +31,7 @@ A typical use would be to record usage in an tobacco usage diary.">
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"50856E4B402C962DC96B02F1C81BA2FB">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Tobacco Use

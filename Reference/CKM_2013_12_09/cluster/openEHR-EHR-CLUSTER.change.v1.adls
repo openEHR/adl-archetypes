@@ -14,7 +14,6 @@ description
 			purpose = <"To record details about a change.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -22,6 +21,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"67B34B43A267C847366E46F9774156DA">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Change

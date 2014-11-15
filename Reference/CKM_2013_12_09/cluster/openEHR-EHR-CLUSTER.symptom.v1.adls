@@ -36,7 +36,6 @@ This archetype allows a 'nil significant' statement to be explicitly recorded.(e
 			misuse = <"*Not to be used to record details about pain. Use the specialisation of this archetype - the CLUSTER.symptom-pain instead.
 
 Not to be used for diagnoses and problems that form part of a persisting Problem List - use EVALUATION.problem_diagnosis.(en)">
-			copyright = <"© openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -45,7 +44,6 @@ Not to be used for diagnoses and problems that form part of a persisting Problem
 
 This archetype allows a 'nil significant' statement to be explicitly recorded.(en)">
 			misuse = <"*Sollte nur für Symptome benutzt werden. (en)">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -57,7 +55,6 @@ This archetype allows a 'nil significant' statement to be explicitly recorded.">
 			misuse = <"Not to be used to record details about pain. Use the specialisation of this archetype - the CLUSTER.symptom-pain instead.
 
 Not to be used for diagnoses and problems that form part of a persisting Problem List - use EVALUATION.problem_diagnosis.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -66,6 +63,7 @@ Not to be used for diagnoses and problems that form part of a persisting Problem
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"F45AC5753EC5F8C93FA71A2593955BAD">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Symptom

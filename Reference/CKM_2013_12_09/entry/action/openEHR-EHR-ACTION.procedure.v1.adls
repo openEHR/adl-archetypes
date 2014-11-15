@@ -42,7 +42,6 @@ description
 Informações sobre atividades relacionadas ao procedimento, como a anestesia ou a administração de medicamentos, devem ser registrados em arquétipos de ACTION separados.">
 			keywords = <"procedimento", ...>
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -50,7 +49,6 @@ Informações sobre atividades relacionadas ao procedimento, como a anestesia ou
 			use = <"لتسجيل معلومات تفصيلية حول إجراء طبي تم تنفيذه على شخص ما. و ينبغي تسجيل المعلومات حول النشاطات المتعلقة بالنشاطات المتعلقة بالإجراء الطبي, مثل التخدير أو إعطاء الأدوية في نماذج (فعل) منفردة.">
 			keywords = <"الإجراء الطبي", ...>
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -59,7 +57,6 @@ Informações sobre atividades relacionadas ao procedimento, como a anestesia ou
 Информация о действиях, связанных с выполнением процедуры, таких как анестезия или применение лекарств, долдно быть записано в отдельных архетипах типа ДЕЙСТВИЕ">
 			keywords = <"процедура, выполнение", ...>
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -68,7 +65,6 @@ Informações sobre atividades relacionadas ao procedimento, como a anestesia ou
 Information about activities related to the procedure, such as anaesthesia or administration of medications, should be recorded in separate ACTION archetypes.">
 			keywords = <"procedure", ...>
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -76,6 +72,7 @@ Information about activities related to the procedure, such as anaesthesia or ad
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"3D7A4FCD75127BBE8C9873FF487C6C44">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	ACTION[id1] matches {	-- Procedure undertaken

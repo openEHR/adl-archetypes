@@ -29,7 +29,6 @@ description
 			use = <"">
 			keywords = <"examination", "physical", "cervix", "uterine">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-cl"] = <
 			language = <[ISO_639-1::es-cl]>
@@ -37,7 +36,6 @@ description
 			use = <"">
 			keywords = <"examination", "physical", "cervix", "uterine">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -45,6 +43,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"66CB4160984D2B0A3C3B4D04919B4A03">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Examination of the cervix

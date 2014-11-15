@@ -26,20 +26,19 @@ description
 			purpose = <"Dient der Dokumentation von Einzelheiten über eine verschriebene und verabreichte intravenöse Flüssigkeit.">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record details about intravenous fluids ordered and administered">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"112FBC941E04AB8FA7705B45628F958E">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	ITEM_TREE[id1] matches {	-- Intravenous fluids

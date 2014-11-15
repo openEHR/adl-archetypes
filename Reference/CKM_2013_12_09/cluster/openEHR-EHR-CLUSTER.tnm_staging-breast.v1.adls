@@ -22,7 +22,6 @@ description
 The classification applies only to carcinomas and concerns the male as well as the female breast.">
 			keywords = <"tumour", "TNM", "malignancy", "cancer", "staging", "classification", "grade", "grading", "stage", "lymph node", "metastasis", "breast">
 			misuse = <"Do not use for editions of TNM classification, other than Sixth edition.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -36,6 +35,7 @@ Greene FL, Page DL, Fleming ID. et al, eds, for the American Joint Committee on 
 ">
 		["MD5-CAM-1.0.1"] = <"793C69CA7F10F976F939125EA7FF1AC8">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- TNM staging - Breast (Sixth edition)

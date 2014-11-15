@@ -32,7 +32,6 @@ Use to record details of the number of fetal movements felt over a specified tim
 			misuse = <"Not to be used to record the response of a fetus to deliberate stimulation eg vibroacoustic stimulation.
 
 Not to be used to represent formal fetal heart rate monitoring eg using cardiotocographs.">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-cl"] = <
 			language = <[ISO_639-1::es-cl]>
@@ -53,7 +52,6 @@ Use to record details of the number of fetal movements felt over a specified tim
 			misuse = <"Not to be used to record the response of a fetus to deliberate stimulation eg vibroacoustic stimulation.
 
 Not to be used to represent formal fetal heart rate monitoring eg using cardiotocographs.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -62,6 +60,7 @@ Not to be used to represent formal fetal heart rate monitoring eg using cardioto
 		["references"] = <"NEHTA Clinical Knowledge Manager [Internet]. Australia: National eHealth Transition Authority. [Draft OBSERVATION archetype] Fetal Movement; [authored 2007 Mar 04, cited 2013 Jan 03]. Available from http://dcm.nehta.org.au/ckm/OKM.html#showArchetype_1013.1.1004_4.">
 		["MD5-CAM-1.0.1"] = <"CC19AA3EF7BDA9587B8E2EA6C055978F">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Fetal Movement

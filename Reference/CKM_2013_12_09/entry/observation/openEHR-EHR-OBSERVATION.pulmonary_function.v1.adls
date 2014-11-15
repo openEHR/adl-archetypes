@@ -26,7 +26,6 @@ description
 			use = <"Used to record all representations of pulmonary function testing, including spirometry. Multiple events and state information may be used to capture pre and post bronchial challenge or bronchodilation results.">
 			keywords = <"respiratory", "pulmonary", "spirometry", "peak flow", "PFT", "lung", "bronchial">
 			misuse = <"Supporting subject information, often required  to interpret the tests, such as smoking status or oxygenation, should be captured in separate, specific archetypes.">
-			copyright = <"© openEHR Foundation">
 		>
 		["sl"] = <
 			language = <[ISO_639-1::sl]>
@@ -35,7 +34,6 @@ description
 (en)">
 			keywords = <"*respiratory(en)", "*pulmonary(en)", "*spirometry(en)", "*peak flow(en)", "*PFT(en)", "*lung(en)", "*bronchial(en)">
 			misuse = <"*Supporting subject information, often required  to interpret the tests, such as smoking status or oxygenation, should be captured in separate, specific archetypes.(en)">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -48,6 +46,7 @@ Pingul EM, de Guia TS, Ayuyao FG. FEV1/FEV6 VS FEV1/FVC IN THE SPIROMETRIC DIAGN
 Tiffeneau R, Pinelli A. Air circulant et air captif dans l'exploration de la fonction ventilatrice pulmonaire. Paris Med 1947;133:624-8.">
 		["MD5-CAM-1.0.1"] = <"387886EC6090ADD9B2D1C7024ECF6956">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] occurrences matches {0..1} matches {	-- Pulmonary Function Testing

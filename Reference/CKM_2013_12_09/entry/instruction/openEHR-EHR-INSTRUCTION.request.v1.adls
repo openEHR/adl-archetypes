@@ -26,7 +26,6 @@ description
 			use = <"">
 			keywords = <"الطلب", "يُحيل", "الأمر", "الخدمة", "المُزَوِّد">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -34,7 +33,6 @@ description
 			use = <"">
 			keywords = <"request", "refer", "order", "service", "provide">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -42,6 +40,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"E1D2406529BB9CBF04E676AD427F7183">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	INSTRUCTION[id1] matches {	-- Healthcare service request

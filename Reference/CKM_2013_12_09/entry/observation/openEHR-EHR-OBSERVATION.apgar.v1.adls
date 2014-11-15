@@ -77,7 +77,6 @@ If the total is to be calculated, it is necessary for all 5 ordinal values to be
 It is recognised that mnemonic learning aid for APGAR is commonly taught.  For example, in English: A for Appearance (skin color), P for Pulse (heart rate), G for Grimace (reflex irritability), A for Activity (muscle tone), and R for Respiration.  As this is not universally applicable for all languages, it is suggested that this mnemonic can be applied by renaming the data elements within templates if desired for a specific clinical scenario.">
 			keywords = <"newborn", "index", "score", "birth", "infant", "neonate", "assessment">
 			misuse = <"Partially complete score and add the 5 to give the total values​​.">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-cl"] = <
 			language = <[ISO_639-1::es-cl]>
@@ -85,7 +84,6 @@ It is recognised that mnemonic learning aid for APGAR is commonly taught.  For e
 			use = <"Permite registrar el bienestar del neonato al 1,2,5 y o 10 minutos después del nacimiento. Se puede registrar sólo el total - si es todo lo que está disponible - aúnque se deben completar los cinco valores númericos para que pueda ser calculado el total.  El total es la suma de los cinco valores númericos (el mínimo 0, el máximo 10).">
 			keywords = <"score", "apgar", "index", "recién nacido">
 			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
-			copyright = <"© openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -98,7 +96,6 @@ Wenn der Gesamtwert errechnet werden soll, müssen Werte für alle 5 Komponenten
 Häufig werden mnemonische Merkhilfen für APGAR gelehrt. Z.B. in Englisch: A für Appearance (Hautfarbe), P für Pulse (Herzfrequenz), G für Grimace (Reflexauslösbarkeit), A für Activity (Muskeltonus), und R für Respiration (Atmung). Da dies nicht generell in allen Sprachen anwendbar ist, wird empfohlen, dass solche Merkhilfen durch Umbenennung innerhalb von Templates erstellt werden können, wenn dies für ein bestimmtes klinisches Szenario erwünscht ist.">
 			keywords = <"Neugeborenes", "Index", "Score", "Geburt", "Säugling", "neonatal", "Beurteilung">
 			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
-			copyright = <"© openEHR Foundation">
 		>
 		["fa"] = <
 			language = <[ISO_639-1::fa]>
@@ -111,7 +108,6 @@ Häufig werden mnemonische Merkhilfen für APGAR gelehrt. Z.B. in Englisch: A f�
 مشحص شده است که یادگیری حافظه ای آپکار معمولا تدریس می شودبرای مثال در انگلیس حرف \"ا\" برای ظاهر (رنگ پوست)و حرف \"پ\" برای نبض (میزان قلبی) ، حرف \"جی \" برای شکلک(رفلکس تحریک پذیری) ، حرف \"ا\" برای فعالیت (تون عضلانی ) و  حرف \"ر\" برای تنفس استفاده می شود.گرچه این مورد برای تمام زبانها و بطور کلی قابل کاربرد نیست ، پیشنهاد می شود که  در صورت تمایل  در سناریوهای بالینی خاص ،یادگیری حافظه ای می تواند با نامگذاری مجدد عناصر داده ای در داخل الگو بکار رود">
 			keywords = <"تازه بدنیا آمده", "شاخص", "نمره", "تولد", "شیر خوار", "نوزاد", "ارزیابی">
 			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -130,7 +126,6 @@ Häufig werden mnemonische Merkhilfen für APGAR gelehrt. Z.B. in Englisch: A f�
 ">
 			keywords = <"حديث الولادة", "معامل", "الحرز", "الولادة/الوضع", "الرضيع", "حديث الولادة", "تقييم">
 			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
-			copyright = <"© openEHR Foundation">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -143,7 +138,6 @@ Häufig werden mnemonische Merkhilfen für APGAR gelehrt. Z.B. in Englisch: A f�
 Если общая оценка считается, то необходимо записать все 5 обычно используемых признаков. Общая оценка получается суммированием 5 обычных значений (мин 0, макс 10).">
 			keywords = <"новорожденный", "оценка", "балл", "младенец", "оценка состояния">
 			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
-			copyright = <"© openEHR Foundation">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -154,7 +148,6 @@ Algemeen klinische praktijk is om alle 5 parameters plus het totaal te registrer
 Erkend wordt dat er gewoonlijk een ezelsbruggetje word gebruikt bij het aanleren van de Apgar score. Bijvoorbeeld: Appearance (kleur), Pulse (hartslag), Grimace (reactie op prikkels), Activity (spiertonus) en Respiration (ademhaling). Dit is niet universeel bruikbaar voor alle talen, gesuggereerd wordt dat dit geheugensteuntje kan worden toegepast door het hernoemen van de data elementen binnen templates, indien gewenst voor een specifiek klinisch scenario.">
 			keywords = <"pasgeborene", "index", "score", "geboorte", "kind", "neonaat", "beoordeling", "baby">
 			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
-			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -167,7 +160,6 @@ O total só pode ser calculado se os cinco valores ordinais forem registrados. O
 Se reconhece que uma ajuda mnemônica para aprender a interpretar o escore Apgar é comumente ensinada. Em Português, por exemplo: A para Aparência (cor da pele), P para pulso ( frequência cardíaca), G para Contração do rosto (grimace-fr); A para atividade (tônus muscular) e R pra Respiração. Embora não seja aplicável em todas as línguas, se sugere que se possa utilizar esse mnemônico para renomear os elementos de dados dentro dos templates se desejado para um cenário clínico específico.">
 			keywords = <"*recém-nascido(s), recém-nato(s)", "*índice", "*escore, escala", "*nascimento(s),", "*bebê(s)", "*neonato(s)", "*avaliação(ões)">
 			misuse = <"Escore parcialmente completado e adicionar o 5 para obter o valor total.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -184,6 +176,7 @@ Whaley LF, Wong DL (1979).  Nursing Care of Infants and Children.  St. Louis, To
 http://en.wikipedia.org/wiki/Apgar_score">
 		["MD5-CAM-1.0.1"] = <"372512F41A8EE08D313FA66BA2AF3039">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Apgar score

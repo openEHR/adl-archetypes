@@ -23,7 +23,6 @@ Use in comnination with CLUSTER.fluid.v1
 Supercedes OBSERVATION.urine_output.v1 ">
 			keywords = <"production", "output", "fluid", "fluid balance", "input output", "io", "urine", "urinary", "bladder", "micturition">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -32,6 +31,7 @@ Supercedes OBSERVATION.urine_output.v1 ">
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"85B710F8FA65D82AD8135C106E174D88">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Urination

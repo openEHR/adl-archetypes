@@ -24,7 +24,6 @@ Absence statements can only be considered to be current and accurate at the time
 This archetype has been designed specifically to avoid the need to use of flags to express negation about any item within the health record.">
 			keywords = <"absence", "information", "adverse", "reaction", "problem", "diagnosis", "medication", "procedure", "vaccination">
 			misuse = <"Not to be used to record the exclusion of adverse reactions, medication use, procedures, problems or diagnoses - use specific specialisations of the EVALUATION.exclusion archetype for this purpose.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -33,6 +32,7 @@ This archetype has been designed specifically to avoid the need to use of flags 
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"5E7736AF504436AC63CA11F0BC42CE91">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Absence of Information

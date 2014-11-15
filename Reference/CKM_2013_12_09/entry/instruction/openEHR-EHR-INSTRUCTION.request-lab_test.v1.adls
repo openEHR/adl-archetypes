@@ -30,7 +30,6 @@ description
 إذا كان هناك المزيد من التفاصيل الخاصة بالاختبار و/أو العينة, فينبغي أن يتم تضمين ذلك في عنقود أكثر تفصيلا في نموذج مناسب لهذا الغرض.">
 			keywords = <"الطلب", "يُحيل", "الأمر", "الخدمة", "المُزَوِّد", "المعمل/المختبر", "الباثولوجيا/المَرَضية", "الميكروبيولوجيا", "الدمويات", "تشخيصي">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -39,7 +38,6 @@ description
 If there are more specific details about the test and/or specimen include this information in more detailed CLUSTER archetypes appropriate for the purpose.">
 			keywords = <"request", "refer", "order", "service", "provide", "laboratory", "pathology", "microbiology", "haematology", "diagnostic">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -47,6 +45,7 @@ If there are more specific details about the test and/or specimen include this i
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"18ACD058EF4E112C2C126DFDD4952F3D">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	INSTRUCTION[id1.1] matches {	-- Laboratory Test request

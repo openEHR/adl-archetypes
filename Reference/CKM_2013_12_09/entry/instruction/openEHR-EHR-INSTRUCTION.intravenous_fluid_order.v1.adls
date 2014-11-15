@@ -27,7 +27,6 @@ description
 			use = <"">
 			keywords = <"intravenös", "Flüssigkeit", "Verschreibung", "IV">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -35,13 +34,13 @@ description
 			use = <"">
 			keywords = <"intravenous", "fluid ", "order", "IV">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	INSTRUCTION[id1] matches {	-- Intravenous fluid order

@@ -18,7 +18,6 @@ description
 			use = <"Use to record as part of a screening assessment of a patient's responsiveness, as an indication of their level of consciousness.">
 			keywords = <"avpu", "alert", "voice", "pain", "unresponsive">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -29,6 +28,7 @@ Kelly, CA; Upex A; Bateman DN. (February 2005). \"Comparison of consciousness le
 http://en.wikipedia.org/wiki/AVPU">
 		["MD5-CAM-1.0.1"] = <"3F6A0D1A61EEF73DEF339ECD011D09F9">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- AVPU

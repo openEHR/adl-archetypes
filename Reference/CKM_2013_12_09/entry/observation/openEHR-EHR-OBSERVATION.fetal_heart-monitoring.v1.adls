@@ -27,7 +27,6 @@ Use is restricted to recording details about the heart beat of a fetus.">
 			misuse = <"Not to be used to record simple, intermittent measurements of fetal heart rate - use the parent archetype OBSERVATION.fetal_heart instead.
 
 Not to be used for recording the heart rate of infants, children or adults.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -38,6 +37,7 @@ Not to be used for recording the heart rate of infants, children or adults.">
 Intrapartum care: management and delivery of care to women in labour: http://www.nice.org.uk/nicemedia/live/11837/36275/36275.pdf">
 		["MD5-CAM-1.0.1"] = <"26FBAED81D6AB4D33617DCF91AD51BC7">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Fetal Heart Monitoring

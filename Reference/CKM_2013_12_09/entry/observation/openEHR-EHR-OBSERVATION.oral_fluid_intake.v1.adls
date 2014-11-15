@@ -18,13 +18,13 @@ description
 			use = <"">
 			keywords = <"oral", "fluid", "intake", "thirst">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Oral fluid intake

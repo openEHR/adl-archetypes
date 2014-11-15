@@ -33,7 +33,6 @@ description
 			use = <"*">
 			keywords = <"الإرضاع بالثدي", "الولادة/الوضع">
 			misuse = <"*">
-			copyright = <"© openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -41,7 +40,6 @@ description
 			use = <"*">
 			keywords = <"stillen", "Wehen">
 			misuse = <"*">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -49,7 +47,6 @@ description
 			use = <"*">
 			keywords = <"breast feeding", "labour">
 			misuse = <"*">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -57,6 +54,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"97D5CFBB64F80F587B48F6D6AD2B3BE1">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Pregnancy summary

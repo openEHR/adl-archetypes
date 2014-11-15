@@ -25,7 +25,6 @@ This archetype has specifically been designed to avoid the need to use flags or 
 Exclusion statements can only be considered to be current and accurate at the time of recording. For example: recording an exclusion is only relevant at the time of recording and may be effectively obsolete immediately after the record is made if new information is discovered.">
 			keywords = <"exclusion", "family">
 			misuse = <"Not to be used to record the exclusion or absence of adverse reactions, medication use, procedures, problems or diagnoses - use specific specialisations of this archetype for this purpose.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -36,6 +35,7 @@ Exclusion statements can only be considered to be current and accurate at the ti
 http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1314_1(accessed 3 Sept 2013)">
 		["MD5-CAM-1.0.1"] = <"A7EB66A13879B784929B4EA2915C38C9">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1.1] matches {	-- Exclusion of Family History

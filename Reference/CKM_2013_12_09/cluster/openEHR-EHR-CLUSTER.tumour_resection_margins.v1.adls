@@ -18,7 +18,6 @@ description
 			use = <"Normally used within a histopathology archetype.">
 			keywords = <"malignancy", "margins", "tumour", "cancer", "resection", "histopathology", "biopsy">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"D1C5FF9647E00C3B138D02C481F779C1">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Tumour - Surgical resection margins

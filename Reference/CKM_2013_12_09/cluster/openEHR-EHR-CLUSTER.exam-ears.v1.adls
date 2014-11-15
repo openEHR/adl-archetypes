@@ -21,7 +21,6 @@ description
 			use = <"">
 			keywords = <"examination", "physical", "ears", "ENT", "tympanic", "mastoid", "Rinne", "Weber">
 			misuse = <"Do not use for recording audiology findings Should normally be contained within an OBSERVATION">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -29,6 +28,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"4C3FA1F70C90356DC3CA61F87EDAD866">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Examination of the ears

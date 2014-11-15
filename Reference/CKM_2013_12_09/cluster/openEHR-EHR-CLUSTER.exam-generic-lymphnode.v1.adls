@@ -21,7 +21,6 @@ description
 			use = <"">
 			keywords = <"examination", "physical", "lymph", "nodes">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -29,6 +28,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"830E55208F27CFC39A653E6C194C0442">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1.1] matches {	-- Examination of lymph nodes

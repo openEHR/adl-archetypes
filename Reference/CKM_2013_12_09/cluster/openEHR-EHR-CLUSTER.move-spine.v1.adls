@@ -26,7 +26,6 @@ description
 			use = <"">
 			keywords = <"movement", "spine", "neck", "lumbar", "thoracic", "atlas">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -34,7 +33,6 @@ description
 			use = <"">
 			keywords = <"الحركة", "العمود الفقري/السيساء", "العنق/الرقبة", "القَطَني", "صدري", "الفهقة/الفقرة الحاملة">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -42,6 +40,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"1F294D2C1385A0A77B85C4D577A5FF51">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- Movement of the spine or parts thereof

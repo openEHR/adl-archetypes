@@ -40,7 +40,6 @@ description
 			use = <"">
 			keywords = <"داخل الوريد", "سائل", "إعطاء">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -48,7 +47,6 @@ description
 			use = <"">
 			keywords = <"intravenous", "fluid", "administration">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -56,7 +54,6 @@ description
 			use = <"">
 			keywords = <"intravenös", "Flüssigkeit", "Verabreichung">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -64,7 +61,6 @@ description
 			use = <"">
 			keywords = <"intravenoso", "fluido", "administración">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -72,6 +68,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"0C7112890FA7C3E09934F945FD77310B">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	ACTION[id1] matches {	-- Intravenous fluid administration

@@ -23,7 +23,6 @@ description
 			use = <"">
 			keywords = <"examination", "physical", "joint">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -31,6 +30,7 @@ description
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"CD624D54E78341D7B6C6F4BDFA855072">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1.1] matches {	-- Examination of a named joint

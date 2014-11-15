@@ -41,7 +41,6 @@ description
 			use = <"*">
 			keywords = <"Einatmen", "Ausatmen", "Brustumfang", "Ausmaß">
 			misuse = <"*">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -49,7 +48,6 @@ description
 			use = <"*">
 			keywords = <"inspiration", "expiration", "chest expansion", "expansion">
 			misuse = <"*">
-			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -57,7 +55,6 @@ description
 			use = <"*">
 			keywords = <"الشهيق", "الزفير", "تمدد الصدر", "التمدد">
 			misuse = <"*">
-			copyright = <"© openEHR Foundation">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -65,10 +62,10 @@ description
 			use = <"*">
 			keywords = <"inspiración", "espiración", "expansión torácica", "expansión">
 			misuse = <"*">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Measurement of chest and expansion

@@ -28,14 +28,12 @@ description
 			use = <"To be used in INSTRUCTION.medication and ACTION.medication to describe the administration.">
 			keywords = <"medication administration", "injection", "infusion">
 			misuse = <"Not to be used for administration of anything other than medication.">
-			copyright = <"© openEHR Foundation">
 		>
 		["sl"] = <
 			language = <[ISO_639-1::sl]>
 			purpose = <"">
 			use = <"">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -44,6 +42,7 @@ description
 		["references"] = <"Medication administration, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. : NEHTA. Authored: 10 Nov 2010. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.874_1 (accessed 15 May 2013).">
 		["MD5-CAM-1.0.1"] = <"6BA029E6118C5E5418053BE84D85C377">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Medication administration

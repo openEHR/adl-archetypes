@@ -28,7 +28,6 @@ description
 			use = <"Verwendung zur Aufzeichnung der Messungen, die während eines Timed 25-Foot Walk aufgenommen wurden. Dieser Test wird normalerweise als eine Komponente des Multiple Sclerosis Functional Composite (MSFC) durchgeführt, kann jedoch auch davon unabhängig eingesetzt werden. Der Patient wird zu einem Ende einer klar markierten Strecke von 25 Fuß (7,62 m) Länge geführt. Dann wird er angewiesen, diese Strecke so schnell wie möglich, jedoch sicher, zurückzulegen. Die Aufgabe wird anschließend sofort wiederholt, der Patient legt dieselbe Strecke auf umgekehrtem Weg zurück. Unterstützende Hilfsmittel (i. Allg. die gewohnten Gehhilfen) dürfen beim Test verwendet werden. Siehe MSFC-Handbuch für detaillierte Handlungsanweisungen. Der Test sollte nur von einer entsprechend geschulten Person durchgeführt werden.">
 			keywords = <"Timed 25-Foot Walk", "T25-FW", "T25FW", "TW", "Multiple Sclerosis Functional Composite", "MSFC">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -36,7 +35,6 @@ description
 			use = <"Use to record the measurements recorded during a Timed 25-Foot Walk test. This test is commonly carried out as one component of the Multiple Sclerosis Functional Composite (MSFC) assessment, but may be performed independently. The patient is directed to one end of a clearly marked 25-foot (7,62 m) course. Then he is instructed to walk this course as quickly as possible, but safely. The task is immediately administered again by having the patient walk back the same distance. Assistive devices (in general, customary walking devices) may be used when doing this task. Use the MSFC Manual for detailed administration instructions. The test should only be administred by a suitably trained person.">
 			keywords = <"Timed 25-Foot Walk", "T25-FW", "T25FW", "TW", "Multiple Sclerosis Functional Composite", "MSFC">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -45,6 +43,7 @@ description
 		["references"] = <"Fischer JS, Jak AJ, Kniker JE, Rudick RA, Cutter G. Multiple Sclerosis Functional Composite (MSFC), Administration and Scoring Manual: National Multiple Sclerosis Society; 2001.">
 		["MD5-CAM-1.0.1"] = <"EBC56378345269E681B5B2FCDADCF273">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Timed 25-Foot Walk

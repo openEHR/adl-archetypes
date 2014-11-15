@@ -22,7 +22,6 @@ description
 			keywords = <"substance", "addiction", "consumption", "use">
 			misuse = <"Not to be used for recording persistent and summary details about the use of the substance - this should be captured using the EVALUATION.substance_use_summary archetype.  
 Not to be used for recording use or consumption histories for substances other than alcohol.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -31,6 +30,7 @@ Not to be used for recording use or consumption histories for substances other t
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"E80C92427092354E9D124F3E3A5093E0">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Alcohol Consumption

@@ -28,7 +28,6 @@ description
 			use = <"Usado em um serviço demográfico para coletar dados adicionais do registro de um profissional de saúde">
 			keywords = <"serviço demográfico", "registro de um profissional de saúde">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -36,10 +35,10 @@ description
 			use = <"Used in demographic services to collect additional data about a healthcare provider registration">
 			keywords = <"demographic service", "provider registration details">
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
+	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Other provider registration data
