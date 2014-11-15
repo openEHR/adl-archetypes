@@ -14,12 +14,12 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test slot with no include or exclude; should fail with VASMD">
+			purpose = <"Test slot with no include or exclude">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
-		["regression"] = <"VASMD">
+		["regression"] = <"PASS">
 	>
 
 definition
