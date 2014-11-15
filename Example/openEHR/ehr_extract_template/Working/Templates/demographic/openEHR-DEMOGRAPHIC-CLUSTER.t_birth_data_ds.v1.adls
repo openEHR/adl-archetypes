@@ -1,4 +1,4 @@
-﻿template_overlay (adl_version=1.5.1)
+template_overlay (adl_version=1.5.1)
 	openEHR-DEMOGRAPHIC-CLUSTER.t_birth_data_ds.v1.0.0
 
 specialize
@@ -13,7 +13,7 @@ definition
 			ELEMENT[id3] occurrences matches {0} 
 			ELEMENT[id5] occurrences matches {0} 
 			ELEMENT[id6] occurrences matches {0} 
-			allow_archetype CLUSTER[id7.1] closed 	-- Country specific data - closed slot
+			allow_archetype CLUSTER[id7] closed 	-- Country specific data - closed slot
 		}
 	}
 
@@ -23,10 +23,6 @@ terminology
 			["id1.1"] = <
 				text = <"Birth data">
 				description = <"Singapore birth demographic data">
-			>
-			["id7.1"] = <
-				text = <"Country specific data - closed slot">
-				description = <"Country specific data - closed slot">
 			>
 		>
 	>

@@ -1,4 +1,4 @@
-﻿template_overlay (adl_version=1.5.1)
+template_overlay (adl_version=1.5.1)
 	openEHR-DEMOGRAPHIC-ADDRESS.t_address_ds.v1.0.0
 
 specialize
@@ -22,14 +22,14 @@ definition
 					ELEMENT[id29] occurrences matches {0} 
 					ELEMENT[id30] occurrences matches {0} 
 					ELEMENT[id31] occurrences matches {0} 
-					allow_archetype CLUSTER[id33.1] closed 	-- Slot closed
+					allow_archetype CLUSTER[id33] closed 	-- Slot closed
 				}
 			}
 			ELEMENT[id4] occurrences matches {0} 
 			ELEMENT[id7] occurrences matches {0} 
 			ELEMENT[id9] occurrences matches {0} 
 			ELEMENT[id10] occurrences matches {0} 
-			allow_archetype CLUSTER[id11.1] closed 	-- Slot closed
+			allow_archetype CLUSTER[id11] closed 	-- Slot closed
 		}
 	}
 
@@ -43,14 +43,6 @@ terminology
 			["id3.1"] = <
 				text = <"Address lines">
 				description = <"Address lines">
-			>
-			["id11.1"] = <
-				text = <"Slot closed">
-				description = <"Slot closed">
-			>
-			["id33.1"] = <
-				text = <"Slot closed">
-				description = <"Slot closed">
 			>
 		>
 	>
