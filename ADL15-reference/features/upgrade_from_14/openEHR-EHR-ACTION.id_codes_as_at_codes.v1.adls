@@ -15,13 +15,13 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Show how at-codes used as ids and values are converted to id-codes and distinct at-codes">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	ACTION[id1] matches {	-- Imaging investigation

@@ -15,13 +15,13 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Parent archetype to test detection of identical DV_CODED_TEXT that AOM_151_CONVERTER should detect, and ARCHETYPE_COMPARATOR should remove">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	INSTRUCTION[id1] matches {	-- Healthcare service request

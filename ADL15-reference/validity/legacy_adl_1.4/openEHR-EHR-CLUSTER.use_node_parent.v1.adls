@@ -15,10 +15,10 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Parent archetype for use-node redefinition">
-			copyright = <"">
 		>
 	>
 	lifecycle_state = <"unmanaged">
+	copyright = <"">
 
 definition
 	CLUSTER[id1] matches {	-- Laboratory test panel

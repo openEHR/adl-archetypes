@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1)
+﻿archetype (adl_version=2.0.5)
 	openEHR-EHR-OBSERVATION.override_to_multiple.v1.0.0
 
 specialize
@@ -18,13 +18,13 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"This is an archetype used to record details of the use of all common forms of tobacco. ">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Tobacco Use

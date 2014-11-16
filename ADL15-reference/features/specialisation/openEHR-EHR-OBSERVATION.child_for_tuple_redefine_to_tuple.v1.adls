@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0)
+archetype (adl_version=2.0.5)
 	openEHR-EHR-OBSERVATION.child_for_tuple_redefine_to_tuple.v1.0.0
 
 specialize
@@ -18,10 +18,10 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Illustrate redefinition of tuple to narrower tuple">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Intravascular pressure redefined

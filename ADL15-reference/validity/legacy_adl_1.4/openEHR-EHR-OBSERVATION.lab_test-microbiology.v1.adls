@@ -18,13 +18,13 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Test for anomaly in generation of differential archetype from flat.">
-			copyright = <"copyright (c) 2010 openEHR Foundation.">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"copyright (c) 2010 openEHR Foundation.">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Microbiolology

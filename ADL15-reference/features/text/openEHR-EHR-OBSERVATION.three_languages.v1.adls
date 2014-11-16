@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0)
+archetype (adl_version=2.0.5)
 	openEHR-EHR-OBSERVATION.three_languages.v1.0.0
 
 language
@@ -35,7 +35,6 @@ description
 			use = <"ceçi explique la fonction de l'archetype">
 			keywords = <"ceçi", "est", "une", "liste", "de", "mots", "clés">
 			misuse = <"les interdictions de l'utilisation de cet archetype">
-			copyright = <"c'est à moi tout ce travail!">
 			original_resource_uri = <
 				["ligne guide"] = <"http://guidelines.are.us/wherever/fr">
 				["medline"] = <"http://some%20medline%20ref">
@@ -47,7 +46,6 @@ description
 			use = <"this explains the usage of the archetype">
 			keywords = <"this", "is", "a", "list", "of", "keywords">
 			misuse = <"this is not what it is used for">
-			copyright = <"this is mine, mine, mine I tell you! Since 2003">
 			original_resource_uri = <
 				["guideline"] = <"http://guidelines.are.us/wherever/en">
 				["medline"] = <"http://some%20medline%20ref">
@@ -59,7 +57,6 @@ description
 			use = <"v kakih sluchaiah ispol'zuetsia dannii arkhetip">
 			keywords = <"eto", "spisok", "kliuchevih", "slov">
 			misuse = <"Eto ob'iasniaet, pochemu etot arkhetip bil ispol'zovan ne po prednaznacheniiu">
-			copyright = <"Eta rabota bila vipolnena mnoi">
 			original_resource_uri = <
 				["guideline"] = <"http://guidelines.are.us/wherever/ru">
 				["medline"] = <"http://some%20medline%20ref">
@@ -71,6 +68,7 @@ description
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"this is mine, mine, mine I tell you! Since 2003">
 
 definition
 	OBSERVATION[id1] matches {	-- most minimal

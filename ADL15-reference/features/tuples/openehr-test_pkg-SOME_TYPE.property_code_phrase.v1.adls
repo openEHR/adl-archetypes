@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0)
+archetype (adl_version=2.0.5)
 	openehr-TEST_PKG-SOME_TYPE.property_code_phrase.v1.0.0
 
 language
@@ -13,13 +13,13 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Illustrates DV_QUANTITY with property of type CODE_PHRASE rather than STRING">
 			keywords = <"ADL", "test">
-			copyright = <"copyright (c) 2006 The openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"copyright (c) 2006 The openEHR Foundation">
 
 definition
 	SOME_TYPE[id1] matches {	-- root item

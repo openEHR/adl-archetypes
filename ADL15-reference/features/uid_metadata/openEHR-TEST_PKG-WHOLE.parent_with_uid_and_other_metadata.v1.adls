@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0; uid=15E82D77-7DB7-4F70-8D8E-EED6FF241B2D; some_flag=true; some_key=some_value; another_key=another_value)
+archetype (adl_version=2.0.5; uid=15E82D77-7DB7-4F70-8D8E-EED6FF241B2D; some_flag=true; some_key=some_value; another_key=another_value)
 	openehr-TEST_PKG-WHOLE.parent_with_uid_and_other_metadata.v1.0.0
 
 language

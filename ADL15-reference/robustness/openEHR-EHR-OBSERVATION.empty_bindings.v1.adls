@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1)
+﻿archetype (adl_version=2.0.5)
 	openEHR-EHR-OBSERVATION.empty_bindings.v1.0.0
 
 language
@@ -15,10 +15,10 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Test empty term_bindings">
-			copyright = <"copyright (c) 2011 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
+	copyright = <"copyright (c) 2011 openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Indirect oximetry
@@ -32,11 +32,5 @@ terminology
 				text = <"Indirect oximetry">
 				description = <"Method of monitoring blood gas measurements such as Spo2 and pTCO2 by indirect, currently non-invasive, means.">
 			>
-		>
-	>
-	term_bindings = <
-		["SNOMED-CT"] = <
-		>
-		["LOINC"] = <
 		>
 	>

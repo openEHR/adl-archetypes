@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0)
+archetype (adl_version=2.0.5)
 	openEHR-TEST_PKG-CAR.c_primitive_matches_any.v1.0.0
 
 language
@@ -12,13 +12,13 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Test handling of 'maches any' pattern at C_PRIMITIVE_OBJECT level">
-			copyright = <"copyright (c) 2014 The openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"copyright (c) 2014 The openEHR Foundation">
 
 definition
 	CAR[id1] matches {	-- car

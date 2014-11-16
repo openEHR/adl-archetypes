@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.5)
 	openEHR-TEST_PKG-ENTRY.WOUC_at_code_unused.v1.0.0
 
 language
@@ -13,13 +13,13 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Test WOUC validity check, triggered when an at-code in the ontology is not used anywhere in the archetype.">
 			keywords = <"ADL", "validation", "test">
-			copyright = <"copyright (c) 2008 The openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"unstable">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"WOUC">
 	>
+	copyright = <"copyright (c) 2008 The openEHR Foundation">
 
 definition
 	ENTRY[id1] 	-- 

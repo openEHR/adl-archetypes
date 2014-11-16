@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0)
+archetype (adl_version=2.0.5)
 	openEHR-TEST_PKG-ENTRY.long_lines.v1.0.0
 
 language
@@ -17,9 +17,6 @@ multiple lines, just like
 what you are reading now">
 			keywords = <"this", "is", "a", "list", "keywords">
 			misuse = <"this is not what it is used for">
-			copyright = <"this is mine, mine, mine I tell you! Since 2003. 
-And another thing.
-And another">
 			original_resource_uri = <
 				["guideline"] = <"http://guidelines.are.us/wherever/en">
 				["medline"] = <"http://some%20medline%20ref">
@@ -31,6 +28,9 @@ And another">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"this is mine, mine, mine I tell you! Since 2003. 
+And another thing.
+And another">
 
 definition
 	ENTRY[id1] matches {	-- most minimal sdfasdjb adsnfsadf s dns cshdisdh;sidoew dfhswdisdh sd swdf

@@ -18,10 +18,10 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Test use node (C_COMPLEX_OBJECT_PROXY) that overrides its target's occurrences">
-			copyright = <"">
 		>
 	>
 	lifecycle_state = <"unmanaged">
+	copyright = <"">
 
 definition
 	CLUSTER[id1.1] matches {	-- Laboratory test panel!

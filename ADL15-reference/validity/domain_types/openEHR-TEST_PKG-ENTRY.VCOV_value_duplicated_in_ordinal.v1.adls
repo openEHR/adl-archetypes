@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.5)
 	openEHR-TEST_PKG-ENTRY.VCOV_value_duplicated_in_ordinal.v1.0.0
 
 language
@@ -13,13 +13,13 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Test validity when a value is duplicated in an ordinal; currently this is valid.">
 			keywords = <"ADL", "validation", "test">
-			copyright = <"copyright (c) 2008 The openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"unstable">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"copyright (c) 2008 The openEHR Foundation">
 
 definition
 	ENTRY[id1] matches {	-- 

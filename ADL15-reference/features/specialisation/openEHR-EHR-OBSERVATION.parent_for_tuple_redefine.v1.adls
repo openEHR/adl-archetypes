@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0)
+archetype (adl_version=2.0.5)
 	openEHR-EHR-OBSERVATION.parent_for_tuple_redefine.v1.0.0
 
 language
@@ -15,13 +15,13 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Intravascular venous, arterial, pulmonary or cardiac pressure measurement. Commonly specialised for specific common pressures such as JVP and CCP.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Intravascular pressure

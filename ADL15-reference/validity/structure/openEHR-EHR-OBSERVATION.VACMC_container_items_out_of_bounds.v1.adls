@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1)
-	openEHR-EHR-OBSERVATION.WACMCL_container_items_out_of_bounds.v1
+archetype (adl_version=2.0.5)
+	openEHR-EHR-OBSERVATION.WACMCL_container_items_out_of_bounds.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -14,27 +14,27 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Test WACMCL warning, triggered by occurrences of container attributes being outside of cardinality bounds.">
-			copyright = <"copyright 2011 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"WACMCL">
 	>
+	copyright = <"copyright 2011 openEHR Foundation">
 
 definition
-	OBSERVATION[id1] matches {	
+	OBSERVATION[id1] matches {	-- aaa
 		data matches {
-			HISTORY[id2] matches {	
+			HISTORY[id2] matches {
 				events cardinality matches {1; unordered} matches {
-					EVENT[id3] matches {	
+					EVENT[id3] matches {	-- bbbb
 						data matches {
-							ITEM_TREE[id4] matches {	
+							ITEM_TREE[id4] matches {
 								items matches {
-									CLUSTER[id5] matches {	
+									CLUSTER[id5] matches {	-- xxx
 										items cardinality matches {1; unordered} matches {
-											ELEMENT[id6] occurrences matches {0..1} matches {*}
-											ELEMENT[id7] occurrences matches {0..1} matches {*}
+											ELEMENT[id6] occurrences matches {0..1} 	-- cccc
+											ELEMENT[id7] occurrences matches {0..1} 	-- ddd
 										}
 									}
 									CLUSTER[id8] matches {	
@@ -56,41 +56,41 @@ definition
 terminology
 	term_definitions = <
 		["en"] = <
-				["id1"] = <
-					text = <"aaa">
-					description = <"aaa">
-				>
-				["id3"] = <
-					text = <"bbbb">
-					description = <"bbbb">
-				>
-				["id5"] = <
-					text = <"xxx">
-					description = <"xxx">
-				>
-				["id6"] = <
-					text = <"cccc">
-					description = <"ccc">
-				>
-				["id7"] = <
-					text = <"ddd">
-					description = <"ddd">
-				>
-				["id8"] = <
-					text = <"eee">
-					description = <"eee">
-				>
-				["id9"] = <
-					text = <"fff">
-					description = <"fff">
-				>
-				["id10"] = <
-					text = <"ggg">
-					description = <"ggg">
-				>
-				["id11"] = <
-					text = <"hhh">
-					description = <"hhh">
-				>
+			["id1"] = <
+				text = <"aaa">
+				description = <"aaa">
+			>
+			["id3"] = <
+				text = <"bbbb">
+				description = <"bbbb">
+			>
+			["id5"] = <
+				text = <"xxx">
+				description = <"xxx">
+			>
+			["id6"] = <
+				text = <"cccc">
+				description = <"ccc">
+			>
+			["id7"] = <
+				text = <"ddd">
+				description = <"ddd">
+			>
+			["id8"] = <
+				text = <"eee">
+				description = <"eee">
+			>
+			["id9"] = <
+				text = <"fff">
+				description = <"fff">
+			>
+			["id10"] = <
+				text = <"ggg">
+				description = <"ggg">
+			>
+			["id11"] = <
+				text = <"hhh">
+				description = <"hhh">
+			>
 		>
 	>

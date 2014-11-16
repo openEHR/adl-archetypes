@@ -13,13 +13,13 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Illustrates the use of inline dADL representing C_DV_QUANTITY, including with no magnitude">
 			keywords = <"ADL", "test">
-			copyright = <"copyright (c) 2004 The openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"unstable">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"copyright (c) 2004 The openEHR Foundation">
 
 definition
 	SOME_TYPE[id1] matches {	-- root item

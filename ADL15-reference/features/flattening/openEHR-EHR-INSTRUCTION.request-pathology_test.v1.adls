@@ -18,13 +18,13 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Test flattening when child archetype contains a differential path with an overridden id code">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"© openEHR">
 
 definition
 	INSTRUCTION[id1.1] matches {	-- PathologyTest Request

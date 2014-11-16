@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0)
+archetype (adl_version=2.0.5)
 	openEHR-EHR-OBSERVATION.ordinal_tuple.v1.0.0
 
 language
@@ -15,13 +15,13 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Test Ordinal tuple pattern.">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Apgar score

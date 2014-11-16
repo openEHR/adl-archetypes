@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0)
+archetype (adl_version=2.0.5)
 	openehr-TEST_PKG-WHOLE.date_time_specialisations.v1.0.0
 
 specialize
@@ -16,13 +16,13 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Test specialisation of ISO8601_DURATION primitive type.">
 			keywords = <"ADL", "test">
-			copyright = <"copyright (c) 2012 The openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"copyright (c) 2012 The openEHR Foundation">
 
 definition
 	WHOLE[id1.1] matches {	-- Specialised duration

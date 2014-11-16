@@ -18,7 +18,6 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Child archetype to test detection of identical DV_CODED_TEXT that AOM_151_CONVERTER should detect, and ARCHETYPE_COMPARATOR should remove">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	INSTRUCTION[id1.1] 	-- Imaging Examination Request

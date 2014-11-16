@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0)
+archetype (adl_version=2.0.5)
 	CDISC-Bridg-PerformedObservation.vital_sign_bmi.v1.0.0
 
 specialize
@@ -19,10 +19,10 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Example CDISC archetype representing BMI observation">
 			keywords = <"Observation", "BMI">
-			copyright = <"© 2014 CDISC.org">
 		>
 	>
 	lifecycle_state = <"unmanaged">
+	copyright = <"© 2014 CDISC.org">
 
 definition
 	PerformedObservation[id1.1] matches {	-- BMI BRIDG observation

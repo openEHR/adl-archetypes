@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0)
+archetype (adl_version=2.0.5)
 	openehr-TEST_PKG-SOME_TYPE.dv_quantity_magnitude_type_conv.v1.0.0
 
 language
@@ -13,13 +13,13 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Illustrates behaviour of workbench when DV_QUANTITY field of wrong type - magnitudes are wrongly integers not reals - these are silently converted">
 			keywords = <"ADL", "test">
-			copyright = <"copyright (c) 2005 The openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"unstable">
+	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"copyright (c) 2005 The openEHR Foundation">
 
 definition
 	SOME_TYPE[id1] matches {	-- root item

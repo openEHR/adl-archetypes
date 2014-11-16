@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0)
+archetype (adl_version=2.0.5)
 	openEHR-EHR-OBSERVATION.internal_code_list_narrowed.v1.0.0
 
 specialize
@@ -18,13 +18,13 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To test redefinition of an internal code list">
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Blood Pressure specialised

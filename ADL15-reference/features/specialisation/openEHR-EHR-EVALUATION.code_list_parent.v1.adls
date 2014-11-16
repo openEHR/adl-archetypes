@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.0)
+﻿archetype (adl_version=2.0.5)
 	openEHR-EHR-EVALUATION.code_list_parent.v1.0.0
 
 language
@@ -13,13 +13,13 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Archetype containing a C_CODE_PHRASE list which can be constrained by children">
-			copyright = <"copyright (c) 2013 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"copyright (c) 2013 openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- General statement of exclusions or states

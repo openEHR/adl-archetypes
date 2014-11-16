@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0)
+archetype (adl_version=2.0.5)
 	openEHR-EHR-CLUSTER.specimen.v1.0.0
 
 language
@@ -14,10 +14,10 @@ description
 			purpose = <"">
 			use = <"">
 			misuse = <"">
-			copyright = <"">
 		>
 	>
 	lifecycle_state = <"unmanaged">
+	copyright = <"">
 
 definition
 	CLUSTER[id1] matches {	-- Specimen

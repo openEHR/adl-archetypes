@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.5.1)
+﻿archetype (adl_version=2.0.5)
 	openEHR-EHR-CLUSTER.address.v1.0.0
 
 language
@@ -17,13 +17,13 @@ description
 			use = <"">
 			keywords = <"address", ...>
 			misuse = <"">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"copyright (c) 2010 openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Address

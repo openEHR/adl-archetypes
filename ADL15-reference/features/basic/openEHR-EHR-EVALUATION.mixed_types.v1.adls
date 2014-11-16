@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.0)
+archetype (adl_version=2.0.5)
 	openEHR-EHR-EVALUATION.mixed_types.v1.0.0
 
 language
@@ -15,13 +15,13 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Test various C_OBJECT types together">
 			keywords = <"ADL", "test">
-			copyright = <"copyright (c) 2010 The openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"copyright (c) 2010 The openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Evaluation
