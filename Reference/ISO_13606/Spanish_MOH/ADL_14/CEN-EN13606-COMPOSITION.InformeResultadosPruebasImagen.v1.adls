@@ -1,0 +1,365 @@
+archetype (adl_version=2.0.5; rm_release=1.0.0; generated)
+	CEN-EN13606-COMPOSITION.InformeResultadosPruebasImagen.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			use = <"Comunicación y registro del informe de resultados de pruebas de imagen del conjunto mínimo de datos de los informes clínicos (CMDIC) en el Sistema Nacional de Salud.">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	COMPOSITION[id1] occurrences matches {1} matches {	-- Informe Resultados Pruebas Imagen
+		content matches {
+			SECTION[id21] occurrences matches {1} matches {	-- Datos del documento
+				members matches {
+					ENTRY[id31] occurrences matches {1} matches {	-- Fecha de firma
+						items cardinality matches {1; unordered; unique} matches {
+							ELEMENT[id39] occurrences matches {1} matches {	-- Fecha
+								value matches {
+									DATE[id40] occurrences matches {0..1} matches {	-- DATE
+										date existence matches {1} matches {yyyy-mm-dd}
+									}
+								}
+							}
+						}
+					}
+					allow_archetype ENTRY[id47] occurrences matches {1} matches {	-- Responsable 1
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.ProfesionalSanitario.v1/}
+					}
+					allow_archetype ENTRY[id48] occurrences matches {1} matches {	-- Responsable 2
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.ProfesionalSanitario.v1/}
+					}
+					ENTRY[id49] occurrences matches {1} matches {	-- Servicio
+						items cardinality matches {1; unordered; unique} matches {
+							ELEMENT[id50] occurrences matches {0..1} matches {	-- Nombre del servicio
+								value matches {
+									SIMPLE_TEXT[id55] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+										originalText matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+					ENTRY[id52] occurrences matches {1} matches {	-- Unidad
+						items cardinality matches {1; unordered; unique} matches {
+							ELEMENT[id53] occurrences matches {0..1} matches {	-- Nombre de la unidad
+								value matches {
+									SIMPLE_TEXT[id54] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+										originalText matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			SECTION[id2] occurrences matches {1} matches {	-- Datos de la institución emisora
+				members matches {
+					SECTION[id11] occurrences matches {1} matches {	-- Centro de atención
+						members cardinality matches {0..1; unordered; unique} matches {
+							allow_archetype ENTRY[id14] occurrences matches {1} matches {	-- Dirección del centro
+								include
+									archetype_id/value matches {/CEN-EN13606-ENTRY.Direccion.v1/}
+							}
+							allow_archetype ENTRY[id6] occurrences matches {1} matches {	-- Identificación del centro
+								include
+									archetype_id/value matches {/CEN-EN13606-ENTRY.CentroSanitario.v1/}
+							}
+						}
+					}
+					SECTION[id12] occurrences matches {1} matches {	-- Servicio de salud
+						members matches {
+							allow_archetype ENTRY[id13] occurrences matches {1} matches {	-- Servicio de salud provisor
+								include
+									archetype_id/value matches {/CEN-EN13606-ENTRY.ProvisorDeServicios.v1/}
+							}
+						}
+					}
+				}
+			}
+			SECTION[id3] occurrences matches {1} matches {	-- Datos del paciente
+				members matches {
+					allow_archetype ENTRY[id4] occurrences matches {1} matches {	-- Datos demográficos básicos del paciente
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.DemograficosPersona.v1/}
+					}
+					allow_archetype ENTRY[id5] occurrences matches {1} matches {	-- Identificadores del paciente
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.IdentificacionPersona.v1/}
+					}
+					allow_archetype ENTRY[id8] occurrences matches {1} matches {	-- Datos de contacto del paciente
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.DatosContactoPersona.v1/}
+					}
+					ENTRY[id51] occurrences matches {0..1} matches {	-- Número de cama
+						items cardinality matches {0..1; unordered; unique} matches {
+							ELEMENT[id56] occurrences matches {0..1} matches {	-- Número
+								value matches {
+									SIMPLE_TEXT[id57] occurrences matches {0..1} 	-- SIMPLE_TEXT
+								}
+							}
+						}
+					}
+					ENTRY[id58] occurrences matches {0..1} matches {	-- Número de consulta
+						items cardinality matches {0..1; unordered; unique} matches {
+							ELEMENT[id59] occurrences matches {0..1} matches {	-- Número
+								value matches {
+									SIMPLE_TEXT[id60] occurrences matches {0..1} 	-- SIMPLE_TEXT
+								}
+							}
+						}
+					}
+				}
+			}
+			SECTION[id61] occurrences matches {1} matches {	-- Datos del solicitante
+				members matches {
+					SECTION[id7] occurrences matches {1} matches {	-- Servicio de salud
+						members matches {
+							allow_archetype ENTRY[id41] occurrences matches {1} matches {	-- Nombre del servicio
+								include
+									archetype_id/value matches {/CEN-EN13606-ENTRY.ProvisorDeServicios.v1/}
+							}
+						}
+					}
+					SECTION[id43] occurrences matches {0..1} matches {	-- Centro solicitante
+						members matches {
+							allow_archetype ENTRY[id44] occurrences matches {0..1} matches {	-- Nombre del centro
+								include
+									archetype_id/value matches {/CEN-EN13606-ENTRY.CentroSanitario.v1/}
+							}
+						}
+					}
+					ENTRY[id45] occurrences matches {1} matches {	-- Servicio
+						items matches {
+							ELEMENT[id46] occurrences matches {0..1} matches {	-- Nombre del servicio
+								value matches {
+									SIMPLE_TEXT[id62] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+										originalText matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+					ENTRY[id63] occurrences matches {1} matches {	-- Unidad
+						items matches {
+							ELEMENT[id64] occurrences matches {0..1} matches {	-- Nombre de la unidad
+								value matches {
+									SIMPLE_TEXT[id65] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+										originalText matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+					allow_archetype ENTRY[id66] occurrences matches {1} matches {	-- Solicitante
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.ProfesionalSanitario.v1/}
+					}
+				}
+			}
+			allow_archetype SECTION[id15] occurrences matches {0..1} matches {	-- Datos del proceso asistencial
+				include
+					archetype_id/value matches {/CEN-EN13606-SECTION.ResultadoPruebaDeImagen.v1/}
+			}
+		}
+		name matches {
+			SIMPLE_TEXT[id10] occurrences matches {0..1} matches {	-- Tipo de documento
+				originalText matches {"Informe de resultados de pruebas de imagen"}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Informe Resultados Pruebas Imagen">
+				description = <"Informe Resultados Pruebas Imagen">
+			>
+			["id3"] = <
+				text = <"Datos del paciente">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"Datos demográficos básicos del paciente">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"Identificadores del paciente">
+				description = <"">
+			>
+			["id8"] = <
+				text = <"Datos de contacto del paciente">
+				description = <"">
+			>
+			["id2"] = <
+				text = <"Datos de la institución emisora">
+				description = <"">
+			>
+			["id11"] = <
+				text = <"Centro de atención">
+				description = <"">
+			>
+			["id12"] = <
+				text = <"Servicio de salud">
+				description = <"">
+			>
+			["id13"] = <
+				text = <"Servicio de salud provisor">
+				description = <"">
+			>
+			["id14"] = <
+				text = <"Dirección del centro">
+				description = <"">
+			>
+			["id6"] = <
+				text = <"Identificación del centro">
+				description = <"">
+			>
+			["id21"] = <
+				text = <"Datos del documento">
+				description = <"">
+			>
+			["id31"] = <
+				text = <"Fecha de firma">
+				description = <"">
+			>
+			["id39"] = <
+				text = <"Fecha">
+				description = <"Es común a ambos pies de firma del informe">
+			>
+			["id40"] = <
+				text = <"DATE">
+				description = <"">
+			>
+			["id47"] = <
+				text = <"Responsable 1">
+				description = <"Es parte del primer pie de firma del informe">
+			>
+			["id48"] = <
+				text = <"Responsable 2">
+				description = <"Es parte del segundo pie de firma, que suele supervisar al primer firmante">
+			>
+			["id49"] = <
+				text = <"Servicio">
+				description = <"">
+			>
+			["id50"] = <
+				text = <"Nombre del servicio">
+				description = <"Actualmente: clasificación de Servicios del CMBD/SIFCO">
+			>
+			["id52"] = <
+				text = <"Unidad">
+				description = <"">
+			>
+			["id53"] = <
+				text = <"Nombre de la unidad">
+				description = <"">
+			>
+			["id54"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id55"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id51"] = <
+				text = <"Número de cama">
+				description = <"">
+			>
+			["id56"] = <
+				text = <"Número">
+				description = <"">
+			>
+			["id57"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id58"] = <
+				text = <"Número de consulta">
+				description = <"">
+			>
+			["id59"] = <
+				text = <"Número">
+				description = <"">
+			>
+			["id60"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id61"] = <
+				text = <"Datos del solicitante">
+				description = <"">
+			>
+			["id7"] = <
+				text = <"Servicio de salud">
+				description = <"">
+			>
+			["id41"] = <
+				text = <"Nombre del servicio">
+				description = <"">
+			>
+			["id43"] = <
+				text = <"Centro solicitante">
+				description = <"">
+			>
+			["id44"] = <
+				text = <"Nombre del centro">
+				description = <"">
+			>
+			["id45"] = <
+				text = <"Servicio">
+				description = <"Actualmente clasificación de Servicios del CMBD/SIFCO">
+			>
+			["id46"] = <
+				text = <"Nombre del servicio">
+				description = <"Actualmente clasificación de Servicios del CMBD/SIFCO">
+			>
+			["id62"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id63"] = <
+				text = <"Unidad">
+				description = <"">
+			>
+			["id64"] = <
+				text = <"Nombre de la unidad">
+				description = <"">
+			>
+			["id65"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id66"] = <
+				text = <"Solicitante">
+				description = <"">
+			>
+			["id10"] = <
+				text = <"Tipo de documento">
+				description = <"">
+			>
+			["id15"] = <
+				text = <"Datos del proceso asistencial">
+				description = <"">
+			>
+		>
+	>

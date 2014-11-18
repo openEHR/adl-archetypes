@@ -1,0 +1,91 @@
+archetype (adl_version=2.0.5; rm_release=1.0.0; generated)
+	CEN-EN13606-ENTRY.VoluntadesAnticipadas.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- Voluntades Anticipadas
+		items matches {
+			ELEMENT[id2] occurrences matches {1} matches {	-- Existe documento
+				value matches {
+					BL[id3] occurrences matches {0..1} matches {	-- BL
+						value existence matches {1} matches {True, False}
+					}
+				}
+			}
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Localización
+				value matches {
+					URI[id5] occurrences matches {0..1} matches {	-- URI
+						value matches {/.*/; ""}
+						scheme matches {/.*/; ""}
+					}
+				}
+			}
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Razón de no existencia
+				value matches {
+					CODED_TEXT[id7] occurrences matches {0..1} matches {	-- CODED_TEXT
+						originalText matches {/.*/}
+						codedValue matches {
+							CD[id8] occurrences matches {0..1} 	-- CD
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Voluntades Anticipadas">
+				description = <"Voluntades Anticipadas">
+			>
+			["id2"] = <
+				text = <"Existe documento">
+				description = <"">
+			>
+			["id3"] = <
+				text = <"BL">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"Localización">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"URI">
+				description = <"">
+			>
+			["id6"] = <
+				text = <"Razón de no existencia">
+				description = <"">
+			>
+			["id7"] = <
+				text = <"CODED_TEXT">
+				description = <"">
+			>
+			["id8"] = <
+				text = <"CD">
+				description = <"">
+			>
+		>
+	>

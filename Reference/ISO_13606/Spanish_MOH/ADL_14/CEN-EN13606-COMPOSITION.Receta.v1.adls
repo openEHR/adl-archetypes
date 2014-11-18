@@ -1,0 +1,309 @@
+archetype (adl_version=2.0.5; rm_release=1.0.0; generated)
+	CEN-EN13606-COMPOSITION.Receta.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			use = <"Comunicación y registro de la receta médica oficial del Sistema Nacional de Salud y de las Mutualidades de funcionarios.">
+			keywords = <"Receta médica", ...>
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	COMPOSITION[id1] occurrences matches {1} matches {	-- Receta
+		content matches {
+			ENTRY[id24] occurrences matches {1} matches {	-- Código receta
+				items cardinality matches {1; unordered; unique} matches {
+					ELEMENT[id28] occurrences matches {1} matches {	-- código
+						value matches {
+							II[id29] occurrences matches {0..1} 	-- II
+							SIMPLE_TEXT[id30] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+								originalText 
+							}
+						}
+					}
+				}
+			}
+			allow_archetype ENTRY[id12] occurrences matches {1} matches {	-- Medicación
+				include
+					archetype_id/value matches {/CEN-EN13606-ENTRY.Medicacion.v1/}
+			}
+			SECTION[id9] occurrences matches {1} matches {	-- Prescripción
+				members cardinality matches {0..2; unordered; unique} matches {
+					ENTRY[id33] occurrences matches {1} matches {	-- Datos de la prescripción
+						items cardinality matches {0..3; ordered; unique} matches {
+							ELEMENT[id7] occurrences matches {1} matches {	-- Fecha
+								value matches {
+									DATE[id8] occurrences matches {1} matches {	-- DATE
+										date existence matches {1} matches {yyyy-mm-dd}
+									}
+								}
+							}
+							ELEMENT[id32] occurrences matches {0..1} matches {	-- Número de envases
+								value matches {
+									INT[id36] occurrences matches {0..1} 	-- INT
+								}
+							}
+							ELEMENT[id34] occurrences matches {0..1} matches {	-- Número de unidades
+								value matches {
+									INT[id35] occurrences matches {0..1} 	-- INT
+								}
+							}
+						}
+					}
+					allow_archetype ENTRY[id10] occurrences matches {1} matches {	-- Prescriptor
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.ProfesionalSanitario.v1/}
+					}
+				}
+			}
+			ENTRY[id37] occurrences matches {0..1} matches {	-- Dispensación
+				items cardinality matches {0..3; ordered; unique} matches {
+					ELEMENT[id18] occurrences matches {0..1} matches {	-- Fecha prevista de dispensación
+						value matches {
+							DATE[id19] occurrences matches {0..1} matches {	-- DATE
+								date existence matches {1} matches {yyyy-mm-dd}
+							}
+						}
+					}
+					ELEMENT[id38] occurrences matches {1} matches {	-- Fecha de dispensación
+						value matches {
+							DATE[id39] occurrences matches {0..1} 	-- DATE
+						}
+					}
+					ELEMENT[id14] occurrences matches {0..1} matches {	-- Número de orden
+						value matches {
+							INT[id15] occurrences matches {0..1} matches {	-- INT
+								value existence matches {1} 
+							}
+						}
+					}
+				}
+			}
+			SECTION[id2] occurrences matches {1} matches {	-- Datos del paciente
+				members matches {
+					allow_archetype ENTRY[id3] occurrences matches {1} matches {	-- Datos personales
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.DemograficosPersona.v1/}
+					}
+					allow_archetype ENTRY[id4] occurrences matches {1} matches {	-- Identificadores del paciente
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.IdentificacionPersona.v1/}
+					}
+				}
+			}
+			ENTRY[id20] occurrences matches {0..1} matches {	-- Motivo de la sustitución
+				items cardinality matches {0..1; unordered; unique} matches {
+					ELEMENT[id21] occurrences matches {0..1} matches {	-- Motivo
+						value matches {
+							SIMPLE_TEXT[id22] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+								originalText matches {"Urgencia", "Desabastecimiento", "Precio de referencia"}
+							}
+						}
+					}
+				}
+			}
+			SECTION[id11] occurrences matches {0..1} matches {	-- Farmacia
+				members matches {
+					allow_archetype ENTRY[id17] occurrences matches {0..1} matches {	-- Identicación
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.Farmacia.v1/}
+					}
+					allow_archetype ENTRY[id23] matches {	-- Dirección
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.Direccion.v1/}
+					}
+				}
+			}
+			ENTRY[id42] occurrences matches {0..1} matches {	-- Información al farmaceútico
+				items matches {
+					ELEMENT[id40] occurrences matches {0..1} matches {	-- información
+						value matches {
+							SIMPLE_TEXT[id41] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+								originalText 
+							}
+						}
+					}
+					ELEMENT[id43] occurrences matches {0..1} matches {	-- Visado
+						value matches {
+							SIMPLE_TEXT[id44] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+								originalText 
+							}
+						}
+					}
+				}
+			}
+		}
+		name matches {
+			SIMPLE_TEXT[id5] occurrences matches {1} matches {	-- SIMPLE_TEXT
+				originalText existence matches {1} matches {"Receta Médica"}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Receta">
+				description = <"Receta">
+			>
+			["id2"] = <
+				text = <"Datos del paciente">
+				description = <"">
+			>
+			["id3"] = <
+				text = <"Datos personales">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"Identificadores del paciente">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id7"] = <
+				text = <"Fecha">
+				description = <"">
+			>
+			["id8"] = <
+				text = <"DATE">
+				description = <"">
+			>
+			["id9"] = <
+				text = <"Prescripción">
+				description = <"">
+			>
+			["id10"] = <
+				text = <"Prescriptor">
+				description = <"">
+			>
+			["id12"] = <
+				text = <"Medicación">
+				description = <"">
+			>
+			["id14"] = <
+				text = <"Número de orden">
+				description = <"">
+			>
+			["id15"] = <
+				text = <"INT">
+				description = <"">
+			>
+			["id18"] = <
+				text = <"Fecha prevista de dispensación">
+				description = <"">
+			>
+			["id19"] = <
+				text = <"DATE">
+				description = <"">
+			>
+			["id20"] = <
+				text = <"Motivo de la sustitución">
+				description = <"">
+			>
+			["id21"] = <
+				text = <"Motivo">
+				description = <"">
+			>
+			["id22"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id11"] = <
+				text = <"Farmacia">
+				description = <"">
+			>
+			["id17"] = <
+				text = <"Identicación">
+				description = <"">
+			>
+			["id23"] = <
+				text = <"Dirección">
+				description = <"">
+			>
+			["id24"] = <
+				text = <"Código receta">
+				description = <"">
+			>
+			["id28"] = <
+				text = <"código">
+				description = <"">
+			>
+			["id29"] = <
+				text = <"II">
+				description = <"">
+			>
+			["id30"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id32"] = <
+				text = <"Número de envases">
+				description = <"">
+			>
+			["id33"] = <
+				text = <"Datos de la prescripción">
+				description = <"">
+			>
+			["id34"] = <
+				text = <"Número de unidades">
+				description = <"">
+			>
+			["id35"] = <
+				text = <"INT">
+				description = <"">
+			>
+			["id36"] = <
+				text = <"INT">
+				description = <"">
+			>
+			["id37"] = <
+				text = <"Dispensación">
+				description = <"">
+			>
+			["id38"] = <
+				text = <"Fecha de dispensación">
+				description = <"">
+			>
+			["id39"] = <
+				text = <"DATE">
+				description = <"">
+			>
+			["id40"] = <
+				text = <"información">
+				description = <"">
+			>
+			["id41"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id42"] = <
+				text = <"Información al farmaceútico">
+				description = <"">
+			>
+			["id43"] = <
+				text = <"Visado">
+				description = <"">
+			>
+			["id44"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+		>
+	>

@@ -1,0 +1,285 @@
+archetype (adl_version=2.0.5; rm_release=1.0.0; generated)
+	CEN-EN13606-ENTRY.Medicacion.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- Medicación
+		items matches {
+			CLUSTER[id6] occurrences matches {1} matches {	-- Presentación clínica con formato
+				parts cardinality matches {1..2; unordered; unique} matches {
+					ELEMENT[id9] occurrences matches {0..1} matches {	-- VMPP
+						value matches {
+							CD[id10] occurrences matches {0..1} 	-- CD
+						}
+					}
+					ELEMENT[id11] occurrences matches {0..1} matches {	-- Código Nacional
+						value matches {
+							CD[id12] occurrences matches {0..1} 	-- CD
+						}
+					}
+				}
+			}
+			CLUSTER[id23] occurrences matches {0..1} matches {	-- Especialidad
+				parts cardinality matches {0..2; ordered; unique} matches {
+					ELEMENT[id24] occurrences matches {1} matches {	-- Marca comercial
+						value matches {
+							CD[id26] occurrences matches {0..1} 	-- CD
+						}
+					}
+					ELEMENT[id27] occurrences matches {0..1} matches {	-- Motivo
+						value matches {
+							SIMPLE_TEXT[id28] occurrences matches {0..1} 	-- SIMPLE_TEXT
+						}
+					}
+				}
+			}
+			ELEMENT[id47] occurrences matches {0..1} matches {	-- vía de administración
+				value matches {
+					CODED_TEXT[id2] occurrences matches {0..1} matches {	-- CODED_TEXT
+						codedValue matches {
+							CD[id3] occurrences matches {0..1} matches {	-- CD
+								codeValue matches {[ac3]}		-- Vias de administración
+							}
+						}
+						originalText matches {/.*/}
+					}
+				}
+			}
+			CLUSTER[id13] occurrences matches {1} matches {	-- Posología
+				parts matches {
+					ELEMENT[id14] occurrences matches {1} matches {	-- Cantidad
+						value matches {
+							INT[id15] occurrences matches {0..1} 	-- INT
+						}
+					}
+					ELEMENT[id16] occurrences matches {1} matches {	-- Forma farmaceútica
+						value matches {
+							CD[id17] occurrences matches {0..1} matches {	-- CD
+								codeValue matches {[ac5]}		-- Forma farmacéutica
+							}
+						}
+					}
+					ELEMENT[id18] occurrences matches {0..1} matches {	-- Frecuencia de administración
+						value matches {
+							CD[id19] occurrences matches {0..1} matches {	-- CD
+								codeValue matches {[ac6]}		-- Frecuencia de administración
+							}
+						}
+					}
+					ELEMENT[id20] occurrences matches {0..1} matches {	-- momento de administración
+						value matches {
+							CD[id21] occurrences matches {0..1} matches {	-- CD
+								codeValue matches {[ac4]}		-- Momento de administración
+							}
+						}
+					}
+				}
+			}
+			ELEMENT[id51] occurrences matches {0..1} matches {	-- fecha de inicio
+				value matches {
+					DATE[id53] occurrences matches {0..1} matches {	-- DATE
+						date existence matches {1} 
+					}
+				}
+			}
+			ELEMENT[id55] occurrences matches {0..1} matches {	-- fecha de finalización
+				value matches {
+					DATE[id57] occurrences matches {0..1} matches {	-- DATE
+						date existence matches {1} 
+					}
+				}
+			}
+			ELEMENT[id59] occurrences matches {0..1} matches {	-- duración
+				value matches {
+					PQ[id4] occurrences matches {0..1} matches {	-- PQ
+						units existence matches {1} matches {
+							CS[id7] occurrences matches {1} matches {	-- CS
+								codeValue matches {[ac2]}		-- Unidades de tiempo de duración de recetas
+							}
+						}
+						value existence matches {1} 
+					}
+				}
+			}
+			ELEMENT[id30] occurrences matches {0..1} matches {	-- Origen
+				value matches {
+					CD[id34] occurrences matches {0..1} 	-- CD
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Medicación">
+				description = <"Medicación">
+			>
+			["id47"] = <
+				text = <"vía de administración">
+				description = <"">
+			>
+			["id51"] = <
+				text = <"fecha de inicio">
+				description = <"">
+			>
+			["id53"] = <
+				text = <"DATE">
+				description = <"">
+			>
+			["id55"] = <
+				text = <"fecha de finalización">
+				description = <"">
+			>
+			["id57"] = <
+				text = <"DATE">
+				description = <"">
+			>
+			["id59"] = <
+				text = <"duración">
+				description = <"">
+			>
+			["id2"] = <
+				text = <"CODED_TEXT">
+				description = <"">
+			>
+			["id3"] = <
+				text = <"CD">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"PQ">
+				description = <"">
+			>
+			["id6"] = <
+				text = <"Presentación clínica con formato">
+				description = <"">
+			>
+			["id9"] = <
+				text = <"VMPP">
+				description = <"Virtual Medicine Product Pack de Snomed-CT">
+			>
+			["id10"] = <
+				text = <"CD">
+				description = <"">
+			>
+			["id11"] = <
+				text = <"Código Nacional">
+				description = <"">
+			>
+			["id12"] = <
+				text = <"CD">
+				description = <"">
+			>
+			["id13"] = <
+				text = <"Posología">
+				description = <"">
+			>
+			["id14"] = <
+				text = <"Cantidad">
+				description = <"">
+			>
+			["id15"] = <
+				text = <"INT">
+				description = <"">
+			>
+			["id16"] = <
+				text = <"Forma farmaceútica">
+				description = <"">
+			>
+			["id17"] = <
+				text = <"CD">
+				description = <"">
+			>
+			["id18"] = <
+				text = <"Frecuencia de administración">
+				description = <"">
+			>
+			["id19"] = <
+				text = <"CD">
+				description = <"">
+			>
+			["id20"] = <
+				text = <"momento de administración">
+				description = <"Por ejemplo antes de la cena, después del desayuno, etc.">
+			>
+			["id21"] = <
+				text = <"CD">
+				description = <"">
+			>
+			["id23"] = <
+				text = <"Especialidad">
+				description = <"Identificación marca comercial">
+			>
+			["id24"] = <
+				text = <"Marca comercial">
+				description = <"">
+			>
+			["id26"] = <
+				text = <"CD">
+				description = <"">
+			>
+			["id27"] = <
+				text = <"Motivo">
+				description = <"Motivo de prescripción de marca comercial">
+			>
+			["id28"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id30"] = <
+				text = <"Origen">
+				description = <"">
+			>
+			["id34"] = <
+				text = <"CD">
+				description = <"">
+			>
+			["id7"] = <
+				text = <"CS">
+				description = <"">
+			>
+			["ac2"] = <
+				text = <"Unidades de tiempo de duración de recetas">
+				description = <"Unidades de tiempo de duración de recetas de acuerdo al subset del ministerio  SubsetUnidadesTiempoDuracionRecetaSNS">
+			>
+			["ac3"] = <
+				text = <"Vias de administración">
+				description = <"Vias de administración de acuerdo al subset del ministerio  SubsetViasAdministracion
+
+">
+			>
+			["ac4"] = <
+				text = <"Momento de administración">
+				description = <"Momento de administración de acuerdo al subset del ministerio  SubsetMomentosAdministracionRecetaSNS">
+			>
+			["ac5"] = <
+				text = <"Forma farmacéutica">
+				description = <"Formas farmacéuticas de acuerdo al subset del ministerio  SubsetUnidadesAdministracionSNS">
+			>
+			["ac6"] = <
+				text = <"Frecuencia de administración">
+				description = <"Frecuencias de administración de acuerdo al subset del ministerio  SubsetFrecuenciasAdministracionPosologiaRecetaSNS">
+			>
+		>
+	>

@@ -1,0 +1,219 @@
+archetype (adl_version=2.0.5; rm_release=1.0.0; generated)
+	CEN-EN13606-ENTRY.Direccion.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- Dirección 
+		items matches {
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Tipo de vía
+				value matches {
+					SIMPLE_TEXT[id3] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+						originalText matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id4] occurrences matches {0..1} matches {	-- Nombre de la vía
+				value matches {
+					SIMPLE_TEXT[id5] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+						originalText matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Número de la vía
+				value matches {
+					SIMPLE_TEXT[id7] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+						originalText matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id8] occurrences matches {0..1} matches {	-- Piso
+				value matches {
+					SIMPLE_TEXT[id9] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+						originalText matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id10] occurrences matches {0..1} matches {	-- Letra
+				value matches {
+					SIMPLE_TEXT[id11] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+						originalText matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id12] occurrences matches {0..1} matches {	-- Código Postal
+				value matches {
+					SIMPLE_TEXT[id13] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+						originalText matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id14] occurrences matches {0..1} matches {	-- Municipio
+				value matches {
+					CV[id20] occurrences matches {0..1} matches {	-- CV
+						codingSchemeName matches {"SubsetMunicipiosSNS"}
+					}
+				}
+			}
+			ELEMENT[id16] occurrences matches {0..1} matches {	-- Provincia
+				value matches {
+					SIMPLE_TEXT[id17] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+						originalText matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id18] occurrences matches {0..1} matches {	-- Pais
+				value matches {
+					SIMPLE_TEXT[id19] occurrences matches {0..1} 	-- Nombre del pais
+				}
+			}
+			ELEMENT[id15] occurrences matches {0..1} matches {	-- Teléfono
+				value matches {
+					URI[id21] occurrences matches {0..1} matches {	-- URI
+						value matches {/.*/}
+						scheme matches {"telephone"}
+					}
+				}
+			}
+			ELEMENT[id22] occurrences matches {0..1} matches {	-- Dirección Web
+				value matches {
+					URI[id23] occurrences matches {0..1} matches {	-- URI
+						value matches {/.*/; ""}
+						scheme matches {"http"}
+					}
+				}
+			}
+			ELEMENT[id24] occurrences matches {0..1} matches {	-- Correo Electrónico
+				value matches {
+					URI[id25] occurrences matches {0..1} matches {	-- URI
+						value matches {/.*/; ""}
+						scheme matches {"mailto"}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Dirección ">
+				description = <"Direccion">
+			>
+			["id2"] = <
+				text = <"Tipo de vía">
+				description = <"">
+			>
+			["id3"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"Nombre de la vía">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id6"] = <
+				text = <"Número de la vía">
+				description = <"">
+			>
+			["id7"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id8"] = <
+				text = <"Piso">
+				description = <"">
+			>
+			["id9"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id10"] = <
+				text = <"Letra">
+				description = <"">
+			>
+			["id11"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id12"] = <
+				text = <"Código Postal">
+				description = <"">
+			>
+			["id13"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id14"] = <
+				text = <"Municipio">
+				description = <"">
+			>
+			["id16"] = <
+				text = <"Provincia">
+				description = <"">
+			>
+			["id17"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id18"] = <
+				text = <"Pais">
+				description = <"">
+			>
+			["id19"] = <
+				text = <"Nombre del pais">
+				description = <"">
+			>
+			["id20"] = <
+				text = <"CV">
+				description = <"">
+			>
+			["id15"] = <
+				text = <"Teléfono">
+				description = <"">
+			>
+			["id21"] = <
+				text = <"URI">
+				description = <"">
+			>
+			["id22"] = <
+				text = <"Dirección Web">
+				description = <"">
+			>
+			["id23"] = <
+				text = <"URI">
+				description = <"">
+			>
+			["id24"] = <
+				text = <"Correo Electrónico">
+				description = <"">
+			>
+			["id25"] = <
+				text = <"URI">
+				description = <"">
+			>
+		>
+	>

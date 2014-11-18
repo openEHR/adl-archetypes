@@ -1,0 +1,151 @@
+archetype (adl_version=2.0.5; rm_release=1.0.0; generated)
+	CEN-EN13606-ENTRY.ProfesionalSanitario.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- ProfesionalSanitario
+		items matches {
+			ELEMENT[id2] occurrences matches {1} matches {	-- Nombre
+				value matches {
+					SIMPLE_TEXT[id3] occurrences matches {1} matches {	-- SIMPLE_TEXT
+						originalText matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id4] occurrences matches {1} matches {	-- Primer apellido
+				value matches {
+					SIMPLE_TEXT[id5] occurrences matches {1} matches {	-- SIMPLE_TEXT
+						originalText matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Segundo apellido
+				value matches {
+					SIMPLE_TEXT[id8] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+						originalText matches {/.*/}
+					}
+				}
+			}
+			ELEMENT[id7] occurrences matches {0..1} matches {	-- Número Identificación
+				value matches {
+					SIMPLE_TEXT[id11] occurrences matches {0..1} 	-- SIMPLE_TEXT
+					II[id12] occurrences matches {0..1} 	-- II
+				}
+			}
+			ELEMENT[id13] occurrences matches {0..1} matches {	-- Número colegiado
+				value matches {
+					SIMPLE_TEXT[id14] occurrences matches {0..1} 	-- SIMPLE_TEXT
+					II[id15] occurrences matches {0..1} 	-- II
+				}
+			}
+			ELEMENT[id16] occurrences matches {0..1} matches {	-- Especialidad
+				value matches {
+					CODED_TEXT[id19] occurrences matches {0..1} matches {	-- Descripción de la especialidad
+						originalText 
+						codedValue 
+					}
+				}
+			}
+			ELEMENT[id9] occurrences matches {0..1} matches {	-- Categoria profesional
+				value matches {
+					CODED_TEXT[id20] occurrences matches {0..1} matches {	-- Descripción de la categoría profesional
+						codedValue 
+						originalText 
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"ProfesionalSanitario">
+				description = <"ProfesionalSanitario">
+			>
+			["id2"] = <
+				text = <"Nombre">
+				description = <"">
+			>
+			["id3"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"Primer apellido">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id6"] = <
+				text = <"Segundo apellido">
+				description = <"">
+			>
+			["id8"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id9"] = <
+				text = <"Categoria profesional">
+				description = <"">
+			>
+			["id7"] = <
+				text = <"Número Identificación">
+				description = <"">
+			>
+			["id11"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id12"] = <
+				text = <"II">
+				description = <"">
+			>
+			["id13"] = <
+				text = <"Número colegiado">
+				description = <"">
+			>
+			["id14"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id15"] = <
+				text = <"II">
+				description = <"">
+			>
+			["id16"] = <
+				text = <"Especialidad">
+				description = <"">
+			>
+			["id19"] = <
+				text = <"Descripción de la especialidad">
+				description = <"">
+			>
+			["id20"] = <
+				text = <"Descripción de la categoría profesional">
+				description = <"">
+			>
+		>
+	>

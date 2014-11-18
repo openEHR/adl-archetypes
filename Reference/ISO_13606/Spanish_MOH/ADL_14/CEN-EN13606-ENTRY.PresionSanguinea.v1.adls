@@ -1,0 +1,142 @@
+archetype (adl_version=2.0.5; rm_release=1.0.0; generated)
+	CEN-EN13606-ENTRY.PresionSanguinea.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	ENTRY[id1] occurrences matches {1} matches {	-- Presión sanguínea
+		items matches {
+			CLUSTER[id9] occurrences matches {0..1} matches {	-- Medida de presión sanguínea
+				parts cardinality matches {2..4; ordered; unique} matches {
+					ELEMENT[id2] occurrences matches {1} matches {	-- Sistólica
+						value existence matches {1} matches {
+							PQ[id6] occurrences matches {1} matches {	-- Medida sistólica
+								units existence matches {1} matches {
+									CS[id10] occurrences matches {0..1} matches {	-- CS
+										codeValue matches {"mm[Hg]"}
+										codingSchemeName matches {"UCUM"}
+									}
+								}
+								value existence matches {1} matches {|0.0..<1000.0|}
+							}
+						}
+					}
+					ELEMENT[id3] occurrences matches {1} matches {	-- Diastólica
+						value existence matches {1} matches {
+							PQ[id7] occurrences matches {1} matches {	-- Medida diastólica
+								units existence matches {1} matches {
+									CS[id11] occurrences matches {0..1} matches {	-- CS
+										codeValue matches {"mm[Hg]"}
+										codingSchemeName matches {"UCUM"}
+									}
+								}
+								value existence matches {1} matches {|0.0..<1000.0|}
+							}
+						}
+					}
+					ELEMENT[id4] occurrences matches {0..1} matches {	-- Presión arterial media
+						value matches {
+							PQ[id8] occurrences matches {1} matches {	-- Media de medidas
+								units existence matches {1} matches {
+									CS[id12] occurrences matches {0..1} matches {	-- CS
+										codeValue matches {"mm[Hg]"}
+										codingSchemeName matches {"UCUM"}
+									}
+								}
+								value existence matches {1} matches {|0.0..750.0|}
+							}
+						}
+					}
+					ELEMENT[id5] occurrences matches {0..1} matches {	-- Posición
+						value matches {
+							SIMPLE_TEXT[id13] occurrences matches {0..1} matches {	-- Posición
+								originalText matches {"Standing", "Sitting", "Reclining", "Lying"}
+							}
+						}
+					}
+				}
+				structure_type matches {
+					CS[id15] occurrences matches {1} matches {
+						codeValue matches {"STRC01"}
+						codingSchemeName matches {"CEN/TC251/EN13606-3:STRUCTURE_TYPE"}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Presión sanguínea">
+				description = <"La medida por cualquier método (invasivo o no invasivo) de la presión arterial sistémica que se considera que representa la presion sanguínea sistémica real">
+			>
+			["id2"] = <
+				text = <"Sistólica">
+				description = <"Objeto de tipo ELEMENT">
+			>
+			["id3"] = <
+				text = <"Diastólica">
+				description = <"Objeto de tipo ELEMENT">
+			>
+			["id4"] = <
+				text = <"Presión arterial media">
+				description = <"Objeto de tipo ELEMENT">
+			>
+			["id5"] = <
+				text = <"Posición">
+				description = <"Objeto de tipo ELEMENT">
+			>
+			["id6"] = <
+				text = <"Medida sistólica">
+				description = <"Objeto de tipo PQ">
+			>
+			["id7"] = <
+				text = <"Medida diastólica">
+				description = <"Objeto de tipo PQ">
+			>
+			["id8"] = <
+				text = <"Media de medidas">
+				description = <"Objeto de tipo PQ">
+			>
+			["id10"] = <
+				text = <"CS">
+				description = <"Objeto de tipo CS">
+			>
+			["id11"] = <
+				text = <"CS">
+				description = <"Objeto de tipo CS">
+			>
+			["id12"] = <
+				text = <"CS">
+				description = <"Objeto de tipo CS">
+			>
+			["id13"] = <
+				text = <"Posición">
+				description = <"Objeto de tipo SIMPLE_TEXT">
+			>
+			["id9"] = <
+				text = <"Medida de presión sanguínea">
+				description = <"Objeto de tipo CLUSTER">
+			>
+		>
+	>

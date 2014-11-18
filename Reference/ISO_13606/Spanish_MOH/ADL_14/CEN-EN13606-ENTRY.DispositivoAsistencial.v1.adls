@@ -1,5 +1,5 @@
 archetype (adl_version=2.0.5; rm_release=1.0.0; generated)
-	CEN-EN13606-ENTRY.Farmacia.v1.0.0
+	CEN-EN13606-ENTRY.DispositivoAsistencial.v1.0.0
 
 language
 	original_language = <[ISO_639-1::es]>
@@ -22,19 +22,12 @@ description
 	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
 
 definition
-	ENTRY[id1] occurrences matches {1} matches {	-- Farmacia
+	ENTRY[id1] occurrences matches {1} matches {	-- Dispositivo Asistencial
 		items matches {
-			ELEMENT[id2] occurrences matches {0..1} matches {	-- NIF/CIF
+			ELEMENT[id2] occurrences matches {1} matches {	-- Nombre del dispositivo asistencial
 				value matches {
 					SIMPLE_TEXT[id3] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
-						originalText matches {/.*/}
-					}
-				}
-			}
-			ELEMENT[id4] occurrences matches {0..1} matches {	-- Nombre
-				value matches {
-					SIMPLE_TEXT[id5] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
-						originalText matches {/.*/}
+						originalText matches {"Centro de Salud", "Hospital", "Urgencias Hospitalarias", "Urgencias Extrahospitalarias", "Centro Sociosanitario", "Otros"}
 					}
 				}
 			}
@@ -45,22 +38,14 @@ terminology
 	term_definitions = <
 		["es"] = <
 			["id1"] = <
-				text = <"Farmacia">
-				description = <"Farmacia">
+				text = <"Dispositivo Asistencial">
+				description = <"Dispositivo Asistencial">
 			>
 			["id2"] = <
-				text = <"NIF/CIF">
+				text = <"Nombre del dispositivo asistencial">
 				description = <"">
 			>
 			["id3"] = <
-				text = <"SIMPLE_TEXT">
-				description = <"">
-			>
-			["id4"] = <
-				text = <"Nombre">
-				description = <"">
-			>
-			["id5"] = <
 				text = <"SIMPLE_TEXT">
 				description = <"">
 			>

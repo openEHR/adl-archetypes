@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.0; generated)
 	CEN-EN13606-ENTRY.HallazgoPruebaImagen.v1.0.0
 
 language
@@ -18,7 +18,7 @@ description
 			keywords = <"CMDIC", ...>
 		>
 	>
-	lifecycle_state = <"unstable">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
 
 definition
@@ -29,7 +29,7 @@ definition
 			}
 			CLUSTER[id6] occurrences matches {0..1} matches {	-- Hallazgos negativos
 				parts matches {
-					ELEMENT[id9] occurrences matches {0..*} matches {	-- Información sobre el hallazgo negativo
+					ELEMENT[id9] matches {	-- Información sobre el hallazgo negativo
 						value matches {
 							CODED_TEXT[id16] occurrences matches {0..1} matches {	-- CODED_TEXT
 								codedValue 
@@ -47,7 +47,7 @@ definition
 			}
 			CLUSTER[id21] occurrences matches {0..1} matches {	-- Comparaciones con estudios previso
 				parts matches {
-					ELEMENT[id24] occurrences matches {0..*} matches {	-- Comparación
+					ELEMENT[id24] matches {	-- Comparación
 						value matches {
 							CODED_TEXT[id26] occurrences matches {0..1} matches {	-- CODED_TEXT
 								codedValue 
@@ -65,7 +65,7 @@ definition
 			}
 			CLUSTER[id27] occurrences matches {0..1} matches {	-- Limitaciones diagnósticas
 				parts matches {
-					ELEMENT[id30] occurrences matches {0..*} matches {	-- Limitación
+					ELEMENT[id30] matches {	-- Limitación
 						value matches {
 							CODED_TEXT[id4] occurrences matches {0..1} matches {	-- CODED_TEXT
 								codedValue 

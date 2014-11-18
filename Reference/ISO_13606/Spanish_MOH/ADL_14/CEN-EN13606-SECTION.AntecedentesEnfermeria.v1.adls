@@ -1,0 +1,209 @@
+archetype (adl_version=2.0.5; rm_release=1.0.0; generated)
+	CEN-EN13606-SECTION.AntecedentesEnfermeria.v1.0.0
+
+language
+	original_language = <[ISO_639-1::es]>
+
+description
+	original_author = <
+		["email"] = <"jamaldo@upv.es">
+		["name"] = <"Grupo de Informática Médica (IBIME)">
+		["organisation"] = <"Universitat Politècnica de Valencia">
+		["date"] = <"20131108">
+	>
+	details = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"???">
+			keywords = <"CMDIC", ...>
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
+
+definition
+	SECTION[id1] occurrences matches {1} matches {	-- Antecedentes Enfermeria
+		members matches {
+			SECTION[id2] occurrences matches {0..1} matches {	-- Enfermedades Previas
+				members matches {
+					ENTRY[id29] matches {	-- Enfermedad Previa
+						items matches {
+							ELEMENT[id37] occurrences matches {0..1} matches {	-- Descripción enfermedad
+								value matches {
+									SIMPLE_TEXT[id38] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+										originalText matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			SECTION[id3] occurrences matches {0..1} matches {	-- Intervenciones quirúrgicas
+				members matches {
+					ENTRY[id4] matches {	-- Intervención quirúrgica
+						items cardinality matches {0..1; unordered; unique} matches {
+							ELEMENT[id5] occurrences matches {0..1} matches {	-- Descripción
+								value matches {
+									SIMPLE_TEXT[id6] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+										originalText matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			SECTION[id7] occurrences matches {0..1} matches {	-- Tratamientos farmacológicos
+				members matches {
+					ENTRY[id8] matches {	-- Tratamiento farmacológico
+						items matches {
+							ELEMENT[id9] occurrences matches {0..1} matches {	-- Descripción
+								value matches {
+									SIMPLE_TEXT[id10] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+										originalText matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			SECTION[id15] occurrences matches {0..1} matches {	-- Alergias
+				members matches {
+					allow_archetype ENTRY[id16] matches {	-- Alergia
+						include
+							archetype_id/value matches {/CEN-EN13606-ENTRY.Alergia.v1/}
+					}
+				}
+			}
+			SECTION[id21] occurrences matches {0..1} matches {	-- Actuaciones preventivas
+				members matches {
+					ENTRY[id22] matches {	-- Actuación preventiva
+						items matches {
+							ELEMENT[id23] occurrences matches {0..1} matches {	-- Descripción
+								value matches {
+									SIMPLE_TEXT[id24] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+										originalText matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			SECTION[id33] occurrences matches {0..1} matches {	-- Factores personales, familiares, sociales, cultuales y laborales destacables
+				members matches {
+					ENTRY[id34] matches {	-- Antecedente social y profesional
+						items matches {
+							ELEMENT[id35] occurrences matches {0..1} matches {	-- Descripción
+								value matches {
+									SIMPLE_TEXT[id36] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+										originalText matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["es"] = <
+			["id1"] = <
+				text = <"Antecedentes Enfermeria">
+				description = <"Antecedentes enfermeria">
+			>
+			["id3"] = <
+				text = <"Intervenciones quirúrgicas">
+				description = <"">
+			>
+			["id4"] = <
+				text = <"Intervención quirúrgica">
+				description = <"">
+			>
+			["id5"] = <
+				text = <"Descripción">
+				description = <"">
+			>
+			["id6"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id7"] = <
+				text = <"Tratamientos farmacológicos">
+				description = <"">
+			>
+			["id8"] = <
+				text = <"Tratamiento farmacológico">
+				description = <"">
+			>
+			["id9"] = <
+				text = <"Descripción">
+				description = <"">
+			>
+			["id10"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id15"] = <
+				text = <"Alergias">
+				description = <"">
+			>
+			["id16"] = <
+				text = <"Alergia">
+				description = <"">
+			>
+			["id21"] = <
+				text = <"Actuaciones preventivas">
+				description = <"Vacunaciones y su estado">
+			>
+			["id22"] = <
+				text = <"Actuación preventiva">
+				description = <"">
+			>
+			["id23"] = <
+				text = <"Descripción">
+				description = <"">
+			>
+			["id24"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id33"] = <
+				text = <"Factores personales, familiares, sociales, cultuales y laborales destacables">
+				description = <"El conjunto de factores reseñados se refiere a aquellos elementos (personales, familiares, sociales o profesionales) que, formando parte de su entorno, pueden influir o condicionar la evolución de su estado de salud. Tienen cabida también aquellos acontecimientos puntuales (pérdida de familiar, evento laboral,…) que puedan influir en su respuesta ante diferentes situaciones de salud">
+			>
+			["id34"] = <
+				text = <"Antecedente social y profesional">
+				description = <"">
+			>
+			["id35"] = <
+				text = <"Descripción">
+				description = <"">
+			>
+			["id36"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+			["id2"] = <
+				text = <"Enfermedades Previas">
+				description = <"">
+			>
+			["id29"] = <
+				text = <"Enfermedad Previa">
+				description = <"">
+			>
+			["id37"] = <
+				text = <"Descripción enfermedad">
+				description = <"">
+			>
+			["id38"] = <
+				text = <"SIMPLE_TEXT">
+				description = <"">
+			>
+		>
+	>

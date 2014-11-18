@@ -1,5 +1,5 @@
 archetype (adl_version=2.0.5; rm_release=1.0.0; generated)
-	CEN-EN13606-ENTRY.Farmacia.v1.0.0
+	CEN-EN13606-ENTRY.Procedimiento.v1.0.0
 
 language
 	original_language = <[ISO_639-1::es]>
@@ -22,18 +22,12 @@ description
 	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
 
 definition
-	ENTRY[id1] occurrences matches {1} matches {	-- Farmacia
+	ENTRY[id1] occurrences matches {1} matches {	-- Procedimiento
 		items matches {
-			ELEMENT[id2] occurrences matches {0..1} matches {	-- NIF/CIF
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Descripción del procedimiento
 				value matches {
-					SIMPLE_TEXT[id3] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
-						originalText matches {/.*/}
-					}
-				}
-			}
-			ELEMENT[id4] occurrences matches {0..1} matches {	-- Nombre
-				value matches {
-					SIMPLE_TEXT[id5] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
+					CODED_TEXT[id3] occurrences matches {0..1} matches {	-- CODED_TEXT
+						codedValue 
 						originalText matches {/.*/}
 					}
 				}
@@ -45,23 +39,15 @@ terminology
 	term_definitions = <
 		["es"] = <
 			["id1"] = <
-				text = <"Farmacia">
-				description = <"Farmacia">
+				text = <"Procedimiento">
+				description = <"Los sistemas de codificación serán sustituidos por versiones posteriores ai así se acordara en el Consejo interterritorial del SNS">
 			>
 			["id2"] = <
-				text = <"NIF/CIF">
-				description = <"">
+				text = <"Descripción del procedimiento">
+				description = <"Descripción textual o codificada del procedimiento">
 			>
 			["id3"] = <
-				text = <"SIMPLE_TEXT">
-				description = <"">
-			>
-			["id4"] = <
-				text = <"Nombre">
-				description = <"">
-			>
-			["id5"] = <
-				text = <"SIMPLE_TEXT">
+				text = <"CODED_TEXT">
 				description = <"">
 			>
 		>

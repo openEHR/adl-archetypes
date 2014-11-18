@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.0; generated)
 	CEN-EN13606-ENTRY.HistoriaActual.v1.0.0
 
 language
@@ -18,13 +18,13 @@ description
 			keywords = <"CMDIC", ...>
 		>
 	>
-	lifecycle_state = <"unstable">
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
 
 definition
 	ENTRY[id1] occurrences matches {1} matches {	-- HistoriaActual
 		items matches {
-			CLUSTER[id4] occurrences matches {0..*} matches {	-- Anotación de la historia actual
+			CLUSTER[id4] matches {	-- Anotación de la historia actual
 				parts matches {
 					ELEMENT[id7] occurrences matches {0..1} matches {	-- Descripción
 						value matches {

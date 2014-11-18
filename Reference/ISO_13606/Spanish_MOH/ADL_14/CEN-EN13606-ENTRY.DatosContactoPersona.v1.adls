@@ -1,5 +1,5 @@
 archetype (adl_version=2.0.5; rm_release=1.0.0; generated)
-	CEN-EN13606-ENTRY.Farmacia.v1.0.0
+	CEN-EN13606-ENTRY.DatosContactoPersona.v1.0.0
 
 language
 	original_language = <[ISO_639-1::es]>
@@ -22,19 +22,13 @@ description
 	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
 
 definition
-	ENTRY[id1] occurrences matches {1} matches {	-- Farmacia
+	ENTRY[id1] occurrences matches {1} matches {	-- Datos básicos de contacto
 		items matches {
-			ELEMENT[id2] occurrences matches {0..1} matches {	-- NIF/CIF
+			ELEMENT[id4] matches {	-- teléfono de contacto
 				value matches {
-					SIMPLE_TEXT[id3] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
-						originalText matches {/.*/}
-					}
-				}
-			}
-			ELEMENT[id4] occurrences matches {0..1} matches {	-- Nombre
-				value matches {
-					SIMPLE_TEXT[id5] occurrences matches {0..1} matches {	-- SIMPLE_TEXT
-						originalText matches {/.*/}
+					URI[id6] occurrences matches {0..1} matches {	-- URI
+						value matches {/.*/; ""}
+						scheme matches {"telephone"}
 					}
 				}
 			}
@@ -45,23 +39,19 @@ terminology
 	term_definitions = <
 		["es"] = <
 			["id1"] = <
-				text = <"Farmacia">
-				description = <"Farmacia">
+				text = <"Datos básicos de contacto">
+				description = <"DatosDeReferenciaPaciente">
 			>
-			["id2"] = <
-				text = <"NIF/CIF">
-				description = <"">
-			>
-			["id3"] = <
-				text = <"SIMPLE_TEXT">
+			["at2"] = <
+				text = <"nombre de persona">
 				description = <"">
 			>
 			["id4"] = <
-				text = <"Nombre">
+				text = <"teléfono de contacto">
 				description = <"">
 			>
-			["id5"] = <
-				text = <"SIMPLE_TEXT">
+			["id6"] = <
+				text = <"URI">
 				description = <"">
 			>
 		>
