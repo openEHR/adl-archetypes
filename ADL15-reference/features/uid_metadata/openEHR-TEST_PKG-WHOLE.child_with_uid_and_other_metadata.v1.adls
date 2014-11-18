@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; uid=15E82D77-7DB7-4F70-8D8E-EED6FF241B2D; child_flag=true; some_key=some_replacement_value; child_key=xxxxx)
+archetype (adl_version=2.0.5; rm_release=1.0.2; uid=15E82D77-7DB7-4F70-8D8E-EED6FF241B2D; child_flag=true; some_key=some_replacement_value; child_key=xxxxx)
 	openehr-TEST_PKG-WHOLE.child_with_uid_and_other_metadata.v1.0.0
 
 specialize
