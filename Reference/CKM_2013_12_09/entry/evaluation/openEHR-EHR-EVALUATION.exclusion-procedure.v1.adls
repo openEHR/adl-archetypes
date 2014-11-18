@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.exclusion-procedure.v1.0.0
 
 specialize

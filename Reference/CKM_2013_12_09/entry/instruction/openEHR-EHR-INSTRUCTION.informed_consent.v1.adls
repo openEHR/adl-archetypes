@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-INSTRUCTION.informed_consent.v1.0.0
 
 language
@@ -34,7 +34,7 @@ definition
 	INSTRUCTION[id1] matches {	-- Informed Consent Request
 		activities matches {
 			ACTIVITY[id3] occurrences matches {0..1} matches {	-- Current Activity
-				action_archetype_id matches {/openEHR-EHR-ACTION\\.informed_consent\\.v1/}
+				action_archetype_id matches {/openEHR-EHR-ACTION\.informed_consent\.v1/}
 				description matches {
 					ITEM_TREE[id4] matches {
 						items matches {

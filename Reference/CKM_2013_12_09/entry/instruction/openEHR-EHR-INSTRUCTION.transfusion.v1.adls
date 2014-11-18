@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-INSTRUCTION.transfusion.v1.0.0
 
 language
@@ -43,7 +43,7 @@ definition
 	INSTRUCTION[id1] matches {	-- Instructions for transfusion
 		activities matches {
 			ACTIVITY[id2] occurrences matches {0..1} matches {	-- new activity
-				action_archetype_id matches {/transfusion\\.v1draft/}
+				action_archetype_id matches {/transfusion\.v1draft/}
 				description matches {
 					ITEM_TREE[id3] matches {
 						items matches {
