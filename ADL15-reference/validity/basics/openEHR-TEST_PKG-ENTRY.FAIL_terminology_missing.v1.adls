@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=1.5.1; rm_release=1.0.2)
 	openEHR-TEST_PKG-ENTRY.FAIL_terminology_missing.v1.0.0
 
 language
@@ -17,7 +17,7 @@ description
 		>
 	>
 	other_details = <
-		["regression"] = <"FAIL">
+		["regression"] = <"SADF">
 	>
 	lifecycle_state = <"draft">
 

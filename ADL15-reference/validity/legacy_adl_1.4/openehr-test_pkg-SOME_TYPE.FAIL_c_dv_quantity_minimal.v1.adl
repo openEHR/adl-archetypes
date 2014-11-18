@@ -16,7 +16,7 @@ description
 		>
 	>
 	other_details = <
-		["regression"] = <"FAIL">
+		["regression"] = <"SDINV">
 	>
 	lifecycle_state = <"draft">
 

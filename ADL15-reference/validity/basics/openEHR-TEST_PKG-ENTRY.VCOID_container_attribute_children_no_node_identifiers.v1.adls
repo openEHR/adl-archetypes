@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=1.5.1; rm_release=1.0.2)
 	openEHR-TEST_PKG-ENTRY.VCOID_container_attribute_children_no_node_identifiers.v1
 
 language
