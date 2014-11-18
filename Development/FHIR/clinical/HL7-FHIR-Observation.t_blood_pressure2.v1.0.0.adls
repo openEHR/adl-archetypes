@@ -1,4 +1,4 @@
-template (adl_version=1.5.1)
+template (adl_version=2.0.5; rm_release=0.8.3)
 	HL7-FHIR-Observation.t_blood_pressure2.v1.0.0
 
 specialize
@@ -16,13 +16,13 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Version of BP that uses 'contained' to represent substructure inline">
-			copyright = <"Copyright (c) 2012 openEHR Foundation ">
 		>
 	>
 	lifecycle_state = <"unmanaged">
+	copyright = <"Copyright (c) 2012 openEHR Foundation ">
 
 definition
-	Observation[id1.1.1]
+	Observation[id1.1.1] 	-- Blood pressure containment template
 
 terminology
 	term_definitions = <

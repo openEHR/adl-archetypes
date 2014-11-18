@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.5; rm_release=0.8.3)
 	HL7-FHIR-Observation.blood_pressure_protocol_instrument.v1.0.0
 
 specialize
@@ -16,10 +16,10 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"???">
-			copyright = <"Copyright (c) 2012 openEHR Foundation ">
 		>
 	>
 	lifecycle_state = <"unmanaged">
+	copyright = <"Copyright (c) 2012 openEHR Foundation ">
 
 definition
 	Observation[id1.1] matches {	-- BP instrument

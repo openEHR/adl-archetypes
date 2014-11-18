@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.5; rm_release=0.8.3)
 	HL7-FHIR-Observation.blood_pressure2.v1.0.0
 
 specialize
@@ -16,10 +16,10 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Version of BP that uses 'contained' to represent substructure inline">
-			copyright = <"Copyright (c) 2012 openEHR Foundation ">
 		>
 	>
 	lifecycle_state = <"unmanaged">
+	copyright = <"Copyright (c) 2012 openEHR Foundation ">
 
 definition
 	Observation[id1.1] matches {	-- Blood pressure
@@ -43,6 +43,18 @@ terminology
 			["id1.1"] = <
 				text = <"Blood pressure">
 				description = <"Blood pressure measurement">
+			>
+			["id14.1"] = <
+				text = <"Blood pressure protocol">
+				description = <"Blood pressure protocol">
+			>
+			["id14.2"] = <
+				text = <"Blood pressure state">
+				description = <"Blood pressure state">
+			>
+			["id14.3"] = <
+				text = <"Blood pressure data">
+				description = <"Blood pressure data">
 			>
 		>
 	>
