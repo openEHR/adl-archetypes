@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1)
+archetype (adl_version=2.0.5; rm_release=0.9.0)
 	CDISC-Bridg-PerformedObservation.observation.v1.0.0
 
 language
@@ -16,10 +16,10 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Example CDISC archetype representing vital sign observation">
 			keywords = <"Observation", ...>
-			copyright = <"© 2014 CDISC.org">
 		>
 	>
 	lifecycle_state = <"unmanaged">
+	copyright = <"© 2014 CDISC.org">
 
 definition
 	PerformedObservation[id1] matches {	-- BRIDG observation
