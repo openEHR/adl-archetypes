@@ -1,4 +1,4 @@
-template_overlay (adl_version=1.5.1)
+template_overlay (adl_version=1.5.1; rm_release=1.0.2)
 	openEHR-DEMOGRAPHIC-ADDRESS.t_address_ds.v1.0.0
 
 specialize
