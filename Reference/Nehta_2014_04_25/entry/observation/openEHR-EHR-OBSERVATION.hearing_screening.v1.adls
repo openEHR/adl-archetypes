@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.hearing_screening.v1.0.0
 
 language
@@ -36,7 +36,6 @@ Not to be used to record other auditory assessments such as:
 - Transient Evoked Otoacoustic Emission (TEOAE); and
 - Distortion Product Otoacoustic Emission (DPOAE).
 These assessments need to be recorded in specific archetypes for the purpose.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -46,6 +45,7 @@ These assessments need to be recorded in specific archetypes for the purpose.">
 		["references"] = <"Sabini P, Sclafani AP. Efficacy of serologic testing in asymmetric sensorineural hearing loss. Otolaryngol Head Neck Surg. 2000 Apr;122(4):469-76. PubMed PMID: 10740163.">
 		["MD5-CAM-1.0.1"] = <"FD8EE8563850DEC7497FE23AC0411E8B">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Hearing Screening Result

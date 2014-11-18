@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.therapeutic_precautions.v1.0.0
 
 language
@@ -18,13 +18,13 @@ description
 			use = <"For managing the list of adverse reactions, allergies, intolerances etc that will influence or preclude use of therapies.">
 			keywords = <"allergy list", "contraindications", "intolerance">
 			misuse = <"Only use for agreed archetypes to express these precautions.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"71D63B1E8B45D999A4E914D34826C366">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	COMPOSITION[id1] matches {	-- Therapeutic precautions

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.provisional_diagnosis.v1.0.0
 
 language
@@ -22,7 +22,6 @@ This archetype is purposefully designed as a separate concept to the Problem/Dia
 			misuse = <"Not to be used to record a confirmed diagnosis. Use EVALUATION.problem_diagnosis instead.
 
 Not to be used within persisting and long-term Problem lists.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ Not to be used within persisting and long-term Problem lists.">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"0983E720F62F548A418D09784CB6D6A0">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1] matches {	-- Provisional Diagnosis

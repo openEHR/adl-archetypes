@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.body_weight.v1.0.0
 
 language
@@ -59,7 +59,6 @@ Usada para gravar a mudança de peso, ou seja, qualquer perda ou ganho de peso. 
 			misuse = <"Não deve ser utilizado para gravar o primeiro peso de um bebê logo após o nascimento, que é designado como o seu 'peso' - use a especialização de seu nascimento arquétipo OBSERVATION.body_weight-birth.
 Não deve ser usado para registrar o peso do corpo ajustado por exemplo, um cálculo do peso de corpo inteiro de uma pessoa com amputação de membros, com base em medições de outro corpo e um algoritmo -OBSERVATION.body_weight-adjusted.
 Não deve ser usado para registrar o peso de um objeto ou parte do corpo.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -71,7 +70,6 @@ Der Archetyp kann auch benutzt werden, um eine Schätzung des Körpergewichts zu
 			misuse = <"Nicht zur Dokumentation des ersten Gewichts eines Neugeboren (Geburtsgewicht) - benutzen Sie hierzu den spezialisierten Archetyp OBSERVATION.body_weight-birth.
 Nicht zur Dokumentation des angepassten Körpergewichts, z.B. eine Berechnung des vollständigen Körpergewichts bei einer Person mit amputierter Extremität auf Basis der anderen Körperteile und eines Algorithmus - benutzen Sie OBSERVATION.body_weight-adjusted.
 Nicht zur Dokumentation eines Objekts oder eines Teils des Körpers.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -87,7 +85,6 @@ Birthweight (that is the first weight measured in close proximity to the time of
 			misuse = <"Not to be used to record the first weight of an infant soon after birth which is designated as their 'birth weight' - use the specialisation of this archetype OBSERVATION.body_weight-birth.
 Not to be used to record the adjusted body weight eg a calculation of the full body weight of a person with limb amputation, based on other body part measurements and an algorithm - use OBSERVATION.body_weight-adjusted.
 Not to be used to record the weight of an object or body part.">
-			copyright = <"© openEHR">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -102,7 +99,6 @@ Not to be used to record the weight of an object or body part.">
 			misuse = <"Не использовать для записи первого веса младенца после рождение, которое обозначено как 'вес при рождении' - использовать специализацию этого архетипа OBSERVATION.body_weight-birth. 
 Не использовать для записи массы тела человека с протезами / приспособлениями для вычисление полной массы тела человека с ампутацией, основанной на других измерениях и алгоритме  - использовать архетип OBSERVATION.body_weight-adjusted.
 Не использовать, чтобы сделать запись веса части тела или объекта.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -116,7 +112,6 @@ Dient te worden gebruikt om gewichtsverandering op te slaan, zowel gewichtsverli
 			misuse = <"Dient niet te worden gebruikt voor het registreren van het eerste gewicht van een kind, na geboorte, welke wordt aangewezen als geboortegewicht. Gebruik hiervoor de specialisatie van dit archetype, OBSERVATION.body_weight-birth (OBSERVATION.lichaamsgewicht-geboorte.
 Dient niet te worden gebruikt voor het registreren van het aangepaste lichaamsgewicht, bijvoorbeeld een berekening van het volledige lichaamsgewicht van een persoon met een amputatie van ledematen, gebaseerd op metingen van lichaamsdelen en een algoritme - gebruik hiervoor OBSERVATION.body_weight-adjusted. (OBSERVATION.lichaamsgewicht-aangepast).
 Dient niet te worden gebruikt voor het vastleggen van het gewicht van een object of lichaamsdeel.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -127,6 +122,7 @@ Dient niet te worden gebruikt voor het vastleggen van het gewicht van een object
 openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Published OBSERVATION archetype] Body Weight; [authored 2006 Mar 09, cited 2011 Aug 19]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.132_11.">
 		["MD5-CAM-1.0.1"] = <"0E55BCBA9A89E127038C1A2B7FB38E77">
 	>
+	copyright = <"© openEHR">
 
 definition
 	OBSERVATION[id1] matches {	-- Body Weight

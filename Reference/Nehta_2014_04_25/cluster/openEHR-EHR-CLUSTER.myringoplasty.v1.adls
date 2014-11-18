@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.myringoplasty.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"Use to record details about the myringplasty performed.">
 			keywords = <"myringoplasty", "procedure", "operation">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"Northern Territory Government, Department of Health: Northern Territory Hearing Health Program ENT Pre-Op & Surgical Procedure Form.">
 		["MD5-CAM-1.0.1"] = <"4FC066090A0C7A5E57B532BA41A49EA0">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1] matches {	-- Myringoplasty Procedure

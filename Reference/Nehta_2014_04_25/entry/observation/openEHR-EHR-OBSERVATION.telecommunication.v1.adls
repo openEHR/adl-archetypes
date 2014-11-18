@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.telecommunication.v1.0.0
 
 language
@@ -20,7 +20,6 @@ description
 The record of interaction may take place over a specified interval of time.">
 			keywords = <"chat", "videoconference", "audioconference", "conversation", "discussion", "teleconference", "telehealth", "telecommunication">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -29,6 +28,7 @@ The record of interaction may take place over a specified interval of time.">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"734C3E7875AD042679AA171B1AB01631">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Telecommunication Record

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-ACTION.procedure.v1.0.0
 
 language
@@ -41,7 +41,6 @@ Recording information using this ACTION archetype indicates that some sort of ac
 			misuse = <"Not to be used to record details about related activities such as use of imaging guidance during the procedure or collection of tissue samples for analysis - use specific ACTION archetypes for this purpose.
 
 Not to be used to record a whole operation or procedure report.">
-			copyright = <"© 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -49,6 +48,7 @@ Not to be used to record a whole operation or procedure report.">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"E5A1E33897CAD2386B16AD3AE60D16A0">
 	>
+	copyright = <"© 2011 NEHTA">
 
 definition
 	ACTION[id1] matches {	-- Procedure

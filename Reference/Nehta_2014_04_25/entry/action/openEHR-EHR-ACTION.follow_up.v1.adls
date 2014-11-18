@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-ACTION.follow_up.v1.0.0
 
 language
@@ -22,7 +22,6 @@ To record the activity related to a service request by a subject/patient to a he
 Use to record the activity related to a service request by a subject/patient to a healthcare provider to receive a specific service, advice, or care provision.">
 			keywords = <"referral", "visit", "encounter", "follow-up", "follow", "review", "recall">
 			misuse = <"">
-			copyright = <"© N© Northern Territory Department of Health, Australia">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -31,6 +30,7 @@ Use to record the activity related to a service request by a subject/patient to 
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"C34FBDD40813CE8E7EC5E16DD097C0AA">
 	>
+	copyright = <"© N© Northern Territory Department of Health, Australia">
 
 definition
 	ACTION[id1] matches {	-- Follow up Service

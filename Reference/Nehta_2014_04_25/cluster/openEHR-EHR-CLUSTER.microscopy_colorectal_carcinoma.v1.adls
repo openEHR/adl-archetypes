@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.microscopy_colorectal_carcinoma.v1.0.0
 
 language
@@ -20,7 +20,6 @@ Use as a component archetype in the context of a suite of archetypes that make u
 i.e. OBSERVATION.lab_test.histopathology and CLUSTER.macroscopy.colorectal_carcinoma.">
 			keywords = <"histopathology", "cancer", "laboratory", "lab", "malignancy", "pathology", "colonic", "rectal", "anal", "GI", "gastrointestinal", "bowel">
 			misuse = <"Not designed to be used within any other archetype other than OBSERVATION.lab_test.histopathology.">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -39,6 +38,7 @@ Available from: http://www.rcpa.edu.au//static/File/Asset%20library/public%20doc
 ">
 		["MD5-CAM-1.0.1"] = <"45150B03A2A6EFB7E8B8B329C55E4A3E">
 	>
+	copyright = <"copyright (c) 2010 openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Microscopic findings - Colorectal cancer

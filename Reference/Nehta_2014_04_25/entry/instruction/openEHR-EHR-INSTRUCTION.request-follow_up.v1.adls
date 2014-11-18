@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-INSTRUCTION.request-follow_up.v1.0.0
 
 specialize
@@ -23,7 +23,6 @@ description
 This archetype has been modelled specifically to ensure that requests for clinical follow-up can be semantically distinguished from other healthcare service requests in order support monitoring within the context of a care plan or similar care pathway.">
 			keywords = <"request", "refer", "order", "service", "provide", "follow", "follow-up", "recall">
 			misuse = <"">
-			copyright = <"© Northern Territory Department of Health, Australia">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -32,6 +31,7 @@ This archetype has been modelled specifically to ensure that requests for clinic
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"30081125A2D45E89874A8EB1A9E4F818">
 	>
+	copyright = <"© Northern Territory Department of Health, Australia">
 
 definition
 	INSTRUCTION[id1.1] matches {	-- Follow Up Request

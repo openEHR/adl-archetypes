@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.timing.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"For use with medication orders and other instructions where timing is complex and needs to be computable.">
 			keywords = <"timing", "administration", "dosing", "frequency">
 			misuse = <"Not to be used for specific timing but for scheduling of tasks that need repeating.">
-			copyright = <"copyright (c) 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"F470047D6FF9DF0B7EFC836E7C793A8D">
 	>
+	copyright = <"copyright (c) 2011 NEHTA">
 
 definition
 	CLUSTER[id1] matches {	-- Timing

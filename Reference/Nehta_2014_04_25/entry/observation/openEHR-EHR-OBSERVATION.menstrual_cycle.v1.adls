@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.menstrual_cycle.v1.0.0
 
 language
@@ -22,7 +22,6 @@ Use to record details about the typical, or average, menstrual pattern over mult
 Use some of the elements to record details about menstrual bleeding and associated symptoms on a single day eg as part of a menstrual diary - using the 'Specific day in a cycle' event.">
 			keywords = <"menstruation", "menses", "cycle", "menstrual">
 			misuse = <"">
-			copyright = <"© 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ Use some of the elements to record details about menstrual bleeding and associat
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"B7786879AA9DC4660960E6877E4D4B54">
 	>
+	copyright = <"© 2011 NEHTA">
 
 definition
 	OBSERVATION[id1] matches {	-- Menstrual cycle

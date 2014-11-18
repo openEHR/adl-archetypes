@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.rinne_weber_result.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"Use to record the results of the Rinne and Weber tests as part of screening for hearing loss.">
 			keywords = <"rinne", "weber", "test", "result", "air", "bone", "conduction", "lateralisation", "lateralization">
 			misuse = <"Not to be used to record the results of other hearing tests. Use other OBSERVATION archetypes specific for the purpose, for example, OBSERVATION.audiometry_result and OBSERVATION.tympanogram_226hz.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"E4452413C8C5DA6FAD4CA3542E145C65">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Rinne and Weber Test Results

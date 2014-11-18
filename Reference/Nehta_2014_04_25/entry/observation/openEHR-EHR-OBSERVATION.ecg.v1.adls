@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.ecg.v1.0.0
 
 language
@@ -28,7 +28,6 @@ description
 			keywords = <"مُخَطَّط كهربية القلب", "عملية تخطيط كهربية القلب", "12 اتجاه">
 			misuse = <"لا يستخدم لتسجيل الاتجهات غير العيارية لتخطيط كهربية القلب.
 لا يستخدم لتسجيل مِرقَب /مِنطَر هولتر.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -40,7 +39,6 @@ Use to record details of ECGs performed during exercise conditions and stress te
 			misuse = <"Not to be used for recordings with non-standard ECG leads.
 
 Not to be used for recording Holter monitor results.">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -50,6 +48,7 @@ Not to be used for recording Holter monitor results.">
 ECG recording, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 18 Jul 2007. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.276 (accessed 31 Jan 2013).">
 		["MD5-CAM-1.0.1"] = <"E72B21EBA4B0389D573AD6A5EA5EF91D">
 	>
+	copyright = <"© openEHR">
 
 definition
 	OBSERVATION[id1] matches {	-- ECG recording

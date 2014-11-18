@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.fluid_input.v1.0.0
 
 language
@@ -36,7 +36,6 @@ A fluid balance chart will typically require a combination of OBSERVATION.fluid_
 Not to be used to record fluid output. Use OBSERVATION.fluid_output for this purpose.
 
 Not to be used to record fluid balance calculations. Use OBSERVATION.fluid_balance for this purpose.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["sl"] = <
 			language = <[ISO_639-1::sl]>
@@ -50,7 +49,6 @@ May also be used to record descriptive assessments of input.
 (en)">
 			keywords = <"*fluid(en)", "*fluid balance(en)", "*input output(en)", "*io(en)", "*input(en)">
 			misuse = <"*Do not use as a primary record of the administration of fluids e.g intravascular, dialyisis. May be used alongside administration recrods ,normally an ACTION.(en)">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -59,6 +57,7 @@ May also be used to record descriptive assessments of input.
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"A5C8CEE87902DE504CA80CEB87EFE328">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Fluid Input

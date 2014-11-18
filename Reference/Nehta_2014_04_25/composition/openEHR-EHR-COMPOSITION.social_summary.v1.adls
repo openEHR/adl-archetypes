@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.social_summary.v1.0.0
 
 language
@@ -32,7 +32,6 @@ The intent of this COMPOSITION is for use as a persistent summary, however it ha
 Initial design of this archetype was funded by the Hearing Health project, Northern Territory, Australia.">
 			keywords = <"social", "family", "education", "occupation", "environment", "housing", "finances">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -40,6 +39,7 @@ Initial design of this archetype was funded by the Hearing Health project, North
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"7AED75B8F5E4C8FFE8881F343C581DD6">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	COMPOSITION[id1] matches {	-- Social Summary

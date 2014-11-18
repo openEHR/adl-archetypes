@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.oedema.v1.0.0
 
 language
@@ -18,13 +18,13 @@ description
 			use = <"To be included in an entry archetype that identifies the object of examination.">
 			keywords = <"oedema", "swelling">
 			misuse = <"">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"98AEF38521DA14C24F20F011BB901D39">
 	>
+	copyright = <"© openEHR">
 
 definition
 	CLUSTER[id1] matches {	-- Oedema

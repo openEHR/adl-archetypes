@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.reason_for_encounter.v1.0.0
 
 language
@@ -26,7 +26,6 @@ Chief Complaint is another phrase in common usage. In effect it is probably a ty
 			misuse = <"Not to be used to record specific details of the patient's story or history of symptoms. Use OBSERVATION.story to capture the narrative and the related nested CLUSTER archetypes for structured content eg CLUSTER.symptom, CLUSTER.event and CLUSTER.issue.
 
 Not to be used to record specific diagnosis details that may be required in addition to a Reason for Encounter eg Admission or Pre-operative Diagnosis as part of admission for a hospital procedure. Use the EVALUATION.problem_diagnosis (and related specialisations) for this purpose.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -37,6 +36,7 @@ Not to be used to record specific diagnosis details that may be required in addi
 Pearce C, Trumble S, Arnold M, Dwan K, Phillips C. Computers in the new consultation: within the first minute. Fam Pract. 2008 Jun;25(3):202-8. doi: 10.1093/fampra/cmn018. Epub 2008 May 25. PubMed PMID: 18504254. Available at: http://fampra.oxfordjournals.org/cgi/content/abstract/25/3/202 (accessed 19 Dec 2012).">
 		["MD5-CAM-1.0.1"] = <"0B6F41110A13A439D6CD4EC775B5D222">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1] matches {	-- Reason for Encounter

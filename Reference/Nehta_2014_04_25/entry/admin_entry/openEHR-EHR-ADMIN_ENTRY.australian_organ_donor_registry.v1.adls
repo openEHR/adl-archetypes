@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-ADMIN_ENTRY.australian_organ_donor_registry.v1.0.0
 
 language
@@ -18,13 +18,13 @@ description
 			use = <"Use to record or update information about an individual's organ and tissue donation decisions within the Australian Organ Donor Register (AODR).">
 			keywords = <"organ", "donation", "register", "tissue">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"98D3E4B591FBE2275D5063724E7246E8">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	ADMIN_ENTRY[id1] matches {	-- Australian Organ Donor Registration

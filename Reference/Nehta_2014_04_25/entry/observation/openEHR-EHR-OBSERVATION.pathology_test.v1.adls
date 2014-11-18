@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.pathology_test.v1.0.0
 
 language
@@ -32,7 +32,6 @@ Not to be used to record an Autopsy report, although tests on some specimens tha
 This archetype is suitable for representation of general pathology test results, but not intended to cover full synoptic reports. For these, additional specialising archetypes are required to represent the data.
 
 This archetype has been designed to support clinical pathology and may not be appropriate for other kinds of pathology use.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -45,6 +44,7 @@ Laboratory Technical Framework, Volume 3: Content, Revision 3.0 [Internet]. USA:
 		["original_publisher"] = <"National E-Health Transition Authority, Australia">
 		["MD5-CAM-1.0.1"] = <"94BA5388DCDE3EF2E3DDB61238DE1B1B">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Pathology Test Result

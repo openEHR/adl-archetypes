@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-ACTION.imaging_exam.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"Use to record activity regarding the performance of imaging examinations.">
 			keywords = <"Radiology", "Ultrasound", "MRI", "CT", "scan", "tomography">
 			misuse = <"">
-			copyright = <"© 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"B0B81B487EFAE113C50A83795C834E0D">
 	>
+	copyright = <"© 2011 NEHTA">
 
 definition
 	ACTION[id1] matches {	-- Imaging examination

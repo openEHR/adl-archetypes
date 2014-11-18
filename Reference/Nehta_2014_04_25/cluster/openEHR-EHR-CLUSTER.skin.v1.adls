@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.skin.v1.0.0
 
 language
@@ -21,7 +21,6 @@ This archetype is designed to be used in SLOTs within clinically appropriate OBS
 
 Inspection of the skin is assumed to be done using direct visualisation. If a device is used, it should be recorded as part of the method of examination in the ENTRY archetype - for example, the OBSERVATION.exam family of archetypes.">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -31,6 +30,7 @@ Inspection of the skin is assumed to be done using direct visualisation. If a de
 		["references"] = <"Direct communications with clinical domain experts.">
 		["MD5-CAM-1.0.1"] = <"B01EE71FA3E00BFDA06A04F994729EA9">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1] matches {	-- Skin

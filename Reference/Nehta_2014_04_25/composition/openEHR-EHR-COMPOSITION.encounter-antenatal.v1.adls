@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.encounter-antenatal.v1.0.0
 
 specialize
@@ -21,13 +21,13 @@ description
 			use = <"">
 			keywords = <"progress", "note", "encounter">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"373B9A1ADDDC76A61996608ADA6ABCE5">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	COMPOSITION[id1.1] matches {	-- Antenatal Visit

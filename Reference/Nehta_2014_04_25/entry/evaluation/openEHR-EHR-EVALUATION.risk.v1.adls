@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.risk.v1.0.0
 
 language
@@ -27,7 +27,6 @@ description
 			use = <"">
 			keywords = <"Einschätzung", ...>
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -35,7 +34,6 @@ description
 			use = <"Use to record known risk factors for an identified disease, condition, or other potentially adverse health issue , and/or an evaluation of the likelihood of the subject experiencing it in the future.">
 			keywords = <"assessment", "risk", "evaluation">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -45,6 +43,7 @@ description
 		["references"] = <"Evaluation of Risk of Condition, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 23 Apr 2006. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.176_1 (accessed 05 Apr 2013).">
 		["MD5-CAM-1.0.1"] = <"B9BBB477E18D173E98717653D9FFC6DC">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1] matches {	-- Health Risk

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.report-result.v1.0.0
 
 specialize
@@ -33,7 +33,6 @@ description
 و قد تم تعمد جعل مُكَوِّن المقاطع غير مقيد للوصول إلى الحد الأقصى لإعادة استخدام هذا النموذج.">
 			keywords = <"تقرير", ...>
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -45,7 +44,6 @@ The Context component contains an optional unnamed slot that can be used to:
 The Sections component has been deliberately left unconstrained to maximise re-use of this archetype.">
 			keywords = <"report", "test", "result", "diagnostic", "audiogram", "tympanogram", "audiometry", "tympanography">
 			misuse = <"">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -54,6 +52,7 @@ The Sections component has been deliberately left unconstrained to maximise re-u
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"B5D462F35C25C47965DCD2DB991D7B48">
 	>
+	copyright = <"© openEHR">
 
 definition
 	COMPOSITION[id1.1] 	-- Result Report

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.lifestyle_factors.v1.0.0
 
 language
@@ -30,7 +30,6 @@ The intent of this COMPOSITION is for use as a persistent summary, however it ha
 Initial design of this archetype was funded by the iCareNet Antenatal Shared Care Plan project, Northern Territory, Australia.">
 			keywords = <"life", "style", "lifestyle", "risk", "factor", "tobacco", "smoking", "alcohol", "binge", "diet", "exercise">
 			misuse = <"Not to record a series of OBSERVATIONS about current activity, such as might be used to create a daily diary of alcohol consumption or activity in a specific exercise session.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -38,6 +37,7 @@ Initial design of this archetype was funded by the iCareNet Antenatal Shared Car
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"0C3687008B1556F62DA2D79F91C3E138">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	COMPOSITION[id1] matches {	-- Lifestyle Factors

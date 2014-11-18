@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.housing.v1.0.0
 
 language
@@ -20,7 +20,6 @@ description
 Specifically designed to be used within the EVALUATION.social_summary archetype, but may be used within any clinically appropriate ENTRY or CLUSTER archetype related to recording social context.">
 			keywords = <"housing", "accommodation", "residential care", "home", "house", "apartment", "homeless", "rent", "owner">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -29,6 +28,7 @@ Specifically designed to be used within the EVALUATION.social_summary archetype,
 		["references"] = <"METeOR (Metadata Online Registry) [Internet]. Australia: Australian Institute of Health and Welfare. Person—accommodation type (usual). Available from: http://meteor.aihw.gov.au/content/index.phtml/itemId/270088 (accessed 2013 Mar 01).">
 		["MD5-CAM-1.0.1"] = <"42D547BE4291C4A78FB9979FEC4C7ED4">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1] matches {	-- Housing

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.physical_activity_summary.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"Use to record a summary of physical activity.">
 			keywords = <"activity", "exercise", "physical", "fitness">
 			misuse = <"Not to be used to record diary-like observations of physical activity.">
-			copyright = <"© 2010 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"15C7F35E9D2AD0CDFABFDCFE27D29573">
 	>
+	copyright = <"© 2010 NEHTA">
 
 definition
 	EVALUATION[id1] matches {	-- Physical Activity Summary

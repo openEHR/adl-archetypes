@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.respiration.v1.0.0
 
 language
@@ -62,7 +62,6 @@ Respirations should be measured before feeds in neonates and young infants.">
 			misuse = <"Not to be used to try to record other details of the full respiratory examination or assessment.  Other specific archetypes will be used to record characteristics such as respiratory effort, auscultatory findings etc.
 
 Not to be used to record details when the subject is undergoing assisted ventilation.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -76,7 +75,6 @@ Las respiraciones deberían ser medidas antes de las comidas en neonatos e infan
 			misuse = <"No usar para intentar registrar otros aspectos del exámen respiratorio en general. Otros arquetipos específicos serán utilizados para registrar características tales como esfuerzo respiratorio, hallazgos auscultatorios, etc.
 
 No usar para registrar detalles cuando el paciente está en ventilación asistida.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -84,7 +82,6 @@ No usar para registrar detalles cuando el paciente está en ventilación asistid
 			use = <"">
 			keywords = <"Atmung", "Respiration">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["fa"] = <
 			language = <[ISO_639-1::fa]>
@@ -98,7 +95,6 @@ No usar para registrar detalles cuando el paciente está en ventilación asistid
 			misuse = <"برای ثبت سایر جنبه های آزمایشات یا ارزیابی گسترده تر تنفسی استفاده نمی شود.
 از سایر الگوسازهای تخصصی برای ثبت ویژگی هایی نظیر تلاش برای تنفس،یافته های شنیداری و غیره استفاده نمایید.
 برای ثبت جزییات در زمانی که فرد تحت تنفس مصنوعی است استفاده نکنید .  ">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -111,7 +107,6 @@ No usar para registrar detalles cuando el paciente está en ventilación asistid
 			keywords = <"*respirations(en)", "*breathing(en)", "*breath(en)", "*resps(en)", "*respiration(en)">
 			misuse = <"لا يمكن استخدام النموذج لمحاولة تسجيل الجوانب الأخرى من الفحص أو التقييم التنفسي أشمل. يمكن استخدام نماذج أخرى مخصصة لتسجيل الخصائص من المجهود التنفسي و الموجودات التسمعية, إلى آخره
  لا يستخدم لتسجيل تفاصيل حالة المنريض إذا كان يخضع للتهوية المساعَدة">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -126,7 +121,6 @@ De ademhaling moet bij neonaten en jonge kinderen gemeten worden voor de voeding
 
 Niet te gebruiken voor de registratie van details, als de persoon beademing ondergaat.
 ">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -144,6 +138,7 @@ Wikipedia contributors. Biot's respiration [Internet]. Wikipedia, The Free Encyc
 Wikipedia contributors. Apneustic respirations [Internet]. Wikipedia, The Free Encyclopedia; 2011 Oct 15 [cited 2013 Feb 21].  Available from: http://en.wikipedia.org/wiki/Apneustic_respirations.">
 		["MD5-CAM-1.0.1"] = <"C1F63B69ABB8EC1D830EE2D2AD190E26">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Respiration

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.anatomical_location.v1.0.0
 
 language
@@ -22,7 +22,6 @@ Examples of use:
 - Use within EVALUATION.adverse_reaction to record Anatomical Location details within the 'Additional Reaction Detail' slot.">
 			keywords = <"location", "site", "anatomical", "structure", "area">
 			misuse = <"Not for specifiying unilateral/bilateral occurrence of a health condition or diagnosis - this is an evaluative statement.">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -48,6 +47,7 @@ Examples of use:
 - medial aspect of R great toe nail.">
 		["MD5-CAM-1.0.1"] = <"ABE2EBFBA88F794273B956613748E3E5">
 	>
+	copyright = <"© openEHR">
 
 definition
 	CLUSTER[id1] matches {	-- Anatomical Location

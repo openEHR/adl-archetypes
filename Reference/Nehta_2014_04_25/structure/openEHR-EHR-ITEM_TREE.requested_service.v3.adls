@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-ITEM_TREE.requested_service.v3.0.0
 
 language
@@ -17,7 +17,6 @@ description
 			purpose = <"Describes the types of service requested for, or provided to, the subject of care.">
 			use = <"">
 			misuse = <"Used to specify medication prescriptions or diagnostic test requests.">
-			copyright = <"© 2010 National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 		["references"] = <"">
 		["base_exist_collection"] = <"/db/nehta/ndsm/dev/data/requested_service_structure/v3_0/draft_007">
 	>
+	copyright = <"© 2010 National E-Health Transition Authority">
 
 definition
 	ITEM_TREE[id1] matches {	-- Requested Service

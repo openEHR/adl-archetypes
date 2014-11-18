@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-INSTRUCTION.request.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"Use to record a request for any or all healthcare services.">
 			keywords = <"request", "refer", "order", "service", "provide">
 			misuse = <"">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"B2C6812BCC7159150644F8604477C827">
 	>
+	copyright = <"© openEHR">
 
 definition
 	INSTRUCTION[id1] matches {	-- Healthcare service request

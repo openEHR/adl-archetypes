@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-INSTRUCTION.request-pathology_test.v1.0.0
 
 specialize
@@ -22,7 +22,6 @@ description
 If there are more specific details about the test and/or specimen include this information in more detailed CLUSTER archetypes appropriate for the purpose.">
 			keywords = <"request", "refer", "order", "service", "provide", "laboratory", "pathology", "microbiology", "haematology", "diagnostic">
 			misuse = <"">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ If there are more specific details about the test and/or specimen include this i
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"43C7B3E22BF23A6BB8F11BDE74E32BE5">
 	>
+	copyright = <"© openEHR">
 
 definition
 	INSTRUCTION[id1.1] matches {	-- PathologyTest Request

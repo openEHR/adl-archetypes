@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.pregnancy.v1.0.0
 
 language
@@ -36,7 +36,6 @@ Not to be used to record detailed information about a woman's Menstrual Cycle - 
 Not to be used to record detailed information about infant feeding - a separate archetype will be used.
 
 Not to be used to record a general menstrual history summary or diary - separate archetypes will be used.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -51,6 +50,7 @@ Northern Territory Government, Department of Health. Pregnancy Health Record. HM
 Queensland Government, Department of Health. Pregnancy Health Record. SW071 - v1.00 - 06/2010.">
 		["MD5-CAM-1.0.1"] = <"0EC7115921EFBF5F4814DB74456A1254">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1] matches {	-- Pregnancy Summary

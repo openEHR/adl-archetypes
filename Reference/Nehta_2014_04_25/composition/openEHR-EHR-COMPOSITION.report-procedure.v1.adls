@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.report-procedure.v1.0.0
 
 specialize
@@ -25,7 +25,6 @@ The Context component contains an optional unnamed slot that can be used to:
 The Sections component has been deliberately left unconstrained to maximise re-use of this archetype.">
 			keywords = <"report", "procedure", "operation">
 			misuse = <"">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -34,6 +33,7 @@ The Sections component has been deliberately left unconstrained to maximise re-u
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"A158BB6DE8284F674B65C6D6C0BC5345">
 	>
+	copyright = <"© openEHR">
 
 definition
 	COMPOSITION[id1.1] 	-- Procedure Report

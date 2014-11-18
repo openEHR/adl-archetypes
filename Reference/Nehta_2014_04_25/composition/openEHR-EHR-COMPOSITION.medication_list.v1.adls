@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.medication_list.v1.0.0
 
 language
@@ -33,7 +33,6 @@ In order for this list to be accurate and safe to use as the basis for decision 
 			misuse = <"Not to be used to record non-persisting Medication Lists.
 
 Not to be used to record vaccinations administered.">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -43,6 +42,7 @@ Not to be used to record vaccinations administered.">
 		["references"] = <"Medication List, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 06 Nov 2006. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.286_5 (accessed 14 Mar 2013).">
 		["MD5-CAM-1.0.1"] = <"97B6899EA00EBED30CCE883E100CBFD4">
 	>
+	copyright = <"© openEHR">
 
 definition
 	COMPOSITION[id1] matches {	-- Medication List

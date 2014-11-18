@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.obstetric_history.v1.0.0
 
 language
@@ -18,13 +18,13 @@ description
 			use = <"To record all persistent data about pregnancies and a summary statement of all past and current pregnancies.">
 			keywords = <"obstetric", "summary", "history">
 			misuse = <"Not to be used to record event data relating to a pregnancy.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"BDA392E2FE39808A65BDCA96E526DB14">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	COMPOSITION[id1] matches {	-- Obstetric history

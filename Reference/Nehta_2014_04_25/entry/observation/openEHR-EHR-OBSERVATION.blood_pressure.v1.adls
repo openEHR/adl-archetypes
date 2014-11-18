@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.blood_pressure.v1.0.0
 
 language
@@ -64,7 +64,6 @@ description
 			use = <"*All blood pressure measurements are recorded using this archetype. There is a rich state model for use with exercise ECGs and Tilt Table measurements.(en)">
 			keywords = <"*observations(en)", "*blood pressure(en)", "*measurement(en)">
 			misuse = <"*Not to be used for intravascular pressure.(en)">
-			copyright = <"© 2011 NEHTA">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -76,7 +75,6 @@ Benannte Ereignisse wurden auf den 24-stündigen Durchschnitt beschränkt, jedoc
 			misuse = <"Nicht benutzen zur Dokumentation des intravenösen Drucks.
 Nicht benutzen zur Dokumentation des arteriellen Blutdrucks, welcher KEIN Surrogat für den arteriellen Druck in der systemischen Zirkluation ist, z.B. die spezifische Messung des rechten pulmonaren Arteriendrucks.
 In diesem Fall sollte der OBSERVATION.intravascular_pressure Archetyp bzw. dessen Spezialisierungen verwendet werden.">
-			copyright = <"© 2011 NEHTA">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -88,7 +86,6 @@ Named events have been limited to average over a 24 hour period, however templat
 			misuse = <"Not to be used for intravenous pressure.
 Not to be used for the measurement of arterial blood pressure which is NOT a surrogate for arterial pressure in the systemic circulation eg specific measurement of right Pulmonary artery pressure.  
 Use OBSERVATION.intravascular_pressure and related specialisations in both of these situations.">
-			copyright = <"© openEHR">
 		>
 		["fa"] = <
 			language = <[ISO_639-1::fa]>
@@ -104,7 +101,6 @@ Use OBSERVATION.intravascular_pressure and related specialisations in both of th
  و تخصص های مربوطه برای موارد بالا بکار رود\"OBSERVATION.intravascular_pressure\"
  
 ">
-			copyright = <"© 2011 NEHTA">
 		>
 		["ja"] = <
 			language = <[ISO_639-1::ja]>
@@ -112,7 +108,6 @@ Use OBSERVATION.intravascular_pressure and related specialisations in both of th
 			use = <"このアーキタイプを使って測定されるすべての血圧が記録される。運動負荷心電図やティルト台での測定にも利用できる豊かなステートモデルがある。">
 			keywords = <"観察", "血圧", "測定">
 			misuse = <"血管内圧のためには使用されない">
-			copyright = <"© 2011 NEHTA">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -125,7 +120,6 @@ Genoemde gebeurtenissen zijn gelimiteerd tot een gemiddelde over een periode van
 			misuse = <"Niet te gebruiken voor intraveneuze druk.
 Niet te gebruiken voor de meting van de arteriele bloeddruk welke geen surrogaat is voor de arteriele druk in de systemische circulatie, bv de specifieke meting van de rechter arterie pulmonalis druk.
 Gebruik OBSERVATION.intravascular_pressure en gerelateerde specialisaties in beide situaties.">
-			copyright = <"© 2011 NEHTA">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -138,7 +132,6 @@ Gebruik OBSERVATION.intravascular_pressure en gerelateerde specialisaties in bei
 Не следует использовать для измерения артериального давления, которое не является суррогатом артериального давления в системном кровотоке, например, конкретные измерения давления в легочной артерии.
 Использовать OBSERVATION.intravascular_pressure и смежных специальностей в обоих этих ситуациях.
 ">
-			copyright = <"© 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -149,6 +142,7 @@ Gebruik OBSERVATION.intravascular_pressure en gerelateerde specialisaties in bei
 Perloff D, Grim C, Flack J, Frohlich ED, Hill M, McDonald M, Morgenstern BZ. Human blood pressure determination by sphygmomanometry. Circulation [Internet]. 1993 [cited 2009 Jul 29] 88 (5): 2460.  Available from: http://circ.ahajournals.org/cgi/reprint/88/5/2460">
 		["MD5-CAM-1.0.1"] = <"F947256270B6FC14667B706F1202E606">
 	>
+	copyright = <"© openEHR">
 
 definition
 	OBSERVATION[id1] matches {	-- Blood Pressure

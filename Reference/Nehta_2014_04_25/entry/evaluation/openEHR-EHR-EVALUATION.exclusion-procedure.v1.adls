@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.exclusion-procedure.v1.0.0
 
 specialize
@@ -25,7 +25,6 @@ This detailed clinical model (DCM) has specifically been designed to avoid the n
 Exclusion statements can only be considered to be current and accurate at the time of recording. For example: exclusion of appendicectomy during a consultation or emergency room visit for abdominal pain is only relevant at the time of recording and is effectively obsolete if the subsequent diagnosis is appendicitis and an appendicectomy performed.">
 			keywords = <"exclusion", "procedure", "intervention", "operation", "surgery">
 			misuse = <"Not to be used to record exclusion statements about adverse reactions, medications, problems or diagnoses - use other specific specialisations of the EVALUATION.exclusion archetype for these purposes.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -34,6 +33,7 @@ Exclusion statements can only be considered to be current and accurate at the ti
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"12E2B6EA2E7499F0426A728E646AA7EF">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1.1] matches {	-- Exclusion of a Procedure

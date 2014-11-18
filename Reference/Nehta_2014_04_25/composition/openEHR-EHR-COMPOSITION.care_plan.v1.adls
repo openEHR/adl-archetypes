@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.care_plan.v1.0.0
 
 language
@@ -24,7 +24,6 @@ This includes:
 This archetype may contain combinations of planned activities, activies that are in progress or have been carried out, goals/objectives, targets, and recommendations.">
 			keywords = <"care plan", "plan", "care management plan", "management plan">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -33,6 +32,7 @@ This archetype may contain combinations of planned activities, activies that are
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"46640DC609733D4FF248B3AA5F447061">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	COMPOSITION[id1] matches {	-- Care Plan

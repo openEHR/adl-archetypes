@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.exposure.v1.0.0
 
 language
@@ -20,7 +20,6 @@ description
 This archetype has been designed primarily to capture a simple amount of details about exposure, fitting current requirements for NT Hearing Health exposure to passive smoking, campfire smoke and noise. However additional research should be conducted to enhance this archetype to cater for the detailed occupation exposure summaries etc.">
 			keywords = <"substance", "chemical", "smoke", "passive", "noise", "pollution", "chemical">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -28,6 +27,7 @@ This archetype has been designed primarily to capture a simple amount of details
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"7FB94B15875E8FE55D23F3FF5BFBE06E">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1] matches {	-- Exposure

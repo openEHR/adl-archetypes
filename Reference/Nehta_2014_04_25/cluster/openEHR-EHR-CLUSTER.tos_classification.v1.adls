@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.tos_classification.v1.0.0
 
 language
@@ -22,7 +22,6 @@ Designed to be optionally nested within the CLUSTER.exam_tympanic_membrane arche
 This archetype extends the Tos Classification to allow recording of Tos Grade 5 which is described in some documentation but is not described in the original paper and appears not to be in common usage.">
 			keywords = <"retraction", "tympanic", "membrane", "pars flaccida", "attic", "drum">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -32,6 +31,7 @@ This archetype extends the Tos Classification to allow recording of Tos Grade 5 
 		["references"] = <"Tos M, Poulsen G. Attic retractions following secretory otitis. Acta Otolaryngol. 1980 May-Jun;89(5-6):479-86. PubMed PMID: 7192477.">
 		["MD5-CAM-1.0.1"] = <"F07FDE315EF59CEC985A58611D8695C6">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1] matches {	-- Tos Classification

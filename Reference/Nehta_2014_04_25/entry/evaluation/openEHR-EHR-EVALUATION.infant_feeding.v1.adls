@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.infant_feeding.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"Use to record a ummary of early infant feeding activity, particularly focused on breast and formula feeding.">
 			keywords = <"breast", "feeding", "infant", "formula", "bottle", "fed", "wean">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"B1983AADD117554525074928574C545E">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1] matches {	-- Infant Feeding Summary

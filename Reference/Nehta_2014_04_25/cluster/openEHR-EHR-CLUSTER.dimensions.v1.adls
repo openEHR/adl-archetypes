@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.dimensions.v1.0.0
 
 language
@@ -26,7 +26,6 @@ description
 			use = <"">
 			keywords = <"Größe", "Volumen">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -34,13 +33,13 @@ description
 			use = <"Use as a re-useable cluster in Entry archetypes and other cluster archetypes that record measurment of body parts.">
 			keywords = <"size", "volume", "area", "width", "length">
 			misuse = <"">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"B14424CBA9C103AF726A1081BCA771B4">
 	>
+	copyright = <"© openEHR">
 
 definition
 	CLUSTER[id1] matches {	-- Dimensions

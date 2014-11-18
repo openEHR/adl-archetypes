@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.social_summary.v1.0.0
 
 language
@@ -25,7 +25,6 @@ The use of the term 'social summary' varies enormously in practice. This archety
 ">
 			keywords = <"social", "family", "education", "occupation", "environment", "housing", "finances">
 			misuse = <"Not to be used to record Lifestyle-related information - for example, use specific archetypes for alcohol, tobacco and other substance use; diet and nutrition; and physical activity.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -33,6 +32,7 @@ The use of the term 'social summary' varies enormously in practice. This archety
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"26339FEE3762D9D94C08ADC70F9ADA49">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1] matches {	-- Social Summary

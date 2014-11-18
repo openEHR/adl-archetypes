@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.adverse_reaction.v1.0.0
 
 language
@@ -48,7 +48,6 @@ Not to be used for recording that no information was able to be obtained about t
 Not to be used to record adverse events, including failures of clinical process, interventions or products. For example: abnormal use or mistakes/errors made in administration of an agent or substance; mislabelling; harm or injury caused by an intervention or procedure; overdose etc.
 
 Not to be used for recording alerts.">
-			copyright = <"© 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -77,6 +76,7 @@ Thien FC. Drug hypersensitivity. Med J Aust. 2006 Sep 18;185(6):333-8. Review. P
 		["original_publisher"] = <"National E-Health Transition Authority, Australia">
 		["MD5-CAM-1.0.1"] = <"CC3A7234A2EE34E76E5AA02CED6F6737">
 	>
+	copyright = <"© 2011 NEHTA">
 
 definition
 	EVALUATION[id1] matches {	-- Adverse Reaction

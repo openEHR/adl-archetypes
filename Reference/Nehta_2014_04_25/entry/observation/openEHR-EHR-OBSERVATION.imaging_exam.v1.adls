@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.imaging_exam.v1.0.0
 
 language
@@ -27,7 +27,6 @@ Will normally be reported back to the requesting clinician as one component with
 Not to be used to record details about any parallel procedure undertaken. Use the specific procedure-related archetypes, for example ACTION.procedure.
 
 Not to be used to record details about medications administered during the imaging test. Use specific medication-related archetypes, for example ACTION.medication.">
-			copyright = <"© 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -42,6 +41,7 @@ Radiology Written Report Guidelin Project (Draft Consultation); December 2010.
 Diagnostic Imaging data specifications; NEHTA, version 1.0, 2007 Jun 29.">
 		["MD5-CAM-1.0.1"] = <"9AA60A1CDC0B2755C4E5F1BD477ABCDE">
 	>
+	copyright = <"© 2011 NEHTA">
 
 definition
 	OBSERVATION[id1] matches {	-- Imaging examination result

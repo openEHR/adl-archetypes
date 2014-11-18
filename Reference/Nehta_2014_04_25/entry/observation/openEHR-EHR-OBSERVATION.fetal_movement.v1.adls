@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.fetal_movement.v1.0.0
 
 language
@@ -32,7 +32,6 @@ Use to record details of the number of fetal movements felt over a specified tim
 			misuse = <"Not to be used to record the response of a fetus to deliberate stimulation eg vibroacoustic stimulation.
 
 Not to be used to represent formal fetal heart rate monitoring eg using cardiotocographs.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["es-cl"] = <
 			language = <[ISO_639-1::es-cl]>
@@ -53,7 +52,6 @@ Use to record details of the number of fetal movements felt over a specified tim
 			misuse = <"Not to be used to record the response of a fetus to deliberate stimulation eg vibroacoustic stimulation.
 
 Not to be used to represent formal fetal heart rate monitoring eg using cardiotocographs.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -62,6 +60,7 @@ Not to be used to represent formal fetal heart rate monitoring eg using cardioto
 		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft archetype] Movement of the Fetus; [authored 2007 Mar 04, cited 2011 May 24]. Available from : http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.216_1.">
 		["MD5-CAM-1.0.1"] = <"CC19AA3EF7BDA9587B8E2EA6C055978F">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Fetal Movement

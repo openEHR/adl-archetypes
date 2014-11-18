@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-ACTION.medication.v1.0.0
 
 language
@@ -22,7 +22,6 @@ Such a record may be made to indicate the administration of a dose, dispensing o
 There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.">
 			keywords = <"medication", "prescibe", "dispense", "administration", "cessation", "therapeutic good", "supply">
 			misuse = <"Use when recording an instruction or order (use INSTRUCTION.medication).">
-			copyright = <"© 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -32,6 +31,7 @@ There is a date and time at which this ACTION took place (as there is for all AC
 openEHR Medication Action archetype http://openehr.org/knowledge">
 		["MD5-CAM-1.0.1"] = <"4DDF2F7915943B33274665A3A074D7A3">
 	>
+	copyright = <"© 2011 NEHTA">
 
 definition
 	ACTION[id1] matches {	-- Medication action

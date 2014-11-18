@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.religion.v1.0.0
 
 language
@@ -19,13 +19,13 @@ description
 <NOTE: This archetype is expected to develop further and grow over time>.">
 			keywords = <"religion", "spiritual", "belief", "religious">
 			misuse = <"">
-			copyright = <"© 2010 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"ED7CA33D4079CE349BE813062A281FB8">
 	>
+	copyright = <"© 2010 NEHTA">
 
 definition
 	EVALUATION[id1] matches {	-- Religion

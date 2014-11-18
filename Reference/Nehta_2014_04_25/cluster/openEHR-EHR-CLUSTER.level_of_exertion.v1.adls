@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.level_of_exertion.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"Record information about phase and levels of exertion - to provide state/context information within OBSERVATIONS such as Blood Pressure.">
 			keywords = <"exercise", "work", "exertion", "activity", "energy">
 			misuse = <"Not to be used to record actual exercise activities and measurements which should be recorded as OBSERVATIONS in their own right.">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"Level of Exertion, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 27 Oct 2008. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.297 (accessed 21 Feb 3013).">
 		["MD5-CAM-1.0.1"] = <"362DEDF06B3E63F1CD7D4E24BCCEB2D9">
 	>
+	copyright = <"© openEHR">
 
 definition
 	CLUSTER[id1] matches {	-- Level of Exertion

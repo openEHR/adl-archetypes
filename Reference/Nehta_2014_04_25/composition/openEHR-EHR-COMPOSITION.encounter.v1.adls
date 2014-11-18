@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.encounter.v1.0.0
 
 language
@@ -17,13 +17,13 @@ description
 			use = <"For use to record when a person and clinician interact.">
 			keywords = <"progress", "note", "encounter">
 			misuse = <"">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"9D8A461C75C5B7C4EFCFF7D424261387">
 	>
+	copyright = <"© openEHR">
 
 definition
 	COMPOSITION[id1] matches {	-- Encounter

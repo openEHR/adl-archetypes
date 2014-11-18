@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.apgar.v1.0.0
 
 language
@@ -49,7 +49,6 @@ description
 			use = <"Permite registrar el bienestar del neonato al 1,2,5 y o 10 minutos después del nacimiento. Se puede registrar sólo el total - si es todo lo que está disponible - aúnque se deben completar los cinco valores númericos para que pueda ser calculado el total.  El total es la suma de los cinco valores númericos (el mínimo 0, el máximo 10).">
 			keywords = <"score", "apgar", "index", "recién nacido">
 			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
-			copyright = <"© 2011 NEHTA">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -62,7 +61,6 @@ Wenn der Gesamtwert errechnet werden soll, müssen Werte für alle 5 Komponenten
 Häufig werden mnemonische Merkhilfen für APGAR gelehrt. Z.B. in Englisch: A für Appearance (Hautfarbe), P für Pulse (Herzfrequenz), G für Grimace (Reflexauslösbarkeit), A für Activity (Muskeltonus), und R für Respiration (Atmung). Da dies nicht generell in allen Sprachen anwendbar ist, wird empfohlen, dass solche Merkhilfen durch Umbenennung innerhalb von Templates erstellt werden können, wenn dies für ein bestimmtes klinisches Szenario erwünscht ist.">
 			keywords = <"Neugeborenes", "Index", "Score", "Geburt", "Säugling", "neonatal", "Beurteilung">
 			misuse = <"">
-			copyright = <"© 2011 NEHTA">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -78,7 +76,6 @@ If the total is to be calculated, it is necessary for all 5 ordinal values to be
 It is recognised that mnemonic learning aid for APGAR is commonly taught.  For example, in English: A for Appearance (skin color), P for Pulse (heart rate), G for Grimace (reflex irritability), A for Activity (muscle tone), and R for Respiration.  As this is not universally applicable for all languages, it is suggested that this mnemonic can be applied by renaming the data elements within templates if desired for a specific clinical scenario.">
 			keywords = <"newborn", "index", "score", "birth", "infant", "neonate", "assessment", "Apgar", "baby">
 			misuse = <"">
-			copyright = <"© 2011 NEHTA">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -91,7 +88,6 @@ It is recognised that mnemonic learning aid for APGAR is commonly taught.  For e
 Если общая оценка считается, то необходимо записать все 5 обычно используемых признаков. Общая оценка получается суммированием 5 обычных значений (мин 0, макс 10).">
 			keywords = <"новорожденный", "оценка", "балл", "младенец", "оценка состояния">
 			misuse = <"">
-			copyright = <"© 2011 NEHTA">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -102,7 +98,6 @@ Algemeen klinische praktijk is om alle 5 parameters plus het totaal te registrer
 Erkend wordt dat er gewoonlijk een ezelsbruggetje word gebruikt bij het aanleren van de Apgar score. Bijvoorbeeld: Appearance (kleur), Pulse (hartslag), Grimace (reactie op prikkels), Activity (spiertonus) en Respiration (ademhaling). Dit is niet universeel bruikbaar voor alle talen, gesuggereerd wordt dat dit geheugensteuntje kan worden toegepast door het hernoemen van de data elementen binnen templates, indien gewenst voor een specifiek klinisch scenario.">
 			keywords = <"pasgeborene", "index", "score", "geboorte", "kind", "neonaat", "beoordeling", "baby">
 			misuse = <"">
-			copyright = <"© 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -121,6 +116,7 @@ http://en.wikipedia.org/wiki/Apgar_score
 Apgar score, published archetype, openEHR Foundation. “www.openEHR.org/knowledge.” openEHR Clinical Knowledge Manager. Authored: 06 May 2009. http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.172_10 (accessed May 31, 2011).">
 		["MD5-CAM-1.0.1"] = <"B5F002DA0EBFCE43780E1656946CE455">
 	>
+	copyright = <"© 2011 NEHTA">
 
 definition
 	OBSERVATION[id1] matches {	-- Apgar score

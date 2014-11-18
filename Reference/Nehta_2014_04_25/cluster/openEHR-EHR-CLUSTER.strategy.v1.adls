@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.strategy.v1.0.0
 
 language
@@ -20,7 +20,6 @@ description
 Designed to be used within the INSTRUCTION.request archetype, but may be used within any relevant archetype SLOT.">
 			keywords = <"strategy", "goal", "outcome", "request", "service">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -28,6 +27,7 @@ Designed to be used within the INSTRUCTION.request archetype, but may be used wi
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"3732BBE7E607AB1F45E4B5703081A195">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1] matches {	-- Proposed Strategy

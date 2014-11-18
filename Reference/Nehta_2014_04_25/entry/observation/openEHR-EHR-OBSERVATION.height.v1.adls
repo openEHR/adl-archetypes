@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.height.v1.0.0
 
 language
@@ -51,7 +51,6 @@ Idealiter wordt de hoogte(NL: lengte) gemeten, staand op beide voeten met het ge
 Wordt gebruikt voor het registreren van groei en verlies van lengte. Dit kan, in voorkomend geval, momenteel worden gemodelleerd, door het beperken van een 'any event', tot een interval in een template met bijbehorende rekenkundige functie van de groei of krimp.">
 			keywords = <"krimp", "groeien", "verlies", "lengte", "hoogte">
 			misuse = <"Niet te gebruiken ter registratie van de eerste lengte van een kind, spoedig na de geboorte, welke gekenmerkd wordt als de geboortelengte - gebruik hiervoor de specialisatie van dit archetype - zie OBSERVATION.height-birth.(OBSERVATION.lengte-geboorte).">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -71,7 +70,6 @@ Use to record growth and loss of height.  This can currently be modelled by cons
 Not to be used to record growth velocity or change.
 
 Not to be used to record the length of an object or specific body part.">
-			copyright = <"© openEHR">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -85,7 +83,6 @@ Der Archetyp wird auch benutzt, um eine Zunahme/Abnahme der Körpergröße/-län
 Nicht zur Dokumentation der angepassten Größe oder Körperlänge - z.B. der geschätzten vollen Größe einer Person mit Kontraktur der Extremitäten, basierend auf der Messung anderer Körperteile und/oder einem Algorithmus - hier sollte der spezialisierte Archetyp OBSERVATION.height-adjusted verwendet werden.
 Nicht zur Dokumentation von Wachstumsgeschwindigkeit.
 Nicht zur Dokumentation der Länge eines Objekts oder spezifischen Körperteils.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -103,7 +100,6 @@ Use para registar um crescimento e perda de altura. Isso pode ser modelado por r
 Não deve ser utilizado para registrar a altura ajustada ou comprimento do corpo por exemplo, um cálculo da altura estimada completo de uma pessoa com contraturas dos membros, com base em medições outro corpo e / ou um algoritmo - use OBSERVATION.height-adjusted.
 Não deve ser usado para registrar a velocidade de crescimento.
 Não deve ser utilizado para gravar o tamanho de um objeto ou parte específica do corpo.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -112,6 +108,7 @@ Não deve ser utilizado para gravar o tamanho de um objeto ou parte específica 
 		["references"] = <"Great Ormond Street Hospital for Children [Internet]. London, United Kingdom: Great Ormond Street Hospital for Children NHS Trust; c 2009. Clinical guideline: Height, measuring a child; 2000 Sep 01 [updated 2009 Jul 30; cited 2009 Jul 28 ]. Available from: http://www.ich.ucl.ac.uk/clinical_information/clinical_guidelines/cpg_guideline_00060.">
 		["MD5-CAM-1.0.1"] = <"416134690BF6ECCAB36E58BCF354CFFA">
 	>
+	copyright = <"© openEHR">
 
 definition
 	OBSERVATION[id1] matches {	-- Body Height/Length

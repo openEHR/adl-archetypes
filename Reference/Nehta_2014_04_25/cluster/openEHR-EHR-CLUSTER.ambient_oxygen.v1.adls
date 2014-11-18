@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.ambient_oxygen.v1.0.0
 
 language
@@ -35,7 +35,6 @@ description
 			use = <"May be used within an ACTION archetype to specificy oxygen therapy , or within OBSERVATION archetypes such as Blood gases or Respirations, as part of patient state, where knowledge of ambient oxygen status is critical to interpretation of the observation.">
 			keywords = <"breathing", "oxygen">
 			misuse = <"">
-			copyright = <"© openEHR">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -43,7 +42,6 @@ description
 			use = <"Puede ser usado dentro de un arquetipo ACTION para especificar oxígenoterapia o dentro de arquetipos OBSERVATION tales como Gases arteriales o Respiraciones, como parte del estado del paciente, donde el conocimiento de la concentración de oxígeno ambiental es crítica para la interpretación de la observación.">
 			keywords = <"respirando", "oxígeno", "ambiental", "FiO2">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -53,6 +51,7 @@ description
 		["references"] = <"Ambient Oxygen, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 08 Jun 2009. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.393 (accessed 31 Jan 2013).">
 		["MD5-CAM-1.0.1"] = <"891D85CFE89A81735228231F9236974F">
 	>
+	copyright = <"© openEHR">
 
 definition
 	CLUSTER[id1] matches {	-- Ambient Oxygen

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.medicare_data_report.v1.0.0
 
 language
@@ -20,13 +20,13 @@ description
 Please note: Information Provider (Author) is not modelled explicitly but is part of the underlying Reference Model.">
 			keywords = <"report", "medicare">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"A9B1C61FFCCDBCDA14AD3E718F92D38C">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	COMPOSITION[id1] matches {	-- Medicare Data Report

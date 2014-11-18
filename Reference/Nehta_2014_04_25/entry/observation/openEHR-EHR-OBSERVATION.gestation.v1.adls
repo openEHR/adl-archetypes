@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.gestation.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"To record the estimated or known gestational age of a pregnancy or new born.">
 			keywords = <"gestation", "gestational age", "conceptional age", "maturity">
 			misuse = <"Not to record the historical gestational age of the fetus at birth. This is recorded in the pregnancy summary.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -32,6 +31,7 @@ Geirsson RT, Busby-Earle RM. Certain dates may not provide a reliable estimate o
 Guerrero R, Florez PE. The duration of pregnancy. Lancet. Aug 2 1969;2(7614):268-9.">
 		["MD5-CAM-1.0.1"] = <"479FF65B6A0D2F259C849C06E21FCA89">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Gestation

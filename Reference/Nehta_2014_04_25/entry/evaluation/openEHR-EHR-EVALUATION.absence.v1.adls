@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.absence.v1.0.0
 
 language
@@ -28,7 +28,6 @@ This archetype is not usually required in stand-alone clinical systems, where th
 So, in a persistent list within a clinical system and if there is no information available - for example if the subject refuses to answer or is unconscious - use this EVALUATION.absent_information to explicitly record the health information that is missing or absent. If it is clinically determined that there is a positive absence of information - for example if the subject has never had an adverse reaction or significant diagnosis - then use the EVALUATION.exclusion family of archetypes. And finally, if it is clinically determined that there is known clinical information that needs to be recorded - then use the appropriate archetypes ie EVALUATION.adverse_reaction or EVALUATION.problem_diagnosis.">
 			keywords = <"absence", "missing", "unknown", "absent", "information", "adverse", "reaction", "problem", "diagnosis", "medication", "procedure", "vaccination", "family history">
 			misuse = <"Not to be used to record the exclusion of adverse reactions, medication use, procedures, problems or diagnoses - use specific specialisations of the EVALUATION.exclusion archetype for this purpose.">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -37,6 +36,7 @@ So, in a persistent list within a clinical system and if there is no information
 		["references"] = <"Absence of Information, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 12 Mar 2013. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.1427_1 (accessed 14 Mar 2013).">
 		["MD5-CAM-1.0.1"] = <"A2EC2D29F6EECA084B9FA3F37BF18460">
 	>
+	copyright = <"© openEHR">
 
 definition
 	EVALUATION[id1] matches {	-- Absence of Information

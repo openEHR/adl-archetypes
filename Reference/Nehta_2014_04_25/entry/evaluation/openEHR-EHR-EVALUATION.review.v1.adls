@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.review.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"Use to record a review of identified material within the health record, for example, that a speicalist has reviewed the test results and clinical interpretation of a test done by another clinician.">
 			keywords = <"review", "opinion">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"2659D0E51A390552CE4D1C3EC0715FEA">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1] matches {	-- Review

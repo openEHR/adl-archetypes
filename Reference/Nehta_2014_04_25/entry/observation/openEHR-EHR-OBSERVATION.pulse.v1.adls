@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.pulse.v1.0.0
 
 language
@@ -44,7 +44,6 @@ description
 لا تستخدم لتسجيل معدل القلب الميكانيكي, أو النظم أو الخصائص الأخرى – و يتم تسجيل ذلك باستخدام تخصيص لهذا النموذج يسمى ملاحظة. معدل القلب – النبض.
 لا يستخدم لتسجيل تفاصيل فحص أو تقييم أكثر شمولا للجهاز القلبي الوريدي. و يمكن أن تستخدم نماذج معينة أخرى لتسجيل خصائص مثل نبض قمة القلب, النفخات, و الموجودات عند التسمع, إلى آخره.
 المفاهيم الأخرى مثل أقصى معدل للقلب, أو معدل القلب المستهدف ينبغي أن يتم تسجيلها في نماذج أخرى متعلقة بتقييم المجهود.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -70,7 +69,6 @@ In particular, this archetype is not intended to record the assessment of periph
 Not to be used to record fetal heart rate - this is recorded using the OBSERVATION.fetal_heart archetype.
 
 Concepts such as Target Heart Rate should be recorded in separate EVALUATION archetypes related to goals and exercise assessment.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -78,7 +76,6 @@ Concepts such as Target Heart Rate should be recorded in separate EVALUATION arc
 			use = <"Zur allgemeinen Dokumentation der Herzfrequenz, besonders der elektrischen Frequenz.">
 			keywords = <"Frequenz", "Herzfrequenz", "Rhythmus">
 			misuse = <"Zur Dokumentation der mechanischen Frequenz Puls benutzen (OSBSERVATION.heart_reate-pulse.v1).">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -90,7 +87,6 @@ Concepts such as Target Heart Rate should be recorded in separate EVALUATION arc
 Не следует использовать для записи механической частоты сердечных сокращений, ритма и связанные с ними характеристик - это записывается используя специализацию этого архетипа - OBSERVATION.heart_rate-pulse.
 Не используется для записи другой информации обширной системы обследования или оценки сердечно-сосудистой системы. Другие специфические архетипы используются для записи таких характеристик, как верхушечный толчок, шумы, результаты аускультаци и т.д.
 Такие понятия, как максимальная или целевая частота сердечных сокращений, должны записываться в отдельных архетипах, предназначенных специально для осуществления оценки.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -102,6 +98,7 @@ Concepts such as Target Heart Rate should be recorded in separate EVALUATION arc
 Pulse (renamed from Heart Rate), draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 26 Mar 2006. Major update: 20 Feb 2013. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.170_5 (accessed 20 Feb 2013).">
 		["MD5-CAM-1.0.1"] = <"0198CA53C725D7B47EF10D995521B39C">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Pulse

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-INSTRUCTION.request-procedure.v1.0.0
 
 specialize
@@ -21,7 +21,6 @@ description
 			use = <"Use to share details about the order or request for a procedure to be performed. This archetype has been designed to provide the core information required for a simple request for most procedures.  If more specific detail is required about the procedure it can be added via CLUSTER archetypes inserted into the Specific Details slot.">
 			keywords = <"request", "refer", "order", "service", "provide">
 			misuse = <"">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,10 +29,11 @@ description
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"C810A40A39614C6DB48F194881713167">
 	>
+	copyright = <"© openEHR">
 
 definition
 	INSTRUCTION[id1.1] matches {	-- Procedure Request
-		/activities[id2]/action_archetype_id matches {/openEHR-EHR-ACTION\\.procedure\\.v1/}
+		/activities[id2]/action_archetype_id matches {/openEHR-EHR-ACTION\.procedure\.v1/}
 		/activities[id2]/description[id10]/items matches {
 			before [id136]
 			ELEMENT[id0.146] occurrences matches {0..1} matches {	-- Type of procedure

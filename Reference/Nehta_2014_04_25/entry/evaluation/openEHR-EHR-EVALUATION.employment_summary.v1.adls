@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.employment_summary.v1.0.0
 
 language
@@ -18,13 +18,13 @@ description
 			use = <"Use to record an employment summary about the individual, including identification of exposure to occupational health and safety risks.">
 			keywords = <"employment", "employer", "job", "occupation", "risk", "safety">
 			misuse = <"">
-			copyright = <"© 2010 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"7BB6835077BF5C6CBE71B6DF453E1B1C">
 	>
+	copyright = <"© 2010 NEHTA">
 
 definition
 	EVALUATION[id1] matches {	-- Employment Summary

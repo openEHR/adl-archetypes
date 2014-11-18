@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.body_mass_index.v1.0.0
 
 language
@@ -46,7 +46,6 @@ description
 			use = <" BMIبرای ثبت">
 			keywords = <"چاقی", "شاخص">
 			misuse = <"نشده در نظر گرفته شده برای ثبت اطلاعات را در مورد توده بدن درصد در صفحه اول انجمن -- این خواهد بود در archetypes جداگانه ثبت شده است.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -61,7 +60,6 @@ Zie de WHO richtlijnen tot aanpassing van hoogte / lengte voor Body Mass Index i
 Bij kinderen en tieners, dient de BMI te worden beoordeeld met behulp van leeftijd-gerelateerde referentie lijsten.">
 			keywords = <"obesitas", "indexbody mass", "BMI", "anorexia", "Quetelet", "ondervoeding", "onvermogen op gewicht te blijven, onvermogen om te groeien", "boulimia">
 			misuse = <"Niet bestemd voor het registreren van informatie over de Body Mass Index percentielen - deze zullen worden opgenomen in afzonderlijke archetypen.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -81,7 +79,6 @@ See WHO reference re adjusting height/length for Body Mass Index in paediatrics.
 In children and teens, BMI needs to be assessed using age-related reference charts.">
 			keywords = <"obesity", "index", "body mass", "BMI", "anorexia", "Quetelet", "malnutrition", "failure to thrive", "bulimia">
 			misuse = <"Not intended to record information regarding Body Mass Index percentiles - these will be recorded in separate archetypes.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -95,7 +92,6 @@ Veja na referência ajustamentos da altura / comprimento para o IMC em pediatria
 Em crianças e adolescentes, o IMC deve ser avaliada por meio de tabelas de referência relacionadas com a idade.">
 			keywords = <"obesidade", "índice", "massa corporal", "IMC", "anorexia", "*Quetelet(en)", "subnutrição", "subdesenvolvimento", "bulimia">
 			misuse = <"Não se destina a registrar informações sobre os percentis de IMC - estes serão gravadas em arquétipos distintos.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -112,6 +108,7 @@ Obesity: preventing and managing the global epidemic. Report of a WHO consultati
 Tzamaloukas AH, Patron A, Malhotra D. Body mass index in amputees. JPEN J Parenter Enteral Nutr. 1994 Jul-Aug;18(4):355-8. PubMed PMID: 7933444. [Cited 2011 Aug 02]. Available from: http://pen.sagepub.com/cgi/content/abstract/18/4/355.">
 		["MD5-CAM-1.0.1"] = <"04378259FFF99E7ED436DE2CB2B4369C">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Body Mass Index

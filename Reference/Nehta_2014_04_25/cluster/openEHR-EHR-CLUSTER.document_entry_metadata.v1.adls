@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.document_entry_metadata.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"">
 			keywords = <"metadata", "document entry metadata", "document">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"CDA Package v1.0 [Internet]. Australia: NEHTA. Available from: http://www.nehta.gov.au/implementation-resources/clinical-documents/EP-1094-2011/NEHTA-1229-2011 (accessed 2013 July 26).">
 		["MD5-CAM-1.0.1"] = <"62D28C55C4E3BD86FB161218231EE6CC">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1] matches {	-- Document Entry Metadata

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-INSTRUCTION.medication.v1.0.0
 
 language
@@ -32,7 +32,6 @@ The content is potentially complex. Where the content is re-usable in other cont
 			misuse = <"Not to be used to record administration, use or dispensing. (For those use ACTION.medication)
 
 Not to be used to record ordering of blood products, implants or major devices such as pacemakers and defibrillators, etc.">
-			copyright = <"© 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -44,6 +43,7 @@ Intermountain Healthcare Medication order model, Personal Communication to Sam H
 Royal Australian College of General Practitioners. Fact Sheet: Medicines List. 2010.">
 		["MD5-CAM-1.0.1"] = <"19C137CC2F7BBA64B9128B7919E6C6A6">
 	>
+	copyright = <"© 2011 NEHTA">
 
 definition
 	INSTRUCTION[id1] matches {	-- Medication instruction

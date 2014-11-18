@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.audiometry_result.v1.0.0
 
 language
@@ -34,7 +34,6 @@ Not to be used to record other auditory assessments such as:
 - Most Comfortable Listening Level (MCL) and Uncomfortable Listening Level (UCL); and
 - Auditory Brainstem Response (ABR) for any purpose other than hearing threshold determination.
 These assessments need to be recorded in specific archetypes for the purpose.">
-			copyright = <"© Northern Territory Department of Health, Australia">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -44,6 +43,7 @@ These assessments need to be recorded in specific archetypes for the purpose.">
 		["references"] = <"Sabini P, Sclafani AP. Efficacy of serologic testing in asymmetric sensorineural hearing loss. Otolaryngol Head Neck Surg. 2000 Apr;122(4):469-76. PubMed PMID: 10740163.">
 		["MD5-CAM-1.0.1"] = <"28BA4FA2CB7DED0894338CF7B5298ABD">
 	>
+	copyright = <"© Northern Territory Department of Health, Australia">
 
 definition
 	OBSERVATION[id1] matches {	-- Audiometry Result

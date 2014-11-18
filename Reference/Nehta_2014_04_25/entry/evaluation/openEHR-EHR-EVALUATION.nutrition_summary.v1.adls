@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.nutrition_summary.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"Use to record an overview of the nutritional status of an individual, as assessed by a clinician.">
 			keywords = <"nutrition", "obese", "overweight", "underweight", "malnourished">
 			misuse = <"Not to be used to record measurements such as weight, height or Body Mass Index. Use specific archetypes to record these measurements - OBSERVATION.weight, OBSERVATION.height and OBSERVATION.body_mass_index.">
-			copyright = <"© 2010 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"84C2A0159856F573A01ABE90DAC4850E">
 	>
+	copyright = <"© 2010 NEHTA">
 
 definition
 	EVALUATION[id1] matches {	-- Nutrition Summary

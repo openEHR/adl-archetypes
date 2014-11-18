@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.palpation_of_cervix.v1.0.0
 
 language
@@ -20,7 +20,6 @@ description
 This archetype has been designed to be nested inside the OBSERVATION.exam archetype (and its specialisations) or other relevant CLUSTER archetypes. For example, this archetype may be used as one component of a complete record of a bimanual pelvic examination - either nested within, or placed alongside, CLUSTER.palpation_of_uterus, as required by the specific clinical scenario being modelled.">
 			keywords = <"examination", "physical", "cervix", "uterine">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -29,6 +28,7 @@ This archetype has been designed to be nested inside the OBSERVATION.exam archet
 		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft CLUSTER archetype] Examination of the cervix; [authored 2007 Apr 02, cited 2011 Aug 17]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.217_4.">
 		["MD5-CAM-1.0.1"] = <"6C5B2CF06603DEE912C0B9E7A5E76614">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1] matches {	-- Palpation of Cervix

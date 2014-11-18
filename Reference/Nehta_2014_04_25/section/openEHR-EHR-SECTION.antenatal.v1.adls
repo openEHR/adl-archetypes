@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-SECTION.antenatal.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"In event summaries and consultation records when the person is pregnant.">
 			keywords = <"antenatal", "visit", "prenatal">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 Queensland Government Pregnancy Health Record">
 		["MD5-CAM-1.0.1"] = <"6B622C8E141882C258B9ED31F46909D8">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	SECTION[id1] matches {	-- Antenatal

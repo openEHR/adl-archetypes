@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.alcohol_use.v1.0.0
 
 language
@@ -28,7 +28,6 @@ Binge drinking is not directly referred to in this archetype, yet this archetype
 			misuse = <"Not to be used for recording persistent, summary details about alcohol consumption - this should be captured using the EVALUATION.alcohol_use_summary archetype.
 
 Not to be used to record information about consumption of other substances other than alcohol.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -37,6 +36,7 @@ Not to be used to record information about consumption of other substances other
 		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft OBSERVATION archetype] Alcohol Consumption; [authored 2009 May 06, cited 2011 Jul 15]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.146_3.">
 		["MD5-CAM-1.0.1"] = <"AD145687C651DAB032F60DA1DA062D19">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Alcohol Use

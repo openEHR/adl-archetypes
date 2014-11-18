@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.tumour_colorectal_staging_non_tnm.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"Use in conjunction with a suite of histo-pathology related archetypes or with a Diagnosis archetype.">
 			keywords = <"staging", "cancer", "tumour", "histo-pathology", "malignancy">
 			misuse = <"">
-			copyright = <"copyright (c) openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -33,6 +32,7 @@ Available from: http://www.rcpath.org/index.asp?PageID=1153
 ">
 		["MD5-CAM-1.0.1"] = <"A8D41AAC7774FDF705A4D87F3E357A0D">
 	>
+	copyright = <"copyright (c) openEHR">
 
 definition
 	CLUSTER[id1] matches {	-- Tumour - Colorectal staging (non-TNM)

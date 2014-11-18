@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.problem_diagnosis.v1.0.0
 
 language
@@ -28,7 +28,6 @@ Not to be used to record 'Presenting Complaint' - which is information captured 
 Not to be used to record procedures - use the ACTION.Procedure_undertaken archetype.
 
 Not to be used to record symptoms or signs - these should be recorded as part of a patient story or history.  A problem such as 'Chest pain' may masquerade as a symptom, however in this context we are recording it as a problem the person has.">
-			copyright = <"© 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -44,6 +43,7 @@ Royal Australian College of General Practitioners - Fact Sheet: Medical History
 Mosby's Pocket Dictionary of Medicine, Nursing and Health Professional, 6th Edition, Mosby Elsevier, 2010">
 		["MD5-CAM-1.0.1"] = <"5AB451990B6E294D6A916A6072C5AFEE">
 	>
+	copyright = <"© 2011 NEHTA">
 
 definition
 	EVALUATION[id1] matches {	-- Problem/Diagnosis

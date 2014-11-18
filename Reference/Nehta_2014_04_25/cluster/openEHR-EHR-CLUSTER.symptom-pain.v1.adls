@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.symptom-pain.v1.0.0
 
 specialize
@@ -39,7 +39,6 @@ This archetype allows a 'nil significant' statement to be explicitly recorded.(e
 			misuse = <"*Not to be used to record details about pain. Use the specialisation of this archetype - the CLUSTER.symptom-pain instead.
 
 Not to be used for diagnoses and problems that form part of a persisting Problem List - use EVALUATION.problem_diagnosis.(en)">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -48,7 +47,6 @@ Not to be used for diagnoses and problems that form part of a persisting Problem
 
 This archetype allows a 'nil significant' statement to be explicitly recorded.(en)">
 			misuse = <"*Sollte nur für Symptome benutzt werden. (en)">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -60,7 +58,6 @@ This archetype allows a 'nil significant' statement to be explicitly recorded.">
 			misuse = <"Not to be used to record details for symptoms other than pain. Use the generic parent of this archetype - the CLUSTER.symptom instead.
 
 Not to be used for diagnoses and problems that form part of a persisting Problem List - use EVALUATION.problem_diagnosis.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -70,6 +67,7 @@ Not to be used for diagnoses and problems that form part of a persisting Problem
 		["references"] = <"Pain, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 20 Feb 2007. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.246 (accessed 18 Dec 2012).">
 		["MD5-CAM-1.0.1"] = <"5B0299992BFB827BA906C4CF94F542B3">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1.1] matches {	-- Pain

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.exam.v1.0.0
 
 language
@@ -26,7 +26,6 @@ description
 			use = <"تم تصميم النموذج ليحتوي على عناقيد مفصلة متعلقة بالفحص بما في ذلك الاكتشاف, الجس, التسمع و القرع بما في هذه العناقيد من تخصيصات.">
 			keywords = <"الفحص", "البدني">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -42,7 +41,6 @@ Use as a container archetype - to provide a common, queryable ENTRY archetype in
 			misuse = <"Not to be used for recording history-taking observations - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom.
 
 Not to be used to record stand-alone clinical observations - use specific OBSERVATION archetypes. For example OBSERVATION.blood_pressure, OBSERVATION.body_weight, or OBSERVATION.height.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -52,6 +50,7 @@ Not to be used to record stand-alone clinical observations - use specific OBSERV
 		["references"] = <"Clinical Examination Findings, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 10 Nov 2007. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.271 (accessed 05 Feb 2013).">
 		["MD5-CAM-1.0.1"] = <"56D75F8328633A00D3667AFF8B577C8D">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Physical Examination Findings

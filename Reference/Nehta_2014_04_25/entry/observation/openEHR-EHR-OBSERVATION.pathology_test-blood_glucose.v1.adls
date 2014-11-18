@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.pathology_test-blood_glucose.v1.0.0
 
 specialize
@@ -32,7 +32,6 @@ Will normally be reported back to the requesting clinician as one component with
 Not to be used to record urine glucose test results - use OBSERVATION.urinalysis.
 
 Not to be used to record CSF glucose test results - use the generic OBSERVATION.pathology_test with CSF noted as the biological sample.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -43,6 +42,7 @@ Not to be used to record CSF glucose test results - use the generic OBSERVATION.
 Laboratory Technical Framework, Volume 3: Content, Revision 3.0 [Internet]. USA: IHE International; 2011 May 19; [cited 2011 Jul 11]. Available from: http://www.ihe.net/Technical_Framework/index.cfm#laboratory.">
 		["MD5-CAM-1.0.1"] = <"E9A7030C0ECC26785D3F26B5C2A73930">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Blood Glucose Test Result

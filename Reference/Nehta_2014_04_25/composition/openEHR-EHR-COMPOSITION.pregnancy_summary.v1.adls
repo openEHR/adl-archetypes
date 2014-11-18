@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.pregnancy_summary.v1.0.0
 
 language
@@ -21,7 +21,6 @@ Multiple Pregnancy Summary COMPOSITIONS may co-exist in a woman's health record 
 
 The intent of this COMPOSITION is for use as a persistent summary, however it has been identified that for implementation the archetype also needs additional attributes related to the context of the event. As a result, the COMPOSITION has been temporarily modified as an EVENT COMPOSITION which allows addition of an Items SLOT into which additional context-related archetypes can be included. This new requirement for context-related attributes in the Persistent COMPOSITION has been requested as a future openEHR Reference Model update.">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ The intent of this COMPOSITION is for use as a persistent summary, however it ha
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"69346D1F764C520AA90AEC94E78F6587">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	COMPOSITION[id1] matches {	-- Pregnancy Summary

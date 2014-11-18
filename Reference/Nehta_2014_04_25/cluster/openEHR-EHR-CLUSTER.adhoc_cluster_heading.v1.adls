@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.adhoc_cluster_heading.v1.0.0
 
 language
@@ -17,7 +17,6 @@ description
 			purpose = <"A generic cluster header which is normally renamed locally at template level.">
 			use = <"To construct and name a cluster within a local template.">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"E8FBB8EA00051FAEC61F8AF3D95BF2F5">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1] matches {	-- Adhoc Cluster Heading

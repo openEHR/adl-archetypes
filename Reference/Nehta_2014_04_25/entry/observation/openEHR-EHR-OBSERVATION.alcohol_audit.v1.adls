@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.alcohol_audit.v1.0.0
 
 language
@@ -24,7 +24,6 @@ The AUDIT-C test is a shortened version of the full AUDIT test, using only the f
 			misuse = <"Not to be used to record a diary of alcohol consumption - use OBSERVATION.alcohol_use.
 
 Not to be used to record a summary about the individual's alcohol consumption - use EVALUATION.alcohol_summary.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -39,6 +38,7 @@ The AUDIT Alcohol Consumption Questions (Audit – C). Northern Territory Govern
 Alcohol Use Disorders Identification Test. US Department of Venterans Affairs. (Accessed 2013 Jun 10). Available at: http://www.hepatitis.va.gov/provider/tools/audit-c.asp.">
 		["MD5-CAM-1.0.1"] = <"D25E99B0839398E91B638E1AA66CC795">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Alcohol Use Disorders Identification Test (AUDIT)

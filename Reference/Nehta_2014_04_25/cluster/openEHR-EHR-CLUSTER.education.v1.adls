@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.education.v1.0.0
 
 language
@@ -20,7 +20,6 @@ description
 Specifically designed to be used within the EVALUATION.social_summary archetype, but may be used within any clinically appropriate ENTRY or CLUSTER archetype related to recording social context.">
 			keywords = <"education", "school", "university", "secondary", "tertiary", "college", "apprenticeship", "training", "needs", "primary">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ Specifically designed to be used within the EVALUATION.social_summary archetype,
 		["references"] = <"METeOR (Metadata Online Registry) [Internet]. Australia: Australian Institute of Health and Welfare. Person—school enrolment and attendance status. Available from: http://meteor.aihw.gov.au/content/index.phtml/itemId/401809 (accessed 2013 Mar 01).">
 		["MD5-CAM-1.0.1"] = <"DD2F9356CFB310E92105EEFA75D325CA">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1] matches {	-- Education and Training

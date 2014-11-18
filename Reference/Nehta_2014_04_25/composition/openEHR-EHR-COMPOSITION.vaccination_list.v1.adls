@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.vaccination_list.v1.0.0
 
 language
@@ -20,7 +20,6 @@ description
 In local systems it is possible to generate a list of vaccinations by querying the database for all ACTION.medication archetypes that have been used to record vaccinations. However this list is useful to support exchange of a local vaccination list with other healthcare providers.">
 			keywords = <"vaccination", "immunisation", "list">
 			misuse = <"">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ In local systems it is possible to generate a list of vaccinations by querying t
 		["references"] = <"Vaccination List, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 12 Mar 2013. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.1424_1 (accessed 14 Mar 2013).">
 		["MD5-CAM-1.0.1"] = <"2D1B12194E93B860DBD6E553CB0D0344">
 	>
+	copyright = <"© openEHR">
 
 definition
 	COMPOSITION[id1] matches {	-- Vaccination List

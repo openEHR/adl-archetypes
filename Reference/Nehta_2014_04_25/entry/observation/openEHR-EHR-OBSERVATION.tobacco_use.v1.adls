@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.tobacco_use.v1.0.0
 
 language
@@ -22,7 +22,6 @@ A smoking or tobacco use diary could be built up over time by recording the use 
 A record of typical tobacco use during a period can be recorded by recording the amount of tobacco used using the 'Average use' event - the mean use over a specified period of time.">
 			keywords = <"tobacco", "cigarette", "cigar", "pipe", "snuff", "kretek", "beebi", "bibi", "shisha", "snuff", "snus", "hookah", "gutka", "smoking", "chewing">
 			misuse = <"Not to be used for recording persistent, summary details about tobacco use and consumption - this should be captured using the EVALUATION.tobacco_use_summary archetype.">
-			copyright = <"© 2011 National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -31,6 +30,7 @@ A record of typical tobacco use during a period can be recorded by recording the
 		["references"] = <"Tobacco Use draft archetype [Internet]. London: openEHR Clinical Knowledge Manager, openEHR Foundation; 06 May 2009 [cited 2011 Jul 15]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.149_3.">
 		["MD5-CAM-1.0.1"] = <"4EE6CE90C17D90E084D4A2C86E8D9F4A">
 	>
+	copyright = <"© 2011 National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Tobacco Use

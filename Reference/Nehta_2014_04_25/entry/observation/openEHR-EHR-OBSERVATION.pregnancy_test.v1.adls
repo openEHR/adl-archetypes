@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.pregnancy_test.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"For use with a urinary pregnancy test or other test that provides a positive or negative result for early pregnancy. The test is not performed in a laboratory but by the person or provider.">
 			keywords = <"pregnancy", "test", "confirmation">
 			misuse = <"Providing the interpretation of a B-HCG or other assessment of pregnancy. Use the Pregnancy Summary archetype to record pregnancy.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -26,6 +25,7 @@ description
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"C4E088C7C80BA5EAB2D943E61011D6A7">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Pregnancy test

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.report.v1.0.0
 
 language
@@ -22,7 +22,6 @@ The Context component contains an optional unnamed slot that can be used to:
 The Sections component has been deliberately left unconstrained to maximise re-use of this archetype.">
 			keywords = <"report", ...>
 			misuse = <"">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -32,6 +31,7 @@ The Sections component has been deliberately left unconstrained to maximise re-u
 		["references"] = <"Report, draft archetype, openEHR Foundation. “www.openEHR.org/knowledge.” openEHR Clinical Knowledge Manager. Authored: 14 Apr 2010. http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.677 (accessed Dec 10, 2012).">
 		["MD5-CAM-1.0.1"] = <"C4DF25AE97563196F340F6BD8D8D05F7">
 	>
+	copyright = <"© openEHR">
 
 definition
 	COMPOSITION[id1] matches {	-- Report

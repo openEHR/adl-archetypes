@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.pregnancy_bf_status.v1.0.0
 
 language
@@ -24,7 +24,6 @@ This archetype has been designed to trigger decision support and therapeutic pre
 			misuse = <"Not to be used to record the positive exclusion of pregnancy or breast feeding - use specific EVALUATION.exclusion archetypes for this purpose.
 
 Not to be used to record details about a specific pregnancy - use EVALUATION.pregnancy for this purpose.">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -34,6 +33,7 @@ Not to be used to record details about a specific pregnancy - use EVALUATION.pre
 		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft archetype] Pregnancy/Breast Feeding Status; [updated 2012 Dec 02, cited 2012 Dec 02]. Available from: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.1300_3.">
 		["MD5-CAM-1.0.1"] = <"F75369554F8AD6EB3F65CE785F9E9350">
 	>
+	copyright = <"© openEHR">
 
 definition
 	EVALUATION[id1] matches {	-- Pregnancy/Breast Feeding Status

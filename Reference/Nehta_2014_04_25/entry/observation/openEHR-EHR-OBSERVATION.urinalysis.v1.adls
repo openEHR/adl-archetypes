@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.urinalysis.v1.0.0
 
 language
@@ -22,7 +22,6 @@ Different commercial products carry a variety of test /reagent pads. Not all rea
 This archetype is heavily influenced by the commonly available Multistix test strips but is intended to be generically applicable, as much as is possible. If requirements for other parameters become apparent to meet the requirements for other test strips then product-specific urinalysis archetypes may need to be developed.">
 			keywords = <"urine", "test", "dip-stick", "strip", "multistix">
 			misuse = <"Not to be used for recording urine microscopy or qualitative test results. Use the OBSERVATION.pathology_test family of archetypes for this purpose.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -32,6 +31,7 @@ This archetype is heavily influenced by the commonly available Multistix test st
 		["references"] = <"Various product labels.">
 		["MD5-CAM-1.0.1"] = <"E325BED4B3FAF982ABD2942C4EECE81D">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Urinalysis

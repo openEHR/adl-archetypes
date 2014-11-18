@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.psychiatric_risk_nt_rmp.v1.0.0
 
 language
@@ -20,7 +20,6 @@ description
 This risk assessment is used by the patient retrieval organisation, Careflight, as part of its guidelines for patient transport within remote areas of Australia.">
 			keywords = <"assessment", "risk", "psychiatric", "harm", "self", "involuntary", "violence", "weapons">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -29,6 +28,7 @@ This risk assessment is used by the patient retrieval organisation, Careflight, 
 		["references"] = <"Careflight. Guidelines for the Transport of Psychiatric Patients. Australia; Date effective: 08 May 2012. Ref: MN-003-02. Appendix B, Risk Assessment Tool; p. 13.">
 		["MD5-CAM-1.0.1"] = <"FB5D85BE2FDE1F7F00DF30AF0283EE68">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Psychiatric Risk Assessment (NT RMP)

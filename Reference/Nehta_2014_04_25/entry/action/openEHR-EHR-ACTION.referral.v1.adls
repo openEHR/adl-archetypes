@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-ACTION.referral.v1.0.0
 
 language
@@ -22,13 +22,13 @@ To record the activity related to a self-referral by a patient to a healthcare p
 Use to record the activity related to a self-referral by a patient to a healthcare provider to receive a specific service, advice, or care provision. For example, a checkup visit to a dentist for preventive care, or a series of visits to a physiotherapist for management of a musculoskeletal strain.">
 			keywords = <"referral", "visit", "encounter">
 			misuse = <"">
-			copyright = <"© 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"B04BBB697FB2AE5C582E0488D822C287">
 	>
+	copyright = <"© 2011 NEHTA">
 
 definition
 	ACTION[id1] matches {	-- Referral

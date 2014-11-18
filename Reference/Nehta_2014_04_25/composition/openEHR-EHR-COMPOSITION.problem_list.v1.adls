@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.problem_list.v1.0.0
 
 language
@@ -27,7 +27,6 @@ This list can be comprised of three types of archetype:
 In order for this list to be accurate and safe to use as the basis for decision support activities and for exchange, this Problem List should ideally be curated by a clinician responsible for the health record, rather than managed automatically by the clinical system through business rules alone.">
 			keywords = <"problem", "list", "diagnosis", "diagnoses", "procedure">
 			misuse = <"">
-			copyright = <"© openeEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -37,6 +36,7 @@ In order for this list to be accurate and safe to use as the basis for decision 
 		["references"] = <"Problem List, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 19 Feb 2013. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.287_4 (accessed 14 Mar 2013).">
 		["MD5-CAM-1.0.1"] = <"BFA848F52FAB6BB43DD1E6A9249D11DF">
 	>
+	copyright = <"© openeEHR">
 
 definition
 	COMPOSITION[id1] matches {	-- Problem List

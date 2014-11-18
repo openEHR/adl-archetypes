@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4)
 	openEHR-EHR-OBSERVATION.acoustic_reflex_result.v1
 
 concept
@@ -295,8 +295,7 @@ definition
 							}
 							ELEMENT[at0053] occurrences matches {0..1} matches {	-- Frequency
 								value matches {
-									C_DV_QUANTITY <
-									>
+									DV_QUANTITY matches {*}
 								}
 							}
 							ELEMENT[at0054] occurrences matches {0..1} matches {	-- Test Signal Type

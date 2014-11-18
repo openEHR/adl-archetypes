@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.sade_classification.v1.0.0
 
 language
@@ -23,7 +23,6 @@ This archetype extends the Sade Classification to allow recording of 'No visible
 Sade Stage 5 (spontaneous perforation) is described in some documentation but is not described in the original paper and appears not to be in common usage.">
 			keywords = <"retraction", "atelectasis", "tympanic", "membrane", "drum", "pars tensa">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -36,6 +35,7 @@ Sadé J, Berco E. Atelectasis and secretory otitis media. Ann. Otol. Rhinol. Lar
 Lancaster J, Srinivasan V. Management of tympanic membrane retraction pockets. Australian Journal of Otolaryngology 2002;5(1):17–20.">
 		["MD5-CAM-1.0.1"] = <"7D7F39AB27C48E62179829E82353A8D5">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1] matches {	-- Sade Classification

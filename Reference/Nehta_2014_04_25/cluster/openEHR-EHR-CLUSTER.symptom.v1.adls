@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.symptom.v1.0.0
 
 language
@@ -35,7 +35,6 @@ description
 			use = <"لتسجيل المعلومات حول الألم/الآلام. و قد تكون المعلومات مُرْمَزة أو مركبة حسب الطلب, و تستخدم الوصف النصي الحر حول العرض مع تفاصيل على هيئة وصف سريري إذا لزم.">
 			keywords = <"الشكوى", ...>
 			misuse = <"يستخدم هذا النموذج فقط للأعراض (ارجع إلى مجموعة المصطلحات الخاصة بسنوميد للإشارة إلى المفاهيم التي تمت تغطيتها)">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -43,7 +42,6 @@ description
 			use = <"Zur Dokumentation von Informationen zu einem Symptom. Die Information kann kodiert oder strukturiert sein, falls dies erforderlich ist, oder aber die Freitextbeschreibung des Symptoms mit Einzelheiten als klinische Beschreibung nutzen. ">
 			keywords = <"Beschwerden", ...>
 			misuse = <"Sollte nur für Symptome benutzt werden.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -55,7 +53,6 @@ This archetype allows a 'nil significant' statement to be explicitly recorded.">
 			misuse = <"Not to be used to record details about pain. Use the specialisation of this archetype - the CLUSTER.symptom-pain instead.
 
 Not to be used for diagnoses and problems that form part of a persisting Problem List - use EVALUATION.problem_diagnosis.">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -64,6 +61,7 @@ Not to be used for diagnoses and problems that form part of a persisting Problem
 		["references"] = <"Symptom, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 20 Feb 2007. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.195 (accessed 18 Dec 2012).">
 		["MD5-CAM-1.0.1"] = <"ACB5C5EE5E30CB84A4727271A54963C0">
 	>
+	copyright = <"© openEHR">
 
 definition
 	CLUSTER[id1] matches {	-- Symptom

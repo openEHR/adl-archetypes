@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.relationship_summary.v1.0.0
 
 language
@@ -18,7 +18,6 @@ description
 			use = <"Use to record information about the relationships that the individual has with key people  - family members, support or community networks.">
 			keywords = <"relationship", "family", "friend", "social", "netword", "community", "marital", "contact">
 			misuse = <"">
-			copyright = <"© 2010 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -27,6 +26,7 @@ description
 		["references"] = <"Australian Institute of Health and Welfare, METeOR repository - http://meteor.aihw.gov.au.">
 		["MD5-CAM-1.0.1"] = <"E19950DEEE5D16535C494A26378D36DA">
 	>
+	copyright = <"© 2010 NEHTA">
 
 definition
 	EVALUATION[id1] matches {	-- Relationship Summary

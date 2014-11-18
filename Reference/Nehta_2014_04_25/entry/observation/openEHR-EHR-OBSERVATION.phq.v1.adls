@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.phq.v1.0.0
 
 language
@@ -24,7 +24,6 @@ The original PHQ‐9 tool was developed by Drs. Robert L. Spitzer, Janet B.W. Wi
 The Australian indigenous adaptation for the PHQ-9 subset assessing mood was developed by Dr. Alex Brown, Baker IDI Heart and Diabetes Institute, Alice Springs, 2009. The adapted questions are expressed within the Comments area for each questionnaire data element. Used with permission.">
 			keywords = <"screening", "depression", "mood", "assessment", "mental health">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -33,6 +32,7 @@ The Australian indigenous adaptation for the PHQ-9 subset assessing mood was dev
 		["references"] = <"Kroenke K, Spitzer RL, Williams JB. The Patient Health Questionnaire-2: validity of a two-item depression screener. Med Care. 2003 Nov; 41(11):1284-92. PubMed PMID: 14583691.">
 		["MD5-CAM-1.0.1"] = <"4057C5F592253F45CCE292CD37A37E82">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Patient Health Questionnaire (PHQ)

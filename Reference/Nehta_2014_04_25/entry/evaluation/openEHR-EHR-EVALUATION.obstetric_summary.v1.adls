@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.obstetric_summary.v1.0.0
 
 language
@@ -26,7 +26,6 @@ Some data may be calculated or derived from individual pregnancy records if thes
 			misuse = <"Not for recording summary information about a specific pregnancy - use EVALUATION. pregnancy_summary for this purpose.
 
 Not for recording detailed information about each of the individual pregnancies, miscarriages, terminations, or deliveries. This information will be recorded using other specific archetypes as event-based data.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -34,6 +33,7 @@ Not for recording detailed information about each of the individual pregnancies,
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"5861E68BB323792892A45055A9EC5EDC">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1] matches {	-- Obstetric summary

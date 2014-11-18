@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.exclusion.v1.0.0
 
 language
@@ -22,7 +22,6 @@ This DCM has been deliberately kept simple and open in order to capture simple s
 Exclusion statements can only be considered to be current and accurate at the time of recording.">
 			keywords = <"exclusion", ...>
 			misuse = <"Not to be used to record the exclusion or absence of adverse reactions, medication use, procedures, family history, problems or diagnoses - use specific specialisations of this archetype for this purpose.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -32,6 +31,7 @@ Exclusion statements can only be considered to be current and accurate at the ti
 		["references"] = <"Exclusion Statement, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 02 Mar 2010. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.617_1 (accessed 31 July 2013).">
 		["MD5-CAM-1.0.1"] = <"A018833C899C9469CA77349F03B635C7">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1] matches {	-- Exclusion Statement

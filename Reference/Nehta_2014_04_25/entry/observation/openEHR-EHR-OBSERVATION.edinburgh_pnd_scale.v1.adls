@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.edinburgh_pnd_scale.v1.0.0
 
 language
@@ -31,7 +31,6 @@ There is consensus in the literature that women with scores
 consistently ≥13 have a 60-100% probability of meeting diagnostic criteria for depression.">
 			keywords = <"childbirth", "score">
 			misuse = <"Should not be used to assess depression in general population.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -44,6 +43,7 @@ Queensland Health Department. Edinburgh Postnatal Depression Scale. http://www.h
 Beyond Blue. The Edinburgh Postnatal Depression Scale: A Health Professional's Guide, http://docent.gplearning.com.au/docent/cds/default_shared/GPEA/modules/g03/EPDS_GP.pdf">
 		["MD5-CAM-1.0.1"] = <"262BDB8771B1309E89A1CE04079462BF">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Edinburgh postnatal depression scale

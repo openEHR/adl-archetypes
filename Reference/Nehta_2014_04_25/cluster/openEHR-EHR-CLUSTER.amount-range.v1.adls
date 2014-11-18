@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.amount-range.v1.0.0
 
 specialize
@@ -21,13 +21,13 @@ description
 			use = <"In INSTRUCTION medication for the range of amount to be administered.">
 			keywords = <"amount", "dose", "dosing", "range", "maximum dose", "minimum dose">
 			misuse = <"Should only be used in an order, not administration or dispensing.">
-			copyright = <"© 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"3C03A992EFAF31DC357A46EB81FB525A">
 	>
+	copyright = <"© 2011 NEHTA">
 
 definition
 	CLUSTER[id1.1] matches {	-- Amount of medication as a range

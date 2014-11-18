@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.alcohol_use_summary.v1.0.0
 
 language
@@ -22,7 +22,6 @@ Data that might be used to assess the risk of alcohol abuse or dependence will b
 			misuse = <"Not to be used to record event-or period-based information about alcohol use or consumption, such as actual daily use or the average use over a specified period of time - use the OBSERVATION.alcohol_use archetype.
 
 Not to be used to record information about consumption of other substances other than alcohol.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -32,6 +31,7 @@ Not to be used to record information about consumption of other substances other
 		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft EVALUATION archetype] Alcohol Use Summary; [authored 2009 Jun 21, cited 2011 Jul 15]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.362_1.">
 		["MD5-CAM-1.0.1"] = <"0479F3B6A8FC37E7A287A6E78C248C08">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1] matches {	-- Alcohol Use Summary

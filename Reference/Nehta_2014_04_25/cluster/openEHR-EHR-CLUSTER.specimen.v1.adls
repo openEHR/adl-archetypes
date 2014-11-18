@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.specimen.v1.0.0
 
 language
@@ -29,7 +29,6 @@ The specimen details do not include the state of the individual from which speci
 The specimen archetype is only suitable for use with single specimens; a different archetype is be used for describing collections of specimens.
 
 The specimen archetype does not cover the laboratory processes for handling and reporting on a specimen. ">
-			copyright = <"© 2011 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -40,6 +39,7 @@ The specimen archetype does not cover the laboratory processes for handling and 
 ANSI/HL7 2.6-2007: Chapter 7, HL7 v2.6 specifications - Final Standard. Health Level 7, Ann Arbour, Missouri.">
 		["MD5-CAM-1.0.1"] = <"67B1CE92FA4D592ABE080B661439C484">
 	>
+	copyright = <"© 2011 NEHTA">
 
 definition
 	CLUSTER[id1] matches {	-- Specimen

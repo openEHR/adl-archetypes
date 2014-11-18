@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.exclusion-family_history.v1.0.0
 
 specialize
@@ -25,7 +25,6 @@ This detailed clinical model (DCM) has specifically been designed to avoid the n
 Exclusion statements can only be considered to be current and accurate at the time of recording. For example: recording an exclusion is only relevant at the time of recording and may be effectively obsolete immediately after the record is made if new information is discovered.">
 			keywords = <"exclusion", "family", "history", "pedigree">
 			misuse = <"Not to be used to record the exclusion or absence of adverse reactions, medication use, procedures, problems or diagnoses in the subject - use specific specialisations of this archetype for this purpose.">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -35,6 +34,7 @@ Exclusion statements can only be considered to be current and accurate at the ti
 		["references"] = <"Exclusion Statement - Family History, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 02 Mar 2010. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.625_1 (accessed 31 July 2013).">
 		["MD5-CAM-1.0.1"] = <"6BFB19553DEB7D37E129006B7E716DB4">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1.1] matches {	-- Exclusion of Family History

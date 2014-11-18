@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.family_history.v1.0.0
 
 language
@@ -22,7 +22,6 @@ It is also possible to record family history information for individuals other t
 The intent of this COMPOSITION is for use as a persistent summary, however it has been identified that for implementation the archetype also needs additional attributes related to the context of the event. As a result, the COMPOSITION has been temporarily modified as an EVENT COMPOSITION which allows addition of an Items SLOT into which additional context-related archetypes can be included. This new requirement for context-related attributes in the Persistent COMPOSITION has been requested as a future openEHR Reference Model update.">
 			keywords = <"family", "history", "pedigree">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ The intent of this COMPOSITION is for use as a persistent summary, however it ha
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"F5E7D64BFB84798E0FB3E568C4AC7E4A">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	COMPOSITION[id1] matches {	-- Family History

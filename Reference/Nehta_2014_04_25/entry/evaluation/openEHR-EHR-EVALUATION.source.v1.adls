@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.source.v1.0.0
 
 language
@@ -22,7 +22,6 @@ This archetype has been designed to support the identification and quality of he
 Each piece of clinical evidence that has been received from a third party source needs to be assessed as 'fit for use' prior to being utilisied to support clinical decision-making. For example: a digital image captured during a clinical consultation, or a digital radiograph, sent to a remote specialist for assessment and treatment advice needs to be deemed to be of the complete anatomical region and of appropriate quality.">
 			keywords = <"source", "image", "original">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -30,6 +29,7 @@ Each piece of clinical evidence that has been received from a third party source
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"526538AF3DA5023250C4BC477A761920">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1] matches {	-- Source Information

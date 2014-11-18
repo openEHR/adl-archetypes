@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-INSTRUCTION.request-imaging_exam.v1.0.0
 
 specialize
@@ -23,7 +23,6 @@ description
 If there are more details about the examination required, include this information in more detailed CLUSTER archetypes appropriate for the purpose in the 'Specific details' SLOT.">
 			keywords = <"request", "refer", "order", "service", "provide", "imaging", "service", "radiology">
 			misuse = <"">
-			copyright = <"© openEHR">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -31,6 +30,7 @@ If there are more details about the examination required, include this informati
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"B3E616EEBBA09F6B684DD126D494D690">
 	>
+	copyright = <"© openEHR">
 
 definition
 	INSTRUCTION[id1.1] matches {	-- Imaging examination request

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.substance_use_summary.v1.0.0
 
 language
@@ -20,7 +20,6 @@ description
 			misuse = <"Not to be used to record summary information about alcohol or tobacco use - use the specialised archetypes OBSERVATION.substance_use_summary-alcohol and/or OBSERVATION.substance_use_summary-tobacco.
 
 Not to be used to capture event-based information about substance use, such as a Diary of substance use - use the OBSERVATION.substance_use archetype and its specific specialisations.">
-			copyright = <"© 2010 NEHTA">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -28,6 +27,7 @@ Not to be used to capture event-based information about substance use, such as a
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"6B4981B4607DDBF2DE2AFF2D09C5E6FB">
 	>
+	copyright = <"© 2010 NEHTA">
 
 definition
 	EVALUATION[id1] matches {	-- Substance Use Summary

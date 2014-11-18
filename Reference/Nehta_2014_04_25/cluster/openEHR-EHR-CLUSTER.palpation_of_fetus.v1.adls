@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.palpation_of_fetus.v1.0.0
 
 language
@@ -22,7 +22,6 @@ This archetype has been designed to be nested inside the OBSERVATION.exam archet
 Record the details of only one fetus using this archetype. Recording details about multiple fetuses will require the multiple separate instances of this archetype.">
 			keywords = <"uterus", "fetus", "foetus">
 			misuse = <"">
-			copyright = <"© National E-Health Transition Authority">
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -31,6 +30,7 @@ Record the details of only one fetus using this archetype. Recording details abo
 		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft CLUSTER archetype] Examination of the fetus; [authored 2007 Apr 19, cited 2011 Aug 12]. Available from : http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.277_4.">
 		["MD5-CAM-1.0.1"] = <"DDE1874AB473F41AC1044000DACE48FD">
 	>
+	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1] matches {	-- Palpation of Fetus
