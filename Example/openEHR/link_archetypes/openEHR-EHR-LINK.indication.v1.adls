@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openEHR-EHR-LINK.indication.v1
+archetype (adl_version=2.0.5; rm_release=1.0.2)
+	openEHR-EHR-LINK.indication.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -14,66 +14,72 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Represent possible LINKs to do with 'indication' concept">
-			copyright = <"copyright (c) 2010 openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"unmanaged">
+	copyright = <"copyright (c) 2010 openEHR Foundation">
 
 definition
-	LINK [at0000] matches {
+	LINK[id1] matches {	-- Link
 		meaning matches {
-			DV_CODED_TEXT matches {
-				defining_code matches {
-					[local::at0001,
-					at0002]
-				}
+			DV_CODED_TEXT[id2] matches {
+				defining_code matches {[ac1]}		-- link meaning
 			}
 		}
 		type matches {
-			DV_CODED_TEXT matches {
-				defining_code matches {
-					[local::at0010,
-					at0011,
-					at0012]
-				}
+			DV_CODED_TEXT[id3] matches {
+				defining_code matches {[ac2]}		-- link type
 			}
 		}
 		target matches {
-			DV_EHR_URI matches {
+			DV_EHR_URI[id4] matches {
 				target_type matches {"OBSERVATION"}
 			}
 		}
 	}
 
-
-ontology
+terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at0000"] = <
-					text = <"Link">
-					description = <"Link">
-				>
-				["at0001"] = <
-					text = <"in response to">
-					description = <"Indicates that source Entry is a response to the target Entry">
-				>
-				["at0002"] = <
-					text = <"indication">
-					description = <"Indicates that target Entry is the indication (in the medical sense) for the source Entry">
-				>
-				["at0010"] = <
-					text = <"Problem">
-					description = <"Link is used for problem chaining">
-				>
-				["at0011"] = <
-					text = <"Workflow">
-					description = <"Workflow tracking link">
-				>
-				["at0012"] = <
-					text = <"Issue">
-					description = <"Issue tracking link">
-				>
+			["id1"] = <
+				text = <"Link">
+				description = <"Link">
 			>
+			["ac1"] = <
+				text = <"link meaning">
+				description = <"meaning of link">
+			>
+			["at1"] = <
+				text = <"in response to">
+				description = <"Indicates that source Entry is a response to the target Entry">
+			>
+			["at2"] = <
+				text = <"indication">
+				description = <"Indicates that target Entry is the indication (in the medical sense) for the source Entry">
+			>
+			["ac2"] = <
+				text = <"link type">
+				description = <"type of link">
+			>
+			["at10"] = <
+				text = <"Problem">
+				description = <"Link is used for problem chaining">
+			>
+			["at11"] = <
+				text = <"Workflow">
+				description = <"Workflow tracking link">
+			>
+			["at12"] = <
+				text = <"Issue">
+				description = <"Issue tracking link">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+		>
+		["ac2"] = <
+			id = <"ac2">
 		>
 	>
