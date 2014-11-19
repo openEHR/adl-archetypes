@@ -29,9 +29,14 @@ description
 	licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
 	copyright = <"Copyright (c) 2014 Thomas Beale">
 	ip_acknowledgements = <
-		["dostoyevsky"] = <"excerpts from Crime and Punishment">
-		["IETF"] = <"References to IETF RFCs">
+		["loinc"] = <"This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use">
+		["snomedct"] = <"xyz">
 	>
+        conversion_details = <
+                ["source_model"] = <"CEM xyz <http://location.in.clinicalelementmodels.com>">
+                ["tool"] = <"cem2adl v6.3.0">
+                ["time"] = <"2014-11-03T09:05:00">
+        >
 
 definition
 	WHOLE[id1] 	-- -
