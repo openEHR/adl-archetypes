@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2)
+archetype (adl_version=2.0.5; rm_release=1.0.2)
 	CDISC-Bridg-PerformedObservation.vital_sign_bp.v1.0.0
 
 specialize
@@ -23,6 +23,9 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	copyright = <"© 2014 CDISC.org">
+	other_details = <
+		["regression"] = <"PASS">
+	>
 
 definition
 	PerformedObservation[id1.1] matches {	-- Blood pressure BRIDG observation

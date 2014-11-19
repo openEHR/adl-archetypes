@@ -20,6 +20,9 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	copyright = <"© 2014 CDISC.org">
+	other_details = <
+		["regression"] = <"PASS">
+	>
 
 definition
 	PerformedObservation[id1] matches {	-- BRIDG observation
