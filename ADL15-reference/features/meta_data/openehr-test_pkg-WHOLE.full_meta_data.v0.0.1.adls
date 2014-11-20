@@ -18,13 +18,9 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	other_contributors = <"Marcus Aurelius <marcus@aurelius.net>", "Augustus Caesar <augustus@caesars_palace.net">
-	original_namespace = <
-		value = <"org.archetypes-r-us">
-	>
+	original_namespace = <"org.archetypes-r-us">
 	original_publisher = <"Archetype R Us">
-	custodian_namespace = <
-		value = <"org.openehr">
-	>
+	custodian_namespace = <"org.openehr">
 	custodian_organisation = <"openEHR Foundation">
 	licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
 	copyright = <"Copyright (c) 2014 Thomas Beale">
