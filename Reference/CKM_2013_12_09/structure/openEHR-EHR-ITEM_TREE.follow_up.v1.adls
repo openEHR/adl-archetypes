@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2012-09-18">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -19,11 +21,9 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"1351DFBF3BC922AE4F857D9D036FD8C0">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	ITEM_TREE[id1] matches {	-- Follow up

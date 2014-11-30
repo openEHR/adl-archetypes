@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"17/05/2009">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,12 +22,10 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"D1C5FF9647E00C3B138D02C481F779C1">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Tumour - Surgical resection margins

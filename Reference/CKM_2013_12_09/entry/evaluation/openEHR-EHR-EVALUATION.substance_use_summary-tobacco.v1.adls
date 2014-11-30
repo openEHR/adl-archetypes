@@ -8,12 +8,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"21/06/2009">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -24,13 +26,11 @@ description
 Not to be used to record information about any other substance other than tobacco.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"18923FC45C08D0C0BD602D99BCCDAE79">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1.1] matches {	-- Tobacco Use Summary

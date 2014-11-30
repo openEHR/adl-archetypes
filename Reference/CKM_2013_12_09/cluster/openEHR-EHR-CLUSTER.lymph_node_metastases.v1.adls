@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, Scotland">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"17/05/2009">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -21,12 +23,10 @@ Use as a component archetype in the context of a suite of archetypes that make u
 			misuse = <"Not designed to be used within any other archetype other than OBSERVATION.lab_test.histopathology.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"D90E73A53BAC2504891ADC7C748B3DF4">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Tumour- Lymph node metastases

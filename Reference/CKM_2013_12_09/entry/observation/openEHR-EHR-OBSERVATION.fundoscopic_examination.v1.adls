@@ -15,12 +15,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"27/07/2008">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -35,12 +37,10 @@ description
 			misuse = <"*">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"2A64A8FDB455A13CD40A3237E21FAE06">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Fundoscopic examination of eyes

@@ -8,12 +8,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, United Kingdom">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2009-12-08">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -25,12 +27,10 @@ If there are more details about the examination required, include this informati
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"2E517B75340791AD423C40BFA0A8C4BD">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	INSTRUCTION[id1.1] matches {	-- Imaging Examination Request

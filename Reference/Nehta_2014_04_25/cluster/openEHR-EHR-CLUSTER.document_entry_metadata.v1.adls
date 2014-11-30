@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.document_entry_metadata.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sistine Barretto-Daniels">
 		["organisation"] = <"Ocean Informatics Pty Ltd">
 		["email"] = <"Sistine.Barretto-Daniels@oceaninformatics.com">
 		["date"] = <"2012-01-30">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,13 +22,11 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"CDA Package v1.0 [Internet]. Australia: NEHTA. Available from: http://www.nehta.gov.au/implementation-resources/clinical-documents/EP-1094-2011/NEHTA-1229-2011 (accessed 2013 July 26).">
 		["MD5-CAM-1.0.1"] = <"62D28C55C4E3BD86FB161218231EE6CC">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1] matches {	-- Document Entry Metadata

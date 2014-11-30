@@ -14,12 +14,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.biz">
 		["date"] = <"2007-08-03">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -36,12 +38,10 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie", ...>
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"3B90A4AEF89AC00F58F12B2B87EFE953">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	ITEM_TREE[id1] matches {	-- Gas administration

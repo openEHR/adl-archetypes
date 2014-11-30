@@ -14,12 +14,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, United Kingdom">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2010-07-03">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -35,11 +37,9 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"6FD3128A583EB7081153D0265245E1FA">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	SECTION[id1] 	-- Adhoc heading

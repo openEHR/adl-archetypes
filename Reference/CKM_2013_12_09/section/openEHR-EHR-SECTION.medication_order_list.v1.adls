@@ -16,12 +16,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"7/03/2010">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -59,13 +61,11 @@ INSTRUCTION.medication is suggested as the best archetype to represent a Medicat
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, United Kingdom", "Heath Frankel, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"82E4B8168F16BCAA49A33B9E10910F8A">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	SECTION[id1] matches {	-- Medication Order List

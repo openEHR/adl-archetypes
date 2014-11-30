@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.ecg.v1.0.0
 
 language
@@ -13,12 +13,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Omer Hotomaroglu">
 		["organisation"] = <"Tepe International">
 		["email"] = <"omermatrix@ada.net.tr">
 		["date"] = <"2007-07-18">
 	>
+	copyright = <"© openEHR">
 	details = <
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -41,14 +43,12 @@ Use to record details of ECGs performed during exercise conditions and stress te
 Not to be used for recording Holter monitor results.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"Lead descriptions - http://en.wikipedia.org/wiki/Electrocardiography [accessed 22 February, 2010]
 
 ECG recording, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 18 Jul 2007. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.276 (accessed 31 Jan 2013).">
 		["MD5-CAM-1.0.1"] = <"E72B21EBA4B0389D573AD6A5EA5EF91D">
 	>
-	copyright = <"© openEHR">
 
 definition
 	OBSERVATION[id1] matches {	-- ECG recording

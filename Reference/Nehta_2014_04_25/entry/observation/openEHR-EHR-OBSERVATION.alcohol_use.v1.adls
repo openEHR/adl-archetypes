@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.alcohol_use.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2011-07-15">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -30,13 +32,11 @@ Binge drinking is not directly referred to in this archetype, yet this archetype
 Not to be used to record information about consumption of other substances other than alcohol.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia", "Tim Garden, NTG Department of Health, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
 	other_details = <
 		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft OBSERVATION archetype] Alcohol Consumption; [authored 2009 May 06, cited 2011 Jul 15]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.146_3.">
 		["MD5-CAM-1.0.1"] = <"AD145687C651DAB032F60DA1DA062D19">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Alcohol Use

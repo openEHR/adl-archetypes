@@ -13,12 +13,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2006-09-02">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -35,12 +37,10 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"7E02F7728771D9FDEB9DE3809A92D38C">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Goal

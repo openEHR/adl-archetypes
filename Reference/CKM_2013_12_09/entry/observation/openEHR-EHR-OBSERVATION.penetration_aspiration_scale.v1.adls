@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Christian Ghan">
 		["organisation"] = <"The Chris O'Brien Lifehouse at RPA">
 		["email"] = <"christian.ghan@lifehouserpa.org.au">
 		["date"] = <"2012-12-14">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,12 +22,10 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"Rosenbek JC, Robbins JA, Roecker EB, Coyle JL, Wood JL. A penetration-aspiration scale. Dysphagia. 1996 Spring;11(2):93-8. PubMed PMID: 8721066.">
 		["MD5-CAM-1.0.1"] = <"B58CB90C8DEF14904FD0E97E92660EBC">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Penetration-Aspiration scale

@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"openEHR Archetype Editorial Group / Ocean Informatics">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"27/01/2009">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,7 +22,6 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard Ocean Informatics", "Heather Leslie Ocean Informatics", "Koray Atalag University of Auckland">
 	other_details = <
 		["references"] = <"Digital Imaging and Communications in Medicine (DICOM) Supplement 122: Specimen Module and Revised Pathology SOP Classes
@@ -30,7 +31,6 @@ IHE Anatomic Pathology Technical Framework Volume 1 (PAT TF-1) Revision 1.2 – 
 November 24, 2008 ">
 		["MD5-CAM-1.0.1"] = <"C60D15BE23A7EBCA43402617561C5189">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Specimen preparation

@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.nutrition_summary.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Hugh Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"hugh.leslie@oceaninformatics.com">
 		["date"] = <"17/12/2010">
 	>
+	copyright = <"© 2010 NEHTA">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,12 +22,10 @@ description
 			misuse = <"Not to be used to record measurements such as weight, height or Body Mass Index. Use specific archetypes to record these measurements - OBSERVATION.weight, OBSERVATION.height and OBSERVATION.body_mass_index.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Stephen Chu, NEHTA, Australia", ...>
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"84C2A0159856F573A01ABE90DAC4850E">
 	>
-	copyright = <"© 2010 NEHTA">
 
 definition
 	EVALUATION[id1] matches {	-- Nutrition Summary

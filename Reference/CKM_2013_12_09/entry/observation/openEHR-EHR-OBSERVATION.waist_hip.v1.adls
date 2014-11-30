@@ -13,11 +13,13 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["date"] = <"12/10/2007">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -34,12 +36,10 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", ...>
 	other_details = <
 		["references"] = <"">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Waist and hip circumference

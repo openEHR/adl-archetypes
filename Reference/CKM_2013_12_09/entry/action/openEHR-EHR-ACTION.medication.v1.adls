@@ -13,12 +13,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2010-11-09">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["sl"] = <
 			language = <[ISO_639-1::sl]>
@@ -38,14 +40,12 @@ There is a date and time at which this ACTION took place (as there is for all AC
 			misuse = <"Do not use when recording an instruction or order (use INSTRUCTION.medication).">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Stephen Chu, NEHTA, Australia (Editor)", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Jude Michel, Queensland Health, Australia", "Chris Mitchell, RACGP, Australia", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia (Editor)", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
 	other_details = <
 		["references"] = <"Based on NEHTA Medication action archetype http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.876_6
 NEHTA Therapeutic Good Use Datagroup http://nehta.gov.au/data-group-library/data-specifications/dgl-therapeutic-good-action">
 		["MD5-CAM-1.0.1"] = <"689A4BBC04FD62F27C45C7D28EB1AFE9">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	ACTION[id1] matches {	-- Medication action

@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-ADMIN_ENTRY.medicare_dva_services.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2011-09-30">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,12 +22,10 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Stephen Chu, NEHTA, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Kate Lazarenko, NEHTA, Australia", "Richard Townley-O'Neill, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"9B3AB45579DDCB78E9A04E3005DDD869">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	ADMIN_ENTRY[id1] matches {	-- Medicare/DVA Services

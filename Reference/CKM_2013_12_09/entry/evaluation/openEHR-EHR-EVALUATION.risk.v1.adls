@@ -14,12 +14,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.biz">
 		["date"] = <"23/04/2006">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -36,8 +38,6 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
-	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Evaluation of risk of condition

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.body_temperature.v1.0.0
 
 language
@@ -67,12 +67,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2004-05-18">
 	>
+	copyright = <"© openEHR">
 	details = <
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -185,13 +187,11 @@ Tener en cuenta: El sitio y el método del registro quizás sea necesario mostra
 Este arquetipo no debe usarse para registrar la temperatura de una parte del cuerpo aislado por ej: la temperatura de la planta del pie como parte del manejo de la diabetes crónica.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Knut Bernstein", "Sebastian Garde", "Ian McNicoll", "Omer Hotomaroglu", "Sundaresan Jaganathan", "Heather Leslie", "Shahla Foozonkhah">
 	other_details = <
 		["references"] = <"Body Temperature, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 18 May 2004. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.49_18 (accessed 21 Dec 2012).">
 		["MD5-CAM-1.0.1"] = <"6304429C667E53FE229647E5E0BC6E08">
 	>
-	copyright = <"© openEHR">
 
 definition
 	OBSERVATION[id1] matches {	-- Body Temperature

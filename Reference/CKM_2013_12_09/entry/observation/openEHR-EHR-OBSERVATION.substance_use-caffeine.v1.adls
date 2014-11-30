@@ -8,12 +8,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"6/05/2009">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -24,13 +26,11 @@ A typical use would be to record usage in an caffeine consumption diary.  ">
 			misuse = <"Not to be used for recording persistent and summary details about the use of caffeine - this should be captured using the EVALUATION.substance_use_summary-caffeine archetype.  ">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"21247F693D79FCEFFCAADBFA8F40FA32">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Caffeine consumption

@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-SECTION.adhoc.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, United Kingdom">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2010-03-17">
 	>
+	copyright = <"© openEHR">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -19,12 +21,10 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"8B8435D0AFF357E409EACE30FC6408E0">
 	>
-	copyright = <"© openEHR">
 
 definition
 	SECTION[id1] 	-- Adhoc Heading

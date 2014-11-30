@@ -8,12 +8,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2010-03-02">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -27,7 +29,6 @@ Exclusion statements can only be considered to be current and accurate at the ti
 			misuse = <"Not to be used to record exclusion statements about adverse reactions, medications, problems or diagnoses - use other specific specialisations of the EVALUATION.exclusion archetype for these purposes.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia", "Stephen Chu, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -35,7 +36,6 @@ Exclusion statements can only be considered to be current and accurate at the ti
 http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1312_2 (accessed 3 Sept 2013)">
 		["MD5-CAM-1.0.1"] = <"EC8697A3EB07A9B28FD861E7E4037215">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1.1] matches {	-- Exclusion of a Procedure

@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"NHS CfH / Ocean Informatics">
 		["email"] = <"ian.mcnicoll@oceaninformatics .com">
 		["date"] = <"08/01/2008">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,13 +22,11 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie", ...>
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"6DB82589E80219EF8BA863CAFC2C8EC9">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	COMPOSITION[id1] matches {	-- Referral document

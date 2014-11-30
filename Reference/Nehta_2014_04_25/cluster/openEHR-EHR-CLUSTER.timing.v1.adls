@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.timing.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"NEHTA">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"12/11/2010">
 	>
+	copyright = <"copyright (c) 2011 NEHTA">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,12 +22,10 @@ description
 			misuse = <"Not to be used for specific timing but for scheduling of tasks that need repeating.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sharmila Biswas, Dr Sharmila Biswas, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "David Evans, Queensland Health, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Richard Townley-O'Neill, NEHTA, Australia (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"F470047D6FF9DF0B7EFC836E7C793A8D">
 	>
-	copyright = <"copyright (c) 2011 NEHTA">
 
 definition
 	CLUSTER[id1] matches {	-- Timing

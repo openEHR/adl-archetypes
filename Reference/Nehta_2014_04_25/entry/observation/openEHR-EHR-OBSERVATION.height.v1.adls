@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.height.v1.0.0
 
 language
@@ -31,12 +31,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2006-03-09">
 	>
+	copyright = <"© openEHR">
 	details = <
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -102,13 +104,11 @@ Não deve ser usado para registrar a velocidade de crescimento.
 Não deve ser utilizado para gravar o tamanho de um objeto ou parte específica do corpo.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sheryl Alexander, NT Department of Health, Australia", "Rita Apelt, Department of Health,NT, Australia", "Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NEHTA, Australia", "Margaret Cotter, AMSANT, Australia", "Hans Demski, Helmholtz Zentrum München, Germany", "Paul Donaldson, Nursing Informatics Australia, Australia", "Michelle Dowden, Miwatj Health Ngalkanbuy Health, Australia", "Tim Garden, NTG Department of Health, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Tanya Gardner, CAAC, Australia", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore", "Anneke Goossen, Results 4 Care, Netherlands", "Heather Grain, Llewelyn Informatics, Australia", "Anne Harbison, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Omer Hotomaroglu, Turkey", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Andrew James, University of Toronto, Canada", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeroen Meintjen, Medisch Centrum Alkmaar, Netherlands", "Jeremy Oats, NT Health, Australia", "Steven Schatz, Department of Health (Northern Territory), Australia", "Thilo Schuler, Germany", "Cherie Whitbread, Royal Darwin Hospital, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
 	other_details = <
 		["references"] = <"Great Ormond Street Hospital for Children [Internet]. London, United Kingdom: Great Ormond Street Hospital for Children NHS Trust; c 2009. Clinical guideline: Height, measuring a child; 2000 Sep 01 [updated 2009 Jul 30; cited 2009 Jul 28 ]. Available from: http://www.ich.ucl.ac.uk/clinical_information/clinical_guidelines/cpg_guideline_00060.">
 		["MD5-CAM-1.0.1"] = <"416134690BF6ECCAB36E58BCF354CFFA">
 	>
-	copyright = <"© openEHR">
 
 definition
 	OBSERVATION[id1] matches {	-- Body Height/Length

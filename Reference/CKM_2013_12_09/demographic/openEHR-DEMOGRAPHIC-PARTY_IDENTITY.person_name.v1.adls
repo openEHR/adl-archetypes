@@ -15,12 +15,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Rigoleta Dutra & Sergio Miranda Freire">
 		["organisation"] = <"Universidade do Estado do Rio de Janeiro - UERJ">
 		["email"] = <"sergio@lampada.uerj.br">
 		["date"] = <"20/05/2009">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -37,12 +39,10 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNiccol, Ocean Informatics, Scotland", "Rong Chen, Cambio Healthcare Systems, Sweden", "Ricardo Correia, SBIM/FMUP, Portugal", "Grahame Grieve, Australia", "Heather Grain, Llewelyn Grain Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"ISO/TS 22220:2008(E) - Identification of Subject of Care - Technical Specification- International Organization for Standardization.">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	PARTY_IDENTITY[id1] matches {	-- Person name

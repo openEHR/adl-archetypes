@@ -27,12 +27,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2007-10-04">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -63,12 +65,10 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"0C7112890FA7C3E09934F945FD77310B">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	ACTION[id1] matches {	-- Intravenous fluid administration

@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-ACTION.informed_consent.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"09-10-2012">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -24,13 +26,11 @@ The status of the informed consent is reflected by the pathway steps - requested
 			misuse = <"Not to be used for recording consent for any other purpose, for example patient consent for access to their EHR.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"ASTM Standard E2369 - 05, \"Standard Specification for Continuity of Care Record (CCR)\", ASTM International, West Conshohocken, PA, 2003, DOI: 10.1520/E2369-05E02, www.astm.org.">
 		["MD5-CAM-1.0.1"] = <"946987A1D182E9C9FEE624EF6065E29D">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	ACTION[id1] matches {	-- Informed Consent

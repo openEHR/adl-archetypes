@@ -8,12 +8,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"28/06/2006">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -23,13 +25,11 @@ description
 			misuse = <"Not to be used for systemic blood pressure. Use 'observation.blood_pressure' for this.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, United Kingdom", ...>
 	other_details = <
 		["references"] = <"http://www.wwl.nhs.uk/library/foi/clin_pols/cvpprocedures.pdf">
 		["MD5-CAM-1.0.1"] = <"5762C17AA1DFA8C7EAA58148E1730121">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] occurrences matches {0..1} matches {	-- Central venous pressure

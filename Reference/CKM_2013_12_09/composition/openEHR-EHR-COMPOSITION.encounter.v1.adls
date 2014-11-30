@@ -30,11 +30,13 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Thomas Beale">
 		["organisation"] = <"Ocean Informatics">
 		["date"] = <"2005-10-10">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -65,12 +67,10 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"10250E3AD051C33DB43D2DA76A272E08">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	COMPOSITION[id1] matches {	-- Encounter

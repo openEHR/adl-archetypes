@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-ACTION.procedure.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"24/01/2011">
 	>
+	copyright = <"© 2011 NEHTA">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -43,12 +45,10 @@ Recording information using this ACTION archetype indicates that some sort of ac
 Not to be used to record a whole operation or procedure report.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Stephen Chu, NEHTA, Australia (Editor)", "David Evans, Queensland Health, Australia", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Andrew Goodchild, NEHTA, Australia", "Megan Hawkins, Mater Health Services, Australia", "Sam Heard, Ocean Informatics, Australia", "Mary Kelaher, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Michael Osborne, Mater Health Services, Australia", "Chris Pearce, Melbourne East GP Network, Australia", "Peter Scott, Australia", "Elizabeth Stanick, Hobart Anaesthetic Group, Australia", "John Taylor, NEHTA, Australia", "Richard Townley-O'Neill, NEHTA, Australia">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"E5A1E33897CAD2386B16AD3AE60D16A0">
 	>
-	copyright = <"© 2011 NEHTA">
 
 definition
 	ACTION[id1] matches {	-- Procedure

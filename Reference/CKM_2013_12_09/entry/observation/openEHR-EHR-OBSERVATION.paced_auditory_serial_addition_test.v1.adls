@@ -15,12 +15,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Michael Braun">
 		["organisation"] = <"University Medical Center Freiburg, Germany">
 		["email"] = <"braun@imbi.uni-freiburg.de">
 		["date"] = <"2012-10-17">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -41,7 +43,6 @@ Use the MSFC Manual for detailed administration instructions. Prior to the recor
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sebastian Bischoff, gfnmediber GmbH, Germany", "Martin Boeker, University Medical Center Freiburg, Germany", "Michael Braun, University Medical Center Freiburg, Germany (Editor)", "Sebastian Garde, Ocean Informatics, Germany", "Heather Leslie, Ocean Informatics, Australia", "Sebastian Mansow-Model, gfnmediber GmbH, Germany", "Catalina Martínez-Costa, Medical University of Graz, Austria", "Vyacheslav Mavrin, JSC Comsoft, Russia", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Alexander U. Brandt, gfnmediber GmbH, Germany", "Susanne Walter, University Medical Center Freiburg, Germany">
 	other_details = <
 		["current_contact"] = <"Michael Braun, University Medical Center Freiburg, Germany, braun@imbi.uni-freiburg.de">
@@ -49,7 +50,6 @@ Use the MSFC Manual for detailed administration instructions. Prior to the recor
 Tombaugh TN. A comprehensive review of the Paced Auditory Serial Addition Test (PASAT). Arch Clin Neuropsychol 2006;21(1):53–76.">
 		["MD5-CAM-1.0.1"] = <"4A376958A6434A49CA40592071FC7E2D">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Paced Auditory Serial Addition Test

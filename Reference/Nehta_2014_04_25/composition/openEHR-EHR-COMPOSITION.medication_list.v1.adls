@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.medication_list.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Chunlan Ma">
 		["organisation"] = <"Ocean Informatics, Australia">
 		["email"] = <"chunlan.ma@oceaninformatics.com">
 		["date"] = <"2006-11-06">
 	>
+	copyright = <"© openEHR">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -35,14 +37,12 @@ In order for this list to be accurate and safe to use as the basis for decision 
 Not to be used to record vaccinations administered.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, United Kingdom", "Sam Heard, Ocean Informatics, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"Medication List, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 06 Nov 2006. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.286_5 (accessed 14 Mar 2013).">
 		["MD5-CAM-1.0.1"] = <"97B6899EA00EBED30CCE883E100CBFD4">
 	>
-	copyright = <"© openEHR">
 
 definition
 	COMPOSITION[id1] matches {	-- Medication List

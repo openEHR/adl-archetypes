@@ -22,12 +22,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2009-6-19">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -57,12 +59,10 @@ Not to be used to record the weight of an object or body part.">
 لا يستخدم لتسجيل وزن شيء ما أو جزء من الجسم.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Marja Buur-Krom, Medisch Centrum Alkmaar, Netherlands", "Sebastian Garde, Ocean Informatics, Germany", "Ian McNicoll, Ocean Informatics, Scotland", "Paul Donaldson, Queensland Health, Australia", "Heather Grain, Llewellyn Informatics, Australia", "Anne Harbison, Australia", "Andrew James, University of Toronto, Canada", "Sam Heard, Ocean Informatics, Australia">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"AF62FBF366185210E9EC1A9C0D8F6927">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Adjusted Body weight

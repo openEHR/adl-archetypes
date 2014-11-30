@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.exclusion-medication.v1.0.0
 
 specialize
@@ -8,12 +8,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2010-03-02">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -27,14 +29,12 @@ Exclusion statements can only be considered to be current and accurate at the ti
 			misuse = <"Not to be used to record exclusion statements about adverse reactions, procedures, problems or diagnoses - use other specific specialisations of the EVALUATION.exclusion archetype for these purposes.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia", "Stephen Chu, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"Exclusion Statement - Medications, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 02 Mar 2010. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.619_1 (accessed 31 July 2013).">
 		["MD5-CAM-1.0.1"] = <"9ACE3408FD60C0DC4FAC8B444BBD1DEE">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1.1] matches {	-- Exclusion of a Medication

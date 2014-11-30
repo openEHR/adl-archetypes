@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.apgar.v1.0.0
 
 language
@@ -36,12 +36,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"18/05/2004">
 	>
+	copyright = <"© 2011 NEHTA">
 	details = <
 		["es-cl"] = <
 			language = <[ISO_639-1::es-cl]>
@@ -100,7 +102,6 @@ Erkend wordt dat er gewoonlijk een ezelsbruggetje word gebruikt bij het aanleren
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sheryl Alexander, NT Department of Health, Australia", "Margaret Cotter, AMSANT, Australia", "Paul Donaldson, Queensland Health, Australia", "Michelle Dowden, Miwatj Health Ngalkanbuy Health, Australia", "Tim Garden, NTG Department of Health, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Anneke Goossen, Netherlands", "Anne Harbison, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Omer Hotomaroglu, Turkey", "Pieter Hummel, Netherlands", "Andrew James, University of Toronto, Canada", "Bernadette Lack, Department of Health, NT, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, Scotland", "Jeremy Oats, NT Health, Australia", "Gary Sinclair, NT DoH, Australia", "Cherie Whitbread, Royal Darwin Hospital, Australia", "Jo Wright, NT Dept of Health, Australia">
 	other_details = <
 		["references"] = <"Apgar V.  A proposal of a New Method of Evaluation of the Newborn Infant. Curr Res Anesth Analg.  1953 Jul-Aug;32(4):260-7.
@@ -116,7 +117,6 @@ http://en.wikipedia.org/wiki/Apgar_score
 Apgar score, published archetype, openEHR Foundation. “www.openEHR.org/knowledge.” openEHR Clinical Knowledge Manager. Authored: 06 May 2009. http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.172_10 (accessed May 31, 2011).">
 		["MD5-CAM-1.0.1"] = <"B5F002DA0EBFCE43780E1656946CE455">
 	>
-	copyright = <"© 2011 NEHTA">
 
 definition
 	OBSERVATION[id1] matches {	-- Apgar score

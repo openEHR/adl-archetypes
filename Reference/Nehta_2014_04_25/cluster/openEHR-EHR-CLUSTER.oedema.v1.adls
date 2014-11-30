@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.oedema.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"9/04/2007">
 	>
+	copyright = <"© openEHR">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,11 +22,9 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"98AEF38521DA14C24F20F011BB901D39">
 	>
-	copyright = <"© openEHR">
 
 definition
 	CLUSTER[id1] matches {	-- Oedema

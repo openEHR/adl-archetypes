@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-ACTION.pathology_test.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"9/03/2011">
 	>
+	copyright = <"© 2011 NEHTA">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -19,12 +21,10 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"1B03B5EA64876E5D414A6C7E27DF28BE">
 	>
-	copyright = <"© 2011 NEHTA">
 
 definition
 	ACTION[id1] matches {	-- Pathology test

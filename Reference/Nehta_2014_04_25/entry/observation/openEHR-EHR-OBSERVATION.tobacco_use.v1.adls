@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.tobacco_use.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"6/5/2009">
 	>
+	copyright = <"© 2011 National E-Health Transition Authority">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -24,13 +26,11 @@ A record of typical tobacco use during a period can be recorded by recording the
 			misuse = <"Not to be used for recording persistent, summary details about tobacco use and consumption - this should be captured using the EVALUATION.tobacco_use_summary archetype.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", "Sam Heard, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"Tobacco Use draft archetype [Internet]. London: openEHR Clinical Knowledge Manager, openEHR Foundation; 06 May 2009 [cited 2011 Jul 15]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.149_3.">
 		["MD5-CAM-1.0.1"] = <"4EE6CE90C17D90E084D4A2C86E8D9F4A">
 	>
-	copyright = <"© 2011 National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Tobacco Use

@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.symptom.v1.0.0
 
 language
@@ -20,12 +20,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Tony Shannon">
 		["organisation"] = <"UK NHS, Connecting for Health">
 		["email"] = <"tony.shannon@nhs.net">
 		["date"] = <"2007-02-20">
 	>
+	copyright = <"© openEHR">
 	details = <
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -55,13 +57,11 @@ This archetype allows a 'nil significant' statement to be explicitly recorded.">
 Not to be used for diagnoses and problems that form part of a persisting Problem List - use EVALUATION.problem_diagnosis.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["references"] = <"Symptom, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 20 Feb 2007. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.195 (accessed 18 Dec 2012).">
 		["MD5-CAM-1.0.1"] = <"ACB5C5EE5E30CB84A4727271A54963C0">
 	>
-	copyright = <"© openEHR">
 
 definition
 	CLUSTER[id1] matches {	-- Symptom

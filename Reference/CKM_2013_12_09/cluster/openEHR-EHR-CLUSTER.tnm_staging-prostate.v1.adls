@@ -8,12 +8,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, United Kingdom">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"27/07/2009">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -24,7 +26,6 @@ description
 Not to be to stage transitional cell carcinoma of the prostate.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie Ocean Informatics Australia", "Sam Heard Ocean Informatics Australia", "Koray Atalag, University of Auckland, New Zealand">
 	other_details = <
 		["references"] = <"American Joint Committee on Cancer. TNM schema files [Internet]. [cited 2009 Jul 27 ] 
@@ -35,7 +36,6 @@ Greene FL, Page DL, Fleming ID. et al, eds, for the American Joint Committee on 
 ">
 		["MD5-CAM-1.0.1"] = <"C01843F6E3EA9FAE62C779D985320584">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1.1] matches {	-- TNM staging - Prostate cancer (Sixth edition)

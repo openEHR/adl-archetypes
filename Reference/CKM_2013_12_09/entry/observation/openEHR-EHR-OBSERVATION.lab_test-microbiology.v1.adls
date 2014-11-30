@@ -8,12 +8,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"openEHR Archetype Editorial Group / Ocean Informatics">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"27/01/2009">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -28,13 +30,11 @@ Specific tests will gnerally require further specialisation or templating constr
 			misuse = <"Do not use for standard value-driven lab tests such as haematology and biochemistry tests.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie AEG / Ocean Infomatics", "Sam Heard Ocean Informatics">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"73BF9F7DB57062C7EB14FCAACCA54D40">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Microbiolology

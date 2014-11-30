@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2011-08-08">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -25,13 +27,11 @@ Use the Braden-Q scale for children between 21 days and 5 years of age - OPEN-EH
 Use the adult Braden Scale for children over 5 years of age and adults - OPEN-EHR-OBSERVATION.braden_scale.v1">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["current_contact"] = <"Dr Ian McNicoll, Ocean Informatics, UK, ian.mcnicoll@oceaninformatics.com">
 		["references"] = <"Huffines B, Logsdon MC. The neonatal skin risk assessment scale for predicting skin breakdown in neonates. Issues in Comprehensive Pediatric Nursing 1997;20(2):103-114.">
 		["MD5-CAM-1.0.1"] = <"81DFA726CC9BF96D198F7FEFB30B5895">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Neonatal Braden scale (NSRAS)

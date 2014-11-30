@@ -42,12 +42,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics, Australia">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2006-03-26">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -97,12 +99,10 @@ description
 			misuse = <"Csak a születési súly feljegyzésére - használja az OBSERVATION.weight archetípust minden más méréshez.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sebastian Garde, Ocean Informatics, Germany (Editor)", "Omer Hotomaroglu, Turkey (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"EC6662EA9DCEA40574E00E7F55C52876">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] occurrences matches {0..1} matches {	-- Body weight at birth

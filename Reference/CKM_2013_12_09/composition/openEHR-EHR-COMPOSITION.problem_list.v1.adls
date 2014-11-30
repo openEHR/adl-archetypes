@@ -15,12 +15,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics, Australia">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2013-02-19">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -58,13 +60,11 @@ In order for this list to be accurate and safe to use as the basis for decision 
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Heather Leslie, Ocean Informatics, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"BFA848F52FAB6BB43DD1E6A9249D11DF">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	COMPOSITION[id1] matches {	-- Problem List

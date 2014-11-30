@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.amount.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"NEHTA">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"10/11/2010">
 	>
+	copyright = <"© 2011 NEHTA">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,11 +22,9 @@ description
 			misuse = <"For a range of amount use the specialised class amount-range.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"EA313FF140CFA79737DE9754048D9D9C">
 	>
-	copyright = <"© 2011 NEHTA">
 
 definition
 	CLUSTER[id1] matches {	-- Amount of medication

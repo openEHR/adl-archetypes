@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2012-11-23">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -22,13 +24,11 @@ This archetype does not presume any particular schedule or protocol for vaccinat
 			misuse = <"Not to be used to record a status of the subject's possible immune status. Immune status and need for ongoing vaccination or booster will be a clinical decision determined by a number of factors - clinical evidence of previous infection; vaccination status; vaccination history; serology results; contraindications; adverse reactions; and the clinical trigger eg a needle stab injury or exposure to an infectious disease/agent.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Merrilyn Curtis, AnalyzeIT, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"252D262E3AD5452A4EADF46B46666452">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Vaccination Summary

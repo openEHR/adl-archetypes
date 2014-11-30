@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.sade_classification.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2012-09-07">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -25,7 +27,6 @@ Sade Stage 5 (spontaneous perforation) is described in some documentation but is
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
 		["references"] = <"Personal communication with clinical domain experts.
@@ -35,7 +36,6 @@ Sadé J, Berco E. Atelectasis and secretory otitis media. Ann. Otol. Rhinol. Lar
 Lancaster J, Srinivasan V. Management of tympanic membrane retraction pockets. Australian Journal of Otolaryngology 2002;5(1):17–20.">
 		["MD5-CAM-1.0.1"] = <"7D7F39AB27C48E62179829E82353A8D5">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	CLUSTER[id1] matches {	-- Sade Classification

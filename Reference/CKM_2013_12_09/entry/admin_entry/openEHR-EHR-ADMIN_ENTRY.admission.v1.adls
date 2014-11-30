@@ -13,12 +13,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Chunlan Ma">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"chunlan.ma@oceaninformatics.com">
 		["date"] = <"19/07/07">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -34,13 +36,11 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sistine Barretto", ...>
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"54E7D096A051918F6E3EF51257DD6B60">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	ADMIN_ENTRY[id1] matches {	-- Patient admission

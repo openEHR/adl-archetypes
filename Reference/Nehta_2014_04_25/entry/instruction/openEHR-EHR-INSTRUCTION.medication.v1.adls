@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-INSTRUCTION.medication.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"NEHTA">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"8/11/2010">
 	>
+	copyright = <"© 2011 NEHTA">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -34,7 +36,6 @@ The content is potentially complex. Where the content is re-usable in other cont
 Not to be used to record ordering of blood products, implants or major devices such as pacemakers and defibrillators, etc.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"John Bennett, NEHTA, Australia", "Sharmila Biswas, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Sarah Gaunt, NEHTA, Australia", "Trina Gregory, cpc, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Mary Kelaher, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Susan McIndoe, Royal District Nursing Service, Australia", "David McKillop, NEHTA, Australia", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Chris Pearce, Melbourne East GP Network, Australia", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Margaret Prichard, NEHTA, Australia", "Cathy Richardson, NEHTA, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "John Taylor, NEHTA, Australia", "Richard Townley-O'Neill, NEHTA, Australia (Editor)", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
 	other_details = <
 		["references"] = <"openEHR Foundation Medication archetypes http://www.openehr.org/knowledge
@@ -43,7 +44,6 @@ Intermountain Healthcare Medication order model, Personal Communication to Sam H
 Royal Australian College of General Practitioners. Fact Sheet: Medicines List. 2010.">
 		["MD5-CAM-1.0.1"] = <"19C137CC2F7BBA64B9128B7919E6C6A6">
 	>
-	copyright = <"© 2011 NEHTA">
 
 definition
 	INSTRUCTION[id1] matches {	-- Medication instruction

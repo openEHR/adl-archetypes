@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2011-05-24">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,14 +22,12 @@ description
 			misuse = <"Not to be used to record consent - for example consent to a vasectomy after provision of a fact sheet about vasectomy.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Tim Garden, NTG Department of Health, Australia", "Tanya Gardner, CAAC, Australia", "Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Chunlan Ma, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Rosalie Schultz, Anyinginyi Health Aboriginal Corporation, Australia", "Jo Wright, NT Dept of Health, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"Health Education (ACTION), draft archetype, NEHTA Clinical Knowledge Manager [Internet]. Sydney: National eHealth Transition Authority. Authored: 24May 2011. Available at: http://dcm.nehta.org.au/ckm/OKM.html#showarchetype_1013.1.1005_2 (accessed 26 Feb 2013).">
 		["MD5-CAM-1.0.1"] = <"41FABA666F88DB81EBB0D143689C1D98">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	ACTION[id1] matches {	-- Health Education

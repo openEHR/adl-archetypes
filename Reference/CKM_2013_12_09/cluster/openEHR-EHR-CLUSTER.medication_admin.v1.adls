@@ -15,12 +15,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"openEHR Foundation">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2013-05-16">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -36,13 +38,11 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", ...>
 	other_details = <
 		["references"] = <"Medication administration, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. : NEHTA. Authored: 10 Nov 2010. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.874_1 (accessed 15 May 2013).">
 		["MD5-CAM-1.0.1"] = <"6BA029E6118C5E5418053BE84D85C377">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Medication administration

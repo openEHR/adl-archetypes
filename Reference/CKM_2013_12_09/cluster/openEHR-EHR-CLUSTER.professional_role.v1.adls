@@ -15,12 +15,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"12/11/2007">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -37,12 +39,10 @@ description
 			misuse = <"Nicht zur Aufzeichnung einer rollenbasierten Zugangskontrolle (role-based access control) zu verwenden.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"A8AF528D77039F0C4469C04544D806CA">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Professional role

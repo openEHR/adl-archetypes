@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.social_support_summary.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"17/12/2010">
 	>
+	copyright = <"© 2010 NEHTA">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,12 +22,10 @@ description
 			misuse = <"Not to be used to record detailed information about orders or instructions for provision of specific social support services such as cleaning or transport assistance - use specific INSTRUCTION archetypes.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Stephen Chu, NEHTA, Australia", ...>
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"5EE03FAA22CA69898140A1196675FA16">
 	>
-	copyright = <"© 2010 NEHTA">
 
 definition
 	EVALUATION[id1] matches {	-- Social Support Summary

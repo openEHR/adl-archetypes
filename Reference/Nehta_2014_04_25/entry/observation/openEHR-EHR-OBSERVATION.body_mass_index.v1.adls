@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.body_mass_index.v1.0.0
 
 language
@@ -33,12 +33,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2006-03-22">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["fa"] = <
 			language = <[ISO_639-1::fa]>
@@ -94,7 +96,6 @@ Em crianças e adolescentes, o IMC deve ser avaliada por meio de tabelas de refe
 			misuse = <"Não se destina a registrar informações sobre os percentis de IMC - estes serão gravadas em arquétipos distintos.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sheryl Alexander, NT Department of Health, Australia", "Rita Apelt, Department of Health,NT, Australia", "Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NEHTA, Australia", "Margaret Cotter, AMSANT, Australia", "Angela de Zwart, Orion Health, New Zealand", "Paul Donaldson, Nursing Informatics Australia, Australia", "Michelle Dowden, Miwatj Health Ngalkanbuy Health, Australia", "Tim Garden, NTG Department of Health, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Tanya Gardner, CAAC, Australia", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore", "Heather Grain, Llewelyn Grain Informatics, Australia", "Anne Harbison, CPCER, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Andrew James, University of Toronto, Canada", "Shinji Kobayashi, Ehime University, Japan", "Bernadette Lack, Department of Health, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Jeremy Oats, NT Health, Australia", "Arturo Romero, SESCAM, Spain", "Steven Schatz, Department of Health (Northern Territory), Australia", "Cherie Whitbread, Royal Darwin Hospital, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
 	other_details = <
 		["references"] = <"Clinical Guidelines on the Identification, Evaluation, and Treatment of Overweight and Obesity in Adults: The Evidence Report [Internet]. Bethesda (MD): National Heart, Lung, and Blood Institute; NIH Publication No. 98-4083, Sep 1998, [cited 2011 Aug 02]. Available from: http://www.nhlbi.nih.gov/guidelines/obesity/.
@@ -108,7 +109,6 @@ Obesity: preventing and managing the global epidemic. Report of a WHO consultati
 Tzamaloukas AH, Patron A, Malhotra D. Body mass index in amputees. JPEN J Parenter Enteral Nutr. 1994 Jul-Aug;18(4):355-8. PubMed PMID: 7933444. [Cited 2011 Aug 02]. Available from: http://pen.sagepub.com/cgi/content/abstract/18/4/355.">
 		["MD5-CAM-1.0.1"] = <"04378259FFF99E7ED436DE2CB2B4369C">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Body Mass Index

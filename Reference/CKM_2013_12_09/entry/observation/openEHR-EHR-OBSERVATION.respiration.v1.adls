@@ -50,12 +50,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, United Kingdom">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2009-07-17">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -143,7 +145,6 @@ Niet te gebruiken voor de registratie van details, als de persoon beademing onde
 ">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Marja Buur, Medisch Centrum Alkmaar/ Code24, Netherlands", "Gregory Caulton, PatientOS Inc., United States", "Stephen Chu, NeHTA, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Anne Harbison, CPCER, Australia", "Sam Heard, Ocean Informatics, Australia", "Omer Hotomaroglu, Turkey", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Andrew James, University of Toronto, Canada", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore">
 	other_details = <
 		["references"] = <"Braun RB.  Respiratory Rate and Pattern. In: Walker HK, Hall WD, Hurst JW. Clinical methods: the history, physical, and laboratory examinations. [Internet] 3rd ed. Stoneham (MA): Butterworth Publishers; c1990 [cited 2009 Jul 21] 
@@ -162,7 +163,6 @@ Apneustic respirations - Wikipedia, the free encyclopedia [Internet]. [cited 200
 Available from: http://en.wikipedia.org/wiki/Apneustic_respirations">
 		["MD5-CAM-1.0.1"] = <"F785361CE72E20207CD557387B49B703">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Respirations

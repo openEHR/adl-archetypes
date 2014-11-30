@@ -13,12 +13,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2013-03-08">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -36,7 +38,6 @@ description
 			misuse = <"*Supporting subject information, often required  to interpret the tests, such as smoking status or oxygenation, should be captured in separate, specific archetypes.(en)">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Valeria Lecca, Sardegna Ricerche, Italia", "Derek Corrigan, Royal College of Surgeons in Ireland, Ireland", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"Lung volumes [Internet]. [date unknown];[cited 2010 Aug 25 ] Available from: http://en.wikipedia.org/wiki/Lung_volumes
@@ -46,7 +47,6 @@ Pingul EM, de Guia TS, Ayuyao FG. FEV1/FEV6 VS FEV1/FVC IN THE SPIROMETRIC DIAGN
 Tiffeneau R, Pinelli A. Air circulant et air captif dans l'exploration de la fonction ventilatrice pulmonaire. Paris Med 1947;133:624-8.">
 		["MD5-CAM-1.0.1"] = <"387886EC6090ADD9B2D1C7024ECF6956">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] occurrences matches {0..1} matches {	-- Pulmonary Function Testing

@@ -21,12 +21,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2009-06-21">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -54,12 +56,10 @@ description
 			misuse = <"No utilice este arquetipo para el registro de detalles actuales sobre el uso de la sustancia y los datos relacionados con eventos. Esto debe ser capturado usando el arquetipo OBSERVATION.substance_use. No utilice este arquetipo para registro de la historia de uso o consumo de las sustancias comunes como el tabaco y el alcohol. Como estas son tan comúnmente consumidas, estos datos deben ser registrados con los arquetipos específicos para ellas.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"3DE9486355CA4A3926F27A8B1E8C5CFB">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Substance Use Summary

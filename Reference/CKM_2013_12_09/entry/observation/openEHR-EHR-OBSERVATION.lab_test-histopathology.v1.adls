@@ -16,12 +16,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"openEHR Archetype Editorial Group / Ocean Informatics">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"27/01/2009">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -45,13 +47,11 @@ Do not use for microbiology - use OBSERVATION.lab_test-microbiology.">
 لا يستخدم للميكروبيولوجيا, استخدم بدلا منه: ملاحظة اختبار معملي ميكروبيولوجي.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie AEG / Ocean Infomatics", "Sam Heard Ocean Informatics">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"3B124686FC94085D4B39B870E80C9CD4">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Histopathology

@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.problem_list.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics, Australia">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2013-02-19">
 	>
+	copyright = <"© openeEHR">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -29,14 +31,12 @@ In order for this list to be accurate and safe to use as the basis for decision 
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Heather Leslie, Ocean Informatics, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"Problem List, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 19 Feb 2013. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.287_4 (accessed 14 Mar 2013).">
 		["MD5-CAM-1.0.1"] = <"BFA848F52FAB6BB43DD1E6A9249D11DF">
 	>
-	copyright = <"© openeEHR">
 
 definition
 	COMPOSITION[id1] matches {	-- Problem List

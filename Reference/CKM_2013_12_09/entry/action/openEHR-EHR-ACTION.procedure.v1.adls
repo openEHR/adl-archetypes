@@ -28,12 +28,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, United Kingdom">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2009-12-03">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -67,12 +69,10 @@ Information about activities related to the procedure, such as anaesthesia or ad
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"3D7A4FCD75127BBE8C9873FF487C6C44">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	ACTION[id1] matches {	-- Procedure undertaken

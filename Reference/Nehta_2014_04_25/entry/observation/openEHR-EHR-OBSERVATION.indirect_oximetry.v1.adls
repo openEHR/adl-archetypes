@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.indirect_oximetry.v1.0.0
 
 language
@@ -14,12 +14,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, United Kingdom">
 		["email"] = <"Ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2010-01-26">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -46,7 +48,6 @@ Waveforms should be recorded here when used to document quality of the blood gas
 Not to be used to record invasive blood gas measurement. For example, arterial (SaO2), venous (SvO2) oxygen saturation or Oxygen content (CaOC) which are usually determined by invasive methods such as laboratory blood gases or vascular catheter devices. These should also be recorded within the OBSERVATION.lab_test-blood_gases archetype.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Sergio Carmona, Chile", "Stephen Chu, NEHTA, Australia", "Tamsin Cockayne, Australia", "Ed Conley, Cardiff University", "Graham Denyer, Australian Antarctic Division, Australia", "Paul Donaldson, Nursing Informatics Australia, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Sebastian Garde, Ocean Informatics, Germany (Editor)", "Christian Ghan, The Chris O'Brien Lifehouse at RPA, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Karsten Heusser, Hannover Medical School, Germany", "Oliver Hosking, Remote Health NT, Australia", "Omer Hotomaroglu, Turkey (Editor)", "Evelyn Hovenga, EJSH Consulting, Australia", "Pieter Hummel, Medisch Centrum Alkmaar, Netherlands", "Eugene Igras, IRIS Systems, Inc., Canada", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Gorazd Kalan, University Medical Centre Ljubljana, Slovenia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Udo Müller, CompuGROUP Software, Germany", "Andrej Orel, Marand d.o.o., Slovenia", "Arturo Romero, SESCAM, Spain", "Fabian Schwarz, NT Health, Australia", "Tony Shannon, NHS, United Kingdom", "Gary Sinclair, NT DoH, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -63,7 +64,6 @@ Hanning CD, Alexander-Williams JM. Pulse oximetry: a practical review. BMJ. 1995
 Jubran A. Pulse oximetry. Crit Care. 1999;3(2):R11-R17. PubMed PMID: 11094477; PubMed Central PMCID: PMC137227. Available from: http://ccforum.com/content/3/2/R11 (accessed 2013 Feb 26).">
 		["MD5-CAM-1.0.1"] = <"84E20F08CBB2E78F52D16A177036AD85">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Indirect Oximetry

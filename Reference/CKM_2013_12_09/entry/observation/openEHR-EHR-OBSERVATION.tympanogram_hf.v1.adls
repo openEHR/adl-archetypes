@@ -13,11 +13,13 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Kerrie Lee">
 		["email"] = <"kerrie.lee2@bigpond.com">
 		["date"] = <"2013-02-01">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -48,7 +50,6 @@ All of the data elements are recorded using a single method or protocol. If, dur
 Not to be used to record 226Hz tympanometry. Use the OBSERVATION.tympanogram_226Hz archetype instead.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -73,7 +74,6 @@ Liden G. The scope and application of current audiometric tests. J Laryngol Otol
 Vanhuyse VJ, Creten WL, Van Camp KJ. On the W-notching of tympanograms. Scand Audiol 1975;4.">
 		["MD5-CAM-1.0.1"] = <"96D0C536EEABAC8913C4ACB0826A98EA">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Tympanogram Result - High Frequency

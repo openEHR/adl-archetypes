@@ -16,12 +16,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2008-12-23">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -38,7 +40,6 @@ description
 			misuse = <"Não apropriado para carregar nenhum dado clínico real.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Individual A, Argentina", "Individual B, Belgium", "Individual C, Canada (Editor)">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -46,7 +47,6 @@ description
 CKM:  http://www.openehr.org/knowledge/">
 		["MD5-CAM-1.0.1"] = <"AEA1AE0BC2466A2D122B5A13AC957AB3">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Demonstration

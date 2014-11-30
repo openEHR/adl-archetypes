@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"07/03/2010">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -21,13 +23,11 @@ Supporting summary information can be added to the COMPOSITION slots - for examp
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heath Frankel, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, United Kingdom">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"77FF1F18C4DC89FD43CAA1B5D5E03CE2">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	SECTION[id1] matches {	-- Referral Details

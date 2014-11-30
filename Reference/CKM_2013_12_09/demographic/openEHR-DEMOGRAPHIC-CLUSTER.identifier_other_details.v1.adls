@@ -15,6 +15,7 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sergio Miranda Freire & Rigoleta Dutra Mediano Dias">
 		["organisation"] = <"Universidade do Estado do Rio de Janeiro - UERJ">
@@ -37,7 +38,6 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 
 definition
 	CLUSTER[id1] matches {	-- Additional identifier data

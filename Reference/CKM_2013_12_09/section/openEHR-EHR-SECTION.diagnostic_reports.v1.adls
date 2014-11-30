@@ -15,12 +15,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"7/03/2010">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -37,13 +39,11 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"EE922E416EC2C85EE6DF568D33B963CB">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	SECTION[id1] matches {	-- Diagnostic Reports

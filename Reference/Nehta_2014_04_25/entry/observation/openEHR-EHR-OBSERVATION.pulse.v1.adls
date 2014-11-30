@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.pulse.v1.0.0
 
 language
@@ -27,12 +27,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2006-03-26">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -89,7 +91,6 @@ Concepts such as Target Heart Rate should be recorded in separate EVALUATION arc
 Такие понятия, как максимальная или целевая частота сердечных сокращений, должны записываться в отдельных архетипах, предназначенных специально для осуществления оценки.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Sandra Bertram, Ascribe, Australia", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NEHTA, Australia", "Angela de Zwart, Orion Health, New Zealand", "Graham Denyer, Australian Antarctic Division, Australia", "Paul Donaldson, Nursing Informatics Australia, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Christian Ghan, The Chris O'Brien Lifehouse at RPA, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Oliver Hosking, Remote Health NT, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "Eugene Igras, IRIS Systems, Inc., Canada", "Athanasios Kleontas, Ergobyte Informatics, Greece", "Shinji Kobayashi, Ehime University, Japan", "Robert Legan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rohan Martin, Ambulance Victoria, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Monica Merchat, Hospital Cardiac Electrophysiology, MS Health Informatics Student, former ICU nurse, former Anesthesia Technician, United States", "Arturo Romero, SESCAM, Spain", "Fabian Schwarz, NT Health, Australia", "Gary Sinclair, NT DoH, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -98,7 +99,6 @@ Concepts such as Target Heart Rate should be recorded in separate EVALUATION arc
 Pulse (renamed from Heart Rate), draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 26 Mar 2006. Major update: 20 Feb 2013. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.170_5 (accessed 20 Feb 2013).">
 		["MD5-CAM-1.0.1"] = <"0198CA53C725D7B47EF10D995521B39C">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Pulse

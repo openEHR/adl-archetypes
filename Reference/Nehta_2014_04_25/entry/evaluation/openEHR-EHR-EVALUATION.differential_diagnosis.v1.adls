@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.differential_diagnosis.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"Sam.Heard@OceanInformatics.com">
 		["date"] = <"2004-12-08">
 	>
+	copyright = <"copyright (c) openEHR">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,12 +22,10 @@ description
 			misuse = <"Not to be used to record information about working problems or diagnoses - use EVALUATION.problem.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Dipak Kalra, UCL", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"9B8EFA6C542004A86CFAF1D55DA60997">
 	>
-	copyright = <"copyright (c) openEHR">
 
 definition
 	EVALUATION[id1] matches {	-- Differential diagnoses

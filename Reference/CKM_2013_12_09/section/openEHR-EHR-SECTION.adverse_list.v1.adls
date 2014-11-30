@@ -16,12 +16,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2010-03-07">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -54,12 +56,10 @@ While EVALUATION.adverse and EVALUATION.exclusion-adverse archetypes and their s
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics", "Heath Frankel, Ocean Informatics">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"144A5A5C4BBBB881891ABF650F443DD2">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	SECTION[id1] matches {	-- Adverse Reaction List

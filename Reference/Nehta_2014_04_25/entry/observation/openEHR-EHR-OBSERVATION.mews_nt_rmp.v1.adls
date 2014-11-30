@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.mews_nt_rmp.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2013-02-07">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -32,7 +34,6 @@ Different MEWS are in use in different jurisdictions in Australia and in other p
 Not to be used for children/teens under the age of 14 years.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Stephen Chu, NEHTA, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Oliver Hosking, Remote Health NT, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Gary Sinclair, NT DoH, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -41,7 +42,6 @@ Not to be used for children/teens under the age of 14 years.">
 Remote Health Atlas: Retrieval Flowchart - Primary and Interfacility [PDF]. Northern Territory Government, Department of Health & Families; October 2008. Available from: http://remotehealthatlas.nt.gov.au/retrieval_flowchart_primary_&_interfacility.pdf.">
 		["MD5-CAM-1.0.1"] = <"147F36161ECAA04D206099D71452B396">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Modified Early Warning Score (NT RMP)

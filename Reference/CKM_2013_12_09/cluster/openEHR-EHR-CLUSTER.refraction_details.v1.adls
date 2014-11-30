@@ -5,11 +5,13 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Gustavo M Bacelar-Silva">
 		["email"] = <"mail@gustavobacelar.com">
 		["date"] = <"2012-09-10">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -19,7 +21,6 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Gustavo Bacelar-Silva, Brazil (Editor)", "Mike Mair, Timaru Eye Clinic, New Zealand", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["current_contact"] = <"Gustavo M Bacelar-Silva, mail@gustavobacelar.com">
@@ -32,7 +33,6 @@ CfH, UK. Do Once & Share - Glaucoma [Internet]. [cited 2012 Sep 26]. Available f
 DICOM Supplement 30 [Internet]. [cited 2012 Sep 26]. Available from: http://medical.nema.org/">
 		["MD5-CAM-1.0.1"] = <"4B259AEE31FB4F6D8630D61477395668">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Refraction Details

@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"23/04/2006">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,13 +22,11 @@ description
 			misuse = <"Not for recording symptoms or events - use the specific archetypes for this purpose">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"NEHTA data groups (Australia)", "Heather Leslie">
 	other_details = <
 		["references"] = <"">
 		["MD5-CAM-1.0.1"] = <"7BB46BA6BD3DEBEF2C76BDAC72FB8A5A">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Issue presented by a person

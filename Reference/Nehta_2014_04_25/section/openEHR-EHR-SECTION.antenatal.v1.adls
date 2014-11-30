@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-SECTION.antenatal.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"NT mEHR Project">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2012-01-03">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,13 +22,11 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"NT Pregnancy Health Record
 Queensland Government Pregnancy Health Record">
 		["MD5-CAM-1.0.1"] = <"6B622C8E141882C258B9ED31F46909D8">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	SECTION[id1] matches {	-- Antenatal

@@ -23,12 +23,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2006-03-14">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -54,11 +56,9 @@ description
 			misuse = <"엔트리들을 각각 기록하기 위해 사용할 필요는 없다">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"432A350497E9ACFB3D142F0D63CFB505">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	SECTION[id1] matches {	-- Vital signs

@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2012-07-18">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -22,7 +24,6 @@ The 'Description' data element can be used to record simple narrative summary or
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Gustavo M Bacelar-Silva, Brazil", ...>
 	other_details = <
 		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK, ian.mcnicoll@oceaninformatics.com">
@@ -42,7 +43,6 @@ Practical Ophthalmology: A Manual for Beginning Residents, 6th Edition [Paperbac
 American Academy Of Ophthalmology (Author), Fred M. Wilson II (Editor), MD (Editor)">
 		["MD5-CAM-1.0.1"] = <"1FC072ECEFE11FA70A8F99BAEC6B2282">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Refraction assessment

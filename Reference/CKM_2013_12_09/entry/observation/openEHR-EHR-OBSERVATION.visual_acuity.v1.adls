@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2012-07-18">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -30,7 +32,6 @@ When performing visual acuity testing it is customary to record a series of test
 			misuse = <"Where details of methodology carried under protocol change between phases of the visual acuity test, a new Entry must be created at run-time.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Bill Aylward, openEyes Project, UK", "Gustavo Bacelar-Silva, Brazil (Editor)", "Stephen Chu, NeHTA, Australia", "Alistair Laidlaw, Guys and St Thomas NHS Trust, UK", "Heather Leslie, Ocean Informatics, Australia", "Gustavo M Bacelar-Silva, Brazil", "Mike Mair, Timaru Eye Clinic, New Zealand", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["references"] = <"Visual Acuity [Internet]. Wikipedia. Available from: http://en.wikipedia.org/wiki/Visual_acuity
@@ -53,7 +54,6 @@ Practical Ophthalmology: A Manual for Beginning Residents, 6th Edition [Paperbac
 American Academy Of Ophthalmology (Author), Fred M. Wilson II (Editor), MD (Editor)">
 		["MD5-CAM-1.0.1"] = <"C49A0A66AB60A25B4DB64B675810B486">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Visual acuity

@@ -27,10 +27,12 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["email"] = <"sam.heard@oceaninformatics.com">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
@@ -61,11 +63,9 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"820A60C343A1184BF368CC94822B084E">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Blood matching

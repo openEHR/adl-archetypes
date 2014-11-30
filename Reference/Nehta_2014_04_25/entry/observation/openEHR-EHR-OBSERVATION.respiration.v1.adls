@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.respiration.v1.0.0
 
 language
@@ -43,12 +43,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, United Kingdom">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2009-07-17">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -123,7 +125,6 @@ Niet te gebruiken voor de registratie van details, als de persoon beademing onde
 ">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sandra Bertram, Ascribe, Australia", "Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Gregory Caulton, PatientOS Inc., United States", "Stephen Chu, NEHTA, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Christian Ghan, The Chris O'Brien Lifehouse at RPA, Australia", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore", "Anne Harbison, CPCER, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Oliver Hosking, Remote Health NT, Australia", "Omer Hotomargolu, Turkey", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Andrew James, University of Toronto, Canada", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Fabian Schwarz, NT Health, Australia", "Gary Sinclair, NT DoH, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -138,7 +139,6 @@ Wikipedia contributors. Biot's respiration [Internet]. Wikipedia, The Free Encyc
 Wikipedia contributors. Apneustic respirations [Internet]. Wikipedia, The Free Encyclopedia; 2011 Oct 15 [cited 2013 Feb 21].  Available from: http://en.wikipedia.org/wiki/Apneustic_respirations.">
 		["MD5-CAM-1.0.1"] = <"C1F63B69ABB8EC1D830EE2D2AD190E26">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Respiration

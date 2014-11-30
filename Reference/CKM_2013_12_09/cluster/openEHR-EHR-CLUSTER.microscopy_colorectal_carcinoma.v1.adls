@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"17/06/2009">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -22,7 +24,6 @@ i.e. OBSERVATION.lab_test.histopathology and CLUSTER.macroscopy.colorectal_carci
 			misuse = <"Not designed to be used within any other archetype other than OBSERVATION.lab_test.histopathology.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Matt Cordell, NEHTA, Australia", "David McKillop, NEHTA, Australia", "Cathy Richardson, NEHTA, Australia", "David Rowed, Ocean Informatics, Australia">
 	other_details = <
 		["references"] = <"College of American Pathologists. Protocol for the Examination of Specimens from Patients with Primary Carcinomas of the Colon and Rectum [Internet]. 2009 Mar ;[cited 2009 Jul 28 ]
@@ -38,7 +39,6 @@ Available from: http://www.rcpa.edu.au//static/File/Asset%20library/public%20doc
 ">
 		["MD5-CAM-1.0.1"] = <"45150B03A2A6EFB7E8B8B329C55E4A3E">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Microscopic findings - Colorectal cancer

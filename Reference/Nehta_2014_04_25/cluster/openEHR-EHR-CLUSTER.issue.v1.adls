@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.issue.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2006-04-23">
 	>
+	copyright = <"© openEHR">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -22,14 +24,12 @@ This archetype has been designed to be used within the OBSERVATION.story archety
 			misuse = <"Not for recording symptoms or events - use the specific archetypes for this purpose.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"NEHTA data groups (Australia)", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"Issue Presented by a Person, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 23 Apr 2006. Available at: http://www.openehr.org/ckm/#showArchetype_1013.1.115_2 (accessed 05 Apr 2013).">
 		["MD5-CAM-1.0.1"] = <"D1AFDECDCBF91348B1A30686DA284FB7">
 	>
-	copyright = <"© openEHR">
 
 definition
 	CLUSTER[id1] matches {	-- Issue

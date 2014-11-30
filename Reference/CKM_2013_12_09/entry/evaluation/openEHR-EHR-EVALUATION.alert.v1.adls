@@ -20,12 +20,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2006-04-23">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -51,12 +53,10 @@ It will usually be entered manually, but in some clinical systems it may be auto
 			misuse = <"*Not to be used for recording notes (nota bene) or routine notifications, recalls or reminders.(en)">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Gustavo Bacelar, Brazil", "Ian McNicoll, Ocean Informatics, UK", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"1CB0558AE05615742E83030544DBE483">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Alert

@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2007-04-19">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -29,13 +31,11 @@ Chief Complaint is another phrase in common usage. In effect it is probably a ty
 Not to be used to record specific diagnosis details that may be required in addition to a Reason for Encounter eg Admission or Pre-operative Diagnosis as part of admission for a hospital procedure. Use the EVALUATION.problem_diagnosis (and related specialisations) for this purpose.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, Australia", "Sergio Carmona, Chile", "Sebastian Garde, Ocean Informatics, Germany", "Beatriz de Faria Leão, Brazil", "Omer Hotomaroglu, Turkey", "Sundaresan Jagannathan, Scottish NHS, United Kingdom">
 	other_details = <
 		["references"] = <"openEHR Foundation. openEHR wiki: Reason for Encountrer or Chief Complaint [Internet]. 2008 Feb 13 [cited June 17 2012];  Available at http://www.openehr.org/wiki/display/healthmod/Reason+for+encounter+or+Chief+complaint.">
 		["MD5-CAM-1.0.1"] = <"A7AD709820469E3A79A0E3ADCB9082C7">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1] matches {	-- Reason for Encounter

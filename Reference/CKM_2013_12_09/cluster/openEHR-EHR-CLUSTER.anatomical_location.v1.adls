@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2008-11-10">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,7 +22,6 @@ description
 			misuse = <"Not for specifiying unilateral/bilateral occurence - this is related to an evaluation which perhaps includes multiple locations.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"Use cases:
 
@@ -43,7 +44,6 @@ description
 - medial aspect of R great toe nail.">
 		["MD5-CAM-1.0.1"] = <"A2DAED2760D934F3D07C4EC4C891C4B2">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Anatomical Location

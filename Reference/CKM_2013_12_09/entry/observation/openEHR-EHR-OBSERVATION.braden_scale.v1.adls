@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2011-08-01">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -24,7 +26,6 @@ The Braden Scale should not be used for children between 21 days and 5 years - u
 The Braden Scale should not be used for children aged less than 21 days - use OPENEHR-EHR-OBSERVATION.braden_scale_neonate.v1.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK, ian.mcnicoll@oceaninformatics.com">
 		["references"] = <"Bergstrom, N., Braden, B., Laguzza, A. & Holman, A. (1987). The Braden Scale for predicting pressure sore risk. Nursing Research. 36(4), 205-210.
@@ -40,7 +41,6 @@ Braden Scale for Predicting Pressure Score Risk [Internet]. [date unknown];[cite
 Braden Scale for Predicting Pressure Score Risk in Home Care [Internet]. [date unknown];[cited 2011 Aug 1] Available from: http://bradenscale.com/images/bschome.pdf">
 		["MD5-CAM-1.0.1"] = <"A8BAE53955F71D1FC96BF37DF70005A0">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Braden Scale

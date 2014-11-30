@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2013-03-08">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,7 +22,6 @@ description
 			misuse = <"Note that Class 0 is not defined in the formal Canadian Cardiovascular Society (CCS) Angina Status score.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"Canadian Cardiovascular Society grading of angina pectoris
 Available from: http://www.ccs.ca/download/position_statements/Grading%20of%20Angina.pdf
@@ -29,7 +30,6 @@ CANADIAN CARDIOVASCULAR SOCIETY ANGINA GRADE 0 – A CLINICALLY USEFUL ADDITION
 Available from: http://www.pulsus.com/ccc2003/abs/a853.htm">
 		["MD5-CAM-1.0.1"] = <"14E7DD51D9D86C6E70246884717DB767">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Angina symptom Classification (CCS)

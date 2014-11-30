@@ -22,12 +22,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2009-06-08">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -44,12 +46,10 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Andrew James, University of Toronto, Canada", "Sundarasan Jaganathan NHS Scotland, United Kingdom", "Omer Hotomargolu,, Turkey", "Marja Buur, Medisch Centrum Alkmaar, Netherlands", "Gregory Caulton PatientOS Inc., USA", "Anne Harbison, CPCER, Australia", "Sam Heard, Ocean Informatics, Australia">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"23473D680886AF1FA9E8AD07B63DAAFC">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Ambient oxygen

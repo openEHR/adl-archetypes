@@ -13,12 +13,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2012-11-20">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -41,7 +43,6 @@ All of the data elements are recorded using a single method or protocol. If, dur
 			misuse = <"Not to be used to record other hearing tests. Use other archetypes as appropriate, for example OBSERVATION.audiogram.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Kerrie Lee, Australia", ...>
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -62,7 +63,6 @@ Margolis, R. H., Bass-Ringdahl, S., Hanks, W. D., Holte, K., & Zapala, D. A. (20
 Onusko, E. (2004). Tympanometry. American Family Physician, 70 (9), 1713 – 1720.">
 		["MD5-CAM-1.0.1"] = <"1755CBEA9429D7DC5413EFD66487A491">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Tympanogram Result

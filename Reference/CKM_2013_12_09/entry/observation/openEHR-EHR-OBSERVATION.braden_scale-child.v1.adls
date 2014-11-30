@@ -8,12 +8,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2011-08-01">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -26,7 +28,6 @@ The Braden Scale should not be used for adults or children over 5 years of age -
 The Braden Scale should not be used for children less than  21 days old - use OPENEHR-EHR-OBSERVATION.braden_scale_neonate.v1">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK, ian.mcnicoll@oceaninformatics.com">
 		["references"] = <"Curley  MAQ, Razmus IS, Roberts KE, Wypij D. Predicting  pressure ulcer risk  in pediatric patients-the Braden Q scale. Nursing Research. 2003; 52(1) 22-31.
@@ -38,7 +39,6 @@ Prevention Plus - Home of the Braden Scale [Internet]. [date unknown];[cited 201
 Modified Braden Q Scale for Paediatric Use [Internet]. [date unknown];[cited 2011 Aug 8] Available from: http://nursing.advanceweb.com/SharedResources/Downloads/2007/090107/NW/nng090107_p55table1.pdf">
 		["MD5-CAM-1.0.1"] = <"89A23500F28810BE628D28B0AABF82C1">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Modified Braden Q Scale

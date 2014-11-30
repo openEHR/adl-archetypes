@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.family_history.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2010-12-15">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -28,13 +30,11 @@ It may be necessary to identify each Genetic Relative specifically and not just 
 Not to be used to record information about the risk of developing a condition due to a family history of a condition - use the EVALUATION.risk family of archetypes.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "John Bennett, NEHTA, Australia", "Stephen Chu, NEHTA, Australia", "David Evans, Queensland Health, Australia", "Tim Garden, NTG Department of Health, Australia", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Andrew Goodchild, NEHTA, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Mary Kelaher, NEHTA, Australia", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Jeremy Oats, NT Health, Australia", "Lynne Parsons, Primary and Community Health Services, Australia", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "Elizabeth Stanick, Hobart Anaesthetic Group, Australia", "John Taylor, NEHTA, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia", "Donna Truran, ACCTI-UoW, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
 	other_details = <
 		["references"] = <"HL7 Version 3 Standard: Clinical Genomics; Pedigree, Release 1. ANSI/HL7 V3 CGPED, R1-2007. Published 2007 May 07.">
 		["MD5-CAM-1.0.1"] = <"0074A03F125EAEFA8BEE39CBAF7EE3A0">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	EVALUATION[id1] matches {	-- Family History

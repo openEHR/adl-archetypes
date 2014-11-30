@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.audiometry_result.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Kerrie Lee">
 		["organisation"] = <"Hearing Health Program, Northern Territory">
 		["email"] = <"kerrie.lee2@bigpond.com">
 		["date"] = <"2012-10-10">
 	>
+	copyright = <"© Northern Territory Department of Health, Australia">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -36,14 +38,12 @@ Not to be used to record other auditory assessments such as:
 These assessments need to be recorded in specific archetypes for the purpose.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Amarjit Anand, NT Department of Health/NT Hearing", "Judith Boswell, Adelaide Hearing Consultants, Australia", "Stephen Chu, NEHTA, Australia", "Kimberley Crebbin, NT Hearing Services, Australia", "Kathy Currie, Northern Territory Health, Australia", "Lisa Dawson, NT Hearing, Northern Territory", "Jade Frederiksen, Hearing Health Program, DoH, Australia", "Sam Harkus, Australian Hearing, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Paul Hickey, Hearing Health Program, Australia", "Oliver Hosking, Remote Health NT, Australia", "Anthony Leech, Hearing Health, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rebecca Matthews, NT Hearing Services - NTG, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Mark Ramjan, NT Department of Health, Australia", "Bojana Sarkic, Northern Territory Government, Australia", "Kelly Simmons, Department of Health, Australia", "Prasha Sooful, Royal Darwin Hospital, Australia", "Fiona Wake, RAHC, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"Sabini P, Sclafani AP. Efficacy of serologic testing in asymmetric sensorineural hearing loss. Otolaryngol Head Neck Surg. 2000 Apr;122(4):469-76. PubMed PMID: 10740163.">
 		["MD5-CAM-1.0.1"] = <"28BA4FA2CB7DED0894338CF7B5298ABD">
 	>
-	copyright = <"© Northern Territory Department of Health, Australia">
 
 definition
 	OBSERVATION[id1] matches {	-- Audiometry Result

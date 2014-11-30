@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.specimen.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Grahame Grieve">
 		["organisation"] = <"Health Intersections P/L">
 		["email"] = <"grahame@healthintersections.com.au">
 		["date"] = <"27/06/2011">
 	>
+	copyright = <"© 2011 NEHTA">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -31,7 +33,6 @@ The specimen archetype is only suitable for use with single specimens; a differe
 The specimen archetype does not cover the laboratory processes for handling and reporting on a specimen. ">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Koray Atalag, University of Auckland, NZ", "Stephen Chu, NEHTA, Australia (Editor)", "Grahame Grieve, Health Intersections Pyty Ltd, Australia (Editor)", "Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, UK">
 	other_details = <
 		["references"] = <"Specimen, draft archetype, openEHR Foundation. “www.openEHR.org/knowledge.” openEHR Clinical Knowledge Manager. Authored: 27/01/2009. http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.331_8(accessed Jun 27, 2011).
@@ -39,7 +40,6 @@ The specimen archetype does not cover the laboratory processes for handling and 
 ANSI/HL7 2.6-2007: Chapter 7, HL7 v2.6 specifications - Final Standard. Health Level 7, Ann Arbour, Missouri.">
 		["MD5-CAM-1.0.1"] = <"67B1CE92FA4D592ABE080B661439C484">
 	>
-	copyright = <"© 2011 NEHTA">
 
 definition
 	CLUSTER[id1] matches {	-- Specimen

@@ -58,12 +58,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2004-05-18">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -162,7 +164,6 @@ Se reconhece que uma ajuda mnemônica para aprender a interpretar o escore Apgar
 			misuse = <"Escore parcialmente completado e adicionar o 5 para obter o valor total.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Paul Donaldson, Nursing Informatics Australia, Australia", "Sebastian Garde, Ocean Informatics, Germany (Editor)", "Anneke Goossen, Results 4 Care, Netherlands", "Anne Harbison, CPCER, Australia", "Sam Heard, Ocean Informatics, Australia", "Omer Hotomaroglu, Turkey", "Pieter Hummel, Medisch Centrum Alkmaar, Netherlands", "Andrew James, University of Toronto, Canada", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
 		["references"] = <"Apgar V.  A proposal of a New Method of Evaluation of the Newborn Infant. Curr Res Anesth Analg.  1953 Jul-Aug;32(4):260-7.
@@ -176,7 +177,6 @@ Whaley LF, Wong DL (1979).  Nursing Care of Infants and Children.  St. Louis, To
 http://en.wikipedia.org/wiki/Apgar_score">
 		["MD5-CAM-1.0.1"] = <"372512F41A8EE08D313FA66BA2AF3039">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Apgar score

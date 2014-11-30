@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.prescription.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"NEHTA">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"9/11/2010">
 	>
+	copyright = <"© 2011 NEHTA">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,12 +22,10 @@ description
 			misuse = <"Not for use within health records - use the Medication Instruction to create actual orders.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"openEHR archetype on CKM", "Sharmila Biswas, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "David Evans, Queensland Health, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Michael Osborne, Mater Health Services, Australia", "John Taylor, NEHTA, Australia", "NEHTA Therapeutic Good Use Data Group", "Richard Townley-O'Neill, NEHTA, Australia (Editor)">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"880F30F8311EC2DFAFD484ABB19F238A">
 	>
-	copyright = <"© 2011 NEHTA">
 
 definition
 	COMPOSITION[id1] matches {	-- Prescription

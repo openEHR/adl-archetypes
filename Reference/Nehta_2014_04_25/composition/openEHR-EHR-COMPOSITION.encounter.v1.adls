@@ -1,15 +1,17 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-COMPOSITION.encounter.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Thomas Beale">
 		["organisation"] = <"Ocean Informatics">
 		["date"] = <"2005-10-10">
 	>
+	copyright = <"© openEHR">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -19,11 +21,9 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"9D8A461C75C5B7C4EFCFF7D424261387">
 	>
-	copyright = <"© openEHR">
 
 definition
 	COMPOSITION[id1] matches {	-- Encounter

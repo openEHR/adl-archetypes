@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.story.v1.0.0
 
 language
@@ -19,12 +19,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2008-05-15">
 	>
+	copyright = <"© openEHR">
 	details = <
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -52,14 +54,12 @@ Use to record a simple narrative and/or as a container archetype - to provide a 
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"Story, draft archetype, openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. Authored: 15 May 2008. Available at: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.68_6 (accessed 19 Dec 2012).">
 		["MD5-CAM-1.0.1"] = <"437321A41D8C8EB7D97D2B26B6198345">
 	>
-	copyright = <"© openEHR">
 
 definition
 	OBSERVATION[id1] matches {	-- Story/History

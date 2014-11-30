@@ -16,12 +16,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Chunlan Ma">
 		["organisation"] = <"Ocean Informatics, Australia">
 		["email"] = <"chunlan.ma@oceaninformatics.com">
 		["date"] = <"2006-11-06">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -69,13 +71,11 @@ Con la finalidad que esta lista sea precisa y segura de usar como base de activi
 No debe ser utilizado para registrar vacunaciones administradas.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, United Kingdom", "Sam Heard, Ocean Informatics, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"97B6899EA00EBED30CCE883E100CBFD4">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	COMPOSITION[id1] matches {	-- Medication List

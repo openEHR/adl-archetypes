@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-EVALUATION.pregnancy_bf_status.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2012-12-02">
 	>
+	copyright = <"© openEHR">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -26,14 +28,12 @@ This archetype has been designed to trigger decision support and therapeutic pre
 Not to be used to record details about a specific pregnancy - use EVALUATION.pregnancy for this purpose.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft archetype] Pregnancy/Breast Feeding Status; [updated 2012 Dec 02, cited 2012 Dec 02]. Available from: http://www.openehr.org/knowledge/OKM.html#showarchetype_1013.1.1300_3.">
 		["MD5-CAM-1.0.1"] = <"F75369554F8AD6EB3F65CE785F9E9350">
 	>
-	copyright = <"© openEHR">
 
 definition
 	EVALUATION[id1] matches {	-- Pregnancy/Breast Feeding Status

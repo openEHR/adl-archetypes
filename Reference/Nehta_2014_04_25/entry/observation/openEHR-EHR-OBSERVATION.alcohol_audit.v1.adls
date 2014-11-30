@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.alcohol_audit.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2013-06-10">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -26,7 +28,6 @@ The AUDIT-C test is a shortened version of the full AUDIT test, using only the f
 Not to be used to record a summary about the individual's alcohol consumption - use EVALUATION.alcohol_summary.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"Babor T, Higgins-Biddle J, Saunders J, Monteiro M. The Alcohol Use Disorders Identification Test: Guidelines for Use in Primary Care, Second Edition [Internet]. Geneva: Department of Mental Health and Substance Dependence, World Health Organization. 2001 (Accessed 2013 Jun 10). Available at: http://whqlibdoc.who.int/hq/2001/WHO_MSD_MSB_01.6a.pdf.
@@ -38,7 +39,6 @@ The AUDIT Alcohol Consumption Questions (Audit – C). Northern Territory Govern
 Alcohol Use Disorders Identification Test. US Department of Venterans Affairs. (Accessed 2013 Jun 10). Available at: http://www.hepatitis.va.gov/provider/tools/audit-c.asp.">
 		["MD5-CAM-1.0.1"] = <"D25E99B0839398E91B638E1AA66CC795">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Alcohol Use Disorders Identification Test (AUDIT)

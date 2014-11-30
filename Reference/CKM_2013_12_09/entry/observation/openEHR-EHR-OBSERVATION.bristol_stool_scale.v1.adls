@@ -13,12 +13,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2013-06-02">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -35,13 +37,11 @@ description
 			misuse = <"*(en)">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"http://en.wikipedia.org/wiki/Bristol_stool_scale
 Lewis SJ, Heaton KW (1997). \"Stool form scale as a useful guide to intestinal transit time\". Scand. J. Gastroenterol. 32 (9): 920–4.">
 		["MD5-CAM-1.0.1"] = <"DCC80A3C1D47C6D79DE0C2AA618943B6">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	OBSERVATION[id1] matches {	-- Bristol stool scale

@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-ITEM_TREE.requested_service.v3.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"">
 		["organisation"] = <"NEHTA">
 		["email"] = <"clinicalinfo@nehta.gov.au">
 		["date"] = <"30-Mar-2010">
 	>
+	copyright = <"© 2010 National E-Health Transition Authority">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -19,13 +21,11 @@ description
 			misuse = <"Used to specify medication prescriptions or diagnostic test requests.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Eric Browne", "Stephen Chu", "Eleanor Royle", "Ning Pan", "Robert L'egan", "Don Stewart", "Stephen Royce">
 	other_details = <
 		["references"] = <"">
 		["base_exist_collection"] = <"/db/nehta/ndsm/dev/data/requested_service_structure/v3_0/draft_007">
 	>
-	copyright = <"© 2010 National E-Health Transition Authority">
 
 definition
 	ITEM_TREE[id1] matches {	-- Requested Service

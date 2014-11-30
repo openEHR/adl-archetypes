@@ -5,12 +5,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"27/06/2006">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -20,7 +22,6 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll Ocean Informatics", ...>
 	other_details = <
 		["references"] = <"Weed LL. Medical records that guide and teach. New Engl J Med: 1987; 278:593-9 and 278:652-657
@@ -30,7 +31,6 @@ Weed LL Medical records, medical education and patient care. Press of the Case W
 http://www.prorec.it/documenti/EPR_EHR/NHS-Update-POMR-SOAP.doc">
 		["MD5-CAM-1.0.1"] = <"A319FA637A6E6F7A2DA221F56081036A">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	SECTION[id1] matches {	-- SOAP

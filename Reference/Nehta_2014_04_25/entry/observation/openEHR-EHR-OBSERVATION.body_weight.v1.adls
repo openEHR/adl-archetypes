@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.body_weight.v1.0.0
 
 language
@@ -39,12 +39,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2006-03-09">
 	>
+	copyright = <"© openEHR">
 	details = <
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -114,7 +116,6 @@ Dient niet te worden gebruikt voor het registreren van het aangepaste lichaamsge
 Dient niet te worden gebruikt voor het vastleggen van het gewicht van een object of lichaamsdeel.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Sheryl Alexander, NT Department of Health, Australia", "Rita Apelt, Department of Health,NT, Australia", "Marja Buur-Krom, Medisch Centrum Alkmaar, Netherlands", "Margaret Campbell, Queensland Health, Australia", "Stephen Chu, NEHTA, Australia", "Margaret Cotter, AMSANT, Australia", "Hans Demski, Helmholtz Zentrum München, Germany", "Paul Donaldson, Queensland Health, Australia", "Michelle Dowden, Miwatj Health Ngalkanbuy Health, Australia", "Tim Garden, NTG Department of Health, Australia", "Sebastian Garde, Ocean Informatics, Germany", "Tanya Gardner, CAAC, Australia", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore", "Heather Grain, Llewellyn Informatics, Australia", "Anne Harbison, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Andrew James, University of Toronto, Canada", "Bernadette Lack, Department of Health, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeroen Meintjens, Medisch Centrum Alkmaar, Netherlands", "Jeremy Oats, NT Health, Australia", "Steven Schatz, Department of Health (Northern Territory), Australia", "Cherie Whitbread, Royal Darwin Hospital, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
 	other_details = <
 		["references"] = <"Siemer J, Peter W, Zollver H, Hart N, Müller A, Meurer B, Goecke T, Schild RL. How good is fetal weight estimation using volumetric methods? Ultraschall Med. 2008 Aug;29(4):377-82. Epub 2008 May 15. PubMed PMID: 18484061.
@@ -122,7 +123,6 @@ Dient niet te worden gebruikt voor het vastleggen van het gewicht van een object
 openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Published OBSERVATION archetype] Body Weight; [authored 2006 Mar 09, cited 2011 Aug 19]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.132_11.">
 		["MD5-CAM-1.0.1"] = <"0E55BCBA9A89E127038C1A2B7FB38E77">
 	>
-	copyright = <"© openEHR">
 
 definition
 	OBSERVATION[id1] matches {	-- Body Weight

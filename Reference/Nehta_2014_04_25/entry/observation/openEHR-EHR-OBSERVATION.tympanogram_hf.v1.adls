@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.tympanogram_hf.v1.0.0
 
 language
@@ -13,11 +13,13 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Kerrie Lee">
 		["email"] = <"kerrie.lee2@bigpond.com">
 		["date"] = <"2013-02-01">
 	>
+	copyright = <"© National E-Health Transition Authority">
 	details = <
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
@@ -50,7 +52,6 @@ High frequency tympanometry is the test of choice in newborn to the age of two m
 Not to be used to record 226Hz tympanometry. Use the OBSERVATION.tympanogram_226Hz archetype instead.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Stephen Chu, NEHTA, Australia", "Harvey Coates, UWA, Australia", "Kathy Currie, Northern Territory Health, Australia", "Kerrie Lee, Ngaanyatjarra Health Service, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
@@ -77,7 +78,6 @@ Onusko, E. (2004). Tympanometry. American Family Physician, 70 (9), 1713 – 172
 Vanhuyse VJ, Creten WL, Van Camp KJ. On the W-notching of tympanograms. Scand Audiol 1975;4: 45-50.">
 		["MD5-CAM-1.0.1"] = <"40BC0810B6CC2174515D9B383DB9C9F2">
 	>
-	copyright = <"© National E-Health Transition Authority">
 
 definition
 	OBSERVATION[id1] matches {	-- Tympanogram Result - High Frequency

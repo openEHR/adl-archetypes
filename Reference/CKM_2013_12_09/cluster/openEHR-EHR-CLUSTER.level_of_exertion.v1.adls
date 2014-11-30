@@ -13,12 +13,14 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2008-10-27">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -35,12 +37,10 @@ description
 			misuse = <"لا يستخدم لتسجيل نشاطات التمرين الفعلي و القياسات التي ينبغي تسجيلها على هيئة ملاحظات منفردة بذاتها">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics,UK", ...>
 	other_details = <
 		["MD5-CAM-1.0.1"] = <"5B4CD4A76BD05982A2A9A6A0339D4465">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	CLUSTER[id1] matches {	-- Level of exertion

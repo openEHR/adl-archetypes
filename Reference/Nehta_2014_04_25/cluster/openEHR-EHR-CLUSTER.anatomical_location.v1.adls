@@ -1,16 +1,18 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.anatomical_location.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"10/11/2008">
 	>
+	copyright = <"© openEHR">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -24,7 +26,6 @@ Examples of use:
 			misuse = <"Not for specifiying unilateral/bilateral occurrence of a health condition or diagnosis - this is an evaluative statement.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["references"] = <"Use cases:
 
@@ -47,7 +48,6 @@ Examples of use:
 - medial aspect of R great toe nail.">
 		["MD5-CAM-1.0.1"] = <"ABE2EBFBA88F794273B956613748E3E5">
 	>
-	copyright = <"© openEHR">
 
 definition
 	CLUSTER[id1] matches {	-- Anatomical Location
