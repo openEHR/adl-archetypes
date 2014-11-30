@@ -33,6 +33,9 @@ description
                 ["tool"] = <"cem2adl v6.3.0">
                 ["time"] = <"2014-11-03T09:05:00">
         >
+	other_details = <
+		["regression"] = <"PASS">
+	>
 
 definition
 	WHOLE[id1] 	-- -

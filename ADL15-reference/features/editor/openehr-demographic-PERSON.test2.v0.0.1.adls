@@ -17,6 +17,9 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	copyright = <"Copyright (c) 2012 openEHR Foundation ">
+	other_details = <
+		["regression"] = <"PASS">
+	>
 
 definition
 	PERSON[id1] matches {	-- -
