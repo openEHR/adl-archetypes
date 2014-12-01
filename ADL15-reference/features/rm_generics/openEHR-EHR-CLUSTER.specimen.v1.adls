@@ -11,13 +11,14 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"">
-			use = <"">
-			misuse = <"">
+			purpose = <"Test constraining of generic type">
 		>
 	>
 	lifecycle_state = <"unmanaged">
-	copyright = <"">
+	copyright = <"Copyright (c) 2014 openEHR Foundation">
+	other_details = <
+		["regression"] = <"PASS">
+	>
 
 definition
 	CLUSTER[id1] matches {	-- Specimen

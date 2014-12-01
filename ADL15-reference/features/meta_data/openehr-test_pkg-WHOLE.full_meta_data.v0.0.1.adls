@@ -23,7 +23,7 @@ description
 	custodian_namespace = <"org.openehr">
 	custodian_organisation = <"openEHR Foundation">
 	licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
-	copyright = <"Copyright (c) 2014 Thomas Beale">
+	copyright = <"Copyright (c) 2014 openEHR Foundation">
 	ip_acknowledgements = <
 		["loinc"] = <"This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use">
 		["snomedct"] = <"xyz">
