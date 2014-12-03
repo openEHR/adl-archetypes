@@ -13,7 +13,13 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"This archetype demonstrates the use of governance meta-data.">
+			use = <"This archetype should be used on a clear day with no wind.">
+			misuse = <"This archetype should not be used around children or dogs.">
 			keywords = <"governance", "test">
+   	        original_resource_uri = <
+		        ["resource A"] = <"Some resource available in the English language <http://aaa.bbb/path/to/resource>">
+		        ["resource B"] = <"Some other resource available in the English language <http://aaa.bbb/path/to/resource>">
+	        >
 		>
 	>
 	lifecycle_state = <"unmanaged">
@@ -24,12 +30,13 @@ description
 	custodian_organisation = <"openEHR Foundation">
 	licence = <"Creative Commons CC-BY <https://creativecommons.org/licenses/by/3.0/>">
 	copyright = <"Copyright (c) 2014 openEHR Foundation">
+        resource_package_uri = <http://www.openehr.org/ckm/path/to/package>
 	ip_acknowledgements = <
 		["loinc"] = <"This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use">
-		["snomedct"] = <"xyz">
+		["snomedct"] = <"Content from SNOMED CT® is copyright © 2007 IHTSDO <ihtsdo.org>">
 	>
         conversion_details = <
-                ["source_model"] = <"CEM xyz <http://location.in.clinicalelementmodels.com>">
+                ["source_model"] = <"CEM model xyz <http://location.in.clinicalelementmodels.com>">
                 ["tool"] = <"cem2adl v6.3.0">
                 ["time"] = <"2014-11-03T09:05:00">
         >
