@@ -5,23 +5,23 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Sam Heard">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"2006-04-17">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Show how at-codes used as ids and values are converted to id-codes and distinct at-codes">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	ACTION[id1] matches {	-- Imaging investigation

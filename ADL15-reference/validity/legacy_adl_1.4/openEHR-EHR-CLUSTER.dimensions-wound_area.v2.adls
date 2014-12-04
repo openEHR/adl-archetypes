@@ -17,6 +17,7 @@ language
 	>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"unknown">
 	>
@@ -36,7 +37,6 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 		["references"] = <"">

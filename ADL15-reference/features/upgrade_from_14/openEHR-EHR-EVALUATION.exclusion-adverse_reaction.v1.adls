@@ -8,23 +8,23 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"2010-03-02">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To positively record statement/s about the use of medications that need to be clinically excluded from the health record at a specific point in time.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	EVALUATION[id1.1] matches {	-- Exclusion of an Adverse Reaction

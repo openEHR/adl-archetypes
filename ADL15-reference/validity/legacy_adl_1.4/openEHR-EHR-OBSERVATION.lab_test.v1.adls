@@ -5,23 +5,23 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, United Kingdom">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"07/11/2009">
 	>
+	copyright = <"copyright (c) 2010 openEHR Foundation.">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Test for anomaly in generation of differential archetype from flat.">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"copyright (c) 2010 openEHR Foundation.">
 
 definition
 	OBSERVATION[id1] matches {	-- Laboratory test

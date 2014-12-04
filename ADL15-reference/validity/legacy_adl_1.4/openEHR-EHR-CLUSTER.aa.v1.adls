@@ -5,6 +5,7 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"">
 	>
@@ -16,7 +17,6 @@ description
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 		["MD5-CAM-1.0.1"] = <"FA137E59335FF74A78AFA144195E76B7">

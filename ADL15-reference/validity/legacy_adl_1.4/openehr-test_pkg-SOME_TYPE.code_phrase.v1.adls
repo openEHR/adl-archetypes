@@ -5,9 +5,11 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"in_development">
 	original_author = <
 		["name"] = <"Thomas Beale">
 	>
+	copyright = <"copyright (c) 2004 The openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -15,11 +17,9 @@ description
 			keywords = <"ADL", "test">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"copyright (c) 2004 The openEHR Foundation">
 
 definition
 	SOME_TYPE[id1] matches {	-- Test

@@ -5,23 +5,23 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
 		["organisation"] = <"Ocean Informatics, United Kingdom">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2009-12-08">
 	>
+	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Parent archetype to test detection of identical DV_CODED_TEXT that AOM_151_CONVERTER should detect, and ARCHETYPE_COMPARATOR should remove">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"© openEHR Foundation">
 
 definition
 	INSTRUCTION[id1] matches {	-- Healthcare service request
