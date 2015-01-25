@@ -5,6 +5,7 @@ language
 	original_language = <[ISO_639-1::es]>
 
 description
+	lifecycle_state = <"in_development">
 	original_author = <
 		["email"] = <"jamaldo@upv.es">
 		["name"] = <"Grupo de Informática Médica (IBIME)">
@@ -19,7 +20,6 @@ description
 			keywords = <"CMDIC", ...>
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_contributors = <"Arturo Romero, Ministerio de Sanidad, Servicios Sociales e Igualdad", "Pablo Serrano, Hospital de Fuenlabrada">
 
 definition
