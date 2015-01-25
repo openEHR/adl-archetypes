@@ -11,13 +11,13 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VOTM validity check, triggered when the terminology has term definitions of another language, but not of the original language.">
+			purpose = <"Test VOLT validity check, triggered when the terminology has term definitions of another language, but not of the original language.">
 			keywords = <"ADL", "validation", "test">
 			copyright = <"copyright (c) 2008 The openEHR Foundation">
 		>
 	>
 	other_details = <
-		["regression"] = <"VOTM">
+		["regression"] = <"VOLT">
 	>
 	lifecycle_state = <"unstable">
 

@@ -11,14 +11,14 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VOTM validity check, triggered when the terminology's term definitions are completely empty.">
+			purpose = <"Test STCNT validity check, triggered when the terminology's term definitions are completely empty.">
 			keywords = <"ADL", "validation", "test">
 			copyright = <"copyright (c) 2008 The openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"unstable">
 	other_details = <
-		["regression"] = <"VOTM">
+		["regression"] = <"STCNT">
 	>
 
 definition

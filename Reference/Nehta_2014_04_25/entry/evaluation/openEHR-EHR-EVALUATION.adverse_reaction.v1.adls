@@ -12,6 +12,7 @@ description
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"8-Nov-2010">
 	>
+	original_publisher = <"National E-Health Transition Authority, Australia">
 	copyright = <"© 2011 NEHTA">
 	details = <
 		["en"] = <
@@ -74,7 +75,6 @@ Royal Australian College of General Practitioners. Fact Sheet: Allergies & Adver
 
 Thien FC. Drug hypersensitivity. Med J Aust. 2006 Sep 18;185(6):333-8. Review. PubMed PMID: 16999678.">
 		["responsible_organisation"] = <"NEHTA CTI Team, National E-Health Transition Authority, clinicalinfo@nehta.gov.au">
-		["original_publisher"] = <"National E-Health Transition Authority, Australia">
 		["MD5-CAM-1.0.1"] = <"CC3A7234A2EE34E76E5AA02CED6F6737">
 	>
 

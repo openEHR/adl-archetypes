@@ -58,6 +58,6 @@ terminology
 	value_sets = <
 		["ac1"] = <
 			id = <"ac1">
-			members = <"at2", "at3", "at4">
+			members = <"at2", "at3">
 		>
 	>

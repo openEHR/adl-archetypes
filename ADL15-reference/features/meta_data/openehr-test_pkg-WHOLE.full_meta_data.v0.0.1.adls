@@ -40,6 +40,11 @@ description
                 ["tool"] = <"cem2adl v6.3.0">
                 ["time"] = <"2014-11-03T09:05:00">
         >
+	references = <
+		["1"] = <"Barthel Scale <http://en.wikipedia.org/wiki/Barthel_scale>">
+		["2"] = <"Barthel Index, the Internet Stroke Center <http://www.strokecenter.org/wp-content/uploads/2011/08/barthel.pdf>">
+		["3"] = <"O'Sullivan, Susan B; Schmitz, Thomas J (2007). Physical Rehabilitation, Fifth Edition. Philadelphia, PA: F.A. Davis Company. p. 385.">
+	>
 	other_details = <
 		["regression"] = <"PASS">
 	>
