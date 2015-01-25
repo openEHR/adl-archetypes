@@ -1,4 +1,4 @@
-﻿template (adl_version=1.5.1)
+template (adl_version=1.5.1; rm_release=1.0.2)
 	openEHR-DEMOGRAPHIC-PERSON.t_patient_ds_sf.v1.0.0
 
 specialize
@@ -26,18 +26,18 @@ description
 definition
 	PERSON[id1.1] matches {	-- Patient demographic data
 		/details[id2]/items matches {
-			use_archetype CLUSTER[id11, openEHR-DEMOGRAPHIC-CLUSTER.t_patient_ds_sf-1.v1] occurrences matches {0..1} 
-			use_archetype CLUSTER[id11, openEHR-DEMOGRAPHIC-CLUSTER.t_patient_ds_sf-2.v1] occurrences matches {0..1} 
-			use_archetype CLUSTER[id11, openEHR-DEMOGRAPHIC-CLUSTER.t_patient_ds_sf-3.v1] occurrences matches {0..1} 
-			allow_archetype CLUSTER[id11.1] closed 	-- Other details - closed slot
+			use_archetype CLUSTER[id11.1, openEHR-DEMOGRAPHIC-CLUSTER.t_patient_ds_sf-1.v1] occurrences matches {0..1} 
+			use_archetype CLUSTER[id11.2, openEHR-DEMOGRAPHIC-CLUSTER.t_patient_ds_sf-2.v1] occurrences matches {0..1} 
+			use_archetype CLUSTER[id11.3, openEHR-DEMOGRAPHIC-CLUSTER.t_patient_ds_sf-3.v1] occurrences matches {0..1} 
+			allow_archetype CLUSTER[id11] closed 	-- Other details - closed slot
 		}
 		/identities matches {
-			use_archetype PARTY_IDENTITY[id3, openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_patient_ds_sf-4.v1] 
-			allow_archetype PARTY_IDENTITY[id3.1] closed 	-- Party identity - closed slot
+			use_archetype PARTY_IDENTITY[id3.1, openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_patient_ds_sf-4.v1] 
+			allow_archetype PARTY_IDENTITY[id3] closed 	-- Party identity - closed slot
 		}
 		/contacts[id4]/addresses matches {
-			use_archetype ADDRESS[id31, openEHR-DEMOGRAPHIC-ADDRESS.t_patient_ds_sf-5.v1] 
-			allow_archetype ADDRESS[id31.1] closed 	-- Address - closed slot
+			use_archetype ADDRESS[id31.1, openEHR-DEMOGRAPHIC-ADDRESS.t_patient_ds_sf-5.v1] 
+			allow_archetype ADDRESS[id31] closed 	-- Address - closed slot
 		}
 		/relationships existence matches {0} 
 	}
@@ -50,20 +50,27 @@ terminology
 				description = <"Simple patient personal demographic data">
 			>
 			["id11.1"] = <
-				text = <"Other details - closed slot">
-				description = <"Other details - closed slot">
+				text = <"race data">
+				description = <"race data">
+			>
+			["id11.2"] = <
+				text = <"other data">
+				description = <"other data">
+			>
+			["id11.3"] = <
+				text = <"birth data">
+				description = <"birth data">
 			>
 			["id3.1"] = <
-				text = <"Party identity - closed slot">
-				description = <"Party identity - closed slot">
+				text = <"Person name">
+				description = <"Person name">
 			>
 			["id31.1"] = <
-				text = <"Address - closed slot">
-				description = <"Address - closed slot">
+				text = <"Address">
+				description = <"Address">
 			>
 		>
 	>
-
 
 ------------------------------------------------------------------------------------------
 template_overlay
@@ -139,7 +146,7 @@ definition
 			ELEMENT[id3] occurrences matches {0} 
 			ELEMENT[id5] occurrences matches {0} 
 			ELEMENT[id6] occurrences matches {0} 
-			allow_archetype CLUSTER[id7.1] closed 	-- Country specific data - closed slot
+			allow_archetype CLUSTER[id7] closed 	-- Country specific data - closed slot
 		}
 	}
 
@@ -149,10 +156,6 @@ terminology
 			["id1.1"] = <
 				text = <"Birth data">
 				description = <"Singapore birth demographic data">
-			>
-			["id7.1"] = <
-				text = <"Country specific data - closed slot">
-				description = <"Country specific data - closed slot">
 			>
 		>
 	>
@@ -208,14 +211,14 @@ definition
 					ELEMENT[id29] occurrences matches {0} 
 					ELEMENT[id30] occurrences matches {0} 
 					ELEMENT[id31] occurrences matches {0} 
-					allow_archetype CLUSTER[id33.1] closed 	-- Slot closed
+					allow_archetype CLUSTER[id33] closed 	-- Slot closed
 				}
 			}
 			ELEMENT[id4] occurrences matches {0} 
 			ELEMENT[id7] occurrences matches {0} 
 			ELEMENT[id9] occurrences matches {0} 
 			ELEMENT[id10] occurrences matches {0} 
-			allow_archetype CLUSTER[id11.1] closed 	-- Slot closed
+			allow_archetype CLUSTER[id11] closed 	-- Slot closed
 		}
 	}
 
@@ -229,14 +232,6 @@ terminology
 			["id3.1"] = <
 				text = <"Address lines">
 				description = <"Address lines">
-			>
-			["id11.1"] = <
-				text = <"Slot closed">
-				description = <"Slot closed">
-			>
-			["id33.1"] = <
-				text = <"Slot closed">
-				description = <"Slot closed">
 			>
 		>
 	>

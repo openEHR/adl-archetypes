@@ -1,4 +1,4 @@
-﻿template (adl_version=1.5.1)
+template (adl_version=1.5.1; rm_release=1.0.2)
 	openEHR-EHR-COMPOSITION.t_clinical_info_ds_sf.v1.0.0
 
 specialize
@@ -27,15 +27,15 @@ definition
 	COMPOSITION[id1.1] matches {	-- Clinical detail
 		context existence matches {0} 
 		content matches {
-			use_archetype SECTION[openEHR-EHR-SECTION.t_patient_event_info_ds.v1] occurrences matches {1} 
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-1.v1] occurrences matches {0..1} 
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-2.v1] 
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-3.v1] 
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-4.v1] occurrences matches {1..*} 
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-5.v1] occurrences matches {0..1} 
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-6.v1] occurrences matches {0..1} 
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-7.v1] occurrences matches {0..*} 
-			use_archetype EVALUATION[openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-8.v1] 
+			use_archetype SECTION[id0.1, openEHR-EHR-SECTION.t_patient_event_info_ds_sf.v1] occurrences matches {1} 
+			use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-1.v1] occurrences matches {0..1} 
+			use_archetype EVALUATION[id0.3, openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-2.v1] 
+			use_archetype EVALUATION[id0.4, openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-3.v1] 
+			use_archetype EVALUATION[id0.5, openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-4.v1] occurrences matches {1..*} 
+			use_archetype EVALUATION[id0.6, openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-5.v1] occurrences matches {0..1} 
+			use_archetype EVALUATION[id0.7, openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-6.v1] occurrences matches {0..1} 
+			use_archetype EVALUATION[id0.8, openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-7.v1] occurrences matches {0..*} 
+			use_archetype EVALUATION[id0.9, openEHR-EHR-EVALUATION.t_clinical_info_ds_sf-8.v1] 
 		}
 	}
 
@@ -45,6 +45,42 @@ terminology
 			["id1.1"] = <
 				text = <"Clinical detail">
 				description = <"Clinical detail of Simple discharge summary">
+			>
+			["id0.1"] = <
+				text = <"Event data">
+				description = <"Event data">
+			>
+			["id0.2"] = <
+				text = <"Allergies & adverse reactions">
+				description = <"Allergies & adverse reactions">
+			>
+			["id0.3"] = <
+				text = <"Alerts">
+				description = <"Alerts">
+			>
+			["id0.4"] = <
+				text = <"Clinical synopsis">
+				description = <"Clinical synopsis">
+			>
+			["id0.5"] = <
+				text = <"Diagnosis">
+				description = <"Diagnosis">
+			>
+			["id0.6"] = <
+				text = <"Investigations">
+				description = <"Investigations">
+			>
+			["id0.7"] = <
+				text = <"Medications">
+				description = <"Medications">
+			>
+			["id0.8"] = <
+				text = <"Procedures">
+				description = <"Procedures">
+			>
+			["id0.9"] = <
+				text = <"Medical certificate">
+				description = <"Medical certificate">
 			>
 		>
 	>

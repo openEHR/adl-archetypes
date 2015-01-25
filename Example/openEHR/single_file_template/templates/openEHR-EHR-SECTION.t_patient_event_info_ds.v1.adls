@@ -1,4 +1,4 @@
-template (adl_version=1.5.1)
+template (adl_version=1.5.1; rm_release=1.0.2)
 	openEHR-EHR-SECTION.t_patient_event_info_ds_sf.v1.0.0
 
 specialize
@@ -26,8 +26,8 @@ description
 definition
 	SECTION[id1.1] matches {	-- Patient event information
 		items matches {
-			use_archetype ADMIN_ENTRY[openEHR-EHR-ADMIN_ENTRY.t_patient_event_info_ds_sf-1.v1] occurrences matches {1} 
-			use_archetype ADMIN_ENTRY[openEHR-EHR-ADMIN_ENTRY.t_patient_event_info_ds_sf-2.v1] occurrences matches {1} 
+			use_archetype ADMIN_ENTRY[id0.1, openEHR-EHR-ADMIN_ENTRY.t_patient_event_info_ds_sf-1.v1] occurrences matches {1} 
+			use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.t_patient_event_info_ds_sf-2.v1] occurrences matches {1} 
 		}
 	}
 
@@ -37,6 +37,14 @@ terminology
 			["id1.1"] = <
 				text = <"Patient event information">
 				description = <"Information about the patient event">
+			>
+			["id0.1"] = <
+				text = <"Event start">
+				description = <"Event start">
+			>
+			["id0.2"] = <
+				text = <"Event end">
+				description = <"Event end">
 			>
 		>
 	>
@@ -100,7 +108,7 @@ definition
 			ELEMENT[id81] occurrences matches {0} 
 			ELEMENT[id61.1] 	-- Discharge from service/specialty
 			ELEMENT[id72] occurrences matches {0} 
-			allow_archetype CLUSTER[id75.1] closed 	-- Slot closed
+			allow_archetype CLUSTER[id75] closed 	-- Slot closed
 			ELEMENT[id78.1] 	-- Discharge outcome
 			ELEMENT[id79] occurrences matches {0} 
 			ELEMENT[id80.1] occurrences matches {1} 	-- Discharge status/type
@@ -121,10 +129,6 @@ terminology
 			["id61.1"] = <
 				text = <"Discharge from service/specialty">
 				description = <"*">
-			>
-			["id75.1"] = <
-				text = <"Slot closed">
-				description = <"Slot closed">
 			>
 			["id78.1"] = <
 				text = <"Discharge outcome">

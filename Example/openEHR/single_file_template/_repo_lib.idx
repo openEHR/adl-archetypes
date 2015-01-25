@@ -1,0 +1,4 @@
+	name = <"Single file template">
+	short_name = <"single_file">
+	description = <"Single file template example">
+	maintainer = <"openEHR">
