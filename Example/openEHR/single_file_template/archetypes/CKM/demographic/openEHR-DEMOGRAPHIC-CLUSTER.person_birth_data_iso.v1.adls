@@ -80,7 +80,7 @@ definition
 			}
 			allow_archetype CLUSTER[id7] occurrences matches {0..1} matches {	-- Country specific data
 				include
-					archetype_id/value matches {/(person_other_birth_data)a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(person_other_birth_data)[a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 	}
