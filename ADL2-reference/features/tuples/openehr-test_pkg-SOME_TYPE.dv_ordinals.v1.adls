@@ -95,19 +95,11 @@ terminology
 				text = <"root item">
 				description = <"xxxx">
 			>
-			["ac2"] = <
-				text = <"root item (synthesised)">
-				description = <"xxxx (synthesised)">
-			>
 		>
 	>
 	value_sets = <
 		["ac1"] = <
 			id = <"ac1">
-			members = <"at2", "at3", "at4">
-		>
-		["ac2"] = <
-			id = <"ac2">
 			members = <"at2", "at3", "at4">
 		>
 	>

@@ -7,4 +7,4 @@
 
 maintainer = <"openEHR">
 name = <"reference repository">
-description = <"Reference repository for test and demonstration archetypes.">
+description = <"Reference repository for ADL 2.x test and demonstration archetypes.">
