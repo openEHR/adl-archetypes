@@ -1,0 +1,50 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2)
+	openEHR-EHR-OBSERVATION.narrow_dv_quantity.v1.0.0
+
+specialize
+	openEHR-EHR-OBSERVATION.body_temp_test.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Rong Chen">
+		["organisation"] = <"Cambio">
+		["date"] = <"18/04/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Specialised archetype illustrating constraint narrowing of a DV_QUANTITY">
+			use = <"Test">
+			keywords = <"test", "constraint narrowing">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["regression"] = <"PASS">
+	>
+	copyright = <"© openEHR Foundation">
+
+definition
+	OBSERVATION[id1.1] matches {	-- Body temperature new GP
+		/data[id3]/events[id4]/data[id2]/items[id5]/value matches {
+			DV_QUANTITY[id61] matches {
+				property matches {[at57]}
+				[units, precision] matches {
+					[{"°C"}, {1}]
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Body temperature new GP">
+				description = <"A measurement of the body temperature, which is a surrogate for the whole body temperature of the person.">
+			>
+		>
+	>

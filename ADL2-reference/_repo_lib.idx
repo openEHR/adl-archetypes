@@ -5,4 +5,4 @@
 name = <"openEHR ADL reference">
 short_name = <"ADLref">
 maintainer = <"openEHR">
-description = <"openEHR ADL 1.5 regression test archetypes">
+description = <"openEHR ADL 2 regression test archetypes">

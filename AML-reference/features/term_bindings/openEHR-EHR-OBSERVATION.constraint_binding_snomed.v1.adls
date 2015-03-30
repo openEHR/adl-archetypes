@@ -1,0 +1,369 @@
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2)
+	openEHR-EHR-OBSERVATION.constraint_binding_snomed.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"2006-03-26">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Demonstrate constraint binding">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["regression"] = <"PASS">
+	>
+	copyright = <"© openEHR Foundation">
+
+definition
+	OBSERVATION[id1] matches {	-- Pulse
+		data matches {
+			HISTORY[id3] matches {
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[id4] occurrences matches {0..*} matches {	-- Any event
+						data matches {
+							ITEM_TREE[id2] matches {
+								items matches {
+									ELEMENT[id1006] occurrences matches {0..1} matches {	-- Pulse Presence
+										value matches {
+											DV_CODED_TEXT[id1039] matches {
+												defining_code matches {[ac1]}		-- Pulse Presence (synthesised)
+											}
+										}
+									}
+									ELEMENT[id5] occurrences matches {0..1} matches {	-- Rate
+										name matches {
+											DV_CODED_TEXT[id1040] matches {
+												defining_code matches {[ac2]}		-- Rate (synthesised)
+											}
+										}
+										value matches {
+											DV_QUANTITY[id1041] matches {
+												property matches {[at1046]}
+												magnitude matches {|>=0.0|}
+												precision matches {0}
+												units matches {"/min"}
+											}
+										}
+									}
+									ELEMENT[id6] occurrences matches {0..1} matches {	-- Regularity
+										value matches {
+											DV_CODED_TEXT[id1042] matches {
+												defining_code matches {[ac3]}		-- Regularity (synthesised)
+											}
+										}
+									}
+									ELEMENT[id1031] occurrences matches {0..*} matches {	-- Character
+										value matches {
+											DV_TEXT[id1043] 
+										}
+									}
+									ELEMENT[id1023] occurrences matches {0..1} matches {	-- Clinical Description
+										value matches {
+											DV_TEXT[id1044] 
+										}
+									}
+									ELEMENT[id1024] occurrences matches {0..*} matches {	-- Clinical Interpretation
+										value matches {
+											DV_TEXT[id1045] 
+										}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[id13] matches {
+								items matches {
+									ELEMENT[id14] occurrences matches {0..1} matches {	-- Position
+										value matches {
+											DV_CODED_TEXT[id1046] matches {
+												defining_code matches {[ac4; at1002]}		-- Position (synthesised)
+											}
+										}
+									}
+									ELEMENT[id1019] occurrences matches {0..1} matches {	-- Confounding Factors
+										value matches {
+											DV_TEXT[id1047] 
+										}
+									}
+									allow_archetype CLUSTER[id1018] occurrences matches {0..*} matches {	-- Exertion
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
+									}
+								}
+							}
+						}
+					}
+					INTERVAL_EVENT[id1037] occurrences matches {0..1} matches {	-- Maximum
+						math_function matches {
+							DV_CODED_TEXT[id1048] matches {
+								defining_code matches {[at1047]}
+							}
+						}
+						data matches {
+							use_node ITEM_TREE[id1049] /data[id3]/events[id4]/data[id2]	-- /data[id3]/events[Any event]/data[id2]
+						}
+						state matches {
+							use_node ITEM_TREE[id1050] /data[id3]/events[id4]/state[id13]	-- /data[id3]/events[Any event]/state[id13]
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[id11] matches {
+				items matches {
+					ELEMENT[id1020] occurrences matches {0..1} matches {	-- Method
+						value matches {
+							DV_CODED_TEXT[id1051] matches {
+								defining_code matches {[ac5]}		-- Method (synthesised)
+							}
+						}
+					}
+					ELEMENT[id1038] occurrences matches {0..1} matches {	-- Findings Location
+						value matches {
+							DV_CODED_TEXT[id1052] matches {
+								defining_code matches {[ac6]}		-- Findings Location (synthesised)
+							}
+						}
+					}
+					allow_archetype CLUSTER[id1014] occurrences matches {0..1} matches {	-- Device
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Pulse">
+				description = <"Measurement of the pulse rate, or heart rate, and description of associated characteristics.">
+			>
+			["id4"] = <
+				text = <"Any event">
+				description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+			>
+			["id5"] = <
+				text = <"Rate">
+				description = <"The rate, measured in beats per minute.">
+			>
+			["id6"] = <
+				text = <"Regularity">
+				description = <"The observed regularity of the pulse or heart beat.">
+			>
+			["at7"] = <
+				text = <"Regular">
+				description = <"The rhythm is regular.">
+			>
+			["at8"] = <
+				text = <"Regularly Irregular">
+				description = <"The rhythm is regularly irregular.">
+			>
+			["at9"] = <
+				text = <"Irregularly Irregular">
+				description = <"The rhythm is irregular in a chaotic manner.">
+			>
+			["id14"] = <
+				text = <"Position">
+				description = <"The body position of the subject during the observation.">
+			>
+			["at1001"] = <
+				text = <"Lying">
+				description = <"The subject was lying flat.">
+			>
+			["at1002"] = <
+				text = <"Sitting">
+				description = <"The subject was sitting (for example on bed or chair).">
+			>
+			["at1003"] = <
+				text = <"Reclining">
+				description = <"The subject was reclining.">
+			>
+			["at1004"] = <
+				text = <"Standing">
+				description = <"The subject was standing.">
+			>
+			["id1006"] = <
+				text = <"Pulse Presence">
+				description = <"Identification of a pulse or heart beat.">
+			>
+			["id1014"] = <
+				text = <"Device">
+				description = <"Details about the device used to observe the pulse or heart beat.">
+			>
+			["id1018"] = <
+				text = <"Exertion">
+				description = <"Details about physical exertion being undertaken during the examination.">
+			>
+			["id1019"] = <
+				text = <"Confounding Factors">
+				description = <"Narrative description about any incidental factors that may be affect interpretation of the physical findings.">
+			>
+			["id1020"] = <
+				text = <"Method">
+				description = <"Method used to the pulse observe the pulse or heart beat.">
+			>
+			["id1023"] = <
+				text = <"Clinical Description">
+				description = <"Narrative description about the findings.">
+			>
+			["id1024"] = <
+				text = <"Clinical Interpretation">
+				description = <"Single word, phrase or brief description represents the clinical meaning and significance of the pulse or heart beat findings.">
+			>
+			["at1025"] = <
+				text = <"Present">
+				description = <"A pulse or heart beat can be detected.">
+			>
+			["at1026"] = <
+				text = <"Absent">
+				description = <"A pulse or heart beat cannot be detected.">
+			>
+			["at1027"] = <
+				text = <"Pulse Rate">
+				description = <"The pulse rate, measured in beats per minute.">
+			>
+			["at1028"] = <
+				text = <"Heart Rate">
+				description = <"The heart rate, measured in beats per minute.">
+			>
+			["at1029"] = <
+				text = <"Irregular">
+				description = <"The rhythm is irregular.">
+			>
+			["id1031"] = <
+				text = <"Character">
+				description = <"Description of the character of the pulse or heart beat.">
+			>
+			["at1033"] = <
+				text = <"Palpation">
+				description = <"The findings are observed by physical touch of the observer on the subject.">
+			>
+			["at1034"] = <
+				text = <"Auscultation">
+				description = <"The findings are observed with the assistance of a device, such as a stethoscope.">
+			>
+			["at1035"] = <
+				text = <"Device">
+				description = <"The pulse findings are observed using a device, such as a pulse oximeter or cardiac monitor.">
+			>
+			["id1037"] = <
+				text = <"Maximum">
+				description = <"Maximum rate of the pulse or heart beat observed during a period of exertion.">
+			>
+			["id1038"] = <
+				text = <"Findings Location">
+				description = <"Body site where the pulse or heart beat findings were observed.">
+			>
+			["at1039"] = <
+				text = <"Radial Artery - Left">
+				description = <"The left radial artery.">
+			>
+			["at1040"] = <
+				text = <"Radial Artery - Right">
+				description = <"The right radial artery.">
+			>
+			["at1041"] = <
+				text = <"Heart">
+				description = <"The region of the heart.">
+			>
+			["at1042"] = <
+				text = <"Carotid Artery - Left">
+				description = <"The left carotid artery.">
+			>
+			["at1043"] = <
+				text = <"Carotid Artery - Right">
+				description = <"The right carotid artery.">
+			>
+			["at1044"] = <
+				text = <"Femoral Artery - Left">
+				description = <"The left femoral artery.">
+			>
+			["at1045"] = <
+				text = <"Femoral Artery - Right">
+				description = <"The right femoral artery.">
+			>
+			["at1046"] = <
+				text = <"Frequency">
+				description = <"Frequency">
+			>
+			["at1047"] = <
+				text = <"maximum">
+				description = <"maximum">
+			>
+			["ac1"] = <
+				text = <"Pulse Presence (synthesised)">
+				description = <"Identification of a pulse or heart beat. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Rate (synthesised)">
+				description = <"The rate, measured in beats per minute. (synthesised)">
+			>
+			["ac3"] = <
+				text = <"Regularity (synthesised)">
+				description = <"The observed regularity of the pulse or heart beat. (synthesised)">
+			>
+			["ac4"] = <
+				text = <"Position (synthesised)">
+				description = <"The body position of the subject during the observation. (synthesised)">
+			>
+			["ac5"] = <
+				text = <"Method (synthesised)">
+				description = <"Method used to the pulse observe the pulse or heart beat. (synthesised)">
+			>
+			["ac6"] = <
+				text = <"Findings Location (synthesised)">
+				description = <"Body site where the pulse or heart beat findings were observed. (synthesised)">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at1046"] = <http://openehr.org/id/382>
+			["at1047"] = <http://openehr.org/id/144>
+		>
+		["snomedct"] = <
+			["ac2"] = <http://snomedct.info/id/12394009>
+			["ac3"] = <http://snomedct.info/id/12394015>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at1025", "at1026">
+		>
+		["ac2"] = <
+			id = <"ac2">
+			members = <"at1027", "at1028">
+		>
+		["ac3"] = <
+			id = <"ac3">
+			members = <"at7", "at1029", "at8", "at9">
+		>
+		["ac4"] = <
+			id = <"ac4">
+			members = <"at1004", "at1002", "at1003", "at1001">
+		>
+		["ac5"] = <
+			id = <"ac5">
+			members = <"at1033", "at1034", "at1035">
+		>
+		["ac6"] = <
+			id = <"ac6">
+			members = <"at1039", "at1040", "at1041", "at1042", "at1043", "at1044", "at1045">
+		>
+	>

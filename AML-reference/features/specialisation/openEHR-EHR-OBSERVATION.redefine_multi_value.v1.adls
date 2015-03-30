@@ -1,0 +1,68 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2)
+	openEHR-EHR-OBSERVATION.redefine_multi_value.v1.0.0
+
+specialize
+	openEHR-EHR-OBSERVATION.spec_test_parent.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["organisation"] = <"Ocean Informatics">
+		["name"] = <"Thomas Beale">
+		["date"] = <"11/8/2008">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Test archetype that redefines a single node into many">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["regression"] = <"PASS">
+	>
+
+definition
+	OBSERVATION[id1.1] matches {	-- multi-level redefinition archetype
+		/data/events[id3]/data/items matches {
+			ELEMENT[id8.1] matches {	-- 1st redefine of at0007 node
+				value matches {
+					DV_QUANTITY[id0.7] 
+				}
+			}
+			ELEMENT[id8.2] matches {	-- 2nd redefine of at0007 node
+				value matches {
+					DV_QUANTITY[id0.8] 
+				}
+			}
+			ELEMENT[id8.3] matches {	-- 3rd redefine of at0007 node
+				value matches {
+					DV_QUANTITY[id0.9] 
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"multi-level redefinition archetype">
+				description = <"specialisation containing multiple redefine of a single parent node">
+			>
+			["id8.1"] = <
+				text = <"1st redefine of at0007 node">
+				description = <"1st redefine of at0007 node">
+			>
+			["id8.2"] = <
+				text = <"2nd redefine of at0007 node">
+				description = <"1st redefine of at0007 node">
+			>
+			["id8.3"] = <
+				text = <"3rd redefine of at0007 node">
+				description = <"1st redefine of at0007 node">
+			>
+		>
+	>

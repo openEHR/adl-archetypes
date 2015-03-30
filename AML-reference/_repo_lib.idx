@@ -1,0 +1,8 @@
+--
+-- Logical archetype library definition
+--
+
+name = <"openEHR AML reference">
+short_name = <"AMLref">
+maintainer = <"AML/OMG">
+description = <"ADL 2 reference archetypes for OMG AML submission">

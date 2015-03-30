@@ -1,0 +1,43 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2)
+	uk.gov.nhs::openEHR-EHR-OBSERVATION.other_ns_inherit_ns.v5.3.0
+
+specialize
+	org.openehr::openEHR-EHR-OBSERVATION.full_id_1.v1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["organisation"] = <"Ocean Informatics">
+		["name"] = <"Thomas Beale">
+		["date"] = <"11/8/2013">
+	>
+	copyright = <"Copyright (c) 2014 openEHR Foundation">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Test full namespaced & versioned id">
+		>
+	>
+	lifecycle_state = <"unmanaged">
+	other_details = <
+		["regression"] = <"PASS">
+	>
+
+definition
+	OBSERVATION[id1.1] matches {	-- specialised archetype
+		data matches {
+			HISTORY[id0.4] 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"specialised archetype">
+				description = <"specialised child archetype">
+			>
+		>
+	>
