@@ -1,5 +1,5 @@
-archetype (adl_version=2.0.0)
-	openEHR-EHR-OBSERVATION.no_ns_inherit_ns.v2.8.0-rc57
+archetype (adl_version=2.0.0; rm_release=1.0.2)
+	openEHR-EHR-OBSERVATION.no_ns_inherit_ns.v2.8.0-rc.57
 
 specialize
 	org.openehr::openEHR-EHR-OBSERVATION.full_id_1.v1
