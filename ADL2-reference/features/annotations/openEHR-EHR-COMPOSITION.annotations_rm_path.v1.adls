@@ -125,25 +125,17 @@ terminology
 	>
 
 annotations
-	items = <
+	documentation = <
 		["en"] = <
-			items = <
-				["/context/start_time"] = <
-					items = <
-						["test"] = <"XXXX">
-						["local_name"] = <"consultation start time">
-					>
-				>
-				["/context/location"] = <
-					items = <
-						["design note"] = <"Note on use of the non-archteyped context/location RM element in this data">
-					>
-				>
-				["/context/health_care_facility/name"] = <
-					items = <
-						["design note"] = <"Note on use of non-archteyped context/health_care_facility/name RM element in this data">
-					>
-				>
+			["/context/start_time"] = <
+				["test"] = <"XXXX">
+				["local_name"] = <"consultation start time">
+			>
+			["/context/location"] = <
+				["design note"] = <"Note on use of the non-archteyped context/location RM element in this data">
+			>
+			["/context/health_care_facility/name"] = <
+				["design note"] = <"Note on use of non-archteyped context/health_care_facility/name RM element in this data">
 			>
 		>
 	>
