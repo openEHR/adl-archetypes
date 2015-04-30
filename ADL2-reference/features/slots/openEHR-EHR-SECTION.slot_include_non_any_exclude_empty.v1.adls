@@ -5,22 +5,29 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"thomas.beale@oceaninformatics.com">
-		["date"] = <"14/03/2010">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2010-03-14">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test slot archetype with non-any include and no exclude">
+			purpose = <"Archetype with non-any include and no excludes, which means the includes are taken as recommendations.">
+			keywords = <"ADL", "test", "slots">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"Copyright © 2010 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	SECTION[id1] matches {	-- Slot section

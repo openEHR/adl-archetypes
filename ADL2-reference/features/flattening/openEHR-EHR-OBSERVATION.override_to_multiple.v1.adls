@@ -8,23 +8,28 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
-		["name"] = <"Heather Leslie">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"heather.leslie@oceaninformatics.com">
-		["date"] = <"6/05/2009">
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["date"] = <"2009-05-06">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"This is an archetype used to record details of the use of all common forms of tobacco. ">
+			purpose = <"Parent of flattening example archetypes.">
+			keywords = <"ADL", "flattening", "test">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"© openEHR Foundation">
+	copyright = <"Copyright © 2009 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Tobacco Use

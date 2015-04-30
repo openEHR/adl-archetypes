@@ -5,23 +5,29 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
-		["name"] = <"Sam Heard">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"sam.heard@oceaninformatics.com">
-		["date"] = <"18/05/2004">
+		["name"] = <"Thomas Beale">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2011-06-12">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Test sum statement in rules section">
+			keywords = <"ADL", "test", "rules">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"© 2011 openEHR Foundation">
+	copyright = <"Copyright © 2011 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	OBSERVATION[id1] matches {	-- Apgar score

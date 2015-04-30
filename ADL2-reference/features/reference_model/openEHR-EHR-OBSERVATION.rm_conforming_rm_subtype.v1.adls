@@ -5,23 +5,29 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"thomas.beale@oceaninformatics.com">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
 		["date"] = <"2009-03-18">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Test for conformance of RM subtype (here: POINT_EVENT) to statically declared RM type (EVENT). This archetype should pass validation.">
-			keywords = <"test", "RM checking">
+			keywords = <"ADL", "test", "RM checking">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"Copyright © 2009 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	OBSERVATION[id1] matches {	-- An Observation

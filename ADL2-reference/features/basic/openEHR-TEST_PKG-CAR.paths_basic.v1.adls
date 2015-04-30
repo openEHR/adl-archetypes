@@ -7,6 +7,9 @@ language
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["date"] = <"2006-03-20">
 	>
 	details = <
 		["en"] = <
@@ -15,11 +18,11 @@ description
 			keywords = <"ADL", "test">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"copyright (c) 2006 The openEHR Foundation">
+	copyright = <"copyright © 2006 openEHR Foundation <http://www.openEHR.org>">
 
 definition
 	CAR[id1] matches {	-- car

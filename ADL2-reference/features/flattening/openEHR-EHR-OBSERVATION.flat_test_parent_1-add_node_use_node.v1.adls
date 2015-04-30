@@ -8,22 +8,28 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
 		["name"] = <"Ian McNicoll">
-		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["organisation"] = <"Ocean Informatics UK <http://www.oceaninformatics.com>">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
 		["date"] = <"2009-11-07">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Flattening test: test differential path containing terminal attribute not in parent ('state'); test internal references to path in flat parent and path in current archetype.">
+			purpose = <"Test flattening of differential path containing terminal attribute not in parent ('state'); test internal references to path in flat parent and path in current archetype.">
+			keywords = <"ADL", "flattening", "test">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"Copyright © 2009 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	OBSERVATION[id1.1] matches {	-- Blood Glucose Test Result

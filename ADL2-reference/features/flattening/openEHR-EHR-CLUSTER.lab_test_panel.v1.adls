@@ -5,23 +5,28 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
 		["name"] = <"Ian McNicoll">
-		["organisation"] = <"freshEHR Clinical Informatics, UK">
 		["email"] = <"ian@freshehr.com">
+		["organisation"] = <"freshEHR Clinical Informatics, UK">
 		["date"] = <"2014-04-18">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Parent for flattening tests on lab-style archetypes">
+			keywords = <"ADL", "flattening", "test">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"(c) 2014 openEHR Foundation">
+	copyright = <"Copyright © 2014 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	CLUSTER[id1] matches {	-- Laboratory test panel

@@ -5,22 +5,30 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
-		["organisation"] = <"Ocean Informatics">
 		["name"] = <"Thomas Beale">
-		["date"] = <"11/8/2013">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2013-08-11">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test full namespaced & versioned id">
+			purpose = <"Test full namespaced and versioned archetype identifier.">
+			keywords = <"ADL", "identifiers", "test">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"published">
 	copyright = <"Copyright (c) 2014 openEHR Foundation">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+
+	copyright = <"Copyright © 2013 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	OBSERVATION[id1] matches {	-- top-level archetype

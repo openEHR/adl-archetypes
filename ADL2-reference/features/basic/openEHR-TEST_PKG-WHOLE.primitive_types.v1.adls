@@ -1,5 +1,5 @@
 archetype (adl_version=2.0.5; rm_release=1.0.2)
-	openehr-TEST_PKG-WHOLE.basic_types.v1.0.0
+	openehr-TEST_PKG-WHOLE.primitive_types.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -7,19 +7,27 @@ language
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
+		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2004-05-01">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"test structure">
+			purpose = <"Test constraints on built-in types assumed by ADL / AOM. These types include: 
+				Integer, Real, Boolean, String (including regular expressions, delimited with //), 
+				Date, DateTime, Time, Duration, 
+				Interval ranges of ordered types above,
+				Lists of all atomic types above.
+			">
 			keywords = <"ADL", "test">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"copyright (c) 2004 The openEHR Foundation">
+	copyright = <"copyright © 2004 openEHR Foundation <http://www.openEHR.org>">
 
 definition
 	WHOLE[id1] matches {	-- test entry

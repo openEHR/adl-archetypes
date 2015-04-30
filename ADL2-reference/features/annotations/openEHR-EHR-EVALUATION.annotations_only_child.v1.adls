@@ -10,19 +10,22 @@ language
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["date"] = <"12/12/2010">
+		["email"] = <"thomas.beale@openEHR.org">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2010-12-12">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To test use of specialisation that adds only annotations, i.e. no other changes">
+			keywords = <"ADL", "test">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"copyright (c) 2010 openEHR Foundation">
+	copyright = <"Copyright © 2010 openEHR Foundation <http://www.openEHR.org>">
 
 definition
 	EVALUATION[id1.1] 	-- Annotations specialisation

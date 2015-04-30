@@ -7,19 +7,23 @@ language
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
+		["email"] = <"thomas.beale@openEHR.org">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2004-06-01">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"test structure">
+			purpose = <"Simple test to demonstrate C_DURAITON constraints in two forms: the basic ISO8601 form, and the augmented openEHR form allowing weeks and days (typical to constrain pregnancy) as an alternative.">
 			keywords = <"ADL", "test">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"copyright (c) 2004 The openEHR Foundation">
+	copyright = <"Copyright © 2004 openEHR Foundation <http://www.openEHR.org>">
 
 definition
 	WHOLE[id1] matches {	-- test entry

@@ -5,23 +5,29 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"thomas.beale@oceaninformatics.com">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
 		["date"] = <"2014-06-10">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To test enumerated type constraints">
+			purpose = <"Illustrate enumerated type constraints. In this archetype, the DV_PROPORTION.type field has integer values that are actually the values of a declared enumeration type PROPORTION_KIND based on the Integer primitive type.">
+			keywords = <"ADL", "test", "enumerated types">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"© 2014 openEHR Foundation">
+	copyright = <"Copyright © 2014 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	OBSERVATION[id1] matches {	-- Enumeration test

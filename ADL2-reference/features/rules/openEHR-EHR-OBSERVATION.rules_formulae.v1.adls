@@ -5,23 +5,29 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"thomas.beale@oceaninformatics.com">
-		["date"] = <"22/01/2014">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2014-01-22">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To test rules that define formulae based on archetype data points">
+			purpose = <"Illustrate rules that define formulae based on archetype data points. This example defines two rules based on well known blood pressure formulae, viz 'mean arterial pressure' and 'pulse pressure'. These both use">
+			keywords = <"ADL", "test", "rules">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"© openEHR Foundation">
+	copyright = <"Copyright © 2014 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	OBSERVATION[id1] matches {	-- Blood Pressure
@@ -188,7 +194,7 @@ definition
 					}
 					allow_archetype CLUSTER[id1026] occurrences matches {0..1} matches {	-- Device
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device([a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
@@ -196,7 +202,7 @@ definition
 	}
 
 rules
-	mean_arterial_pressure: /data[id2]/events[id7]/data[id4]/items[id1007]/value/magnitude = /data[id2]/events[id7]/data[id4]/items[id6]/value/magnitude + 0.33 * /data[id2]/events[id7]/data[id4]/items[id5]/value/magnitude - /data[id2]/events[id7]/data[id4]/items[id6]/value/magnitude
+	mean_arterial_pressure: /data[id2]/events[id7]/data[id4]/items[id1007]/value/magnitude = /data[id2]/events[id7]/data[id4]/items[id6]/value/magnitude + 0.33 * (/data[id2]/events[id7]/data[id4]/items[id5]/value/magnitude - /data[id2]/events[id7]/data[id4]/items[id6]/value/magnitude)
 	pulse_pressure: /data[id2]/events[id7]/data[id4]/items[id1008]/value/magnitude = /data[id2]/events[id7]/data[id4]/items[id5]/value/magnitude - /data[id2]/events[id7]/data[id4]/items[id6]/value/magnitude
 
 terminology

@@ -5,23 +5,31 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
 		["name"] = <"Thomas Beale">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"thomas.beale@oceaninformatics.com">
 		["date"] = <"12/03/2009">
 	>
+
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test for fully conforming archetype - should generate no errors">
-			keywords = <"test", "RM checker">
+			purpose = <"Example containing properly constraints conforming to the RM, with no RM type overrides or generic type markers, even though one type (HISTORY) is declared generic in the RM.">
+			keywords = <"ADL", "test", "RM checker">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+
+	copyright = <"Copyright © 2009 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	OBSERVATION[id1] matches {	-- an Observation

@@ -5,27 +5,31 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	lifecycle_state = <"unmanaged">
 	original_author = <
-		["name"] = <"Ian McNicoll">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["name"] = <"Thomas Beale">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
 		["date"] = <"2009-06-08">
 	>
-	copyright = <"© openEHR Foundation">
+
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record the amount of oxygen being delivered to the subject at the time of observation.  Assumed values of 21% O2, Fi02 of 0.21 and Oxygen flow rate of zero.">
-			use = <"May be used within an ACTION archetype to specificy oxygen therapy , or within OBSERVATION archetypes such as Blood gases or Respirations, as part of patient state, where knowledge of ambient oxygen status is critical to interpretation of the observation.">
-			keywords = <"breathing", "oxygen">
-			misuse = <"">
+			purpose = <"Demonstrate multiple alternative Quantity expressions.">
+			keywords = <"ADL", "test", "breathing", "oxygen">
 		>
 	>
 
+	lifecycle_state = <"published">
 	other_details = <
-		["regression"] = <"pass">
+		["regression"] = <"PASS">
 	>
+	copyright = <"Copyright © 2009 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	CLUSTER[id1] matches {	-- Ambient oxygen
@@ -59,8 +63,8 @@ definition
 				value matches {
 					DV_PROPORTION[id58] matches {
 						[numerator, is_integral, type] matches 
-                                                        {[{|0.0..1.0|; 0.21}, {False}, {1}],
-                                                        [{|0.0..100.0|; 21.0}, {False}, {2}]}
+							{[{|0.0..1.0|; 0.21}, {False}, {1}],
+							[{|0.0..100.0|; 21.0}, {False}, {2}]}
 					}
 				}
 			}

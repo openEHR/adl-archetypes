@@ -8,23 +8,27 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
-		["name"] = <"Ian McNicoll">
-		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["name"] = <"Dr Ian McNicoll">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
-		["date"] = <"08/12/2009">
+		["organisation"] = <"Ocean Informatics UK <http://www.oceaninformatics.com>">
+		["date"] = <"2009-08-12">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test flattening when child archetype contains a differential path with an overridden id code">
+			purpose = <"Test flattening when child archetype contains a differential path that contains an overridden id code midway through (id122.1).">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"© openEHR">
+	copyright = <"Copyright © 2009 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	INSTRUCTION[id1.1] matches {	-- PathologyTest Request

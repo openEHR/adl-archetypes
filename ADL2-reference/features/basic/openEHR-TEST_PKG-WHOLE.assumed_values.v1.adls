@@ -1,5 +1,5 @@
 archetype (adl_version=2.0.5; rm_release=1.0.2)
-	openehr-TEST_PKG-WHOLE.assumed_types.v1.0.0
+	openehr-TEST_PKG-WHOLE.assumed_values.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -7,19 +7,22 @@ language
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
+		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2004-05-01">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"test assumed types">
+			purpose = <"Test constraints on primitive types that have added 'assumed values' as defined by the AOM">
 			keywords = <"ADL", "assumed types", "test">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"copyright (c) 2004 The openEHR Foundation">
+	copyright = <"copyright © 2004 openEHR Foundation <http://www.openEHR.org>">
 
 definition
 	WHOLE[id1] matches {	-- test entry

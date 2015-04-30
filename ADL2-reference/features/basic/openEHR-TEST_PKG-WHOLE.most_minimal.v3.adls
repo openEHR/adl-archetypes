@@ -6,18 +6,24 @@ language
 
 description
 	original_author = <
-		["name"] = <"unknown">
+		["name"] = <"Thomas Beale">
+		["email"] = <"thomas.beale@openEHR.org">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2004-06-01">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test what happens when a different version of an existing archetype is encountered by AWB.">
-		>
+			purpose = <"Test what happens when a different major version (v3) of an existing archetype is encountered by tools. The tool should treat this archteype as distinct from other major versions of this archetype.">
+			keywords = <"ADL", "test">
+  		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"Copyright © 2004 openEHR Foundation <http://www.openEHR.org>">
 
 definition
 	WHOLE[id1] 	-- most minimal

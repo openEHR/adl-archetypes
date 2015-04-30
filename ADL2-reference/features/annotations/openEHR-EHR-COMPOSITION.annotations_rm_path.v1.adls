@@ -6,22 +6,24 @@ language
 
 description
 	original_author = <
-		["name"] = <"Sam Heard">
-		["organisation"] = <"openEHR">
-		["email"] = <"sam.heard@oceaninformatics.com">
-		["date"] = <"9/11/2010">
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["email"] = <"thomas.beale@openEHR.org">
+		["date"] = <"2010-11-09">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Demonstrate annotations on RM paths (rather than archetype paths)">
+			purpose = <"Demonstrate annotations on pure Reference Model paths, i.e. paths that must be valid, but have not been archetyped. They are thus still valid for annotations.">
+			use = <"The typical use is to add design notes about RM data items that are not archetyped (i.e. don't specifically need to be constrained) but whose meaning is specific to the archetype.">
+			keywords = <"ADL", "test">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"© openEHR Foundation">
+	copyright = <"Copyright © 2010 openEHR Foundation <http://www.openEHR.org>">
 
 definition
 	COMPOSITION[id1] matches {	-- Prescription

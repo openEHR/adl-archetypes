@@ -1,5 +1,8 @@
-archetype (adl_version=2.0.5; rm_release=1.0.2)
-	openEHR-EHR-SECTION.slot_include_empty_exclude_empty.v1.0.0
+archetype (adl_version=2.0.5; rm_release=1.0.2; uid=2.4.34.666.7.2)
+	openehr-TEST_PKG-WHOLE.child_with_oid.v1.0.0
+
+specialize
+	openehr-TEST_PKG-WHOLE.parent_with_oid.v1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -12,13 +15,14 @@ description
 		["name"] = <"Thomas Beale">
  		["email"] = <"thomas.beale@openEHR.org">    
 		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
-		["date"] = <"2010-03-14">
+		["date"] = <"2014-11-12">
 	>
+
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test slot with no include or exclude">
-			keywords = <"ADL", "test", "slots">
+			purpose = <"Example specialised archetype containing an ISO OID uid field.">
+			keywords = <"ADL", "meta-data", "test">
 		>
 	>
 
@@ -26,26 +30,20 @@ description
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"Copyright © 2010 openEHR Foundation <http://www.openEHR.org>">
+	copyright = <"Copyright © 2014 openEHR Foundation <http://www.openEHR.org>">
 	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
-	SECTION[id1] matches {	-- Slot section
-		items cardinality matches {1..*; unordered} matches {
-			allow_archetype OBSERVATION[id2] occurrences matches {0..1} 	-- Vital signs
-		}
+	WHOLE[id1.1] matches {	-- Child archetype with Oid
+		string_attr1 matches {"test"}
 	}
 
 terminology
 	term_definitions = <
 		["en"] = <
-			["id1"] = <
-				text = <"Slot section">
-				description = <"Slot section">
-			>
-			["id2"] = <
-				text = <"Vital signs">
-				description = <"Vital signs observations.">
+			["id1.1"] = <
+				text = <"Child archetype with Oid">
+				description = <"Oid child">
 			>
 		>
 	>
