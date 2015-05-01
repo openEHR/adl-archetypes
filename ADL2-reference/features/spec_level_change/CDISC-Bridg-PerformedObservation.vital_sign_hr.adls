@@ -8,11 +8,14 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"thomas.beale@oceaninformatics.com">
-		["date"] = <"10/06/2014">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2014-06-10">
 	>
 	details = <
 		["en"] = <
@@ -21,11 +24,14 @@ description
 			keywords = <"Observation", "heart rate">
 		>
 	>
-	lifecycle_state = <"unmanaged">
-	copyright = <"© 2014 CDISC.org">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"Copyright © 2014 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
+
 
 definition
 	PerformedObservation[id1.1] matches {	-- Heart rate BRIDG observation
