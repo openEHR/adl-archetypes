@@ -8,7 +8,6 @@ description
 	custodian_namespace = <"org.openehr">
 	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
 
-	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Thomas Beale">
  		["email"] = <"thomas.beale@openEHR.org">    

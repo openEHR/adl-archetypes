@@ -1,5 +1,5 @@
 archetype (adl_version=2.0.5; rm_release=1.0.2)
-	openEHR-EHR-OBSERVATION.redefine_multi_value.v1.0.0
+	openEHR-EHR-OBSERVATION.redefine_node_to_clones.v1.0.0
 
 specialize
 	openEHR-EHR-OBSERVATION.spec_test_parent.v1
@@ -8,21 +8,30 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
-		["organisation"] = <"Ocean Informatics">
 		["name"] = <"Thomas Beale">
-		["date"] = <"11/8/2008">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2008-08-11">
 	>
+
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test archetype that redefines a single node into many">
+			purpose = <"Example of redefinition of a single node into multiple clones. Each of the ELEMENT[id8.x] nodes is a distinct clone of the ELEMENT[id8] node from the parent archetype.">
+			keywords = <"ADL", "test", "specialisation">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"Copyright © 2008 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	OBSERVATION[id1.1] matches {	-- multi-level redefinition archetype

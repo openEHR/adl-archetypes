@@ -5,25 +5,30 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"thomas.beale@oceaninformatics.com">
-		["date"] = <"18/04/2012">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2012-04-18">
 	>
+
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"A parent archetype for testing various child refinements, including occurrences matches {0}. Content structure derived from openEHR Body Temperature archetype.">
-			use = <"Test">
-			keywords = <"test", "occurrences">
+			purpose = <"A parent archetype for testing various child refinements, including occurrences matches {0}.">
+			keywords = <"ADL", "test", "specialisation">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"© openEHR Foundation">
+	copyright = <"Copyright © 2012 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	OBSERVATION[id1] matches {	-- Body temperature

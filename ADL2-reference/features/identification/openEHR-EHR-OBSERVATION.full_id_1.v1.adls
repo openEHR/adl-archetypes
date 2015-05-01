@@ -22,7 +22,6 @@ description
 		>
 	>
 	lifecycle_state = <"published">
-	copyright = <"Copyright (c) 2014 openEHR Foundation">
 	other_details = <
 		["regression"] = <"PASS">
 	>

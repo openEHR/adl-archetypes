@@ -8,25 +8,34 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["date"] = <"20/02/2013">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2012-02-20">
 	>
+
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Legal constraining of codes list from parent">
+			purpose = <"Example of narrowing constraint of code list inherited from parent.">
+			keywords = <"ADL", "test", "specialisation">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"copyright (c) 2013 openEHR Foundation">
+	copyright = <"Copyright © 2013 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	EVALUATION[id1.1] matches {	-- Adverse reaction exclusions
-		/data[id2]/items[id3]/value/defining_code matches {[ac1.1]}		-- (added by post-parse processor)
+		/data[id2]/items[id3]/value/defining_code matches {[ac1.1]}	
 	}
 
 terminology
@@ -37,8 +46,8 @@ terminology
 				description = <"A category of conditions or states which have been excluded as cause of adverse reaction">
 			>
 			["ac1.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+				text = <"Specific exclusions">
+				description = <"Reduced set of exclusions">
 			>
 		>
 	>

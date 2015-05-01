@@ -5,21 +5,30 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["date"] = <"20/02/2013">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2013-02-20">
 	>
+
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Archetype containing a C_CODE_PHRASE list which can be constrained by children">
+			purpose = <"Archetype containing a C_TERMINOLOGY_CODE list which can be further constrained in child archetypes.">
+			keywords = <"ADL", "test", "specialisation">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"copyright (c) 2013 openEHR Foundation">
+	copyright = <"Copyright © 2013 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	EVALUATION[id1] matches {	-- General statement of exclusions or states

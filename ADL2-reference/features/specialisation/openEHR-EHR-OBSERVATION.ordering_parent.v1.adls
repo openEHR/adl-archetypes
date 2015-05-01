@@ -5,23 +5,29 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
-		["organisation"] = <"Ocean Informatics, United Kingdom">
+		["organisation"] = <"Ocean Informatics UK <http://www.oceaninformatics.com>">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
-		["date"] = <"07/11/2009">
+		["date"] = <"2009-11-07">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Parent for child that redefines and adds nodes, marked for a certain location in flat, using 'before' keyword">
+			purpose = <"Parent for child that redefines and adds nodes, marked for a certain location in flat, using 'before' keyword.">
+			keywords = <"ADL", "test", "specialisation">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"© openEHR Foundation">
+	copyright = <"Copyright © 2009 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	OBSERVATION[id1] matches {	-- Laboratory test

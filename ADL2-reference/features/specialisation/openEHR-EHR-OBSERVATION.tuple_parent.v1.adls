@@ -1,27 +1,33 @@
 archetype (adl_version=2.0.5; rm_release=1.0.2)
-	openEHR-EHR-OBSERVATION.parent_for_tuple_redefine.v1.0.0
+	openEHR-EHR-OBSERVATION.tuple_parent.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
-		["name"] = <"Sam Heard">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"sam.heard@oceaninformatics.com">
-		["date"] = <"28/06/2006">
+		["name"] = <"Thomas Beale">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2014-02-28">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Intravascular venous, arterial, pulmonary or cardiac pressure measurement. Commonly specialised for specific common pressures such as JVP and CCP.">
+			purpose = <"Example archetype containing tuple constraints for the types DV_QUANTITY and DV_ORDINAL.">
+			keywords = <"ADL", "test", "specialisation", "tuples">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
-	copyright = <"© openEHR Foundation">
+	copyright = <"Copyright © 2014 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	OBSERVATION[id1] matches {	-- Intravascular pressure

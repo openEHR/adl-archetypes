@@ -8,21 +8,30 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
+
 	original_author = <
-		["organisation"] = <"Ocean Informatics">
 		["name"] = <"Thomas Beale">
-		["date"] = <"11/8/2008">
+ 		["email"] = <"thomas.beale@openEHR.org">    
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
+		["date"] = <"2008-08-11">
 	>
+
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test legal narrowing of cardinality in specialised archetype">
+			purpose = <"Example showing narrowing of cardinality in specialised archetype. The narrower cardinality replaces the cardinality from the parent in the computed flat form.">
+			keywords = <"ADL", "test", "specialisation", "cardinality">
 		>
 	>
-	lifecycle_state = <"unmanaged">
+
+	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">
 	>
+	copyright = <"Copyright © 2008 openEHR Foundation <http://www.openEHR.org>">
+	licence = <"Creative Commons CC-BY-SA <https://creativecommons.org/licenses/by-sa/3.0/>">
 
 definition
 	OBSERVATION[id1.1] matches {	-- specialised archetype
