@@ -5,18 +5,18 @@ language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Thomas Beale <thomas.beale@oceaninformatics.com>">
 		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
 	>
+	copyright = <"Copyright (c) 2012 openEHR Foundation ">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"???">
 		>
 	>
-	lifecycle_state = <"unmanaged">
-	copyright = <"Copyright (c) 2012 openEHR Foundation ">
 	other_details = <
 		["regression"] = <"PASS">
 	>
@@ -35,7 +35,34 @@ definition
 			}
 			CONTACT[id3] occurrences matches {0..1} matches {	-- work
 				addresses matches {
-					ADDRESS[id4] 	-- Postal
+					ADDRESS[id4] matches {	-- Postal
+						details matches {
+							ITEM_TREE[id12] matches {
+								items matches {
+									ELEMENT[id13] occurrences matches {0..1} matches {	-- Appartment
+										value matches {
+											DV_TEXT[id15] 
+										}
+									}
+									ELEMENT[id14] occurrences matches {1} matches {	-- Street
+										value matches {
+											DV_TEXT[id16] 
+										}
+									}
+									ELEMENT[id17] occurrences matches {0..1} matches {	-- Test DV_ENCAPSULATED type
+										value matches {
+											DV_ENCAPSULATED[id18] 
+										}
+									}
+									ELEMENT[id19] occurrences matches {0..1} matches {	-- Test 2
+										value matches {
+											DV_MULTIMEDIA[id20] 
+										}
+									}
+								}
+							}
+						}
+					}
 					allow_archetype ADDRESS[id5] 	-- Delivery
 				}
 			}
@@ -47,6 +74,9 @@ definition
 					DV_CODED_TEXT[id10] 
 				}
 			}
+		}
+		name matches {
+			DV_CODED_TEXT[id11] 
 		}
 	}
 
@@ -83,6 +113,22 @@ terminology
 			>
 			["id9"] = <
 				text = <"Primary name">
+				description = <"-">
+			>
+			["id13"] = <
+				text = <"Appartment">
+				description = <"-">
+			>
+			["id14"] = <
+				text = <"Street">
+				description = <"-">
+			>
+			["id17"] = <
+				text = <"Test DV_ENCAPSULATED type">
+				description = <"-">
+			>
+			["id19"] = <
+				text = <"Test 2">
 				description = <"-">
 			>
 		>

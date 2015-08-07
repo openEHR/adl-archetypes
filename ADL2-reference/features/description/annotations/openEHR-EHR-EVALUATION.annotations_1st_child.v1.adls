@@ -92,9 +92,5 @@ annotations
 				["requirements note"] = <"this is a requirements note on intolerance">
 				["national data dictionary"] = <"NDD ref for intolerance">
 			>
-			["/data[id2]/items[id3]"] = <
-				["design note"] = <"this is a SPECIALISED design note on Statement">
-				["NEW TAG"] = <"this is a SPECIALISED design note on Statement">
-			>
 		>
 	>
