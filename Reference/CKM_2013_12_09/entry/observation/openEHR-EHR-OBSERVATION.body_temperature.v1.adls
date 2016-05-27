@@ -200,7 +200,7 @@ definition
 					EVENT[id4] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id2] matches {
-								items cardinality matches {1; unordered} matches {
+								items matches {
 									ELEMENT[id5] matches {	-- Temperature
 										value matches {
 											DV_QUANTITY[id61] matches {

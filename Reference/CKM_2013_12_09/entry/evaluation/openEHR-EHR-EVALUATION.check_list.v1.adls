@@ -48,7 +48,7 @@ definition
 					CLUSTER[id5] occurrences matches {1..*} matches {	-- Question group
 						items matches {
 							CLUSTER[id3] occurrences matches {1..*} matches {	-- Question
-								items cardinality matches {1..2; unordered} matches {
+								items matches {
 									ELEMENT[id4] 	-- Answer
 									ELEMENT[id6] occurrences matches {0..1} matches {	-- A comment on the answer
 										value matches {

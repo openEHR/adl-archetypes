@@ -53,7 +53,7 @@ definition
 								}
 							}
 							CLUSTER[id11] matches {	-- Amount
-								items cardinality matches {1; unordered} matches {
+								items matches {
 									ELEMENT[id5] occurrences matches {0..1} matches {	-- Number of units
 										value matches {
 											DV_COUNT[id14] matches {

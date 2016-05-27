@@ -61,7 +61,7 @@ definition
 					EVENT[id3] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
-								items cardinality matches {0..1; ordered} matches {
+								items matches {
 									ELEMENT[id5] occurrences matches {0..1} matches {	-- Clinical
 										value matches {
 											DV_TEXT[id19] 

@@ -75,7 +75,7 @@ definition
 					EVENT[id3] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
-								items cardinality matches {1; unordered} matches {
+								items matches {
 									ELEMENT[id12] occurrences matches {0..1} matches {	-- Circumference
 										value matches {
 											DV_QUANTITY[id13] matches {

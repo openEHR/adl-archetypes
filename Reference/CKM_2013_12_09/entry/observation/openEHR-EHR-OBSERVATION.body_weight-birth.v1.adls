@@ -108,7 +108,7 @@ definition
 	OBSERVATION[id1.1] occurrences matches {0..1} matches {	-- Body weight at birth
 		data matches {
 			HISTORY[id3] matches {
-				events cardinality matches {1; unordered} matches {
+				events matches {
 					POINT_EVENT[id4.1] matches {	-- Birth
 						offset matches {
 							DV_DURATION[id0.1] matches {

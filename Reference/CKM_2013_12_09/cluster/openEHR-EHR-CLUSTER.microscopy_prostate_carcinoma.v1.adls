@@ -181,7 +181,7 @@ definition
 			CLUSTER[id22] occurrences matches {0..1} matches {	-- Surgical resection margins
 				items matches {
 					CLUSTER[id238] matches {	-- Surgical resection margin
-						items cardinality matches {1; unordered} matches {
+						items matches {
 							allow_archetype CLUSTER[id85] occurrences matches {0..1} matches {	-- Resection margin detail  
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v1/}

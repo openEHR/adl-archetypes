@@ -171,7 +171,7 @@ definition
 								}
 							}
 							CLUSTER[id79.14] occurrences matches {0..1} matches {	-- White cell differential
-								items cardinality matches {1..5; ordered} matches {
+								items matches {
 									ELEMENT[id79.15] occurrences matches {0..1} matches {	-- Neutrophils
 										value matches {
 											DV_QUANTITY[id0.14] matches {

@@ -156,7 +156,7 @@ definition
 										}
 									}
 									CLUSTER[id93] matches {	-- Smells of
-										items cardinality matches {1; unordered} matches {
+										items matches {
 											ELEMENT[id96] occurrences matches {0..1} matches {	-- Smell
 												value matches {
 													DV_CODED_TEXT[id147] matches {

@@ -128,7 +128,7 @@ definition
 				}
 			}
 			CLUSTER[id0.14] matches {	-- Affected ratio
-				items cardinality matches {1..4; ordered} matches {
+				items matches {
 					ELEMENT[id0.15] occurrences matches {0..1} matches {	-- Degree
 						value matches {
 							DV_CODED_TEXT[id0.44] matches {

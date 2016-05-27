@@ -277,7 +277,7 @@ definition
 						}
 					}
 					CLUSTER[id348] occurrences matches {0..1} matches {	-- Grade of response
-						items cardinality matches {1; unordered} matches {
+						items matches {
 							ELEMENT[id303] occurrences matches {0..1} matches {	-- Grade (AJCC)
 								value matches {
 									DV_CODED_TEXT[id398] matches {

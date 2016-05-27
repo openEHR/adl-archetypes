@@ -36,7 +36,7 @@ definition
 					EVENT[id3] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
-								items cardinality matches {1; ordered} matches {
+								items matches {
 									allow_archetype CLUSTER[id37] occurrences matches {0..1} matches {	-- Location
 										include
 											archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}

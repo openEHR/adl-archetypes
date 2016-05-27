@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4)
 	openEHR-EHR-OBSERVATION.lab_test-immunology.v1
 specialise
 	openEHR-EHR-OBSERVATION.lab_test.v1
@@ -89,9 +89,9 @@ definition
 										exclude
 											archetype_id/value matches {/.*/}
 									}
-									CLUSTER[at0.97] occurrences matches {0..*} matches {	-- Immunology result
+									CLUSTER[at0078.3] occurrences matches {0..*} matches {	-- Immunology result
 										items cardinality matches {0..*; unordered} matches {
-											ELEMENT[at0078.2] occurrences matches {0..*} matches {	-- Titre
+											ELEMENT[at0.97] occurrences matches {0..*} matches {	-- Titre
 												value matches {
 													DV_PROPORTION matches {
 														numerator matches {|>=0.0|}
@@ -119,7 +119,7 @@ definition
 													}
 												}
 											}
-											ELEMENT[at0078.1] occurrences matches {0..*} matches {	-- Qualitative result
+											ELEMENT[at0.120] occurrences matches {0..*} matches {	-- Qualitative result
 												value matches {
 													DV_TEXT matches {*}
 													DV_CODED_TEXT matches {
@@ -231,7 +231,7 @@ ontology
 					text = <"Fluoresence pattern">
 					description = <"The fluorescence staining pattern observed.">
 				>
-				["at0.97"] = <
+				["at0078.3"] = <
 					text = <"Immunology result">
 					description = <"Group of test results relating to a single immunology test.">
 				>
@@ -344,11 +344,11 @@ useful for version control and cumulative results for the report.">
 					text = <"Result">
 					description = <"The result of the test.">
 				>
-				["at0078.1"] = <
+				["at0.120"] = <
 					text = <"Qualitative result">
 					description = <"The qualitative result of the test.">
 				>
-				["at0078.2"] = <
+				["at0.97"] = <
 					text = <"Titre">
 					description = <"The test result, expressed as a titre e.g. 1:450">
 				>

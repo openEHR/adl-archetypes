@@ -50,12 +50,11 @@ definition
 					ITEM_TREE[id4] matches {
 						items matches {
 							ELEMENT[id79] 
-							before [id58]
-							CLUSTER[id0.97] matches {	-- Immunology result
+							CLUSTER[id79.3] matches {	-- Immunology result
 								items matches {
-									ELEMENT[id79.2] matches {	-- Titre
+									ELEMENT[id0.97] matches {	-- Titre
 										value matches {
-											DV_PROPORTION[id0.98] matches {
+											DV_PROPORTION[id0.121] matches {
 												numerator matches {|>=0.0|}
 												denominator matches {|>=0.0|}
 												is_integral matches {True}
@@ -65,20 +64,20 @@ definition
 									}
 									ELEMENT[id0.95] matches {	-- Amount
 										value matches {
-											DV_QUANTITY[id0.99] 
+											DV_QUANTITY[id0.122] 
 										}
 									}
 									ELEMENT[id0.96] matches {	-- Fluoresence pattern
 										value matches {
-											DV_CODED_TEXT[id0.100] matches {
+											DV_CODED_TEXT[id0.123] matches {
 												defining_code matches {[ac0.1]}		-- Fluoresence pattern (synthesised)
 											}
 										}
 									}
-									ELEMENT[id79.1] matches {	-- Qualitative result
+									ELEMENT[id0.120] matches {	-- Qualitative result
 										value matches {
-											DV_TEXT[id0.101] 
-											DV_CODED_TEXT[id0.102] matches {
+											DV_TEXT[id0.124] 
+											DV_CODED_TEXT[id0.125] matches {
 												defining_code matches {[ac0.2]}		-- Qualitative result (synthesised)
 											}
 										}
@@ -127,7 +126,7 @@ terminology
 				text = <"Fluoresence pattern">
 				description = <"The fluorescence staining pattern observed.">
 			>
-			["id0.97"] = <
+			["id79.3"] = <
 				text = <"Immunology result">
 				description = <"Group of test results relating to a single immunology test.">
 			>
@@ -143,11 +142,11 @@ terminology
 				text = <"Immunology titres">
 				description = <"To represent immunology tests where the result is expressed as a titre usually along with a qualitiative result e.g. positive, negative">
 			>
-			["id79.1"] = <
+			["id0.120"] = <
 				text = <"Qualitative result">
 				description = <"The qualitative result of the test.">
 			>
-			["id79.2"] = <
+			["id0.97"] = <
 				text = <"Titre">
 				description = <"The test result, expressed as a titre e.g. 1:450">
 			>

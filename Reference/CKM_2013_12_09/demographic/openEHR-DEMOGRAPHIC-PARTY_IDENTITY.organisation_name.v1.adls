@@ -54,7 +54,7 @@ definition
 		}
 		details matches {
 			ITEM_TREE[id2] matches {	-- Items
-				items cardinality matches {2; ordered} matches {
+				items matches {
 					ELEMENT[id11] occurrences matches {1} matches {	-- Name
 						value matches {
 							DV_TEXT[id15] 

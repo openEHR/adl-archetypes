@@ -91,7 +91,7 @@ definition
 									}
 									CLUSTER[at0.0.102] occurrences matches {0..1} matches {	-- ANA
 										items cardinality matches {0..*; unordered} matches {
-											ELEMENT[at0078.2.7] occurrences matches {0..*} matches {	-- Titre
+											ELEMENT[at0.97.7] occurrences matches {0..*} matches {	-- Titre
 												value matches {
 													DV_PROPORTION matches {
 														numerator matches {|>=0.0|}
@@ -892,43 +892,43 @@ useful for version control and cumulative results for the report.">
 					text = <"Qualitative result">
 					description = <"The qualitative result of the test.">
 				>
-				["at0078.2"] = <
+				["at0.97"] = <
 					text = <"Titre">
 					description = <"The test result, expressed as a titre e.g. 1:450">
 				>
-				["at0078.2.1"] = <
+				["at0.97.1"] = <
 					text = <"Titre">
 					description = <"The test result, expressed as a titre e.g. 1:450">
 				>
-				["at0078.2.2"] = <
+				["at0.97.2"] = <
 					text = <"Titre">
 					description = <"The test result, expressed as a titre e.g. 1:450">
 				>
-				["at0078.2.3"] = <
+				["at0.97.3"] = <
 					text = <"Titre">
 					description = <"The test result, expressed as a titre e.g. 1:450">
 				>
-				["at0078.2.4"] = <
+				["at0.97.4"] = <
 					text = <"Titre">
 					description = <"The test result, expressed as a titre e.g. 1:450">
 				>
-				["at0078.2.5"] = <
+				["at0.97.5"] = <
 					text = <"Titre">
 					description = <"The test result, expressed as a titre e.g. 1:450">
 				>
-				["at0078.2.6"] = <
+				["at0.97.6"] = <
 					text = <"Titre">
 					description = <"The test result, expressed as a titre e.g. 1:450">
 				>
-				["at0078.2.7"] = <
+				["at0.97.7"] = <
 					text = <"Titre">
 					description = <"The test result, expressed as a titre e.g. 1:450">
 				>
-				["at0078.2.8"] = <
+				["at0.97.8"] = <
 					text = <"Titre">
 					description = <"The test result, expressed as a titre e.g. 1:450">
 				>
-				["at0078.2.9"] = <
+				["at0.97.9"] = <
 					text = <"Titre">
 					description = <"The test result, expressed as a titre e.g. 1:450">
 				>

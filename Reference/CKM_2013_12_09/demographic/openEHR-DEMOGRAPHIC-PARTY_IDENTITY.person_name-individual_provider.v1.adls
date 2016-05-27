@@ -50,7 +50,7 @@ definition
 	PARTY_IDENTITY[id1.1] matches {	-- Individual healthcare provider name
 		/details[id2]/items matches {
 			CLUSTER[id3] matches {
-				items cardinality matches {2; ordered} matches {
+				items matches {
 					ELEMENT[id11] matches {
 						value matches {
 							DV_TEXT[id0.6] 
@@ -64,7 +64,7 @@ definition
 				}
 			}
 			CLUSTER[id4] occurrences matches {1..*} matches {
-				items cardinality matches {2; ordered} matches {
+				items matches {
 					ELEMENT[id13] matches {
 						value matches {
 							DV_TEXT[id0.8] 
@@ -78,7 +78,7 @@ definition
 				}
 			}
 			CLUSTER[id5] matches {
-				items cardinality matches {2; ordered} matches {
+				items matches {
 					ELEMENT[id15] matches {
 						value matches {
 							DV_CODED_TEXT[id0.10] matches {
@@ -94,7 +94,7 @@ definition
 				}
 			}
 			CLUSTER[id6] matches {
-				items cardinality matches {2; ordered} matches {
+				items matches {
 					ELEMENT[id17] matches {
 						value matches {
 							DV_CODED_TEXT[id0.12] matches {
@@ -110,7 +110,7 @@ definition
 				}
 			}
 			CLUSTER[id7] occurrences matches {1..*} matches {
-				items cardinality matches {2..3; ordered} matches {
+				items matches {
 					ELEMENT[id19] matches {
 						value matches {
 							DV_CODED_TEXT[id0.14] matches {

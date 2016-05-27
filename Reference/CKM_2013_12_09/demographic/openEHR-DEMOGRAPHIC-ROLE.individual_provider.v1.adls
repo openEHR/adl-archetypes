@@ -70,7 +70,7 @@ definition
 			PARTY_RELATIONSHIP[id5] matches {	-- Relationship with a third-party payer
 				details matches {
 					ITEM_TREE[id41] occurrences matches {0..1} matches {	-- Relationship details
-						items cardinality matches {1; unordered; unique} matches {
+						items matches {
 							allow_archetype CLUSTER[id42] occurrences matches {1} matches {	-- Identifier
 								include
 									archetype_id/value matches {/(provider_identifier)a-zA-Z0-9_-]*\.v1/}

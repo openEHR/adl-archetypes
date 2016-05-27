@@ -73,7 +73,7 @@ definition
 						}
 					}
 					CLUSTER[id6] matches {	-- Specific Target
-						items cardinality matches {1..4; ordered} matches {
+						items matches {
 							ELEMENT[id11] occurrences matches {0..1} matches {	-- Target
 								value matches {
 									DV_TEXT[id20] 

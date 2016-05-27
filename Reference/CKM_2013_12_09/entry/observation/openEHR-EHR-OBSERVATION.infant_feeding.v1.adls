@@ -44,7 +44,7 @@ definition
 										}
 									}
 									CLUSTER[id29] occurrences matches {0..1} matches {	-- Breast feeding
-										items cardinality matches {1..2; unordered} matches {
+										items matches {
 											ELEMENT[id23] occurrences matches {0..1} matches {	-- Proportion
 												value matches {
 													DV_PROPORTION[id34] matches {

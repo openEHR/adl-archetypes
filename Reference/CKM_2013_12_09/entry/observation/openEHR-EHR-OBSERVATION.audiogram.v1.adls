@@ -70,7 +70,7 @@ definition
 												}
 											}
 											CLUSTER[id49] matches {	-- Measurement
-												items cardinality matches {2; unordered} matches {
+												items matches {
 													ELEMENT[id12] matches {	-- Frequency
 														value matches {
 															DV_QUANTITY[id155] matches {
@@ -797,6 +797,26 @@ terminology
 				text = <"Time">
 				description = <"Time">
 			>
+			["at138"] = <
+				text = <"image/cgm">
+				description = <"image/cgm">
+			>
+			["at139"] = <
+				text = <"image/gif">
+				description = <"image/gif">
+			>
+			["at140"] = <
+				text = <"image/png">
+				description = <"image/png">
+			>
+			["at141"] = <
+				text = <"image/tiff">
+				description = <"image/tiff">
+			>
+			["at142"] = <
+				text = <"image/jpeg">
+				description = <"image/jpeg">
+			>
 			["ac1"] = <
 				text = <"Test Ear (synthesised)">
 				description = <"Identification of the ear being tested. (synthesised)">
@@ -872,13 +892,14 @@ terminology
 			["at135"] = <http://openehr.org/id/382>
 			["at136"] = <http://openehr.org/id/123>
 			["at137"] = <http://openehr.org/id/128>
+			["at138"] = <http://openehr.org/id/425>
+			["at139"] = <http://openehr.org/id/426>
+			["at140"] = <http://openehr.org/id/427>
+			["at141"] = <http://openehr.org/id/428>
+			["at142"] = <http://openehr.org/id/429>
 		>
 	>
 	value_sets = <
-		["ac8"] = <
-			id = <"ac8">
-			members = <"at125", "at126">
-		>
 		["ac12"] = <
 			id = <"ac12">
 			members = <"at77", "at78", "at79", "at80">
@@ -907,9 +928,17 @@ terminology
 			id = <"ac5">
 			members = <"at134", "at133">
 		>
+		["ac6"] = <
+			id = <"ac6">
+			members = <"at138", "at139", "at140", "at141", "at142">
+		>
 		["ac7"] = <
 			id = <"ac7">
 			members = <"at30", "at31">
+		>
+		["ac8"] = <
+			id = <"ac8">
+			members = <"at125", "at126">
 		>
 		["ac9"] = <
 			id = <"ac9">
