@@ -63,46 +63,6 @@ terminology
 				text = <"Orientacion de alta">
 				description = <"xxxxxxxxxxxxxxx ddddddd vvvvv">
 			>
-			["id4"] = <
-				text = <"resposta">
-				description = <"*">
-			>
-			["id5"] = <
-				text = <"medicacao de alta">
-				description = <"*">
-			>
-			["id6"] = <
-				text = <"observacoes">
-				description = <"*">
-			>
-			["id8"] = <
-				text = <"restricao de atividade fisica">
-				description = <"*">
-			>
-			["id9"] = <
-				text = <"resposta">
-				description = <"*">
-			>
-			["id10"] = <
-				text = <"observacoes">
-				description = <"*">
-			>
-			["id11"] = <
-				text = <"dieta especial">
-				description = <"*">
-			>
-			["id12"] = <
-				text = <"reposta">
-				description = <"*">
-			>
-			["id13"] = <
-				text = <"observacoes">
-				description = <"*">
-			>
-			["id14"] = <
-				text = <"outras orientacoes">
-				description = <"*">
-			>
 			["id15"] = <
 				text = <"tipo de saido">
 				description = <"*">
@@ -127,10 +87,6 @@ terminology
 				text = <"saida">
 				description = <"*">
 			>
-			["id22"] = <
-				text = <"motivo de saida">
-				description = <"*">
-			>
 			["at23"] = <
 				text = <"curado">
 				description = <"xxxx">
@@ -151,22 +107,6 @@ terminology
 				text = <"assistencia domiciliar">
 				description = <"xxxx">
 			>
-			["id29"] = <
-				text = <"tabagismo">
-				description = <"*">
-			>
-			["id30"] = <
-				text = <"fumante">
-				description = <"*">
-			>
-			["id31"] = <
-				text = <"quantidade">
-				description = <"*">
-			>
-			["id32"] = <
-				text = <"atividade fisica">
-				description = <"*">
-			>
 			["at33"] = <
 				text = <"acamado">
 				description = <"*">
@@ -181,22 +121,6 @@ terminology
 			>
 			["at36"] = <
 				text = <"deambula frequentemente">
-				description = <"*">
-			>
-			["id39"] = <
-				text = <"tempo que fuma">
-				description = <"*">
-			>
-			["id40"] = <
-				text = <"New element">
-				description = <"*">
-			>
-			["id41"] = <
-				text = <"facebook picture">
-				description = <"*">
-			>
-			["id42"] = <
-				text = <"cartao de saude">
 				description = <"*">
 			>
 			["at37"] = <

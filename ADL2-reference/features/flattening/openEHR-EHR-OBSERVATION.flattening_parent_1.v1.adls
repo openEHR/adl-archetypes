@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2)
+archetype (adl_version=2.0.5; rm_release=1.0.2)
 	openEHR-EHR-OBSERVATION.flattening_parent_1.v1.0.0
 
 language
@@ -64,20 +64,6 @@ definition
 											ELEMENT[id13] occurrences matches {0..*} 	-- Amount
 										}
 									}
-									ELEMENT[id14] occurrences matches {0..1} matches {	-- Triggers
-										value matches {
-											DV_TEXT[id24] 
-										}
-									}
-									allow_archetype CLUSTER[id15] occurrences matches {0..*} matches {	-- Readiness for change
-										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.change\.v1/}
-									}
-									ELEMENT[id17] occurrences matches {0..1} matches {	-- Evidence of dependence
-										value matches {
-											DV_TEXT[id25] 
-										}
-									}
 								}
 							}
 						}
@@ -134,21 +120,9 @@ terminology
 				text = <"Amount">
 				description = <"Amount of substance consumed.  Data type can be further specified in specialised archetypes or in templates">
 			>
-			["id14"] = <
-				text = <"Triggers">
-				description = <"Identified triggers which stimulate or cause use">
-			>
-			["id15"] = <
-				text = <"Readiness for change">
-				description = <"Details about the readiness to change use or consumption of substance">
-			>
-			["id17"] = <
-				text = <"Evidence of dependence">
-				description = <"Description of any evidence of dependence on the substance">
-			>
 			["id19"] = <
 				text = <"Method of use">
-				description = <"Method of use or consumption of the substance">
+				description = <"Method of use">
 			>
 			["ac1"] = <
 				text = <"Frequency">
