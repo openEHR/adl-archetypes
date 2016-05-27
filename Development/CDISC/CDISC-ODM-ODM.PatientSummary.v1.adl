@@ -1,0 +1,301 @@
+archetype (adl_version=1.4)
+    CDISC-ODM-ODM.EHR2iSoft.v1
+
+concept
+    [at0000]
+
+language
+    original_language = <[ISO_639-1::en-gb]>
+
+description
+    original_author = <
+        ["date"] = <"20110622">
+    >
+    lifecycle_state = <"Draft">
+    details = <
+        ["en-gb"] = <
+            language = <[ISO_639-1::en-gb]>
+        >
+    >
+
+definition
+    ODM[at0000] occurrences matches {1..1} matches {  -- EHR2iSoft
+        clinicalData existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+            ODMcomplexTypeDefinition_ClinicalData[at0001] occurrences matches {0..1} matches {  -- Clinical Data
+                studyOID existence matches {1..1} matches {/.*/}
+                metaDataVersionOID existence matches {1..1} matches {"1"}
+                subjectData existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                    ODMcomplexTypeDefinition_SubjectData[at0002] occurrences matches {0..*} matches {  -- Subject Data
+                        transactionType existence matches {0..1} matches {"Insert"}
+                        siteRef existence matches {0..1} matches {
+                            ODMcomplexTypeDefinition_SiteRef[at0003] occurrences matches {0..1} matches {  -- ODMcomplexTypeDefinition_SiteRef
+                                locationOID existence matches {1..1} matches {"ERS0001"}
+                            }
+                        }
+                        studyEventData existence matches {0..1} cardinality matches {0..1; unordered; unique} matches {
+                            ODMcomplexTypeDefinition_StudyEventData[at0004] occurrences matches {0..1} matches {  -- VISIT 1
+                                studyEventOID existence matches {1..1} matches {"VISIT1"}
+                                transactionType existence matches {0..1} matches {"Update"}
+                                formData existence matches {0..1} cardinality matches {0..*; ordered; unique} matches {
+                                    ODMcomplexTypeDefinition_FormData[at0005] occurrences matches {0..1} matches {  -- MHYN
+                                        formOID existence matches {1..1} matches {"MHYN"}
+                                        itemGroupData existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                                            ODMcomplexTypeDefinition_ItemGroupData[at0010] occurrences matches {0..1} matches {  -- MHYN
+                                                itemData existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                                                    ODMcomplexTypeDefinition_ItemData[at0011] occurrences matches {0..1} matches {  -- MHYN.MHYN
+                                                        itemOID existence matches {1..1} matches {"MHYN.MHYN"}
+                                                        value existence matches {1..1} matches {"Y"}
+                                                        isNull existence matches {0} matches {*}
+                                                    }
+                                                }
+                                                itemGroupOID existence matches {1..1} matches {"MHYN"}
+                                            }
+                                        }
+                                    }
+                                    ODMcomplexTypeDefinition_FormData[at0006] occurrences matches {0..1} matches {  -- DM
+                                        formOID existence matches {1..1} matches {"DM"}
+                                        itemGroupData existence matches {0..1} cardinality matches {1..1; unordered; unique} matches {
+                                            ODMcomplexTypeDefinition_ItemGroupData[at0012] occurrences matches {1..1} matches {  -- DM
+                                                itemGroupOID existence matches {1..1} matches {"DM"}
+                                                itemData existence matches {0..1} cardinality matches {1..1; unordered; unique} matches {
+                                                    ODMcomplexTypeDefinition_ItemData[at0013] occurrences matches {1..1} matches {  -- DM.BRTHDTC
+                                                        itemOID existence matches {1..1} matches {"DM.BRTHDTC"}
+                                                        value existence matches {1..1} matches {/.*/}
+                                                        isNull existence matches {0} matches {*}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ODMcomplexTypeDefinition_FormData[at0007] occurrences matches {0..0} matches {  -- SC
+                                        formOID existence matches {1..1} matches {"SC"}
+                                        itemGroupData existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                                            ODMcomplexTypeDefinition_ItemGroupData[at0014] occurrences matches {0..*} matches {  -- SC_LOG_LINE
+                                                itemGroupOID existence matches {1..1} matches {"SC_LOG_LINE"}
+                                                itemData existence matches {0..1} cardinality matches {0..*; unordered; unique} matches {
+                                                    ODMcomplexTypeDefinition_ItemData[at0015] occurrences matches {0..*} matches {  -- SC.SCLABEL
+                                                        itemOID existence matches {1..1} matches {"SC.SCLABEL"}
+                                                        isNull existence matches {0} matches {*}
+                                                        value existence matches {1..1} matches {*}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ODMcomplexTypeDefinition_FormData[at0008] occurrences matches {0..1} matches {  -- LB
+                                        itemGroupData existence matches {0..1} cardinality matches {2..*; ordered; unique} matches {
+                                            ODMcomplexTypeDefinition_ItemGroupData[at0016] occurrences matches {1..1} matches {  -- LB
+                                                itemGroupOID existence matches {1..1} matches {"LB"}
+                                                itemData existence matches {0..1} cardinality matches {2..2; unordered; unique} matches {
+                                                    ODMcomplexTypeDefinition_ItemData[at0018] occurrences matches {1..1} matches {  -- LB.LBDTC
+                                                        itemOID existence matches {1..1} matches {"LB.LBDTC"}
+                                                        isNull existence matches {0} matches {*}
+                                                        value existence matches {1..1} matches {*}
+                                                    }
+                                                    ODMcomplexTypeDefinition_ItemData[at0019] occurrences matches {1..1} matches {  -- LB.LBTM
+                                                        itemOID existence matches {1..1} matches {"LB.LBTM"}
+                                                        isNull existence matches {0} matches {*}
+                                                        value existence matches {1..1} matches {*}
+                                                    }
+                                                }
+                                            }
+                                            ODMcomplexTypeDefinition_ItemGroupData[at0017] occurrences matches {1..*} matches {  -- LB_LOG_LINE
+                                                itemGroupOID existence matches {1..1} matches {"LB_LOG_LINE"}
+                                                itemData existence matches {0..1} cardinality matches {1..5; ordered; unique} matches {
+                                                    ODMcomplexTypeDefinition_ItemData[at0020] occurrences matches {1..1} matches {  -- LB.LBTEST
+                                                        itemOID existence matches {1..1} matches {"LB.LBTEST"}
+                                                        isNull existence matches {0} matches {*}
+                                                        value existence matches {1..1} matches {*}
+                                                    }
+                                                    ODMcomplexTypeDefinition_ItemData[at0021] occurrences matches {0..1} matches {  -- LB.LBORRESU
+                                                        itemOID existence matches {1..1} matches {"LB.LBORRESU"}
+                                                        isNull existence matches {0} matches {*}
+                                                        value existence matches {1..1} matches {*}
+                                                    }
+                                                    ODMcomplexTypeDefinition_ItemData[at0022] occurrences matches {0..1} matches {  -- LB.LBORNRHI
+                                                        itemOID existence matches {1..1} matches {"LB.LBORNRHI"}
+                                                        isNull existence matches {0} matches {*}
+                                                        value existence matches {1..1} matches {*}
+                                                    }
+                                                    ODMcomplexTypeDefinition_ItemData[at0023] occurrences matches {0..1} matches {  -- LB.LBORNRLO
+                                                        itemOID existence matches {1..1} matches {"LB.LBORNRLO"}
+                                                        isNull existence matches {0} matches {*}
+                                                        value existence matches {1..1} matches {*}
+                                                    }
+                                                    ODMcomplexTypeDefinition_ItemData[at0024] occurrences matches {0..1} matches {  -- LB.LBORRES
+                                                        itemOID existence matches {1..1} matches {"LB.LBORRES"}
+                                                        isNull existence matches {0} matches {*}
+                                                        value existence matches {1..1} matches {*}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        formOID existence matches {1..1} matches {"LB"}
+                                    }
+                                    ODMcomplexTypeDefinition_FormData[at0009] occurrences matches {0..1} matches {  -- MH
+                                        transactionType existence matches {0..1} matches {"Insert"}
+                                        formOID existence matches {1..1} matches {"MH"}
+                                        itemGroupData existence matches {0..1} cardinality matches {1..*; unordered; unique} matches {
+                                            ODMcomplexTypeDefinition_ItemGroupData[at0025] occurrences matches {1..*} matches {  -- MH_LOG_LINE
+                                                itemGroupOID existence matches {1..1} matches {"MH_LOG_LINE"}
+                                                itemData existence matches {0..1} cardinality matches {1..3; ordered; unique} matches {
+                                                    ODMcomplexTypeDefinition_ItemData[at0026] occurrences matches {1..1} matches {  -- MH.MHTERM
+                                                        itemOID existence matches {1..1} matches {"MH.MHTERM"}
+                                                        isNull existence matches {0} matches {*}
+                                                        value existence matches {1..1} matches {*}
+                                                    }
+                                                    ODMcomplexTypeDefinition_ItemData[at0027] occurrences matches {0..1} matches {  -- MH.MHSTDTC
+                                                        itemOID existence matches {1..1} matches {"MH.MHSTDTC"}
+                                                        isNull existence matches {0} matches {*}
+                                                        value existence matches {1..1} matches {*}
+                                                    }
+                                                    ODMcomplexTypeDefinition_ItemData[at0028] occurrences matches {0..1} matches {  -- MH.MHENDTC
+                                                        itemOID existence matches {1..1} matches {"MH.MHENDDTC"}
+                                                        isNull existence matches {0} matches {*}
+                                                        value existence matches {1..1} matches {*}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        oDMVersion existence matches {0..1} matches {"1.3"}
+        fileType existence matches {1..1} matches {"Transactional"}
+    }
+
+ontology
+    terminologies_available = <...>
+    term_definitions = <
+        ["en-gb"] = <
+            items = <
+                ["at0000"] = <
+                    text = <"EHR2iSoft">
+                    description = <"EHR2iSoft">
+                >
+                ["at0001"] = <
+                    text = <"Clinical Data">
+                    description = <"This is a ODMcomplexTypeDefinition_ClinicalData object">
+                >
+                ["at0002"] = <
+                    text = <"Subject Data">
+                    description = <"This is a ODMcomplexTypeDefinition_SubjectData object">
+                >
+                ["at0003"] = <
+                    text = <"ODMcomplexTypeDefinition_SiteRef">
+                    description = <"This is a ODMcomplexTypeDefinition_SiteRef object">
+                >
+                ["at0004"] = <
+                    text = <"VISIT 1">
+                    description = <"This is a ODMcomplexTypeDefinition_StudyEventData object">
+                >
+                ["at0005"] = <
+                    text = <"MHYN">
+                    description = <"This is a ODMcomplexTypeDefinition_FormData object">
+                >
+                ["at0006"] = <
+                    text = <"DM">
+                    description = <"This is a ODMcomplexTypeDefinition_FormData object">
+                >
+                ["at0007"] = <
+                    text = <"SC">
+                    description = <"This is a ODMcomplexTypeDefinition_FormData object">
+                >
+                ["at0008"] = <
+                    text = <"LB">
+                    description = <"This is a ODMcomplexTypeDefinition_FormData object">
+                >
+                ["at0009"] = <
+                    text = <"MH">
+                    description = <"This is a ODMcomplexTypeDefinition_FormData object">
+                >
+                ["at0010"] = <
+                    text = <"MHYN">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemGroupData object">
+                >
+                ["at0011"] = <
+                    text = <"MHYN.MHYN">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemData object">
+                >
+                ["at0012"] = <
+                    text = <"DM">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemGroupData object">
+                >
+                ["at0013"] = <
+                    text = <"DM.BRTHDTC">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemData object">
+                >
+                ["at0014"] = <
+                    text = <"SC_LOG_LINE">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemGroupData object">
+                >
+                ["at0015"] = <
+                    text = <"SC.SCLABEL">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemData object">
+                >
+                ["at0016"] = <
+                    text = <"LB">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemGroupData object">
+                >
+                ["at0017"] = <
+                    text = <"LB_LOG_LINE">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemGroupData object">
+                >
+                ["at0018"] = <
+                    text = <"LB.LBDTC">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemData object">
+                >
+                ["at0019"] = <
+                    text = <"LB.LBTM">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemData object">
+                >
+                ["at0020"] = <
+                    text = <"LB.LBTEST">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemData object">
+                >
+                ["at0021"] = <
+                    text = <"LB.LBORRESU">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemData object">
+                >
+                ["at0022"] = <
+                    text = <"LB.LBORNRHI">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemData object">
+                >
+                ["at0023"] = <
+                    text = <"LB.LBORNRLO">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemData object">
+                >
+                ["at0024"] = <
+                    text = <"LB.LBORRES">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemData object">
+                >
+                ["at0025"] = <
+                    text = <"MH_LOG_LINE">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemGroupData object">
+                >
+                ["at0026"] = <
+                    text = <"MH.MHTERM">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemData object">
+                >
+                ["at0027"] = <
+                    text = <"MH.MHSTDTC">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemData object">
+                >
+                ["at0028"] = <
+                    text = <"MH.MHENDTC">
+                    description = <"This is a ODMcomplexTypeDefinition_ItemData object">
+                >
+            >
+        >
+    >
+    constraint_definitions = <
+    >
+    term_binding = <
+    >
+    constraint_binding = <
+    >
