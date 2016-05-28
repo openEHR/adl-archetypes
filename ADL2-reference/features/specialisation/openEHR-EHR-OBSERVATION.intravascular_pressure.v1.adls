@@ -23,8 +23,7 @@ description
 	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNicoll, Ocean Informatics, UK", ...>
 	other_details = <
-		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"BC678AF024DE5FF4D72C90442F17A3A2">
+		["regression"] = <"PASS">
 	>
 	copyright = <"© openEHR Foundation">
 

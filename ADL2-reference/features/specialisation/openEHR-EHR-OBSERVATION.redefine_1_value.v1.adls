@@ -24,7 +24,6 @@ description
 			keywords = <"ADL", "test", "specialisation">
 		>
 	>
-
 	lifecycle_state = <"published">
 	other_details = <
 		["regression"] = <"PASS">

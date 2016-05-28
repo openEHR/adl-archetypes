@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.use_node_parent.v1.0.0
 
 language
@@ -12,12 +12,15 @@ description
 		["email"] = <"ian@freshehr.com">
 		["date"] = <"2014-04-18">
 	>
-	copyright = <"">
+	copyright = <"openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Parent archetype for use-node redefinition">
 		>
+	>
+	other_details = <
+		["regression"] = <"PASS">
 	>
 
 definition

@@ -27,18 +27,19 @@ description
 			purpose = <"Representation of an organisations's demographic data in the role of healthcare provider">
 			use = <"Used in demographic service to collect demographic data about an organisation in the role of a healthcare provider">
 			keywords = <"demographic service", "healthcare provider organisation">
-			misuse = <"">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			purpose = <"Representação dos dados de uma Organização ao exercer o papel de um prestador de assistência à saúde">
 			use = <"Usado em serviços de demografia para coletar dados demográficos sobre uma organização no papel de prestador de assistência à saúde">
 			keywords = <"serviço demográfico", "organização prestadora de assistência à saúde">
-			misuse = <"">
 		>
 	>
 	lifecycle_state = <"unmanaged">
 	copyright = <"© openEHR Foundation">
+	other_details = <
+		["regression"] = <"PASS">
+	>
 
 definition
 	ROLE[id1] matches {	-- Healthcare Provider Organisation

@@ -17,6 +17,9 @@ description
 			purpose = <"An altered version of the openEHR Adverse Reaction archetype designed to show various kinds of terminology constraint.">
 		>
 	>
+	other_details = <
+		["regression"] = <"PASS">
+	>
 
 definition
 	EVALUATION[id1] matches {	-- Adverse Reaction

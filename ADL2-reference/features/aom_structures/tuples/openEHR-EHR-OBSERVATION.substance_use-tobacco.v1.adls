@@ -15,22 +15,16 @@ description
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"6/05/2009">
 	>
-	copyright = <"© openEHR Foundation">
+	copyright = <"© 2016 openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"This is an archetype used to record details of the use of all common forms of tobacco. ">
-			use = <"Use to record details of the use of all common forms of tobacco.  This includes use at specific point in time, over intervals of time, and use of mathematical functions such as average or minimum eg average consumption over a week.  
-Other types of tobacco use are not included here, but may be added added as a revision as required, or added via a specialisation for groups with need for additional choices.  
-A typical use would be to record usage in an tobacco usage diary.">
-			keywords = <"substance", "addiction", "consumption", "use", "tobacco", "cigarette", "cigar", "smoking", "chewing", "pipe">
-			misuse = <"Not to be used for recording persistent and summary details about the use of the substance - this should be captured using the EVALUATION.substance_use_summary-tobacco archetype.  ">
+			purpose = <"Test complex tuple override case">
 		>
 	>
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
 	other_details = <
-		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"50856E4B402C962DC96B02F1C81BA2FB">
+		["regression"] = <"PASS">
 	>
 
 definition

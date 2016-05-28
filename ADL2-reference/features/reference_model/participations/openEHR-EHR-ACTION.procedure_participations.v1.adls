@@ -20,12 +20,11 @@ description
 			use = <"Use to record detailed information about the procedure that has been carried out on an individual. 
 Information about activities related to the procedure, such as anaesthesia or administration of medications, should be recorded in separate ACTION archetypes.">
 			keywords = <"procedure", ...>
-			misuse = <"">
 		>
 	>
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"3D7A4FCD75127BBE8C9873FF487C6C44">
+		["regression"] = <"PASS">
 	>
 
 definition

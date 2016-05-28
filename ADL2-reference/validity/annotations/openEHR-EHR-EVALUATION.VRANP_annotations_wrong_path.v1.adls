@@ -107,7 +107,7 @@ terminology
 	>
 
 annotations
-	items = <
+	documentation = <
 		["en"] = <
 			items = <
 				["/data[id2]/items[id15]"] = <

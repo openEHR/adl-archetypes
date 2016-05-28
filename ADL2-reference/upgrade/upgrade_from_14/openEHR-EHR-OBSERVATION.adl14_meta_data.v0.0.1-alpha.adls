@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
 	openEHR-EHR-OBSERVATION.adl14_meta_data.v0.0.1-alpha
 
 language
@@ -28,9 +28,11 @@ description
 		>
 	>
 	other_contributors = <"Koray Atalag", "Heath Frankel">
+	references = <
+		["1"] = <"NEHTA, Australia. Pathology Episode v1.0 - Data Group library [Internet]. 2009;[cited 2009 Dec 8 ] Available from: http://www.nehta.gov.au/data-group-library/data-specifications/dgl-pathology">
+		["2"] = <"IHE. IHE, Laboratory Technical Framework, Volume 3 Content [Internet]. 2008;Available from: http://www.ihe.net/Technical_Framework/upload/ihe_lab_TF_rel2_1-Vol-3_FT_2008-08-08.pdf.">
+	>
 	other_details = <
-		["references"] = <"NEHTA, Australia. Pathology Episode v1.0 - Data Group library [Internet]. 2009;[cited 2009 Dec 8 ] Available from: http://www.nehta.gov.au/data-group-library/data-specifications/dgl-pathology 
-IHE. IHE, Laboratory Technical Framework, Volume 3 Content [Internet]. 2008;Available from: http://www.ihe.net/Technical_Framework/upload/ihe_lab_TF_rel2_1-Vol-3_FT_2008-08-08.pdf.">
 		["MD5-CAM-1.0.1"] = <"F6054E644F13ABC06CEA75C74E058F8A">
 		["build_uid"] = <"458ca771-13de-4b87-a854-ab0017a7e806">
 	>

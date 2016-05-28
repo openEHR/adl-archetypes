@@ -125,7 +125,7 @@ terminology
 	>
 
 annotations
-	items = <
+	documentation = <
 		["en"] = <
 			items = <
 				["/context[id17]/health_crae_facility/name"] = <

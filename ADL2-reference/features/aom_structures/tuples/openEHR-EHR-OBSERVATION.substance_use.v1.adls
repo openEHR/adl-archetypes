@@ -12,22 +12,16 @@ description
 		["email"] = <"heather.leslie@oceaninformatics.com">
 		["date"] = <"6/05/2009">
 	>
-	copyright = <"© openEHR Foundation">
+	copyright = <"© 2016 openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"This is a generic archetype used to record details of the use of any and all substances. ">
-			use = <"This is a generic archetype used to record details of the use of any and all substances that have not had specific specialisation archetypes created.  This includes use at specific point in time, over intervals of time, and use of mathematical functions such as average or minimum eg average consumption over a week.  
-A typical use of this archetype will be related to a diary record of use or consumption of substances, especially those with addictive properties.  ">
-			keywords = <"substance", "addiction", "consumption", "use">
-			misuse = <"Do not use this archetype for recording summary details about the use of the substance - this should be captured using the EVALUATION.substance_use_summary archetype.  
-Do not use this archetype for recording use or consumption histories for common substances such as tobacco smoking and alcohol consumption.  As these are so commonly consumed, data should be recorded using detailed and specific specialisations of this archetype.">
+			purpose = <"Test complex tuple override case">
 		>
 	>
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
 	other_details = <
-		["references"] = <"">
-		["MD5-CAM-1.0.1"] = <"3C3ACF8C533AAF92BB15F6E60A8E1D9A">
+		["regression"] = <"PASS">
 	>
 
 definition

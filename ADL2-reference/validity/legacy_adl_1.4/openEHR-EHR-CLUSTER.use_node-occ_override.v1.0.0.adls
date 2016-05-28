@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
 	openEHR-EHR-CLUSTER.use_node-occ_override.v1.0.0
 
 specialize
@@ -15,12 +15,15 @@ description
 		["email"] = <"ian@freshehr.com">
 		["date"] = <"2014-04-18">
 	>
-	copyright = <"">
+	copyright = <"openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Test use node (C_COMPLEX_OBJECT_PROXY) that overrides its target's occurrences">
 		>
+	>
+	other_details = <
+		["regression"] = <"PASS">
 	>
 
 definition
