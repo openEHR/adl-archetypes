@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1; rm_release=1.0.2)
-	openEHR-EHR-OBSERVATION.VRDLA_inconsistent_lang_codes.v1
+archetype (adl_version=2.0.6; rm_release=1.0.2)
+	openEHR-EHR-OBSERVATION.VRDLA_inconsistent_lang_codes.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -34,7 +34,6 @@ description
 		["regression"] = <"VRDLA">
 	>
 	lifecycle_state = <"AuthorDraft">
-	other_contributors = <>
 
 definition
 	OBSERVATION[id1] matches {	-- Blood pressure

@@ -2,7 +2,7 @@ archetype (adl_version=2.0.5; rm_release=1.0.2)
 	openehr-TEST_PKG-WHOLE.date_time_specialisations.v1.0.0
 
 specialize
-	openehr-TEST_PKG-WHOLE.basic_types.v1
+	openehr-TEST_PKG-WHOLE.primitive_types.v1
 
 language
 	original_language = <[ISO_639-1::en]>

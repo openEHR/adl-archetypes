@@ -1,5 +1,5 @@
-archetype (adl_version=1.5.1)
-	CIMI-CORE-CLUSTER.auto_differential_panel_blood_result_group.v1.0.0
+archetype (adl_version=2.0.6; rm_release=2.0.2)
+	CIMI-CORE-ITEM_GROUP.auto_differential_panel_blood_result_group.v1.0.0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -14,7 +14,7 @@ description
 	lifecycle_state = <"unmanaged">
 
 definition
-	CLUSTER[id1] matches {	-- Auto differential blood panel
+	ITEM_GROUP[id1] matches {	-- Auto differential blood panel
 		item matches {
 			ELEMENT[id4] occurrences matches {1} matches {	-- Name
 				value matches {
