@@ -127,12 +127,8 @@ terminology
 annotations
 	documentation = <
 		["en"] = <
-			items = <
-				["/context[id17]/health_crae_facility/name"] = <
-					items = <
-						["design note"] = <"Note on use of non-archteyped context/health_care_facility/name RM element in this data">
-					>
-				>
+			["/context[id17]/health_crae_facility/name"] = <
+				["design note"] = <"Note on use of non-archteyped context/health_care_facility/name RM element in this data">
 			>
 		>
 	>
