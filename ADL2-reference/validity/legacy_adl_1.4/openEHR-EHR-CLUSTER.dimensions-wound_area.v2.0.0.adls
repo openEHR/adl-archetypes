@@ -18,6 +18,24 @@ language
 
 description
 	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"unknown">
+	>
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Beschreibung der Ausmaße eines betrachteten Teils.">
+			keywords = <"Größe", "Volumen">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To describe the dimensions of a part examined or viewed">
+			keywords = <"size", "volume">
+		>
+	>
+	other_details = <
+		["regression"] = <"PASS">
+	>
 
 definition
 	CLUSTER[id1.1] matches {	-- Area of wound
