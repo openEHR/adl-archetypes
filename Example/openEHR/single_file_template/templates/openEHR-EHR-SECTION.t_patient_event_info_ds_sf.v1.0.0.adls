@@ -97,7 +97,7 @@ specialize
 definition
 	ADMIN_ENTRY[id1.1] matches {	-- Discharge event end information - Simple discharge summary
 		/other_participations matches {
-			X_PARTICIPATION[id85.1] occurrences matches {1} matches {	-- Responsible clinician on discharge
+			PARTICIPATION[id85.1] occurrences matches {1} matches {	-- Responsible clinician on discharge
 				performer existence matches {1} 
 			}
 			PARTICIPATION[id86] occurrences matches {0} 

@@ -33,7 +33,6 @@ definition
 									archetype_id/value matches {/.*/}
 							}
 						}
-						uid 
 					}
 					GENERIC_CONTENT_ITEM[id5] occurrences matches {1} matches {	-- Healthcare establishment demographic content
 						item matches {
@@ -44,7 +43,6 @@ definition
 									archetype_id/value matches {/.*/}
 							}
 						}
-						uid 
 					}
 					GENERIC_CONTENT_ITEM[id6] occurrences matches {1..*} matches {	-- Healthcare professional demographic content
 						item matches {
@@ -55,7 +53,6 @@ definition
 									archetype_id/value matches {/.*/}
 							}
 						}
-						uid 
 					}
 				}
 			}
