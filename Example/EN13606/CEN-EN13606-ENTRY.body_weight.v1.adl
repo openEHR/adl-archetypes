@@ -1,5 +1,5 @@
 archetype (adl_version=1.4)
-	CEN-EHR_EXTRACT-ENTRY.body_weight.v1
+	CEN-EN13606-ENTRY.body_weight.v1
 
 concept
 	[at0000]	-- Body weight
