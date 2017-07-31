@@ -249,7 +249,7 @@ definition
 					}
 					allow_archetype CLUSTER[id54] matches {	-- Tympanometer
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					ELEMENT[id42] matches {	-- Pre-test Calibration Cavity Size
 						value matches {

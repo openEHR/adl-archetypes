@@ -71,7 +71,7 @@ definition
 		items matches {
 			allow_archetype ENTRY[id5] matches {	-- Medication inclusions/exclusions
 				include
-					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.medication(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-medication(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.medication(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-medication(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}

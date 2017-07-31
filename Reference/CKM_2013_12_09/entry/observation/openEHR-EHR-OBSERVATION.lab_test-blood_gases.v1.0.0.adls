@@ -164,7 +164,7 @@ definition
 				items matches {
 					allow_archetype CLUSTER[id0.92] occurrences matches {0..1} matches {	-- Ambient oxygen
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.ambient_oxygen(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.ambient_oxygen(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					ELEMENT[id0.93] occurrences matches {0..1} matches {	-- Confounding factors
 						value matches {

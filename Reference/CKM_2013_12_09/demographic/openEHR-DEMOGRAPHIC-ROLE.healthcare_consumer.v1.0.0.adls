@@ -45,7 +45,7 @@ definition
 		identities matches {
 			allow_archetype PARTY_IDENTITY[id2] matches {	-- Consumer name
 				include
-					archetype_id/value matches {/(person_name)a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(person_name)[a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		relationships cardinality matches {1..*; ordered} matches {
@@ -55,7 +55,7 @@ definition
 						items cardinality matches {1..*; ordered} matches {
 							allow_archetype CLUSTER[id22] matches {	-- Healthcare consumer identifier
 								include
-									archetype_id/value matches {/(person_identifier)a-zA-Z0-9_-]*\.v1/}
+									archetype_id/value matches {/(person_identifier)[a-zA-Z0-9_-]*\.v1/}
 							}
 						}
 					}
@@ -67,7 +67,7 @@ definition
 						items cardinality matches {1..*; ordered} matches {
 							allow_archetype CLUSTER[id32] matches {	-- Patient identifier
 								include
-									archetype_id/value matches {/(person_identifier)a-zA-Z0-9_-]*\.v1/}
+									archetype_id/value matches {/(person_identifier)[a-zA-Z0-9_-]*\.v1/}
 							}
 						}
 					}

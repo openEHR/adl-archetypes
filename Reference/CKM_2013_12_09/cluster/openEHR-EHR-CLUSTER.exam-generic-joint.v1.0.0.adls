@@ -40,7 +40,7 @@ definition
 			before [id0.11]
 			allow_archetype CLUSTER[id0.0.2] matches {	-- Joint detail
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection-joint(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.move-joint(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.move(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation-joint(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection-joint(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.move-joint(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.move(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation-joint(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}

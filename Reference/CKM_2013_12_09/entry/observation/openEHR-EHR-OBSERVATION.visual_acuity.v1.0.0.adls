@@ -201,11 +201,11 @@ definition
 									}
 									allow_archetype CLUSTER[id81] occurrences matches {0..2} matches {	-- Refraction Details
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.refraction_details(-a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.refraction_details(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 									allow_archetype CLUSTER[id125] occurrences matches {0..1} matches {	-- Pupillary State
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam_pupils(-a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam_pupils(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 								}
 							}
@@ -253,7 +253,7 @@ definition
 					}
 					allow_archetype CLUSTER[id26] occurrences matches {0..1} matches {	-- Measurement Device Details
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					ELEMENT[id93] occurrences matches {0..1} matches {	-- Derived Score Original Notation
 						value matches {

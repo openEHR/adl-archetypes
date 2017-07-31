@@ -100,7 +100,7 @@ definition
 			}
 			allow_archetype CLUSTER[id7] matches {	-- Other data
 				include
-					archetype_id/value matches {/(identifier)a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(identifier)[a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 	}

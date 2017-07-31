@@ -171,7 +171,7 @@ definition
 				items matches {
 					allow_archetype CLUSTER[id84] occurrences matches {0..1} matches {	-- Contained substance detail
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-[a-zA-Z0-9_]+)*\.v1/}
 						exclude
 							archetype_id/value matches {/.*/}
 					}

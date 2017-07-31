@@ -258,7 +258,7 @@ definition
 					}
 					allow_archetype CLUSTER[id45] matches {	-- Retraction Grade
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.sade_classification(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.tos_classification(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.sade_classification(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.tos_classification(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					ELEMENT[id49] occurrences matches {0..1} matches {	-- Fluid Level Presence
 						value matches {
@@ -290,7 +290,7 @@ definition
 							}
 							allow_archetype CLUSTER[id71] matches {	-- Measurement
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 							ELEMENT[id75] occurrences matches {0..1} matches {	-- Region
 								value matches {

@@ -92,7 +92,7 @@ definition
 			}
 			allow_archetype CLUSTER[id148] occurrences matches {0..1} matches {	-- Site Details
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1/}
 				exclude
 					archetype_id/value matches {/.*/}
 			}
@@ -284,7 +284,7 @@ definition
 			}
 			allow_archetype CLUSTER[id64] matches {	-- Associated symptoms
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			CLUSTER[id62] occurrences matches {0..1} matches {	-- Features not present
 				items matches {

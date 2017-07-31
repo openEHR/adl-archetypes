@@ -51,7 +51,7 @@ definition
 		/identities matches {
 			allow_archetype PARTY_IDENTITY[id3.1] matches {	-- Name
 				include
-					archetype_id/value matches {/(person_name)a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(person_name)[a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		contacts matches {
@@ -64,7 +64,7 @@ definition
 						items matches {
 							allow_archetype CLUSTER[id0.21] matches {	-- Healthcare consumer identifier.
 								include
-									archetype_id/value matches {/(person_identifier)a-zA-Z0-9_-]*\.v1/}
+									archetype_id/value matches {/(person_identifier)[a-zA-Z0-9_-]*\.v1/}
 							}
 						}
 					}
@@ -76,7 +76,7 @@ definition
 						items matches {
 							allow_archetype CLUSTER[id0.31] matches {	-- Patient identifier
 								include
-									archetype_id/value matches {/(person_identifier)a-zA-Z0-9_-]*\.v1/}
+									archetype_id/value matches {/(person_identifier)[a-zA-Z0-9_-]*\.v1/}
 							}
 						}
 					}

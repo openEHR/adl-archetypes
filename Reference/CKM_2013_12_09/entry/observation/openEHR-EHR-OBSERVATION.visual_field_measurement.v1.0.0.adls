@@ -152,7 +152,7 @@ definition
 									}
 									allow_archetype CLUSTER[id37] occurrences matches {0..2} matches {	-- Refractive correction
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.refraction_details(-a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.refraction_details(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 								}
 							}
@@ -173,7 +173,7 @@ definition
 					}
 					allow_archetype CLUSTER[id27] occurrences matches {0..1} matches {	-- Device Details
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}

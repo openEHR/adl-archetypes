@@ -165,14 +165,14 @@ definition
 					ELEMENT[id11] occurrences matches {0..1} matches {	-- Address type start date accuracy indicator
 						value matches {
 							DV_TEXT[id56] matches {
-								value matches {/AEU]AEU]AEU]/}
+								value matches {/[AEU][AEU][AEU]/}
 							}
 						}
 					}
 					ELEMENT[id12] occurrences matches {0..1} matches {	-- Address type end date accuracy indicator
 						value matches {
 							DV_TEXT[id57] matches {
-								value matches {/AEU]AEU]AEU]/}
+								value matches {/[AEU][AEU][AEU]/}
 							}
 						}
 					}

@@ -65,7 +65,7 @@ definition
 			after [id10]
 			allow_archetype CLUSTER[id0.49] occurrences matches {0..1} matches {	-- Size
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			CLUSTER[id0.48] occurrences matches {0..1} matches {	-- Labour-specific findings
 				items matches {
@@ -144,7 +144,7 @@ definition
 			}
 			allow_archetype CLUSTER[id0.51] occurrences matches {0..1} matches {	-- Vaginal fluid
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.bodily_substance(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.bodily_substance(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}

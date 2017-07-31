@@ -41,7 +41,7 @@ definition
 								items cardinality matches {1..*; unordered} matches {
 									allow_archetype CLUSTER[id17] occurrences matches {0..1} matches {	-- Substance detail
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 									CLUSTER[id33] occurrences matches {0..1} matches {	-- Voiding
 										items matches {
@@ -110,13 +110,13 @@ definition
 					}
 					allow_archetype CLUSTER[id31] occurrences matches {0..1} matches {	-- Body location  
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1/}
 						exclude
 							archetype_id/value matches {/.*/}
 					}
 					allow_archetype CLUSTER[id29] occurrences matches {0..1} matches {	-- Measurement device 
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
 						exclude
 							archetype_id/value matches {/.*/}
 					}

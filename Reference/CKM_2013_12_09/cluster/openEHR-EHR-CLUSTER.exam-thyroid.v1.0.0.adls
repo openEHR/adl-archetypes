@@ -54,7 +54,7 @@ definition
 					}
 					allow_archetype CLUSTER[id0.16] occurrences matches {0..1} matches {	-- Left lateral lobe
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
@@ -63,7 +63,7 @@ definition
 					use_node ELEMENT[id0.24] occurrences matches {0..1} /items[id9.1]/items[id0.13]/items[id0.20]	-- /items[Findings]/items[Left lateral lobe]/items[Description]
 					allow_archetype CLUSTER[id0.18] occurrences matches {0..1} matches {	-- Right lateral lobe
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
@@ -73,7 +73,7 @@ definition
 					use_node ELEMENT[id0.25] occurrences matches {0..1} /items[id9.1]/items[id0.13]/items[id0.20]	-- /items[Findings]/items[Left lateral lobe]/items[Description]
 					allow_archetype CLUSTER[id0.15] occurrences matches {0..1} matches {	-- Isthmus
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}

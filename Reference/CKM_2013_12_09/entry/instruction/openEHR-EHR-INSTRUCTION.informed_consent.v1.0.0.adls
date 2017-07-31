@@ -62,7 +62,7 @@ definition
 							}
 							allow_archetype CLUSTER[id9] matches {	-- Details
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.consent_details(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.procedure_details(-a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.consent_details(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.procedure_details(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 							ELEMENT[id10] occurrences matches {0..1} matches {	-- Start Date
 								value matches {

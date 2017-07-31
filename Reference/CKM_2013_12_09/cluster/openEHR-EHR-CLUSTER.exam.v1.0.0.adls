@@ -48,7 +48,7 @@ definition
 				items matches {
 					allow_archetype CLUSTER[id10] matches {	-- Detail
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}

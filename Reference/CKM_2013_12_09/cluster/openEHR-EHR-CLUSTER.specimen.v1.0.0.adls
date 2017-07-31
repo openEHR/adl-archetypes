@@ -44,11 +44,11 @@ definition
 			}
 			allow_archetype CLUSTER[id14] matches {	-- Site 
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			allow_archetype CLUSTER[id28] matches {	-- Physical details 
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			CLUSTER[id74] occurrences matches {0..1} matches {	-- Needle biopsy core details
 				items matches {
@@ -106,7 +106,7 @@ definition
 					}
 					allow_archetype CLUSTER[id69] matches {	-- Additional preparation   
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen_preparation(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen_preparation(-[a-zA-Z0-9_]+)*\.v1/}
 						exclude
 							archetype_id/value matches {/.*/}
 					}
@@ -117,7 +117,7 @@ definition
 					}
 					allow_archetype CLUSTER[id78] matches {	-- Device
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
 						exclude
 							archetype_id/value matches {/.*/}
 					}

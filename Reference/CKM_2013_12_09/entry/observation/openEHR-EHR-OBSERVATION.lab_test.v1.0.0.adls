@@ -87,7 +87,7 @@ definition
 									ITEM[id79] 	-- Result
 									allow_archetype CLUSTER[id90] matches {	-- Per-result annotation
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.lab_result_annotation(-a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.lab_result_annotation(-[a-zA-Z0-9_]+)*\.v1/}
 										exclude
 											archetype_id/value matches {/.*/}
 									}

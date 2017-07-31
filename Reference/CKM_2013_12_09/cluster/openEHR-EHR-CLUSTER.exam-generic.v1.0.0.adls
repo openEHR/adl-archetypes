@@ -43,7 +43,7 @@ definition
 			before [id10]
 			allow_archetype CLUSTER[id0.11] occurrences matches {0..1} matches {	-- Size
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}

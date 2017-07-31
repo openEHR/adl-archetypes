@@ -49,7 +49,7 @@ definition
 					}
 					allow_archetype CLUSTER[id10] matches {
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-bone(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection-trauma(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-bone(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection-trauma(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					CLUSTER[id0.34] occurrences matches {0..1} matches {	-- Nares
 						items matches {
@@ -96,7 +96,7 @@ definition
 							use_node ELEMENT[id0.51] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
 							allow_archetype CLUSTER[id0.41] occurrences matches {0..1} matches {	-- Mucosal detail
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 						}
 					}
@@ -105,7 +105,7 @@ definition
 							use_node ELEMENT[id0.52] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
 							allow_archetype CLUSTER[id0.42] occurrences matches {0..1} matches {	-- Turbinate detail
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 						}
 					}
@@ -114,7 +114,7 @@ definition
 							use_node ELEMENT[id0.53] occurrences matches {0..1} /items[id9.1]/items[id0.11]/items[id0.10]	-- /items[Findings]/items[External]/items[Description]
 							allow_archetype CLUSTER[id0.43] occurrences matches {0..1} matches {	-- Discharge detail
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.bodily_substance(-a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.bodily_substance(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 						}
 					}

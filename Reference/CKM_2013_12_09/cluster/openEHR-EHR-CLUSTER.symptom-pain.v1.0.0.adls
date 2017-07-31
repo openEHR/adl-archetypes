@@ -91,7 +91,7 @@ definition
 			before [id22]
 			allow_archetype CLUSTER[id0.152] matches {	-- Radiating To
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			CLUSTER[id47] matches {
 				items matches {

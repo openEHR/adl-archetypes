@@ -306,11 +306,11 @@ definition
 					}
 					allow_archetype CLUSTER[id48] matches {	-- Audiometer
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					allow_archetype CLUSTER[id117] matches {	-- Earphones
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					ELEMENT[id135] occurrences matches {0..2} matches {	-- Reliability
 						value matches {

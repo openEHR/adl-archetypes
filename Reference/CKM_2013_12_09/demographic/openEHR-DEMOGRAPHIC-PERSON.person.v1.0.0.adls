@@ -49,13 +49,13 @@ definition
 		details matches {
 			allow_archetype ITEM_TREE[id2] occurrences matches {1} matches {	-- Demographic details
 				include
-					archetype_id/value matches {/(person_details)a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(person_details)[a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		identities matches {
 			allow_archetype PARTY_IDENTITY[id3] occurrences matches {1} matches {	-- Name
 				include
-					archetype_id/value matches {/(person_name)a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(person_name)[a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		contacts matches {
@@ -63,8 +63,8 @@ definition
 				addresses matches {
 					allow_archetype ADDRESS[id31] occurrences matches {1} matches {	-- Addresses
 						include
-							archetype_id/value matches {/(address)(a-zA-Z0-9_-]+)*\.v1/}
-							archetype_id/value matches {/(electronic_communication)a-zA-Z0-9_-]*\.v1/}
+							archetype_id/value matches {/(address)([a-zA-Z0-9_-]+)*\.v1/}
+							archetype_id/value matches {/(electronic_communication)[a-zA-Z0-9_-]*\.v1/}
 					}
 				}
 			}

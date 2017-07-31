@@ -40,7 +40,7 @@ definition
 		content cardinality matches {1..*; unordered} matches {
 			allow_archetype ACTION[id2] matches {	-- Vaccinations Administered
 				include
-					archetype_id/value matches {/openEHR-EHR-ACTION\.medication(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-ACTION\.medication(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			allow_archetype EVALUATION[id3] matches {	-- Exclusion Statement
 				include
@@ -48,7 +48,7 @@ definition
 			}
 			allow_archetype EVALUATION[id4] matches {	-- Absent Information
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.absence(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.absence(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}

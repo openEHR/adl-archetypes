@@ -46,13 +46,13 @@ definition
 		identities matches {
 			allow_archetype PARTY_IDENTITY[id2] occurrences matches {1} matches {	-- Name
 				include
-					archetype_id/value matches {/(person_name)a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(person_name)[a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		capabilities matches {
 			allow_archetype CAPABILITY[id3] matches {	-- Capability
 				include
-					archetype_id/value matches {/(individual_credentials)a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(individual_credentials)[a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		contacts matches {
@@ -60,8 +60,8 @@ definition
 				addresses matches {
 					allow_archetype ADDRESS[id31] occurrences matches {1} matches {	-- Address
 						include
-							archetype_id/value matches {/(address)(a-zA-Z0-9_]+)*\.v1/}
-							archetype_id/value matches {/(electronic_communication)a-zA-Z0-9_-]*\.v1/}
+							archetype_id/value matches {/(address)([a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/(electronic_communication)[a-zA-Z0-9_-]*\.v1/}
 					}
 				}
 			}
@@ -73,7 +73,7 @@ definition
 						items matches {
 							allow_archetype CLUSTER[id42] occurrences matches {1} matches {	-- Identifier
 								include
-									archetype_id/value matches {/(provider_identifier)a-zA-Z0-9_-]*\.v1/}
+									archetype_id/value matches {/(provider_identifier)[a-zA-Z0-9_-]*\.v1/}
 							}
 						}
 					}
@@ -85,7 +85,7 @@ definition
 						items cardinality matches {1..*; ordered} matches {
 							allow_archetype CLUSTER[id52] occurrences matches {1} matches {	-- Identifier
 								include
-									archetype_id/value matches {/(provider_identifier)a-zA-Z0-9_-]*\.v1/}
+									archetype_id/value matches {/(provider_identifier)[a-zA-Z0-9_-]*\.v1/}
 							}
 							ELEMENT[id53] occurrences matches {0..1} matches {	-- Employment role
 								value matches {

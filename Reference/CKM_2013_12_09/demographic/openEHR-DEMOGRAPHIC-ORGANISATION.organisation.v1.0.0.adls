@@ -51,7 +51,7 @@ definition
 				items cardinality matches {1..*; ordered} matches {
 					allow_archetype CLUSTER[id11] matches {	-- Identifier
 						include
-							archetype_id/value matches {/(provider_identifier)a-zA-Z0-9_-]*\.v1/}
+							archetype_id/value matches {/(provider_identifier)[a-zA-Z0-9_-]*\.v1/}
 					}
 				}
 			}
@@ -59,7 +59,7 @@ definition
 		identities matches {
 			allow_archetype PARTY_IDENTITY[id3] occurrences matches {1..*} matches {	-- Name
 				include
-					archetype_id/value matches {/(organisation_name)a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(organisation_name)[a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 		contacts matches {
@@ -67,8 +67,8 @@ definition
 				addresses matches {
 					allow_archetype ADDRESS[id31] matches {	-- Address
 						include
-							archetype_id/value matches {/(address)a-zA-Z0-9_-]*\.v1/}
-							archetype_id/value matches {/(electronic_communication)a-zA-Z0-9_-]*\.v1/}
+							archetype_id/value matches {/(address)[a-zA-Z0-9_-]*\.v1/}
+							archetype_id/value matches {/(electronic_communication)[a-zA-Z0-9_-]*\.v1/}
 					}
 				}
 			}

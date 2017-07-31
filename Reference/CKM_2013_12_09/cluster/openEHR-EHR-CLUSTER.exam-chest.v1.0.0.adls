@@ -126,7 +126,7 @@ definition
 					}
 					allow_archetype CLUSTER[id0.37] occurrences matches {0..1} matches {	-- Chest wall detail
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
@@ -135,7 +135,7 @@ definition
 				items matches {
 					allow_archetype CLUSTER[id0.38] matches {	-- Lymph node detail
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic-lymphnode(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic-lymphnode(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}

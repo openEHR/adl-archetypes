@@ -49,15 +49,15 @@ definition
 		items matches {
 			allow_archetype OBSERVATION[id2] matches {	-- Laboratory reports
 				include
-					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.lab_test(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.lab_test(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			allow_archetype OBSERVATION[id3] matches {	-- Imaging reports
 				include
-					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.imaging(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.imaging(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			allow_archetype EVALUATION[id4] matches {	-- Diagnostic report synopsis
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.clinical_synopsis(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.clinical_synopsis(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}

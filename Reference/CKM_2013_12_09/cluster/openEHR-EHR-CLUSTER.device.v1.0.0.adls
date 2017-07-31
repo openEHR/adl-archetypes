@@ -56,7 +56,7 @@ definition
 			}
 			allow_archetype CLUSTER[id18] matches {	-- Dimensions
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			ELEMENT[id5] occurrences matches {0..1} matches {	-- Manufacturer
 				value matches {
@@ -99,11 +99,11 @@ definition
 			}
 			allow_archetype ITEM[id10] matches {	-- Additional Details
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.device_details(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.device_details(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			allow_archetype CLUSTER[id19] matches {	-- Components
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}

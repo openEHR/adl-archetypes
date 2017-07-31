@@ -69,7 +69,7 @@ definition
 							}
 							allow_archetype CLUSTER[id5] matches {	-- Ingredients and form
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_ingredients(-a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_ingredients(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 							ELEMENT[id6] occurrences matches {0..1} matches {	-- Dose description
 								value matches {
@@ -78,7 +78,7 @@ definition
 							}
 							allow_archetype CLUSTER[id7] occurrences matches {0..1} matches {	-- Structured dose
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 							ELEMENT[id9] occurrences matches {0..1} matches {	-- Timing description
 								value matches {
@@ -133,7 +133,7 @@ definition
 									}
 									allow_archetype CLUSTER[id38] occurrences matches {0..1} matches {	-- Detailed timing
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.timing(-a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.timing(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 								}
 							}
@@ -149,7 +149,7 @@ definition
 							}
 							allow_archetype CLUSTER[id44] matches {	-- Administration details
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_admin(-a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_admin(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 							ELEMENT[id36] matches {	-- Comment
 								value matches {
@@ -160,7 +160,7 @@ definition
 								items matches {
 									allow_archetype CLUSTER[id46] matches {	-- Quantity
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 									ELEMENT[id26] occurrences matches {0..1} matches {	-- Number of repeats
 										value matches {

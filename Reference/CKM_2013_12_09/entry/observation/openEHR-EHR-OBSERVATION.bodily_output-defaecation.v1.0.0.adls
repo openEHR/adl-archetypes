@@ -37,7 +37,7 @@ definition
 		/data[id2]/events[id3]/data[id4]/items matches {
 			allow_archetype CLUSTER[id17.1] matches {	-- Faeces detail 
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			CLUSTER[id33] matches {
 				items matches {

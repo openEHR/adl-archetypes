@@ -40,7 +40,7 @@ definition
 		items matches {
 			allow_archetype EVALUATION[id2] matches {	-- Problems & Diagnoses inclusions/exclusions 
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.problem(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-problem_diagnosis(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.problem(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-problem_diagnosis(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}

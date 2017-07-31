@@ -76,19 +76,19 @@ definition
 		content cardinality matches {1..*; unordered} matches {
 			allow_archetype EVALUATION[id3] matches {	-- Problems or Diagnoses
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.problem_diagnosis(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.problem_diagnosis(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			allow_archetype ACTION[id4] matches {	-- Procedures
 				include
-					archetype_id/value matches {/openEHR-EHR-ACTION\.procedure(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-ACTION\.procedure(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			allow_archetype EVALUATION[id5] matches {	-- Exclusion Statements
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-problem_diagnosis(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-procedure(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-problem_diagnosis(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exclusion-procedure(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			allow_archetype EVALUATION[id6] matches {	-- Absent Information
 				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.absence(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.absence(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}

@@ -60,7 +60,7 @@ definition
 			}
 			allow_archetype CLUSTER[id4] occurrences matches {0..1} matches {	-- Additional death data that are country specific
 				include
-					archetype_id/value matches {/(person_other_death_data)a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(person_other_death_data)[a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 	}

@@ -107,7 +107,7 @@ definition
 					}
 					allow_archetype CLUSTER[id7] occurrences matches {0..1} matches {	-- Country specific birth data
 						include
-							archetype_id/value matches {/(birth_data_additional_detail)a-zA-Z0-9_-]*\.v1/}
+							archetype_id/value matches {/(birth_data_additional_detail)[a-zA-Z0-9_-]*\.v1/}
 					}
 				}
 			}
@@ -241,7 +241,7 @@ definition
 			}
 			allow_archetype CLUSTER[id6] matches {	-- Other person identifiers
 				include
-					archetype_id/value matches {/(person_identifier)a-zA-Z0-9_-]*\.v1/}
+					archetype_id/value matches {/(person_identifier)[a-zA-Z0-9_-]*\.v1/}
 			}
 		}
 	}

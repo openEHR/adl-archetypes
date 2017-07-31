@@ -47,7 +47,7 @@ definition
 			}
 			allow_archetype CLUSTER[id31] matches {	-- Strength
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			CLUSTER[id2] matches {	-- Ingredient
 				items matches {
@@ -65,11 +65,11 @@ definition
 					}
 					allow_archetype CLUSTER[id34] occurrences matches {0..1} matches {	-- Strength
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					allow_archetype CLUSTER[id25] occurrences matches {0..1} matches {	-- Quantity
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}

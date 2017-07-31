@@ -46,15 +46,15 @@ definition
 						items matches {
 							allow_archetype CLUSTER[id0.76] occurrences matches {0..1} matches {	-- External ear detail
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation-external_ear(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection-external_ear(-a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation-external_ear(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection-external_ear(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 							allow_archetype CLUSTER[id0.77] matches {	-- Auditory canal detail
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection-ear_canal(-a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection-ear_canal(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 							allow_archetype CLUSTER[id0.75] occurrences matches {0..1} matches {	-- Tympanic membrane detail
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection-tympanic_perforation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection-tympanic_membrane(-a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection-tympanic_perforation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection-tympanic_membrane(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 						}
 					}
@@ -79,7 +79,7 @@ definition
 					}
 					allow_archetype CLUSTER[id10] matches {
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					ELEMENT[id7] matches {
 						value matches {

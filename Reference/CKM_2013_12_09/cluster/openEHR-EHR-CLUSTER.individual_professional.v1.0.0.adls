@@ -98,11 +98,11 @@ definition
 					}
 					allow_archetype CLUSTER[id18] matches {	-- Telecoms
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.telecom_details(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.telecom_details(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					allow_archetype CLUSTER[id20] matches {	-- Address
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.address(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.address(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					allow_archetype CLUSTER[id19] matches {	-- Organisation
 						include

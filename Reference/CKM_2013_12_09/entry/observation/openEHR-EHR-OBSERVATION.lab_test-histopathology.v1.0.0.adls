@@ -73,13 +73,13 @@ definition
 											}
 											allow_archetype CLUSTER[id0.78] matches {	-- Macroscopic specimen detail 
 												include
-													archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-[a-zA-Z0-9_]+)*\.v1/}
 												exclude
 													archetype_id/value matches {/.*/}
 											}
 											allow_archetype CLUSTER[id0.79] matches {	-- Structured macroscopic detail  
 												include
-													archetype_id/value matches {/openEHR-EHR-CLUSTER\.macroscopy_colorectal_carcinoma(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.macroscopy_lung_carcinoma(-a-zA-Z0-9_]+)*\.v1/}
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.macroscopy_colorectal_carcinoma(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.macroscopy_lung_carcinoma(-[a-zA-Z0-9_]+)*\.v1/}
 											}
 											ELEMENT[id0.77] occurrences matches {0..1} matches {	-- Description
 												value matches {
@@ -114,13 +114,13 @@ definition
 											}
 											allow_archetype CLUSTER[id0.83] matches {	-- Microscopic specimen detail 
 												include
-													archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-[a-zA-Z0-9_]+)*\.v1/}
 												exclude
 													archetype_id/value matches {/.*/}
 											}
 											allow_archetype CLUSTER[id0.84] matches {	-- Structured microscopic detail   
 												include
-													archetype_id/value matches {/openEHR-EHR-CLUSTER\.microscopy_lymphoma(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_melanoma(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_lung_carcinoma(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_breast_carcinoma(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_colorectal_carcinoma(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_prostate_carcinoma(-a-zA-Z0-9_]+)*\.v1/}
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.microscopy_lymphoma(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_melanoma(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_lung_carcinoma(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_breast_carcinoma(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_colorectal_carcinoma(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.microscopy_prostate_carcinoma(-[a-zA-Z0-9_]+)*\.v1/}
 											}
 											ELEMENT[id0.82] occurrences matches {0..1} matches {	-- Description
 												value matches {
@@ -138,7 +138,7 @@ definition
 							}
 							allow_archetype CLUSTER[id0.95] matches {	-- Pathological Staging 
 								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.tnm_staging(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.tumour_colorectal_staging_non_tnm(-a-zA-Z0-9_]+)*\.v1/}
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.tnm_staging(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.tumour_colorectal_staging_non_tnm(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 							ELEMENT[id79.1] matches {	-- Histopathological result
 								value matches {

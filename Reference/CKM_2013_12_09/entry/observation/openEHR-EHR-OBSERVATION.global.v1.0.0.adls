@@ -62,13 +62,13 @@ definition
 										items matches {
 											allow_archetype CLUSTER[id129] occurrences matches {0..1} matches {	-- Sweat
 												include
-													archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-a-zA-Z0-9_]+)*\.v1/}
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.fluid(-[a-zA-Z0-9_]+)*\.v1/}
 												exclude
 													archetype_id/value matches {/.*/}
 											}
 											allow_archetype CLUSTER[id117] occurrences matches {0..1} matches {	-- Hydration
 												include
-													archetype_id/value matches {/openEHR-EHR-CLUSTER\.hydration(-a-zA-Z0-9_]+)*\.v1/}
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.hydration(-[a-zA-Z0-9_]+)*\.v1/}
 											}
 										}
 									}
@@ -183,13 +183,13 @@ definition
 											}
 											allow_archetype CLUSTER[id126] occurrences matches {0..1} matches {	-- Body site
 												include
-													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1/}
 											}
 										}
 									}
 									allow_archetype CLUSTER[id106] matches {	-- Obvious abnormality on inspection
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.gait(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.issue(-a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.gait(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.issue(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 								}
 							}

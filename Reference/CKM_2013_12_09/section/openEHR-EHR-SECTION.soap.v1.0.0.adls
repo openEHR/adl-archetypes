@@ -41,7 +41,7 @@ definition
 						include
 							archetype_id/value matches {/.*/}
 						exclude
-							archetype_id/value matches {/openEHR-EHR-OBSERVATION\.exam(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.heart_rate(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.height(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.body_temperature(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.body_weight(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.urinalysis(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-OBSERVATION\.exam(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.heart_rate(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.height(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.body_temperature(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.body_weight(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.urinalysis(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-OBSERVATION\.blood_pressure(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					allow_archetype SECTION[id8] occurrences matches {0..1} matches {	-- Subsections
 						include

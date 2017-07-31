@@ -135,7 +135,7 @@ definition
 				items matches {
 					allow_archetype CLUSTER[id0.42] occurrences matches {0..1} matches {	-- Tongue detail
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.cranial_nerves\.v1|openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.cranial_nerves\.v1|openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					use_node ELEMENT[id0.56] /items[id9.1]/items[id0.9]/items[id0.10]	-- /items[Findings]/items[Lips]/items[Description]
 				}

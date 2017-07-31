@@ -41,7 +41,7 @@ definition
 		items matches {
 			allow_archetype CLUSTER[id348] occurrences matches {0..1} matches {	-- Tumour dimensions
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 			ELEMENT[id331] occurrences matches {0..1} matches {	-- Maximum extramuscular extension
 				value matches {

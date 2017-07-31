@@ -64,7 +64,7 @@ definition
 					}
 					allow_archetype ELEMENT[id13] matches {	-- Body location
 						include
-							archetype_id/value matches {/openEHR-EHR-ELEMENT\.body_location(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-ELEMENT\.body_location(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}

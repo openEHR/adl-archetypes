@@ -41,7 +41,7 @@ definition
 					}
 					allow_archetype CLUSTER[id0.24] occurrences matches {0..1} matches {	-- Abdominal wall detail
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
@@ -57,7 +57,7 @@ definition
 					use_node ELEMENT[id0.33] /items[id9]/items[id0.2]/items[id0.3]	-- /items[id9]/items[Abdominal wall]/items[Description]
 					allow_archetype CLUSTER[id0.25] occurrences matches {0..1} matches {	-- Abdominal region detail
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
@@ -71,7 +71,7 @@ definition
 									use_node ELEMENT[id0.35] /items[id9]/items[id0.2]/items[id0.3]	-- /items[id9]/items[Abdominal wall]/items[Description]
 									allow_archetype CLUSTER[id0.27] occurrences matches {0..1} matches {	-- Liver detail
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 								}
 							}
@@ -80,7 +80,7 @@ definition
 									use_node ELEMENT[id0.36] /items[id9]/items[id0.2]/items[id0.3]	-- /items[id9]/items[Abdominal wall]/items[Description]
 									allow_archetype CLUSTER[id0.28] occurrences matches {0..1} matches {	-- Spleen detail
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 								}
 							}
@@ -89,7 +89,7 @@ definition
 									use_node ELEMENT[id0.37] /items[id9]/items[id0.2]/items[id0.3]	-- /items[id9]/items[Abdominal wall]/items[Description]
 									allow_archetype CLUSTER[id0.29] occurrences matches {0..1} matches {	-- Kidney detail
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 								}
 							}
@@ -98,7 +98,7 @@ definition
 									use_node ELEMENT[id0.38] /items[id9]/items[id0.2]/items[id0.3]	-- /items[id9]/items[Abdominal wall]/items[Description]
 									allow_archetype CLUSTER[id0.30] occurrences matches {0..1} matches {	-- Bowel detail
 										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-a-zA-Z0-9_]+)*\.v1/}
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 								}
 							}
@@ -106,13 +106,13 @@ definition
 					}
 					allow_archetype CLUSTER[id0.26] matches {	-- Abdominal contents detail
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 				}
 			}
 			allow_archetype CLUSTER[id10] occurrences matches {0..1} matches {
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.exam-generic(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.auscultation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.inspection(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.palpation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.percussion(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}
