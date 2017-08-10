@@ -77,7 +77,8 @@ terminology
 	>
 	term_bindings = <
 		["LNC205"] = <
-			["id5"] = <http://LNC205.org/id/9272-6>
-			["id7"] = <http://LNC205.org/id/9271-8>
+			["id5"] = <http://loinc.org/id/9272-6>
+			["id7"] = <http://loinc.org/id/9271-8>
+			["id9"] = <http://snomed.info/expr/?363787002|Observable entity|:246093002|Component|=106202009|Antigen in ABO blood group system|,704318007|Property type|=410656007|Type (property)|,704319004|Inheres in|=87612001|Blood|,704327008|Direct site|=119297000|Blood specimen|,370132008|Scale|=117362005|Nominal value|,370134009|Time aspect|=123029007|Single point in time|>
 		>
 	>
