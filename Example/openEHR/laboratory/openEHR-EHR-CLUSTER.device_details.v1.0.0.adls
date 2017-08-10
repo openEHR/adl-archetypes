@@ -1,0 +1,260 @@
+archetype (adl_version=2.0.6; rm_release=1.0.2)
+	openEHR-EHR-CLUSTER.device_details.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2010-08-16">
+	>
+	copyright = <"© openEHR Foundation">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details that can be used to support asset management for any durable or persisting medical device. For example, information about: the physical location of the device; its network URL; and maintenance, service, cleaning, and calibration details.">
+			use = <"Use to record details about durable or persisting medical device.
+
+This archetype is designed to be used in the 'Asset Management' SLOT within the CLUSTER.device archetypes and/or any specialisations of this archetype.">
+			keywords = <"calibration", "maintenance", "sterilization", "cleaned", "service", "device">
+			misuse = <"Not to be used outside of the CLUSTER.device archetype or its specialisations, unless there is a clear identification of the device about which the information is being recorded.">
+		>
+	>
+	other_contributors = <"Ian McNicoll, freshEHR Consulting, United Kingdom", ...>
+	references = <
+		["1"] = <"Resource Device [Internet]. HL7 International, FHIR Specification first DSTU version (v 0.0.82). Available from: http://www.hl7.org/implement/standards/fhir/device.html [last accessed 25 Feb 2015].">
+		["2"] = <"Implementation Guide for CDA Release 2.0 Personal Healthcare Monitoring Report (PHMR) (International Realm) Draft Standard for Trial Use Release 1. HL7 International, 2008. Available at: http://wiki.hl7.org/index.php?title=Product_CDA_R2_IG#Product_Name_-_CDA_R2_IG_PHM_Reports [last accessed 05 Mar 2015].">
+		["3"] = <"Guidelines for 64-bit Global Identifier (EUI-64) [Internet]. IEEE Standards Association [cited: 2015-02-25]. Available from: http://standards.ieee.org/regauth/oui/tutorials/EUI64.html [last accessed 05 Mar 2015].">
+	>
+	other_details = <
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
+		["MD5-CAM-1.0.1"] = <"C9F9BBE3231A684F081712B4B291C709">
+	>
+
+definition
+	CLUSTER[id1] matches {	-- Medical device details
+		items matches {
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Organisation identifier
+				value matches {
+					DV_TEXT[id29] 
+					DV_IDENTIFIER[id30] matches {
+						issuer matches {/EUI-64/}
+					}
+				}
+			}
+			ELEMENT[id24] occurrences matches {0..1} matches {	-- Owner
+				value matches {
+					DV_TEXT[id31] 
+				}
+			}
+			ELEMENT[id25] occurrences matches {0..1} matches {	-- Location
+				value matches {
+					DV_TEXT[id32] 
+				}
+			}
+			ELEMENT[id26] occurrences matches {0..1} matches {	-- Network address
+				value matches {
+					DV_URI[id33] 
+				}
+			}
+			allow_archetype CLUSTER[id27] matches {	-- Contact
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype CLUSTER[id19] matches {	-- Serviced by
+				include
+					archetype_id/value matches {/.*/}
+			}
+			ELEMENT[id8] occurrences matches {0..1} matches {	-- Part number
+				value matches {
+					DV_TEXT[id34] 
+				}
+			}
+			ELEMENT[id3] occurrences matches {0..1} matches {	-- Manufacturer model name
+				value matches {
+					DV_TEXT[id35] 
+				}
+			}
+			ELEMENT[id9] occurrences matches {0..1} matches {	-- Hardware revision
+				value matches {
+					DV_TEXT[id36] 
+				}
+			}
+			ELEMENT[id11] occurrences matches {0..1} matches {	-- Protocol revision
+				value matches {
+					DV_TEXT[id37] 
+				}
+			}
+			ELEMENT[id12] occurrences matches {0..1} matches {	-- Sampling frequency
+				value matches {
+					DV_TEXT[id38] 
+					DV_QUANTITY[id39] 
+				}
+			}
+			ELEMENT[id13] occurrences matches {0..1} matches {	-- Range
+				value matches {
+					DV_TEXT[id40] 
+					DV_INTERVAL<DV_QUANTITY>[id41] matches {
+						upper matches {
+							DV_QUANTITY[id42] 
+						}
+						lower matches {
+							DV_QUANTITY[id43] 
+						}
+					}
+				}
+			}
+			ELEMENT[id14] occurrences matches {0..1} matches {	-- Accuracy
+				value matches {
+					DV_TEXT[id44] 
+					DV_QUANTITY[id45] 
+				}
+			}
+			ELEMENT[id15] occurrences matches {0..1} matches {	-- Resolution
+				value matches {
+					DV_TEXT[id46] 
+					DV_QUANTITY[id47] 
+				}
+			}
+			ELEMENT[id16] occurrences matches {0..1} matches {	-- Regulatory status
+				value matches {
+					DV_TEXT[id48] 
+				}
+			}
+			ELEMENT[id23] occurrences matches {0..1} matches {	-- Date last cleaned/sterilized
+				value matches {
+					DV_DATE_TIME[id49] 
+				}
+			}
+			ELEMENT[id18] occurrences matches {0..1} matches {	-- Date last calibrated
+				value matches {
+					DV_DATE_TIME[id50] 
+				}
+			}
+			ELEMENT[id17] occurrences matches {0..1} matches {	-- Date last serviced
+				value matches {
+					DV_DATE_TIME[id51] 
+				}
+			}
+			CLUSTER[id20] matches {	-- Formulae
+				items matches {
+					ELEMENT[id21] matches {	-- Formula name
+						value matches {
+							DV_TEXT[id52] 
+						}
+					}
+					ELEMENT[id22] occurrences matches {0..1} matches {	-- Formula
+						value matches {
+							DV_TEXT[id53] 
+						}
+					}
+				}
+			}
+			allow_archetype CLUSTER[id28] matches {	-- Extension
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Medical device details">
+				description = <"Specific details that relate to asset management for any medical device that is designed for more than a single use.">
+			>
+			["id2"] = <
+				text = <"Organisation identifier">
+				description = <"Organisation identifier for device.">
+			>
+			["id3"] = <
+				text = <"Manufacturer model name">
+				description = <"HL7 CDA compatible representation of device manufacture details.">
+			>
+			["id8"] = <
+				text = <"Part number">
+				description = <"The part number of the device.">
+			>
+			["id9"] = <
+				text = <"Hardware revision">
+				description = <"The hardware revision number.">
+			>
+			["id11"] = <
+				text = <"Protocol revision">
+				description = <"The protocol revision number.">
+			>
+			["id12"] = <
+				text = <"Sampling frequency">
+				description = <"The sampling frequency limits of the device.">
+			>
+			["id13"] = <
+				text = <"Range">
+				description = <"The range limits of the device.">
+			>
+			["id14"] = <
+				text = <"Accuracy">
+				description = <"The accuracy limits of the device.">
+			>
+			["id15"] = <
+				text = <"Resolution">
+				description = <"The resolution limits of the device.">
+			>
+			["id16"] = <
+				text = <"Regulatory status">
+				description = <"Whether device is regulated or otherwise.">
+			>
+			["id17"] = <
+				text = <"Date last serviced">
+				description = <"The date the device was last serviced.">
+			>
+			["id18"] = <
+				text = <"Date last calibrated">
+				description = <"Date the device was last calibrated.">
+			>
+			["id19"] = <
+				text = <"Serviced by">
+				description = <"Details of agent who performed the servicing.">
+			>
+			["id20"] = <
+				text = <"Formulae">
+				description = <"Details about formulae or algorithms used by the device in order to generate results/output.">
+			>
+			["id21"] = <
+				text = <"Formula name">
+				description = <"Data element which is calculated or derived.">
+			>
+			["id22"] = <
+				text = <"Formula">
+				description = <"Formula used to calculate or derive the Calculated field.">
+			>
+			["id23"] = <
+				text = <"Date last cleaned/sterilized">
+				description = <"Date the device was last cleaned or sterilized.">
+			>
+			["id24"] = <
+				text = <"Owner">
+				description = <"Organisation responsible for the medical device.">
+			>
+			["id25"] = <
+				text = <"Location">
+				description = <"Physical location where device is kept.">
+			>
+			["id26"] = <
+				text = <"Network address">
+				description = <"Network address to contact the device.">
+			>
+			["id27"] = <
+				text = <"Contact">
+				description = <"Details for human/organisation support for the medical device.">
+			>
+			["id28"] = <
+				text = <"Extension">
+				description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+			>
+		>
+	>

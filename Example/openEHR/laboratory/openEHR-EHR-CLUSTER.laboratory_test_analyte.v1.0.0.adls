@@ -1,0 +1,151 @@
+archetype (adl_version=2.0.6; rm_release=1.0.2; uid=1bee5cff-c5f5-4ee1-a8cf-8667a20dc2ca)
+	openEHR-EHR-CLUSTER.laboratory_test_analyte.v1.0.0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"freshEHR Clinical Informatics, UK">
+		["email"] = <"ian@freshehr.com">
+		["date"] = <"2015-07-20">
+	>
+	original_namespace = <"org.openehr">
+	original_publisher = <"openEHR Foundation">
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation">
+	copyright = <"© openEHR Foundation">
+	licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record individual, single value laboratory test analyte results  as are common to clinical pathology testing such as biochemistry, haematology and immunology.">
+			use = <"To record individual, single value laboratory test analyte results  as are common to clinical pathology testing such as biochemistry, haematology and immunology. Normally used in conjunction with a parent Laboratory test result (Observation) archetype andd in many circumstances will be carried within a Laboratory Test Result Panel Cluster archetype, along with other analytes which are normally tested and/or reported as part of a battery or test panel.
+
+The name attribute of the analyte result element is normally replaced in a specialisation, template or at run-time to carry the name of the specific analyte e.g. 'Haemoglobin', often coded with a reference terminology such as LOINC, SNOMED CT or NPU.
+
+This archetype may be used within the setting of more complex laboratory/pathology reporting such as Histopathlogy/ Anatomical synoptic reports where quantitative results such as cytometric flow studies or genetic testing are often reported alongside conventional macrscopic and microscopic reporting.
+
+">
+			keywords = <"laboratory", "pathology", "analyte">
+			misuse = <"Should not be used to record detailed Anatomical pathology macroscopic/microscopic findings, other then for additional testing such as  cytometric flow studies or genetic testing.">
+		>
+	>
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", "Nasjonal IKT, Norway">
+	references = <
+		["1"] = <"Based on NEHTA 'Pathology Test' archetype. Available from: http://dcm.nehta.org.au/ckm/OKM.html#showarchetype_1013.1.839_8">
+		["2"] = <"Pathology (Data Specifications) Version 1.0 [Internet]. Sydney, Australia: National E-Health Transition Authority; 2007 May 29 [cited 2011 Jul 11]; Available at http://www.nehta.gov.au/component/docman/doc_download/962-pathology-v10.">
+		["3"] = <"Laboratory Technical Framework, Volume 3: Content, Revision 3.0 [Internet]. USA: IHE International; 2011 May 19; [cited 2011 Jul 11]. Available from: http://www.ihe.net/Technical_Framework/index.cfm#laboratory">
+		["4"] = <"Hl7 FHIR Observation resource: HL7 FHIR; Available from http://www.hl7.org/implement/standards/fhir/observation.html">
+	>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"37CD0035EC7E0B97A88CD79737BDA242">
+		["build_uid"] = <"fb71ec03-c739-42aa-8918-107ae86e1d09">
+	>
+
+definition
+	CLUSTER[id1] matches {	-- Laboratory test analyte
+		items matches {
+			ELEMENT[id2] occurrences matches {0..1} matches {	-- Analyte result
+				name matches {
+					DV_CODED_TEXT[id20] 
+				}
+                        }
+			ELEMENT[id4] matches {	-- Comment
+				value matches {
+					DV_TEXT[id16] 
+				}
+			}
+			ELEMENT[id5] occurrences matches {0..1} matches {	-- Reference range guidance
+				value matches {
+					DV_TEXT[id17] 
+				}
+			}
+			ELEMENT[id6] occurrences matches {0..1} matches {	-- Analyte result status
+				value matches {
+					DV_CODED_TEXT[id18] matches {
+						defining_code matches {[ac1]}		-- Analyte result status (synthesised)
+					}
+				}
+			}
+			ELEMENT[id7] occurrences matches {0..1} matches {	-- Analyte result status timestamp
+				value matches {
+					DV_DATE_TIME[id19] 
+				}
+			}
+			allow_archetype CLUSTER[id15] matches {	-- Analyte result detail
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Laboratory test analyte">
+				description = <"The result of a laboratory test for a single laboratory test analyte. ">
+			>
+			["id2"] = <
+				text = <"Analyte result">
+				description = <"Actual value of the analyte result. The name of this element is normally replaced in a specialisation, in a template or at run-time to relfect the actual analyte e.g. Serum sodium and will often be coded.">
+			>
+			["id4"] = <
+				text = <"Comment">
+				description = <"Comment about the Result.">
+			>
+			["id5"] = <
+				text = <"Reference range guidance">
+				description = <"Additional advice on the applicability of the reference range to this result or may carry text or coded textual guidance as to whether the result is within the normal range.">
+			>
+			["id6"] = <
+				text = <"Analyte result status">
+				description = <"The status of the result value.">
+			>
+			["id7"] = <
+				text = <"Analyte result status timestamp">
+				description = <"The date and/or time that the entire result was issued for the recorded ‘Result status’.">
+			>
+			["at8"] = <
+				text = <"Registered">
+				description = <"No result yet available.">
+			>
+			["at9"] = <
+				text = <"Interim">
+				description = <"This is an initial or interim result: data may be missing or verification not been performed.">
+			>
+			["at10"] = <
+				text = <"Final">
+				description = <"The result is complete and verified by the responsible pathologist.">
+			>
+			["at11"] = <
+				text = <"Amended">
+				description = <"The result has been modified subsequent to being Final, and is complete and verified by the responsible pathologist.">
+			>
+			["at12"] = <
+				text = <"Cancelled/Aborted">
+				description = <"The result is unavailable because the test was not started or not completed.">
+			>
+			["at13"] = <
+				text = <"Not requested">
+				description = <"The result is not available as the test was not requested.">
+			>
+			["id15"] = <
+				text = <"Analyte result detail">
+				description = <"Further detail regarding an individual result.">
+			>
+			["ac1"] = <
+				text = <"Analyte result status (synthesised)">
+				description = <"The status of the result value. (synthesised)">
+			>
+		>
+	>
+	value_sets = <
+		["ac1"] = <
+			id = <"ac1">
+			members = <"at8", "at9", "at10", "at11", "at12", "at13">
+		>
+	>
