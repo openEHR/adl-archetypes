@@ -22,7 +22,7 @@ description
 	copyright = <"copyright (c) 2008 The openEHR Foundation">
 
 definition
-	ENTRY[id1] 	-- 
+	ENTRY[id1]
 
 terminology
 	term_definitions = <

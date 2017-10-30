@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; rm_release=1.0.2)
+archetype (adl_version=2.0.5; rm_release=1.0.2)
 	openEHR-TEST_PKG-ENTRY.VTVSMD_at_code_in_coded_term_not_in_terminology.v1.0.0
 
 language
@@ -11,7 +11,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Test VTVSMD validity check, triggered when an at-code used in a coded term is not in the ontology.">
+			purpose = <"Test VTVSMD validity check, triggered when an at-code used in a coded term is not in the terminology.">
 			keywords = <"ADL", "validation", "test">
 			copyright = <"copyright (c) 2008-2012 The openEHR Foundation">
 		>
@@ -25,7 +25,7 @@ definition
 	ENTRY[id1] matches {	-- 
 		coded_text_value matches {
 			DV_CODED_TEXT[id2] matches {
-				defining_code matches {[ac1]}		-- 
+				defining_code matches {[ac1]}
 			}
 		}
 	}

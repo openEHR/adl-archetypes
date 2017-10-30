@@ -22,17 +22,14 @@ description
 	>
 
 definition
-	WHOLE matches {*}
-	}
+	WHOLE
 
 terminology
 	term_definitions = <
 		["en"] = <
-			items = <
-				["at1"] = <
-					description = <"test entry">
-					text = <"test entry">
-				>
+			["at1"] = <
+				description = <"test entry">
+				text = <"test entry">
 			>
 		>
 	>

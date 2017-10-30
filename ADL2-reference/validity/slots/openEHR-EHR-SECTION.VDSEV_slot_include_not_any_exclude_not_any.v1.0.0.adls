@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; rm_release=1.0.2)
+archetype (adl_version=2.0.6; rm_release=1.0.2)
 	openEHR-EHR-SECTION.VDSEV_slot_include_not_any_exclude_not_any.v1.0.0
 
 language
@@ -7,8 +7,8 @@ language
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"thomas.beale@oceaninformatics.com">
+		["organisation"] = <"openEHR Foundation">
+		["email"] = <"thomas.beale@openehr.org">
 		["date"] = <"14/03/2010">
 	>
 	details = <
@@ -27,9 +27,9 @@ definition
 		items cardinality matches {1..*; unordered} matches {
 			allow_archetype OBSERVATION[id2] occurrences matches {0..1} matches {	-- Vital signs
 				include
-					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.exam(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.exam([-a-zA-Z0-9_]+)*\.v1/}
 				exclude
-					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure([-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}

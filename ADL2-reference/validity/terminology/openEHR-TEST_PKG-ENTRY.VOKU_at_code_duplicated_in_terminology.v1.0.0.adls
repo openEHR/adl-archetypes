@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; rm_release=1.0.2)
+archetype (adl_version=2.0.6; rm_release=1.0.2)
 	openEHR-TEST_PKG-ENTRY.VOKU_at_code_duplicated_in_terminology.v1.0.0
 
 language
@@ -24,7 +24,7 @@ description
 definition
 	ENTRY[id1] matches {
 		element_attr matches {
-			ELEMENT[id2] matches {*}
+			ELEMENT[id2]
 		}
 	}
 

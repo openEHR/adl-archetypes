@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; rm_release=1.0.2)
+archetype (adl_version=2.0.6; rm_release=1.0.2)
 	openEHR-EHR-OBSERVATION.FAIL_dadl_spurious_delimiter.v1.0.0
 
 language
@@ -20,7 +20,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"This archetype contains a spurious '>' character at between the two term_definition blocks in the ontology section. The dADL parser currently does not pick it up properly, although it does generate a VOTM error.">
+			purpose = <"This archetype contains a spurious '>' character at between the two term_definition blocks in the terminology section. The ODIN parser currently does not pick it up properly, although it does generate a VOTM error.">
 		>
 		["zh-cn"] = <
 			language = <[ISO_639-1::zh-cn]>

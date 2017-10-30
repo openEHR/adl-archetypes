@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; rm_release=1.0.2)
+archetype (adl_version=2.0.5; rm_release=1.0.2)
 	openEHR-EHR-OBSERVATION.VTBK_term_bindings_paths.v1
 
 language
@@ -27,7 +27,7 @@ definition
 						data matches {
 							ITEM_LIST[id2] matches {
 								items cardinality matches {1..6; ordered} matches {
-									ELEMENT[id5] occurrences matches {0..1} matches {*}
+									ELEMENT[id5] occurrences matches {0..1}
 								}
 							}
 						}

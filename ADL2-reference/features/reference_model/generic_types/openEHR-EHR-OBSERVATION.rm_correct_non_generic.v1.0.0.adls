@@ -9,9 +9,8 @@ description
 	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
 
 	original_author = <
-		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"thomas.beale@oceaninformatics.com">
+		["name"] = <"Thomas Beale <thomas.beale@openEHR.org>">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
 		["date"] = <"12/03/2009">
 	>
 

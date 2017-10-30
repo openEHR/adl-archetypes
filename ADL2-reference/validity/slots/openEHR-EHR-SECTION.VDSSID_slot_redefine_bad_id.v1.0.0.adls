@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; rm_release=1.0.2)
+archetype (adl_version=2.0.5; rm_release=1.0.2)
 	openEHR-EHR-SECTION.VDSSID_slot_redefine_bad_id.v1.0.0
 
 specialise
@@ -10,8 +10,8 @@ language
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"thomas.beale@oceaninformatics.com">
+		["organisation"] = <"openEHR Foundation">
+		["email"] = <"thomas.beale@openehr.org">
 		["date"] = <"28/10/2014">
 	>
 	details = <

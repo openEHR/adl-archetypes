@@ -24,7 +24,7 @@ description
 definition
 	ENTRY[id1] matches {
 		element_attr matches {
-			ELEMENT[id2] occurrences matches {1..2} matches {*}
+			ELEMENT[id2] occurrences matches {1..2}
 		}
 	}
 

@@ -24,7 +24,7 @@ description
 definition
 	ENTRY[id1] matches {	-- 
 		element_attr matches {
-			use_node ELEMENT[id2] /value[id11]	-- /value[id11]
+			use_node ELEMENT[id2] /value[id11]
 		}
 		value matches {[at2]}
 	}

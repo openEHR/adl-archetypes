@@ -7,7 +7,7 @@ language
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
+		["organisation"] = <"openEHR Foundation">
 		["date"] = <"05/06/2011">
 	>
 	details = <
@@ -39,9 +39,9 @@ definition
 									}
 									CLUSTER[id8] matches {	
 										items cardinality matches {1..2} matches {
-											ELEMENT[id9] occurrences matches {1} matches {*}
-											ELEMENT[id10] occurrences matches {2..*} matches {*}
-											ELEMENT[id11] occurrences matches {0..1} matches {*}
+											ELEMENT[id9] occurrences matches {1}
+											ELEMENT[id10] occurrences matches {2..*}
+											ELEMENT[id11] occurrences matches {0..1}
 										}
 									}
 								}

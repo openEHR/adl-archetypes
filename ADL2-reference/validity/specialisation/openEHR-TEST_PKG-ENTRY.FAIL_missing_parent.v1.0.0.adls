@@ -1,5 +1,5 @@
-archetype (adl_version=1.5)
-	openEHR-TEST_PKG-ENTRY.FAIL_missing_parent.v1
+archetype (adl_version=2.0.6)
+	openEHR-TEST_PKG-ENTRY.FAIL_missing_parent.v1.0.0
 specialize
 	openEHR-TEST_PKG-ENTRY.specialisation_parent.v1
 
@@ -25,7 +25,7 @@ description
 	lifecycle_state = <"draft">
 
 definition
-	ENTRY[at0000.1] matches {*}
+	ENTRY[at0000.1]
 
 ontology
 	term_definitions = <

@@ -9,9 +9,8 @@ language
 
 description
 	original_author = <
-		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"thomas.beale@oceaninformatics.com">
+		["name"] = <"Thomas Beale <thomas.beale@openEHR.org>">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
 		["date"] = <"22/01/2014">
 	>
 	details = <

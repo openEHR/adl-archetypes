@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; rm_release=1.0.2)
+archetype (adl_version=2.0.5; rm_release=1.0.2)
 	openEHR-EHR-EVALUATION.VCARM_table.v1
 
 language
@@ -6,7 +6,7 @@ language
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
+		["organisation"] = <"openEHR Foundation">
 		["date"] = <"01/05/2004">
 	>
 	details = <

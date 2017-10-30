@@ -7,14 +7,11 @@ language
 description
 	lifecycle_state = <"unmanaged">
 	original_author = <
-		["name"] = <"">
+		["name"] = <"Thomas Beale">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"">
-			use = <"">
-			misuse = <"">
 		>
 	>
 	other_details = <

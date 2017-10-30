@@ -22,9 +22,9 @@ description
 	copyright = <"copyright (c) 2008 The openEHR Foundation">
 
 definition
-	ENTRY[id1] matches {	-- 
+	ENTRY[id1] matches {
 		element_attr matches {
-			use_node ELEMENT[id2] /value[id11]	-- /value[id11]
+			use_node ELEMENT[id2] /value[id11]
 		}
 	}
 

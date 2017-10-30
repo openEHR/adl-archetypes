@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; rm_release=1.0.2)
+archetype (adl_version=2.0.6; rm_release=1.0.2)
 	openEHR-EHR-EVALUATION.VSAM_rm_wrong_multiple_attr.v1
 
 language
@@ -6,9 +6,8 @@ language
 
 description
 	original_author = <
-		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"thomas.beale@oceaninformatics.com">
+		["name"] = <"Thomas Beale <thomas.beale@openEHR.org>">
+		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
 		["date"] = <"10/03/2009">
 	>
 	details = <

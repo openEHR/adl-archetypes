@@ -22,7 +22,7 @@ description
 	>
 
 definition
-	ENTRY[id1] matches {	-- 
+	ENTRY[id1] matches {
 		element_attr matches {
 			ELEMENT
 			ELEMENT

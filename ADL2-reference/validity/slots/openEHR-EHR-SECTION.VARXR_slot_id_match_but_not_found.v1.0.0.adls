@@ -1,4 +1,4 @@
-archetype (adl_version=1.5.1; rm_release=1.0.2)
+archetype (adl_version=2.0.5; rm_release=1.0.2)
 	openEHR-EHR-SECTION.VARXR_slot_id_match_but_not_found.v1.0.0
 
 specialise
@@ -10,8 +10,8 @@ language
 description
 	original_author = <
 		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"thomas.beale@oceaninformatics.com">
+		["organisation"] = <"openehR Foundation">
+		["email"] = <"thomas.beale@openehr.org">
 		["date"] = <"14/07/2010">
 	>
 	details = <
