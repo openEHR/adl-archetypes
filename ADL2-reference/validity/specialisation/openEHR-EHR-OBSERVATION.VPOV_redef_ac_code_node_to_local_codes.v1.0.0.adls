@@ -26,9 +26,9 @@ description
 
 definition
 	OBSERVATION[id1.1] matches {	-- Observation
-		/data/events[id3]/data/items[id11]/value matches {
-			DV_CODED_TEXT[id16] matches {
-				defining_code matches {[ac2.1]}		-- (added by post-parse processor)
+		/data/events[id3]/data/items[id5]/value matches {
+			DV_CODED_TEXT[id15] matches {
+				defining_code matches {[ac3.1]}
 			}
 		}
 	}
@@ -40,15 +40,19 @@ terminology
 				text = <"Observation">
 				description = <"Observation">
 			>
-			["ac2.1"] = <
-				text = <"(added by post-parse processor)">
-				description = <"(added by post-parse processor)">
+			["ac3.1"] = <
+				text = <"value set 1">
+				description = <"value set 1">
+			>
+			["at0.1"] = <
+				text = <"new code">
+				description = <"new code">
 			>
 		>
 	>
 	value_sets = <
-		["ac2.1"] = <
-			id = <"ac2.1">
-			members = <"at6", "at7", "at8", "at9", "at10">
+		["ac3.1"] = <
+			id = <"ac3.1">
+			members = <"at6", "at7", "at8", "at9", "at10", "at0.1">
 		>
 	>
