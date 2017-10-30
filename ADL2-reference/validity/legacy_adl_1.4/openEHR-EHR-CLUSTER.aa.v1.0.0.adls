@@ -12,6 +12,9 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
 		>
 	>
 	other_details = <
