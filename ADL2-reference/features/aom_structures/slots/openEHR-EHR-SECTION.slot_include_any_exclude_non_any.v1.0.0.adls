@@ -1,4 +1,4 @@
-﻿archetype (adl_version=2.0.5; rm_release=1.0.2)
+archetype (adl_version=2.0.5; rm_release=1.0.2)
 	openEHR-EHR-SECTION.slot_include_any_exclude_non_any.v1.0.0
 
 language
@@ -9,7 +9,6 @@ description
 	custodian_organisation = <"openEHR Foundation <http://www.openEHR.org>">
 
 	original_author = <
-		["name"] = <"Thomas Beale">
 		["name"] = <"Thomas Beale <thomas.beale@openEHR.org>">
 		["organisation"] = <"openEHR Foundation <http://www.openEHR.org>">
 		["date"] = <"2010-03-14">
