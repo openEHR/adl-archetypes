@@ -34,7 +34,6 @@ description
 definition
 	OBSERVATION[id1.1] matches {	-- Blood matching
 		/data[id2]/events[id3]/data[id4]/items matches {
-			ELEMENT[id10] 
 			ELEMENT[id10.1] occurrences matches {0..1} matches {	-- Rhesus
 				value matches {
 					DV_TEXT[id0.11] 

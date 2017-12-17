@@ -1,15 +1,16 @@
-archetype (adl_version=2.0.7; rm_release=1.0.2)
+archetype (adl_version=2.0.6; rm_release=1.0.2)
 	openEHR-EHR-EVALUATION.spec_test_eval1-no_change.v1.0.0
 
-specialise
+specialize
 	openEHR-EHR-EVALUATION.spec_test_eval1.v1
 
 language
 	original_language = <[ISO_639-1::en]>
 
 description
+	lifecycle_state = <"unmanaged">
 	original_author = <
-		["organisation"] = <"Ocean Informatics">
+		["organisation"] = <"openEHR Foundation">
 		["name"] = <"Thomas Beale">
 		["date"] = <"11/6/2010">
 	>
@@ -19,15 +20,14 @@ description
 			purpose = <"Parent archetype to test various redefinitions and additions">
 		>
 	>
-	lifecycle_state = <"unmanaged">
 	other_details = <
-		["regression"] = <"VSONCO">
+		["regression"] = <"PASS">
 	>
 
 definition
-	EVALUATION[id1.1] matches {	-- Observation
+	EVALUATION[id1.1] matches {	-- Evaluation
 		data matches {
-			ITEM_TREE[id2] occurrences matches {1}
+			ITEM_TREE[id2] occurrences matches {1} 
 		}
 	}
 

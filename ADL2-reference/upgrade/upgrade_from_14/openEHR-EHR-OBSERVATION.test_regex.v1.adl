@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=b1506a87-9bf2-4978-9eed-6ceecb0c2be9)
+archetype (adl_version=1.4; uid=b1506a87-9bf2-4978-9eed-6ceecb0c2be9)
 	openEHR-EHR-OBSERVATION.test_regex.v1
 
 concept
@@ -34,7 +34,6 @@ description
 
 definition
 	OBSERVATION[at0000] matches {	-- Blood Pressure
-		junk
 		protocol matches {
 			ITEM_TREE[at0011] matches {	-- Tree
 				items cardinality matches {0..*; unordered} matches {
