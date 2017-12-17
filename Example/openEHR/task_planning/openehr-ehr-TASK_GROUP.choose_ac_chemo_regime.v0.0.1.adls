@@ -1,0 +1,90 @@
+archetype (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-ehr-TASK_GROUP.choose_ac_chemo_regime.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	TASK_GROUP[id1] matches {	-- Choose AC chemo regime
+		execution_type matches {
+			EXECUTION_TYPE[id2] occurrences matches {1} 
+		}
+		members matches {
+			TASK[id3] occurrences matches {1} matches {	-- ACx4->Px4
+				action matches {
+					DEFINED_ACTION[id4] occurrences matches {1} matches {
+						prototype matches {
+							EVALUATION[id5] occurrences matches {1} 	-- Recommendation: ACx4->Px4
+						}
+					}
+				}
+			}
+			TASK[id6] occurrences matches {1} matches {	-- ACx4->Px12
+				action matches {
+					DEFINED_ACTION[id8] occurrences matches {1} matches {
+						prototype matches {
+							EVALUATION[id9] occurrences matches {1} 	-- Recommend: ACx4->Px12
+						}
+					}
+				}
+			}
+			TASK[id7] occurrences matches {1} matches {	-- ACx4->Dx4
+				action matches {
+					DEFINED_ACTION[id11] occurrences matches {1} matches {
+						prototype matches {
+							EVALUATION[id12] occurrences matches {1} 	-- ACx4->Dx4
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Choose AC chemo regime">
+				description = <"-">
+			>
+			["id3"] = <
+				text = <"ACx4->Px4">
+				description = <"-">
+			>
+			["id5"] = <
+				text = <"Recommendation: ACx4->Px4">
+				description = <"-">
+			>
+			["id6"] = <
+				text = <"ACx4->Px12">
+				description = <"-">
+			>
+			["id7"] = <
+				text = <"ACx4->Dx4">
+				description = <"-">
+			>
+			["id9"] = <
+				text = <"Recommend: ACx4->Px12">
+				description = <"-">
+			>
+			["id12"] = <
+				text = <"ACx4->Dx4">
+				description = <"-">
+			>
+		>
+	>

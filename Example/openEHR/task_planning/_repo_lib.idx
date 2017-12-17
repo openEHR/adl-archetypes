@@ -1,0 +1,4 @@
+	name = <"Task Planning">
+	short_name = <"task-planning">
+	description = <"Task Planning example">
+	maintainer = <"openEHR">

@@ -1,0 +1,569 @@
+archetype (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-ehr-TASK_PLAN.breast_cancer_chemo.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2017 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	TASK_PLAN[id1] matches {	-- Breast cancer chemo assess and prescribe
+		indications matches {
+			DV_TEXT[id2] occurrences matches {1} 	-- Main diagnosis
+		}
+		definition matches {
+			TASK_GROUP[id3] matches {
+				members matches {
+					DECISION_GROUP[id4] occurrences matches {1} matches {	-- Metastasis
+						members matches {
+							DECISION_BRANCH[id5] occurrences matches {1} matches {	-- Metastasis = not present
+								members matches {
+									DECISION_GROUP[id7] occurrences matches {1} matches {	-- Estrogen receptor (ER)
+										members matches {
+											DECISION_BRANCH[id8] occurrences matches {1} matches {	-- ER = positive
+												value_constraint matches {
+													CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id49] matches {
+														expression matches {"'positive'"}
+													}
+												}
+												members matches {
+													use_archetype DECISION_GROUP[id141, openehr-ehr-DECISION_GROUP.determine_er_positive_hormone_regime.v0.0.1] occurrences matches {1} 
+												}
+											}
+											DECISION_BRANCH[id9] occurrences matches {1} matches {	-- ER = negative
+												members matches {
+													DECISION_GROUP[id10] occurrences matches {1} matches {	-- Molecular subtype
+														members matches {
+															DECISION_BRANCH[id11] occurrences matches {1} matches {	-- Molecular subtype = Luminal A
+																value_constraint matches {
+																	CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id38] matches {
+																		expression matches {"'luminal A'"}
+																	}
+																}
+																members matches {
+																	CONDITION_GROUP[id89] occurrences matches {1} matches {	-- TNM (Luminal A)
+																		members matches {
+																			CONDITION_BRANCH[id90] occurrences matches {1} matches {	-- TNM: T < 3 and N < 2 and G < 3
+																				test matches {
+																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id92] matches {
+																						expression matches {"tnm_major_number ($tnm_t) < 3 and tnm_major_number ($tnm_n) < 2 and $tnm_g < 3"}
+																					}
+																				}
+																				members matches {
+																					use_archetype TASK[id126, openehr-ehr-TASK.recommend_no_chemo.v0.0.1] occurrences matches {0..1} 
+																				}
+																			}
+																			CONDITION_BRANCH[id91] occurrences matches {1} matches {	-- TNM: T >= 3 or N >= 2 or G >= 3
+																				test matches {
+																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id94] matches {
+																						expression matches {"tnm_major_number ($tnm_t) >= 3 and tnm_major_number ($tnm_n) >= 2 and $tnm_g >= 3"}
+																					}
+																				}
+																				members matches {
+																					use_archetype DECISION_GROUP[id127, openehr-ehr-DECISION_GROUP.determine_anthracyclines_chemo_regime.v0.0.1] occurrences matches {1} 
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+															DECISION_BRANCH[id12] occurrences matches {1} matches {	-- Molecular subtype = Luminal B (HER2 negative)
+																members matches {
+																	CONDITION_GROUP[id16] occurrences matches {1} matches {	-- TNM - Luminal B (HER2 negative)
+																		members matches {
+																			CONDITION_BRANCH[id17] occurrences matches {1} matches {	-- TNM: T = 1a and N =0
+																				members matches {
+																					use_archetype TASK[id128, openehr-ehr-TASK.recommend_no_chemo.v0.0.1] occurrences matches {1} 
+																				}
+																				test matches {
+																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id99] matches {
+																						expression matches {"tnm_major_minor($tnm_t) = '1a' and tnm_major_number ($tnm_n) = 0"}
+																					}
+																				}
+																			}
+																			CONDITION_BRANCH[id18] occurrences matches {1} matches {	-- TNM: T > 1a or N > 0
+																				members matches {
+																					use_archetype DECISION_GROUP[id129, openehr-ehr-DECISION_GROUP.determine_taxanes_chemo_regime.v0.0.1] occurrences matches {1} 
+																				}
+																				test matches {
+																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id83] matches {
+																						expression matches {"tnm_major_minor ($tnm_t) > '1a' and tnm_major_number ($tnm_n) > 0"}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+																value_constraint matches {
+																	CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id40] matches {
+																		expression matches {"'luminal B (HER negative)'"}
+																	}
+																}
+															}
+															DECISION_BRANCH[id13] occurrences matches {1} matches {	-- Molecular subtype - Luminal B (HER2 positive)
+																value_constraint matches {
+																	CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id42] matches {
+																		expression matches {"'luminal B (HER2 positive)'"}
+																	}
+																}
+																members matches {
+																	CONDITION_GROUP[id100] occurrences matches {1} matches {	-- TNM - Luminal B (HER2 positive)
+																		members matches {
+																			CONDITION_BRANCH[id101] occurrences matches {1} matches {	-- TNM: T1 = A and N = 0
+																				test matches {
+																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id103] matches {
+																						expression matches {"tnm_major_minor ($tnm_t) = '1a' and tnm_major_number ($tnm_n) = 0"}
+																					}
+																				}
+																				members matches {
+																					use_archetype TASK[id130, openehr-ehr-TASK.recommend_no_chemo.v0.0.1] occurrences matches {1} 
+																				}
+																			}
+																			CONDITION_BRANCH[id102] occurrences matches {1} matches {	-- T1b or T1c and N = 0
+																				test matches {
+																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id105] matches {
+																						expression matches {"$tnm_t matches {'T1Bb', 'T1c'} and tnm_major_number ($tnm_n) = 0"}
+																					}
+																				}
+																				members matches {
+																					use_archetype TASK[id131, openehr-ehr-TASK.prescribe_trastuzumab.v0.0.1] occurrences matches {1} 
+																				}
+																			}
+																			CONDITION_BRANCH[id132] occurrences matches {1} matches {	-- TNM: 2 <= T <= 4 or N > 0
+																				test matches {
+																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id133] matches {
+																						expression matches {"tnm_major_number ($tnm_t) matches {|2..4|} or tnm_major_number ($tnm_n) > 0"}
+																					}
+																				}
+																				members matches {
+																					use_archetype DECISION_GROUP[id135, openehr-ehr-DECISION_GROUP.determine_her2_chemo_regime.v0.0.1] occurrences matches {1} 
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+															DECISION_BRANCH[id14] occurrences matches {1} matches {	-- Molecular subtype = HER2 type
+																value_constraint matches {
+																	CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id44] matches {
+																		expression matches {"'HER2 type'"}
+																	}
+																}
+																members matches {
+																	CONDITION_GROUP[id107] occurrences matches {1} matches {	-- TNM - HER2 type
+																		members matches {
+																			CONDITION_BRANCH[id108] occurrences matches {1} matches {	-- TNM: T = 1a and N = 0
+																				test matches {
+																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id110] matches {
+																						expression matches {"$tnm_t = '1a' and tnm_major_number ($tnm_n) = 0"}
+																					}
+																				}
+																				members matches {
+																					use_archetype TASK[id136, openehr-ehr-TASK.recommend_no_chemo.v0.0.1] occurrences matches {1} 
+																				}
+																			}
+																			CONDITION_BRANCH[id109] occurrences matches {1} matches {	-- TNM: T = 1b and N = 0
+																				test matches {
+																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id112] matches {
+																						expression matches {"tnm_major_minor ($tnm_t) = '1b' and tnm_major_number ($tnm_n) = 0"}
+																					}
+																				}
+																				members matches {
+																					use_archetype TASK[id137, openehr-ehr-TASK.prescribe_trastuzumab.v0.0.1] occurrences matches {1} 
+																				}
+																			}
+																			CONDITION_BRANCH[id114] occurrences matches {1} matches {	-- TNM: T in 1c..4 or N > 0
+																				test matches {
+																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id115] matches {
+																						expression matches {"tnm_major_number ($tnm_t) matches {|1..4|} or tnm_major_number ($tnm_n) = 0"}
+																					}
+																				}
+																				members matches {
+																					use_archetype DECISION_GROUP[id138, openehr-ehr-DECISION_GROUP.determine_her2_chemo_regime.v0.0.1] occurrences matches {1} 
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+															DECISION_BRANCH[id15] occurrences matches {1} matches {	-- Molecular subtype = Triple negative
+																value_constraint matches {
+																	CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id67] matches {
+																		expression matches {"'triple negative'"}
+																	}
+																}
+																members matches {
+																	CONDITION_GROUP[id117] occurrences matches {1} matches {	-- TNM - triple negative
+																		members matches {
+																			CONDITION_BRANCH[id118] occurrences matches {1} matches {	-- TNM: T = 1a and N = 0
+																				test matches {
+																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id120] matches {
+																						expression matches {"tnm_major_minor ($tnm_t) = '1a' and tnm_major_number ($tnm_n) = 0"}
+																					}
+																				}
+																				members matches {
+																					use_archetype TASK[id139, openehr-ehr-TASK.recommend_no_chemo.v0.0.1] occurrences matches {1} 
+																				}
+																			}
+																			CONDITION_BRANCH[id119] occurrences matches {1} matches {	-- TNM: T > 1a or N > 0
+																				test matches {
+																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id122] matches {
+																						expression matches {"tnm_major_minor ($tnm_t) > '1a' or tnm_major_number ($tnm_n) > 0"}
+																					}
+																				}
+																				members matches {
+																					use_archetype DECISION_GROUP[id140, openehr-ehr-DECISION_GROUP.determine_taxanes_chemo_regime.v0.0.1] occurrences matches {1} 
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+														test matches {
+															CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id45] matches {
+																expression matches {"$molecular_subtype"}
+															}
+														}
+													}
+												}
+												value_constraint matches {
+													CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id47] matches {
+														expression matches {"'negative'"}
+													}
+												}
+											}
+										}
+										test matches {
+											CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id69] matches {
+												expression matches {"$estrogen_receptor"}
+											}
+										}
+									}
+								}
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id84] matches {
+										expression matches {"'not present'"}
+									}
+								}
+							}
+							DECISION_BRANCH[id6] occurrences matches {1} matches {	-- Metastasis = present
+								members matches {
+									DECISION_GROUP[id19] occurrences matches {1} matches {	-- Molecular subtype
+										members matches {
+											DECISION_BRANCH[id86] occurrences matches {1} 	-- Luminal A
+										}
+									}
+								}
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id71] matches {
+										expression matches {"'present'"}
+									}
+								}
+							}
+						}
+						test matches {
+							CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id73] matches {
+								expression matches {"$metastasis"}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Breast cancer chemo assess and prescribe">
+				description = <"-">
+			>
+			["id2"] = <
+				text = <"Main diagnosis">
+				description = <"-">
+			>
+			["id4"] = <
+				text = <"Metastasis">
+				description = <"-">
+			>
+			["id5"] = <
+				text = <"Metastasis = not present">
+				description = <"-">
+			>
+			["id6"] = <
+				text = <"Metastasis = present">
+				description = <"-">
+			>
+			["id7"] = <
+				text = <"Estrogen receptor (ER)">
+				description = <"-">
+			>
+			["id8"] = <
+				text = <"ER = positive">
+				description = <"-">
+			>
+			["id9"] = <
+				text = <"ER = negative">
+				description = <"-">
+			>
+			["id10"] = <
+				text = <"Molecular subtype">
+				description = <"-">
+			>
+			["id11"] = <
+				text = <"Molecular subtype = Luminal A">
+				description = <"-">
+			>
+			["id12"] = <
+				text = <"Molecular subtype = Luminal B (HER2 negative)">
+				description = <"-">
+			>
+			["id13"] = <
+				text = <"Molecular subtype - Luminal B (HER2 positive)">
+				description = <"-">
+			>
+			["id14"] = <
+				text = <"Molecular subtype = HER2 type">
+				description = <"-">
+			>
+			["id15"] = <
+				text = <"Molecular subtype = Triple negative">
+				description = <"-">
+			>
+			["id16"] = <
+				text = <"TNM - Luminal B (HER2 negative)">
+				description = <"-">
+			>
+			["id17"] = <
+				text = <"TNM: T = 1a and N =0">
+				description = <"-">
+			>
+			["id18"] = <
+				text = <"TNM: T > 1a or N > 0">
+				description = <"-">
+			>
+			["id19"] = <
+				text = <"Molecular subtype">
+				description = <"-">
+			>
+			["id20"] = <
+				text = <"Record no chemo Rx">
+				description = <"-">
+			>
+			["id22"] = <
+				text = <"Assessment - no chemo Rx">
+				description = <"-">
+			>
+			["id23"] = <
+				text = <"Contraindications to anthracyclines">
+				description = <"-">
+			>
+			["id24"] = <
+				text = <"Contraindications - present">
+				description = <"-">
+			>
+			["id25"] = <
+				text = <"Contraindications - not present">
+				description = <"-">
+			>
+			["id26"] = <
+				text = <"Prescribe CMF chemo">
+				description = <"-">
+			>
+			["id28"] = <
+				text = <"Prescribe CMF">
+				description = <"-">
+			>
+			["id29"] = <
+				text = <"Critical cardiopathology or age > 75">
+				description = <"-">
+			>
+			["id30"] = <
+				text = <"Present">
+				description = <"-">
+			>
+			["id31"] = <
+				text = <"Epirubicin + cycloposphamide">
+				description = <"-">
+			>
+			["id33"] = <
+				text = <"Prescribe Epirubicin + cycloposphamide">
+				description = <"-">
+			>
+			["id34"] = <
+				text = <"Not present">
+				description = <"-">
+			>
+			["id35"] = <
+				text = <"AC">
+				description = <"-">
+			>
+			["id37"] = <
+				text = <"Prescribe AC chemo">
+				description = <"-">
+			>
+			["id51"] = <
+				text = <"Menstrual status">
+				description = <"-">
+			>
+			["id52"] = <
+				text = <"Post-menopause">
+				description = <"-">
+			>
+			["id53"] = <
+				text = <"Premenopause">
+				description = <"-">
+			>
+			["id58"] = <
+				text = <"Contraindication to tamoxifen">
+				description = <"-">
+			>
+			["id61"] = <
+				text = <"Tamoxifen contraindication = Yes">
+				description = <"-">
+			>
+			["id64"] = <
+				text = <"Tamoxifen contraindication = No">
+				description = <"-">
+			>
+			["id86"] = <
+				text = <"Luminal A">
+				description = <"-">
+			>
+			["id89"] = <
+				text = <"TNM (Luminal A)">
+				description = <"-">
+			>
+			["id90"] = <
+				text = <"TNM: T < 3 and N < 2 and G < 3">
+				description = <"-">
+			>
+			["id91"] = <
+				text = <"TNM: T >= 3 or N >= 2 or G >= 3">
+				description = <"-">
+			>
+			["id96"] = <
+				text = <"Rec: no chemo Rx">
+				description = <"-">
+			>
+			["id98"] = <
+				text = <"Recommmend: no chemo">
+				description = <"-">
+			>
+			["id100"] = <
+				text = <"TNM - Luminal B (HER2 positive)">
+				description = <"-">
+			>
+			["id101"] = <
+				text = <"TNM: T1 = A and N = 0">
+				description = <"-">
+			>
+			["id102"] = <
+				text = <"T1b or T1c and N = 0">
+				description = <"-">
+			>
+			["id107"] = <
+				text = <"TNM - HER2 type">
+				description = <"-">
+			>
+			["id108"] = <
+				text = <"TNM: T = 1a and N = 0">
+				description = <"-">
+			>
+			["id109"] = <
+				text = <"TNM: T = 1b and N = 0">
+				description = <"-">
+			>
+			["id114"] = <
+				text = <"TNM: T in 1c..4 or N > 0">
+				description = <"-">
+			>
+			["id117"] = <
+				text = <"TNM - triple negative">
+				description = <"-">
+			>
+			["id118"] = <
+				text = <"TNM: T = 1a and N = 0">
+				description = <"-">
+			>
+			["id119"] = <
+				text = <"TNM: T > 1a or N > 0">
+				description = <"-">
+			>
+			["id124"] = <
+				text = <"Assessment: no chemo Rx">
+				description = <"-">
+			>
+			["id126"] = <
+				text = <"Recommend no chemo">
+				description = <"-">
+			>
+			["id127"] = <
+				text = <"Decide chemo regime">
+				description = <"-">
+			>
+			["id128"] = <
+				text = <"HER2 negative: recommend no chemo">
+				description = <"-">
+			>
+			["id129"] = <
+				text = <"Decide chemo regime">
+				description = <"-">
+			>
+			["id130"] = <
+				text = <"HER2 positive: recommend no chemo">
+				description = <"-">
+			>
+			["id131"] = <
+				text = <"Prescribe trastuzumab">
+				description = <"-">
+			>
+			["id132"] = <
+				text = <"TNM: 2 <= T <= 4 or N > 0">
+				description = <"-">
+			>
+			["id135"] = <
+				text = <"Decide HER2 regime">
+				description = <"-">
+			>
+			["id136"] = <
+				text = <"HER2 type: recommend no chemo">
+				description = <"-">
+			>
+			["id137"] = <
+				text = <"Prescribe trastuzumab">
+				description = <"-">
+			>
+			["id138"] = <
+				text = <"Decide HER2 chemo regime">
+				description = <"-">
+			>
+			["id139"] = <
+				text = <"Triple negative tye: recommend no chemo">
+				description = <"-">
+			>
+			["id140"] = <
+				text = <"Decide non-HER2 regime">
+				description = <"-">
+			>
+			["id141"] = <
+				text = <"Decide ER-positive hormone regime">
+				description = <"-">
+			>
+		>
+	>

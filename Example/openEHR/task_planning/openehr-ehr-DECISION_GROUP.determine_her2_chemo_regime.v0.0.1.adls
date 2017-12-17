@@ -1,0 +1,33 @@
+archetype (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-ehr-DECISION_GROUP.determine_her2_chemo_regime.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	DECISION_GROUP[id1] 	-- -
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"-">
+				description = <"-">
+			>
+		>
+	>

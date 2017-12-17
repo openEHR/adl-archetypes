@@ -1,0 +1,169 @@
+archetype (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-ehr-DECISION_GROUP.determine_taxanes_chemo_regime.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	DECISION_GROUP[id1] matches {	-- Determine taxanes regime
+		test matches {
+			CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id2] matches {
+				expression matches {"$taxanes_contraindicated"}
+			}
+		}
+		members matches {
+			DECISION_BRANCH[id4] occurrences matches {1} matches {	-- Taxanes contraindicated
+				value_constraint matches {
+					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id6] matches {
+						expression matches {"True"}
+					}
+				}
+			}
+			DECISION_BRANCH[id5] occurrences matches {1} matches {	-- Taxanes not contraindicated
+				value_constraint matches {
+					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id8] matches {
+						expression matches {"False"}
+					}
+				}
+				members matches {
+					DECISION_GROUP[id10] occurrences matches {1} matches {	-- Anthracyclines contraindicated?
+						test matches {
+							CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id11] matches {
+								expression matches {"$anthracyclines_contraindicated"}
+							}
+						}
+						members matches {
+							DECISION_BRANCH[id13] occurrences matches {1} matches {	-- Not contraindicated
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id17] matches {
+										expression matches {"False"}
+									}
+								}
+								members matches {
+									use_archetype TASK_GROUP[id22, openehr-ehr-TASK_GROUP.choose_ac_chemo_regime.v0.0.1] occurrences matches {1} 
+									DECISION_GROUP[id23] occurrences matches {1} matches {	-- Has BRCA mutation
+										test matches {
+											CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id24] matches {
+												expression matches {"$has_brca_mutation"}
+											}
+										}
+										members matches {
+											DECISION_BRANCH[id26] occurrences matches {1} matches {	-- BRCA mutation present
+												value_constraint matches {
+													CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id27] matches {
+														expression matches {"True"}
+													}
+												}
+												members matches {
+													TASK[id29] occurrences matches {1} matches {	-- Include carboplatin
+														action matches {
+															DEFINED_ACTION[id30] occurrences matches {1} matches {
+																prototype matches {
+																	EVALUATION[id31] occurrences matches {1} 	-- Recommend: add carboplatin
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							DECISION_BRANCH[id14] occurrences matches {1} matches {	-- Contraindicated
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id15] matches {
+										expression matches {"True"}
+									}
+								}
+								members matches {
+									TASK[id19] occurrences matches {1} matches {	-- Recommend DC therapy
+										action matches {
+											DEFINED_ACTION[id20] occurrences matches {1} matches {
+												prototype matches {
+													EVALUATION[id21] occurrences matches {1} 	-- Recommend DC chemotherapy
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Determine taxanes regime">
+				description = <"-">
+			>
+			["id4"] = <
+				text = <"Taxanes contraindicated">
+				description = <"-">
+			>
+			["id5"] = <
+				text = <"Taxanes not contraindicated">
+				description = <"-">
+			>
+			["id10"] = <
+				text = <"Anthracyclines contraindicated?">
+				description = <"-">
+			>
+			["id13"] = <
+				text = <"Not contraindicated">
+				description = <"-">
+			>
+			["id14"] = <
+				text = <"Contraindicated">
+				description = <"-">
+			>
+			["id19"] = <
+				text = <"Recommend DC therapy">
+				description = <"-">
+			>
+			["id21"] = <
+				text = <"Recommend DC chemotherapy">
+				description = <"-">
+			>
+			["id22"] = <
+				text = <"Choose AC chemo">
+				description = <"-">
+			>
+			["id23"] = <
+				text = <"Has BRCA mutation">
+				description = <"-">
+			>
+			["id26"] = <
+				text = <"BRCA mutation present">
+				description = <"-">
+			>
+			["id29"] = <
+				text = <"Include carboplatin">
+				description = <"-">
+			>
+			["id31"] = <
+				text = <"Recommend: add carboplatin">
+				description = <"-">
+			>
+		>
+	>

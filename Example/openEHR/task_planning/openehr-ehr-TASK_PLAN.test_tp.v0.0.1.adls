@@ -1,0 +1,144 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0)
+	openehr-ehr-TASK_PLAN.nutrition_screening.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	TASK_PLAN[id1] matches {	-- Nutrition Screening
+		definition matches {
+			TASK_GROUP[id2] matches {
+				execution_type matches {0}
+				members matches {
+					TASK[id4] occurrences matches {1} matches {	-- Screen for nutirition
+						action matches {
+							DEFINED_ACTION[id9] occurrences matches {1} matches {
+								prototype matches {
+									ACTION[id10] occurrences matches {1} 	-- Conduct nutrition screen
+								}
+							}
+						}
+					}
+					DECISION_GROUP[id5] occurrences matches {1} matches {	-- Score
+						members matches {
+							DECISION_BRANCH[id6] occurrences matches {1} matches {	-- Score = 0
+								value_constraint matches {0}
+								members matches {
+									TASK[id11] occurrences matches {1} matches {	-- Record Low Risk
+										action matches {
+											DEFINED_ACTION[id12] occurrences matches {1} matches {
+												prototype matches {
+													ACTION[id13] occurrences matches {1} 	-- -
+												}
+											}
+										}
+									}
+								}
+							}
+							DECISION_BRANCH[id7] occurrences matches {1} matches {	-- Score = 1..2
+								value_constraint matches {|1..2|}
+								members matches {
+									TASK[id14] occurrences matches {1} matches {	-- Record Low Risk
+										action matches {
+											DEFINED_ACTION[id15] occurrences matches {1} matches {
+												prototype matches {
+													ACTION[id16] occurrences matches {1} 	-- -
+												}
+											}
+										}
+									}
+								}
+							}
+							DECISION_BRANCH[id8] occurrences matches {1} matches {	-- Score = 3
+								value_constraint matches {3}
+								members matches {
+									TASK[id17] occurrences matches {1} matches {	-- Record Low Risk
+										action matches {
+											DEFINED_ACTION[id18] occurrences matches {1} matches {
+												prototype matches {
+													ACTION[id19] occurrences matches {1} 	-- -
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Nutrition Screening">
+				description = <"-">
+			>
+			["id4"] = <
+				text = <"Screen for nutirition">
+				description = <"Screen for nutirition Task">
+			>
+			["id5"] = <
+				text = <"Score">
+				description = <"-">
+			>
+			["id6"] = <
+				text = <"Score = 0">
+				description = <"-">
+			>
+			["id7"] = <
+				text = <"Score = 1..2">
+				description = <"-">
+			>
+			["id8"] = <
+				text = <"Score = 3">
+				description = <"-">
+			>
+			["id10"] = <
+				text = <"Conduct nutrition screen">
+				description = <"-">
+			>
+			["id11"] = <
+				text = <"Record Low Risk">
+				description = <"-">
+			>
+			["id13"] = <
+				text = <"-">
+				description = <"-">
+			>
+			["id14"] = <
+				text = <"Record Medium Risk">
+				description = <"-">
+			>
+			["id16"] = <
+				text = <"-">
+				description = <"-">
+			>
+			["id17"] = <
+				text = <"Record High Risk">
+				description = <"-">
+			>
+			["id19"] = <
+				text = <"-">
+				description = <"-">
+			>
+		>
+	>

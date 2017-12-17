@@ -1,0 +1,49 @@
+archetype (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-ehr-TASK.recommend_no_chemo.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	TASK[id1] occurrences matches {1} matches {	-- Record no chemo Rx
+		action matches {
+			DEFINED_ACTION[id21] occurrences matches {1} matches {
+				prototype matches {
+					EVALUATION[id22] occurrences matches {1} 	-- Assessment - no chemo Rx
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Record no chemo Rx">
+				description = <"-">
+			>
+			["id20"] = <
+				text = <"Breast cancer chemo assess and prescribe">
+				description = <"-">
+			>
+			["id22"] = <
+				text = <"Assessment - no chemo Rx">
+				description = <"-">
+			>
+		>
+	>

@@ -1,0 +1,161 @@
+archetype (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-ehr-DECISION_GROUP.determine_anthracyclines_chemo_regime.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	DECISION_GROUP[id1] occurrences matches {1} matches {	-- Contraindications to anthracyclines
+		members matches {
+			DECISION_BRANCH[id24] occurrences matches {1} matches {	-- Contraindications - present
+				members matches {
+					TASK[id26] occurrences matches {1} matches {	-- Prescribe CMF chemo
+						action matches {
+							DEFINED_ACTION[id27] occurrences matches {1} matches {
+								prototype matches {
+									INSTRUCTION[id28] occurrences matches {1} 	-- Prescribe CMF
+								}
+							}
+						}
+					}
+				}
+				value_constraint matches {
+					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id82] matches {
+						expression matches {"True"}
+					}
+				}
+			}
+			DECISION_BRANCH[id25] occurrences matches {1} matches {	-- Contraindications - not present
+				members matches {
+					DECISION_GROUP[id29] occurrences matches {1} matches {	-- Critical cardiopathology or age > 75
+						members matches {
+							DECISION_BRANCH[id30] occurrences matches {1} matches {	-- Present
+								members matches {
+									TASK[id31] occurrences matches {1} matches {	-- Epirubicin + cycloposphamide
+										action matches {
+											DEFINED_ACTION[id32] occurrences matches {1} matches {
+												prototype matches {
+													INSTRUCTION[id33] occurrences matches {1} 	-- Prescribe Epirubicin + cycloposphamide
+												}
+											}
+										}
+									}
+								}
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id84] matches {
+										expression matches {"True"}
+									}
+								}
+							}
+							DECISION_BRANCH[id34] occurrences matches {1} matches {	-- Not present
+								members matches {
+									TASK[id35] occurrences matches {1} matches {	-- AC
+										action matches {
+											DEFINED_ACTION[id36] occurrences matches {1} matches {
+												prototype matches {
+													INSTRUCTION[id37] occurrences matches {1} 	-- Prescribe AC chemo
+												}
+											}
+										}
+									}
+								}
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id75] matches {
+										expression matches {"False"}
+									}
+								}
+							}
+						}
+						test matches {
+							CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id77] matches {
+								expression matches {"$has_critical_cardiopathology or $age > 75"}
+							}
+						}
+					}
+				}
+				value_constraint matches {
+					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id79] matches {
+						expression matches {"False"}
+					}
+				}
+			}
+		}
+		test matches {
+			CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id81] matches {
+				expression matches {"$anthracyclines_contraindicated"}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Contraindications to anthracyclines">
+				description = <"-">
+			>
+			["id23"] = <
+				text = <"Breast cancer chemo assess and prescribe">
+				description = <"-">
+			>
+			["id24"] = <
+				text = <"Contraindications - present">
+				description = <"-">
+			>
+			["id26"] = <
+				text = <"Prescribe CMF chemo">
+				description = <"-">
+			>
+			["id28"] = <
+				text = <"Prescribe CMF">
+				description = <"-">
+			>
+			["id25"] = <
+				text = <"Contraindications - not present">
+				description = <"-">
+			>
+			["id29"] = <
+				text = <"Critical cardiopathology or age > 75">
+				description = <"-">
+			>
+			["id30"] = <
+				text = <"Present">
+				description = <"-">
+			>
+			["id31"] = <
+				text = <"Epirubicin + cycloposphamide">
+				description = <"-">
+			>
+			["id33"] = <
+				text = <"Prescribe Epirubicin + cycloposphamide">
+				description = <"-">
+			>
+			["id34"] = <
+				text = <"Not present">
+				description = <"-">
+			>
+			["id35"] = <
+				text = <"AC">
+				description = <"-">
+			>
+			["id37"] = <
+				text = <"Prescribe AC chemo">
+				description = <"-">
+			>
+		>
+	>
