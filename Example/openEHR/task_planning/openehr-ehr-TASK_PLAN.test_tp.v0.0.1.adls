@@ -37,7 +37,11 @@ definition
 					DECISION_GROUP[id5] occurrences matches {1} matches {	-- Score
 						members matches {
 							DECISION_BRANCH[id6] occurrences matches {1} matches {	-- Score = 0
-								value_constraint matches {0}
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id38] matches {
+										expression matches {"0"}
+									}
+								}
 								members matches {
 									TASK[id11] occurrences matches {1} matches {	-- Record Low Risk
 										action matches {
@@ -51,7 +55,11 @@ definition
 								}
 							}
 							DECISION_BRANCH[id7] occurrences matches {1} matches {	-- Score = 1..2
-								value_constraint matches {|1..2|}
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id39] matches {
+										expression matches {"|1..2|"}
+									}
+								}
 								members matches {
 									TASK[id14] occurrences matches {1} matches {	-- Record Low Risk
 										action matches {
@@ -65,7 +73,11 @@ definition
 								}
 							}
 							DECISION_BRANCH[id8] occurrences matches {1} matches {	-- Score = 3
-								value_constraint matches {3}
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id40] matches {
+										expression matches {"3"}
+									}
+								}
 								members matches {
 									TASK[id17] occurrences matches {1} matches {	-- Record Low Risk
 										action matches {

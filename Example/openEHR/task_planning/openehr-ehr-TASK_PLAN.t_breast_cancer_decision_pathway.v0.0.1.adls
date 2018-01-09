@@ -1,0 +1,36 @@
+template (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-ehr-TASK_PLAN.t_breast_cancer_decision_pathway.v0.0.1
+
+specialize
+	openehr-ehr-TASK_PLAN.breast_cancer_decision_pathway.v0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	TASK_PLAN[id1.1] 	-- -
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"-">
+				description = <"-">
+			>
+		>
+	>

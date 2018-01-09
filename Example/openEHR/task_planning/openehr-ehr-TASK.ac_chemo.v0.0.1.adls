@@ -1,0 +1,49 @@
+archetype (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-ehr-TASK.ac_chemo.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	TASK[id1] occurrences matches {1} matches {	-- AC
+		action matches {
+			DEFINED_ACTION[id36] occurrences matches {1} matches {
+				prototype matches {
+					INSTRUCTION[id37] occurrences matches {1} 	-- Prescribe AC chemo
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"AC">
+				description = <"-">
+			>
+			["id35"] = <
+				text = <"Contraindications to anthracyclines">
+				description = <"-">
+			>
+			["id37"] = <
+				text = <"Prescribe AC chemo">
+				description = <"-">
+			>
+		>
+	>

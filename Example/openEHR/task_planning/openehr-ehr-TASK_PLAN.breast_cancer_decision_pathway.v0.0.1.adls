@@ -1,5 +1,5 @@
 archetype (adl_version=2.0.6; rm_release=1.0.0)
-	openehr-ehr-TASK_PLAN.breast_cancer_chemo.v0.0.1
+	openehr-ehr-TASK_PLAN.breast_cancer_decision_pathway.v0.0.1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -290,7 +290,7 @@ terminology
 	term_definitions = <
 		["en"] = <
 			["id1"] = <
-				text = <"Breast cancer chemo assess and prescribe">
+				text = <"Breast cancer treatment decision pathway">
 				description = <"-">
 			>
 			["id2"] = <

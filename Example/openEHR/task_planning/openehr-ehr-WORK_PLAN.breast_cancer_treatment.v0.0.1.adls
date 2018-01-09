@@ -1,0 +1,143 @@
+archetype (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-ehr-WORK_PLAN.breast_cancer_treatment.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	WORK_PLAN[id1] matches {	-- Breast cancer treatment plan
+		plans matches {
+			UID_BASED_ID[id2] occurrences matches {1} 	-- Decision pathway
+		}
+		context matches {
+			PLAN_DATA_CONTEXT[id3] occurrences matches {1} matches {
+				variables matches {
+					STATE_VARIABLE[id4] occurrences matches {1} matches {	-- Has menopause
+						name matches {"has_menopause"}
+						required_currency matches {PDTHMS}
+						type matches {
+							TYPE_DEF_BOOLEAN[id6] matches {
+								type_name matches {"Boolean"}
+							}
+						}
+						populating_request matches {
+							SYSTEM_CALL[id11] occurrences matches {1} matches {
+								call_name matches {"execute_stored_query"}
+							}
+						}
+					}
+					EVENT_VARIABLE[id8] occurrences matches {1} matches {	-- TNM - tumour (T)
+						type matches {
+							TYPE_DEF_STRING[id9] matches {
+								type_name matches {"String"}
+							}
+						}
+						name matches {"tnm_t"}
+						populating_request matches {
+							SYSTEM_CALL[id12] occurrences matches {1} matches {
+								call_name matches {"execute_stored_query"}
+							}
+						}
+					}
+					EVENT_VARIABLE[id14] occurrences matches {1} matches {	-- TNM - node (N)
+						type matches {
+							TYPE_DEF_STRING[id17] matches {
+								type_name matches {"String"}
+							}
+						}
+						name matches {"tnm_n"}
+						populating_request matches {
+							SYSTEM_CALL[id33] occurrences matches {1} matches {
+								call_name matches {"execute_stored_query"}
+							}
+						}
+					}
+					EVENT_VARIABLE[id15] occurrences matches {1} matches {	-- TNM - metastasis (M)
+						type matches {
+							TYPE_DEF_STRING[id16] matches {
+								type_name matches {"String"}
+							}
+						}
+						name matches {"tnm_m"}
+						populating_request matches {
+							SYSTEM_CALL[id29] occurrences matches {1} matches {
+								call_name matches {"execute_stored_query"}
+							}
+						}
+					}
+					EVENT_VARIABLE[id20] occurrences matches {1} matches {	-- Molecular subtype
+						name matches {"molecular_subtype"}
+						type matches {
+							TYPE_DEF_TERMINOLOGY_CODE[id23] 
+						}
+						populating_request matches {
+							SYSTEM_CALL[id26] occurrences matches {1} matches {
+								call_name matches {"execute_stored_query"}
+							}
+						}
+					}
+					EVENT_VARIABLE[id22] occurrences matches {1} matches {	-- Metastasis
+						name matches {"metastasis"}
+						populating_request matches {
+							SYSTEM_CALL[id25] occurrences matches {1} matches {
+								call_name matches {"execute_stored_query"}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Breast cancer treatment plan">
+				description = <"-">
+			>
+			["id2"] = <
+				text = <"Decision pathway">
+				description = <"-">
+			>
+			["id4"] = <
+				text = <"Has menopause">
+				description = <"-">
+			>
+			["id8"] = <
+				text = <"TNM - tumour (T)">
+				description = <"-">
+			>
+			["id14"] = <
+				text = <"TNM - node (N)">
+				description = <"-">
+			>
+			["id15"] = <
+				text = <"TNM - metastasis (M)">
+				description = <"-">
+			>
+			["id20"] = <
+				text = <"Molecular subtype">
+				description = <"-">
+			>
+			["id22"] = <
+				text = <"Metastasis">
+				description = <"-">
+			>
+		>
+	>

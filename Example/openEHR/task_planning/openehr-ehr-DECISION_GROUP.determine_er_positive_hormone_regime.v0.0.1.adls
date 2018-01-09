@@ -25,14 +25,14 @@ definition
 			DECISION_BRANCH[id52] occurrences matches {1} matches {	-- Post-menopause
 				value_constraint matches {
 					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id54] matches {
-						expression matches {"'post-menopause'"}
+						expression matches {"True"}
 					}
 				}
 			}
 			DECISION_BRANCH[id53] occurrences matches {1} matches {	-- Premenopause
 				value_constraint matches {
 					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id56] matches {
-						expression matches {"'pre-menopause'"}
+						expression matches {"False"}
 					}
 				}
 				members 
@@ -40,7 +40,7 @@ definition
 		}
 		test matches {
 			CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id87] matches {
-				expression matches {"$menstrual_status"}
+				expression matches {"$has_menopause"}
 			}
 		}
 	}
@@ -61,7 +61,7 @@ terminology
 				description = <"-">
 			>
 			["id53"] = <
-				text = <"Premenopause">
+				text = <"Pre-menopause">
 				description = <"-">
 			>
 		>
