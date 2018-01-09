@@ -38,6 +38,19 @@ definition
 						populating_request matches {
 							SYSTEM_CALL[id11] occurrences matches {1} matches {
 								call_name matches {"execute_stored_query"}
+								parameters matches {
+									ITEM_LIST[id34] occurrences matches {1} matches {
+										items matches {
+											ELEMENT[id35] occurrences matches {1} matches {	-- Query name
+												value matches {
+													DV_TEXT[id36] occurrences matches {1} matches {
+														value matches {"has-menopause"}
+													}
+												}
+											}
+										}
+									}
+								}
 							}
 						}
 					}
@@ -137,6 +150,10 @@ terminology
 			>
 			["id22"] = <
 				text = <"Metastasis">
+				description = <"-">
+			>
+			["id35"] = <
+				text = <"Query name">
 				description = <"-">
 			>
 		>
