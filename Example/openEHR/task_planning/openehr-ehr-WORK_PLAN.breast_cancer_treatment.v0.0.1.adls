@@ -29,28 +29,17 @@ definition
 				variables matches {
 					STATE_VARIABLE[id4] occurrences matches {1} matches {	-- Has menopause
 						name matches {"has_menopause"}
-						required_currency matches {PDTHMS}
+						required_currency matches {P30D}
 						type matches {
 							TYPE_DEF_BOOLEAN[id6] matches {
 								type_name matches {"Boolean"}
 							}
 						}
 						populating_request matches {
-							SYSTEM_CALL[id11] occurrences matches {1} matches {
+							QUERY_CALL[id11] occurrences matches {1} matches {
 								call_name matches {"execute_stored_query"}
-								parameters matches {
-									ITEM_LIST[id34] occurrences matches {1} matches {
-										items matches {
-											ELEMENT[id35] occurrences matches {1} matches {	-- Query name
-												value matches {
-													DV_TEXT[id36] occurrences matches {1} matches {
-														value matches {"has-menopause"}
-													}
-												}
-											}
-										}
-									}
-								}
+								query_id matches {"general-has_menopause"}
+								system_id matches {"ehr"}
 							}
 						}
 					}
@@ -62,8 +51,10 @@ definition
 						}
 						name matches {"tnm_t"}
 						populating_request matches {
-							SYSTEM_CALL[id12] occurrences matches {1} matches {
+							QUERY_CALL[id12] occurrences matches {1} matches {
 								call_name matches {"execute_stored_query"}
+								query_id matches {"oncology-breast_cancer-tnm_t"}
+								system_id matches {"ehr"}
 							}
 						}
 					}
@@ -75,8 +66,10 @@ definition
 						}
 						name matches {"tnm_n"}
 						populating_request matches {
-							SYSTEM_CALL[id33] occurrences matches {1} matches {
+							QUERY_CALL[id33] occurrences matches {1} matches {
 								call_name matches {"execute_stored_query"}
+								query_id matches {"oncology-breast_cancer-tnm_n"}
+								system_id matches {"ehr"}
 							}
 						}
 					}
@@ -88,8 +81,10 @@ definition
 						}
 						name matches {"tnm_m"}
 						populating_request matches {
-							SYSTEM_CALL[id29] occurrences matches {1} matches {
+							QUERY_CALL[id29] occurrences matches {1} matches {
 								call_name matches {"execute_stored_query"}
+								query_id matches {"oncology-breast_cancer-tnm_m"}
+								system_id matches {"ehr"}
 							}
 						}
 					}
@@ -99,16 +94,20 @@ definition
 							TYPE_DEF_TERMINOLOGY_CODE[id23] 
 						}
 						populating_request matches {
-							SYSTEM_CALL[id26] occurrences matches {1} matches {
+							QUERY_CALL[id26] occurrences matches {1} matches {
 								call_name matches {"execute_stored_query"}
+								query_id matches {"oncology-breast_cancer-molecular_subtype"}
+								system_id matches {"ehr"}
 							}
 						}
 					}
 					EVENT_VARIABLE[id22] occurrences matches {1} matches {	-- Metastasis
 						name matches {"metastasis"}
 						populating_request matches {
-							SYSTEM_CALL[id25] occurrences matches {1} matches {
+							QUERY_CALL[id25] occurrences matches {1} matches {
 								call_name matches {"execute_stored_query"}
+								query_id matches {"oncology-breast_cancer-metastasis"}
+								system_id matches {"ehr"}
 							}
 						}
 					}
@@ -152,8 +151,8 @@ terminology
 				text = <"Metastasis">
 				description = <"-">
 			>
-			["id35"] = <
-				text = <"Query name">
+			["id34"] = <
+				text = <"Query id parameter def">
 				description = <"-">
 			>
 		>
