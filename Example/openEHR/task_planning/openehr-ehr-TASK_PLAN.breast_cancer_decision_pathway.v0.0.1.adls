@@ -20,7 +20,7 @@ description
 	>
 
 definition
-	TASK_PLAN[id1] matches {	-- Breast cancer chemo assess and prescribe
+	TASK_PLAN[id1] matches {	-- Breast cancer treatment decision pathway
 		indications matches {
 			DV_TEXT[id2] occurrences matches {1} 	-- Main diagnosis
 		}
@@ -28,10 +28,12 @@ definition
 			TASK_GROUP[id3] matches {
 				members matches {
 					DECISION_GROUP[id4] occurrences matches {1} matches {	-- Metastasis
+						override_type matches {2}
 						members matches {
 							DECISION_BRANCH[id5] occurrences matches {1} matches {	-- Metastasis = not present
 								members matches {
 									DECISION_GROUP[id7] occurrences matches {1} matches {	-- Estrogen receptor (ER)
+										override_type matches {2}
 										members matches {
 											DECISION_BRANCH[id8] occurrences matches {1} matches {	-- ER = positive
 												value_constraint matches {
@@ -46,6 +48,7 @@ definition
 											DECISION_BRANCH[id9] occurrences matches {1} matches {	-- ER = negative
 												members matches {
 													DECISION_GROUP[id10] occurrences matches {1} matches {	-- Molecular subtype
+														override_type matches {2}
 														members matches {
 															DECISION_BRANCH[id11] occurrences matches {1} matches {	-- Molecular subtype = Luminal A
 																value_constraint matches {
@@ -55,6 +58,7 @@ definition
 																}
 																members matches {
 																	CONDITION_GROUP[id89] occurrences matches {1} matches {	-- TNM (Luminal A)
+																		override_type matches {2}
 																		members matches {
 																			CONDITION_BRANCH[id90] occurrences matches {1} matches {	-- TNM: T < 3 and N < 2 and G < 3
 																				test matches {
@@ -83,6 +87,7 @@ definition
 															DECISION_BRANCH[id12] occurrences matches {1} matches {	-- Molecular subtype = Luminal B (HER2 negative)
 																members matches {
 																	CONDITION_GROUP[id16] occurrences matches {1} matches {	-- TNM - Luminal B (HER2 negative)
+																		override_type matches {2}
 																		members matches {
 																			CONDITION_BRANCH[id17] occurrences matches {1} matches {	-- TNM: T = 1a and N =0
 																				members matches {
@@ -121,6 +126,7 @@ definition
 																}
 																members matches {
 																	CONDITION_GROUP[id100] occurrences matches {1} matches {	-- TNM - Luminal B (HER2 positive)
+																		override_type matches {2}
 																		members matches {
 																			CONDITION_BRANCH[id101] occurrences matches {1} matches {	-- TNM: T1 = A and N = 0
 																				test matches {
@@ -164,6 +170,7 @@ definition
 																}
 																members matches {
 																	CONDITION_GROUP[id107] occurrences matches {1} matches {	-- TNM - HER2 type
+																		override_type matches {2}
 																		members matches {
 																			CONDITION_BRANCH[id108] occurrences matches {1} matches {	-- TNM: T = 1a and N = 0
 																				test matches {
@@ -207,6 +214,7 @@ definition
 																}
 																members matches {
 																	CONDITION_GROUP[id117] occurrences matches {1} matches {	-- TNM - triple negative
+																		override_type matches {2}
 																		members matches {
 																			CONDITION_BRANCH[id118] occurrences matches {1} matches {	-- TNM: T = 1a and N = 0
 																				test matches {
@@ -266,6 +274,7 @@ definition
 										members matches {
 											DECISION_BRANCH[id86] occurrences matches {1} 	-- Luminal A
 										}
+										override_type matches {2} 
 									}
 								}
 								value_constraint matches {

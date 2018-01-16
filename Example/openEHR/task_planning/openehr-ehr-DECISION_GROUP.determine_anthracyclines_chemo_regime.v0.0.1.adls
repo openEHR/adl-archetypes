@@ -21,10 +21,11 @@ description
 
 definition
 	DECISION_GROUP[id1] occurrences matches {1} matches {	-- Contraindications to anthracyclines
+		override_type matches {1}
 		members matches {
 			DECISION_BRANCH[id24] occurrences matches {1} matches {	-- Contraindications - present
 				members matches {
-					TASK[id26] occurrences matches {1} matches {	-- Prescribe CMF chemo
+					PERFORMABLE_TASK<DEFINED_ACTION>[id26] occurrences matches {1} matches {	-- Prescribe CMF chemo
 						action matches {
 							DEFINED_ACTION[id27] occurrences matches {1} matches {
 								prototype matches {
@@ -43,10 +44,11 @@ definition
 			DECISION_BRANCH[id25] occurrences matches {1} matches {	-- Contraindications - not present
 				members matches {
 					DECISION_GROUP[id29] occurrences matches {1} matches {	-- Critical cardiopathology or age > 75
+						override_type matches {1}
 						members matches {
 							DECISION_BRANCH[id30] occurrences matches {1} matches {	-- Present
 								members matches {
-									TASK[id31] occurrences matches {1} matches {	-- Epirubicin + cycloposphamide
+									PERFORMABLE_TASK<DEFINED_ACTION>[id31] occurrences matches {1} matches {	-- Epirubicin + cycloposphamide
 										action matches {
 											DEFINED_ACTION[id32] occurrences matches {1} matches {
 												prototype matches {
@@ -64,7 +66,7 @@ definition
 							}
 							DECISION_BRANCH[id34] occurrences matches {1} matches {	-- Not present
 								members matches {
-									TASK[id35] occurrences matches {1} matches {	-- AC
+									PERFORMABLE_TASK<DEFINED_ACTION>[id35] occurrences matches {1} matches {	-- AC
 										action matches {
 											DEFINED_ACTION[id36] occurrences matches {1} matches {
 												prototype matches {
@@ -82,7 +84,7 @@ definition
 							}
 						}
 						test matches {
-							CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id77] matches {
+							CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id77] matches {
 								expression matches {"$has_critical_cardiopathology or $age > 75"}
 							}
 						}
@@ -96,7 +98,7 @@ definition
 			}
 		}
 		test matches {
-			CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id81] matches {
+			CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id81] matches {
 				expression matches {"$anthracyclines_contraindicated"}
 			}
 		}

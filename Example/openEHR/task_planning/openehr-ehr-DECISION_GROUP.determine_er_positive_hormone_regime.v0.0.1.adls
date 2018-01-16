@@ -10,7 +10,7 @@ description
 		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
 		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
 	>
-	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	copyright = <"Copyright (c) 2018 openEHR Foundation">
 	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
 	details = <
 		["en"] = <
@@ -29,19 +29,45 @@ definition
 					}
 				}
 			}
-			DECISION_BRANCH[id53] occurrences matches {1} matches {	-- Premenopause
+			DECISION_BRANCH[id53] occurrences matches {1} matches {	-- Pre-menopause
 				value_constraint matches {
 					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id56] matches {
 						expression matches {"False"}
 					}
 				}
-				members 
+				members matches {
+					PERFORMABLE_TASK<DEFINED_ACTION>[id88] occurrences matches {1} matches {	-- Review contraindications
+						capture_dataset matches {
+							DATASET_SPEC[id90] occurrences matches {1} matches {	-- Review tamoxifen-related contra-indications
+								template_id matches {
+									STRING[id9999] occurrences matches {1} }
+								form_id matches {
+									STRING[id9999] }
+							}
+						}
+					}
+					DECISION_GROUP[id91] occurrences matches {1} matches {	-- Check if Tamoxifen contra-indicated
+						override_type matches {1}
+						review_dataset matches {
+							DATASET_SPEC[id94] occurrences matches {0..1} matches {	-- -
+								template_id matches {
+									STRING[id9999] occurrences matches {1} }
+								form_id matches {
+									STRING[id9999] }
+							}
+						}
+					}
+				}
 			}
 		}
 		test matches {
 			CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id87] matches {
 				expression matches {"$has_menopause"}
 			}
+		}
+		override_type matches {1}
+		review_dataset matches {
+			DATASET_SPEC[id95] occurrences matches {0..1} 	-- Menstruation record
 		}
 	}
 
@@ -62,6 +88,26 @@ terminology
 			>
 			["id53"] = <
 				text = <"Pre-menopause">
+				description = <"-">
+			>
+			["id88"] = <
+				text = <"Review contraindications">
+				description = <"-">
+			>
+			["id90"] = <
+				text = <"Review tamoxifen-related contra-indications">
+				description = <"-">
+			>
+			["id91"] = <
+				text = <"Check if Tamoxifen contra-indicated">
+				description = <"-">
+			>
+			["id94"] = <
+				text = <"-">
+				description = <"-">
+			>
+			["id95"] = <
+				text = <"Menstruation record">
 				description = <"-">
 			>
 		>

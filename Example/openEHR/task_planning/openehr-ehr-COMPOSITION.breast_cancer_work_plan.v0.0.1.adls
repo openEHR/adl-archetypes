@@ -1,0 +1,41 @@
+archetype (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-ehr-COMPOSITION.breast_cancer_work_plan.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	COMPOSITION[id1] matches {	-- -
+		content matches {
+			use_archetype WORK_PLAN[id2, openehr-ehr-WORK_PLAN.breast_cancer_treatment.v0.0.1] occurrences matches {1} 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"-">
+				description = <"-">
+			>
+			["id2"] = <
+				text = <"Work plan">
+				description = <"-">
+			>
+		>
+	>
