@@ -1,0 +1,161 @@
+archetype (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-ehr-DECISION_GROUP.determine_tamoxifen_regime.v0.0.1
+
+language
+	original_language = <[ISO_639-1::de]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	DECISION_GROUP[id1] matches {	-- Determine Tamoxifen regime.
+		review_dataset matches {
+			DATASET_SPEC[id2] occurrences matches {1} matches {	-- Risk of recurrence data set
+				template_id matches {
+					STRING[id9999] }
+				form_id matches {
+					STRING[id9999] }
+			}
+		}
+		execution_type matches {1}
+		override_type matches {1}
+		members matches {
+			DECISION_BRANCH[id7] occurrences matches {1} matches {	-- Low risk of recurrence
+				execution_type matches {|0..1|}
+				value_constraint matches {
+					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id13] matches {
+						expression matches {"False"}
+					}
+				}
+				members matches {
+					PERFORMABLE_TASK<DEFINED_ACTION>[id19] occurrences matches {1} matches {	-- Recommend Aromatase inhib 2y, tamoxifen 3y
+						action matches {
+							DEFINED_ACTION[id20] occurrences matches {1} matches {
+								prototype matches {
+									EVALUATION[id21] occurrences matches {1} 	-- Recommend Aromatase inhib 2y + tamox 3y
+								}
+							}
+						}
+					}
+				}
+			}
+			DECISION_BRANCH[id8] occurrences matches {1} matches {	-- High risk or recurrence
+				execution_type matches {1}
+				value_constraint matches {
+					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id11] matches {
+						expression matches {"True"}
+					}
+				}
+				members matches {
+					ADHOC_GROUP[id22] occurrences matches {1} matches {	-- Choose other tamoxifen regime
+						execution_type matches {1}
+						override_type matches {1}
+						members matches {
+							ADHOC_BRANCH[id25] occurrences matches {1} matches {	-- Tamoxifen 5y
+								execution_type matches {1}
+								members matches {
+									PERFORMABLE_TASK<DEFINED_ACTION>[id30] occurrences matches {1} matches {	-- Task - Recommend Tamoxifen 5y
+										action matches {
+											DEFINED_ACTION[id31] occurrences matches {1} matches {
+												prototype matches {
+													EVALUATION[id32] occurrences matches {0..1} 	
+													EVALUATION[id26] occurrences matches {0..1} 	
+													EVALUATION[id27] occurrences matches {0..1} 	
+													EVALUATION[id28] occurrences matches {0..1} 	
+													EVALUATION[id29] occurrences matches {0..1} 	
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		test matches {
+			CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id15] matches {
+				expression matches {"$risk_of_recurrence"}
+				type matches {
+					TYPE_DEF_BOOLEAN[id17] matches {
+						type_name matches {"Boolean"}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["de"] = <
+			["id1"] = <
+				text = <"Determine Tamoxifen regime.">
+				description = <"-">
+			>
+			["id2"] = <
+				text = <"Risk of recurrence data set">
+				description = <"-">
+			>
+			["id7"] = <
+				text = <"Low risk of recurrence">
+				description = <"-">
+			>
+			["id8"] = <
+				text = <"High risk or recurrence">
+				description = <"-">
+			>
+			["id19"] = <
+				text = <"Recommend Aromatase inhib 2y, tamoxifen 3y">
+				description = <"-">
+			>
+			["id21"] = <
+				text = <"Recommend Aromatase inhib 2y + tamox 3y">
+				description = <"-">
+			>
+			["id22"] = <
+				text = <"Choose other tamoxifen regime">
+				description = <"-">
+			>
+			["id25"] = <
+				text = <"Tamoxifen 5y">
+				description = <"-">
+			>
+			["id26"] = <
+				text = <"Recommend Tamoxifen 10y">
+				description = <"-">
+			>
+			["id27"] = <
+				text = <"Recommend Tamoxifen 5y; aromatase inhibitors 5y">
+				description = <"-">
+			>
+			["id28"] = <
+				text = <"Recommend Gonadotropin-releasing hormone 5y / tamoxifen 5y">
+				description = <"-">
+			>
+			["id29"] = <
+				text = <"Recommend Tamoxifen 2y; aromatase inhibitors 3y">
+				description = <"-">
+			>
+			["id30"] = <
+				text = <"Task - Recommend Tamoxifen 5y">
+				description = <"-">
+			>
+			["id32"] = <
+				text = <"Recommend tamoxifen 5y">
+				description = <"-">
+			>
+		>
+	>

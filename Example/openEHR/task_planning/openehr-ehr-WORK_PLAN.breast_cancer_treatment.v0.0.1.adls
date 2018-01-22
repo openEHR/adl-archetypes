@@ -111,6 +111,15 @@ definition
 							}
 						}
 					}
+					STATE_VARIABLE[id35] occurrences matches {1} matches {	-- Has BRCA1 mutation
+						name matches {"has_brca_mutation"}
+						populating_request matches {
+							QUERY_CALL[id37] occurrences matches {1} matches {
+								call_name matches {"execute_stored_query"}
+								system_id matches {"ehr"}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -153,6 +162,10 @@ terminology
 			>
 			["id34"] = <
 				text = <"Query id parameter def">
+				description = <"-">
+			>
+			["id35"] = <
+				text = <"Has BRCA1 mutation">
 				description = <"-">
 			>
 		>

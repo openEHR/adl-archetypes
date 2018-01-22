@@ -15,7 +15,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"???">
+			purpose = <"Estrogen-receptor positive hormone regimes.">
 		>
 	>
 
@@ -28,6 +28,7 @@ definition
 						expression matches {"True"}
 					}
 				}
+				execution_type matches {|0..1|}
 			}
 			DECISION_BRANCH[id53] occurrences matches {1} matches {	-- Pre-menopause
 				value_constraint matches {
@@ -36,16 +37,6 @@ definition
 					}
 				}
 				members matches {
-					PERFORMABLE_TASK<DEFINED_ACTION>[id88] occurrences matches {1} matches {	-- Review contraindications
-						capture_dataset matches {
-							DATASET_SPEC[id90] occurrences matches {1} matches {	-- Review tamoxifen-related contra-indications
-								template_id matches {
-									STRING[id9999] occurrences matches {1} }
-								form_id matches {
-									STRING[id9999] }
-							}
-						}
-					}
 					DECISION_GROUP[id91] occurrences matches {1} matches {	-- Check if Tamoxifen contra-indicated
 						override_type matches {1}
 						review_dataset matches {
@@ -56,8 +47,37 @@ definition
 									STRING[id9999] }
 							}
 						}
+						execution_type matches {1}
+						members matches {
+							DECISION_BRANCH[id153] occurrences matches {1} matches {	-- Tamoxifen contra-indicated
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id156] matches {
+										expression matches {"False"}
+									}
+								}
+								members matches {
+									PERFORMABLE_TASK<DEFINED_ACTION>[id88] occurrences matches {1} matches {	-- Recommend gonadotropin + other
+										action matches {
+											DEFINED_ACTION[id97] occurrences matches {1} matches {
+												prototype matches {
+													EVALUATION[id98] occurrences matches {1} 	-- Recommend gonadotropin + other
+												}
+											}
+										}
+									}
+								}
+								execution_type matches {|0..1|}
+							}
+							DECISION_BRANCH[id158] occurrences matches {1} matches {	-- Tamoxifen not contra-indicated
+								execution_type matches {|0..1|}
+								members matches {
+									use_archetype DECISION_GROUP[id159, openehr-ehr-DECISION_GROUP.determine_tamoxifen_regime.v0.0.1] occurrences matches {1} 
+								}
+							}
+						}
 					}
 				}
+				execution_type matches {1}
 			}
 		}
 		test matches {
@@ -69,6 +89,7 @@ definition
 		review_dataset matches {
 			DATASET_SPEC[id95] occurrences matches {0..1} 	-- Menstruation record
 		}
+		execution_type matches {1}
 	}
 
 terminology
@@ -91,7 +112,7 @@ terminology
 				description = <"-">
 			>
 			["id88"] = <
-				text = <"Review contraindications">
+				text = <"Recommend gonadotropin + other">
 				description = <"-">
 			>
 			["id90"] = <
@@ -108,6 +129,22 @@ terminology
 			>
 			["id95"] = <
 				text = <"Menstruation record">
+				description = <"-">
+			>
+			["id98"] = <
+				text = <"Recommend gonadotropin + other">
+				description = <"-">
+			>
+			["id153"] = <
+				text = <"Tamoxifen contra-indicated">
+				description = <"-">
+			>
+			["id158"] = <
+				text = <"Tamoxifen not contra-indicated">
+				description = <"-">
+			>
+			["id159"] = <
+				text = <"Determine tamoxifen regime">
 				description = <"-">
 			>
 		>

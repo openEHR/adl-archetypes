@@ -1,5 +1,5 @@
 archetype (adl_version=2.0.6; rm_release=1.0.0)
-	openehr-ehr-TASK_GROUP.choose_ac_chemo_regime.v0.0.1
+	openehr-ehr-ADHOC_GROUP.choose_ac_chemo_regime.v0.0.1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -20,39 +20,50 @@ description
 	>
 
 definition
-	TASK_GROUP[id1] matches {	-- Choose AC chemo regime
-		execution_type matches {
-			EXECUTION_TYPE[id2] occurrences matches {1} 
-		}
+	ADHOC_GROUP[id1] matches {	-- Choose AC chemo regime
+		execution_type matches {1}
 		members matches {
-			TASK[id3] occurrences matches {1} matches {	-- ACx4->Px4
-				action matches {
-					DEFINED_ACTION[id4] occurrences matches {1} matches {
-						prototype matches {
-							EVALUATION[id5] occurrences matches {1} 	-- Recommendation: ACx4->Px4
+			ADHOC_BRANCH[id13] occurrences matches {1} matches {	-- ACx4->Dx4 choice
+				members matches {
+					PERFORMABLE_TASK<DEFINED_ACTION>[id3] occurrences matches {1} matches {	-- ACx4->Px4
+						action matches {
+							DEFINED_ACTION[id4] occurrences matches {1} matches {
+								prototype matches {
+									EVALUATION[id5] occurrences matches {1} 	-- Recommendation: ACx4->Px4
+								}
+							}
 						}
 					}
 				}
 			}
-			TASK[id6] occurrences matches {1} matches {	-- ACx4->Px12
-				action matches {
-					DEFINED_ACTION[id8] occurrences matches {1} matches {
-						prototype matches {
-							EVALUATION[id9] occurrences matches {1} 	-- Recommend: ACx4->Px12
+			ADHOC_BRANCH[id16] occurrences matches {1} matches {	-- ACx4->Px12 recommendation
+				members matches {
+					PERFORMABLE_TASK<DEFINED_ACTION>[id6] occurrences matches {1} matches {	-- ACx4->Px12 choice
+						action matches {
+							DEFINED_ACTION[id8] occurrences matches {1} matches {
+								prototype matches {
+									EVALUATION[id9] occurrences matches {1} 	-- Recommend: ACx4->Px12
+								}
+							}
 						}
 					}
 				}
 			}
-			TASK[id7] occurrences matches {1} matches {	-- ACx4->Dx4
-				action matches {
-					DEFINED_ACTION[id11] occurrences matches {1} matches {
-						prototype matches {
-							EVALUATION[id12] occurrences matches {1} 	-- ACx4->Dx4
+			ADHOC_BRANCH[id17] occurrences matches {1} matches {	-- ACx4->Dx4 recommendation
+				members matches {
+					PERFORMABLE_TASK<DEFINED_ACTION>[id7] occurrences matches {1} matches {	-- ACx4->Dx4 choice
+						action matches {
+							DEFINED_ACTION[id11] occurrences matches {1} matches {
+								prototype matches {
+									EVALUATION[id12] occurrences matches {1} 	-- ACx4->Dx4 recommendation
+								}
+							}
 						}
 					}
 				}
 			}
 		}
+		override_type matches {|0..1|}
 	}
 
 terminology
@@ -71,11 +82,11 @@ terminology
 				description = <"-">
 			>
 			["id6"] = <
-				text = <"ACx4->Px12">
+				text = <"ACx4->Px12 choice">
 				description = <"-">
 			>
 			["id7"] = <
-				text = <"ACx4->Dx4">
+				text = <"ACx4->Dx4 choice">
 				description = <"-">
 			>
 			["id9"] = <
@@ -83,7 +94,19 @@ terminology
 				description = <"-">
 			>
 			["id12"] = <
-				text = <"ACx4->Dx4">
+				text = <"ACx4->Dx4 recommendation">
+				description = <"-">
+			>
+			["id13"] = <
+				text = <"ACx4->Dx4 choice">
+				description = <"-">
+			>
+			["id16"] = <
+				text = <"ACx4->Px12 recommendation">
+				description = <"-">
+			>
+			["id17"] = <
+				text = <"ACx4->Dx4 recommendation">
 				description = <"-">
 			>
 		>

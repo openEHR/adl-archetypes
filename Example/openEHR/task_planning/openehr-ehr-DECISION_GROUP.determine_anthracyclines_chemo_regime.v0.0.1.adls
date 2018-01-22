@@ -10,12 +10,14 @@ description
 		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
 		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
 	>
-	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	custodian_namespace = <"org.openehr">
+	custodian_organisation = <"openEHR Foundation">
+	copyright = <"Copyright (c) 2018 openEHR Foundation">
 	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"???">
+			purpose = <"Represent decision points 9 and 12 in the Moscow City breast cancer chemotherapy decision support map.">
 		>
 	>
 
@@ -25,11 +27,11 @@ definition
 		members matches {
 			DECISION_BRANCH[id24] occurrences matches {1} matches {	-- Contraindications - present
 				members matches {
-					PERFORMABLE_TASK<DEFINED_ACTION>[id26] occurrences matches {1} matches {	-- Prescribe CMF chemo
+					PERFORMABLE_TASK<DEFINED_ACTION>[id26] occurrences matches {1} matches {	-- Recommend CMF chemo
 						action matches {
 							DEFINED_ACTION[id27] occurrences matches {1} matches {
 								prototype matches {
-									INSTRUCTION[id28] occurrences matches {1} 	-- Prescribe CMF
+									EVALUATION[id28] occurrences matches {1} 	-- Recommend CMF
 								}
 							}
 						}
@@ -52,7 +54,7 @@ definition
 										action matches {
 											DEFINED_ACTION[id32] occurrences matches {1} matches {
 												prototype matches {
-													INSTRUCTION[id33] occurrences matches {1} 	-- Prescribe Epirubicin + cycloposphamide
+													EVALUATION[id33] occurrences matches {1} 	-- Recommend Epirubicin + cycloposphamide
 												}
 											}
 										}
@@ -70,7 +72,7 @@ definition
 										action matches {
 											DEFINED_ACTION[id36] occurrences matches {1} matches {
 												prototype matches {
-													INSTRUCTION[id37] occurrences matches {1} 	-- Prescribe AC chemo
+													EVALUATION[id37] occurrences matches {1} 	-- Recommend AC chemo
 												}
 											}
 										}
@@ -88,6 +90,10 @@ definition
 								expression matches {"$has_critical_cardiopathology or $age > 75"}
 							}
 						}
+						review_dataset matches {
+							DATASET_SPEC[id86] occurrences matches {0..1} 	-- Cardio-pathology data set
+						}
+						execution_type matches {1}
 					}
 				}
 				value_constraint matches {
@@ -95,6 +101,7 @@ definition
 						expression matches {"False"}
 					}
 				}
+				execution_type matches {1}
 			}
 		}
 		test matches {
@@ -102,6 +109,10 @@ definition
 				expression matches {"$anthracyclines_contraindicated"}
 			}
 		}
+		review_dataset matches {
+			DATASET_SPEC[id85] occurrences matches {0..1} 	-- Review contra-indications anthracyclines data set
+		}
+		execution_type matches {1}
 	}
 
 terminology
@@ -120,11 +131,11 @@ terminology
 				description = <"-">
 			>
 			["id26"] = <
-				text = <"Prescribe CMF chemo">
+				text = <"Recommend CMF chemo">
 				description = <"-">
 			>
 			["id28"] = <
-				text = <"Prescribe CMF">
+				text = <"Recommend CMF">
 				description = <"-">
 			>
 			["id25"] = <
@@ -144,7 +155,7 @@ terminology
 				description = <"-">
 			>
 			["id33"] = <
-				text = <"Prescribe Epirubicin + cycloposphamide">
+				text = <"Recommend Epirubicin + cycloposphamide">
 				description = <"-">
 			>
 			["id34"] = <
@@ -156,7 +167,15 @@ terminology
 				description = <"-">
 			>
 			["id37"] = <
-				text = <"Prescribe AC chemo">
+				text = <"Recommend AC chemo">
+				description = <"-">
+			>
+			["id85"] = <
+				text = <"Review contra-indications anthracyclines data set">
+				description = <"-">
+			>
+			["id86"] = <
+				text = <"Cardio-pathology data set">
 				description = <"-">
 			>
 		>

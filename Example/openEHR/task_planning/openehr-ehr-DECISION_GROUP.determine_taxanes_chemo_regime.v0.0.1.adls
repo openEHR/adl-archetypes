@@ -22,7 +22,7 @@ description
 definition
 	DECISION_GROUP[id1] matches {	-- Determine taxanes regime
 		test matches {
-			CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id2] matches {
+			CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id2] matches {
 				expression matches {"$taxanes_contraindicated"}
 			}
 		}
@@ -32,6 +32,9 @@ definition
 					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id6] matches {
 						expression matches {"True"}
 					}
+				}
+				members matches {
+					use_archetype DECISION_GROUP[id34, openehr-ehr-DECISION_GROUP.determine_anthracyclines_chemo_regime.v0.0.1] occurrences matches {1} 
 				}
 			}
 			DECISION_BRANCH[id5] occurrences matches {1} matches {	-- Taxanes not contraindicated
@@ -43,7 +46,7 @@ definition
 				members matches {
 					DECISION_GROUP[id10] occurrences matches {1} matches {	-- Anthracyclines contraindicated?
 						test matches {
-							CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id11] matches {
+							CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id11] matches {
 								expression matches {"$anthracyclines_contraindicated"}
 							}
 						}
@@ -55,10 +58,10 @@ definition
 									}
 								}
 								members matches {
-									use_archetype TASK_GROUP[id22, openehr-ehr-TASK_GROUP.choose_ac_chemo_regime.v0.0.1] occurrences matches {1} 
+									use_archetype TASK_GROUP[id22, openehr-ehr-ADHOC_GROUP.choose_ac_chemo_regime.v0.0.1] occurrences matches {1} 
 									DECISION_GROUP[id23] occurrences matches {1} matches {	-- Has BRCA mutation
 										test matches {
-											CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id24] matches {
+											CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id24] matches {
 												expression matches {"$has_brca_mutation"}
 											}
 										}
@@ -107,6 +110,12 @@ definition
 					}
 				}
 			}
+		}
+		review_dataset matches {
+			DATASET_SPEC[id32] occurrences matches {1} 	-- Taxanes contraindications dataset
+		}
+		override_type matches {
+			OVERRIDE_TYPE[id33] occurrences matches {1} 
 		}
 	}
 
@@ -163,6 +172,14 @@ terminology
 			>
 			["id31"] = <
 				text = <"Recommend: add carboplatin">
+				description = <"-">
+			>
+			["id32"] = <
+				text = <"Taxanes contraindications dataset">
+				description = <"-">
+			>
+			["id34"] = <
+				text = <"Non-taxane regime">
 				description = <"-">
 			>
 		>
