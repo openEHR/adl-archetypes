@@ -1,0 +1,253 @@
+archetype (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-task_planning-DECISION_GROUP.determine_her2_chemo_regime.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	DECISION_GROUP[id1] matches {	-- Consider prognosis (BPM node 11)
+		review_dataset matches {
+			DATASET_SPEC[id2] occurrences matches {1} matches {	-- Prognosis data set
+				form_id matches {
+					STRING[id9999] }
+				template_id matches {
+					STRING[id9999] }
+			}
+		}
+		execution_type matches {1}
+		test matches {
+			CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id6] matches {
+				type matches {
+					TYPE_DEF_BOOLEAN[id7] 
+				}
+				expression matches {"$prognosis_good"}
+			}
+		}
+		members matches {
+			DECISION_BRANCH[id9] occurrences matches {1} matches {	-- Prognosis good branch
+				value_constraint matches {
+					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id10] matches {
+						expression matches {"True"}
+					}
+				}
+				members matches {
+					DECISION_GROUP[id12] occurrences matches {1} matches {	-- Consider contra-ind. to anthracyclines (BPM node 16)
+						review_dataset matches {
+							DATASET_SPEC[id16] occurrences matches {1} matches {	-- Anthracyclines contra-ind. data set
+								form_id matches {
+									STRING[id9999] }
+								template_id matches {
+									STRING[id9999] }
+							}
+						}
+						members matches {
+							DECISION_BRANCH[id19] occurrences matches {1} matches {	-- AC contra-indicated
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id22] matches {
+										expression matches {"True"}
+									}
+								}
+							}
+							DECISION_BRANCH[id24] occurrences matches {1} matches {	-- AC not contra-indicated
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id25] matches {
+										expression matches {"False"}
+									}
+								}
+								members matches {
+									use_archetype ADHOC_GROUP[id27, openehr-task_planning-ADHOC_GROUP.choose_ac_chemo_regime.v0.0.1] occurrences matches {1} 
+								}
+							}
+						}
+						test matches {
+							CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id20] matches {
+								expression matches {"$anthracyclines_contraindicated"}
+							}
+						}
+						execution_type matches {1}
+					}
+				}
+			}
+			DECISION_BRANCH[id13] occurrences matches {1} matches {	-- Prognosis bad branch
+				value_constraint matches {
+					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id14] matches {
+						expression matches {"False"}
+					}
+				}
+				members matches {
+					DECISION_GROUP[id29] occurrences matches {1} matches {	-- Consider AC contra-indications (BPM node 18)
+						test matches {
+							CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id30] matches {
+								expression matches {"$anthracyclines_contraindicated"}
+							}
+						}
+						members matches {
+							DECISION_BRANCH[id32] occurrences matches {1} matches {	-- AC contra-indicated
+								members matches {
+									PERFORMABLE_TASK[id34] occurrences matches {1} matches {	-- Task: Recommend (DCH + pertuzumab) x 4
+										action matches {
+											DEFINED_ACTION[id35] occurrences matches {1} matches {
+												prototype matches {
+													EVALUATION[id36] occurrences matches {1} 	-- Recomment (DCH + pertuzumab) x 4
+												}
+											}
+										}
+									}
+								}
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id37] matches {
+										expression matches {"True"}
+									}
+								}
+							}
+							DECISION_BRANCH[id33] occurrences matches {1} matches {	-- AC not contra-indicated
+								value_constraint matches {
+									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id39] matches {
+										expression matches {"False"}
+									}
+								}
+								members matches {
+									ADHOC_GROUP[id41] occurrences matches {1} matches {	-- Choose a pattern (BPM node 19)
+										members matches {
+											ADHOC_BRANCH[id42] occurrences matches {1} matches {	-- DCH / pertuzumab choice
+												members matches {
+													PERFORMABLE_TASK[id48] occurrences matches {1} matches {	-- Task: DCH + pertuzumab
+														action matches {
+															DEFINED_ACTION[id49] occurrences matches {1} matches {
+																prototype matches {
+																	EVALUATION[id50] occurrences matches {1} 	-- Recommend (DCH + pertuzumab) x 4
+																}
+															}
+														}
+													}
+												}
+											}
+											ADHOC_BRANCH[id44] occurrences matches {1} matches {	-- FEC / D, trastuzumab, pertuzumab choice
+												members matches {
+													PERFORMABLE_TASK[id45] occurrences matches {1} matches {	-- Task: FECx3 etc
+														action matches {
+															DEFINED_ACTION[id46] occurrences matches {1} matches {
+																prototype matches {
+																	EVALUATION[id47] occurrences matches {1} 	-- FECx3; (D + trastuzumab + pertuzumab) x 4
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+										override_type matches {1}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Consider prognosis (BPM node 11)">
+				description = <"-">
+			>
+			["id2"] = <
+				text = <"Prognosis data set">
+				description = <"-">
+			>
+			["id9"] = <
+				text = <"Prognosis good branch">
+				description = <"-">
+			>
+			["id12"] = <
+				text = <"Consider contra-ind. to anthracyclines (BPM node 16)">
+				description = <"-">
+			>
+			["id13"] = <
+				text = <"Prognosis bad branch">
+				description = <"-">
+			>
+			["id16"] = <
+				text = <"Anthracyclines contra-ind. data set">
+				description = <"-">
+			>
+			["id19"] = <
+				text = <"AC contra-indicated">
+				description = <"-">
+			>
+			["id24"] = <
+				text = <"AC not contra-indicated">
+				description = <"-">
+			>
+			["id27"] = <
+				text = <"Choose AC chemo">
+				description = <"-">
+			>
+			["id29"] = <
+				text = <"Consider AC contra-indications (BPM node 18)">
+				description = <"-">
+			>
+			["id32"] = <
+				text = <"AC contra-indicated">
+				description = <"-">
+			>
+			["id33"] = <
+				text = <"AC not contra-indicated">
+				description = <"-">
+			>
+			["id34"] = <
+				text = <"Task: Recommend (DCH + pertuzumab) x 4">
+				description = <"-">
+			>
+			["id36"] = <
+				text = <"Recomment (DCH + pertuzumab) x 4">
+				description = <"-">
+			>
+			["id41"] = <
+				text = <"Choose a pattern (BPM node 19)">
+				description = <"-">
+			>
+			["id42"] = <
+				text = <"DCH / pertuzumab choice">
+				description = <"-">
+			>
+			["id44"] = <
+				text = <"FEC / D, trastuzumab, pertuzumab choice">
+				description = <"-">
+			>
+			["id45"] = <
+				text = <"Task: FECx3 etc">
+				description = <"-">
+			>
+			["id47"] = <
+				text = <"FECx3; (D + trastuzumab + pertuzumab) x 4">
+				description = <"-">
+			>
+			["id48"] = <
+				text = <"Task: DCH + pertuzumab">
+				description = <"-">
+			>
+			["id50"] = <
+				text = <"Recommend (DCH + pertuzumab) x 4">
+				description = <"-">
+			>
+		>
+	>

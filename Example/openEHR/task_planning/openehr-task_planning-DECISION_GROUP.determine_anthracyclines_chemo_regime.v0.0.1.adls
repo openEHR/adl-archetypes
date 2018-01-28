@@ -1,5 +1,5 @@
-archetype (adl_version=2.0.6; rm_release=1.0.0)
-	openehr-ehr-DECISION_GROUP.determine_anthracyclines_chemo_regime.v0.0.1
+archetype (adl_version=2.0.6; rm_release=1.1.0)
+	openehr-task_planning-DECISION_GROUP.determine_anthracyclines_chemo_regime.v0.0.1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -119,7 +119,7 @@ terminology
 	term_definitions = <
 		["en"] = <
 			["id1"] = <
-				text = <"Contraindications to anthracyclines">
+				text = <"Contraindications to anthracyclines (BPM node 9)">
 				description = <"-">
 			>
 			["id23"] = <
@@ -143,7 +143,7 @@ terminology
 				description = <"-">
 			>
 			["id29"] = <
-				text = <"Critical cardiopathology or age > 75">
+				text = <"Critical cardiopathology or age > 75 (BPM node 12)">
 				description = <"-">
 			>
 			["id30"] = <

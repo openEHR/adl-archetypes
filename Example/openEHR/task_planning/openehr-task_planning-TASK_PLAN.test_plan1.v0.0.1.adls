@@ -1,8 +1,5 @@
-template (adl_version=2.0.6; rm_release=1.0.0)
-	openehr-ehr-TASK_PLAN.t_breast_cancer_decision_pathway.v0.0.1
-
-specialize
-	openehr-ehr-TASK_PLAN.breast_cancer_decision_pathway.v0
+archetype (adl_version=2.0.6; rm_release=1.1.0)
+	openehr-task_planning-TASK_PLAN.test_plan1.v0.0.1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -23,12 +20,16 @@ description
 	>
 
 definition
-	TASK_PLAN[id1.1] 	-- -
+	TASK_PLAN[id1] matches {	-- -
+		definition matches {
+			TASK_GROUP[id2] occurrences matches {1} 
+		}
+	}
 
 terminology
 	term_definitions = <
 		["en"] = <
-			["id1.1"] = <
+			["id1"] = <
 				text = <"-">
 				description = <"-">
 			>

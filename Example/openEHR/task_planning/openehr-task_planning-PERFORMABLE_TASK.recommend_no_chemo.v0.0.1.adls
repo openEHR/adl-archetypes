@@ -1,5 +1,5 @@
 archetype (adl_version=2.0.6; rm_release=1.0.0)
-	openehr-ehr-DECISION_GROUP.determine_her2_chemo_regime.v0.0.1
+	openehr-task_planning-PERFORMABLE_TASK.recommend_no_chemo.v0.0.1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -20,13 +20,29 @@ description
 	>
 
 definition
-	DECISION_GROUP[id1] 	-- -
+	PERFORMABLE_TASK[id1] occurrences matches {1} matches {	-- Record no chemo Rx
+		action matches {
+			DEFINED_ACTION[id21] occurrences matches {1} matches {
+				prototype matches {
+					EVALUATION[id22] occurrences matches {1} 	-- Assessment - no chemo Rx
+				}
+			}
+		}
+	}
 
 terminology
 	term_definitions = <
 		["en"] = <
 			["id1"] = <
-				text = <"-">
+				text = <"Record no chemo Rx">
+				description = <"-">
+			>
+			["id20"] = <
+				text = <"Breast cancer chemo assess and prescribe">
+				description = <"-">
+			>
+			["id22"] = <
+				text = <"Assessment - no chemo Rx">
 				description = <"-">
 			>
 		>

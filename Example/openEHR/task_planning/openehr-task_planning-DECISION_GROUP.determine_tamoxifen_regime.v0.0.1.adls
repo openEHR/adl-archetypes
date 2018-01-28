@@ -1,5 +1,5 @@
-archetype (adl_version=2.0.6; rm_release=1.0.0)
-	openehr-ehr-DECISION_GROUP.determine_tamoxifen_regime.v0.0.1
+archetype (adl_version=2.0.6; rm_release=1.1.0)
+	openehr-task_planning-DECISION_GROUP.determine_tamoxifen_regime.v0.0.1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -63,10 +63,10 @@ definition
 						execution_type matches {1}
 						override_type matches {1}
 						members matches {
-							ADHOC_BRANCH[id25] occurrences matches {1} matches {	-- Tamoxifen 5y
+							ADHOC_BRANCH[id25] occurrences matches {*} matches {	-- Tamoxifen
 								execution_type matches {1}
 								members matches {
-									PERFORMABLE_TASK<DEFINED_ACTION>[id30] occurrences matches {1} matches {	-- Task - Recommend Tamoxifen 5y
+									PERFORMABLE_TASK<DEFINED_ACTION>[id30] occurrences matches {1} matches {	-- Task - Recommend Tamoxifen regime
 										action matches {
 											DEFINED_ACTION[id31] occurrences matches {1} matches {
 												prototype matches {
@@ -102,7 +102,7 @@ terminology
 	term_definitions = <
 		["en"] = <
 			["id1"] = <
-				text = <"Determine Tamoxifen regime.">
+				text = <"Determine Tamoxifen regime  (BPM node 24)">
 				description = <"-">
 			>
 			["id2"] = <
@@ -126,11 +126,11 @@ terminology
 				description = <"-">
 			>
 			["id22"] = <
-				text = <"Choose other tamoxifen regime">
+				text = <"Choose other tamoxifen regime (BPM node 25)">
 				description = <"-">
 			>
 			["id25"] = <
-				text = <"Tamoxifen 5y">
+				text = <"Tamoxifen choice">
 				description = <"-">
 			>
 			["id26"] = <
@@ -150,7 +150,7 @@ terminology
 				description = <"-">
 			>
 			["id30"] = <
-				text = <"Task - Recommend Tamoxifen 5y">
+				text = <"Task - Recommend Tamoxifen regime">
 				description = <"-">
 			>
 			["id32"] = <

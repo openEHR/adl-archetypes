@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.6; rm_release=1.0.0)
+archetype (adl_version=2.0.6; rm_release=1.1.0)
 	openehr-ehr-COMPOSITION.breast_cancer_work_plan.v0.0.1
 
 language
@@ -22,7 +22,7 @@ description
 definition
 	COMPOSITION[id1] matches {	-- -
 		content matches {
-			use_archetype WORK_PLAN[id2, openehr-ehr-WORK_PLAN.breast_cancer_treatment.v0.0.1] occurrences matches {1} 
+			use_archetype WORK_PLAN[id2, openehr-task_planning-WORK_PLAN.breast_cancer_treatment.v0.0.1] occurrences matches {1} 
 		}
 	}
 

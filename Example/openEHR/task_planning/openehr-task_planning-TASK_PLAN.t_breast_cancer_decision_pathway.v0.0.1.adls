@@ -1,5 +1,8 @@
-archetype (adl_version=2.0.6; rm_release=1.0.0)
-	openehr-ehr-TASK.ac_chemo.v0.0.1
+template (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-task_planning-TASK_PLAN.t_breast_cancer_decision_pathway.v0.0.1
+
+specialize
+	openehr-task_planning-TASK_PLAN.breast_cancer_decision_pathway.v0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -20,29 +23,13 @@ description
 	>
 
 definition
-	TASK[id1] occurrences matches {1} matches {	-- AC
-		action matches {
-			DEFINED_ACTION[id36] occurrences matches {1} matches {
-				prototype matches {
-					INSTRUCTION[id37] occurrences matches {1} 	-- Prescribe AC chemo
-				}
-			}
-		}
-	}
+	TASK_PLAN[id1.1] 	-- -
 
 terminology
 	term_definitions = <
 		["en"] = <
-			["id1"] = <
-				text = <"AC">
-				description = <"-">
-			>
-			["id35"] = <
-				text = <"Contraindications to anthracyclines">
-				description = <"-">
-			>
-			["id37"] = <
-				text = <"Prescribe AC chemo">
+			["id1.1"] = <
+				text = <"-">
 				description = <"-">
 			>
 		>

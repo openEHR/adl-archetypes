@@ -1,5 +1,5 @@
-archetype (adl_version=2.0.6; rm_release=1.0.0)
-	openehr-ehr-DECISION_GROUP.determine_taxanes_chemo_regime.v0.0.1
+archetype (adl_version=2.0.6; rm_release=1.1.0)
+	openehr-task_planning-DECISION_GROUP.determine_taxanes_chemo_regime.v0.0.1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -34,7 +34,7 @@ definition
 					}
 				}
 				members matches {
-					use_archetype DECISION_GROUP[id34, openehr-ehr-DECISION_GROUP.determine_anthracyclines_chemo_regime.v0.0.1] occurrences matches {1} 
+					use_archetype DECISION_GROUP[id34, openehr-task_planning-DECISION_GROUP.determine_anthracyclines_chemo_regime.v0.0.1] occurrences matches {1} 
 				}
 			}
 			DECISION_BRANCH[id5] occurrences matches {1} matches {	-- Taxanes not contraindicated
@@ -58,34 +58,8 @@ definition
 									}
 								}
 								members matches {
-									use_archetype TASK_GROUP[id22, openehr-ehr-ADHOC_GROUP.choose_ac_chemo_regime.v0.0.1] occurrences matches {1} 
-									DECISION_GROUP[id23] occurrences matches {1} matches {	-- Has BRCA mutation
-										test matches {
-											CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id24] matches {
-												expression matches {"$has_brca_mutation"}
-											}
-										}
-										members matches {
-											DECISION_BRANCH[id26] occurrences matches {1} matches {	-- BRCA mutation present
-												value_constraint matches {
-													CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id27] matches {
-														expression matches {"True"}
-													}
-												}
-												members matches {
-													TASK[id29] occurrences matches {1} matches {	-- Include carboplatin
-														action matches {
-															DEFINED_ACTION[id30] occurrences matches {1} matches {
-																prototype matches {
-																	EVALUATION[id31] occurrences matches {1} 	-- Recommend: add carboplatin
-																}
-															}
-														}
-													}
-												}
-											}
-										}
-									}
+									use_archetype TASK_GROUP[id22, openehr-task_planning-ADHOC_GROUP.choose_ac_chemo_regime.v0.0.1] occurrences matches {1} 
+									use_archetype DECISION_GROUP[id23, openehr-task_planning-DECISION_GROUP.check_brca_mutation.v0.0.1] occurrences matches {1} 
 								}
 							}
 							DECISION_BRANCH[id14] occurrences matches {1} matches {	-- Contraindicated
@@ -123,7 +97,7 @@ terminology
 	term_definitions = <
 		["en"] = <
 			["id1"] = <
-				text = <"Determine taxanes regime">
+				text = <"Determine taxanes regime (BPM node 10)">
 				description = <"-">
 			>
 			["id4"] = <
@@ -135,7 +109,7 @@ terminology
 				description = <"-">
 			>
 			["id10"] = <
-				text = <"Anthracyclines contraindicated?">
+				text = <"Anthracyclines contraindicated? (BPM node 14)">
 				description = <"-">
 			>
 			["id13"] = <
@@ -159,19 +133,7 @@ terminology
 				description = <"-">
 			>
 			["id23"] = <
-				text = <"Has BRCA mutation">
-				description = <"-">
-			>
-			["id26"] = <
-				text = <"BRCA mutation present">
-				description = <"-">
-			>
-			["id29"] = <
-				text = <"Include carboplatin">
-				description = <"-">
-			>
-			["id31"] = <
-				text = <"Recommend: add carboplatin">
+				text = <"Consider BRCA mutation">
 				description = <"-">
 			>
 			["id32"] = <

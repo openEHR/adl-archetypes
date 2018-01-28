@@ -1,0 +1,71 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0)
+	openehr-task_planning-DECISION_GROUP.check_brca_mutation.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2016 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	DECISION_GROUP[id1] occurrences matches {1} matches {	-- Has BRCA mutation
+		test matches {
+			CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id24] matches {
+				expression matches {"$has_brca_mutation"}
+			}
+		}
+		members matches {
+			DECISION_BRANCH[id26] occurrences matches {1} matches {	-- BRCA mutation present
+				value_constraint matches {
+					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id27] matches {
+						expression matches {"True"}
+					}
+				}
+				members matches {
+					TASK[id29] occurrences matches {1} matches {	-- Include carboplatin
+						action matches {
+							DEFINED_ACTION[id30] occurrences matches {1} matches {
+								prototype matches {
+									EVALUATION[id31] occurrences matches {1} 	-- Recommend: add carboplatin
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Has BRCA mutation (BPM node 20)">
+				description = <"-">
+			>
+			["id26"] = <
+				text = <"BRCA mutation present">
+				description = <"-">
+			>
+			["id29"] = <
+				text = <"Include carboplatin">
+				description = <"-">
+			>
+			["id31"] = <
+				text = <"Recommend: add carboplatin">
+				description = <"-">
+			>
+		>
+	>

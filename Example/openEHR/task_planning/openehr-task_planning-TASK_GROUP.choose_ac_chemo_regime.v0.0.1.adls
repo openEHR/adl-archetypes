@@ -1,5 +1,5 @@
-archetype (adl_version=2.0.6; rm_release=1.0.0)
-	openehr-ehr-ADHOC_GROUP.choose_ac_chemo_regime.v0.0.1
+archetype (adl_version=2.0.6; rm_release=1.1.0)
+	openehr-task_planning-ADHOC_GROUP.choose_ac_chemo_regime.v0.0.1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -63,14 +63,14 @@ definition
 				}
 			}
 		}
-		override_type matches {|0..1|}
+		override_type matches {1}
 	}
 
 terminology
 	term_definitions = <
 		["en"] = <
 			["id1"] = <
-				text = <"Choose AC chemo regime">
+				text = <"Choose AC chemo regime (BPM nodes 15, 17)">
 				description = <"-">
 			>
 			["id3"] = <

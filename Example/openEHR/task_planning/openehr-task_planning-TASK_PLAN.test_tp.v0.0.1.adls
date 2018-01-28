@@ -1,5 +1,5 @@
 archetype (adl_version=2.0.6; rm_release=1.1.0)
-	openehr-ehr-TASK_PLAN.nutrition_screening.v0.0.1
+	openehr-task_planning-TASK_PLAN.nutrition_screening.v0.0.1
 
 language
 	original_language = <[ISO_639-1::en]>

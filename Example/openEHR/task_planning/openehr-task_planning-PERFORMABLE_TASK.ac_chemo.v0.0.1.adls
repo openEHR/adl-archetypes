@@ -1,5 +1,5 @@
-archetype (adl_version=2.0.6; rm_release=1.1.0)
-	openehr-task_management-TASK_PLAN.test_plan1.v0.0.1
+archetype (adl_version=2.0.6; rm_release=1.0.0)
+	openehr-task_planning-PERFORMABLE_TASK.ac_chemo.v0.0.1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -20,9 +20,13 @@ description
 	>
 
 definition
-	TASK_PLAN[id1] matches {	-- -
-		definition matches {
-			TASK_GROUP[id2] occurrences matches {1} 
+	PERFORMABLE_TASK[id1] occurrences matches {1} matches {	-- AC
+		action matches {
+			DEFINED_ACTION[id36] occurrences matches {1} matches {
+				prototype matches {
+					INSTRUCTION[id37] occurrences matches {1} 	-- Prescribe AC chemo
+				}
+			}
 		}
 	}
 
@@ -30,7 +34,15 @@ terminology
 	term_definitions = <
 		["en"] = <
 			["id1"] = <
-				text = <"-">
+				text = <"AC">
+				description = <"-">
+			>
+			["id35"] = <
+				text = <"Contraindications to anthracyclines">
+				description = <"-">
+			>
+			["id37"] = <
+				text = <"Prescribe AC chemo">
 				description = <"-">
 			>
 		>

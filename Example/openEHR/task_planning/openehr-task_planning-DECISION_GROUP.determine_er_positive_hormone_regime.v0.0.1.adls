@@ -1,5 +1,5 @@
-archetype (adl_version=2.0.6; rm_release=1.0.0)
-	openehr-ehr-DECISION_GROUP.determine_er_positive_hormone_regime.v0.0.1
+archetype (adl_version=2.0.6; rm_release=1.1.0)
+	openehr-task_planning-DECISION_GROUP.determine_er_positive_hormone_regime.v0.0.1
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -71,7 +71,7 @@ definition
 							DECISION_BRANCH[id158] occurrences matches {1} matches {	-- Tamoxifen not contra-indicated
 								execution_type matches {|0..1|}
 								members matches {
-									use_archetype DECISION_GROUP[id159, openehr-ehr-DECISION_GROUP.determine_tamoxifen_regime.v0.0.1] occurrences matches {1} 
+									use_archetype DECISION_GROUP[id159, openehr-task_planning-DECISION_GROUP.determine_tamoxifen_regime.v0.0.1] occurrences matches {1} 
 								}
 							}
 						}
@@ -81,7 +81,7 @@ definition
 			}
 		}
 		test matches {
-			CONTEXT_EXPRESSION<EXPR_TYPE_DEF>[id87] matches {
+			CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id87] matches {
 				expression matches {"$has_menopause"}
 			}
 		}
@@ -96,7 +96,7 @@ terminology
 	term_definitions = <
 		["en"] = <
 			["id1"] = <
-				text = <"Menstrual status">
+				text = <"Menstrual status (BPM node 21)">
 				description = <"-">
 			>
 			["id51"] = <
@@ -120,7 +120,7 @@ terminology
 				description = <"-">
 			>
 			["id91"] = <
-				text = <"Check if Tamoxifen contra-indicated">
+				text = <"Check if Tamoxifen contra-indicated (BPM node 23)">
 				description = <"-">
 			>
 			["id94"] = <
