@@ -22,7 +22,7 @@ description
 		>
 	>
 	other_details = <
-		["regression"] = <"VTPL">
+		["regression"] = <"PASS">
 	>
 	lifecycle_state = <"unmanaged">
 
