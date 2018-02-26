@@ -1,5 +1,8 @@
-archetype (adl_version=2.0.6; rm_release=1.1.0)
-	openehr-ehr-COMPOSITION.therapy_recommendation.v0.0.1
+template (adl_version=2.0.6; rm_release=1.1.0)
+	openEHR-TASK_PLANNING-COMPOSITION.t_therapy_recommendation.v0.0.1
+
+specialize
+	openEHR-TASK_PLANNING-COMPOSITION.therapy_recommendation.v0
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -20,21 +23,13 @@ description
 	>
 
 definition
-	COMPOSITION[id1] matches {	-- Therapy recommendation
-		content matches {
-			use_archetype TASK_PLAN[id2, openehr-task_planning-TASK_PLAN.breast_cancer_decision_pathway.v0.0.1] occurrences matches {1} 
-		}
-	}
+	COMPOSITION[id1.1] 	-- -
 
 terminology
 	term_definitions = <
 		["en"] = <
-			["id1"] = <
-				text = <"Therapy recommendation">
-				description = <"-">
-			>
-			["id2"] = <
-				text = <"Recommended therapies">
+			["id1.1"] = <
+				text = <"-">
 				description = <"-">
 			>
 		>
