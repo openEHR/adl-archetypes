@@ -1,0 +1,49 @@
+archetype (adl_version=2.0.6; rm_release=1.0.3; uid=440253f1-61d9-49d3-ae27-58129bbeb6e0)
+	openEHR-EHR-CLUSTER.cholesterol_test_panel.v0.0.1-alpha
+
+specialize
+	openEHR-EHR-CLUSTER.laboratory_test_panel.v0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2018 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	CLUSTER[id1.1] matches {	-- -
+		/items matches {
+			use_archetype CLUSTER [id0.15, openEHR-EHR-CLUSTER.lab_analyte-cholesterol.v0.0.1-alpha] occurrences matches {0..1} 
+			use_archetype CLUSTER [id0.16, openEHR-EHR-CLUSTER.lab_analyte-triglycerides.v0.0.1-alpha] occurrences matches {0..1} 
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1"] = <
+				text = <"Cholesterol panel">
+				description = <"-">
+			>
+			["id0.15"] = <
+				text = <"Cholesterol items">
+				description = <"Cholesterol items">
+			>
+			["id0.16"] = <
+				text = <"Triglycerides">
+				description = <"Triglycerides">
+			>
+		>
+	>

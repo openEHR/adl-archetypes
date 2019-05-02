@@ -1,0 +1,8 @@
+--
+-- Logical archetype repository definition
+--
+
+name = <"openEHR Lab2">
+short_name = <"LAB2">
+maintainer = <"openEHR">
+description = <"openEHR demonstration example lab archetypes">

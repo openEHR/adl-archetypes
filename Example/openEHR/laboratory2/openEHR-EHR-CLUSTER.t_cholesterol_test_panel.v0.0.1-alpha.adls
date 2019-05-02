@@ -1,0 +1,36 @@
+template (adl_version=2.0.6; rm_release=1.0.4)
+	openEHR-EHR-CLUSTER.t_cholesterol_test_panel.v0.0.1-alpha
+
+specialize
+	openEHR-EHR-CLUSTER.cholesterol_test_panel.v0
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2018 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"???">
+		>
+	>
+
+definition
+	CLUSTER[id1.1.1] 	-- -
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1.1.1"] = <
+				text = <"Cholesterol test panel">
+				description = <"-">
+			>
+		>
+	>
