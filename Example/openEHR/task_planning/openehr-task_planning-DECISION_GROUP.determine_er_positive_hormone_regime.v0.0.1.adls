@@ -24,7 +24,7 @@ definition
 		members matches {
 			DECISION_BRANCH[id52] occurrences matches {1} matches {	-- Post-menopause
 				value_constraint matches {
-					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id54] matches {
+					BOOLEAN_CONTEXT_EXPRESSION[id54] matches {
 						expression matches {"True"}
 					}
 				}
@@ -32,7 +32,7 @@ definition
 			}
 			DECISION_BRANCH[id53] occurrences matches {1} matches {	-- Pre-menopause
 				value_constraint matches {
-					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id56] matches {
+					BOOLEAN_CONTEXT_EXPRESSION[id56] matches {
 						expression matches {"False"}
 					}
 				}
@@ -51,7 +51,7 @@ definition
 						members matches {
 							DECISION_BRANCH[id153] occurrences matches {1} matches {	-- Tamoxifen contra-indicated
 								value_constraint matches {
-									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id156] matches {
+									BOOLEAN_CONTEXT_EXPRESSION[id156] matches {
 										expression matches {"False"}
 									}
 								}

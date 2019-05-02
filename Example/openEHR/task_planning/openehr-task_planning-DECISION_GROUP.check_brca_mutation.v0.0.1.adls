@@ -22,14 +22,14 @@ description
 definition
 	DECISION_GROUP[id1] occurrences matches {1} matches {	-- Has BRCA mutation
 		test matches {
-			CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id24] matches {
+			BOOLEAN_CONTEXT_EXPRESSION[id24] matches {
 				expression matches {"$has_brca_mutation"}
 			}
 		}
 		members matches {
 			DECISION_BRANCH[id26] occurrences matches {1} matches {	-- BRCA mutation present
 				value_constraint matches {
-					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id27] matches {
+					BOOLEAN_CONTEXT_EXPRESSION[id27] matches {
 						expression matches {"True"}
 					}
 				}

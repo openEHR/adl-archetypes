@@ -41,7 +41,7 @@ definition
 		members matches {
 			DECISION_BRANCH[id9] occurrences matches {1} matches {	-- Prognosis good branch
 				value_constraint matches {
-					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id10] matches {
+					BOOLEAN_CONTEXT_EXPRESSION[id10] matches {
 						expression matches {"True"}
 					}
 				}
@@ -58,14 +58,14 @@ definition
 						members matches {
 							DECISION_BRANCH[id19] occurrences matches {1} matches {	-- AC contra-indicated
 								value_constraint matches {
-									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id22] matches {
+									BOOLEAN_CONTEXT_EXPRESSION[id22] matches {
 										expression matches {"True"}
 									}
 								}
 							}
 							DECISION_BRANCH[id24] occurrences matches {1} matches {	-- AC not contra-indicated
 								value_constraint matches {
-									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id25] matches {
+									BOOLEAN_CONTEXT_EXPRESSION[id25] matches {
 										expression matches {"False"}
 									}
 								}
@@ -85,7 +85,7 @@ definition
 			}
 			DECISION_BRANCH[id13] occurrences matches {1} matches {	-- Prognosis bad branch
 				value_constraint matches {
-					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id14] matches {
+					BOOLEAN_CONTEXT_EXPRESSION[id14] matches {
 						expression matches {"False"}
 					}
 				}
@@ -110,14 +110,14 @@ definition
 									}
 								}
 								value_constraint matches {
-									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id37] matches {
+									BOOLEAN_CONTEXT_EXPRESSION[id37] matches {
 										expression matches {"True"}
 									}
 								}
 							}
 							DECISION_BRANCH[id33] occurrences matches {1} matches {	-- AC not contra-indicated
 								value_constraint matches {
-									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id39] matches {
+									BOOLEAN_CONTEXT_EXPRESSION[id39] matches {
 										expression matches {"False"}
 									}
 								}

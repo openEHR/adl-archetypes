@@ -35,7 +35,7 @@ definition
 			DECISION_BRANCH[id7] occurrences matches {1} matches {	-- Low risk of recurrence
 				execution_type matches {|0..1|}
 				value_constraint matches {
-					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id13] matches {
+					BOOLEAN_CONTEXT_EXPRESSION[id13] matches {
 						expression matches {"False"}
 					}
 				}
@@ -54,7 +54,7 @@ definition
 			DECISION_BRANCH[id8] occurrences matches {1} matches {	-- High risk or recurrence
 				execution_type matches {1}
 				value_constraint matches {
-					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id11] matches {
+					BOOLEAN_CONTEXT_EXPRESSION[id11] matches {
 						expression matches {"True"}
 					}
 				}

@@ -38,7 +38,7 @@ definition
 					}
 				}
 				value_constraint matches {
-					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id82] matches {
+					BOOLEAN_CONTEXT_EXPRESSION[id82] matches {
 						expression matches {"True"}
 					}
 				}
@@ -61,7 +61,7 @@ definition
 									}
 								}
 								value_constraint matches {
-									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id84] matches {
+									BOOLEAN_CONTEXT_EXPRESSION[id84] matches {
 										expression matches {"True"}
 									}
 								}
@@ -79,14 +79,14 @@ definition
 									}
 								}
 								value_constraint matches {
-									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id75] matches {
+									BOOLEAN_CONTEXT_EXPRESSION[id75] matches {
 										expression matches {"False"}
 									}
 								}
 							}
 						}
 						test matches {
-							CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id77] matches {
+							BOOLEAN_CONTEXT_EXPRESSION[id77] matches {
 								expression matches {"$has_critical_cardiopathology or $age > 75"}
 							}
 						}
@@ -97,7 +97,7 @@ definition
 					}
 				}
 				value_constraint matches {
-					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id79] matches {
+					BOOLEAN_CONTEXT_EXPRESSION[id79] matches {
 						expression matches {"False"}
 					}
 				}
@@ -105,7 +105,7 @@ definition
 			}
 		}
 		test matches {
-			CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id81] matches {
+			BOOLEAN_CONTEXT_EXPRESSION[id81] matches {
 				expression matches {"$anthracyclines_contraindicated"}
 			}
 		}

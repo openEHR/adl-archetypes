@@ -37,7 +37,7 @@ definition
 										members matches {
 											DECISION_BRANCH[id8] occurrences matches {1} matches {	-- ER = positive
 												value_constraint matches {
-													CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id49] matches {
+													BOOLEAN_CONTEXT_EXPRESSION[id49] matches {
 														expression matches {"'positive'"}
 													}
 												}
@@ -52,7 +52,7 @@ definition
 														members matches {
 															DECISION_BRANCH[id11] occurrences matches {1} matches {	-- Molecular subtype = Luminal A
 																value_constraint matches {
-																	CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id38] matches {
+																	BOOLEAN_CONTEXT_EXPRESSION[id38] matches {
 																		expression matches {"'luminal A'"}
 																	}
 																}
@@ -62,7 +62,7 @@ definition
 																		members matches {
 																			CONDITION_BRANCH[id90] occurrences matches {1} matches {	-- TNM: T < 3 and N < 2 and G < 3
 																				test matches {
-																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id92] matches {
+																					BOOLEAN_CONTEXT_EXPRESSION[id92] matches {
 																						expression matches {"tnm_major_number ($tnm_t) < 3 and tnm_major_number ($tnm_n) < 2 and $tnm_g < 3"}
 																					}
 																				}
@@ -72,7 +72,7 @@ definition
 																			}
 																			CONDITION_BRANCH[id91] occurrences matches {1} matches {	-- TNM: T >= 3 or N >= 2 or G >= 3
 																				test matches {
-																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id94] matches {
+																					BOOLEAN_CONTEXT_EXPRESSION[id94] matches {
 																						expression matches {"tnm_major_number ($tnm_t) >= 3 and tnm_major_number ($tnm_n) >= 2 and $tnm_g >= 3"}
 																					}
 																				}
@@ -94,7 +94,7 @@ definition
 																					use_archetype PERFORMABLE_TASK[id128, openehr-task_planning-PERFORMABLE_TASK.recommend_no_chemo.v0.0.1] occurrences matches {1} 
 																				}
 																				test matches {
-																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id99] matches {
+																					BOOLEAN_CONTEXT_EXPRESSION[id99] matches {
 																						expression matches {"tnm_major_minor($tnm_t) = '1a' and tnm_major_number ($tnm_n) = 0"}
 																					}
 																				}
@@ -104,7 +104,7 @@ definition
 																					use_archetype DECISION_GROUP[id129, openehr-task_planning-DECISION_GROUP.determine_taxanes_chemo_regime.v0.0.1] occurrences matches {1} 
 																				}
 																				test matches {
-																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id83] matches {
+																					BOOLEAN_CONTEXT_EXPRESSION[id83] matches {
 																						expression matches {"tnm_major_minor ($tnm_t) > '1a' and tnm_major_number ($tnm_n) > 0"}
 																					}
 																				}
@@ -113,14 +113,14 @@ definition
 																	}
 																}
 																value_constraint matches {
-																	CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id40] matches {
+																	BOOLEAN_CONTEXT_EXPRESSION[id40] matches {
 																		expression matches {"'luminal B (HER negative)'"}
 																	}
 																}
 															}
 															DECISION_BRANCH[id13] occurrences matches {1} matches {	-- Molecular subtype - Luminal B (HER2 positive)
 																value_constraint matches {
-																	CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id42] matches {
+																	BOOLEAN_CONTEXT_EXPRESSION[id42] matches {
 																		expression matches {"'luminal B (HER2 positive)'"}
 																	}
 																}
@@ -130,7 +130,7 @@ definition
 																		members matches {
 																			CONDITION_BRANCH[id101] occurrences matches {1} matches {	-- TNM: T1 = A and N = 0
 																				test matches {
-																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id103] matches {
+																					BOOLEAN_CONTEXT_EXPRESSION[id103] matches {
 																						expression matches {"tnm_major_minor ($tnm_t) = '1a' and tnm_major_number ($tnm_n) = 0"}
 																					}
 																				}
@@ -140,7 +140,7 @@ definition
 																			}
 																			CONDITION_BRANCH[id102] occurrences matches {1} matches {	-- T1b or T1c and N = 0
 																				test matches {
-																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id105] matches {
+																					BOOLEAN_CONTEXT_EXPRESSION[id105] matches {
 																						expression matches {"$tnm_t matches {'T1Bb', 'T1c'} and tnm_major_number ($tnm_n) = 0"}
 																					}
 																				}
@@ -150,7 +150,7 @@ definition
 																			}
 																			CONDITION_BRANCH[id132] occurrences matches {1} matches {	-- TNM: 2 <= T <= 4 or N > 0
 																				test matches {
-																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id133] matches {
+																					BOOLEAN_CONTEXT_EXPRESSION[id133] matches {
 																						expression matches {"tnm_major_number ($tnm_t) matches {|2..4|} or tnm_major_number ($tnm_n) > 0"}
 																					}
 																				}
@@ -164,7 +164,7 @@ definition
 															}
 															DECISION_BRANCH[id14] occurrences matches {1} matches {	-- Molecular subtype = HER2 type
 																value_constraint matches {
-																	CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id44] matches {
+																	BOOLEAN_CONTEXT_EXPRESSION[id44] matches {
 																		expression matches {"'HER2 type'"}
 																	}
 																}
@@ -174,7 +174,7 @@ definition
 																		members matches {
 																			CONDITION_BRANCH[id108] occurrences matches {1} matches {	-- TNM: T = 1a and N = 0
 																				test matches {
-																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id110] matches {
+																					BOOLEAN_CONTEXT_EXPRESSION[id110] matches {
 																						expression matches {"$tnm_t = '1a' and tnm_major_number ($tnm_n) = 0"}
 																					}
 																				}
@@ -184,7 +184,7 @@ definition
 																			}
 																			CONDITION_BRANCH[id109] occurrences matches {1} matches {	-- TNM: T = 1b and N = 0
 																				test matches {
-																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id112] matches {
+																					BOOLEAN_CONTEXT_EXPRESSION[id112] matches {
 																						expression matches {"tnm_major_minor ($tnm_t) = '1b' and tnm_major_number ($tnm_n) = 0"}
 																					}
 																				}
@@ -194,7 +194,7 @@ definition
 																			}
 																			CONDITION_BRANCH[id114] occurrences matches {1} matches {	-- TNM: T in 1c..4 or N > 0
 																				test matches {
-																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id115] matches {
+																					BOOLEAN_CONTEXT_EXPRESSION[id115] matches {
 																						expression matches {"tnm_major_number ($tnm_t) matches {|1..4|} or tnm_major_number ($tnm_n) = 0"}
 																					}
 																				}
@@ -208,7 +208,7 @@ definition
 															}
 															DECISION_BRANCH[id15] occurrences matches {1} matches {	-- Molecular subtype = Triple negative
 																value_constraint matches {
-																	CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id67] matches {
+																	BOOLEAN_CONTEXT_EXPRESSION[id67] matches {
 																		expression matches {"'triple negative'"}
 																	}
 																}
@@ -218,7 +218,7 @@ definition
 																		members matches {
 																			CONDITION_BRANCH[id118] occurrences matches {1} matches {	-- TNM: T = 1a and N = 0
 																				test matches {
-																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id120] matches {
+																					BOOLEAN_CONTEXT_EXPRESSION[id120] matches {
 																						expression matches {"tnm_major_minor ($tnm_t) = '1a' and tnm_major_number ($tnm_n) = 0"}
 																					}
 																				}
@@ -228,7 +228,7 @@ definition
 																			}
 																			CONDITION_BRANCH[id119] occurrences matches {1} matches {	-- TNM: T > 1a or N > 0
 																				test matches {
-																					CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id122] matches {
+																					BOOLEAN_CONTEXT_EXPRESSION[id122] matches {
 																						expression matches {"tnm_major_minor ($tnm_t) > '1a' or tnm_major_number ($tnm_n) > 0"}
 																					}
 																				}
@@ -249,7 +249,7 @@ definition
 													}
 												}
 												value_constraint matches {
-													CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id47] matches {
+													BOOLEAN_CONTEXT_EXPRESSION[id47] matches {
 														expression matches {"'negative'"}
 													}
 												}
@@ -263,7 +263,7 @@ definition
 									}
 								}
 								value_constraint matches {
-									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id84] matches {
+									BOOLEAN_CONTEXT_EXPRESSION[id84] matches {
 										expression matches {"'not present'"}
 									}
 								}
@@ -278,7 +278,7 @@ definition
 									}
 								}
 								value_constraint matches {
-									CONTEXT_EXPRESSION<TYPE_DEF_BOOLEAN>[id71] matches {
+									BOOLEAN_CONTEXT_EXPRESSION[id71] matches {
 										expression matches {"'present'"}
 									}
 								}
