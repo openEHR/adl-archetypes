@@ -60,7 +60,7 @@ definition
 	OBSERVATION[id1] matches {	-- MSFC Score
 		data matches {
 			HISTORY[id2] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[id11] occurrences matches {0..1} matches {	-- Any Event
 						data matches {
 							ITEM_TREE[id4] matches {

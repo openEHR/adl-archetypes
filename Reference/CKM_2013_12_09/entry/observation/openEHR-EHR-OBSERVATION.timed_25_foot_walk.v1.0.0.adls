@@ -51,7 +51,7 @@ definition
 	OBSERVATION[id1] matches {	-- Timed 25-Foot Walk
 		data matches {
 			HISTORY[id2] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					POINT_EVENT[id3] occurrences matches {0..1} matches {	-- Trial 1
 						data matches {
 							ITEM_TREE[id4] matches {

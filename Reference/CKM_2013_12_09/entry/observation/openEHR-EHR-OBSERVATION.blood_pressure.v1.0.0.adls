@@ -213,7 +213,7 @@ definition
 	OBSERVATION[id1] matches {	-- Blood Pressure
 		data matches {
 			HISTORY[id2] matches {	-- history
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[id7] matches {	-- any event
 						data matches {
 							ITEM_TREE[id4] matches {

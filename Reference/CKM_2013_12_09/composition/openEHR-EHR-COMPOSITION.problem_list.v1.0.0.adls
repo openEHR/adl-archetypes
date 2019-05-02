@@ -73,7 +73,7 @@ definition
 				defining_code matches {[at1]}
 			}
 		}
-		content cardinality matches {1..*; unordered} matches {
+		content matches {
 			allow_archetype EVALUATION[id3] matches {	-- Problems or Diagnoses
 				include
 					archetype_id/value matches {/openEHR-EHR-EVALUATION\.problem_diagnosis(-[a-zA-Z0-9_]+)*\.v1/}

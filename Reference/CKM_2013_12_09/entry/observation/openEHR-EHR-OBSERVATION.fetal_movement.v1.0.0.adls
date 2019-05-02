@@ -68,7 +68,7 @@ definition
 	OBSERVATION[id1] matches {	-- Fetal Movement
 		data matches {
 			HISTORY[id2] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.6; rm_release=1.0.3; generated)
 	openEHR-EHR-OBSERVATION.imaging_exam.v1.0.0
 
 language
@@ -47,7 +47,7 @@ definition
 	OBSERVATION[id1] matches {	-- Imaging examination result
 		data matches {
 			HISTORY[id2] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
@@ -397,60 +397,60 @@ values, or information about the source of the value where this may be relevant 
 				description = <"Details of previous images used for comparison.">
 			>
 			["at15"] = <
-				text = <"application/msword">
-				description = <"application/msword">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at16"] = <
-				text = <"application/pdf">
-				description = <"application/pdf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at17"] = <
-				text = <"application/rtf">
-				description = <"application/rtf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at18"] = <
-				text = <"application/vnd.oasis.opendocument.text">
-				description = <"application/vnd.oasis.opendocument.text">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at19"] = <
-				text = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-				description = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at20"] = <
-				text = <"text/html">
-				description = <"text/html">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at21"] = <
-				text = <"text/plain">
-				description = <"text/plain">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at22"] = <
-				text = <"text/rtf">
-				description = <"text/rtf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at23"] = <
-				text = <"application/dicom">
-				description = <"application/dicom">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at24"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at25"] = <
-				text = <"image/gif">
-				description = <"image/gif">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at26"] = <
-				text = <"image/png">
-				description = <"image/png">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at27"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at28"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["id66"] = <
 				text = <"(added by post-parse processor)">

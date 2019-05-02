@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.6; rm_release=1.0.3; generated)
 	openEHR-EHR-CLUSTER.exam_pupils.v1.0.0
 
 language
@@ -378,148 +378,148 @@ terminology
 				description = <"Length">
 			>
 			["at76"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at77"] = <
-				text = <"image/gif">
-				description = <"image/gif">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at78"] = <
-				text = <"image/png">
-				description = <"image/png">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at79"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at80"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at81"] = <
-				text = <"video/BT656">
-				description = <"video/BT656">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at82"] = <
-				text = <"video/CelB">
-				description = <"video/CelB">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at83"] = <
-				text = <"video/H261">
-				description = <"video/H261">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at84"] = <
-				text = <"video/H263">
-				description = <"video/H263">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at85"] = <
-				text = <"video/H263-1998">
-				description = <"video/H263-1998">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at86"] = <
-				text = <"video/H263-2000">
-				description = <"video/H263-2000">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at87"] = <
-				text = <"video/quicktime">
-				description = <"video/quicktime">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at88"] = <
-				text = <"application/msword">
-				description = <"application/msword">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at89"] = <
-				text = <"application/pdf">
-				description = <"application/pdf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at90"] = <
-				text = <"application/rtf">
-				description = <"application/rtf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at91"] = <
-				text = <"application/dicom">
-				description = <"application/dicom">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at92"] = <
-				text = <"application/vnd.oasis.opendocument.text">
-				description = <"application/vnd.oasis.opendocument.text">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at93"] = <
-				text = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-				description = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at94"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at95"] = <
-				text = <"image/gif">
-				description = <"image/gif">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at96"] = <
-				text = <"image/png">
-				description = <"image/png">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at97"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at98"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at99"] = <
-				text = <"video/BT656">
-				description = <"video/BT656">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at100"] = <
-				text = <"video/CelB">
-				description = <"video/CelB">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at101"] = <
-				text = <"video/H261">
-				description = <"video/H261">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at102"] = <
-				text = <"video/H263">
-				description = <"video/H263">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at103"] = <
-				text = <"video/H263-1998">
-				description = <"video/H263-1998">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at104"] = <
-				text = <"video/H263-2000">
-				description = <"video/H263-2000">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at105"] = <
-				text = <"video/quicktime">
-				description = <"video/quicktime">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at106"] = <
-				text = <"application/msword">
-				description = <"application/msword">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at107"] = <
-				text = <"application/pdf">
-				description = <"application/pdf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at108"] = <
-				text = <"application/rtf">
-				description = <"application/rtf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at109"] = <
-				text = <"application/dicom">
-				description = <"application/dicom">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at110"] = <
-				text = <"application/vnd.oasis.opendocument.text">
-				description = <"application/vnd.oasis.opendocument.text">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at111"] = <
-				text = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-				description = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["ac1"] = <
 				text = <"Symmetry (synthesised)">
@@ -772,148 +772,148 @@ terminology
 				description = <"*Length (en)">
 			>
 			["at76"] = <
-				text = <"*image/cgm (en)">
-				description = <"*image/cgm (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at77"] = <
-				text = <"*image/gif (en)">
-				description = <"*image/gif (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at78"] = <
-				text = <"*image/png (en)">
-				description = <"*image/png (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at79"] = <
-				text = <"*image/tiff (en)">
-				description = <"*image/tiff (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at80"] = <
-				text = <"*image/jpeg (en)">
-				description = <"*image/jpeg (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at81"] = <
-				text = <"*video/BT656 (en)">
-				description = <"*video/BT656 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at82"] = <
-				text = <"*video/CelB (en)">
-				description = <"*video/CelB (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at83"] = <
-				text = <"*video/H261 (en)">
-				description = <"*video/H261 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at84"] = <
-				text = <"*video/H263 (en)">
-				description = <"*video/H263 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at85"] = <
-				text = <"*video/H263-1998 (en)">
-				description = <"*video/H263-1998 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at86"] = <
-				text = <"*video/H263-2000 (en)">
-				description = <"*video/H263-2000 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at87"] = <
-				text = <"*video/quicktime (en)">
-				description = <"*video/quicktime (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at88"] = <
-				text = <"*application/msword (en)">
-				description = <"*application/msword (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at89"] = <
-				text = <"*application/pdf (en)">
-				description = <"*application/pdf (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at90"] = <
-				text = <"*application/rtf (en)">
-				description = <"*application/rtf (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at91"] = <
-				text = <"*application/dicom (en)">
-				description = <"*application/dicom (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at92"] = <
-				text = <"*application/vnd.oasis.opendocument.text (en)">
-				description = <"*application/vnd.oasis.opendocument.text (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at93"] = <
-				text = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
-				description = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at94"] = <
-				text = <"*image/cgm (en)">
-				description = <"*image/cgm (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at95"] = <
-				text = <"*image/gif (en)">
-				description = <"*image/gif (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at96"] = <
-				text = <"*image/png (en)">
-				description = <"*image/png (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at97"] = <
-				text = <"*image/tiff (en)">
-				description = <"*image/tiff (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at98"] = <
-				text = <"*image/jpeg (en)">
-				description = <"*image/jpeg (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at99"] = <
-				text = <"*video/BT656 (en)">
-				description = <"*video/BT656 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at100"] = <
-				text = <"*video/CelB (en)">
-				description = <"*video/CelB (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at101"] = <
-				text = <"*video/H261 (en)">
-				description = <"*video/H261 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at102"] = <
-				text = <"*video/H263 (en)">
-				description = <"*video/H263 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at103"] = <
-				text = <"*video/H263-1998 (en)">
-				description = <"*video/H263-1998 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at104"] = <
-				text = <"*video/H263-2000 (en)">
-				description = <"*video/H263-2000 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at105"] = <
-				text = <"*video/quicktime (en)">
-				description = <"*video/quicktime (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at106"] = <
-				text = <"*application/msword (en)">
-				description = <"*application/msword (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at107"] = <
-				text = <"*application/pdf (en)">
-				description = <"*application/pdf (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at108"] = <
-				text = <"*application/rtf (en)">
-				description = <"*application/rtf (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at109"] = <
-				text = <"*application/dicom (en)">
-				description = <"*application/dicom (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at110"] = <
-				text = <"*application/vnd.oasis.opendocument.text (en)">
-				description = <"*application/vnd.oasis.opendocument.text (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at111"] = <
-				text = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
-				description = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["ac1"] = <
 				text = <"*Equality(en) (synthesised)">

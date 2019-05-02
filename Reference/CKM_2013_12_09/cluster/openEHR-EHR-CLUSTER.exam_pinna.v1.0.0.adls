@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.6; rm_release=1.0.3; generated)
 	openEHR-EHR-CLUSTER.exam_pinna.v1.0.0
 
 language
@@ -225,56 +225,56 @@ terminology
 				description = <"Structured details of related physical examination findings for the identified pinna structure.">
 			>
 			["at14"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at15"] = <
-				text = <"image/gif">
-				description = <"image/gif">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at16"] = <
-				text = <"image/png">
-				description = <"image/png">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at17"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at18"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at19"] = <
-				text = <"video/BT656">
-				description = <"video/BT656">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at20"] = <
-				text = <"video/CelB">
-				description = <"video/CelB">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at21"] = <
-				text = <"video/H261">
-				description = <"video/H261">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at22"] = <
-				text = <"video/H263">
-				description = <"video/H263">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at23"] = <
-				text = <"video/H263-1998">
-				description = <"video/H263-1998">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at24"] = <
-				text = <"video/H263-2000">
-				description = <"video/H263-2000">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at25"] = <
-				text = <"video/quicktime">
-				description = <"video/quicktime">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at26"] = <
-				text = <"application/pdf">
-				description = <"application/pdf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["ac1"] = <
 				text = <"Symmetry? (synthesised)">

@@ -56,7 +56,7 @@ definition
 	OBSERVATION[id1] matches {	-- Nine Hole Peg Test
 		data matches {
 			HISTORY[id2] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					POINT_EVENT[id75] occurrences matches {0..1} matches {	-- Dominant Hand - Trial 1
 						data matches {
 							ITEM_TREE[id4] matches {

@@ -34,7 +34,7 @@ definition
 	OBSERVATION[id1] matches {	-- Bodily output
 		data matches {
 			HISTORY[id2] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					POINT_EVENT[id3] matches {	-- Timing
 						data matches {
 							ITEM_TREE[id4] matches {

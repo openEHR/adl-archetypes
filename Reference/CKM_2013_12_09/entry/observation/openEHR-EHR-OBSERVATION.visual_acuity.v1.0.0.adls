@@ -53,7 +53,7 @@ definition
 	OBSERVATION[id1] matches {	-- Visual acuity
 		data matches {
 			HISTORY[id2] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					POINT_EVENT[id135] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {

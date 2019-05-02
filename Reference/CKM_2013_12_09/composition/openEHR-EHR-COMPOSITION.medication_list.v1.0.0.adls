@@ -84,7 +84,7 @@ definition
 				defining_code matches {[at1]}
 			}
 		}
-		content cardinality matches {1..*; unordered} matches {
+		content matches {
 			allow_archetype INSTRUCTION[id3] matches {	-- Medication Instruction
 				include
 					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.medication(-[a-zA-Z0-9_]+)*\.v1/}

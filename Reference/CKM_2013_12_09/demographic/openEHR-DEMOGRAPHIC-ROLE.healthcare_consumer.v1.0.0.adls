@@ -48,7 +48,7 @@ definition
 					archetype_id/value matches {/(person_name)[a-zA-Z0-9_-]*\.v1/}
 			}
 		}
-		relationships cardinality matches {1..*; ordered} matches {
+		relationships matches {
 			PARTY_RELATIONSHIP[id3] matches {	-- Consumer-Third party payer
 				details matches {
 					ITEM_TREE[id21] matches {	-- Healthcare consumer identifiers

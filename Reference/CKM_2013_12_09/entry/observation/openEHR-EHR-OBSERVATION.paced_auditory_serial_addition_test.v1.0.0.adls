@@ -57,7 +57,7 @@ definition
 	OBSERVATION[id1] matches {	-- Paced Auditory Serial Addition Test
 		data matches {
 			HISTORY[id3] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					POINT_EVENT[id65] occurrences matches {0..1} matches {	-- PASAT-3''
 						data matches {
 							ITEM_TREE[id2] matches {

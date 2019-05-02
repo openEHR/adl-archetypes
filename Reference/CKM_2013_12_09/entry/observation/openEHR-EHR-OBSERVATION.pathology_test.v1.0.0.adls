@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.6; rm_release=1.0.3; generated)
 	openEHR-EHR-OBSERVATION.pathology_test.v1.0.0
 
 language
@@ -68,7 +68,7 @@ definition
 	OBSERVATION[id1] matches {	-- Pathology Test Result
 		data matches {
 			HISTORY[id2] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[id3] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
@@ -353,36 +353,36 @@ terminology
 				description = <"Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
 			>
 			["at109"] = <
-				text = <"text/html">
-				description = <"text/html">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at110"] = <
-				text = <"text/plain">
-				description = <"text/plain">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at111"] = <
-				text = <"text/rtf">
-				description = <"text/rtf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at112"] = <
-				text = <"application/msword">
-				description = <"application/msword">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at113"] = <
-				text = <"application/pdf">
-				description = <"application/pdf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at114"] = <
-				text = <"application/rtf">
-				description = <"application/rtf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at115"] = <
-				text = <"application/vnd.oasis.opendocument.text">
-				description = <"application/vnd.oasis.opendocument.text">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at116"] = <
-				text = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-				description = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["ac1"] = <
 				text = <"Overall Test Result Status (synthesised)">
@@ -532,36 +532,36 @@ terminology
 				description = <"*Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
 			>
 			["at109"] = <
-				text = <"*text/html (en)">
-				description = <"*text/html (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at110"] = <
-				text = <"*text/plain (en)">
-				description = <"*text/plain (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at111"] = <
-				text = <"*text/rtf (en)">
-				description = <"*text/rtf (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at112"] = <
-				text = <"*application/msword (en)">
-				description = <"*application/msword (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at113"] = <
-				text = <"*application/pdf (en)">
-				description = <"*application/pdf (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at114"] = <
-				text = <"*application/rtf (en)">
-				description = <"*application/rtf (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at115"] = <
-				text = <"*application/vnd.oasis.opendocument.text (en)">
-				description = <"*application/vnd.oasis.opendocument.text (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at116"] = <
-				text = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
-				description = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["ac1"] = <
 				text = <"حالة الاختبار (synthesised)">

@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.6; rm_release=1.0.3; generated)
 	openEHR-EHR-CLUSTER.auscultation-chest.v1.0.0
 
 specialize
@@ -536,52 +536,52 @@ terminology
 				description = <"Findings on auscultation of the chest.">
 			>
 			["at0.81"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at0.82"] = <
-				text = <"image/gif">
-				description = <"image/gif">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at0.83"] = <
-				text = <"image/png">
-				description = <"image/png">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at0.84"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at0.85"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at0.86"] = <
-				text = <"audio/mpeg">
-				description = <"audio/mpeg">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at0.87"] = <
-				text = <"audio/mpeg4-generic">
-				description = <"audio/mpeg4-generic">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at0.88"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at0.89"] = <
-				text = <"image/gif">
-				description = <"image/gif">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at0.90"] = <
-				text = <"image/png">
-				description = <"image/png">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at0.91"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at0.92"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["id0.86"] = <
 				text = <"(added by post-parse processor)">

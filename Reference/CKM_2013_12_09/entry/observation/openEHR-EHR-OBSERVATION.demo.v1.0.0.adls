@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.6; rm_release=1.0.3; generated)
 	openEHR-EHR-OBSERVATION.demo.v1.0.0
 
 language
@@ -54,7 +54,7 @@ definition
 	OBSERVATION[id1] matches {	-- Demonstration
 		data matches {
 			HISTORY[id2] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[id3] occurrences matches {0..1} matches {	-- Any Event
 						data matches {
 							ITEM_TREE[id4] matches {
@@ -489,184 +489,184 @@ terminology
 				description = <"unknown">
 			>
 			["at52"] = <
-				text = <"audio/DVI4">
-				description = <"audio/DVI4">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at53"] = <
-				text = <"audio/G722">
-				description = <"audio/G722">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at54"] = <
-				text = <"audio/G723">
-				description = <"audio/G723">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at55"] = <
-				text = <"audio/G726-16">
-				description = <"audio/G726-16">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at56"] = <
-				text = <"audio/G726-24">
-				description = <"audio/G726-24">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at57"] = <
-				text = <"audio/G726-32">
-				description = <"audio/G726-32">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at58"] = <
-				text = <"audio/G726-40">
-				description = <"audio/G726-40">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at59"] = <
-				text = <"audio/G728">
-				description = <"audio/G728">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at60"] = <
-				text = <"audio/L8">
-				description = <"audio/L8">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at61"] = <
-				text = <"audio/L16">
-				description = <"audio/L16">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at62"] = <
-				text = <"audio/LPC">
-				description = <"audio/LPC">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at63"] = <
-				text = <"audio/G729">
-				description = <"audio/G729">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at64"] = <
-				text = <"audio/G729D">
-				description = <"audio/G729D">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at65"] = <
-				text = <"audio/G729E">
-				description = <"audio/G729E">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at66"] = <
-				text = <"audio/mpeg">
-				description = <"audio/mpeg">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at67"] = <
-				text = <"audio/mpeg4-generic">
-				description = <"audio/mpeg4-generic">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at68"] = <
-				text = <"audio/L20">
-				description = <"audio/L20">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at69"] = <
-				text = <"audio/L24">
-				description = <"audio/L24">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at70"] = <
-				text = <"audio/telephone-event">
-				description = <"audio/telephone-event">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at71"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at72"] = <
-				text = <"image/gif">
-				description = <"image/gif">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at73"] = <
-				text = <"image/png">
-				description = <"image/png">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at74"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at75"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at76"] = <
-				text = <"text/calendar">
-				description = <"text/calendar">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at77"] = <
-				text = <"text/directory">
-				description = <"text/directory">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at78"] = <
-				text = <"text/html">
-				description = <"text/html">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at79"] = <
-				text = <"text/plain">
-				description = <"text/plain">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at80"] = <
-				text = <"text/rtf">
-				description = <"text/rtf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at81"] = <
-				text = <"text/sgml">
-				description = <"text/sgml">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at82"] = <
-				text = <"text/tab-separated-values">
-				description = <"text/tab-separated-values">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at83"] = <
-				text = <"text/uri-list">
-				description = <"text/uri-list">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at84"] = <
-				text = <"text/xml">
-				description = <"text/xml">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at85"] = <
-				text = <"text/xml-external-parsed-entity">
-				description = <"text/xml-external-parsed-entity">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at86"] = <
-				text = <"video/BT656">
-				description = <"video/BT656">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at87"] = <
-				text = <"video/CelB">
-				description = <"video/CelB">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at88"] = <
-				text = <"video/H261">
-				description = <"video/H261">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at89"] = <
-				text = <"video/H263">
-				description = <"video/H263">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at90"] = <
-				text = <"video/H263-1998">
-				description = <"video/H263-1998">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at91"] = <
-				text = <"video/H263-2000">
-				description = <"video/H263-2000">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at92"] = <
-				text = <"video/quicktime">
-				description = <"video/quicktime">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at93"] = <
-				text = <"application/msword">
-				description = <"application/msword">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at94"] = <
-				text = <"application/pdf">
-				description = <"application/pdf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at95"] = <
-				text = <"application/rtf">
-				description = <"application/rtf">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at96"] = <
-				text = <"application/dicom">
-				description = <"application/dicom">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["ac5"] = <
 				text = <"Text That Uses Internal Codes (synthesised)">
@@ -883,184 +883,184 @@ terminology
 				description = <"*unknown (en)">
 			>
 			["at52"] = <
-				text = <"*audio/DVI4 (en)">
-				description = <"*audio/DVI4 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at53"] = <
-				text = <"*audio/G722 (en)">
-				description = <"*audio/G722 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at54"] = <
-				text = <"*audio/G723 (en)">
-				description = <"*audio/G723 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at55"] = <
-				text = <"*audio/G726-16 (en)">
-				description = <"*audio/G726-16 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at56"] = <
-				text = <"*audio/G726-24 (en)">
-				description = <"*audio/G726-24 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at57"] = <
-				text = <"*audio/G726-32 (en)">
-				description = <"*audio/G726-32 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at58"] = <
-				text = <"*audio/G726-40 (en)">
-				description = <"*audio/G726-40 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at59"] = <
-				text = <"*audio/G728 (en)">
-				description = <"*audio/G728 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at60"] = <
-				text = <"*audio/L8 (en)">
-				description = <"*audio/L8 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at61"] = <
-				text = <"*audio/L16 (en)">
-				description = <"*audio/L16 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at62"] = <
-				text = <"*audio/LPC (en)">
-				description = <"*audio/LPC (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at63"] = <
-				text = <"*audio/G729 (en)">
-				description = <"*audio/G729 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at64"] = <
-				text = <"*audio/G729D (en)">
-				description = <"*audio/G729D (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at65"] = <
-				text = <"*audio/G729E (en)">
-				description = <"*audio/G729E (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at66"] = <
-				text = <"*audio/mpeg (en)">
-				description = <"*audio/mpeg (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at67"] = <
-				text = <"*audio/mpeg4-generic (en)">
-				description = <"*audio/mpeg4-generic (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at68"] = <
-				text = <"*audio/L20 (en)">
-				description = <"*audio/L20 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at69"] = <
-				text = <"*audio/L24 (en)">
-				description = <"*audio/L24 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at70"] = <
-				text = <"*audio/telephone-event (en)">
-				description = <"*audio/telephone-event (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at71"] = <
-				text = <"*image/cgm (en)">
-				description = <"*image/cgm (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at72"] = <
-				text = <"*image/gif (en)">
-				description = <"*image/gif (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at73"] = <
-				text = <"*image/png (en)">
-				description = <"*image/png (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at74"] = <
-				text = <"*image/tiff (en)">
-				description = <"*image/tiff (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at75"] = <
-				text = <"*image/jpeg (en)">
-				description = <"*image/jpeg (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at76"] = <
-				text = <"*text/calendar (en)">
-				description = <"*text/calendar (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at77"] = <
-				text = <"*text/directory (en)">
-				description = <"*text/directory (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at78"] = <
-				text = <"*text/html (en)">
-				description = <"*text/html (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at79"] = <
-				text = <"*text/plain (en)">
-				description = <"*text/plain (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at80"] = <
-				text = <"*text/rtf (en)">
-				description = <"*text/rtf (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at81"] = <
-				text = <"*text/sgml (en)">
-				description = <"*text/sgml (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at82"] = <
-				text = <"*text/tab-separated-values (en)">
-				description = <"*text/tab-separated-values (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at83"] = <
-				text = <"*text/uri-list (en)">
-				description = <"*text/uri-list (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at84"] = <
-				text = <"*text/xml (en)">
-				description = <"*text/xml (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at85"] = <
-				text = <"*text/xml-external-parsed-entity (en)">
-				description = <"*text/xml-external-parsed-entity (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at86"] = <
-				text = <"*video/BT656 (en)">
-				description = <"*video/BT656 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at87"] = <
-				text = <"*video/CelB (en)">
-				description = <"*video/CelB (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at88"] = <
-				text = <"*video/H261 (en)">
-				description = <"*video/H261 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at89"] = <
-				text = <"*video/H263 (en)">
-				description = <"*video/H263 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at90"] = <
-				text = <"*video/H263-1998 (en)">
-				description = <"*video/H263-1998 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at91"] = <
-				text = <"*video/H263-2000 (en)">
-				description = <"*video/H263-2000 (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at92"] = <
-				text = <"*video/quicktime (en)">
-				description = <"*video/quicktime (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at93"] = <
-				text = <"*application/msword (en)">
-				description = <"*application/msword (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at94"] = <
-				text = <"*application/pdf (en)">
-				description = <"*application/pdf (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at95"] = <
-				text = <"*application/rtf (en)">
-				description = <"*application/rtf (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at96"] = <
-				text = <"*application/dicom (en)">
-				description = <"*application/dicom (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["ac5"] = <
 				text = <"Texto Que Usa Códigos Internos (synthesised)">

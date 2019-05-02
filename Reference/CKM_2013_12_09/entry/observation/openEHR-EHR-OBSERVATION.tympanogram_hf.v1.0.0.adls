@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.6; rm_release=1.0.3; generated)
 	openEHR-EHR-OBSERVATION.tympanogram_hf.v1.0.0
 
 language
@@ -72,7 +72,7 @@ definition
 	OBSERVATION[id1] matches {	-- Tympanogram Result - High Frequency
 		data matches {
 			HISTORY[id2] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
@@ -573,32 +573,32 @@ terminology
 				description = <"*Frequency (en)">
 			>
 			["at85"] = <
-				text = <"*Rate of Change - Pressure (en)">
-				description = <"*Rate of Change - Pressure (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at86"] = <
-				text = <"*Rate of Change - Frequency (en)">
-				description = <"*Rate of Change - Frequency (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at87"] = <
-				text = <"*image/cgm (en)">
-				description = <"*image/cgm (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at88"] = <
-				text = <"*image/gif (en)">
-				description = <"*image/gif (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at89"] = <
-				text = <"*image/png (en)">
-				description = <"*image/png (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at90"] = <
-				text = <"*image/tiff (en)">
-				description = <"*image/tiff (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at91"] = <
-				text = <"*image/jpeg (en)">
-				description = <"*image/jpeg (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["ac1"] = <
 				text = <"*Test Ear(en) (synthesised)">
@@ -831,32 +831,32 @@ terminology
 				description = <"Frequency">
 			>
 			["at85"] = <
-				text = <"Rate of Change - Pressure">
-				description = <"Rate of Change - Pressure">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at86"] = <
-				text = <"Rate of Change - Frequency">
-				description = <"Rate of Change - Frequency">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at87"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at88"] = <
-				text = <"image/gif">
-				description = <"image/gif">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at89"] = <
-				text = <"image/png">
-				description = <"image/png">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at90"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at91"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["ac1"] = <
 				text = <"Test Ear (synthesised)">

@@ -49,7 +49,7 @@ definition
 	OBSERVATION[id1] matches {	-- Bristol stool scale
 		data matches {
 			HISTORY[id2] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					POINT_EVENT[id3] occurrences matches {0..1} matches {	-- Point-in-time
 						data matches {
 							ITEM_TREE[id4] matches {

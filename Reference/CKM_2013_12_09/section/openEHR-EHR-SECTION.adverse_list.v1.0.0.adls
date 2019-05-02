@@ -63,7 +63,7 @@ While EVALUATION.adverse and EVALUATION.exclusion-adverse archetypes and their s
 
 definition
 	SECTION[id1] matches {	-- Adverse Reaction List
-		items cardinality matches {1..*; unordered} matches {
+		items matches {
 			allow_archetype EVALUATION[id2] matches {	-- Adverse reactions inclusions/exclusions
 				include
 					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-adverse_reaction(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.adverse_reaction(-[a-zA-Z0-9_]+)*\.v1/}

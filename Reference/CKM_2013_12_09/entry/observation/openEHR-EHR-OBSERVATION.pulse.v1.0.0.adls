@@ -104,7 +104,7 @@ definition
 	OBSERVATION[id1] matches {	-- Pulse
 		data matches {
 			HISTORY[id3] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[id4] matches {	-- Any event
 						data matches {
 							ITEM_TREE[id2] matches {

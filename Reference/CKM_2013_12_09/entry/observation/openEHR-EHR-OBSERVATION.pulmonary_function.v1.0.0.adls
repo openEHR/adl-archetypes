@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
+archetype (adl_version=2.0.6; rm_release=1.0.3; generated)
 	openEHR-EHR-OBSERVATION.pulmonary_function.v1.0.0
 
 language
@@ -54,7 +54,7 @@ definition
 	OBSERVATION[id1] occurrences matches {0..1} matches {	-- Pulmonary Function Testing
 		data matches {
 			HISTORY[id2] matches {
-				events cardinality matches {1..*; unordered} matches {
+				events matches {
 					EVENT[id3] occurrences matches {0..1} matches {	-- Any event
 						data matches {
 							ITEM_TREE[id4] matches {
@@ -605,44 +605,44 @@ terminology
 				description = <"Qualified real">
 			>
 			["at134"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at135"] = <
-				text = <"image/gif">
-				description = <"image/gif">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at136"] = <
-				text = <"image/png">
-				description = <"image/png">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at137"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at138"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at139"] = <
-				text = <"image/cgm">
-				description = <"image/cgm">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at140"] = <
-				text = <"image/gif">
-				description = <"image/gif">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at141"] = <
-				text = <"image/png">
-				description = <"image/png">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at142"] = <
-				text = <"image/tiff">
-				description = <"image/tiff">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["at143"] = <
-				text = <"image/jpeg">
-				description = <"image/jpeg">
+				text = <"(added by post-parse processor)">
+				description = <"(added by post-parse processor)">
 			>
 			["id159"] = <
 				text = <"(added by post-parse processor)">
@@ -967,44 +967,44 @@ terminology
 				description = <"*Qualified real (en)">
 			>
 			["at134"] = <
-				text = <"*image/cgm (en)">
-				description = <"*image/cgm (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at135"] = <
-				text = <"*image/gif (en)">
-				description = <"*image/gif (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at136"] = <
-				text = <"*image/png (en)">
-				description = <"*image/png (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at137"] = <
-				text = <"*image/tiff (en)">
-				description = <"*image/tiff (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at138"] = <
-				text = <"*image/jpeg (en)">
-				description = <"*image/jpeg (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at139"] = <
-				text = <"*image/cgm (en)">
-				description = <"*image/cgm (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at140"] = <
-				text = <"*image/gif (en)">
-				description = <"*image/gif (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at141"] = <
-				text = <"*image/png (en)">
-				description = <"*image/png (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at142"] = <
-				text = <"*image/tiff (en)">
-				description = <"*image/tiff (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["at143"] = <
-				text = <"*image/jpeg (en)">
-				description = <"*image/jpeg (en)">
+				text = <"*(added by post-parse processor)(en)">
+				description = <"*(added by post-parse processor)(en)">
 			>
 			["id159"] = <
 				text = <"*(added by post-parse processor)(en)">
