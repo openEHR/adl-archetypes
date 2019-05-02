@@ -33,7 +33,7 @@ definition
 			String [id2] matches {"match me"}
 		}
 		any_attr_2 matches {
-			Duration [id3] matches {PT1S}
+			Iso8601_duration [id3] matches {PT1S}
 		}
 		any_attr_3 matches {
 			Integer [id4] matches {|1..23|,|40..77|}

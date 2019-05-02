@@ -40,7 +40,11 @@ terminology
 	term_definitions = <
 		["en"] = <
 			["id1.1"] = <
-				text = <"-">
+				text = <"quantitative analyte">
+				description = <"-">
+			>
+			["id0.18"] = <
+				text = <"other reference ranges">
 				description = <"-">
 			>
 		>

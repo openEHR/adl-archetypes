@@ -30,7 +30,7 @@ definition
 			String [id2]
 		}
 		any_attr_2 matches {
-			Duration [id3]
+			Iso8601_duration [id3]
 		}
 		any_attr_3 matches {
 			Integer [id4]
@@ -39,7 +39,7 @@ definition
 			Real [id5]
 		}
 		any_attr_5 matches {
-			Date_time [id9999]
+			Iso8601_date_time [id9999]
 		}
 	}
 
