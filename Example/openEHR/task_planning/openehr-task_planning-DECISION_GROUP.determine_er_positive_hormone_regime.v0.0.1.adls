@@ -40,7 +40,7 @@ definition
 					DECISION_GROUP[id91] occurrences matches {1} matches {	-- Check if Tamoxifen contra-indicated
 						override_type matches {1}
 						review_dataset matches {
-							DATASET_SPEC[id94] occurrences matches {0..1} matches {	-- -
+							REVIEW_DATASET_SPEC[id94] occurrences matches {0..1} matches {	-- -
 								template_id matches {
 									STRING[id9999] occurrences matches {1} }
 								form_id matches {
@@ -87,7 +87,7 @@ definition
 		}
 		override_type matches {1}
 		review_dataset matches {
-			DATASET_SPEC[id95] occurrences matches {0..1} 	-- Menstruation record
+			REVIEW_DATASET_SPEC[id95] occurrences matches {0..1} 	-- Menstruation record
 		}
 		execution_type matches {1}
 	}

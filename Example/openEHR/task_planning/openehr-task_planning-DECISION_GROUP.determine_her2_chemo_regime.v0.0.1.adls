@@ -22,7 +22,7 @@ description
 definition
 	DECISION_GROUP[id1] matches {	-- Consider prognosis (BPM node 11)
 		review_dataset matches {
-			DATASET_SPEC[id2] occurrences matches {1} matches {	-- Prognosis data set
+			REVIEW_DATASET_SPEC[id2] occurrences matches {1} matches {	-- Prognosis data set
 				form_id matches {
 					STRING[id9999] }
 				template_id matches {
@@ -48,7 +48,7 @@ definition
 				members matches {
 					DECISION_GROUP[id12] occurrences matches {1} matches {	-- Consider contra-ind. to anthracyclines (BPM node 16)
 						review_dataset matches {
-							DATASET_SPEC[id16] occurrences matches {1} matches {	-- Anthracyclines contra-ind. data set
+							REVIEW_DATASET_SPEC[id16] occurrences matches {1} matches {	-- Anthracyclines contra-ind. data set
 								form_id matches {
 									STRING[id9999] }
 								template_id matches {

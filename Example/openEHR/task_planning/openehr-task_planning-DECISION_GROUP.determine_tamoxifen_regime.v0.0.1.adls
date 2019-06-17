@@ -22,7 +22,7 @@ description
 definition
 	DECISION_GROUP[id1] matches {	-- Determine Tamoxifen regime.
 		review_dataset matches {
-			DATASET_SPEC[id2] occurrences matches {1} matches {	-- Risk of recurrence data set
+			REVIEW_DATASET_SPEC[id2] occurrences matches {1} matches {	-- Risk of recurrence data set
 				template_id matches {
 					STRING[id9999] }
 				form_id matches {

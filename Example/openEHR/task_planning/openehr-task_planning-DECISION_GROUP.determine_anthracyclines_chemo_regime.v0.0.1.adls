@@ -91,7 +91,7 @@ definition
 							}
 						}
 						review_dataset matches {
-							DATASET_SPEC[id86] occurrences matches {0..1} 	-- Cardio-pathology data set
+							REVIEW_DATASET_SPEC[id86] occurrences matches {0..1} 	-- Cardio-pathology data set
 						}
 						execution_type matches {1}
 					}
@@ -110,7 +110,7 @@ definition
 			}
 		}
 		review_dataset matches {
-			DATASET_SPEC[id85] occurrences matches {0..1} 	-- Review contra-indications anthracyclines data set
+			REVIEW_DATASET_SPEC[id85] occurrences matches {0..1} 	-- Review contra-indications anthracyclines data set
 		}
 		execution_type matches {1}
 	}

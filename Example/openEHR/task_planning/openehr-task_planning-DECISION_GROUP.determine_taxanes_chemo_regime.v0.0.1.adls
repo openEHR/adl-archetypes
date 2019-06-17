@@ -86,7 +86,7 @@ definition
 			}
 		}
 		review_dataset matches {
-			DATASET_SPEC[id32] occurrences matches {1} 	-- Taxanes contraindications dataset
+			REVIEW_DATASET_SPEC[id32] occurrences matches {1} 	-- Taxanes contraindications dataset
 		}
 		override_type matches {
 			OVERRIDE_TYPE[id33] occurrences matches {1} 
