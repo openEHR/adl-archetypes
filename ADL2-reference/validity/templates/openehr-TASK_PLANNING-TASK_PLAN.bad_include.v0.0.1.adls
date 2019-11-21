@@ -31,7 +31,7 @@ definition
 		definition matches {
 			TASK_GROUP[id3] matches {
 				members matches {
-					use_archetype DECISION_GROUP[id4, openehr-ehr-DECISION_GROUP.de_lang_arch.v0.0.1]
+					use_archetype DECISION_GROUP[id4, openehr-task_planning-DECISION_GROUP.de_lang_arch.v0.0.1]
 				}
 			}
 		}
