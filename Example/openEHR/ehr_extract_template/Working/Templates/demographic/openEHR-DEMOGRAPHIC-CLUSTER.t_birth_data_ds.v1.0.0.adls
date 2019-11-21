@@ -1,4 +1,4 @@
-template_overlay (adl_version=1.5.1; rm_release=1.0.2)
+template_overlay (adl_version=2.0.6; rm_release=1.0.2)
 	openEHR-DEMOGRAPHIC-CLUSTER.t_birth_data_ds.v1.0.0
 
 specialize
