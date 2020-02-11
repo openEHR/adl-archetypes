@@ -1,0 +1,8 @@
+--
+-- Logical archetype repository definition
+--
+
+name = <"openEHR view">
+short_name = <"View">
+maintainer = <"openEHR">
+description = <"openEHR example view archetypes">

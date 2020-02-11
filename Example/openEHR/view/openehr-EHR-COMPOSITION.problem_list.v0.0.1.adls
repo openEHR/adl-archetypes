@@ -1,0 +1,112 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0)
+	openehr-EHR-COMPOSITION.problem_list.v0.0.1
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale <thomas.beale@openehr.org>">
+		["organisation"] = <"OpenEHR Foundation <http://www.openehr.org>">
+	>
+	copyright = <"Copyright (c) 2019 openEHR Foundation">
+	licence = <"Creative Commons CC-BY 4.0 unported <http://creativecommons.org/>">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Test view structure.">
+		>
+	>
+
+definition
+	COMPOSITION[id1] matches {	-- Problem List
+		content matches {
+			SECTION[id2] occurrences matches {1} matches {	-- Health thread
+				items matches {
+					EVALUATION[id4] occurrences matches {1} matches {	-- Health thread description
+						data matches {
+							ITEM_TREE[id12] matches {
+								items matches {
+									ELEMENT[id13] matches {	-- Date assessed
+										value matches {
+											DV_DATE[id14] 
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			VIEW_SECTION[id3] matches {	-- Health issue
+				items matches {
+					CITATION[id5] 	-- references
+					VIEW_SECTION[id6] 	-- sub-issues
+					CITATION<EVALUATION>[id15] occurrences matches {1} 	-- Test
+				}
+				meta_data matches {
+					CLUSTER[id7] matches {
+						items matches {
+							ELEMENT[id8] occurrences matches {1} matches {	-- -
+								value matches {
+									DV_DATE[id9] 
+								}
+							}
+							ELEMENT[id10] occurrences matches {0..1} matches {	-- Status
+								value matches {
+									DV_CODED_TEXT[id11] 
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+terminology
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Problem List">
+				description = <"-">
+			>
+			["id2"] = <
+				text = <"Health thread">
+				description = <"-">
+			>
+			["id3"] = <
+				text = <"Health issue">
+				description = <"-">
+			>
+			["id4"] = <
+				text = <"Health thread description">
+				description = <"-">
+			>
+			["id5"] = <
+				text = <"references">
+				description = <"-">
+			>
+			["id6"] = <
+				text = <"sub-issues">
+				description = <"-">
+			>
+			["id8"] = <
+				text = <"-">
+				description = <"-">
+			>
+			["id10"] = <
+				text = <"Status">
+				description = <"-">
+			>
+			["id13"] = <
+				text = <"Date assessed">
+				description = <"-">
+			>
+			["id15"] = <
+				text = <"Test">
+				description = <"-">
+			>
+		>
+	>
