@@ -1,4 +1,4 @@
-template_overlay (adl_version=1.5.1; rm_release=1.0.2)
+template (adl_version=2.0.6; rm_release=1.0.2)
 	openEHR-EHR-EVALUATION.t_alerts_ds.v1.0.0
 
 specialize
@@ -6,6 +6,22 @@ specialize
 
 language
 	original_language = <[ISO_639-1::en]>
+
+description
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Thomas Beale">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"thomas.beale@oceaninformatics.com">
+		["date"] = <"01/04/2011">
+	>
+	copyright = <"copyright (c) 2011 openEHR Foundation">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Alert template overlay">
+		>
+	>
 
 definition
 	EVALUATION[id1.1] matches {	-- Alerts
